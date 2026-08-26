@@ -1949,12 +1949,248 @@ export const initialDatabase: AppDatabase = {
         },
         {
           id: 'q-3',
-          questionText: 'What is the last letter of the English alphabet?',
-          questionTextUrdu: 'انگریزی حروف تہجی کا آخری حرف کیا ہے؟',
-          questionTextHindi: 'अंग्रेजी वर्णमाला का अंतिम अक्षर क्या है?',
-          options: ['Y', 'X', 'Z', 'W'],
+          questionText: 'Which word comes SECOND if you arrange them like a dictionary?',
+          options: ['Ant', 'Ape', 'Apple', 'Axe'],
+          correctOptionIndex: 1,
+          explanation: 'They all start with "A", so look at the second letter! "n" comes before "p", so Ant is first and Ape is second.'
+        },
+        {
+          id: 'q-4',
+          questionText: 'If you start at "C" and jump forward 3 steps in the alphabet, where do you land?',
+          options: ['E', 'F', 'G', 'H'],
+          correctOptionIndex: 1,
+          explanation: 'Count forward 3 times: C -> D(1) -> E(2) -> F(3).'
+        },
+        {
+          id: 'q-5',
+          questionText: 'Which of these words has MORE vowels than consonants?',
+          options: ['BIRD', 'TREE', 'IDEA', 'FROG'],
           correctOptionIndex: 2,
-          explanation: '"Z" is the 26th and final letter of the English Alphabet.'
+          explanation: '"IDEA" has 3 vowels (I, E, A) and only 1 consonant (D).'
+        },
+        {
+          id: 'q-6',
+          questionText: 'What is the 5th CONSONANT of the alphabet?',
+          options: ['E', 'F', 'G', 'H'],
+          correctOptionIndex: 2,
+          explanation: 'The first five consonants are B, C, D, F, G (remember, A and E are vowels and get skipped!).'
+        },
+        {
+          id: 'q-7',
+          questionText: 'If we write the alphabet backwards, what is the 3rd letter?',
+          options: ['C', 'X', 'Y', 'W'],
+          correctOptionIndex: 1,
+          explanation: 'Going backwards: Z is 1st, Y is 2nd, and X is 3rd!'
+        },
+        {
+          id: 'q-8',
+          questionText: 'Which letter is exactly in the middle of "A" and "I"?',
+          options: ['D', 'E', 'F', 'G'],
+          correctOptionIndex: 1,
+          explanation: 'Count: A, B, C, D, E, F, G, H, I. "E" sits perfectly in the center.'
+        },
+        {
+          id: 'q-9',
+          questionText: 'If A=1, B=2, and C=3, which word\'s letters add up to exactly 6?',
+          options: ['CAB', 'DAD', 'BED', 'ADD'],
+          correctOptionIndex: 0,
+          explanation: 'Let\'s add them up: C(3) + A(1) + B(2) = 6!'
+        },
+        {
+          id: 'q-10',
+          questionText: 'Which letter is missing in this jumping pattern? B, D, F, H, __',
+          options: ['I', 'J', 'K', 'L'],
+          correctOptionIndex: 1,
+          explanation: 'We are skipping one letter every time. Skip I and jump to J.'
+        },
+        {
+          id: 'q-11',
+          questionText: 'Which word STARTS with a vowel and ENDS with a consonant?',
+          options: ['APPLE', 'IGLOO', 'OSTRICH', 'UMBRELLA'],
+          correctOptionIndex: 2,
+          explanation: 'It starts with "O" (vowel) and ends with "H" (consonant).'
+        },
+        {
+          id: 'q-12',
+          questionText: 'What is the 4th letter of the month that comes right after March?',
+          options: ['R', 'I', 'L', 'A'],
+          correctOptionIndex: 1,
+          explanation: 'The month is APRIL. The letters are A-P-R-I-L.'
+        },
+        {
+          id: 'q-13',
+          questionText: 'How many consonants are in the word "BUTTERFLY"?',
+          options: ['5', '6', '7', '8'],
+          correctOptionIndex: 2,
+          explanation: 'U and E are vowels. The rest (B, T, T, R, F, L, Y) are 7 consonants!'
+        },
+        {
+          id: 'q-14',
+          questionText: 'Which of these letters is drawn using ONLY straight lines?',
+          options: ['C', 'O', 'S', 'H'],
+          correctOptionIndex: 3,
+          explanation: 'H has two straight lines down and one across. No curvy lines!'
+        },
+        {
+          id: 'q-15',
+          questionText: 'If you take the word "SMILE" and remove all the vowels, how many letters are left?',
+          options: ['2', '3', '4', '5'],
+          correctOptionIndex: 1,
+          explanation: 'Take away the vowels I and E. You are left with S, M, L (which is 3 letters).'
+        },
+        {
+          id: 'q-16',
+          questionText: 'Which letter appears exactly TWICE in the word "UMBRELLA"?',
+          options: ['A', 'E', 'L', 'R'],
+          correctOptionIndex: 2,
+          explanation: 'Look closely: U-M-B-R-E-L-L-A.'
+        },
+        {
+          id: 'q-17',
+          questionText: 'What letter comes two steps before "K"?',
+          options: ['H', 'I', 'J', 'L'],
+          correctOptionIndex: 1,
+          explanation: 'Count backwards two steps: K -> J -> I.'
+        },
+        {
+          id: 'q-18',
+          questionText: 'Which word has letters that are in perfect alphabetical order?',
+          options: ['CAT', 'DOG', 'BOX', 'ANT'],
+          correctOptionIndex: 2,
+          explanation: 'In the alphabet, B comes before O, and O comes before X!'
+        },
+        {
+          id: 'q-19',
+          questionText: 'Find the odd one out in this group: B, F, O, M.',
+          options: ['B', 'F', 'O', 'M'],
+          correctOptionIndex: 2,
+          explanation: '"O" is a vowel, but all the other letters are consonants.'
+        },
+        {
+          id: 'q-20',
+          questionText: 'If you change the first letter of "CAT" to the 2nd letter of the alphabet, what word do you get?',
+          options: ['MAT', 'BAT', 'RAT', 'HAT'],
+          correctOptionIndex: 1,
+          explanation: 'The 2nd letter of the alphabet is B. Replace C with B to make BAT!'
+        },
+        {
+          id: 'q-21',
+          questionText: 'How many letters are between "D" and "J" in the alphabet?',
+          options: ['4', '5', '6', '7'],
+          correctOptionIndex: 1,
+          explanation: 'The letters between them are E, F, G, H, I. That\'s 5 letters!'
+        },
+        {
+          id: 'q-22',
+          questionText: 'If you skip two letters after "M", what letter do you land on?',
+          options: ['N', 'O', 'P', 'Q'],
+          correctOptionIndex: 2,
+          explanation: 'Start at M, skip N and O, and you land on P.'
+        },
+        {
+          id: 'q-23',
+          questionText: 'Which of these words ends with a vowel?',
+          options: ['WATER', 'WIND', 'EARTH', 'FIRE'],
+          correctOptionIndex: 3,
+          explanation: 'FIRE ends with the letter "E", which is a vowel.'
+        },
+        {
+          id: 'q-24',
+          questionText: 'If Z is the 26th letter, what number is Y?',
+          options: ['24', '25', '27', '28'],
+          correctOptionIndex: 1,
+          explanation: 'Y comes right before Z, so it is letter number 25.'
+        },
+        {
+          id: 'q-25',
+          questionText: 'Which letter is exactly halfway between P and T?',
+          options: ['Q', 'R', 'S', 'U'],
+          correctOptionIndex: 1,
+          explanation: 'Let\'s look: P, Q, R, S, T. "R" sits right in the middle!'
+        },
+        {
+          id: 'q-26',
+          questionText: 'What is the 3rd letter of the day that comes after Wednesday?',
+          options: ['U', 'R', 'S', 'D'],
+          correctOptionIndex: 0,
+          explanation: 'The day is THURSDAY. T-H-U-R-S-D-A-Y.'
+        },
+        {
+          id: 'q-27',
+          questionText: 'If you read the word "STAR" backwards, what new word does it make?',
+          options: ['TARS', 'ARTS', 'RATS', 'TSAR'],
+          correctOptionIndex: 2,
+          explanation: 'S-T-A-R reversed is R-A-T-S.'
+        },
+        {
+          id: 'q-28',
+          questionText: 'Which letter comes right after the 10th letter of the alphabet?',
+          options: ['J', 'K', 'L', 'M'],
+          correctOptionIndex: 1,
+          explanation: 'The 10th letter is J. The letter right after J is K.'
+        },
+        {
+          id: 'q-29',
+          questionText: 'In the word "ELEPHANT", which letter is the 4th consonant?',
+          options: ['P', 'H', 'N', 'T'],
+          correctOptionIndex: 2,
+          explanation: 'Let\'s count the consonants only: L(1), P(2), H(3), N(4).'
+        },
+        {
+          id: 'q-30',
+          questionText: 'Which letter is missing here? M, O, Q, S, __',
+          options: ['T', 'U', 'V', 'W'],
+          correctOptionIndex: 1,
+          explanation: 'We are skipping every other letter! S -> skip T -> U.'
+        },
+        {
+          id: 'q-31',
+          questionText: 'If you spell out the number "EIGHT", what is the middle letter?',
+          options: ['I', 'G', 'H', 'T'],
+          correctOptionIndex: 1,
+          explanation: 'E-I-G-H-T. "G" has two letters on its left and two on its right.'
+        },
+        {
+          id: 'q-32',
+          questionText: 'Which of these words starts AND ends with a vowel?',
+          options: ['ONION', 'BIRD', 'EAGLE', 'CAT'],
+          correctOptionIndex: 2,
+          explanation: 'EAGLE starts with E and ends with E. Both are vowels!'
+        },
+        {
+          id: 'q-33',
+          questionText: 'What is the next letter in this backward pattern? Z, X, V, T, __',
+          options: ['S', 'R', 'Q', 'P'],
+          correctOptionIndex: 1,
+          explanation: 'We are jumping backwards and skipping one letter! T -> skip S -> R.'
+        },
+        {
+          id: 'q-34',
+          questionText: 'If you add the position of A (1) and C (3), you get 4. Which letter is at position 4?',
+          options: ['D', 'E', 'F', 'G'],
+          correctOptionIndex: 0,
+          explanation: '1 + 3 = 4. The 4th letter of the alphabet is D!'
+        },
+        {
+          id: 'q-35',
+          questionText: 'Which of these words does NOT have an "E" in it?',
+          options: ['TIGER', 'ZEBRA', 'MONKEY', 'PANDA'],
+          correctOptionIndex: 3,
+          explanation: 'Panda is spelled P-A-N-D-A. There is no "E" hiding in there!'
+        },
+        {
+          id: 'q-36',
+          questionText: 'Which of these letters comes first in alphabetical order?',
+          options: ['H', 'G', 'F', 'I'],
+          correctOptionIndex: 2,
+          explanation: 'If you sing the alphabet song, F comes before G, H, and I.'
+        },
+        {
+          id: 'q-37',
+          questionText: 'What is the only vowel in the word "NIGHT"?',
+          options: ['N', 'G', 'I', 'H'],
+          correctOptionIndex: 2,
+          explanation: 'N, G, H, and T are all consonants. "I" is the only vowel!'
         }
       ]
     },
@@ -1981,6 +2217,251 @@ export const initialDatabase: AppDatabase = {
           options: ['بلی', 'طوطا', 'سیب', 'شیر'],
           correctOptionIndex: 0,
           explanation: 'بے سے بلی بنتا ہے۔'
+        },
+        {
+          id: 'q-ur-3',
+          questionText: '\'ب\' کے فوراً بعد کون سا حرف آتا ہے؟',
+          options: ['ت', 'پ', 'ٹ', 'ث'],
+          correctOptionIndex: 1,
+          explanation: '\'ب\' کے بعد \'پ\' آتا ہے۔ \'پ\' کے نیچے تین نقطے ہوتے ہیں۔'
+        },
+        {
+          id: 'q-ur-4',
+          questionText: 'کس حرف کے اوپر تین نقطے ہوتے ہیں؟',
+          options: ['ب', 'پ', 'ت', 'ث'],
+          correctOptionIndex: 3,
+          explanation: '\'ث\' (ثمر) کے اوپر تین نقطے ہوتے ہیں۔'
+        },
+        {
+          id: 'q-ur-5',
+          questionText: '\'د\' کے فوراً بعد کیا آتا ہے؟',
+          options: ['ذ', 'ر', 'ڈ', 'ز'],
+          correctOptionIndex: 2,
+          explanation: '\'د\' کے بعد \'ڈ\' آتا ہے، جس کے اوپر چھوٹی طوئے (ط) ہوتی ہے۔'
+        },
+        {
+          id: 'q-ur-6',
+          questionText: 'اردو حروف تہجی کا آخری حرف کون سا ہے؟',
+          options: ['ہ', 'و', 'ی', 'ے'],
+          correctOptionIndex: 3,
+          explanation: 'اردو کا اختتام بڑی \'ے\' پر ہوتا ہے۔'
+        },
+        {
+          id: 'q-ur-7',
+          questionText: '\'س\' کے بعد کون سا حرف آتا ہے؟',
+          options: ['ص', 'ش', 'ض', 'ط'],
+          correctOptionIndex: 1,
+          explanation: '\'س\' کے بعد \'ش\' آتا ہے، \'ش\' کے اوپر تین نقطے ہوتے ہیں۔'
+        },
+        {
+          id: 'q-ur-8',
+          questionText: 'کس حرف کے نیچے صرف ایک نقطہ ہوتا ہے؟',
+          options: ['پ', 'ت', 'ب', 'ن'],
+          correctOptionIndex: 2,
+          explanation: '\'ب\' کے نیچے ایک نقطہ ہوتا ہے، جیسے \'ب\' سے بلی۔'
+        },
+        {
+          id: 'q-ur-9',
+          questionText: '\'ع\' کے فوراً بعد کیا آتا ہے؟',
+          options: ['غ', 'ف', 'ق', 'ک'],
+          correctOptionIndex: 0,
+          explanation: '\'ع\' کے بعد \'غ\' آتا ہے، \'غ\' کے اوپر ایک نقطہ ہوتا ہے۔'
+        },
+        {
+          id: 'q-ur-10',
+          questionText: '\'ک\' کے بعد کون سا حرف آتا ہے؟',
+          options: ['ل', 'م', 'گ', 'ن'],
+          correctOptionIndex: 2,
+          explanation: '\'ک\' کے بعد \'گ\' آتا ہے۔ \'گ\' کے اوپر دو ڈنڈے (مرکز) ہوتے ہیں۔'
+        },
+        {
+          id: 'q-ur-11',
+          questionText: 'ان میں سے کون سا حرف الف کے فوراً بعد آتا ہے؟',
+          options: ['پ', 'ب', 'ت', 'ج'],
+          correctOptionIndex: 1,
+          explanation: 'الف کے بعد بے (ب) آتا ہے۔'
+        },
+        {
+          id: 'q-ur-12',
+          questionText: '\'ر\' اور \'ز\' کے درمیان کون سا حرف آتا ہے؟',
+          options: ['ڈ', 'ڑ', 'ذ', 'ژ'],
+          correctOptionIndex: 1,
+          explanation: 'ترتیب یہ ہے: ر، ڑ، ز۔ اس لیے درمیان میں \'ڑ\' آتا ہے۔'
+        },
+        {
+          id: 'q-ur-13',
+          questionText: '\'چ\' کے پیٹ میں کتنے نقطے ہوتے ہیں؟',
+          options: ['ایک', 'دو', 'تین', 'کوئی نہیں'],
+          correctOptionIndex: 2,
+          explanation: '\'چ\' کے اندر تین نقطے ہوتے ہیں، جیسے \'چ\' سے چاند۔'
+        },
+        {
+          id: 'q-ur-14',
+          questionText: 'کس حرف کے اوپر کوئی نقطہ نہیں ہوتا؟',
+          options: ['خ', 'ج', 'چ', 'ح'],
+          correctOptionIndex: 3,
+          explanation: '\'ح\' بالکل خالی ہوتا ہے، اس پر یا اندر کوئی نقطہ نہیں ہوتا۔'
+        },
+        {
+          id: 'q-ur-15',
+          questionText: '\'م\' سے کون سا لفظ شروع ہوتا ہے؟',
+          options: ['مور', 'طوطا', 'شیر', 'بلی'],
+          correctOptionIndex: 0,
+          explanation: '\'م\' سے مور (Peacock) بنتا ہے۔'
+        },
+        {
+          id: 'q-ur-16',
+          questionText: '\'ن\' کے اندر کتنے نقطے ہوتے ہیں؟',
+          options: ['دو', 'ایک', 'تین', 'چار'],
+          correctOptionIndex: 1,
+          explanation: '\'ن\' گول ہوتا ہے اور اس کے پیالے میں صرف ایک نقطہ ہوتا ہے۔'
+        },
+        {
+          id: 'q-ur-17',
+          questionText: 'ان میں سے کس حرف کی شکل کشتی (Boat) جیسی ہے اور اوپر دو نقطے ہیں؟',
+          options: ['ب', 'پ', 'ت', 'ٹ'],
+          correctOptionIndex: 2,
+          explanation: '\'ت\' ایک کشتی کی طرح ہوتا ہے اور اس میں دو نقطے سوار ہوتے ہیں!'
+        },
+        {
+          id: 'q-ur-18',
+          questionText: '\'خ\' کا نقطہ کہاں ہوتا ہے؟',
+          options: ['اوپر', 'نیچے', 'پیٹ میں', 'کوئی نقطہ نہیں ہوتا'],
+          correctOptionIndex: 0,
+          explanation: '\'خ\' کے سر کے اوپر ایک نقطہ ہوتا ہے (خ سے خرگوش)۔'
+        },
+        {
+          id: 'q-ur-19',
+          questionText: '\'ق\' کے اوپر کتنے نقطے ہوتے ہیں؟',
+          options: ['ایک', 'دو', 'تین', 'چار'],
+          correctOptionIndex: 1,
+          explanation: '\'ق\' (قینچی) کے اوپر دو نقطے ہوتے ہیں۔'
+        },
+        {
+          id: 'q-ur-20',
+          questionText: 'لفظ "آسمان" کس حرف سے شروع ہوتا ہے؟',
+          options: ['ا (الف)', 'ع (عین)', 'آ (الف مد آ)', 'غ (غین)'],
+          correctOptionIndex: 2,
+          explanation: 'آسمان کی آواز کھنچ کر آتی ہے، اس لیے یہ \'آ\' (الف مد آ) سے شروع ہوتا ہے۔'
+        },
+        {
+          id: 'q-ur-21',
+          questionText: '\'ط\' کے بعد کیا آتا ہے؟',
+          options: ['ظ', 'ع', 'غ', 'ف'],
+          correctOptionIndex: 0,
+          explanation: '\'ط\' کے فوراً بعد \'ظ\' آتا ہے، جس پر ایک نقطہ ہوتا ہے۔'
+        },
+        {
+          id: 'q-ur-22',
+          questionText: '\'پ\' سے کون سا لفظ بنتا ہے؟',
+          options: ['تارا', 'پتنگ', 'بطخ', 'جوتا'],
+          correctOptionIndex: 1,
+          explanation: '\'پ\' سے پتنگ (Kite) بنتی ہے!'
+        },
+        {
+          id: 'q-ur-23',
+          questionText: 'خالی جگہ پُر کریں: ا ، ب ، پ ، __ ، ٹ',
+          options: ['ث', 'ت', 'ج', 'چ'],
+          correctOptionIndex: 1,
+          explanation: 'ترتیب پڑھیں: الف، بے، پے، تے، ٹے۔ صحیح جواب \'ت\' ہے۔'
+        },
+        {
+          id: 'q-ur-24',
+          questionText: 'لفظ "بلی" (Billi) کا پہلا حرف کیا ہے؟',
+          options: ['ب', 'پ', 'ت', 'ل'],
+          correctOptionIndex: 0,
+          explanation: 'بلی کی آواز "ب" سے شروع ہوتی ہے۔'
+        },
+        {
+          id: 'q-ur-25',
+          questionText: 'خالی جگہ پُر کریں: د ، ڈ ، ذ ، __ ، ڑ',
+          options: ['ز', 'ژ', 'ر', 'س'],
+          correctOptionIndex: 2,
+          explanation: '\'ذ\' کے بعد \'ر\' آتا ہے۔'
+        },
+        {
+          id: 'q-ur-26',
+          questionText: 'لفظ "کتاب" میں کل کتنے حروف ہیں؟',
+          options: ['دو', 'تین', 'چار', 'پانچ'],
+          correctOptionIndex: 2,
+          explanation: 'ک + ت + ا + ب = 4 حروف!'
+        },
+        {
+          id: 'q-ur-27',
+          questionText: 'اردو حروف تہجی میں کتنی طرح کی \'ی\' ہوتی ہیں؟',
+          options: ['ایک', 'دو', 'تین', 'چار'],
+          correctOptionIndex: 1,
+          explanation: 'اردو میں دو \'ی\' ہوتی ہیں: چھوٹی (ی) اور بڑی (ے)۔'
+        },
+        {
+          id: 'q-ur-28',
+          questionText: 'لفظ "پاکستان" کا آخری حرف کون سا ہے؟',
+          options: ['پ', 'ک', 'س', 'ن'],
+          correctOptionIndex: 3,
+          explanation: 'پاکستان کے آخر میں \'ن\' کی آواز آتی ہے۔'
+        },
+        {
+          id: 'q-ur-29',
+          questionText: 'کون سا حرف \'و\' اور \'ء\' (ہمزہ) کے درمیان آتا ہے؟',
+          options: ['الف', 'ن', 'ہ (گول ہے)', 'ی'],
+          correctOptionIndex: 2,
+          explanation: 'حروف تہجی کے آخر میں ترتیب یہ ہے: و، ہ، ء، ی، ے۔'
+        },
+        {
+          id: 'q-ur-30',
+          questionText: 'ان میں سے کون سا حرف لفظ "دروازہ" میں نہیں آتا؟',
+          options: ['د', 'ر', 'ز', 'چ'],
+          correctOptionIndex: 3,
+          explanation: 'دروازہ میں (د، ر، و، ا، ز، ہ) آتے ہیں، \'چ\' نہیں آتا۔'
+        },
+        {
+          id: 'q-ur-31',
+          questionText: '\'ژ\' (ژے) سے کون سا لفظ بنتا ہے؟',
+          options: ['زرافہ', 'زنجیر', 'ژالہ باری', 'زمین'],
+          correctOptionIndex: 2,
+          explanation: '\'ژ\' پر تین نقطے ہوتے ہیں اور اس سے ژالہ باری (Hailstorm) بنتا ہے۔ زرافہ \'ز\' سے ہوتا ہے۔'
+        },
+        {
+          id: 'q-ur-32',
+          questionText: 'حروف کی صحیح ترتیب کون سی ہے؟',
+          options: ['س ش ص ض', 'س ص ش ض', 'ش س ص ض', 'ض ص ش س'],
+          correctOptionIndex: 0,
+          explanation: 'الف بے پڑھیں تو پہلے \'س\'، پھر \'ش\'، پھر \'ص\' اور آخر میں \'ض\' آتا ہے۔'
+        },
+        {
+          id: 'q-ur-33',
+          questionText: 'کس حرف کی شکل بالکل \'ج\' جیسی ہے لیکن اس میں کوئی نقطہ نہیں ہوتا؟',
+          options: ['خ', 'چ', 'ع', 'ح'],
+          correctOptionIndex: 3,
+          explanation: '\'ح\' (حلوائی) کی شکل \'ج\' جیسی ہوتی ہے پر یہ اندر اور باہر سے خالی ہوتا ہے۔'
+        },
+        {
+          id: 'q-ur-34',
+          questionText: '\'ل\' کے بعد اور \'ن\' سے پہلے کون سا حرف آتا ہے؟',
+          options: ['ک', 'م', 'گ', 'و'],
+          correctOptionIndex: 1,
+          explanation: 'ترتیب میں پڑھیں: ک، ل، م، ن۔'
+        },
+        {
+          id: 'q-ur-35',
+          questionText: 'لفظ "چڑیا" میں \'ڑ\' کے اوپر کیا ہوتا ہے؟',
+          options: ['ایک نقطہ', 'دو نقطے', 'چھوٹی طوئے (ط)', 'کچھ نہیں'],
+          correctOptionIndex: 2,
+          explanation: '\'ڑ\' (اڑے) کے اوپر ہمیشہ چھوٹی سی طوئے (ط) بنی ہوتی ہے۔'
+        },
+        {
+          id: 'q-ur-36',
+          questionText: 'اگر ہم \'ت\' کے دونوں نقطے مٹا کر نیچے لگا دیں، تو وہ کون سا حرف بن جائے گا؟',
+          options: ['ب', 'پ', 'ث', 'ی (چھوٹی ی)'],
+          correctOptionIndex: 3,
+          explanation: '\'ت\' کے اوپر دو نقطے ہوتے ہیں۔ اگر ہم نیچے دو نقطے لگائیں تو وہ \'ی\' (شروع یا درمیان کی شکل) بن جاتا ہے!'
+        },
+        {
+          id: 'q-ur-37',
+          questionText: 'کون سا حرف اپنے نام کے اندر چھپا ہے: "ڈ _ ل" (D _ L)؟',
+          options: ['ا (الف)', 'و (واؤ)', 'ہ (ہے)', 'ی (یے)'],
+          correctOptionIndex: 1,
+          explanation: 'ڈ + و + ل = ڈول (Bucket)!'
         }
       ]
     },
@@ -2007,6 +2488,251 @@ export const initialDatabase: AppDatabase = {
           options: ['أ', 'ب', 'ت', 'ث'],
           correctOptionIndex: 1,
           explanation: 'كَلِمَةُ بَيْت تَبْدَأُ بِحَرْفِ الْبَاء (ب).'
+        },
+        {
+          id: 'q-ar-3',
+          questionText: 'अरबी वर्णमाला (Alphabet) की शुरुआत किस अक्षर से होती है?',
+          options: ['ب', 'أ', 'ت', 'ج'],
+          correctOptionIndex: 1,
+          explanation: 'अरबी का सबसे पहला अक्षर \'أ\' (अलिफ़) होता है।'
+        },
+        {
+          id: 'q-ar-4',
+          questionText: '\'ب\' (बा) के ठीक बाद कौन सा अक्षर आता है?',
+          options: ['ث', 'ت', 'ج', 'ح'],
+          correctOptionIndex: 1,
+          explanation: '\'ب\' (बा) के ठीक बाद \'ت\' (ता) आता है।'
+        },
+        {
+          id: 'q-ar-5',
+          questionText: 'इनमें से किस अक्षर के ऊपर तीन बिंदु (नुक़्ते) होते हैं?',
+          options: ['ب', 'ت', 'ث', 'ن'],
+          correctOptionIndex: 2,
+          explanation: '\'ث\' (सा) के ऊपर तीन बिंदु होते हैं।'
+        },
+        {
+          id: 'q-ar-6',
+          questionText: '\'ج\' (जीम) और \'خ\' (ख़ा) के बिल्कुल बीच में कौन सा अक्षर आता है?',
+          options: ['ح', 'د', 'ذ', 'ث'],
+          correctOptionIndex: 0,
+          explanation: 'सही क्रम है: ج, ح, خ। इसलिए बीच में \'ح\' (हा) आता है।'
+        },
+        {
+          id: 'q-ar-7',
+          questionText: 'इनमें से किस अक्षर के नीचे सिर्फ एक बिंदु (नुक़्ता) होता है?',
+          options: ['ن', 'ب', 'ت', 'خ'],
+          correctOptionIndex: 1,
+          explanation: '\'ب\' (बा) के नीचे एक बिंदु होता है, जबकि \'ن\' के ऊपर होता है।'
+        },
+        {
+          id: 'q-ar-8',
+          questionText: 'अरबी वर्णमाला (Alphabet) का सबसे आखिरी (28वाँ) अक्षर कौन सा है?',
+          options: ['و', 'هـ', 'ن', 'ي'],
+          correctOptionIndex: 3,
+          explanation: 'अरबी का आखिरी अक्षर \'ي\' (या) है।'
+        },
+        {
+          id: 'q-ar-9',
+          questionText: 'इनमें से किस अक्षर पर कभी कोई बिंदु (नुक़्ता) नहीं लगता?',
+          options: ['ش', 'ص', 'ض', 'ظ'],
+          correctOptionIndex: 1,
+          explanation: '\'ص\' (त्वाद/स्वाद) को बिना किसी बिंदु के बिल्कुल सादा लिखा जाता है।'
+        },
+        {
+          id: 'q-ar-10',
+          questionText: '\'س\' (सीन) के ठीक बाद कौन सा अक्षर आता है?',
+          options: ['ز', 'ص', 'ش', 'ض'],
+          correctOptionIndex: 2,
+          explanation: '\'س\' के बाद \'ش\' (शीन) आता है, जिसके ऊपर तीन बिंदु होते हैं।'
+        },
+        {
+          id: 'q-ar-11',
+          questionText: 'कौन सा अक्षर \'د\' (दाल) जैसा दिखता है, लेकिन उसके ऊपर एक बिंदु होता है?',
+          options: ['ر', 'ذ', 'ز', 'ط'],
+          correctOptionIndex: 1,
+          explanation: '\'ذ\' (ज़ाल) बिल्कुल \'د\' जैसा दिखता है, बस ऊपर एक नुक़्ता (बिंदु) होता है।'
+        },
+        {
+          id: 'q-ar-12',
+          questionText: '\'ط\' (तोय) के ठीक बाद कौन सा अक्षर आता है?',
+          options: ['ظ', 'ع', 'غ', 'ض'],
+          correctOptionIndex: 0,
+          explanation: '\'ط\' के बाद \'ظ\' (ज़ोय) आता है।'
+        },
+        {
+          id: 'q-ar-13',
+          questionText: 'शब्द "شَمْس" (सूरज) का पहला अक्षर कौन सा है?',
+          options: ['س', 'ص', 'ش', 'ق'],
+          correctOptionIndex: 2,
+          explanation: '"شَمْس" (शम्स) शब्द \'ش\' (शीन) से शुरू होता है।'
+        },
+        {
+          id: 'q-ar-14',
+          questionText: 'कौन सा अक्षर छाते की मुड़ी हुई डंडी (Umbrella handle) जैसा दिखता है?',
+          options: ['ك', 'ل', 'م', 'أ'],
+          correctOptionIndex: 1,
+          explanation: '\'ل\' (लाम) का आकार छाते की डंडी जैसा होता है।'
+        },
+        {
+          id: 'q-ar-15',
+          questionText: 'इस क्रम में कौन सा अक्षर गायब है? ك, ل, __, ن',
+          options: ['هـ', 'م', 'و', 'ي'],
+          correctOptionIndex: 1,
+          explanation: 'सही क्रम है: ك, ل, م (मीम), ن।'
+        },
+        {
+          id: 'q-ar-16',
+          questionText: 'इनमें से कौन सा अक्षर अपने आगे (बाद) वाले अक्षर से नहीं जुड़ता?',
+          options: ['ب', 'س', 'د', 'ج'],
+          correctOptionIndex: 2,
+          explanation: '\'د\' (दाल) उन अक्षरों में से एक है जो अपने बाद वाले अक्षर का हाथ नहीं पकड़ते।'
+        },
+        {
+          id: 'q-ar-17',
+          questionText: 'कौन सा अक्षर \'ر\' (रा) जैसा दिखता है लेकिन उस पर एक बिंदु होता है?',
+          options: ['د', 'ذ', 'ز', 'و'],
+          correctOptionIndex: 2,
+          explanation: '\'ز\' (ज़ा) बिल्कुल \'ر\' (रा) जैसा होता है बस ऊपर एक बिंदु होता है।'
+        },
+        {
+          id: 'q-ar-18',
+          questionText: 'अरबी वर्णमाला का तीसरा (3rd) अक्षर कौन सा है?',
+          options: ['ت', 'ث', 'أ', 'ب'],
+          correctOptionIndex: 0,
+          explanation: 'क्रम है: أ (पहला), ب (दूसरा), ت (तीसरा)।'
+        },
+        {
+          id: 'q-ar-19',
+          questionText: 'इनमें से किस अक्षर के ऊपर दो बिंदु (नुक़्ते) होते हैं?',
+          options: ['ف', 'ق', 'م', 'ك'],
+          correctOptionIndex: 1,
+          explanation: '\'ق\' (क़ाफ़) के ऊपर दो बिंदु होते हैं, जबकि \'ف\' पर सिर्फ एक होता है।'
+        },
+        {
+          id: 'q-ar-20',
+          questionText: 'इनमें से कौन सा अक्षर \'س\' (सीन) का जुड़वा भाई है जिसके ऊपर 3 बिंदु होते हैं?',
+          options: ['ش', 'ص', 'ض', 'ث'],
+          correctOptionIndex: 0,
+          explanation: '\'ش\' (शीन) बिल्कुल \'س\' (सीन) जैसा होता है, बस उस पर 3 बिंदु होते हैं।'
+        },
+        {
+          id: 'q-ar-21',
+          questionText: 'इनमें से किस अक्षर की शक्ल नाव (Boat) जैसी नहीं है?',
+          options: ['ب', 'ت', 'ث', 'ج'],
+          correctOptionIndex: 3,
+          explanation: '(ب, ت, ث) तीनों नाव की तरह होते हैं, जबकि \'ج\' (जीम) की शक्ल अलग है।'
+        },
+        {
+          id: 'q-ar-22',
+          questionText: 'शब्द "كِتَاب" (किताब) का पहला अक्षर कौन सा है?',
+          options: ['ق', 'ك', 'ح', 'ع'],
+          correctOptionIndex: 1,
+          explanation: '"كِتَاب" (किताब) शब्द \'ك\' (काफ़) से शुरू होता है।'
+        },
+        {
+          id: 'q-ar-23',
+          questionText: 'इनमें से किस शब्द के किसी भी अक्षर पर कोई बिंदु (नुक़्ता) नहीं है?',
+          options: ['حِمَار', 'قِطَّة', 'أَسَد', 'كَلْب'],
+          correctOptionIndex: 2,
+          explanation: 'أَسَد (असद यानी शेर) में अलिफ़, सीन और दाल हैं, और इनमें से किसी पर भी बिंदु नहीं होता।'
+        },
+        {
+          id: 'q-ar-24',
+          questionText: 'किस अक्षर के नीचे दो बिंदु (नुक़्ते) होते हैं?',
+          options: ['ق', 'ت', 'ي', 'ث'],
+          correctOptionIndex: 2,
+          explanation: '\'ي\' (या) जब शुरू या बीच में आता है तो उसके नीचे 2 बिंदु होते हैं।'
+        },
+        {
+          id: 'q-ar-25',
+          questionText: 'शब्द "قَمَر" (चाँद) के बिल्कुल बीच में कौन सा अक्षर है?',
+          options: ['ق', 'ر', 'م', 'ن'],
+          correctOptionIndex: 2,
+          explanation: 'قَمَر में (ق - م - ر) आते हैं, इसलिए बीच में \'م\' (मीम) है।'
+        },
+        {
+          id: 'q-ar-26',
+          questionText: 'इनमें से कौन सा शब्द गोल ता \'ة\' (ता मरबूता) पर खत्म होता है?',
+          options: ['بَيْت', 'بِنْت', 'شَجَرَة', 'حُوت'],
+          correctOptionIndex: 2,
+          explanation: '"شَجَرَة" (पेड़) के अंत में गोल ता (ة) आती है जो अरबी में स्त्रीलिंग की पहचान है।'
+        },
+        {
+          id: 'q-ar-27',
+          questionText: 'इनमें से कौन सा पक्षी \'ع\' (ऐन) अक्षर से शुरू होता है?',
+          options: ['عُصْفُور', 'قِطَّة', 'غَزَال', 'كَلْب'],
+          correctOptionIndex: 0,
+          explanation: 'عُصْفُور (उसफ़ूर यानी चिड़िया) \'ع\' (ऐन) से शुरू होता है।'
+        },
+        {
+          id: 'q-ar-28',
+          questionText: 'अगर हम इन अक्षरों (ل - ي - ف) को उल्टा पढ़ें, तो कौन सा शब्द बनेगा?',
+          options: ['قَفْل', 'فِيل', 'لَيْل', 'فُل'],
+          correctOptionIndex: 1,
+          explanation: 'उल्टा पढ़ने पर ف - ي - ل (फ़ील यानी हाथी) बनेगा!'
+        },
+        {
+          id: 'q-ar-29',
+          questionText: 'शब्द "بَاب" (दरवाज़ा) में कुल मिलाकर कितने बिंदु (नुक़्ते) हैं?',
+          options: ['١', '٢', '٣', '٠'],
+          correctOptionIndex: 1,
+          explanation: 'पहले \'ب\' का 1 बिंदु और आखिरी \'ب\' का 1 बिंदु। (1+1=2 अरबी में ٢)।'
+        },
+        {
+          id: 'q-ar-30',
+          questionText: 'कौन सा अक्षर शुरू और अंत में अपनी शक्ल बिल्कुल बदल लेता है (जैसे هَدِيَّة और وَجْه में)?',
+          options: ['ا', 'هـ', 'د', 'ر'],
+          correctOptionIndex: 1,
+          explanation: '\'هـ\' (हा) शुरू में \'هـ\' और अंत में \'ـه\' या \'ه\' लिखा जाता है।'
+        },
+        {
+          id: 'q-ar-31',
+          questionText: 'अगर हम एक-एक अक्षर छोड़कर आगे बढ़ें: \'أ\' से \'ت\' (ب छोड़ा), तो \'ج\' के बाद क्या आएगा?',
+          options: ['د', 'خ', 'ذ', 'ر'],
+          correctOptionIndex: 1,
+          explanation: 'ج, ح, خ। \'ح\' को छोड़ने पर हम \'خ\' (ख़ा) पर पहुँचेंगे।'
+        },
+        {
+          id: 'q-ar-32',
+          questionText: 'इनमें से कौन सा शब्द \'ن\' (नून) अक्षर पर खत्म होता है?',
+          options: ['عَيْن', 'فَم', 'رَأْس', 'قَدَم'],
+          correctOptionIndex: 0,
+          explanation: '"عَيْن" (ऐन यानी आँख) के अंत में \'ن\' (नून) आता है।'
+        },
+        {
+          id: 'q-ar-33',
+          questionText: 'जब \'अलिफ़\' के नीचे \'ज़ेर\' (Kasra) की आवाज़ हो, तो उसे कैसे लिखते हैं?',
+          options: ['أ', 'آ', 'إ', 'ؤ'],
+          correctOptionIndex: 2,
+          explanation: 'ज़ेर होने पर हमज़ा भी अलिफ़ के नीचे आ जाता है, जैसे (إ)।'
+        },
+        {
+          id: 'q-ar-34',
+          questionText: 'इस क्रम को पूरा करें: ا , ب , ت , __ , ج',
+          options: ['ث', 'ح', 'خ', 'د'],
+          correctOptionIndex: 0,
+          explanation: 'अलिफ़, बा, ता के बाद \'ث\' (सा) आता है।'
+        },
+        {
+          id: 'q-ar-35',
+          questionText: '\'ج\' (जीम) के पेट (बीच) में कितने बिंदु होते हैं?',
+          options: ['١', '٢', '٣', '٠'],
+          correctOptionIndex: 0,
+          explanation: '\'ج\' के बीच में सिर्फ एक (١) बिंदु होता है।'
+        },
+        {
+          id: 'q-ar-36',
+          questionText: 'कौन सा अक्षर \'ج\' (जीम) जैसा दिखता है, लेकिन उसके अंदर कोई बिंदु नहीं होता?',
+          options: ['خ', 'ح', 'ع', 'غ'],
+          correctOptionIndex: 1,
+          explanation: '\'ح\' (हा) बिल्कुल खाली होता है, इसमें कोई नुक़्ता नहीं होता।'
+        },
+        {
+          id: 'q-ar-37',
+          questionText: 'इनमें से कौन सा फल \'ت\' (ता) से शुरू होता है?',
+          options: ['تُفَّاحَة', 'بُرْتُقَال', 'مَوْز', 'عِنَب'],
+          correctOptionIndex: 0,
+          explanation: '"تُفَّاحَة" (सेब) \'ت\' (ता) से शुरू होता है।'
         }
       ]
     },
@@ -2033,6 +2759,251 @@ export const initialDatabase: AppDatabase = {
           options: ['ख', 'ग', 'क', 'म'],
           correctOptionIndex: 2,
           explanation: 'कमल शब्द "क" अक्षर से शुरू होता है (क से कमल)।'
+        },
+        {
+          id: 'q-hi-3',
+          questionText: 'हिंदी वर्णमाला का सबसे पहला अक्षर कौन सा है?',
+          options: ['आ', 'अ', 'क', 'इ'],
+          correctOptionIndex: 1,
+          explanation: 'हिंदी वर्णमाला (Varnamala) हमेशा स्वर \'अ\' (जैसे अ से अनार) से शुरू होती है।'
+        },
+        {
+          id: 'q-hi-4',
+          questionText: '\'अ\' के ठीक बाद कौन सा अक्षर आता है?',
+          options: ['इ', 'ऊ', 'आ', 'ए'],
+          correctOptionIndex: 2,
+          explanation: '\'अ\' के बाद \'आ\' आता है (जैसे आ से आम)। \'आ\' में एक अतिरिक्त डंडी (मात्रा) होती है।'
+        },
+        {
+          id: 'q-hi-5',
+          questionText: '\'क\' के ठीक बाद कौन सा अक्षर आता है?',
+          options: ['ग', 'ख', 'घ', 'च'],
+          correctOptionIndex: 1,
+          explanation: 'सही क्रम है: क, ख, ग, घ। इसलिए \'क\' के बाद \'ख\' आता है।'
+        },
+        {
+          id: 'q-hi-6',
+          questionText: 'इनमें से कौन सा अक्षर एक \'स्वर\' (Vowel) है?',
+          options: ['प', 'म', 'इ', 'ल'],
+          correctOptionIndex: 2,
+          explanation: 'अ, आ, इ, ई आदि स्वर होते हैं। बाकी (प, म, ल) व्यंजन (Consonants) हैं।'
+        },
+        {
+          id: 'q-hi-7',
+          questionText: '\'च\' और \'ज\' के बीच में कौन सा अक्षर आता है?',
+          options: ['छ', 'झ', 'ट', 'ठ'],
+          correctOptionIndex: 0,
+          explanation: 'वर्णमाला पढ़ते समय हम कहते हैं: च, छ, ज। इसलिए बीच में \'छ\' आता है।'
+        },
+        {
+          id: 'q-hi-8',
+          questionText: '\'प\' के ठीक बाद क्या आता है?',
+          options: ['ब', 'भ', 'फ', 'म'],
+          correctOptionIndex: 2,
+          explanation: '\'प\' से पतंग के बाद \'फ\' से फल आता है!'
+        },
+        {
+          id: 'q-hi-9',
+          questionText: 'किस अक्षर से "उल्लू" (Owl) शब्द शुरू होता है?',
+          options: ['अ', 'ऊ', 'उ', 'ओ'],
+          correctOptionIndex: 2,
+          explanation: '"उल्लू" शब्द छोटे \'उ\' से शुरू होता है।'
+        },
+        {
+          id: 'q-hi-10',
+          questionText: '\'त\' के बाद कौन सा अक्षर आता है?',
+          options: ['थ', 'द', 'ध', 'न'],
+          correctOptionIndex: 0,
+          explanation: 'त से तरबूज़ के बाद थ से थर्मस (थ) आता है।'
+        },
+        {
+          id: 'q-hi-11',
+          questionText: 'इनमें से कौन सा अक्षर एक \'व्यंजन\' (Consonant) है?',
+          options: ['ओ', 'औ', 'ए', 'म'],
+          correctOptionIndex: 3,
+          explanation: 'ओ, औ, ए स्वर हैं। \'म\' (मछली) एक व्यंजन है।'
+        },
+        {
+          id: 'q-hi-12',
+          questionText: '\'य\' के ठीक बाद कौन सा अक्षर आता है?',
+          options: ['ल', 'व', 'र', 'श'],
+          correctOptionIndex: 2,
+          explanation: 'सही क्रम है: य, र, ल, व। इसलिए \'य\' के बाद \'र\' आता है।'
+        },
+        {
+          id: 'q-hi-13',
+          questionText: 'इनमें से किस अक्षर के पेट में एक तिरछी लाइन (लकीर) खींची होती है?',
+          options: ['व', 'ब', 'क', 'प'],
+          correctOptionIndex: 1,
+          explanation: '\'ब\' (बकरी) और \'व\' (वन) एक जैसे दिखते हैं, लेकिन \'ब\' के पेट में एक लाइन कटी होती है।'
+        },
+        {
+          id: 'q-hi-14',
+          questionText: 'शब्द "कमल" (Lotus) का पहला अक्षर कौन सा है?',
+          options: ['म', 'ल', 'क', 'ख'],
+          correctOptionIndex: 2,
+          explanation: 'क + म + ल = कमल! पहला अक्षर \'क\' है।'
+        },
+        {
+          id: 'q-hi-15',
+          questionText: '\'ल\' अक्षर से कौन सा शब्द शुरू होता है?',
+          options: ['भालू', 'लट्टू', 'आम', 'केला'],
+          correctOptionIndex: 1,
+          explanation: '\'ल\' से लट्टू (Top) होता है!'
+        },
+        {
+          id: 'q-hi-16',
+          questionText: 'इनमें से किस अक्षर के ऊपर एक बिंदी (Anusvara) लगी होती है?',
+          options: ['अ', 'आ', 'अं', 'अः'],
+          correctOptionIndex: 2,
+          explanation: '\'अं\' (अंगूर) के ऊपर हमेशा एक बिंदी (Dot) होती है।'
+        },
+        {
+          id: 'q-hi-17',
+          questionText: 'शब्द "किताब" (Book) में मूल रूप से पहला अक्षर कौन सा है?',
+          options: ['त', 'ब', 'क', 'ख'],
+          correctOptionIndex: 2,
+          explanation: '"किताब" शब्द \'क\' अक्षर (जिस पर इ की मात्रा लगी है) से शुरू होता है।'
+        },
+        {
+          id: 'q-hi-18',
+          questionText: 'कौन सा अक्षर \'ट\' जैसा दिखता है, बस नीचे से पूरा गोल (बंद) होता है?',
+          options: ['ढ', 'द', 'ठ', 'ड'],
+          correctOptionIndex: 2,
+          explanation: '\'ट\' आधा गोल होता है, और \'ठ\' (ठठेरा) पूरा गोल होता है।'
+        },
+        {
+          id: 'q-hi-19',
+          questionText: '\'स\' के ठीक बाद वर्णमाला में कौन सा अक्षर आता है?',
+          options: ['ह', 'क्ष', 'श', 'ष'],
+          correctOptionIndex: 0,
+          explanation: 'सही क्रम है: श, ष, स, ह। \'स\' के बाद \'ह\' (हाथी) आता है।'
+        },
+        {
+          id: 'q-hi-20',
+          questionText: 'इनमें से किस अक्षर को अंग्रेजी के अक्षर \'U\' की तरह नीचे से घुमाकर लिखते हैं?',
+          options: ['ग', 'प', 'न', 'र'],
+          correctOptionIndex: 1,
+          explanation: '\'प\' (पतंग) का आकार नीचे से \'U\' की तरह गोल होता है।'
+        },
+        {
+          id: 'q-hi-21',
+          questionText: 'शब्द "अनार" (Pomegranate) किस अक्षर से शुरू होता है?',
+          options: ['आ', 'अं', 'अ', 'न'],
+          correctOptionIndex: 2,
+          explanation: 'अ से अनार! यह वर्णमाला का सबसे पहला शब्द है जो बच्चे सीखते हैं।'
+        },
+        {
+          id: 'q-hi-22',
+          questionText: '\'ड\' और \'ण\' के बीच में क्या आता है?',
+          options: ['ट', 'ठ', 'ढ', 'त'],
+          correctOptionIndex: 2,
+          explanation: 'क्रम है: ट, ठ, ड, ढ, ण। बीच में \'ढ\' (ढक्कन) आता है।'
+        },
+        {
+          id: 'q-hi-23',
+          questionText: 'क, ख, ग, घ के बाद इस लाइन का आखिरी (5वाँ) अक्षर कौन सा है?',
+          options: ['च', 'ञ', 'ण', 'ङ'],
+          correctOptionIndex: 3,
+          explanation: '\'क\' वर्ग (लाइन) का आखिरी अक्षर \'ङ\' (अंगा) होता है।'
+        },
+        {
+          id: 'q-hi-24',
+          questionText: 'शब्द "मछली" के बिल्कुल बीच में कौन सा अक्षर है?',
+          options: ['म', 'छ', 'ल', 'ई'],
+          correctOptionIndex: 1,
+          explanation: 'म + छ + ली = मछली। बीच में \'छ\' (छाता) आता है।'
+        },
+        {
+          id: 'q-hi-25',
+          questionText: 'इनमें से किस अक्षर में कोई सीधी खड़ी डंडी (Standing line) नहीं होती?',
+          options: ['क', 'म', 'र', 'प'],
+          correctOptionIndex: 2,
+          explanation: '\'क\', \'म\', \'प\' सब में एक सीधी लाइन होती है, लेकिन \'र\' (रथ) में कोई सीधी लाइन नहीं होती।'
+        },
+        {
+          id: 'q-hi-26',
+          questionText: 'अगर \'प\' (पतंग) के पेट में एक तिरछी लाइन खींच दें, तो वह कौन सा अक्षर बन जाएगा?',
+          options: ['फ', 'ष', 'श', 'स'],
+          correctOptionIndex: 1,
+          explanation: '\'प\' के बीच में लाइन खींचने से वह \'ष\' (षट्कोण) बन जाता है!'
+        },
+        {
+          id: 'q-hi-27',
+          questionText: '"त्रिशूल" (Trident) शब्द किस अक्षर से शुरू होता है?',
+          options: ['त', 'क्ष', 'त्र', 'ज्ञ'],
+          correctOptionIndex: 2,
+          explanation: 'त्रिशूल शब्द संयुक्त अक्षर \'त्र\' (T-R-A) से शुरू होता है।'
+        },
+        {
+          id: 'q-hi-28',
+          questionText: 'शब्द "मगरमच्छ" (Crocodile) का पहला अक्षर कौन सा है?',
+          options: ['ग', 'म', 'र', 'छ'],
+          correctOptionIndex: 1,
+          explanation: 'मगरमच्छ की शुरुआत \'म\' से होती है।'
+        },
+        {
+          id: 'q-hi-29',
+          questionText: '\'ड\' (डमरू) के बिल्कुल नीचे एक बिंदु (बिंदी) लगाने से कौन सा अक्षर बनता है?',
+          options: ['ढ़', 'ड़', 'ढ', 'झ'],
+          correctOptionIndex: 1,
+          explanation: '\'ड\' के नीचे बिंदी लगाने से \'ड़\' (जैसे सड़क में) बन जाता है।'
+        },
+        {
+          id: 'q-hi-30',
+          questionText: 'इनमें से कौन सा अक्षर स्वर (Vowel) नहीं है?',
+          options: ['ऋ', 'ए', 'ओ', 'स'],
+          correctOptionIndex: 3,
+          explanation: '\'स\' (सेब) एक व्यंजन (Consonant) है। बाकी सब स्वर हैं।'
+        },
+        {
+          id: 'q-hi-31',
+          questionText: 'शब्द "बचपन" (Childhood) में कुल कितने अक्षर हैं?',
+          options: ['2', '3', '4', '5'],
+          correctOptionIndex: 2,
+          explanation: 'ब + च + प + न = कुल 4 अक्षर हैं!'
+        },
+        {
+          id: 'q-hi-32',
+          questionText: '\'ज्ञ\' से कौन सा शब्द बनता है?',
+          options: ['क्षत्रिय', 'त्रिशूल', 'ज्ञानी', 'श्रमिक'],
+          correctOptionIndex: 2,
+          explanation: '\'ज्ञ\' से ज्ञानी (Wise person) बनता है!'
+        },
+        {
+          id: 'q-hi-33',
+          questionText: 'अगर हम \'प\', \'फ\', \'ब\' को उल्टा (पीछे से) पढ़ें, तो सबसे पहले क्या आएगा?',
+          options: ['प', 'फ', 'ब', 'भ'],
+          correctOptionIndex: 2,
+          explanation: 'उल्टा पढ़ने पर सबसे पहले \'ब\', फिर \'फ\', और अंत में \'प\' आएगा।'
+        },
+        {
+          id: 'q-hi-34',
+          questionText: 'इनमें से किस अक्षर के ऊपर पूरी शिरोरेखा (छत वाली लाइन) नहीं खींची जाती?',
+          options: ['क', 'प', 'भ', 'त'],
+          correctOptionIndex: 2,
+          explanation: '\'भ\' और \'ध\' जैसे अक्षरों के ऊपर का गोल हिस्सा खुला रहता है, वहाँ लाइन नहीं खींचते।'
+        },
+        {
+          id: 'q-hi-35',
+          questionText: 'वर्णमाला का सबसे आखिरी संयुक्त अक्षर कौन सा होता है?',
+          options: ['क्ष', 'त्र', 'ज्ञ', 'श्र'],
+          correctOptionIndex: 3,
+          explanation: 'हिंदी वर्णमाला के अंत में क्ष, त्र, ज्ञ और \'श्र\' (जैसे श्रमिक में) आते हैं।'
+        },
+        {
+          id: 'q-hi-36',
+          questionText: '"औ" (Aau) में ऊपर कितनी मात्राएँ (डंडियाँ) लगी होती हैं?',
+          options: ['एक', 'दो', 'तीन', 'एक भी नहीं'],
+          correctOptionIndex: 1,
+          explanation: '\'ओ\' में ऊपर 1 मात्रा होती है, और \'औ\' (औरत) में ऊपर 2 मात्राएँ होती हैं।'
+        },
+        {
+          id: 'q-hi-37',
+          questionText: 'अगर \'व\' के पेट में लाइन खींचें तो वह \'ब\' बनता है। अगर \'च\' की खड़ी डंडी हटा दें तो वह कैसा दिखेगा?',
+          options: ['U जैसा', 'O जैसा', 'C (या आधा चाँद) और एक लेटी लाइन', 'V जैसा'],
+          correctOptionIndex: 2,
+          explanation: '\'च\' से डंडी हटाने पर सिर्फ एक लेटी लाइन और एक आधा गोल हिस्सा बचेगा।'
         }
       ]
     },

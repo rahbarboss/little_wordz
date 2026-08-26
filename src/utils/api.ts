@@ -54,6 +54,17 @@ function getLocalDatabase(): AppDatabase {
         if (initialDatabase.islamicItems && initialDatabase.islamicItems.length > islamicItems.length) {
           islamicItems = initialDatabase.islamicItems;
         }
+        let quizzes = parsed.quizzes || initialDatabase.quizzes;
+        if (initialDatabase.quizzes) {
+          quizzes = initialDatabase.quizzes.map(initQ => {
+            const existing = (parsed.quizzes || []).find((q: any) => q.id === initQ.id);
+            if (!existing) return initQ;
+            if (initQ.questions && (!existing.questions || initQ.questions.length > existing.questions.length)) {
+              return { ...existing, questions: initQ.questions };
+            }
+            return existing;
+          });
+        }
 
         const merged: AppDatabase = {
           ...initialDatabase,
@@ -62,6 +73,7 @@ function getLocalDatabase(): AppDatabase {
           quranSurahs: surahs,
           islamicItems,
           islamicStudies: islamicItems,
+          quizzes,
         };
         saveLocalDatabase(merged);
         return merged;

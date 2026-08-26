@@ -87,6 +87,18 @@ function loadDatabase(): AppDatabase {
         islamicItems = initialDatabase.islamicItems;
       }
 
+      let quizzes = data.quizzes || initialDatabase.quizzes;
+      if (initialDatabase.quizzes) {
+        quizzes = initialDatabase.quizzes.map(initQ => {
+          const existing = (data.quizzes || []).find((q: any) => q.id === initQ.id);
+          if (!existing) return initQ;
+          if (initQ.questions && (!existing.questions || initQ.questions.length > existing.questions.length)) {
+            return { ...existing, questions: initQ.questions };
+          }
+          return existing;
+        });
+      }
+
       const merged: AppDatabase = {
         alphabets: (data.alphabets && data.alphabets.length >= initialDatabase.alphabets.length) ? data.alphabets : initialDatabase.alphabets,
         words: (data.words && data.words.length >= initialDatabase.words.length) ? data.words : initialDatabase.words,
@@ -97,7 +109,7 @@ function loadDatabase(): AppDatabase {
         islamicStudies: islamicItems,
         mathItems: (data.mathItems && data.mathItems.length >= initialDatabase.mathItems.length) ? data.mathItems : initialDatabase.mathItems,
         gkItems: (data.gkItems && data.gkItems.length >= initialDatabase.gkItems.length) ? data.gkItems : initialDatabase.gkItems,
-        quizzes: (data.quizzes && data.quizzes.length >= initialDatabase.quizzes.length) ? data.quizzes : initialDatabase.quizzes,
+        quizzes,
       };
       saveDatabase(merged);
       return merged;
