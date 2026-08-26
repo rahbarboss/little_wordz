@@ -1,0 +1,6 @@
+{
+  "name": "LITTLE MINDZ",
+  "description": "Child-friendly educational platform for English, Urdu, Arabic, Hindi, Quran, Islamic Studies, Math, GK, and MCQ Quizzes with a complete Admin management CMS.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
