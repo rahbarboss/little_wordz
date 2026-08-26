@@ -77,20 +77,30 @@ function loadDatabase(): AppDatabase {
     if (fs.existsSync(DB_FILE)) {
       const raw = fs.readFileSync(DB_FILE, 'utf-8');
       const data = JSON.parse(raw);
-      const surahs = data.surahs || data.quranSurahs || initialDatabase.surahs;
-      const islamicItems = data.islamicItems || data.islamicStudies || initialDatabase.islamicItems;
-      return {
-        alphabets: data.alphabets || initialDatabase.alphabets,
-        words: data.words || initialDatabase.words,
-        sentences: data.sentences || initialDatabase.sentences,
+      // Ensure we keep the latest comprehensive surahs from initialDatabase if db.json has old subset
+      let surahs = data.surahs || data.quranSurahs || initialDatabase.surahs;
+      if (initialDatabase.surahs && initialDatabase.surahs.length > surahs.length) {
+        surahs = initialDatabase.surahs;
+      }
+      let islamicItems = data.islamicItems || data.islamicStudies || initialDatabase.islamicItems;
+      if (initialDatabase.islamicItems && initialDatabase.islamicItems.length > islamicItems.length) {
+        islamicItems = initialDatabase.islamicItems;
+      }
+
+      const merged: AppDatabase = {
+        alphabets: (data.alphabets && data.alphabets.length >= initialDatabase.alphabets.length) ? data.alphabets : initialDatabase.alphabets,
+        words: (data.words && data.words.length >= initialDatabase.words.length) ? data.words : initialDatabase.words,
+        sentences: (data.sentences && data.sentences.length >= initialDatabase.sentences.length) ? data.sentences : initialDatabase.sentences,
         surahs,
         quranSurahs: surahs,
         islamicItems,
         islamicStudies: islamicItems,
-        mathItems: data.mathItems || initialDatabase.mathItems,
-        gkItems: data.gkItems || initialDatabase.gkItems,
-        quizzes: data.quizzes || initialDatabase.quizzes,
+        mathItems: (data.mathItems && data.mathItems.length >= initialDatabase.mathItems.length) ? data.mathItems : initialDatabase.mathItems,
+        gkItems: (data.gkItems && data.gkItems.length >= initialDatabase.gkItems.length) ? data.gkItems : initialDatabase.gkItems,
+        quizzes: (data.quizzes && data.quizzes.length >= initialDatabase.quizzes.length) ? data.quizzes : initialDatabase.quizzes,
       };
+      saveDatabase(merged);
+      return merged;
     }
   } catch (err) {
     console.error('Failed to read db.json, fallback to initial:', err);

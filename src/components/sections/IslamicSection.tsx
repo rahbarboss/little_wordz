@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IslamicItem } from '../../types.ts';
 import { AudioButton } from '../AudioButton.tsx';
-import { Sparkles, Moon, Star, Droplets, Heart, Bookmark, CheckCircle2 } from 'lucide-react';
+import { Sparkles, Moon, Star, Droplets, Heart, Bookmark, CheckCircle2, Search, X } from 'lucide-react';
 import { playSound } from '../../utils/audio.ts';
 
 interface IslamicSectionProps {
@@ -10,12 +10,13 @@ interface IslamicSectionProps {
 
 export const IslamicSection: React.FC<IslamicSectionProps> = ({ items = [] }) => {
   const [activeTab, setActiveTab] = useState<string>('kalimas');
+  const [duaSearchQuery, setDuaSearchQuery] = useState<string>('');
 
   const defaultTabs: Record<string, { label: string; icon: string; subtitle: string }> = {
     kalimas: { label: 'Six Kalimas', icon: '⭐', subtitle: 'The 6 Pillars of Islamic Creed' },
     wudu: { label: 'Wudu Guide', icon: '💧', subtitle: 'Step-by-Step Cleanliness' },
     salah: { label: 'Salah (Namaz)', icon: '🕌', subtitle: 'How to Pray Five Daily Prayers' },
-    duas: { label: 'Daily Duas', icon: '🤲', subtitle: 'Essential Supplications for Kids' },
+    duas: { label: 'Daily Duas', icon: '🤲', subtitle: '34+ Daily Duas & Supplications' },
     pillars: { label: 'Pillars of Islam', icon: '🕋', subtitle: '5 Pillars of Faith' },
     names_of_allah: { label: 'Names of Allah', icon: '✨', subtitle: '99 Beautiful Names' },
     prophets: { label: 'Stories of Prophets', icon: '📜', subtitle: 'Lessons from Prophets' },
@@ -43,6 +44,18 @@ export const IslamicSection: React.FC<IslamicSectionProps> = ({ items = [] }) =>
   });
 
   const filteredItems = safeItems.filter(item => item.category === activeTab).sort((a, b) => (a.order || 0) - (b.order || 0));
+
+  const filteredDuas = filteredItems.filter(item => {
+    if (!duaSearchQuery.trim()) return true;
+    const q = duaSearchQuery.toLowerCase();
+    return (
+      (item.title && item.title.toLowerCase().includes(q)) ||
+      (item.titleArabic && item.titleArabic.toLowerCase().includes(q)) ||
+      (item.arabicText && item.arabicText.includes(duaSearchQuery)) ||
+      (item.translationUrdu && item.translationUrdu.includes(duaSearchQuery)) ||
+      (item.translationEnglish && item.translationEnglish.toLowerCase().includes(q))
+    );
+  });
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -267,54 +280,112 @@ export const IslamicSection: React.FC<IslamicSectionProps> = ({ items = [] }) =>
 
       {/* 4. Daily Duas */}
       {activeTab === 'duas' && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredItems.map(dua => (
-            <div
-              key={dua.id}
-              id={`dua-card-${dua.id}`}
-              className="bg-white rounded-3xl border-2 border-amber-100 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
-            >
+        <div className="space-y-6">
+          {/* Duas Search & Counter Header */}
+          <div className="bg-white rounded-3xl p-4 sm:p-5 border-2 border-amber-100 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3 w-full sm:w-auto">
+              <span className="w-10 h-10 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl shadow-inner">
+                🤲
+              </span>
               <div>
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="font-bold font-fredoka text-slate-900 text-lg">{dua.title}</h3>
-                  <span className="text-2xl">🤲</span>
-                </div>
-
-                <div className="bg-amber-50/70 rounded-2xl p-4 my-3 text-center border border-amber-200/60" dir="rtl">
-                  <p className="text-2xl font-arabic text-amber-950 font-bold leading-relaxed">{dua.arabicText}</p>
-                </div>
-
-                {dua.pronunciation && (
-                  <p className="text-xs font-mono text-slate-500 italic mb-2">"{dua.pronunciation}"</p>
-                )}
-
-                <div className="space-y-2 text-xs">
-                  {dua.translationEnglish && (
-                    <p className="text-slate-700 leading-normal">
-                      <span className="font-bold text-amber-900">Meaning: </span>
-                      {dua.translationEnglish}
-                    </p>
-                  )}
-                  {dua.translationUrdu && (
-                    <p className="font-urdu text-emerald-900 text-sm text-right leading-relaxed" dir="rtl">
-                      {dua.translationUrdu}
-                    </p>
-                  )}
-                </div>
-              </div>
-
-              <div className="mt-5 pt-3 border-t border-slate-100 flex justify-end">
-                <AudioButton
-                  audioUrl={dua.audioUrl}
-                  audioText={dua.arabicText}
-                  language="ar"
-                  size="sm"
-                  variant="primary"
-                  label="Recite Dua"
-                />
+                <h2 className="text-base font-bold font-fredoka text-slate-800">
+                  Comprehensive Daily Duas & Supplications
+                </h2>
+                <p className="text-xs text-slate-500">
+                  {filteredItems.length} Masnoon Duas, Salah Supplications & Essential Prayers
+                </p>
               </div>
             </div>
-          ))}
+
+            <div className="relative w-full sm:w-72">
+              <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                value={duaSearchQuery}
+                onChange={e => setDuaSearchQuery(e.target.value)}
+                placeholder="Search dua (e.g. house, سفر, rain)..."
+                className="w-full pl-9 pr-8 py-2 text-xs rounded-2xl bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:bg-white text-slate-700"
+              />
+              {duaSearchQuery && (
+                <button
+                  onClick={() => setDuaSearchQuery('')}
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+          </div>
+
+          {filteredDuas.length === 0 ? (
+            <div className="bg-white rounded-3xl p-10 text-center border-2 border-dashed border-amber-200 text-slate-400">
+              <Search className="w-10 h-10 mx-auto mb-2 text-amber-300" />
+              <p className="font-bold text-sm text-slate-600">No Dua matching "{duaSearchQuery}" found</p>
+              <button
+                onClick={() => setDuaSearchQuery('')}
+                className="mt-3 px-4 py-1.5 bg-amber-100 text-amber-800 rounded-xl text-xs font-bold font-fredoka hover:bg-amber-200"
+              >
+                Clear Search
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {filteredDuas.map((dua, index) => (
+                <div
+                  key={dua.id}
+                  id={`dua-card-${dua.id}`}
+                  className="bg-white rounded-3xl border-2 border-amber-100 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center gap-2.5">
+                        <span className="w-7 h-7 rounded-xl bg-amber-500 text-white font-fredoka font-bold text-xs flex items-center justify-center shadow-sm">
+                          {index + 1}
+                        </span>
+                        <h3 className="font-bold font-fredoka text-slate-900 text-base leading-snug">
+                          {dua.title}
+                        </h3>
+                      </div>
+                      <span className="text-xl">🤲</span>
+                    </div>
+
+                    <div className="bg-amber-50/70 rounded-2xl p-4 my-3 text-center border border-amber-200/60" dir="rtl">
+                      <p className="text-2xl font-arabic text-amber-950 font-bold leading-relaxed">{dua.arabicText}</p>
+                    </div>
+
+                    {dua.pronunciation && (
+                      <p className="text-xs font-mono text-slate-500 italic mb-2">"{dua.pronunciation}"</p>
+                    )}
+
+                    <div className="space-y-2 text-xs">
+                      {dua.translationEnglish && (
+                        <p className="text-slate-700 leading-normal">
+                          <span className="font-bold text-amber-900">Meaning: </span>
+                          {dua.translationEnglish}
+                        </p>
+                      )}
+                      {dua.translationUrdu && (
+                        <p className="font-urdu text-emerald-900 text-sm text-right leading-relaxed" dir="rtl">
+                          {dua.translationUrdu}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="mt-5 pt-3 border-t border-slate-100 flex justify-end">
+                    <AudioButton
+                      audioUrl={dua.audioUrl}
+                      audioText={dua.arabicText}
+                      language="ar"
+                      size="sm"
+                      variant="primary"
+                      label="Recite Dua"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
 

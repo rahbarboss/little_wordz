@@ -46,19 +46,31 @@ function getLocalDatabase(): AppDatabase {
     if (raw) {
       const parsed = JSON.parse(raw);
       if (parsed && parsed.alphabets && parsed.alphabets.length > 0) {
-        return {
+        let surahs = parsed.surahs || parsed.quranSurahs || initialDatabase.surahs;
+        if (initialDatabase.surahs && initialDatabase.surahs.length > surahs.length) {
+          surahs = initialDatabase.surahs;
+        }
+        let islamicItems = parsed.islamicItems || parsed.islamicStudies || initialDatabase.islamicItems;
+        if (initialDatabase.islamicItems && initialDatabase.islamicItems.length > islamicItems.length) {
+          islamicItems = initialDatabase.islamicItems;
+        }
+
+        const merged: AppDatabase = {
           ...initialDatabase,
           ...parsed,
-          surahs: parsed.surahs || parsed.quranSurahs || initialDatabase.surahs,
-          quranSurahs: parsed.surahs || parsed.quranSurahs || initialDatabase.quranSurahs,
-          islamicItems: parsed.islamicItems || parsed.islamicStudies || initialDatabase.islamicItems,
-          islamicStudies: parsed.islamicItems || parsed.islamicStudies || initialDatabase.islamicStudies,
+          surahs,
+          quranSurahs: surahs,
+          islamicItems,
+          islamicStudies: islamicItems,
         };
+        saveLocalDatabase(merged);
+        return merged;
       }
     }
   } catch {
     // ignore
   }
+  saveLocalDatabase(initialDatabase);
   return initialDatabase;
 }
 
