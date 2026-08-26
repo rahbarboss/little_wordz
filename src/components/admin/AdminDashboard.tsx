@@ -1186,6 +1186,33 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               {/* SENTENCES FORM */}
               {activeTab === 'sentences' && (
                 <>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Category</label>
+                      <select
+                        value={formData.category || 'daily'}
+                        onChange={e => setFormData({ ...formData, category: e.target.value })}
+                        className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold"
+                      >
+                        <option value="daily">Daily Life (روزمرہ زندگی / दैनिक जीवन)</option>
+                        <option value="school">School & Study (تعلیم و اسکول / स्कूल और पढ़ाई)</option>
+                        <option value="greetings">Greetings (ملاقات و آداب / अभिवादन)</option>
+                        <option value="manners">Polite Manners (شائستگی / शिष्टाचार)</option>
+                        <option value="feelings">Feelings & Emotions (احساسات و جذبات / भावनाएं)</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase mb-1">Display Order #</label>
+                      <input
+                        type="number"
+                        value={formData.order || 1}
+                        onChange={e => setFormData({ ...formData, order: Number(e.target.value) })}
+                        className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold"
+                      />
+                    </div>
+                  </div>
+
                   <div>
                     <label className="block text-xs font-bold text-slate-700 uppercase mb-1">English Sentence</label>
                     <input
@@ -1652,7 +1679,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                       >
                         <option value="easy">Easy (Level 1)</option>
                         <option value="medium">Medium (Level 2)</option>
-                        <option value="hard">Hard (Level 3)</option>
+                        <option value="hard">Hard (Level 3 & 4)</option>
+                        <option value="expert">Expert (Level 5)</option>
                       </select>
                     </div>
                     <div>

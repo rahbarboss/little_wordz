@@ -215,7 +215,9 @@ export default function App() {
                 stats={{
                   totalSurahs: (database.surahs || database.quranSurahs || []).length,
                   totalGames: (database.quizzes || []).length,
+                  totalSentences: (database.sentences || []).length,
                 }}
+                sentences={database.sentences || []}
               />
             )}
 

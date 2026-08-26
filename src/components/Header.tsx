@@ -94,6 +94,7 @@ export const Header: React.FC<HeaderProps> = ({
   const navItems = [
     { id: 'home', label: 'Home', icon: '🏠' },
     { id: 'alphabet', label: 'Alphabets', icon: '🔤' },
+    { id: 'sentences', label: 'Daily Sentences', icon: '💬' },
     { id: 'quran', label: 'Holy Quran', icon: '📖' },
     { id: 'islamic', label: 'Islamic Studies', icon: '🕌' },
     { id: 'math', label: 'Mathematics', icon: '➕' },

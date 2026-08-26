@@ -109,11 +109,14 @@ export interface MathItem {
   question?: string;
   num1?: number;
   num2?: number;
-  operator?: '+' | '-' | '×' | '÷';
+  operator?: '+' | '-' | '×' | '÷' | string;
   answer?: number;
   options?: number[];
   visualObject?: string;
-  difficulty?: 'beginner' | 'intermediate' | 'advanced';
+  visualName?: string;
+  difficulty?: 'beginner' | 'intermediate' | 'advanced' | 'easy' | 'medium' | 'hard' | 'expert' | string;
+  level?: number;
+  topicType?: string;
   audioUrl?: string;
   order: number;
 }

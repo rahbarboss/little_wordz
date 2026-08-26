@@ -326,6 +326,177 @@ export const initialDatabase: AppDatabase = {
       arabic: 'السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ.',
       hindi: 'अस्सलाम वालेकुम व रहमतुल्लाह व बरकातहू।',
       order: 18
+    },
+    {
+      id: 's-19',
+      category: 'daily',
+      english: 'I want to sleep early tonight.',
+      urdu: 'میں آج رات جلدی سونا چاہتا ہوں۔',
+      arabic: 'أُرِيدُ أَنْ أَنَامَ مُبَكِّرًا اللَّيْلَةَ.',
+      hindi: 'मैं आज रात जल्दी सोना चाहता हूँ।',
+      order: 19
+    },
+    {
+      id: 's-20',
+      category: 'daily',
+      english: 'What time is it right now?',
+      urdu: 'اس وقت کیا ٹائم ہوا ہے؟',
+      arabic: 'كَمِ السَّاعَةُ الْآنَ؟',
+      hindi: 'अभी क्या समय हुआ है?',
+      order: 20
+    },
+    {
+      id: 's-21',
+      category: 'daily',
+      english: 'The weather is very pleasant today.',
+      urdu: 'آج موسم بہت خوشگوار ہے۔',
+      arabic: 'الطَّقْسُ لَطِيفٌ جِدًّا الْيَوْمَ.',
+      hindi: 'आज मौसम बहुत सुहावना है।',
+      order: 21
+    },
+    {
+      id: 's-22',
+      category: 'school',
+      english: 'The teacher is explaining the lesson.',
+      urdu: 'استاد سبق سمجھا رہے ہیں۔',
+      arabic: 'الْمُعَلِّمُ يَشْرَحُ الدَّرْسَ.',
+      hindi: 'शिक्षक पाठ समझा रहे हैं।',
+      order: 22
+    },
+    {
+      id: 's-23',
+      category: 'school',
+      english: 'I have completed my homework.',
+      urdu: 'میں نے اپنا ہوم ورک مکمل کر لیا ہے۔',
+      arabic: 'أَنْهَيْتُ وَاجِبِي الْمَنْزِلِيَّ.',
+      hindi: 'मैंने अपना होमवर्क पूरा कर लिया है।',
+      order: 23
+    },
+    {
+      id: 's-24',
+      category: 'school',
+      english: 'Can I borrow your pencil?',
+      urdu: 'کیا میں آپ کی پنسل لے سکتا ہوں؟',
+      arabic: 'هَلْ يُمْكِنُنِي اسْتِعَارَةُ قَلَمِكَ الرَّصَاصِ؟',
+      hindi: 'क्या मैं आपकी पेंसिल उधार ले सकता हूँ?',
+      order: 24
+    },
+    {
+      id: 's-25',
+      category: 'school',
+      english: 'Our exams will start next week.',
+      urdu: 'ہمارے امتحانات اگلے ہفتے شروع ہوں گے۔',
+      arabic: 'سَتَبْدَأُ امْتِحَانَاتُنَا الْأُسْبُوعَ الْقَادِمَ.',
+      hindi: 'हमारी परीक्षाएं अगले हफ्ते शुरू होंगी।',
+      order: 25
+    },
+    {
+      id: 's-26',
+      category: 'greetings',
+      english: 'How is everyone in your family?',
+      urdu: 'آپ کے گھر والے کیسے ہیں؟',
+      arabic: 'كَيْفَ حَالُ الْجَمِيعِ فِي عَائِلَتِكَ؟',
+      hindi: 'आपके परिवार में सब कैसे हैं?',
+      order: 26
+    },
+    {
+      id: 's-27',
+      category: 'greetings',
+      english: 'Welcome to our home.',
+      urdu: 'ہمارے گھر میں خوش آمدید۔',
+      arabic: 'مَرْحَبًا بِكُمْ فِي مَنْزِلِنَا.',
+      hindi: 'हमारे घर में आपका स्वागत है।',
+      order: 27
+    },
+    {
+      id: 's-28',
+      category: 'greetings',
+      english: 'See you again tomorrow.',
+      urdu: 'کل آپ سے دوبارہ ملاقات ہوگی۔',
+      arabic: 'أَرَاكَ غَدًا مَرَّةً أُخْرَى.',
+      hindi: 'कल आपसे फिर मुलाकात होगी।',
+      order: 28
+    },
+    {
+      id: 's-29',
+      category: 'manners',
+      english: 'I am sorry for my mistake.',
+      urdu: 'میں اپنی غلطی کے لیے معافی چاہتا ہوں۔',
+      arabic: 'أَنَا آسِفٌ عَلَى خَطَئِي.',
+      hindi: 'मैं अपनी गलती के लिए माफ़ी चाहता हूँ।',
+      order: 29
+    },
+    {
+      id: 's-30',
+      category: 'manners',
+      english: 'Excuse me, where is the restroom?',
+      urdu: 'معاف کیجیے گا، واش روم کہاں ہے؟',
+      arabic: 'مَعْذِرَةً، أَيْنَ دَوْرَةُ الْمِيَاهِ؟',
+      hindi: 'माफ़ कीजिएगा, शौचालय कहाँ है?',
+      order: 30
+    },
+    {
+      id: 's-31',
+      category: 'manners',
+      english: 'Could you please repeat that?',
+      urdu: 'کیا آپ براہ کرم اسے دہرا سکتے ہیں؟',
+      arabic: 'هَلْ يُمْكِنُكَ إِعَادَةُ ذَلِكَ مِنْ فَضْلِكَ؟',
+      hindi: 'क्या आप कृपया इसे दोहरा सकते हैं?',
+      order: 31
+    },
+    {
+      id: 's-32',
+      category: 'manners',
+      english: 'You are welcome. (Reply to thank you)',
+      urdu: 'کوئی بات نہیں / خوش آمدید۔',
+      arabic: 'عَلَى الرُّحْبِ وَالسَّعَةِ.',
+      hindi: 'कोई बात नहीं / आपका स्वागत है।',
+      order: 32
+    },
+    {
+      id: 's-33',
+      category: 'feelings',
+      english: 'I feel very tired right now.',
+      urdu: 'میں اس وقت بہت تھکاوٹ محسوس کر رہا ہوں۔',
+      arabic: 'أَشْعُرُ بِتَعَبٍ شَدِيدٍ الْآنَ.',
+      hindi: 'मुझे अभी बहुत थकान महसूस हो रही है।',
+      order: 33
+    },
+    {
+      id: 's-34',
+      category: 'feelings',
+      english: 'I am excited about the trip.',
+      urdu: 'میں اس سفر کے لیے بہت پرجوش ہوں۔',
+      arabic: 'أَنَا مُتَحَمِّسٌ لِلرِّحْلَةِ.',
+      hindi: 'मैं इस यात्रा के लिए बहुत उत्साहित हूँ।',
+      order: 34
+    },
+    {
+      id: 's-35',
+      category: 'feelings',
+      english: 'She is sad because she lost her watch.',
+      urdu: 'وہ اداس ہے کیونکہ اس کی گھڑی کھو گئی ہے۔',
+      arabic: 'هِيَ حَزِينَةٌ لِأَنَّهَا أَضَاعَتْ سَاعَتَهَا.',
+      hindi: 'वह उदास है क्योंकि उसकी घड़ी खो गई है।',
+      order: 35
+    },
+    {
+      id: 's-36',
+      category: 'feelings',
+      english: 'He is angry about the delay.',
+      urdu: 'وہ تاخیر کی وجہ سے غصے میں ہے۔',
+      arabic: 'إِنَّهُ غَاضِبٌ بِسَبَبِ التَّأْخِيرِ.',
+      hindi: 'वह देरी की वजह से गुस्से में है।',
+      order: 36
+    },
+    {
+      id: 's-37',
+      category: 'daily',
+      english: 'I am going to the market to buy groceries.',
+      urdu: 'میں سودا سلف خریدنے بازار جا رہا ہوں۔',
+      arabic: 'أَنَا ذَاهِبٌ إِلَى السُّوقِ لِشِرَاءِ الْبِقَالَةِ.',
+      hindi: 'मैं किराने का सामान खरीदने बाज़ार जा रहा हूँ।',
+      order: 37
     }
   ],
   surahs: [
@@ -1492,112 +1663,1058 @@ export const initialDatabase: AppDatabase = {
       order: 13
     },
 
-    // Arithmetic Problems
+    // Arithmetic Practice (50 Levels & Questions)
     {
-      id: 'm-add-1',
-      type: 'arithmetic',
-      question: '2 + 3 = ?',
-      num1: 2,
-      num2: 3,
-      operator: '+',
-      answer: 5,
-      options: [4, 5, 6, 7],
-      visualObject: '🍎',
-      difficulty: 'beginner',
-      order: 14
+          "id": "m-arith-1",
+          "type": "arithmetic",
+          "question": "5 + 4 = ?",
+          "num1": 5,
+          "operator": "+",
+          "num2": 4,
+          "answer": 9,
+          "options": [
+                7,
+                8,
+                9,
+                10
+          ],
+          "visualObject": "🍎",
+          "visualName": "Apple",
+          "difficulty": "easy",
+          "level": 1,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 14
     },
     {
-      id: 'm-add-2',
-      type: 'arithmetic',
-      question: '4 + 4 = ?',
-      num1: 4,
-      num2: 4,
-      operator: '+',
-      answer: 8,
-      options: [6, 7, 8, 9],
-      visualObject: '⭐',
-      difficulty: 'beginner',
-      order: 15
+          "id": "m-arith-2",
+          "type": "arithmetic",
+          "question": "9 - 3 = ?",
+          "num1": 9,
+          "operator": "-",
+          "num2": 3,
+          "answer": 6,
+          "options": [
+                5,
+                6,
+                7,
+                8
+          ],
+          "visualObject": "🍌",
+          "visualName": "Banana",
+          "difficulty": "easy",
+          "level": 1,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 15
     },
     {
-      id: 'm-sub-1',
-      type: 'arithmetic',
-      question: '5 - 2 = ?',
-      num1: 5,
-      num2: 2,
-      operator: '-',
-      answer: 3,
-      options: [2, 3, 4, 1],
-      visualObject: '🎈',
-      difficulty: 'beginner',
-      order: 16
+          "id": "m-arith-3",
+          "type": "arithmetic",
+          "question": "4 × 2 = ?",
+          "num1": 4,
+          "operator": "×",
+          "num2": 2,
+          "answer": 8,
+          "options": [
+                6,
+                8,
+                10,
+                12
+          ],
+          "visualObject": "🍒",
+          "visualName": "Cherry",
+          "difficulty": "easy",
+          "level": 1,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 16
     },
     {
-      id: 'm-sub-2',
-      type: 'arithmetic',
-      question: '8 - 3 = ?',
-      num1: 8,
-      num2: 3,
-      operator: '-',
-      answer: 5,
-      options: [4, 5, 6, 7],
-      visualObject: '🚗',
-      difficulty: 'beginner',
-      order: 17
+          "id": "m-arith-4",
+          "type": "arithmetic",
+          "question": "8 ÷ 2 = ?",
+          "num1": 8,
+          "operator": "÷",
+          "num2": 2,
+          "answer": 4,
+          "options": [
+                2,
+                3,
+                4,
+                5
+          ],
+          "visualObject": "🍉",
+          "visualName": "Watermelon",
+          "difficulty": "easy",
+          "level": 1,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 17
     },
     {
-      id: 'm-mul-1',
-      type: 'arithmetic',
-      question: '2 × 3 = ?',
-      num1: 2,
-      num2: 3,
-      operator: '×',
-      answer: 6,
-      options: [5, 6, 7, 8],
-      visualObject: '🌸',
-      difficulty: 'intermediate',
-      order: 18
+          "id": "m-arith-5",
+          "type": "arithmetic",
+          "question": "6 + 3 = ?",
+          "num1": 6,
+          "operator": "+",
+          "num2": 3,
+          "answer": 9,
+          "options": [
+                8,
+                9,
+                10,
+                12
+          ],
+          "visualObject": "🍇",
+          "visualName": "Grapes",
+          "difficulty": "easy",
+          "level": 1,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 18
     },
     {
-      id: 'm-mul-2',
-      type: 'arithmetic',
-      question: '4 × 3 = ?',
-      num1: 4,
-      num2: 3,
-      operator: '×',
-      answer: 12,
-      options: [10, 11, 12, 14],
-      visualObject: '🍬',
-      difficulty: 'intermediate',
-      order: 19
+          "id": "m-arith-6",
+          "type": "arithmetic",
+          "question": "10 - 5 = ?",
+          "num1": 10,
+          "operator": "-",
+          "num2": 5,
+          "answer": 5,
+          "options": [
+                4,
+                5,
+                6,
+                7
+          ],
+          "visualObject": "🍓",
+          "visualName": "Strawberry",
+          "difficulty": "easy",
+          "level": 1,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 19
     },
     {
-      id: 'm-div-1',
-      type: 'arithmetic',
-      question: '6 ÷ 2 = ?',
-      num1: 6,
-      num2: 2,
-      operator: '÷',
-      answer: 3,
-      options: [2, 3, 4, 5],
-      visualObject: '🍕',
-      difficulty: 'intermediate',
-      order: 20
+          "id": "m-arith-7",
+          "type": "arithmetic",
+          "question": "3 × 3 = ?",
+          "num1": 3,
+          "operator": "×",
+          "num2": 3,
+          "answer": 9,
+          "options": [
+                6,
+                9,
+                12,
+                15
+          ],
+          "visualObject": "🍍",
+          "visualName": "Pineapple",
+          "difficulty": "easy",
+          "level": 1,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 20
     },
     {
-      id: 'm-div-2',
-      type: 'arithmetic',
-      question: '10 ÷ 5 = ?',
-      num1: 10,
-      num2: 5,
-      operator: '÷',
-      answer: 2,
-      options: [1, 2, 3, 4],
-      visualObject: '🍪',
-      difficulty: 'intermediate',
-      order: 21
+          "id": "m-arith-8",
+          "type": "arithmetic",
+          "question": "6 ÷ 3 = ?",
+          "num1": 6,
+          "operator": "÷",
+          "num2": 3,
+          "answer": 2,
+          "options": [
+                2,
+                3,
+                4,
+                6
+          ],
+          "visualObject": "🥭",
+          "visualName": "Mango",
+          "difficulty": "easy",
+          "level": 1,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 21
+    },
+    {
+          "id": "m-arith-9",
+          "type": "arithmetic",
+          "question": "7 + 2 = ?",
+          "num1": 7,
+          "operator": "+",
+          "num2": 2,
+          "answer": 9,
+          "options": [
+                8,
+                9,
+                10,
+                11
+          ],
+          "visualObject": "🥝",
+          "visualName": "Kiwi",
+          "difficulty": "easy",
+          "level": 1,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 22
+    },
+    {
+          "id": "m-arith-10",
+          "type": "arithmetic",
+          "question": "8 - 4 = ?",
+          "num1": 8,
+          "operator": "-",
+          "num2": 4,
+          "answer": 4,
+          "options": [
+                2,
+                3,
+                4,
+                5
+          ],
+          "visualObject": "🥥",
+          "visualName": "Coconut",
+          "difficulty": "easy",
+          "level": 1,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 23
+    },
+    {
+          "id": "m-arith-11",
+          "type": "arithmetic",
+          "question": "45 + 23 = ?",
+          "num1": 45,
+          "operator": "+",
+          "num2": 23,
+          "answer": 68,
+          "options": [
+                58,
+                68,
+                78,
+                88
+          ],
+          "visualObject": "⚽",
+          "visualName": "Ball",
+          "difficulty": "medium",
+          "level": 2,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 24
+    },
+    {
+          "id": "m-arith-12",
+          "type": "arithmetic",
+          "question": "78 - 34 = ?",
+          "num1": 78,
+          "operator": "-",
+          "num2": 34,
+          "answer": 44,
+          "options": [
+                34,
+                44,
+                54,
+                64
+          ],
+          "visualObject": "🏀",
+          "visualName": "Basketball",
+          "difficulty": "medium",
+          "level": 2,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 25
+    },
+    {
+          "id": "m-arith-13",
+          "type": "arithmetic",
+          "question": "12 × 4 = ?",
+          "num1": 12,
+          "operator": "×",
+          "num2": 4,
+          "answer": 48,
+          "options": [
+                36,
+                44,
+                48,
+                52
+          ],
+          "visualObject": "🚗",
+          "visualName": "Car",
+          "difficulty": "medium",
+          "level": 2,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 26
+    },
+    {
+          "id": "m-arith-14",
+          "type": "arithmetic",
+          "question": "48 ÷ 4 = ?",
+          "num1": 48,
+          "operator": "÷",
+          "num2": 4,
+          "answer": 12,
+          "options": [
+                10,
+                11,
+                12,
+                14
+          ],
+          "visualObject": "🚕",
+          "visualName": "Taxi",
+          "difficulty": "medium",
+          "level": 2,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 27
+    },
+    {
+          "id": "m-arith-15",
+          "type": "arithmetic",
+          "question": "56 + 32 = ?",
+          "num1": 56,
+          "operator": "+",
+          "num2": 32,
+          "answer": 88,
+          "options": [
+                78,
+                88,
+                98,
+                108
+          ],
+          "visualObject": "🚂",
+          "visualName": "Train",
+          "difficulty": "medium",
+          "level": 2,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 28
+    },
+    {
+          "id": "m-arith-16",
+          "type": "arithmetic",
+          "question": "95 - 40 = ?",
+          "num1": 95,
+          "operator": "-",
+          "num2": 40,
+          "answer": 55,
+          "options": [
+                45,
+                55,
+                65,
+                75
+          ],
+          "visualObject": "✈️",
+          "visualName": "Airplane",
+          "difficulty": "medium",
+          "level": 2,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 29
+    },
+    {
+          "id": "m-arith-17",
+          "type": "arithmetic",
+          "question": "15 × 3 = ?",
+          "num1": 15,
+          "operator": "×",
+          "num2": 3,
+          "answer": 45,
+          "options": [
+                35,
+                40,
+                45,
+                50
+          ],
+          "visualObject": "⭐",
+          "visualName": "Star",
+          "difficulty": "medium",
+          "level": 2,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 30
+    },
+    {
+          "id": "m-arith-18",
+          "type": "arithmetic",
+          "question": "60 ÷ 5 = ?",
+          "num1": 60,
+          "operator": "÷",
+          "num2": 5,
+          "answer": 12,
+          "options": [
+                10,
+                12,
+                14,
+                15
+          ],
+          "visualObject": "🌙",
+          "visualName": "Moon",
+          "difficulty": "medium",
+          "level": 2,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 31
+    },
+    {
+          "id": "m-arith-19",
+          "type": "arithmetic",
+          "question": "80 + 45 = ?",
+          "num1": 80,
+          "operator": "+",
+          "num2": 45,
+          "answer": 125,
+          "options": [
+                115,
+                125,
+                135,
+                145
+          ],
+          "visualObject": "☀️",
+          "visualName": "Sun",
+          "difficulty": "medium",
+          "level": 2,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 32
+    },
+    {
+          "id": "m-arith-20",
+          "type": "arithmetic",
+          "question": "99 - 55 = ?",
+          "num1": 99,
+          "operator": "-",
+          "num2": 55,
+          "answer": 44,
+          "options": [
+                34,
+                44,
+                54,
+                64
+          ],
+          "visualObject": "🌻",
+          "visualName": "Flower",
+          "difficulty": "medium",
+          "level": 2,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 33
+    },
+    {
+          "id": "m-arith-21",
+          "type": "arithmetic",
+          "question": "120 + 45 = ?",
+          "num1": 120,
+          "operator": "+",
+          "num2": 45,
+          "answer": 165,
+          "options": [
+                155,
+                165,
+                175,
+                185
+          ],
+          "visualObject": "🌹",
+          "visualName": "Rose",
+          "difficulty": "hard",
+          "level": 3,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 34
+    },
+    {
+          "id": "m-arith-22",
+          "type": "arithmetic",
+          "question": "150 - 60 = ?",
+          "num1": 150,
+          "operator": "-",
+          "num2": 60,
+          "answer": 90,
+          "options": [
+                80,
+                90,
+                100,
+                110
+          ],
+          "visualObject": "🐶",
+          "visualName": "Dog",
+          "difficulty": "hard",
+          "level": 3,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 35
+    },
+    {
+          "id": "m-arith-23",
+          "type": "arithmetic",
+          "question": "14 × 5 = ?",
+          "num1": 14,
+          "operator": "×",
+          "num2": 5,
+          "answer": 70,
+          "options": [
+                60,
+                65,
+                70,
+                75
+          ],
+          "visualObject": "🐱",
+          "visualName": "Cat",
+          "difficulty": "hard",
+          "level": 3,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 36
+    },
+    {
+          "id": "m-arith-24",
+          "type": "arithmetic",
+          "question": "72 ÷ 6 = ?",
+          "num1": 72,
+          "operator": "÷",
+          "num2": 6,
+          "answer": 12,
+          "options": [
+                11,
+                12,
+                13,
+                14
+          ],
+          "visualObject": "🐰",
+          "visualName": "Rabbit",
+          "difficulty": "hard",
+          "level": 3,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 37
+    },
+    {
+          "id": "m-arith-25",
+          "type": "arithmetic",
+          "question": "235 + 110 = ?",
+          "num1": 235,
+          "operator": "+",
+          "num2": 110,
+          "answer": 345,
+          "options": [
+                325,
+                335,
+                345,
+                355
+          ],
+          "visualObject": "🐻",
+          "visualName": "Bear",
+          "difficulty": "hard",
+          "level": 3,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 38
+    },
+    {
+          "id": "m-arith-26",
+          "type": "arithmetic",
+          "question": "300 - 125 = ?",
+          "num1": 300,
+          "operator": "-",
+          "num2": 125,
+          "answer": 175,
+          "options": [
+                165,
+                175,
+                185,
+                225
+          ],
+          "visualObject": "🦋",
+          "visualName": "Butterfly",
+          "difficulty": "hard",
+          "level": 3,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 39
+    },
+    {
+          "id": "m-arith-27",
+          "type": "arithmetic",
+          "question": "20 × 6 = ?",
+          "num1": 20,
+          "operator": "×",
+          "num2": 6,
+          "answer": 120,
+          "options": [
+                100,
+                110,
+                120,
+                130
+          ],
+          "visualObject": "🐢",
+          "visualName": "Turtle",
+          "difficulty": "hard",
+          "level": 3,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 40
+    },
+    {
+          "id": "m-arith-28",
+          "type": "arithmetic",
+          "question": "90 ÷ 6 = ?",
+          "num1": 90,
+          "operator": "÷",
+          "num2": 6,
+          "answer": 15,
+          "options": [
+                13,
+                14,
+                15,
+                16
+          ],
+          "visualObject": "🍪",
+          "visualName": "Cookie",
+          "difficulty": "hard",
+          "level": 3,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 41
+    },
+    {
+          "id": "m-arith-29",
+          "type": "arithmetic",
+          "question": "450 + 150 = ?",
+          "num1": 450,
+          "operator": "+",
+          "num2": 150,
+          "answer": 600,
+          "options": [
+                500,
+                550,
+                600,
+                650
+          ],
+          "visualObject": "🍩",
+          "visualName": "Donut",
+          "difficulty": "hard",
+          "level": 3,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 42
+    },
+    {
+          "id": "m-arith-30",
+          "type": "arithmetic",
+          "question": "250 - 75 = ?",
+          "num1": 250,
+          "operator": "-",
+          "num2": 75,
+          "answer": 175,
+          "options": [
+                165,
+                175,
+                185,
+                225
+          ],
+          "visualObject": "🍰",
+          "visualName": "Cake",
+          "difficulty": "hard",
+          "level": 3,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 43
+    },
+    {
+          "id": "m-arith-31",
+          "type": "arithmetic",
+          "question": "25 × 6 = ?",
+          "num1": 25,
+          "operator": "×",
+          "num2": 6,
+          "answer": 150,
+          "options": [
+                125,
+                140,
+                150,
+                175
+          ],
+          "visualObject": "🍫",
+          "visualName": "Chocolate",
+          "difficulty": "hard",
+          "level": 4,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 44
+    },
+    {
+          "id": "m-arith-32",
+          "type": "arithmetic",
+          "question": "144 ÷ 12 = ?",
+          "num1": 144,
+          "operator": "÷",
+          "num2": 12,
+          "answer": 12,
+          "options": [
+                11,
+                12,
+                13,
+                14
+          ],
+          "visualObject": "🍬",
+          "visualName": "Candy",
+          "difficulty": "hard",
+          "level": 4,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 45
+    },
+    {
+          "id": "m-arith-33",
+          "type": "arithmetic",
+          "question": "560 + 240 = ?",
+          "num1": 560,
+          "operator": "+",
+          "num2": 240,
+          "answer": 800,
+          "options": [
+                700,
+                760,
+                800,
+                840
+          ],
+          "visualObject": "🍭",
+          "visualName": "Lollipop",
+          "difficulty": "hard",
+          "level": 4,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 46
+    },
+    {
+          "id": "m-arith-34",
+          "type": "arithmetic",
+          "question": "800 - 350 = ?",
+          "num1": 800,
+          "operator": "-",
+          "num2": 350,
+          "answer": 450,
+          "options": [
+                350,
+                400,
+                450,
+                550
+          ],
+          "visualObject": "🍕",
+          "visualName": "Pizza",
+          "difficulty": "hard",
+          "level": 4,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 47
+    },
+    {
+          "id": "m-arith-35",
+          "type": "arithmetic",
+          "question": "35 × 4 = ?",
+          "num1": 35,
+          "operator": "×",
+          "num2": 4,
+          "answer": 140,
+          "options": [
+                120,
+                130,
+                140,
+                150
+          ],
+          "visualObject": "🍔",
+          "visualName": "Burger",
+          "difficulty": "hard",
+          "level": 4,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 48
+    },
+    {
+          "id": "m-arith-36",
+          "type": "arithmetic",
+          "question": "225 ÷ 15 = ?",
+          "num1": 225,
+          "operator": "÷",
+          "num2": 15,
+          "answer": 15,
+          "options": [
+                12,
+                15,
+                18,
+                25
+          ],
+          "visualObject": "🍟",
+          "visualName": "Fries",
+          "difficulty": "hard",
+          "level": 4,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 49
+    },
+    {
+          "id": "m-arith-37",
+          "type": "arithmetic",
+          "question": "1250 + 750 = ?",
+          "num1": 1250,
+          "operator": "+",
+          "num2": 750,
+          "answer": 2000,
+          "options": [
+                1900,
+                2000,
+                2100,
+                2200
+          ],
+          "visualObject": "🚀",
+          "visualName": "Rocket",
+          "difficulty": "hard",
+          "level": 4,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 50
+    },
+    {
+          "id": "m-arith-38",
+          "type": "arithmetic",
+          "question": "1000 - 455 = ?",
+          "num1": 1000,
+          "operator": "-",
+          "num2": 455,
+          "answer": 545,
+          "options": [
+                445,
+                545,
+                555,
+                645
+          ],
+          "visualObject": "🪐",
+          "visualName": "Planet",
+          "difficulty": "hard",
+          "level": 4,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 51
+    },
+    {
+          "id": "m-arith-39",
+          "type": "arithmetic",
+          "question": "50 × 8 = ?",
+          "num1": 50,
+          "operator": "×",
+          "num2": 8,
+          "answer": 400,
+          "options": [
+                350,
+                400,
+                450,
+                500
+          ],
+          "visualObject": "💎",
+          "visualName": "Diamond",
+          "difficulty": "hard",
+          "level": 4,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 52
+    },
+    {
+          "id": "m-arith-40",
+          "type": "arithmetic",
+          "question": "360 ÷ 12 = ?",
+          "num1": 360,
+          "operator": "÷",
+          "num2": 12,
+          "answer": 30,
+          "options": [
+                20,
+                30,
+                40,
+                60
+          ],
+          "visualObject": "👑",
+          "visualName": "Crown",
+          "difficulty": "hard",
+          "level": 4,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 53
+    },
+    {
+          "id": "m-arith-41",
+          "type": "arithmetic",
+          "question": "75 × 4 = ?",
+          "num1": 75,
+          "operator": "×",
+          "num2": 4,
+          "answer": 300,
+          "options": [
+                250,
+                275,
+                300,
+                325
+          ],
+          "visualObject": "🏆",
+          "visualName": "Trophy",
+          "difficulty": "expert",
+          "level": 5,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 54
+    },
+    {
+          "id": "m-arith-42",
+          "type": "arithmetic",
+          "question": "500 ÷ 25 = ?",
+          "num1": 500,
+          "operator": "÷",
+          "num2": 25,
+          "answer": 20,
+          "options": [
+                15,
+                20,
+                25,
+                30
+          ],
+          "visualObject": "🥇",
+          "visualName": "Medal",
+          "difficulty": "expert",
+          "level": 5,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 55
+    },
+    {
+          "id": "m-arith-43",
+          "type": "arithmetic",
+          "question": "2450 + 1550 = ?",
+          "num1": 2450,
+          "operator": "+",
+          "num2": 1550,
+          "answer": 4000,
+          "options": [
+                3800,
+                3900,
+                4000,
+                4100
+          ],
+          "visualObject": "🧩",
+          "visualName": "Puzzle",
+          "difficulty": "expert",
+          "level": 5,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 56
+    },
+    {
+          "id": "m-arith-44",
+          "type": "arithmetic",
+          "question": "5000 - 2200 = ?",
+          "num1": 5000,
+          "operator": "-",
+          "num2": 2200,
+          "answer": 2800,
+          "options": [
+                2600,
+                2800,
+                3200,
+                3800
+          ],
+          "visualObject": "🎲",
+          "visualName": "Dice",
+          "difficulty": "expert",
+          "level": 5,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 57
+    },
+    {
+          "id": "m-arith-45",
+          "type": "arithmetic",
+          "question": "120 × 5 = ?",
+          "num1": 120,
+          "operator": "×",
+          "num2": 5,
+          "answer": 600,
+          "options": [
+                500,
+                550,
+                600,
+                700
+          ],
+          "visualObject": "🎨",
+          "visualName": "Palette",
+          "difficulty": "expert",
+          "level": 5,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 58
+    },
+    {
+          "id": "m-arith-46",
+          "type": "arithmetic",
+          "question": "1000 ÷ 8 = ?",
+          "num1": 1000,
+          "operator": "÷",
+          "num2": 8,
+          "answer": 125,
+          "options": [
+                100,
+                115,
+                125,
+                150
+          ],
+          "visualObject": "🎸",
+          "visualName": "Guitar",
+          "difficulty": "expert",
+          "level": 5,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 59
+    },
+    {
+          "id": "m-arith-47",
+          "type": "arithmetic",
+          "question": "15 × 15 = ?",
+          "num1": 15,
+          "operator": "×",
+          "num2": 15,
+          "answer": 225,
+          "options": [
+                175,
+                205,
+                225,
+                255
+          ],
+          "visualObject": "🎈",
+          "visualName": "Balloon",
+          "difficulty": "expert",
+          "level": 5,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 60
+    },
+    {
+          "id": "m-arith-48",
+          "type": "arithmetic",
+          "question": "840 ÷ 14 = ?",
+          "num1": 840,
+          "operator": "÷",
+          "num2": 14,
+          "answer": 60,
+          "options": [
+                40,
+                50,
+                60,
+                70
+          ],
+          "visualObject": "🎁",
+          "visualName": "Gift",
+          "difficulty": "expert",
+          "level": 5,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 61
+    },
+    {
+          "id": "m-arith-49",
+          "type": "arithmetic",
+          "question": "4500 + 3600 = ?",
+          "num1": 4500,
+          "operator": "+",
+          "num2": 3600,
+          "answer": 8100,
+          "options": [
+                7100,
+                7900,
+                8100,
+                9100
+          ],
+          "visualObject": "💰",
+          "visualName": "Money",
+          "difficulty": "expert",
+          "level": 5,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 62
+    },
+    {
+          "id": "m-arith-50",
+          "type": "arithmetic",
+          "question": "10000 - 4500 = ?",
+          "num1": 10000,
+          "operator": "-",
+          "num2": 4500,
+          "answer": 5500,
+          "options": [
+                4500,
+                5000,
+                5500,
+                6500
+          ],
+          "visualObject": "🧠",
+          "visualName": "Brain",
+          "difficulty": "expert",
+          "level": 5,
+          "topicType": "Arithmetic (+ - x ÷)",
+          "order": 63
     }
-  ],
+    ],
   gkItems: [
     // Indian States & Capitals
     {
@@ -4023,34 +5140,707 @@ export const initialDatabase: AppDatabase = {
       isPublished: true,
       order: 7,
       questions: [
-        {
-          id: 'q-mat-1',
-          questionText: 'What is 5 + 3?',
-          questionTextUrdu: '5 + 3 کتنا ہوتا ہے؟',
-          questionTextHindi: '5 + 3 कितना होता है?',
-          options: ['7', '8', '9', '6'],
-          correctOptionIndex: 1,
-          explanation: '5 + 3 = 8.'
-        },
-        {
-          id: 'q-mat-2',
-          questionText: 'What is 2 × 4?',
-          questionTextUrdu: '2 × 4 کتنا ہوتا ہے؟',
-          questionTextHindi: '2 × 4 कितना होता है?',
-          options: ['6', '7', '8', '10'],
-          correctOptionIndex: 2,
-          explanation: '2 × 4 = 8.'
-        },
-        {
-          id: 'q-mat-3',
-          questionText: 'What is 10 - 4?',
-          questionTextUrdu: '10 - 4 کتنا ہوتا ہے؟',
-          questionTextHindi: '10 - 4 कितना होता है?',
-          options: ['5', '6', '7', '4'],
-          correctOptionIndex: 1,
-          explanation: '10 - 4 = 6.'
-        }
-      ]
+          {
+                  "id": "q-mat-1",
+                  "questionText": "What is 5 + 3?",
+                  "questionTextUrdu": "5 + 3 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "5 + 3 कितना होता है?",
+                  "options": [
+                          "7",
+                          "8",
+                          "9",
+                          "6"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "5 में 3 और जोड़ने पर 8 आता है। (If you have 5 apples and get 3 more, you have 8!)"
+          },
+          {
+                  "id": "q-mat-2",
+                  "questionText": "What is 10 - 4?",
+                  "questionTextUrdu": "10 - 4 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "10 - 4 कितना होता है?",
+                  "options": [
+                          "5",
+                          "7",
+                          "6",
+                          "4"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "10 में से 4 घटाने पर 6 बचता है। (Count backwards: 9, 8, 7, 6)."
+          },
+          {
+                  "id": "q-mat-3",
+                  "questionText": "What is 2 x 4?",
+                  "questionTextUrdu": "2 x 4 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "2 x 4 कितना होता है?",
+                  "options": [
+                          "6",
+                          "8",
+                          "10",
+                          "12"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "2 को 4 बार जोड़ें (2+2+2+2) तो 8 आता है! (Two times four is eight)."
+          },
+          {
+                  "id": "q-mat-4",
+                  "questionText": "What is 8 ÷ 2?",
+                  "questionTextUrdu": "8 ÷ 2 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "8 ÷ 2 कितना होता ہے؟",
+                  "options": [
+                          "2",
+                          "3",
+                          "4",
+                          "6"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "8 चीज़ों को 2 लोगों में बराबर बाँटेंगे तो हर एक को 4 मिलेंगी।"
+          },
+          {
+                  "id": "q-mat-5",
+                  "questionText": "What is 7 + 6?",
+                  "questionTextUrdu": "7 + 6 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "7 + 6 कितना होता है?",
+                  "options": [
+                          "12",
+                          "13",
+                          "14",
+                          "15"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "7 और 6 मिलकर 13 होते हैं! (7 + 3 = 10, plus 3 more = 13)."
+          },
+          {
+                  "id": "q-mat-6",
+                  "questionText": "What is 15 - 5?",
+                  "questionTextUrdu": "15 - 5 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "15 - 5 कितना होता है?",
+                  "options": [
+                          "5",
+                          "10",
+                          "15",
+                          "20"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "15 में से 5 निकाल देने पर पूरा 10 बचता है।"
+          },
+          {
+                  "id": "q-mat-7",
+                  "questionText": "What is 3 x 5?",
+                  "questionTextUrdu": "3 x 5 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "3 x 5 कितना होता है?",
+                  "options": [
+                          "8",
+                          "12",
+                          "15",
+                          "18"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "5 की टेबल 3 बार पढ़ें: 5, 10, 15! (Three times five is fifteen)."
+          },
+          {
+                  "id": "q-mat-8",
+                  "questionText": "What is 10 ÷ 5?",
+                  "questionTextUrdu": "10 ÷ 5 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "10 ÷ 5 कितना होता है?",
+                  "options": [
+                          "2",
+                          "5",
+                          "10",
+                          "15"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "5 की टेबल में 10 कितनी बार में आता है? 5 x 2 = 10. तो जवाब 2 है!"
+          },
+          {
+                  "id": "q-mat-9",
+                  "questionText": "What is 9 + 9?",
+                  "questionTextUrdu": "9 + 9 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "9 + 9 कितना होता है?",
+                  "options": [
+                          "16",
+                          "17",
+                          "18",
+                          "19"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "9 और 9 को जोड़ने पर 18 बनता है। (Double of 9 is 18)."
+          },
+          {
+                  "id": "q-mat-10",
+                  "questionText": "What is 12 - 7?",
+                  "questionTextUrdu": "12 - 7 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "12 - 7 कितना होता है?",
+                  "options": [
+                          "4",
+                          "5",
+                          "6",
+                          "7"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "12 में से पहले 2 घटाएं (10 बचा), फिर 5 और घटाएं तो 5 बचेगा!"
+          },
+          {
+                  "id": "q-mat-11",
+                  "questionText": "What is 4 x 4?",
+                  "questionTextUrdu": "4 x 4 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "4 x 4 कितना होता है?",
+                  "options": [
+                          "8",
+                          "12",
+                          "16",
+                          "20"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "4 को 4 से गुणा (multiply) करने पर 16 आता है।"
+          },
+          {
+                  "id": "q-mat-12",
+                  "questionText": "What is 12 ÷ 3?",
+                  "questionTextUrdu": "12 ÷ 3 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "12 ÷ 3 कितना होता है?",
+                  "options": [
+                          "3",
+                          "4",
+                          "5",
+                          "6"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "3 की टेबल पढ़ें: 3 x 4 = 12. इसलिए जवाब 4 है!"
+          },
+          {
+                  "id": "q-mat-13",
+                  "questionText": "What is 8 + 7?",
+                  "questionTextUrdu": "8 + 7 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "8 + 7 कितना होता है?",
+                  "options": [
+                          "14",
+                          "15",
+                          "16",
+                          "17"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "8 में 7 जोड़ने पर 15 आता है।"
+          },
+          {
+                  "id": "q-mat-14",
+                  "questionText": "What is 20 - 10?",
+                  "questionTextUrdu": "20 - 10 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "20 - 10 कितना होता है?",
+                  "options": [
+                          "5",
+                          "10",
+                          "15",
+                          "0"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "20 में से 10 (आधा) निकाल देंगे तो 10 ही बचेगा!"
+          },
+          {
+                  "id": "q-mat-15",
+                  "questionText": "What is 5 x 5?",
+                  "questionTextUrdu": "5 x 5 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "5 x 5 कितना होता है?",
+                  "options": [
+                          "10",
+                          "20",
+                          "25",
+                          "30"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "5 की टेबल 5 बार पढ़ने पर 25 आता है। (Five times five is twenty-five)."
+          },
+          {
+                  "id": "q-mat-16",
+                  "questionText": "What is 16 ÷ 4?",
+                  "questionTextUrdu": "16 ÷ 4 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "16 ÷ 4 कितना होता है?",
+                  "options": [
+                          "2",
+                          "3",
+                          "4",
+                          "8"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "4 x 4 = 16 होता है, इसलिए 16 को 4 से भाग (divide) करने पर 4 आएगा।"
+          },
+          {
+                  "id": "q-mat-17",
+                  "questionText": "What is 14 + 6?",
+                  "questionTextUrdu": "14 + 6 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "14 + 6 कितना होता है?",
+                  "options": [
+                          "18",
+                          "19",
+                          "20",
+                          "21"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "14 में 6 जोड़ने पर पूरा 20 बन जाता है।"
+          },
+          {
+                  "id": "q-mat-18",
+                  "questionText": "What is 18 - 9?",
+                  "questionTextUrdu": "18 - 9 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "18 - 9 कितना होता है?",
+                  "options": [
+                          "8",
+                          "9",
+                          "10",
+                          "11"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "9 + 9 = 18 होता है, इसलिए 18 में से 9 घटाने पर 9 ही बचेगा! (Half of 18 is 9)."
+          },
+          {
+                  "id": "q-mat-19",
+                  "questionText": "What is 10 x 3?",
+                  "questionTextUrdu": "10 x 3 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "10 x 3 कितना होता है?",
+                  "options": [
+                          "13",
+                          "20",
+                          "30",
+                          "40"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "किसी भी नंबर को 10 से गुणा (multiply) करने के लिए उसके आगे '0' लगा दें। (3 और 0 = 30)."
+          },
+          {
+                  "id": "q-mat-20",
+                  "questionText": "What is 20 ÷ 5?",
+                  "questionTextUrdu": "20 ÷ 5 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "20 ÷ 5 कितना होता है?",
+                  "options": [
+                          "3",
+                          "4",
+                          "5",
+                          "6"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "5 की टेबल पढ़ें: 5, 10, 15, 20. यह 4 बार में आता है!"
+          },
+          {
+                  "id": "q-mat-21",
+                  "questionText": "What is 11 + 11?",
+                  "questionTextUrdu": "11 + 11 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "11 + 11 कितना होता है?",
+                  "options": [
+                          "12",
+                          "20",
+                          "22",
+                          "24"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "11 का डबल (दुगना) 22 होता है। (10+10=20 और 1+1=2, तो 22)."
+          },
+          {
+                  "id": "q-mat-22",
+                  "questionText": "What is 25 - 5?",
+                  "questionTextUrdu": "25 - 5 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "25 - 5 कितना होता है?",
+                  "options": [
+                          "15",
+                          "20",
+                          "30",
+                          "35"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "25 में से 5 वापस ले लें तो 20 बचता है।"
+          },
+          {
+                  "id": "q-mat-23",
+                  "questionText": "What is 6 x 2?",
+                  "questionTextUrdu": "6 x 2 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "6 x 2 कितना होता है?",
+                  "options": [
+                          "8",
+                          "10",
+                          "12",
+                          "14"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "6 का डबल 12 होता है। (6 + 6 = 12)."
+          },
+          {
+                  "id": "q-mat-24",
+                  "questionText": "What is 24 ÷ 3?",
+                  "questionTextUrdu": "24 ÷ 3 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "24 ÷ 3 कितना होता है?",
+                  "options": [
+                          "6",
+                          "7",
+                          "8",
+                          "9"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "3 x 8 = 24 होता है!"
+          },
+          {
+                  "id": "q-mat-25",
+                  "questionText": "What is 30 + 20?",
+                  "questionTextUrdu": "30 + 20 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "30 + 20 कितना होता है?",
+                  "options": [
+                          "40",
+                          "50",
+                          "60",
+                          "10"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "3 और 2 मिलकर 5 होते हैं, तो 30 और 20 मिलकर 50 होंगे।"
+          },
+          {
+                  "id": "q-mat-26",
+                  "questionText": "What is 100 - 1?",
+                  "questionTextUrdu": "100 - 1 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "100 - 1 कितना होता है?",
+                  "options": [
+                          "90",
+                          "98",
+                          "99",
+                          "101"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "100 से ठीक पहले वाला नंबर 99 होता है।"
+          },
+          {
+                  "id": "q-mat-27",
+                  "questionText": "What is 7 x 3?",
+                  "questionTextUrdu": "7 x 3 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "7 x 3 कितना होता है?",
+                  "options": [
+                          "10",
+                          "14",
+                          "21",
+                          "24"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "7 की टेबल 3 बार पढ़ें: 7, 14, 21."
+          },
+          {
+                  "id": "q-mat-28",
+                  "questionText": "What is 9 ÷ 3?",
+                  "questionTextUrdu": "9 ÷ 3 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "9 ÷ 3 कितना होता है?",
+                  "options": [
+                          "2",
+                          "3",
+                          "4",
+                          "6"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "3 x 3 = 9 होता है, इसलिए जवाब 3 है।"
+          },
+          {
+                  "id": "q-mat-29",
+                  "questionText": "What is 50 + 50?",
+                  "questionTextUrdu": "50 + 50 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "50 + 50 कितना होता है?",
+                  "options": [
+                          "80",
+                          "90",
+                          "100",
+                          "150"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "50 (आधा) और 50 (आधा) मिलकर पूरा 100 बनाते हैं!"
+          },
+          {
+                  "id": "q-mat-30",
+                  "questionText": "What is 30 - 15?",
+                  "questionTextUrdu": "30 - 15 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "30 - 15 कितना होता है?",
+                  "options": [
+                          "10",
+                          "15",
+                          "20",
+                          "25"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "15 + 15 = 30 होता है, इसलिए 30 में से 15 घटाने पर 15 बचेगा।"
+          },
+          {
+                  "id": "q-mat-31",
+                  "questionText": "What is 6 x 6?",
+                  "questionTextUrdu": "6 x 6 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "6 x 6 कितना होता है?",
+                  "options": [
+                          "12",
+                          "24",
+                          "30",
+                          "36"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "6 को 6 से गुणा (multiply) करने पर 36 आता है। (Six times six is thirty-six)."
+          },
+          {
+                  "id": "q-mat-32",
+                  "questionText": "What is 25 ÷ 5?",
+                  "questionTextUrdu": "25 ÷ 5 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "25 ÷ 5 कितना होता है?",
+                  "options": [
+                          "4",
+                          "5",
+                          "6",
+                          "10"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "5 की टेबल पढ़ें तो 5 x 5 = 25 होता है!"
+          },
+          {
+                  "id": "q-mat-33",
+                  "questionText": "What is 45 + 5?",
+                  "questionTextUrdu": "45 + 5 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "45 + 5 कितना होता है?",
+                  "options": [
+                          "40",
+                          "50",
+                          "55",
+                          "60"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "45 में 5 जोड़ने पर हम सीधे 50 पर पहुँच जाते हैं।"
+          },
+          {
+                  "id": "q-mat-34",
+                  "questionText": "What is 100 - 50?",
+                  "questionTextUrdu": "100 - 50 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "100 - 50 कितना होता है?",
+                  "options": [
+                          "40",
+                          "50",
+                          "60",
+                          "70"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "100 में से आधा (50) निकाल देंगे तो आधा (50) ही बचेगा!"
+          },
+          {
+                  "id": "q-mat-35",
+                  "questionText": "What is 8 x 3?",
+                  "questionTextUrdu": "8 x 3 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "8 x 3 कितना होता है?",
+                  "options": [
+                          "11",
+                          "16",
+                          "21",
+                          "24"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "8 की टेबल 3 बार पढ़ें: 8, 16, 24."
+          },
+          {
+                  "id": "q-mat-36",
+                  "questionText": "What is 30 ÷ 3?",
+                  "questionTextUrdu": "30 ÷ 3 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "30 ÷ 3 कितना होता है?",
+                  "options": [
+                          "5",
+                          "10",
+                          "15",
+                          "20"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "3 x 10 = 30 होता है!"
+          },
+          {
+                  "id": "q-mat-37",
+                  "questionText": "What is 22 + 8?",
+                  "questionTextUrdu": "22 + 8 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "22 + 8 कितना होता है?",
+                  "options": [
+                          "28",
+                          "30",
+                          "32",
+                          "40"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "22 में 8 और जोड़ने पर पूरा 30 बन जाता है।"
+          },
+          {
+                  "id": "q-mat-38",
+                  "questionText": "What is 40 - 10?",
+                  "questionTextUrdu": "40 - 10 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "40 - 10 कितना होता है?",
+                  "options": [
+                          "20",
+                          "30",
+                          "50",
+                          "60"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "4 में से 1 गया 3 बचा, तो 40 में से 10 गया 30 बचेगा।"
+          },
+          {
+                  "id": "q-mat-39",
+                  "questionText": "What is 2 x 9?",
+                  "questionTextUrdu": "2 x 9 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "2 x 9 कितना होता है?",
+                  "options": [
+                          "11",
+                          "16",
+                          "18",
+                          "20"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "9 का डबल 18 होता है (9 + 9 = 18)."
+          },
+          {
+                  "id": "q-mat-40",
+                  "questionText": "What is 50 ÷ 5?",
+                  "questionTextUrdu": "50 ÷ 5 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "50 ÷ 5 कितना होता है?",
+                  "options": [
+                          "5",
+                          "10",
+                          "15",
+                          "20"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "5 की टेबल 10 बार पढ़ने पर 50 आता है!"
+          },
+          {
+                  "id": "q-mat-41",
+                  "questionText": "What is 0 + 99?",
+                  "questionTextUrdu": "0 + 99 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "0 + 99 कितना होता है?",
+                  "options": [
+                          "0",
+                          "90",
+                          "99",
+                          "100"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "किसी भी नंबर में 0 (Zero) जोड़ने पर वो नंबर वैसा ही रहता है।"
+          },
+          {
+                  "id": "q-mat-42",
+                  "questionText": "What is 15 - 15?",
+                  "questionTextUrdu": "15 - 15 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "15 - 15 कितना होता है?",
+                  "options": [
+                          "0",
+                          "1",
+                          "15",
+                          "30"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "जब हम किसी नंबर में से वही नंबर घटा देते हैं, तो 0 (कुछ नहीं) बचता है।"
+          },
+          {
+                  "id": "q-mat-43",
+                  "questionText": "What is 0 x 10?",
+                  "questionTextUrdu": "0 x 10 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "0 x 10 कितना होता है?",
+                  "options": [
+                          "0",
+                          "1",
+                          "10",
+                          "100"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "किसी भी नंबर को 0 से गुणा (Multiply) करने पर हमेशा 0 ही आता है!"
+          },
+          {
+                  "id": "q-mat-44",
+                  "questionText": "What is 100 ÷ 10?",
+                  "questionTextUrdu": "100 ÷ 10 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "100 ÷ 10 कितना होता है?",
+                  "options": [
+                          "5",
+                          "10",
+                          "50",
+                          "100"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "10 x 10 = 100 होता है। 100 को 10 से भाग देने पर 10 आएगा।"
+          },
+          {
+                  "id": "q-mat-45",
+                  "questionText": "What is 75 + 25?",
+                  "questionTextUrdu": "75 + 25 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "75 + 25 कितना होता है?",
+                  "options": [
+                          "80",
+                          "90",
+                          "100",
+                          "125"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "75 और 25 मिलकर पूरा 100 (Century) बनाते हैं।"
+          },
+          {
+                  "id": "q-mat-46",
+                  "questionText": "What is 80 - 40?",
+                  "questionTextUrdu": "80 - 40 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "80 - 40 कितना होता है?",
+                  "options": [
+                          "20",
+                          "30",
+                          "40",
+                          "50"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "40 + 40 = 80 होता है। तो 80 में से 40 घटाने पर 40 ही बचेगा।"
+          },
+          {
+                  "id": "q-mat-47",
+                  "questionText": "What is 9 x 2?",
+                  "questionTextUrdu": "9 x 2 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "9 x 2 कितना होता है?",
+                  "options": [
+                          "11",
+                          "16",
+                          "18",
+                          "20"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "9 को 2 बार जोड़ें (9 + 9) तो 18 आता है।"
+          },
+          {
+                  "id": "q-mat-48",
+                  "questionText": "What is 18 ÷ 2?",
+                  "questionTextUrdu": "18 ÷ 2 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "18 ÷ 2 कितना होता है?",
+                  "options": [
+                          "7",
+                          "8",
+                          "9",
+                          "10"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "18 को 2 हिस्सों में बराबर बाँटेंगे तो हर हिस्से में 9 आएंगे। (Half of 18 is 9)."
+          },
+          {
+                  "id": "q-mat-49",
+                  "questionText": "What is 9 x 9?",
+                  "questionTextUrdu": "9 x 9 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "9 x 9 कितना होता है?",
+                  "options": [
+                          "18",
+                          "81",
+                          "90",
+                          "99"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "9 की टेबल 9 बार पढ़ने पर 81 आता है। (Nine times nine is eighty-one)."
+          },
+          {
+                  "id": "q-mat-50",
+                  "questionText": "What is 40 ÷ 4?",
+                  "questionTextUrdu": "40 ÷ 4 کتنا ہوتا ہے؟",
+                  "questionTextHindi": "40 ÷ 4 कितना होता है?",
+                  "options": [
+                          "4",
+                          "8",
+                          "10",
+                          "14"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "4 की टेबल में 10 बार (4 x 10) पढ़ने पर 40 आता है!"
+          }
+  ]
     },
     {
       id: 'quiz-gk',
@@ -4062,34 +5852,707 @@ export const initialDatabase: AppDatabase = {
       isPublished: true,
       order: 8,
       questions: [
-        {
-          id: 'q-gk-1',
-          questionText: 'What is the Capital of India?',
-          questionTextUrdu: 'بھارت کا دارالحکومت کیا ہے؟',
-          questionTextHindi: 'भारत की राजधानी क्या है?',
-          options: ['Mumbai', 'New Delhi', 'Kolkata', 'Patna'],
-          correctOptionIndex: 1,
-          explanation: 'New Delhi is the national capital of India.'
-        },
-        {
-          id: 'q-gk-2',
-          questionText: 'What is the National Bird of India?',
-          questionTextUrdu: 'بھارت کا قومی پرندہ کون سا ہے؟',
-          questionTextHindi: 'भारत का राष्ट्रीय पक्षी कौन सा है?',
-          options: ['Parrot', 'Peacock (Mor)', 'Eagle', 'Sparrow'],
-          correctOptionIndex: 1,
-          explanation: 'The Indian Peacock (Mor) is the National Bird of India.'
-        },
-        {
-          id: 'q-gk-3',
-          questionText: 'Who was the First Prime Minister of India?',
-          questionTextUrdu: 'آزاد بھارت کے پہلے وزیر اعظم کون تھے؟',
-          questionTextHindi: 'भारत के प्रथम प्रधानमंत्री कौन थे?',
-          options: ['Pt. Jawaharlal Nehru', 'Lal Bahadur Shastri', 'Dr. APJ Abdul Kalam', 'Mahatma Gandhi'],
-          correctOptionIndex: 0,
-          explanation: 'Pt. Jawaharlal Nehru was the first Prime Minister of independent India.'
-        }
-      ]
+          {
+                  "id": "q-gk-1",
+                  "questionText": "What is the Capital of India?",
+                  "questionTextUrdu": "بھارت کا دارالحکومت کیا ہے؟",
+                  "questionTextHindi": "भारत की राजधानी क्या है?",
+                  "options": [
+                          "Mumbai",
+                          "New Delhi",
+                          "Kolkata",
+                          "Chennai"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "New Delhi is the national capital of India, where the Parliament and Rashtrapati Bhavan are located."
+          },
+          {
+                  "id": "q-gk-2",
+                  "questionText": "What is the capital of Maharashtra?",
+                  "questionTextUrdu": "مہاراشٹر کا دارالحکومت کیا ہے؟",
+                  "questionTextHindi": "महाराष्ट्र की राजधानी क्या है?",
+                  "options": [
+                          "Pune",
+                          "Nagpur",
+                          "Mumbai",
+                          "Nashik"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Mumbai is the capital of Maharashtra and the financial capital of India."
+          },
+          {
+                  "id": "q-gk-3",
+                  "questionText": "Which city is the capital of Rajasthan?",
+                  "questionTextUrdu": "راجستھان کا دارالحکومت کون سا شہر ہے؟",
+                  "questionTextHindi": "राजस्थान की राजधानी कौन सा शहर है?",
+                  "options": [
+                          "Udaipur",
+                          "Jodhpur",
+                          "Jaisalmer",
+                          "Jaipur"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "Jaipur is the capital of Rajasthan and is famously known as the \"Pink City\"."
+          },
+          {
+                  "id": "q-gk-4",
+                  "questionText": "What is the capital of West Bengal?",
+                  "questionTextUrdu": "مغربی بنگال کا دارالحکومت کیا ہے؟",
+                  "questionTextHindi": "पश्चिम बंगाल की राजधानी क्या है?",
+                  "options": [
+                          "Kolkata",
+                          "Darjeeling",
+                          "Siliguri",
+                          "Howrah"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "Kolkata (formerly Calcutta) is the capital of West Bengal, situated on the banks of the Hooghly River."
+          },
+          {
+                  "id": "q-gk-5",
+                  "questionText": "What is the capital of Uttar Pradesh (UP)?",
+                  "questionTextUrdu": "اتر پردیش (UP) کا دارالحکومت کیا ہے؟",
+                  "questionTextHindi": "उत्तर प्रदेश (UP) की राजधानी क्या है?",
+                  "options": [
+                          "Kanpur",
+                          "Lucknow",
+                          "Varanasi",
+                          "Agra"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "Lucknow, known as the \"City of Nawabs\", is the capital of Uttar Pradesh."
+          },
+          {
+                  "id": "q-gk-6",
+                  "questionText": "Which city is the capital of Gujarat?",
+                  "questionTextUrdu": "گجرات کا دارالحکومت کون سا شہر ہے؟",
+                  "questionTextHindi": "गुजरात की राजधानी कौन सा शहर है?",
+                  "options": [
+                          "Ahmedabad",
+                          "Surat",
+                          "Gandhinagar",
+                          "Rajkot"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Gandhinagar is the capital of Gujarat, named after Mahatma Gandhi."
+          },
+          {
+                  "id": "q-gk-7",
+                  "questionText": "What is the capital of Bihar?",
+                  "questionTextUrdu": "بہار کا دارالحکومت کیا ہے؟",
+                  "questionTextHindi": "बिहार की राजधानी क्या है?",
+                  "options": [
+                          "Gaya",
+                          "Patna",
+                          "Bhagalpur",
+                          "Muzaffarpur"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "Patna, historically known as Pataliputra, is the capital of Bihar."
+          },
+          {
+                  "id": "q-gk-8",
+                  "questionText": "What is the capital of Kerala?",
+                  "questionTextUrdu": "کیرالہ کا دارالحکومت کیا ہے؟",
+                  "questionTextHindi": "केरल की राजधानी क्या है?",
+                  "options": [
+                          "Kochi",
+                          "Kozhikode",
+                          "Thiruvananthapuram",
+                          "Thrissur"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Thiruvananthapuram (Trivandrum) is the capital of God's Own Country, Kerala."
+          },
+          {
+                  "id": "q-gk-9",
+                  "questionText": "What is the capital of Tamil Nadu?",
+                  "questionTextUrdu": "تمل ناڈو کا دارالحکومت کیا ہے؟",
+                  "questionTextHindi": "तमिलनाडु की राजधानी क्या है?",
+                  "options": [
+                          "Chennai",
+                          "Coimbatore",
+                          "Madurai",
+                          "Ooty"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "Chennai (formerly Madras) is the capital of Tamil Nadu."
+          },
+          {
+                  "id": "q-gk-10",
+                  "questionText": "Which city is the capital of Karnataka?",
+                  "questionTextUrdu": "کرناٹک کا دارالحکومت کون سا شہر ہے؟",
+                  "questionTextHindi": "कर्नाटक की राजधानी कौन सा शहर है?",
+                  "options": [
+                          "Mysuru",
+                          "Mangaluru",
+                          "Bengaluru",
+                          "Hubli"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Bengaluru (Bangalore) is the capital of Karnataka and the IT hub of India."
+          },
+          {
+                  "id": "q-gk-11",
+                  "questionText": "What is the capital of Madhya Pradesh?",
+                  "questionTextUrdu": "مدھیہ پردیش کا دارالحکومت کیا ہے؟",
+                  "questionTextHindi": "मध्य प्रदेश की राजधानी क्या है?",
+                  "options": [
+                          "Indore",
+                          "Bhopal",
+                          "Gwalior",
+                          "Jabalpur"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "Bhopal, known as the City of Lakes, is the capital of Madhya Pradesh."
+          },
+          {
+                  "id": "q-gk-12",
+                  "questionText": "Which city serves as the joint capital of Punjab and Haryana?",
+                  "questionTextUrdu": "کون سا شہر پنجاب اور ہریانہ کا مشترکہ دارالحکومت ہے؟",
+                  "questionTextHindi": "कौन सा शहर पंजाब और हरियाणा की संयुक्त राजधानी है?",
+                  "options": [
+                          "Amritsar",
+                          "Ludhiana",
+                          "Chandigarh",
+                          "Gurugram"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Chandigarh is a Union Territory and the shared capital of both Punjab and Haryana."
+          },
+          {
+                  "id": "q-gk-13",
+                  "questionText": "What is the capital of Assam?",
+                  "questionTextUrdu": "آسام کا دارالحکومت کیا ہے؟",
+                  "questionTextHindi": "असम की राजधानी क्या है?",
+                  "options": [
+                          "Guwahati",
+                          "Dispur",
+                          "Silchar",
+                          "Dibrugarh"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "Dispur is the capital of Assam, located near the city of Guwahati."
+          },
+          {
+                  "id": "q-gk-14",
+                  "questionText": "What is the capital of Goa?",
+                  "questionTextUrdu": "گوا کا دارالحکومت کیا ہے؟",
+                  "questionTextHindi": "गोवा की राजधानी क्या है?",
+                  "options": [
+                          "Vasco da Gama",
+                          "Margao",
+                          "Mapusa",
+                          "Panaji"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "Panaji (or Panjim) is the capital of Goa, India's smallest state by area."
+          },
+          {
+                  "id": "q-gk-15",
+                  "questionText": "What is the capital of Odisha?",
+                  "questionTextUrdu": "اڈیشہ کا دارالحکومت کیا ہے؟",
+                  "questionTextHindi": "ओडिशा की राजधानी क्या है?",
+                  "options": [
+                          "Cuttack",
+                          "Puri",
+                          "Bhubaneswar",
+                          "Rourkela"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Bhubaneswar is the capital of Odisha and is known as the \"Temple City of India\"."
+          },
+          {
+                  "id": "q-gk-16",
+                  "questionText": "When did India get independence from British rule?",
+                  "questionTextUrdu": "بھارت کو برطانوی راج سے آزادی کب ملی؟",
+                  "questionTextHindi": "भारत को ब्रिटिश शासन से आज़ादी कब मिली?",
+                  "options": [
+                          "15 August 1947",
+                          "26 January 1950",
+                          "15 August 1950",
+                          "2 October 1947"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "India became a free country on August 15, 1947, after a long struggle."
+          },
+          {
+                  "id": "q-gk-17",
+                  "questionText": "Who is known as the \"Father of the Nation\" in India?",
+                  "questionTextUrdu": "بھارت میں \"بابائے قوم\" (Father of the Nation) کسے کہا جاتا ہے؟",
+                  "questionTextHindi": "भारत में \"राष्ट्रपिता\" (Father of the Nation) किसे कहा जाता है?",
+                  "options": [
+                          "Jawaharlal Nehru",
+                          "Subhas Chandra Bose",
+                          "Mahatma Gandhi",
+                          "Bhagat Singh"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Mahatma Gandhi (Bapu) led India to independence through non-violence and is called the Father of the Nation."
+          },
+          {
+                  "id": "q-gk-18",
+                  "questionText": "Who gave the famous slogan \"Give me blood, and I shall give you freedom!\"?",
+                  "questionTextUrdu": "\"تم مجھے خون دو، میں تمہیں آزادی دوں گا\" کا مشہور نعرہ کس نے دیا؟",
+                  "questionTextHindi": "\"तुम मुझे खून दो, मैं तुम्हें आज़ादी दूंगा!\" का प्रसिद्ध नारा किसने दिया?",
+                  "options": [
+                          "Bhagat Singh",
+                          "Subhas Chandra Bose",
+                          "Lala Lajpat Rai",
+                          "Mangal Pandey"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "Netaji Subhas Chandra Bose gave this inspiring slogan to the Indian National Army."
+          },
+          {
+                  "id": "q-gk-19",
+                  "questionText": "Who was the first Prime Minister of independent India?",
+                  "questionTextUrdu": "آزاد بھارت کے پہلے وزیر اعظم کون تھے؟",
+                  "questionTextHindi": "आज़ाद भारत के पहले प्रधान मंत्री कौन थे?",
+                  "options": [
+                          "Sardar Patel",
+                          "Lal Bahadur Shastri",
+                          "Jawaharlal Nehru",
+                          "Dr. B.R. Ambedkar"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Pandit Jawaharlal Nehru (Chacha Nehru) became the first PM of India in 1947."
+          },
+          {
+                  "id": "q-gk-20",
+                  "questionText": "Who was the first President of India?",
+                  "questionTextUrdu": "بھارت کے پہلے صدر (President) کون تھے؟",
+                  "questionTextHindi": "भारत के पहले राष्ट्रपति कौन थे?",
+                  "options": [
+                          "Dr. Rajendra Prasad",
+                          "Dr. S. Radhakrishnan",
+                          "Zakir Husain",
+                          "V. V. Giri"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "Dr. Rajendra Prasad served as the first President of India when it became a Republic."
+          },
+          {
+                  "id": "q-gk-21",
+                  "questionText": "Who is known as the \"Iron Man of India\"?",
+                  "questionTextUrdu": "\"آئرن مین آف انڈیا\" (لوہ مرد) کے نام سے کون مشہور ہے؟",
+                  "questionTextHindi": "भारत के \"लौह पुरुष\" (Iron Man) के नाम से कौन प्रसिद्ध है?",
+                  "options": [
+                          "Bhagat Singh",
+                          "Sardar Vallabhbhai Patel",
+                          "Bipin Chandra Pal",
+                          "Bal Gangadhar Tilak"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "Sardar Patel united all the princely states of India, hence he is called the Iron Man."
+          },
+          {
+                  "id": "q-gk-22",
+                  "questionText": "Who wrote the National Anthem of India, \"Jana Gana Mana\"?",
+                  "questionTextUrdu": "بھارت کا قومی ترانہ \"جن گن من\" کس نے لکھا؟",
+                  "questionTextHindi": "भारत का राष्ट्रगान \"जन गण मन\" किसने लिखा?",
+                  "options": [
+                          "Bankim Chandra Chatterjee",
+                          "Rabindranath Tagore",
+                          "Sarojini Naidu",
+                          "Munshi Premchand"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "Nobel laureate Rabindranath Tagore wrote the Indian National Anthem."
+          },
+          {
+                  "id": "q-gk-23",
+                  "questionText": "Which young freedom fighter is popularly known as \"Shaheed-e-Azam\"?",
+                  "questionTextUrdu": "کس نوجوان مجاہد آزادی کو \"شہیدِ اعظم\" کہا جاتا ہے؟",
+                  "questionTextHindi": "किस युवा स्वतंत्रता सेनानी को \"शहीद-ए-आज़म\" के नाम से जाना जाता है?",
+                  "options": [
+                          "Sukhdev",
+                          "Rajguru",
+                          "Chandrashekhar Azad",
+                          "Bhagat Singh"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "Bhagat Singh gave his life for the country at a very young age and is known as Shaheed-e-Azam."
+          },
+          {
+                  "id": "q-gk-24",
+                  "questionText": "When is Republic Day celebrated in India?",
+                  "questionTextUrdu": "بھارت میں یومِ جمہوریہ (Republic Day) کب منایا جاتا ہے؟",
+                  "questionTextHindi": "भारत में गणतंत्र दिवस (Republic Day) कब मनाया जाता है?",
+                  "options": [
+                          "15 August",
+                          "2 October",
+                          "26 January",
+                          "14 November"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "We celebrate Republic Day on 26 January because the Constitution of India came into effect on this day in 1950."
+          },
+          {
+                  "id": "q-gk-25",
+                  "questionText": "Who is considered the chief architect of the Indian Constitution?",
+                  "questionTextUrdu": "آئینِ ہند (Indian Constitution) کا معمارِ اعظم کسے مانا جاتا ہے؟",
+                  "questionTextHindi": "भारतीय संविधान का मुख्य निर्माता किसे माना जाता है?",
+                  "options": [
+                          "Dr. B.R. Ambedkar",
+                          "Jawaharlal Nehru",
+                          "Sardar Patel",
+                          "Mahatma Gandhi"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "Dr. B.R. Ambedkar was the chairman of the drafting committee of the Indian Constitution."
+          },
+          {
+                  "id": "q-gk-26",
+                  "questionText": "The famous \"Dandi March\" in 1930 was related to which movement?",
+                  "questionTextUrdu": "1930 کا مشہور \"ڈانڈی مارچ\" کس تحریک سے متعلق تھا؟",
+                  "questionTextHindi": "1930 का प्रसिद्ध \"दांडी मार्च\" किस आंदोलन से संबंधित था?",
+                  "options": [
+                          "Quit India Movement",
+                          "Salt Satyagraha",
+                          "Non-Cooperation Movement",
+                          "Khilafat Movement"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "Mahatma Gandhi led the Dandi March to protest against the British tax on salt."
+          },
+          {
+                  "id": "q-gk-27",
+                  "questionText": "In which year did the \"Quit India Movement\" (Bharat Chhodo Andolan) start?",
+                  "questionTextUrdu": "\"ہندوستان چھوڑو تحریک\" (Quit India Movement) کس سال شروع ہوئی؟",
+                  "questionTextHindi": "\"भारत छोड़ो आंदोलन\" (Quit India Movement) किस वर्ष शुरू हुआ?",
+                  "options": [
+                          "1920",
+                          "1930",
+                          "1942",
+                          "1947"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Mahatma Gandhi launched the Quit India Movement in August 1942, giving the slogan \"Do or Die\"."
+          },
+          {
+                  "id": "q-gk-28",
+                  "questionText": "Who was the famous queen of Jhansi who fought against the British in 1857?",
+                  "questionTextUrdu": "جھانسی کی وہ مشہور ملکہ کون تھیں جنہوں نے 1857 میں انگریزوں سے جنگ کی؟",
+                  "questionTextHindi": "झाँसी की वह प्रसिद्ध रानी कौन थीं जिन्होंने 1857 में अंग्रेजों से लड़ाई की?",
+                  "options": [
+                          "Rani Padmini",
+                          "Rani Lakshmibai",
+                          "Ahilyabai Holkar",
+                          "Razia Sultan"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "Rani Lakshmibai (Jhansi ki Rani) is a great symbol of bravery in India's first war of independence."
+          },
+          {
+                  "id": "q-gk-29",
+                  "questionText": "Who composed the National Song of India, \"Vande Mataram\"?",
+                  "questionTextUrdu": "بھارت کا قومی گیت \"وندے ماترم\" کس نے لکھا؟",
+                  "questionTextHindi": "भारत का राष्ट्रीय गीत \"वंदे मातरम्\" किसने लिखा?",
+                  "options": [
+                          "Rabindranath Tagore",
+                          "Swami Vivekananda",
+                          "Bankim Chandra Chatterjee",
+                          "Ishwar Chandra Vidyasagar"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Bankim Chandra Chatterjee wrote \"Vande Mataram\", which greatly inspired the freedom fighters."
+          },
+          {
+                  "id": "q-gk-30",
+                  "questionText": "What was the popular slogan coined by Bal Gangadhar Tilak?",
+                  "questionTextUrdu": "بال گنگادھر تلک کا مشہور نعرہ کیا تھا؟",
+                  "questionTextHindi": "बाल गंगाधर तिलक का प्रसिद्ध नारा क्या था?",
+                  "options": [
+                          "Jai Hind",
+                          "Inquilab Zindabad",
+                          "Do or Die",
+                          "Swaraj is my birthright"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "Tilak powerfully declared, \"Swaraj (Self-rule) is my birthright, and I shall have it!\""
+          },
+          {
+                  "id": "q-gk-31",
+                  "questionText": "What is the National Animal of India?",
+                  "questionTextUrdu": "بھارت کا قومی جانور کون سا ہے؟",
+                  "questionTextHindi": "भारत का राष्ट्रीय पशु कौन सा है?",
+                  "options": [
+                          "Lion",
+                          "Elephant",
+                          "Bengal Tiger",
+                          "Leopard"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "The magnificent Bengal Tiger is the National Animal of India."
+          },
+          {
+                  "id": "q-gk-32",
+                  "questionText": "What is the National Bird of India?",
+                  "questionTextUrdu": "بھارت کا قومی پرندہ کون سا ہے؟",
+                  "questionTextHindi": "भारत का राष्ट्रीय पक्षी कौन सा है?",
+                  "options": [
+                          "Peacock",
+                          "Parrot",
+                          "Eagle",
+                          "Pigeon"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "The beautiful Peacock (Mor) is India's National Bird."
+          },
+          {
+                  "id": "q-gk-33",
+                  "questionText": "Which flower is the National Flower of India?",
+                  "questionTextUrdu": "بھارت کا قومی پھول کون سا ہے؟",
+                  "questionTextHindi": "भारत का राष्ट्रीय फूल कौन सा है?",
+                  "options": [
+                          "Rose",
+                          "Sunflower",
+                          "Lotus",
+                          "Jasmine"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "The Lotus (Kamal) is the National Flower of India, symbolizing purity."
+          },
+          {
+                  "id": "q-gk-34",
+                  "questionText": "Which is the National Tree of India?",
+                  "questionTextUrdu": "بھارت کا قومی درخت کون سا ہے؟",
+                  "questionTextHindi": "भारत का राष्ट्रीय वृक्ष (पेड़) कौन सा है?",
+                  "options": [
+                          "Neem Tree",
+                          "Banyan Tree",
+                          "Mango Tree",
+                          "Peepal Tree"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "The Banyan Tree (Bargad), which represents eternal life, is the National Tree."
+          },
+          {
+                  "id": "q-gk-35",
+                  "questionText": "Which famous white marble monument is located in Agra?",
+                  "questionTextUrdu": "آگرہ میں سفید سنگ مرمر کی کون سی مشہور عمارت واقع ہے؟",
+                  "questionTextHindi": "आगरा में सफेद संगमरमर की कौन सी प्रसिद्ध इमारत स्थित है?",
+                  "options": [
+                          "Red Fort",
+                          "Qutub Minar",
+                          "Hawa Mahal",
+                          "Taj Mahal"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "The Taj Mahal in Agra is one of the Seven Wonders of the World."
+          },
+          {
+                  "id": "q-gk-36",
+                  "questionText": "Which is the longest river in India?",
+                  "questionTextUrdu": "بھارت کا سب سے طویل دریا کون سا ہے؟",
+                  "questionTextHindi": "भारत की सबसे लंबी नदी कौन सी है?",
+                  "options": [
+                          "Yamuna",
+                          "Brahmaputra",
+                          "Ganga",
+                          "Godavari"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "The Ganga (Ganges) is the longest and most sacred river in India."
+          },
+          {
+                  "id": "q-gk-37",
+                  "questionText": "What is the name of India's space agency?",
+                  "questionTextUrdu": "بھارت کی خلائی ایجنسی کا کیا نام ہے؟",
+                  "questionTextHindi": "भारत की अंतरिक्ष एजेंसी का क्या नाम है?",
+                  "options": [
+                          "NASA",
+                          "ESA",
+                          "ISRO",
+                          "JAXA"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "ISRO (Indian Space Research Organisation) is India's pride in space exploration."
+          },
+          {
+                  "id": "q-gk-38",
+                  "questionText": "What is the currency of India?",
+                  "questionTextUrdu": "بھارت کی کرنسی (سکہ) کیا ہے؟",
+                  "questionTextHindi": "भारत की मुद्रा (करेंसी) क्या है?",
+                  "options": [
+                          "Dollar",
+                          "Taka",
+                          "Dinar",
+                          "Rupee"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "The official currency of India is the Indian Rupee (₹)."
+          },
+          {
+                  "id": "q-gk-39",
+                  "questionText": "Which monument in Mumbai was built to welcome King George V?",
+                  "questionTextUrdu": "ممبئی کی وہ کون سی عمارت ہے جو کنگ جارج پنجم کے استقبال کے لیے بنائی گئی تھی؟",
+                  "questionTextHindi": "मुंबई का वह कौन सा स्मारक है जो किंग जॉर्ज पंचम के स्वागत के लिए बनाया गया था?",
+                  "options": [
+                          "India Gate",
+                          "Gateway of India",
+                          "Charminar",
+                          "Victoria Memorial"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "The Gateway of India is located in Mumbai, overlooking the Arabian Sea."
+          },
+          {
+                  "id": "q-gk-40",
+                  "questionText": "Where is the India Gate located?",
+                  "questionTextUrdu": "انڈیا گیٹ کہاں واقع ہے؟",
+                  "questionTextHindi": "इंडिया गेट कहाँ स्थित है?",
+                  "options": [
+                          "Mumbai",
+                          "Kolkata",
+                          "New Delhi",
+                          "Chennai"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "India Gate is a war memorial located in the capital, New Delhi. (Don't confuse it with Gateway of India in Mumbai!)"
+          },
+          {
+                  "id": "q-gk-41",
+                  "questionText": "Which city is known as the \"Silicon Valley of India\" because of its IT industry?",
+                  "questionTextUrdu": "آئی ٹی انڈسٹری کی وجہ سے کس شہر کو \"بھارت کی سلیکون ویلی\" کہا جاتا ہے؟",
+                  "questionTextHindi": "IT उद्योग के कारण किस शहर को \"भारत की सिलिकॉन वैली\" कहा जाता है?",
+                  "options": [
+                          "Hyderabad",
+                          "Pune",
+                          "Noida",
+                          "Bengaluru"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "Bengaluru is the biggest IT (Information Technology) hub in India."
+          },
+          {
+                  "id": "q-gk-42",
+                  "questionText": "What is the national sport of India?",
+                  "questionTextUrdu": "بھارت کا قومی کھیل کون سا ہے؟",
+                  "questionTextHindi": "भारत का राष्ट्रीय खेल कौन सा है?",
+                  "options": [
+                          "Cricket",
+                          "Football",
+                          "Field Hockey",
+                          "Kabaddi"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Although Cricket is very popular, Field Hockey is considered the national sport of India."
+          },
+          {
+                  "id": "q-gk-43",
+                  "questionText": "The famous \"Golden Temple\" (Harmandir Sahib) is located in which city?",
+                  "questionTextUrdu": "مشہور \"گولڈن ٹیمپل\" (سرمئی مندر) کس شہر میں واقع ہے؟",
+                  "questionTextHindi": "प्रसिद्ध \"स्वर्ण मंदिर\" (Golden Temple) किस शहर में स्थित है?",
+                  "options": [
+                          "Chandigarh",
+                          "Amritsar",
+                          "Ludhiana",
+                          "Jalandhar"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "The Golden Temple is the holiest Gurdwara of Sikhism, located in Amritsar, Punjab."
+          },
+          {
+                  "id": "q-gk-44",
+                  "questionText": "How many colors are there in the Indian National Flag (excluding the Ashoka Chakra)?",
+                  "questionTextUrdu": "بھارتی قومی پرچم (ترنگے) میں کتنے رنگ ہیں؟",
+                  "questionTextHindi": "भारतीय राष्ट्रीय ध्वज (तिरंगे) में कितने रंग होते हैं?",
+                  "options": [
+                          "2",
+                          "3",
+                          "4",
+                          "5"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "The Indian flag (Tiranga) has three colors: Saffron, White, and Green."
+          },
+          {
+                  "id": "q-gk-45",
+                  "questionText": "What does the blue wheel in the center of the Indian Flag represent?",
+                  "questionTextUrdu": "بھارتی پرچم کے درمیان میں موجود نیلا پہیہ کیا کہلاتا ہے؟",
+                  "questionTextHindi": "भारतीय ध्वज के बीच में मौजूद नीला चक्र क्या कहलाता है?",
+                  "options": [
+                          "Dharma Chakra",
+                          "Ashoka Chakra",
+                          "Surya Chakra",
+                          "Shanti Chakra"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "It is the Ashoka Chakra, a 24-spoke wheel representing motion and progress."
+          },
+          {
+                  "id": "q-gk-46",
+                  "questionText": "Which state in India is the largest by land area?",
+                  "questionTextUrdu": "رقبے کے لحاظ سے بھارت کا سب سے بڑا ریاست کون سا ہے؟",
+                  "questionTextHindi": "क्षेत्रफल (Area) के हिसाब से भारत का सबसे बड़ा राज्य कौन सा है?",
+                  "options": [
+                          "Maharashtra",
+                          "Uttar Pradesh",
+                          "Rajasthan",
+                          "Madhya Pradesh"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Rajasthan is the largest state in India by land area."
+          },
+          {
+                  "id": "q-gk-47",
+                  "questionText": "Which state in India is the smallest by land area?",
+                  "questionTextUrdu": "رقبے کے لحاظ سے بھارت کا سب سے چھوٹا ریاست کون سا ہے؟",
+                  "questionTextHindi": "क्षेत्रफल (Area) के हिसाब से भारत का सबसे छोटा राज्य कौन सा है?",
+                  "options": [
+                          "Sikkim",
+                          "Goa",
+                          "Tripura",
+                          "Mizoram"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "Goa is the smallest state in India, famous for its beautiful beaches."
+          },
+          {
+                  "id": "q-gk-48",
+                  "questionText": "Which Indian festival is known as the \"Festival of Lights\"?",
+                  "questionTextUrdu": "بھارت کا کون سا تہوار \"روشنیوں کا تہوار\" کہلاتا ہے؟",
+                  "questionTextHindi": "भारत का कौन सा त्योहार \"रोशनी का त्योहार\" कहलाता है?",
+                  "options": [
+                          "Holi",
+                          "Eid",
+                          "Diwali",
+                          "Navratri"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "Diwali (or Deepavali) is celebrated by lighting diyas and signifies the victory of light over darkness."
+          },
+          {
+                  "id": "q-gk-49",
+                  "questionText": "The famous \"Sun Temple\" is located in which state?",
+                  "questionTextUrdu": "مشہور \"سوریا مندر\" (Sun Temple) کس ریاست میں واقع ہے؟",
+                  "questionTextHindi": "प्रसिद्ध \"सूर्य मंदिर\" (Sun Temple) किस राज्य में स्थित है?",
+                  "options": [
+                          "Odisha",
+                          "Gujarat",
+                          "Tamil Nadu",
+                          "Karnataka"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "The Konark Sun Temple, designed like a giant chariot, is located in Odisha."
+          },
+          {
+                  "id": "q-gk-50",
+                  "questionText": "How many states are there in India currently?",
+                  "questionTextUrdu": "اس وقت بھارت میں کل کتنی ریاستیں (States) ہیں؟",
+                  "questionTextHindi": "वर्तमान में भारत में कुल कितने राज्य (States) हैं?",
+                  "options": [
+                          "27",
+                          "28",
+                          "29",
+                          "30"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "Currently, India is a union of 28 States and 8 Union Territories."
+          }
+  ]
     }
   ]
 };
