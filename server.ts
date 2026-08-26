@@ -1,20 +1,17 @@
 import express from 'express';
 import path from 'path';
 import fs from 'fs';
-import { fileURLToPath } from 'url';
 import { createServer as createViteServer } from 'vite';
 import multer from 'multer';
 import { initialDatabase } from './server/initialData.ts';
 import { AppDatabase } from './src/types.ts';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 const PORT = 3000;
-const DATA_DIR = path.join(__dirname, 'data');
+const rootDir = process.cwd();
+const DATA_DIR = path.join(rootDir, 'data');
 const DB_FILE = path.join(DATA_DIR, 'db.json');
 const USERS_FILE = path.join(DATA_DIR, 'users.json');
-const UPLOADS_DIR = path.join(__dirname, 'uploads');
+const UPLOADS_DIR = path.join(rootDir, 'uploads');
 
 // Ensure data & upload directories exist
 if (!fs.existsSync(DATA_DIR)) {

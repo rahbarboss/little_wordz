@@ -1,4 +1,4 @@
-import { AppDatabase } from '../src/types.js';
+import { AppDatabase } from '../src/types.ts';
 
 export const initialDatabase: AppDatabase = {
   alphabets: [
