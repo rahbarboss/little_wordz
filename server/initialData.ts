@@ -2043,521 +2043,103 @@ export const initialDatabase: AppDatabase = {
           questionText: 'Which letter appears exactly TWICE in the word "UMBRELLA"?',
           options: ['A', 'E', 'L', 'R'],
           correctOptionIndex: 2,
-          explanation: 'Look closely: U-M-B-R-E-L-L-A.'
-        },
-        {
-          id: 'q-17',
-          questionText: 'What letter comes two steps before "K"?',
-          options: ['H', 'I', 'J', 'L'],
-          correctOptionIndex: 1,
-          explanation: 'Count backwards two steps: K -> J -> I.'
-        },
-        {
-          id: 'q-18',
-          questionText: 'Which word has letters that are in perfect alphabetical order?',
-          options: ['CAT', 'DOG', 'BOX', 'ANT'],
-          correctOptionIndex: 2,
-          explanation: 'In the alphabet, B comes before O, and O comes before X!'
-        },
-        {
-          id: 'q-19',
-          questionText: 'Find the odd one out in this group: B, F, O, M.',
-          options: ['B', 'F', 'O', 'M'],
-          correctOptionIndex: 2,
-          explanation: '"O" is a vowel, but all the other letters are consonants.'
-        },
-        {
-          id: 'q-20',
-          questionText: 'If you change the first letter of "CAT" to the 2nd letter of the alphabet, what word do you get?',
-          options: ['MAT', 'BAT', 'RAT', 'HAT'],
-          correctOptionIndex: 1,
-          explanation: 'The 2nd letter of the alphabet is B. Replace C with B to make BAT!'
-        },
-        {
-          id: 'q-21',
-          questionText: 'How many letters are between "D" and "J" in the alphabet?',
-          options: ['4', '5', '6', '7'],
-          correctOptionIndex: 1,
-          explanation: 'The letters between them are E, F, G, H, I. That\'s 5 letters!'
-        },
-        {
-          id: 'q-22',
-          questionText: 'If you skip two letters after "M", what letter do you land on?',
-          options: ['N', 'O', 'P', 'Q'],
-          correctOptionIndex: 2,
-          explanation: 'Start at M, skip N and O, and you land on P.'
-        },
-        {
-          id: 'q-23',
-          questionText: 'Which of these words ends with a vowel?',
-          options: ['WATER', 'WIND', 'EARTH', 'FIRE'],
-          correctOptionIndex: 3,
-          explanation: 'FIRE ends with the letter "E", which is a vowel.'
-        },
-        {
-          id: 'q-24',
-          questionText: 'If Z is the 26th letter, what number is Y?',
-          options: ['24', '25', '27', '28'],
-          correctOptionIndex: 1,
-          explanation: 'Y comes right before Z, so it is letter number 25.'
-        },
-        {
-          id: 'q-25',
-          questionText: 'Which letter is exactly halfway between P and T?',
-          options: ['Q', 'R', 'S', 'U'],
-          correctOptionIndex: 1,
-          explanation: 'Let\'s look: P, Q, R, S, T. "R" sits right in the middle!'
-        },
-        {
-          id: 'q-26',
-          questionText: 'What is the 3rd letter of the day that comes after Wednesday?',
-          options: ['U', 'R', 'S', 'D'],
-          correctOptionIndex: 0,
-          explanation: 'The day is THURSDAY. T-H-U-R-S-D-A-Y.'
-        },
-        {
-          id: 'q-27',
-          questionText: 'If you read the word "STAR" backwards, what new word does it make?',
-          options: ['TARS', 'ARTS', 'RATS', 'TSAR'],
-          correctOptionIndex: 2,
-          explanation: 'S-T-A-R reversed is R-A-T-S.'
-        },
-        {
-          id: 'q-28',
-          questionText: 'Which letter comes right after the 10th letter of the alphabet?',
-          options: ['J', 'K', 'L', 'M'],
-          correctOptionIndex: 1,
-          explanation: 'The 10th letter is J. The letter right after J is K.'
-        },
-        {
-          id: 'q-29',
-          questionText: 'In the word "ELEPHANT", which letter is the 4th consonant?',
-          options: ['P', 'H', 'N', 'T'],
-          correctOptionIndex: 2,
-          explanation: 'Let\'s count the consonants only: L(1), P(2), H(3), N(4).'
-        },
-        {
-          id: 'q-30',
-          questionText: 'Which letter is missing here? M, O, Q, S, __',
-          options: ['T', 'U', 'V', 'W'],
-          correctOptionIndex: 1,
-          explanation: 'We are skipping every other letter! S -> skip T -> U.'
-        },
-        {
-          id: 'q-31',
-          questionText: 'If you spell out the number "EIGHT", what is the middle letter?',
-          options: ['I', 'G', 'H', 'T'],
-          correctOptionIndex: 1,
-          explanation: 'E-I-G-H-T. "G" has two letters on its left and two on its right.'
-        },
-        {
-          id: 'q-32',
-          questionText: 'Which of these words starts AND ends with a vowel?',
-          options: ['ONION', 'BIRD', 'EAGLE', 'CAT'],
-          correctOptionIndex: 2,
-          explanation: 'EAGLE starts with E and ends with E. Both are vowels!'
-        },
-        {
-          id: 'q-33',
-          questionText: 'What is the next letter in this backward pattern? Z, X, V, T, __',
-          options: ['S', 'R', 'Q', 'P'],
-          correctOptionIndex: 1,
-          explanation: 'We are jumping backwards and skipping one letter! T -> skip S -> R.'
-        },
-        {
-          id: 'q-34',
-          questionText: 'If you add the position of A (1) and C (3), you get 4. Which letter is at position 4?',
-          options: ['D', 'E', 'F', 'G'],
-          correctOptionIndex: 0,
-          explanation: '1 + 3 = 4. The 4th letter of the alphabet is D!'
-        },
-        {
-          id: 'q-35',
-          questionText: 'Which of these words does NOT have an "E" in it?',
-          options: ['TIGER', 'ZEBRA', 'MONKEY', 'PANDA'],
-          correctOptionIndex: 3,
-          explanation: 'Panda is spelled P-A-N-D-A. There is no "E" hiding in there!'
-        },
-        {
-          id: 'q-36',
-          questionText: 'Which of these letters comes first in alphabetical order?',
-          options: ['H', 'G', 'F', 'I'],
-          correctOptionIndex: 2,
-          explanation: 'If you sing the alphabet song, F comes before G, H, and I.'
-        },
-        {
-          id: 'q-37',
-          questionText: 'What is the only vowel in the word "NIGHT"?',
-          options: ['N', 'G', 'I', 'H'],
-          correctOptionIndex: 2,
-          explanation: 'N, G, H, and T are all consonants. "I" is the only vowel!'
-        }
-      ]
-    },
-    {
-      id: 'quiz-ur-alpha',
-      title: 'اردو حروف تہجی کوئز (Urdu Alphabet Quiz)',
-      category: 'urdu',
-      subsection: 'Urdu Letters',
-      iconName: 'BookOpen',
-      difficulty: 'beginner',
-      isPublished: true,
-      order: 2,
-      questions: [
-        {
-          id: 'q-ur-1',
-          questionText: 'اردو حروف تہجی کا پہلا حرف کون سا ہے؟',
-          options: ['ب', 'الف (ا)', 'ت', 'ج'],
-          correctOptionIndex: 1,
-          explanation: 'الف (ا) اردو کا پہلا حرف ہے۔'
-        },
-        {
-          id: 'q-ur-2',
-          questionText: 'حرف "ب" سے کون سا لفظ بنتا ہے؟',
-          options: ['بلی', 'طوطا', 'سیب', 'شیر'],
-          correctOptionIndex: 0,
-          explanation: 'بے سے بلی بنتا ہے۔'
-        },
-        {
-          id: 'q-ur-3',
-          questionText: '\'ب\' کے فوراً بعد کون سا حرف آتا ہے؟',
-          options: ['ت', 'پ', 'ٹ', 'ث'],
-          correctOptionIndex: 1,
-          explanation: '\'ب\' کے بعد \'پ\' آتا ہے۔ \'پ\' کے نیچے تین نقطے ہوتے ہیں۔'
-        },
-        {
-          id: 'q-ur-4',
-          questionText: 'کس حرف کے اوپر تین نقطے ہوتے ہیں؟',
-          options: ['ب', 'پ', 'ت', 'ث'],
-          correctOptionIndex: 3,
-          explanation: '\'ث\' (ثمر) کے اوپر تین نقطے ہوتے ہیں۔'
-        },
-        {
-          id: 'q-ur-5',
-          questionText: '\'د\' کے فوراً بعد کیا آتا ہے؟',
-          options: ['ذ', 'ر', 'ڈ', 'ز'],
-          correctOptionIndex: 2,
-          explanation: '\'د\' کے بعد \'ڈ\' آتا ہے، جس کے اوپر چھوٹی طوئے (ط) ہوتی ہے۔'
-        },
-        {
-          id: 'q-ur-6',
-          questionText: 'اردو حروف تہجی کا آخری حرف کون سا ہے؟',
-          options: ['ہ', 'و', 'ی', 'ے'],
-          correctOptionIndex: 3,
-          explanation: 'اردو کا اختتام بڑی \'ے\' پر ہوتا ہے۔'
-        },
-        {
-          id: 'q-ur-7',
-          questionText: '\'س\' کے بعد کون سا حرف آتا ہے؟',
-          options: ['ص', 'ش', 'ض', 'ط'],
-          correctOptionIndex: 1,
-          explanation: '\'س\' کے بعد \'ش\' آتا ہے، \'ش\' کے اوپر تین نقطے ہوتے ہیں۔'
-        },
-        {
-          id: 'q-ur-8',
-          questionText: 'کس حرف کے نیچے صرف ایک نقطہ ہوتا ہے؟',
-          options: ['پ', 'ت', 'ب', 'ن'],
-          correctOptionIndex: 2,
-          explanation: '\'ب\' کے نیچے ایک نقطہ ہوتا ہے، جیسے \'ب\' سے بلی۔'
-        },
-        {
-          id: 'q-ur-9',
-          questionText: '\'ع\' کے فوراً بعد کیا آتا ہے؟',
-          options: ['غ', 'ف', 'ق', 'ک'],
-          correctOptionIndex: 0,
-          explanation: '\'ع\' کے بعد \'غ\' آتا ہے، \'غ\' کے اوپر ایک نقطہ ہوتا ہے۔'
-        },
-        {
-          id: 'q-ur-10',
-          questionText: '\'ک\' کے بعد کون سا حرف آتا ہے؟',
-          options: ['ل', 'م', 'گ', 'ن'],
-          correctOptionIndex: 2,
-          explanation: '\'ک\' کے بعد \'گ\' آتا ہے۔ \'گ\' کے اوپر دو ڈنڈے (مرکز) ہوتے ہیں۔'
-        },
-        {
-          id: 'q-ur-11',
-          questionText: 'ان میں سے کون سا حرف الف کے فوراً بعد آتا ہے؟',
-          options: ['پ', 'ب', 'ت', 'ج'],
-          correctOptionIndex: 1,
-          explanation: 'الف کے بعد بے (ب) آتا ہے۔'
-        },
-        {
-          id: 'q-ur-12',
-          questionText: '\'ر\' اور \'ز\' کے درمیان کون سا حرف آتا ہے؟',
-          options: ['ڈ', 'ڑ', 'ذ', 'ژ'],
-          correctOptionIndex: 1,
-          explanation: 'ترتیب یہ ہے: ر، ڑ، ز۔ اس لیے درمیان میں \'ڑ\' آتا ہے۔'
-        },
-        {
-          id: 'q-ur-13',
-          questionText: '\'چ\' کے پیٹ میں کتنے نقطے ہوتے ہیں؟',
-          options: ['ایک', 'دو', 'تین', 'کوئی نہیں'],
-          correctOptionIndex: 2,
-          explanation: '\'چ\' کے اندر تین نقطے ہوتے ہیں، جیسے \'چ\' سے چاند۔'
-        },
-        {
-          id: 'q-ur-14',
-          questionText: 'کس حرف کے اوپر کوئی نقطہ نہیں ہوتا؟',
-          options: ['خ', 'ج', 'چ', 'ح'],
-          correctOptionIndex: 3,
-          explanation: '\'ح\' بالکل خالی ہوتا ہے، اس پر یا اندر کوئی نقطہ نہیں ہوتا۔'
-        },
-        {
-          id: 'q-ur-15',
-          questionText: '\'م\' سے کون سا لفظ شروع ہوتا ہے؟',
-          options: ['مور', 'طوطا', 'شیر', 'بلی'],
-          correctOptionIndex: 0,
-          explanation: '\'م\' سے مور (Peacock) بنتا ہے۔'
-        },
-        {
-          id: 'q-ur-16',
-          questionText: '\'ن\' کے اندر کتنے نقطے ہوتے ہیں؟',
-          options: ['دو', 'ایک', 'تین', 'چار'],
-          correctOptionIndex: 1,
-          explanation: '\'ن\' گول ہوتا ہے اور اس کے پیالے میں صرف ایک نقطہ ہوتا ہے۔'
-        },
-        {
-          id: 'q-ur-17',
-          questionText: 'ان میں سے کس حرف کی شکل کشتی (Boat) جیسی ہے اور اوپر دو نقطے ہیں؟',
-          options: ['ب', 'پ', 'ت', 'ٹ'],
-          correctOptionIndex: 2,
-          explanation: '\'ت\' ایک کشتی کی طرح ہوتا ہے اور اس میں دو نقطے سوار ہوتے ہیں!'
-        },
-        {
-          id: 'q-ur-18',
-          questionText: '\'خ\' کا نقطہ کہاں ہوتا ہے؟',
-          options: ['اوپر', 'نیچے', 'پیٹ میں', 'کوئی نقطہ نہیں ہوتا'],
-          correctOptionIndex: 0,
-          explanation: '\'خ\' کے سر کے اوپر ایک نقطہ ہوتا ہے (خ سے خرگوش)۔'
-        },
-        {
-          id: 'q-ur-19',
-          questionText: '\'ق\' کے اوپر کتنے نقطے ہوتے ہیں؟',
-          options: ['ایک', 'دو', 'تین', 'چار'],
-          correctOptionIndex: 1,
-          explanation: '\'ق\' (قینچی) کے اوپر دو نقطے ہوتے ہیں۔'
-        },
-        {
-          id: 'q-ur-20',
-          questionText: 'لفظ "آسمان" کس حرف سے شروع ہوتا ہے؟',
-          options: ['ا (الف)', 'ع (عین)', 'آ (الف مد آ)', 'غ (غین)'],
-          correctOptionIndex: 2,
-          explanation: 'آسمان کی آواز کھنچ کر آتی ہے، اس لیے یہ \'آ\' (الف مد آ) سے شروع ہوتا ہے۔'
-        },
-        {
-          id: 'q-ur-21',
-          questionText: '\'ط\' کے بعد کیا آتا ہے؟',
-          options: ['ظ', 'ع', 'غ', 'ف'],
-          correctOptionIndex: 0,
-          explanation: '\'ط\' کے فوراً بعد \'ظ\' آتا ہے، جس پر ایک نقطہ ہوتا ہے۔'
-        },
-        {
-          id: 'q-ur-22',
-          questionText: '\'پ\' سے کون سا لفظ بنتا ہے؟',
-          options: ['تارا', 'پتنگ', 'بطخ', 'جوتا'],
-          correctOptionIndex: 1,
-          explanation: '\'پ\' سے پتنگ (Kite) بنتی ہے!'
-        },
-        {
-          id: 'q-ur-23',
-          questionText: 'خالی جگہ پُر کریں: ا ، ب ، پ ، __ ، ٹ',
-          options: ['ث', 'ت', 'ج', 'چ'],
-          correctOptionIndex: 1,
-          explanation: 'ترتیب پڑھیں: الف، بے، پے، تے، ٹے۔ صحیح جواب \'ت\' ہے۔'
-        },
-        {
-          id: 'q-ur-24',
-          questionText: 'لفظ "بلی" (Billi) کا پہلا حرف کیا ہے؟',
-          options: ['ب', 'پ', 'ت', 'ل'],
-          correctOptionIndex: 0,
-          explanation: 'بلی کی آواز "ب" سے شروع ہوتی ہے۔'
-        },
-        {
-          id: 'q-ur-25',
-          questionText: 'خالی جگہ پُر کریں: د ، ڈ ، ذ ، __ ، ڑ',
-          options: ['ز', 'ژ', 'ر', 'س'],
-          correctOptionIndex: 2,
-          explanation: '\'ذ\' کے بعد \'ر\' آتا ہے۔'
-        },
-        {
-          id: 'q-ur-26',
-          questionText: 'لفظ "کتاب" میں کل کتنے حروف ہیں؟',
-          options: ['دو', 'تین', 'چار', 'پانچ'],
-          correctOptionIndex: 2,
-          explanation: 'ک + ت + ا + ب = 4 حروف!'
-        },
-        {
-          id: 'q-ur-27',
-          questionText: 'اردو حروف تہجی میں کتنی طرح کی \'ی\' ہوتی ہیں؟',
-          options: ['ایک', 'دو', 'تین', 'چار'],
-          correctOptionIndex: 1,
-          explanation: 'اردو میں دو \'ی\' ہوتی ہیں: چھوٹی (ی) اور بڑی (ے)۔'
-        },
-        {
-          id: 'q-ur-28',
-          questionText: 'لفظ "پاکستان" کا آخری حرف کون سا ہے؟',
-          options: ['پ', 'ک', 'س', 'ن'],
-          correctOptionIndex: 3,
-          explanation: 'پاکستان کے آخر میں \'ن\' کی آواز آتی ہے۔'
-        },
-        {
-          id: 'q-ur-29',
-          questionText: 'کون سا حرف \'و\' اور \'ء\' (ہمزہ) کے درمیان آتا ہے؟',
-          options: ['الف', 'ن', 'ہ (گول ہے)', 'ی'],
-          correctOptionIndex: 2,
-          explanation: 'حروف تہجی کے آخر میں ترتیب یہ ہے: و، ہ، ء، ی، ے۔'
-        },
-        {
-          id: 'q-ur-30',
-          questionText: 'ان میں سے کون سا حرف لفظ "دروازہ" میں نہیں آتا؟',
-          options: ['د', 'ر', 'ز', 'چ'],
-          correctOptionIndex: 3,
-          explanation: 'دروازہ میں (د، ر، و، ا، ز، ہ) آتے ہیں، \'چ\' نہیں آتا۔'
-        },
-        {
-          id: 'q-ur-31',
-          questionText: '\'ژ\' (ژے) سے کون سا لفظ بنتا ہے؟',
-          options: ['زرافہ', 'زنجیر', 'ژالہ باری', 'زمین'],
-          correctOptionIndex: 2,
-          explanation: '\'ژ\' پر تین نقطے ہوتے ہیں اور اس سے ژالہ باری (Hailstorm) بنتا ہے۔ زرافہ \'ز\' سے ہوتا ہے۔'
-        },
-        {
-          id: 'q-ur-32',
-          questionText: 'حروف کی صحیح ترتیب کون سی ہے؟',
-          options: ['س ش ص ض', 'س ص ش ض', 'ش س ص ض', 'ض ص ش س'],
-          correctOptionIndex: 0,
-          explanation: 'الف بے پڑھیں تو پہلے \'س\'، پھر \'ش\'، پھر \'ص\' اور آخر میں \'ض\' آتا ہے۔'
-        },
-        {
-          id: 'q-ur-33',
-          questionText: 'کس حرف کی شکل بالکل \'ج\' جیسی ہے لیکن اس میں کوئی نقطہ نہیں ہوتا؟',
-          options: ['خ', 'چ', 'ع', 'ح'],
-          correctOptionIndex: 3,
-          explanation: '\'ح\' (حلوائی) کی شکل \'ج\' جیسی ہوتی ہے پر یہ اندر اور باہر سے خالی ہوتا ہے۔'
-        },
-        {
-          id: 'q-ur-34',
-          questionText: '\'ل\' کے بعد اور \'ن\' سے پہلے کون سا حرف آتا ہے؟',
-          options: ['ک', 'م', 'گ', 'و'],
-          correctOptionIndex: 1,
-          explanation: 'ترتیب میں پڑھیں: ک، ل، م، ن۔'
-        },
-        {
-          id: 'q-ur-35',
-          questionText: 'لفظ "چڑیا" میں \'ڑ\' کے اوپر کیا ہوتا ہے؟',
-          options: ['ایک نقطہ', 'دو نقطے', 'چھوٹی طوئے (ط)', 'کچھ نہیں'],
-          correctOptionIndex: 2,
-          explanation: '\'ڑ\' (اڑے) کے اوپر ہمیشہ چھوٹی سی طوئے (ط) بنی ہوتی ہے۔'
-        },
-        {
-          id: 'q-ur-36',
-          questionText: 'اگر ہم \'ت\' کے دونوں نقطے مٹا کر نیچے لگا دیں، تو وہ کون سا حرف بن جائے گا؟',
-          options: ['ب', 'پ', 'ث', 'ی (چھوٹی ی)'],
-          correctOptionIndex: 3,
-          explanation: '\'ت\' کے اوپر دو نقطے ہوتے ہیں۔ اگر ہم نیچے دو نقطے لگائیں تو وہ \'ی\' (شروع یا درمیان کی شکل) بن جاتا ہے!'
-        },
-        {
-          id: 'q-ur-37',
-          questionText: 'کون سا حرف اپنے نام کے اندر چھپا ہے: "ڈ _ ل" (D _ L)؟',
-          options: ['ا (الف)', 'و (واؤ)', 'ہ (ہے)', 'ی (یے)'],
-          correctOptionIndex: 1,
-          explanation: 'ڈ + و + ل = ڈول (Bucket)!'
+          explanation: 'The letter "L" appears twice in U-M-B-R-E-L-L-A.'
         }
       ]
     },
     {
       id: 'quiz-ar-alpha',
-      title: 'مُسَابَقَةُ الْحُرُوفِ الْعَرَبِيَّة (Arabic Alphabet Quiz)',
+      title: 'Arabic Alphabet Challenge (حروف الهجاء)',
       category: 'arabic',
       subsection: 'Arabic Letters',
-      iconName: 'Moon',
+      iconName: 'Sparkles',
       difficulty: 'beginner',
       isPublished: true,
-      order: 3,
+      order: 2,
       questions: [
         {
           id: 'q-ar-1',
-          questionText: 'مَا هُوَ الْحَرْفُ الْأَوَّلُ فِي اللُّغَةِ الْعَرَبِيَّةِ؟',
-          options: ['الْبَاء (ب)', 'الْأَلِف (أ)', 'التَّاء (ت)', 'الْجِيم (ج)'],
+          questionText: 'Which letter comes first in the Arabic alphabet?',
+          options: ['ب', 'أ', 'ت', 'ج'],
           correctOptionIndex: 1,
-          explanation: 'الْأَلِف (أ) هُوَ الْحَرْفُ الْأَوَّلُ، مِثْلُ: أَسَد.'
+          explanation: 'Alif (أ) is the first letter of the Arabic alphabet.'
         },
         {
           id: 'q-ar-2',
-          questionText: 'كَلِمَةُ "بَيْت" تَبْدَأُ بِأَيِّ حَرْفٍ؟',
-          options: ['أ', 'ب', 'ت', 'ث'],
-          correctOptionIndex: 1,
-          explanation: 'كَلِمَةُ بَيْت تَبْدَأُ بِحَرْفِ الْبَاء (ب).'
+          questionText: 'Which letter comes immediately after "أ" (Alif)?',
+          options: ['ت', 'ث', 'ب', 'ج'],
+          correctOptionIndex: 2,
+          explanation: 'Baa (ب) comes right after Alif.'
         },
         {
           id: 'q-ar-3',
-          questionText: 'अरबी वर्णमाला (Alphabet) की शुरुआत किस अक्षर से होती है?',
-          options: ['ب', 'أ', 'ت', 'ج'],
+          questionText: 'Which letter has ONE dot underneath it?',
+          options: ['ت', 'ب', 'ث', 'ن'],
           correctOptionIndex: 1,
-          explanation: 'अरबी का सबसे पहला अक्षर \'أ\' (अलिफ़) होता है।'
+          explanation: 'Baa (ب) has one dot placed beneath it.'
         },
         {
           id: 'q-ar-4',
-          questionText: '\'ب\' (बा) के ठीक बाद कौन सा अक्षर आता है?',
-          options: ['ث', 'ت', 'ج', 'ح'],
+          questionText: 'Which letter has TWO dots on top?',
+          options: ['ب', 'ت', 'ث', 'ي'],
           correctOptionIndex: 1,
-          explanation: '\'ب\' (बा) के ठीक बाद \'ت\' (ता) आता है।'
+          explanation: 'Taa (ت) has two dots above it.'
         },
         {
           id: 'q-ar-5',
-          questionText: 'इनमें से किस अक्षर के ऊपर तीन बिंदु (नुक़्ते) होते हैं?',
-          options: ['ب', 'ت', 'ث', 'ن'],
+          questionText: 'Which letter has THREE dots on top?',
+          options: ['ت', 'ب', 'ث', 'ش'],
           correctOptionIndex: 2,
-          explanation: '\'ث\' (सा) के ऊपर तीन बिंदु होते हैं।'
+          explanation: 'Thaa (ث) has three dots on top in a triangle shape.'
         },
         {
           id: 'q-ar-6',
-          questionText: '\'ج\' (जीम) और \'خ\' (ख़ा) के बिल्कुल बीच में कौन सा अक्षर आता है?',
-          options: ['ح', 'د', 'ذ', 'ث'],
-          correctOptionIndex: 0,
-          explanation: 'सही क्रम है: ج, ح, خ। इसलिए बीच में \'ح\' (हा) आता है।'
+          questionText: 'Which letter has a dot in its belly (center)?',
+          options: ['ح', 'ج', 'خ', 'ع'],
+          correctOptionIndex: 1,
+          explanation: 'Jeem (ج) has a single dot inside its curve.'
         },
         {
           id: 'q-ar-7',
-          questionText: 'इनमें से किस अक्षर के नीचे सिर्फ एक बिंदु (नुक़्ता) होता है?',
-          options: ['ن', 'ب', 'ت', 'خ'],
-          correctOptionIndex: 1,
-          explanation: '\'ب\' (बा) के नीचे एक बिंदु होता है, जबकि \'ن\' के ऊपर होता है।'
+          questionText: 'Which of these letters has NO dots at all?',
+          options: ['ج', 'خ', 'ح', 'ذ'],
+          correctOptionIndex: 2,
+          explanation: 'Haa (ح) has no dots at all.'
         },
         {
           id: 'q-ar-8',
-          questionText: 'अरबी वर्णमाला (Alphabet) का सबसे आखिरी (28वाँ) अक्षर कौन सा है?',
-          options: ['و', 'هـ', 'ن', 'ي'],
-          correctOptionIndex: 3,
-          explanation: 'अरबी का आखिरी अक्षर \'ي\' (या) है।'
+          questionText: 'Which letter looks like "ح" but has a dot on top?',
+          options: ['ج', 'خ', 'غ', 'ع'],
+          correctOptionIndex: 1,
+          explanation: 'Khaa (خ) has a dot directly on top.'
         },
         {
           id: 'q-ar-9',
-          questionText: 'इनमें से किस अक्षर पर कभी कोई बिंदु (नुक़्ता) नहीं लगता?',
-          options: ['ش', 'ص', 'ض', 'ظ'],
-          correctOptionIndex: 1,
-          explanation: '\'ص\' (त्वाद/स्वाद) को बिना किसी बिंदु के बिल्कुल सादा लिखा जाता है।'
+          questionText: 'Which letter comes after "د" (Daal)?',
+          options: ['ر', 'ز', 'ذ', 'س'],
+          correctOptionIndex: 2,
+          explanation: 'Thaal (ذ) comes right after Daal (د).'
         },
         {
           id: 'q-ar-10',
-          questionText: '\'س\' (सीन) के ठीक बाद कौन सा अक्षर आता है?',
-          options: ['ز', 'ص', 'ش', 'ض'],
-          correctOptionIndex: 2,
-          explanation: '\'س\' के बाद \'ش\' (शीन) आता है, जिसके ऊपर तीन बिंदु होते हैं।'
+          questionText: 'Which letter looks like "ر" (Raa) with a dot above it?',
+          options: ['ز', 'ذ', 'د', 'و'],
+          correctOptionIndex: 0,
+          explanation: 'Zay (ز) is written just like Raa (ر) with a dot on top.'
         },
         {
           id: 'q-ar-11',
-          questionText: 'कौन सा अक्षर \'د\' (दाल) जैसा दिखता है, लेकिन उसके ऊपर एक बिंदु होता है?',
-          options: ['ر', 'ذ', 'ز', 'ط'],
+          questionText: 'Which letter has three teeth (curves) and NO dots?',
+          options: ['ش', 'س', 'ص', 'ض'],
           correctOptionIndex: 1,
-          explanation: '\'ذ\' (ज़ाल) बिल्कुल \'د\' जैसा दिखता है, बस ऊपर एक नुक़्ता (बिंदु) होता है।'
+          explanation: 'Seen (س) has three small peaks and no dots.'
         },
         {
           id: 'q-ar-12',
-          questionText: '\'ط\' (तोय) के ठीक बाद कौन सा अक्षर आता है?',
-          options: ['ظ', 'ع', 'غ', 'ض'],
-          correctOptionIndex: 0,
-          explanation: '\'ط\' के बाद \'ظ\' (ज़ोय) आता है।'
+          questionText: 'Which letter has three teeth AND three dots on top?',
+          options: ['س', 'ش', 'ث', 'ص'],
+          correctOptionIndex: 1,
+          explanation: 'Sheen (ش) is Seen with three dots above.'
         },
         {
           id: 'q-ar-13',
@@ -3017,25 +2599,707 @@ export const initialDatabase: AppDatabase = {
       isPublished: true,
       order: 5,
       questions: [
-        {
-          id: 'q-qur-1',
-          questionText: 'What is the first Surah of the Holy Quran?',
-          questionTextUrdu: 'قرآن پاک کی پہلی سورت کون سی ہے؟',
-          questionTextHindi: 'पवित्र क़ुरआन की पहली सूरत कौन सी है?',
-          options: ['Surah Al-Ikhlas', 'Surah Al-Baqarah', 'Surah Al-Fatiha', 'Surah An-Nas'],
-          correctOptionIndex: 2,
-          explanation: 'Surah Al-Fatiha (The Opening) is the first Surah of the Quran.'
-        },
-        {
-          id: 'q-qur-2',
-          questionText: 'How many Ayahs (verses) are there in Surah Al-Ikhlas?',
-          questionTextUrdu: 'سورۃ الاخلاص میں کل کتنی آیات ہیں؟',
-          questionTextHindi: 'सूरतुल इखलास में कुल कितनी आयतें हैं?',
-          options: ['3', '4', '5', '7'],
-          correctOptionIndex: 1,
-          explanation: 'Surah Al-Ikhlas has 4 verses (Qul Huwa Allahu Ahad...).'
-        }
-      ]
+          {
+                  "id": "q-qur-1",
+                  "questionText": "What is the first Surah of the Holy Quran?",
+                  "questionTextUrdu": "قرآن پاک کی پہلی سورت کون سی ہے؟",
+                  "questionTextHindi": "पवित्र क़ुरआन की पहली सूरत कौन सी है?",
+                  "options": [
+                          "سورۃ الاخلاص",
+                          "سورۃ البقرہ",
+                          "سورۃ الفاتحہ",
+                          "سورۃ الناس"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "سورۃ الفاتحہ قرآن پاک کی سب سے پہلی سورت ہے، اسی لیے اسے \"فاتحہ\" (آغاز کرنے والی) کہا جاتا ہے۔"
+          },
+          {
+                  "id": "q-qur-2",
+                  "questionText": "What is the last Surah of the Holy Quran?",
+                  "questionTextUrdu": "قرآن پاک کی آخری سورت کون سی ہے؟",
+                  "questionTextHindi": "पवित्र क़ुरआन की आखिरी सूरत कौन सी है?",
+                  "options": [
+                          "سورۃ الفلق",
+                          "سورۃ الناس",
+                          "سورۃ الکافرون",
+                          "سورۃ الاخلاص"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "سورۃ الناس قرآن مجید کی 114ویں اور سب سے آخری سورت ہے۔"
+          },
+          {
+                  "id": "q-qur-3",
+                  "questionText": "Which is the longest Surah in the Quran?",
+                  "questionTextUrdu": "قرآن پاک کی سب سے لمبی سورت کون سی ہے؟",
+                  "questionTextHindi": "क़ुरआन की सबसे लंबी सूरत कौन सी है?",
+                  "options": [
+                          "سورۃ آل عمران",
+                          "سورۃ یسین",
+                          "سورۃ النساء",
+                          "سورۃ البقرہ"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "سورۃ البقرہ قرآن کی سب سے طویل سورت ہے جس میں 286 آیات ہیں۔"
+          },
+          {
+                  "id": "q-qur-4",
+                  "questionText": "Which is the shortest Surah in the Quran?",
+                  "questionTextUrdu": "قرآن پاک کی سب سے چھوٹی سورت کون سی ہے؟",
+                  "questionTextHindi": "क़ुरआन की सबसे छोटी सूरत कौन सी है?",
+                  "options": [
+                          "سورۃ الکوثر",
+                          "سورۃ العصر",
+                          "سورۃ الاخلاص",
+                          "سورۃ الناس"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "سورۃ الکوثر میں صرف 3 مختصر آیات ہیں، جو اسے قرآن کی سب سے چھوٹی سورت بناتی ہیں۔"
+          },
+          {
+                  "id": "q-qur-5",
+                  "questionText": "How many Surahs are there in the Holy Quran in total?",
+                  "questionTextUrdu": "قرآن پاک میں کل کتنی سورتیں ہیں؟",
+                  "questionTextHindi": "पवित्र क़ुरआन में कुल कितनी सूरतें हैं?",
+                  "options": [
+                          "100",
+                          "114",
+                          "120",
+                          "99"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "قرآن پاک میں کل 114 سورتیں ہیں۔"
+          },
+          {
+                  "id": "q-qur-6",
+                  "questionText": "How many Juz (Paras) are in the Quran?",
+                  "questionTextUrdu": "قرآن پاک میں کتنے پارے (جزو) ہیں؟",
+                  "questionTextHindi": "क़ुरआन में कितने पारे (जुज़) हैं?",
+                  "options": [
+                          "30",
+                          "40",
+                          "20",
+                          "114"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "قرآن پاک کو 30 برابر حصوں میں تقسیم کیا گیا ہے جنہیں پارے یا جزو کہا جاتا ہے۔"
+          },
+          {
+                  "id": "q-qur-7",
+                  "questionText": "Which Surah is known as the \"Heart of the Quran\"?",
+                  "questionTextUrdu": "کس سورت کو قرآن پاک کا \"دل\" کہا جاتا ہے؟",
+                  "questionTextHindi": "किस सूरत को क़ुरआन का \"दिल\" कहा जाता है?",
+                  "options": [
+                          "سورۃ الرحمٰن",
+                          "سورۃ الملک",
+                          "سورۃ یسین",
+                          "سورۃ الکہف"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "پیارے نبی کریمﷺ کی حدیث کے مطابق سورۃ یسین قرآن کا دل ہے۔"
+          },
+          {
+                  "id": "q-qur-8",
+                  "questionText": "Which Surah does NOT start with \"Bismillah\"?",
+                  "questionTextUrdu": "کون سی سورت \"بسم اللہ\" سے شروع نہیں ہوتی؟",
+                  "questionTextHindi": "कौन सी सूरत \"बिस्मिल्लाह\" से शुरू नहीं होती?",
+                  "options": [
+                          "سورۃ الانفال",
+                          "سورۃ التوبہ",
+                          "سورۃ یونس",
+                          "سورۃ ہود"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "سورۃ التوبہ واحد سورت ہے جس کے آغاز میں \"بسم اللہ الرحمٰن الرحیم\" نہیں لکھی گئی۔"
+          },
+          {
+                  "id": "q-qur-9",
+                  "questionText": "Which Surah contains \"Bismillah\" twice?",
+                  "questionTextUrdu": "کس سورت میں دو مرتبہ \"بسم اللہ\" آئی ہے؟",
+                  "questionTextHindi": "किस सूरत में दो बार \"बिस्मिल्लाह\" आई है?",
+                  "options": [
+                          "سورۃ النمل",
+                          "سورۃ القصص",
+                          "سورۃ طہٰ",
+                          "سورۃ الاسراء"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "سورۃ النمل میں ایک بار شروع میں اور دوسری بار حضرت سلیمانؑ کے خط (آیت 30) میں بسم اللہ آئی ہے۔"
+          },
+          {
+                  "id": "q-qur-10",
+                  "questionText": "To which Prophet was the Quran revealed?",
+                  "questionTextUrdu": "قرآن پاک کس نبی پر نازل ہوا؟",
+                  "questionTextHindi": "क़ुरआन किस नबी पर नाज़िल (अवतरित) हुआ?",
+                  "options": [
+                          "حضرت عیسیٰؑ",
+                          "حضرت موسیٰؑ",
+                          "حضرت ابراہیمؑ",
+                          "حضرت محمدﷺ"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "قرآن پاک اللہ کی آخری کتاب ہے جو آخری نبی حضرت محمد مصطفیٰﷺ پر نازل ہوئی۔"
+          },
+          {
+                  "id": "q-qur-11",
+                  "questionText": "Which Angel brought the Quran from Allah to the Prophet?",
+                  "questionTextUrdu": "اللہ کی طرف سے نبی کریمﷺ پر قرآن پاک کون سے فرشتہ لے کر آئے؟",
+                  "questionTextHindi": "अल्लाह की तरफ से नबी (PBUH) पर क़ुरआन कौन से फरिश्ते लेकर आए?",
+                  "options": [
+                          "حضرت میکائیلؑ",
+                          "حضرت جبرائیلؑ",
+                          "حضرت اسرافیلؑ",
+                          "حضرت عزرائیلؑ"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "حضرت جبرائیل علیہ السلام اللہ کی طرف سے وحی اور قرآن پاک لے کر آتے تھے۔"
+          },
+          {
+                  "id": "q-qur-12",
+                  "questionText": "In which sacred month was the Quran first revealed?",
+                  "questionTextUrdu": "قرآن پاک کس مبارک مہینے میں نازل ہونا شروع ہوا؟",
+                  "questionTextHindi": "क़ुरआन किस मुबारक महीने में नाज़िल होना शुरू हुआ?",
+                  "options": [
+                          "ماہِ رجب",
+                          "ماہِ شعبان",
+                          "ماہِ رمضان",
+                          "ماہِ ذوالحجہ"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "قرآن پاک کا نزول رمضان المبارک کے بابرکت مہینے میں لیلۃ القدر کی رات شروع ہوا۔"
+          },
+          {
+                  "id": "q-qur-13",
+                  "questionText": "In which night was the Quran first revealed?",
+                  "questionTextUrdu": "قرآن پاک کس رات نازل کیا گیا؟",
+                  "questionTextHindi": "क़ुरआन किस रात नाज़िल किया गया?",
+                  "options": [
+                          "شبِ برات",
+                          "شبِ قدر (لیلۃ القدر)",
+                          "شبِ معراج",
+                          "عید کی رات"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "قرآن پاک لیلۃ القدر (شبِ قدر) کی بابرکت رات کو نازل کیا گیا۔"
+          },
+          {
+                  "id": "q-qur-14",
+                  "questionText": "In which cave did the first revelation of the Quran take place?",
+                  "questionTextUrdu": "قرآن پاک کی پہلی وحی کس غار میں نازل ہوئی؟",
+                  "questionTextHindi": "क़ुरआन की पहली वही किस गुफा (गार) में नाज़िल हुई?",
+                  "options": [
+                          "غارِ ثور",
+                          "غارِ حرا",
+                          "کوہِ طور",
+                          "غارِ صفا"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "مکہ مکرمہ کے قریب جبلِ نور پر واقع \"غارِ حرا\" میں سب سے پہلی وحی نازل ہوئی۔"
+          },
+          {
+                  "id": "q-qur-15",
+                  "questionText": "What was the first word of the Holy Quran revealed to Prophet Muhammad (PBUH)?",
+                  "questionTextUrdu": "قرآن پاک کا سب سے پہلا کون سا لفظ نازل ہوا؟",
+                  "questionTextHindi": "क़ुरआन का सबसे पहला कौन सा लफ्ज़ नाज़िल हुआ?",
+                  "options": [
+                          "قُل (کہو)",
+                          "اِقْرَأْ (پڑھو)",
+                          "اَلْحَمْدُ (سب تعریف)",
+                          "ن (نون)"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "سب سے پہلا لفظ \"اِقْرَأْ\" (پڑھو اپنے رب کے نام سے) نازل ہوا تھا۔"
+          },
+          {
+                  "id": "q-qur-16",
+                  "questionText": "Which Surah was revealed first (the first 5 verses)?",
+                  "questionTextUrdu": "سب سے پہلے کس سورت کی ابتدائی 5 آیات نازل ہوئیں؟",
+                  "questionTextHindi": "सबसे पहले किस सूरत की शुरुआती 5 आयतें नाज़िल हुईं?",
+                  "options": [
+                          "سورۃ الفاتحہ",
+                          "سورۃ العلق",
+                          "سورۃ المدثر",
+                          "سورۃ القلم"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "سورۃ العلق (پارہ 30) کی ابتدائی پانچ آیات غارِ حرا میں سب سے پہلے نازل ہوئیں۔"
+          },
+          {
+                  "id": "q-qur-17",
+                  "questionText": "In which language was the Holy Quran revealed?",
+                  "questionTextUrdu": "قرآن مجید کس زبان میں نازل ہوا؟",
+                  "questionTextHindi": "पवित्र क़ुरआन किस भाषा (ज़बान) में नाज़िल हुआ?",
+                  "options": [
+                          "اردو",
+                          "فارسی",
+                          "عربی",
+                          "عبرانی"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "قرآن پاک فصیح و بلیغ عربی زبان میں نازل ہوا۔"
+          },
+          {
+                  "id": "q-qur-18",
+                  "questionText": "For how many years did the revelation of the Quran continue?",
+                  "questionTextUrdu": "قرآن پاک تقریباً کتنے سالوں کے عرصے میں مکمل نازل ہوا؟",
+                  "questionTextHindi": "क़ुरआन लगभग कितने वर्षों में मुकम्मल नाज़िल हुआ?",
+                  "options": [
+                          "10 سال",
+                          "23 سال",
+                          "30 سال",
+                          "40 سال"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "قرآن پاک تقریباً 23 سال کے عرصے میں موقع بموقع ضرورت کے مطابق نازل ہوا۔"
+          },
+          {
+                  "id": "q-qur-19",
+                  "questionText": "Which Surah is considered equal to one-third (1/3) of the Quran?",
+                  "questionTextUrdu": "کس سورت کو پڑھنے کا ثواب ایک تہائی (1/3) قرآن کے برابر ہے؟",
+                  "questionTextHindi": "किस सूरत को पढ़ने का सवाब एक तिहाई (1/3) क़ुरआन के बराबर है?",
+                  "options": [
+                          "سورۃ الاخلاص",
+                          "سورۃ الفلق",
+                          "سورۃ الکوثر",
+                          "سورۃ الملک"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "حدیث شریف کے مطابق سورۃ الاخلاص پڑھنا ایک تہائی قرآن پڑھنے کے برابر ثواب رکھتا ہے۔"
+          },
+          {
+                  "id": "q-qur-20",
+                  "questionText": "Which Surah is known as the \"Beauty / Adornment of the Quran\" (Uroos-ul-Quran)?",
+                  "questionTextUrdu": "کس سورت کو \"عروس القرآن\" (قرآن کی دلہن/زینت) کہا جاتا ہے؟",
+                  "questionTextHindi": "किस सूरत को \"उरूस-उल-क़ुरआन\" (क़ुरआन की दुल्हन/ज़ीनत) कहा जाता है?",
+                  "options": [
+                          "سورۃ یسین",
+                          "سورۃ الرحمٰن",
+                          "سورۃ الواقعہ",
+                          "سورۃ الفتح"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "حدیث میں سورۃ الرحمٰن کو \"عروس القرآن\" (قرآن کی زینت و دلہن) فرمایا گیا ہے۔"
+          },
+          {
+                  "id": "q-qur-21",
+                  "questionText": "Which Surah protects from the punishment of the grave?",
+                  "questionTextUrdu": "کون سی سورت قبر کے عذاب سے بچاتی اور شفاعت کرتی ہے؟",
+                  "questionTextHindi": "कौन सी सूरत क़ब्र के अज़ाब से बचाती है?",
+                  "options": [
+                          "سورۃ السجدہ",
+                          "سورۃ الملک",
+                          "سورۃ الدخان",
+                          "سورۃ المزمل"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "حدیث پاک میں آیا ہے کہ سورۃ الملک روزانہ رات کو پڑھنے والے کے لیے قبر میں نجات کا ذریعہ بنتی ہے۔"
+          },
+          {
+                  "id": "q-qur-22",
+                  "questionText": "How many times is the name of Prophet \"Muhammad\" (PBUH) mentioned in the Quran?",
+                  "questionTextUrdu": "قرآن پاک میں نبی کریم حضرت محمدﷺ کا نامِ نامی \"محمد\" کتنی بار آیا ہے؟",
+                  "questionTextHindi": "क़ुरआन में नबी करीम (PBUH) का नाम \"मुहम्मद\" कितनी बार आया है?",
+                  "options": [
+                          "4 بار",
+                          "10 بار",
+                          "25 بار",
+                          "1 بار"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "قرآن مجید میں اسمِ مبارک \"محمد\" 4 مرتبہ اور اسمِ مبارک \"احمد\" 1 مرتبہ آیا ہے۔"
+          },
+          {
+                  "id": "q-qur-23",
+                  "questionText": "Which Prophet's name is mentioned the MOST number of times in the Quran?",
+                  "questionTextUrdu": "قرآن مجید میں کس نبی کا نام سب سے زیادہ مرتبہ آیا ہے؟",
+                  "questionTextHindi": "क़ुरआन में किस नबी का नाम सबसे ज़्यादा बार आया है?",
+                  "options": [
+                          "حضرت ابراہیمؑ",
+                          "حضرت موسیٰؑ",
+                          "حضرت عیسیٰؑ",
+                          "حضرت نوحؑ"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "حضرت موسیٰ علیہ السلام کا مبارک نام قرآن پاک میں 136 سے زیادہ مرتبہ ذکر ہوا ہے۔"
+          },
+          {
+                  "id": "q-qur-24",
+                  "questionText": "Which is the greatest Ayat (verse) in the Holy Quran?",
+                  "questionTextUrdu": "قرآن مجید کی سب سے عظیم اور فضیلت والی آیت کون سی ہے؟",
+                  "questionTextHindi": "क़ुरआन की सबसे अज़ीम (महान) आयत कौन सी है?",
+                  "options": [
+                          "آیت الکرسی",
+                          "آیت قطعی",
+                          "آمن الرسول",
+                          "آیت سجدہ"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "سورۃ البقرہ کی آیت نمبر 255 \"آیت الکرسی\" قرآن کی سب سے افضل آیت ہے۔"
+          },
+          {
+                  "id": "q-qur-25",
+                  "questionText": "In which Surah is Ayat-ul-Kursi located?",
+                  "questionTextUrdu": "آیت الکرسی کس سورت میں ہے؟",
+                  "questionTextHindi": "आयत-उल-कुर्सी किस सूरत में है?",
+                  "options": [
+                          "سورۃ آل عمران",
+                          "سورۃ البقرہ",
+                          "سورۃ النساء",
+                          "سورۃ المائدہ"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "آیت الکرسی سورۃ البقرہ (پارہ 3) کی آیت نمبر 255 ہے۔"
+          },
+          {
+                  "id": "q-qur-26",
+                  "questionText": "Which only woman's personal name is explicitly mentioned in the Quran?",
+                  "questionTextUrdu": "قرآن پاک میں کس واحد خاتون کا مبارک نام صراحت کے ساتھ ذکر کیا گیا ہے؟",
+                  "questionTextHindi": "क़ुरआन में किस अकेली महिला का नाम साफ़ तौर पर आया है?",
+                  "options": [
+                          "حضرت مریمؑ",
+                          "حضرت عائشہؓ",
+                          "حضرت فاطمہؓ",
+                          "حضرت خدیجہؓ"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "حضرت عیسیٰؑ کی والدہ ماجدہ \"حضرت مریم علیہا السلام\" کا مبارک نام قرآن میں آیا ہے اور ان کے نام پر پوری سورت بھی ہے۔"
+          },
+          {
+                  "id": "q-qur-27",
+                  "questionText": "Which Surah gives protection against the evil of black magic, jealousy, and whispers?",
+                  "questionTextUrdu": "کونسے سورتیں وسوسوں، حسد اور جادو سے حفاظت کے لیے پڑھی جاتی ہیں (معوذتین)؟",
+                  "questionTextHindi": "कौन सी सूरतें बुरी नज़र, जादू और वसवसों से हिफ़ाज़त के लिए पढ़ी जाती हैं?",
+                  "options": [
+                          "سورۃ الفلق اور سورۃ الناس",
+                          "سورۃ الکوثر اور سورۃ الکافرون",
+                          "سورۃ الفاتحہ اور سورۃ الاخلاص",
+                          "سورۃ الملک اور سورۃ القلم"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "سورۃ الفلق اور سورۃ الناس کو \"معوذتین\" کہا جاتا ہے، جو ہر قسم کی برائی اور حسد سے پناہ دیتی ہیں۔"
+          },
+          {
+                  "id": "q-qur-28",
+                  "questionText": "Which Surah is named after an insect (The Honey Bee)?",
+                  "questionTextUrdu": "کس سورت کا نام \"شہد کی مکھی\" کے نام پر ہے؟",
+                  "questionTextHindi": "किस सूरत का नाम \"शहद की मक्खी\" के नाम पर है?",
+                  "options": [
+                          "سورۃ النمل",
+                          "سورۃ النحل",
+                          "سورۃ العنکبوت",
+                          "سورۃ الفیل"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "عربی میں شہد کی مکھی کو \"نحل\" کہتے ہیں، اسی پر سورۃ النحل کا نام رکھا گیا ہے۔"
+          },
+          {
+                  "id": "q-qur-29",
+                  "questionText": "Which Surah is named after \"The Ant\"?",
+                  "questionTextUrdu": "کس سورت کا نام \"چیونٹی\" کے نام پر رکھا گیا ہے؟",
+                  "questionTextHindi": "किस सूरत का नाम \"चींटी\" (Ant) के नाम पर है?",
+                  "options": [
+                          "سورۃ النمل",
+                          "سورۃ النحل",
+                          "سورۃ البقرہ",
+                          "سورۃ الفیل"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "عربی میں چیونٹی کو \"نمل\" کہتے ہیں، اس سورت میں حضرت سلیمانؑ اور چیونٹی کا واقعہ موجود ہے۔"
+          },
+          {
+                  "id": "q-qur-30",
+                  "questionText": "Which Surah is named after \"The Spider\"?",
+                  "questionTextUrdu": "کس سورت کا نام \"مکڑی\" (Spider) کے نام پر ہے؟",
+                  "questionTextHindi": "किस सूरत का नाम \"मकड़ी\" के नाम पर है?",
+                  "options": [
+                          "سورۃ العنکبوت",
+                          "سورۃ النحل",
+                          "سورۃ الجاثیہ",
+                          "سورۃ الفیل"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "عربی میں مکڑی کو \"عنکبوت\" کہا جاتا ہے۔"
+          },
+          {
+                  "id": "q-qur-31",
+                  "questionText": "Which Surah is named after \"The Elephant\"?",
+                  "questionTextUrdu": "کس سورت کا نام \"ہاتھی\" کے نام پر ہے؟",
+                  "questionTextHindi": "किस सूरत का नाम \"हाथी\" के नाम पर है?",
+                  "options": [
+                          "سورۃ البقرہ",
+                          "سورۃ الفیل",
+                          "سورۃ النحل",
+                          "سورۃ الاسد"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "عربی میں ہاتھی کو \"فیل\" کہتے ہیں، اس سورت میں اصحابِ فیل (ہاتھی والوں) پر عذاب کا ذکر ہے۔"
+          },
+          {
+                  "id": "q-qur-32",
+                  "questionText": "Which Surah is named after \"The Cow\"?",
+                  "questionTextUrdu": "کس سورت کا نام \"گائے\" کے نام پر ہے؟",
+                  "questionTextHindi": "किस सूरत का नाम \"गाय\" के नाम पर है?",
+                  "options": [
+                          "سورۃ الانعام",
+                          "سورۃ البقرہ",
+                          "سورۃ النحل",
+                          "سورۃ المائدہ"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "عربی میں گائے کو \"بقرہ\" کہتے ہیں، جس میں بنی اسرائیل کے گائے ذبح کرنے کے واقعے کا بیان ہے۔"
+          },
+          {
+                  "id": "q-qur-33",
+                  "questionText": "How many Sajdahs (prostrations of recitation) are there in the Quran?",
+                  "questionTextUrdu": "قرآن پاک میں کل کتنے سجدہ تلاوت ہیں؟",
+                  "questionTextHindi": "पवित्र क़ुरआन में कुल कितने सजदा-ए-तिलावत हैं?",
+                  "options": [
+                          "10",
+                          "12",
+                          "14",
+                          "15"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "قرآن مجید میں تلاوت کے کل 14 سجدے مقرر ہیں۔"
+          },
+          {
+                  "id": "q-qur-34",
+                  "questionText": "What are the Surahs revealed in Makkah called?",
+                  "questionTextUrdu": "مکہ مکرمہ میں ہجرت سے پہلے نازل ہونے والی سورتوں کو کیا کہا جاتا ہے؟",
+                  "questionTextHindi": "मक्का में नाज़िल होने वाली सूरतों को क्या कहा जाता है?",
+                  "options": [
+                          "مدنی سورتیں",
+                          "مکی سورتیں",
+                          "کوفی سورتیں",
+                          "بصری سورتیں"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "ہجرتِ مدینہ سے پہلے مکہ مکرمہ میں نازل ہونے والی سورتوں کو \"مکی سورتیں\" کہا جاتا ہے۔"
+          },
+          {
+                  "id": "q-qur-35",
+                  "questionText": "What are the Surahs revealed in Madinah called?",
+                  "questionTextUrdu": "ہجرت کے بعد مدینہ منورہ میں نازل ہونے والی سورتوں کو کیا کہا جاتا ہے؟",
+                  "questionTextHindi": "हिजरत के बाद मदीना में नाज़िल होने वाली सूरतों को क्या कहा जाता है?",
+                  "options": [
+                          "مکی سورتیں",
+                          "مدنی سورتیں",
+                          "شامی سورتیں",
+                          "عراقی سورتیں"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "ہجرت کے بعد مدینہ منورہ کے دور میں نازل ہونے والی سورتوں کو \"مدنی سورتیں\" کہا جاتا ہے۔"
+          },
+          {
+                  "id": "q-qur-36",
+                  "questionText": "Which Surah tells the detailed story of Prophet Yusuf (AS) as the \"Best of Stories\"?",
+                  "questionTextUrdu": "کس سورت میں حضرت یوسفؑ کا واقعہ \"احسن القصص\" (سب سے بہترین قصہ) کے طور پر بیان ہوا ہے؟",
+                  "questionTextHindi": "किस सूरत में हज़रत यूसुफ़ (AS) का पूरा वाक़िआ बयान हुआ है?",
+                  "options": [
+                          "سورۃ یوسف",
+                          "سورۃ یونس",
+                          "سورۃ طہٰ",
+                          "سورۃ ہود"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "سورۃ یوسف میں حضرت یوسف علیہ السلام کی زندگی کا پورا سبق آموز قصہ تفصیل سے بیان کیا گیا ہے۔"
+          },
+          {
+                  "id": "q-qur-37",
+                  "questionText": "Which Surah is recommended to recite every Friday for special light and protection from Dajjal?",
+                  "questionTextUrdu": "جمعہ کے دن کون سی سورت پڑھنے کی خاص فضیلت اور نور کی بشارت ہے؟",
+                  "questionTextHindi": "जुमे (शुक्रवार) के दिन कौन सी सूरत पढ़ने की ख़ास फ़ज़ीलत है?",
+                  "options": [
+                          "سورۃ الکہف",
+                          "سورۃ یسین",
+                          "سورۃ الملک",
+                          "سورۃ الفتح"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "جمعہ کے دن سورۃ الکہف پڑھنے والے کے لیے دونوں جمعوں کے درمیان نور روشن رہتا ہے اور فتنہ دجال سے حفاظت رہتی ہے۔"
+          },
+          {
+                  "id": "q-qur-38",
+                  "questionText": "Which Surah discusses the companions of the cave (Ashab-e-Kahf)?",
+                  "questionTextUrdu": "\"اصحابِ کہف\" (غار والے نوجوانوں) کا ایمان افروز واقعہ کس سورت میں ہے؟",
+                  "questionTextHindi": "\"असहाब-ए-कहफ़\" (गुफ़ा वाले) का वाक़िआ किस सूरत में है?",
+                  "options": [
+                          "سورۃ مریم",
+                          "سورۃ الکہف",
+                          "سورۃ النور",
+                          "سورۃ الحج"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "سورۃ الکہف میں ان سچے مومن نوجوانوں کا ذکر ہے جو اپنے ایمان کی حفاظت کے لیے غار میں پناہ گزیں ہوئے تھے۔"
+          },
+          {
+                  "id": "q-qur-39",
+                  "questionText": "Which Surah is named after \"The Daybreak / Dawn\"?",
+                  "questionTextUrdu": "کس سورت کا مطلب \"صبح کا وقت / پو پھٹنا\" ہے؟",
+                  "questionTextHindi": "किस सूरत का मतलब \"सुबह का वक़्त / भोर\" (Dawn) है?",
+                  "options": [
+                          "سورۃ الفجر",
+                          "سورۃ الضحیٰ",
+                          "سورۃ اللیل",
+                          "سورۃ الفلق"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "سورۃ الفجر کا مطلب \"صبح کی پو / فجر کا وقت\" ہے۔"
+          },
+          {
+                  "id": "q-qur-40",
+                  "questionText": "Which Surah is named after \"The Night\"?",
+                  "questionTextUrdu": "کس سورت کا نام \"رات\" کے نام پر ہے؟",
+                  "questionTextHindi": "किस सूरत का नाम \"रात\" (The Night) के नाम पर है?",
+                  "options": [
+                          "سورۃ الفلق",
+                          "سورۃ اللیل",
+                          "سورۃ القدر",
+                          "سورۃ الشمس"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "عربی میں رات کو \"اللیل\" کہا جاتا ہے۔"
+          },
+          {
+                  "id": "q-qur-41",
+                  "questionText": "Which Surah is named after \"The Sun\"?",
+                  "questionTextUrdu": "کس سورت کا نام \"سورج\" کے نام پر ہے؟",
+                  "questionTextHindi": "किस सूरत का नाम \"سورج\" (The Sun) کے نام پر ہے؟",
+                  "options": [
+                          "سورۃ النجم",
+                          "سورۃ الشمس",
+                          "سورۃ القمر",
+                          "سورۃ الفجر"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "عربی میں سورج کو \"شمس\" کہا جاتا ہے، جس کی قسم اللہ تعالیٰ نے اس سورت میں کھائی ہے۔"
+          },
+          {
+                  "id": "q-qur-42",
+                  "questionText": "Which Surah is named after \"The Moon\"?",
+                  "questionTextUrdu": "کس سورت کا نام \"چاند\" کے نام پر ہے؟",
+                  "questionTextHindi": "किस सूरत का नाम \"चाँद\" (The Moon) کے نام پر ہے?",
+                  "options": [
+                          "سورۃ النور",
+                          "سورۃ القمر",
+                          "سورۃ النجم",
+                          "سورۃ الطارق"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "عربی میں چاند کو \"قمر\" کہا جاتا ہے، اس سورت میں شق القمر (چاند کے دو ٹکڑے ہونے) کے معجزے کا ذکر ہے۔"
+          },
+          {
+                  "id": "q-qur-43",
+                  "questionText": "Which Surah is named after \"Time / The Declining Day\"?",
+                  "questionTextUrdu": "کس سورت کا نام \"زمانہ / وقت\" کے نام پر ہے؟",
+                  "questionTextHindi": "किस सूरत का नाम \"ज़माना / वक़्त\" (Time) के نام पर है?",
+                  "options": [
+                          "سورۃ العصر",
+                          "سورۃ الدھر",
+                          "سورۃ الفجر",
+                          "سورۃ اللیل"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "سورۃ العصر میں اللہ نے زمانے اور وقت کی قسم کھا کر انسان کے خسارے اور کامیابی کے اصول بتائے ہیں۔"
+          },
+          {
+                  "id": "q-qur-44",
+                  "questionText": "Which fruit is mentioned in the very first verse of Surah At-Teen?",
+                  "questionTextUrdu": "سورۃ التین کی پہلی آیت میں کن پھلوں کی قسم کھائی گئی ہے؟",
+                  "questionTextHindi": "सूरत अत-तीन की पहली आयत में किन फलों की क़सम खाई गई है?",
+                  "options": [
+                          "انجیر اور زیتون",
+                          "کھجور اور انار",
+                          "سیب اور انگور",
+                          "کیلا اور امرود"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "وَالتِّيْنِ وَالزَّيْتُوْنِ (قسم ہے انجیر کی اور زیتون کی)۔"
+          },
+          {
+                  "id": "q-qur-45",
+                  "questionText": "In which Surah does the verse \"So which of the favors of your Lord would you deny?\" repeat 31 times?",
+                  "questionTextUrdu": "کس سورت میں \"فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ\" 31 بار دہرائی گئی ہے؟",
+                  "questionTextHindi": "किस सूरत में \"तुम अपने रब की कौन-कौन सी नेमतों को झुठलाओगे?\" 31 बार आया है?",
+                  "options": [
+                          "سورۃ الواقعہ",
+                          "سورۃ الرحمٰن",
+                          "سورۃ الملک",
+                          "سورۃ المزمل"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "سورۃ الرحمٰن میں اللہ تعالیٰ نے جن و انس کو اپنی بے شمار نعمتیں یاد دلاتے ہوئے یہ آیت 31 مرتبہ فرمائی ہے۔"
+          },
+          {
+                  "id": "q-qur-46",
+                  "questionText": "Which Surah discusses the Night of Decree (Laylat-ul-Qadr) and angels descending?",
+                  "questionTextUrdu": "لیلۃ القدر اور فرشتوں کے نزول کی عظمت کس سورت میں بیان کی گئی ہے؟",
+                  "questionTextHindi": "शब-ए-क़द्र की रात की अज़मत किस सूरत में बयान की गई है?",
+                  "options": [
+                          "سورۃ القدر",
+                          "سورۃ الفجر",
+                          "سورۃ الکوثر",
+                          "سورۃ الاخلاص"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "سورۃ القدر میں فرمایا گیا ہے کہ لیلۃ القدر کی رات ہزار مہینوں سے افضل ہے۔"
+          },
+          {
+                  "id": "q-qur-47",
+                  "questionText": "How many verses (Ayahs) are there in Surah Al-Fatiha?",
+                  "questionTextUrdu": "سورۃ الفاتحہ میں کل کتنی آیات ہیں؟",
+                  "questionTextHindi": "सूरह अल-फ़ातिहा में कुल कितनी आयतें हैं?",
+                  "options": [
+                          "5",
+                          "6",
+                          "7",
+                          "8"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "سورۃ الفاتحہ میں بسم اللہ سمیت 7 آیات ہیں، اسی لیے اسے \"السبع المثانی\" بھی کہتے ہیں۔"
+          },
+          {
+                  "id": "q-qur-48",
+                  "questionText": "Which Surah is named after \"Iron\"?",
+                  "questionTextUrdu": "کس سورت کا نام \"لوہا\" (Iron) کے نام پر ہے؟",
+                  "questionTextHindi": "किस सूरत का नाम \"लोहा\" (Iron) के नाम पर है?",
+                  "options": [
+                          "سورۃ النحاس",
+                          "سورۃ الحدید",
+                          "سورۃ الذہب",
+                          "سورۃ الفضہ"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "عربی میں لوہے کو \"حدید\" کہتے ہیں، اس سورت میں اللہ نے لوہے کی طاقت اور فوائد کا ذکر فرمایا ہے۔"
+          },
+          {
+                  "id": "q-qur-49",
+                  "questionText": "Who gathered and compiled the Quran into one standard single Mus-haf book copy for the Ummah?",
+                  "questionTextUrdu": "تمام مسلمانوں کے لیے ایک ہی مصحف (قرآن کے معیاری نسخے) پر جمع فرمانے والے خلیفہ کون ہیں؟",
+                  "questionTextHindi": "क़ुरआन को एक मुसहफ़ (किताब) की शक्ल में जमा करने वाले ख़लीफ़ा कौन हैं?",
+                  "options": [
+                          "حضرت ابوبکر صدیقؓ اور حضرت عثمان غنیؓ",
+                          "حضرت علی المرتضیٰؓ",
+                          "حضرت عمر فاروقؓ",
+                          "حضرت خالد بن ولیدؓ"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "حضرت ابوبکرؓ نے سب سے پہلے ایک کتابی شکل میں جمع کرایا اور حضرت عثمان غنیؓ نے امت کو ایک معیاری مصحف پر متحد فرمایا (جامع القرآن)۔"
+          },
+          {
+                  "id": "q-qur-50",
+                  "questionText": "Which Surah is named after \"The Star\"?",
+                  "questionTextUrdu": "کس سورت کا مطلب \"ستارہ\" ہے؟",
+                  "questionTextHindi": "किस सूरत का मतलब \"तारा\" (Star) है?",
+                  "options": [
+                          "سورۃ النجم",
+                          "سورۃ الفجر",
+                          "سورۃ الشمس",
+                          "سورۃ القمر"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "عربی زبان میں تارے (ستارے) کو \"نجم\" کہا جاتا ہے۔"
+          }
+        ]
     },
     {
       id: 'quiz-islamic',
@@ -3047,25 +3311,707 @@ export const initialDatabase: AppDatabase = {
       isPublished: true,
       order: 6,
       questions: [
-        {
-          id: 'q-isl-1',
-          questionText: 'What is the First Kalima called?',
-          questionTextUrdu: 'پہلے کلمے کا نام کیا ہے؟',
-          questionTextHindi: 'पहले कलिमे का नाम क्या है?',
-          options: ['Kalima Shahadat', 'Kalima Tayyab', 'Kalima Tamjeed', 'Kalima Tauheed'],
-          correctOptionIndex: 1,
-          explanation: 'The First Kalima is called Kalima Tayyab (La ilaha illallah Muhammadur Rasulullah).'
-        },
-        {
-          id: 'q-isl-2',
-          questionText: 'What do we say before starting Wudu or eating food?',
-          questionTextUrdu: 'وضو یا کھانا شروع کرنے سے پہلے ہم کیا پڑھتے ہیں؟',
-          questionTextHindi: 'वुज़ू या खाना शुरू करने से पहले हम क्या कहते हैं?',
-          options: ['Subhanallah', 'Alhamdulillah', 'Bismillah-ir-Rahman-ir-Raheem', 'Astaghfirullah'],
-          correctOptionIndex: 2,
-          explanation: 'We always begin with "Bismillah-ir-Rahman-ir-Raheem".'
-        }
-      ]
+          {
+                  "id": "q-isl-1",
+                  "questionText": "How many pillars of Islam are there?",
+                  "questionTextUrdu": "اسلام کے کتنے بنیادی ارکان ہیں؟",
+                  "questionTextHindi": "इस्लाम के कितने बुनियादी अरकान (स्तंभ) हैं?",
+                  "options": [
+                          "3",
+                          "4",
+                          "5",
+                          "6"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "اسلام کے 5 ارکان ہیں: کلمہ، نماز، روزہ، زکوٰۃ، اور حج۔"
+          },
+          {
+                  "id": "q-isl-2",
+                  "questionText": "Who is the last Prophet of Allah?",
+                  "questionTextUrdu": "اللہ کے آخری نبی کون ہیں؟",
+                  "questionTextHindi": "अल्लाह के आखिरी नबी कौन हैं?",
+                  "options": [
+                          "حضرت عیسیٰؑ",
+                          "حضرت موسیٰؑ",
+                          "حضرت ابراہیمؑ",
+                          "حضرت محمدﷺ"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "حضرت محمدﷺ اللہ کے آخری نبی اور رسول ہیں، ان کے بعد کوئی نبی نہیں آئے گا۔"
+          },
+          {
+                  "id": "q-isl-3",
+                  "questionText": "How many obligatory prayers are there in a day?",
+                  "questionTextUrdu": "ایک دن میں کتنی نمازیں فرض ہیں؟",
+                  "questionTextHindi": "एक दिन में कितनी नमाज़ें फ़र्ज़ हैं?",
+                  "options": [
+                          "3",
+                          "5",
+                          "7",
+                          "4"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "ہر مسلمان پر دن رات میں 5 نمازیں فرض ہیں (فجر، ظہر، عصر، مغرب، عشاء)۔"
+          },
+          {
+                  "id": "q-isl-4",
+                  "questionText": "In which month do Muslims fast?",
+                  "questionTextUrdu": "مسلمان کس مہینے میں روزے رکھتے ہیں؟",
+                  "questionTextHindi": "मुसलमान किस महीने में रोज़े रखते हैं?",
+                  "options": [
+                          "محرم",
+                          "رجب",
+                          "شعبان",
+                          "رمضان"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "رمضان المبارک کے پورے مہینے میں روزے رکھنا مسلمانوں پر فرض ہے۔"
+          },
+          {
+                  "id": "q-isl-5",
+                  "questionText": "Where is the Holy Kaaba located?",
+                  "questionTextUrdu": "خانہ کعبہ کس شہر میں واقع ہے؟",
+                  "questionTextHindi": "खाना काबा किस शहर में स्थित है?",
+                  "options": [
+                          "مدینہ",
+                          "مکہ",
+                          "یروشلم",
+                          "بغداد"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "مسلمانوں کا مقدس ترین گھر خانہ کعبہ سعودی عرب کے شہر مکہ مکرمہ میں ہے۔"
+          },
+          {
+                  "id": "q-isl-6",
+                  "questionText": "What is the name of the morning prayer?",
+                  "questionTextUrdu": "صبح کی نماز کا کیا نام ہے؟",
+                  "questionTextHindi": "सुबह की नमाज़ का क्या नाम है?",
+                  "options": [
+                          "فجر",
+                          "ظہر",
+                          "عصر",
+                          "مغرب"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "سورج نکلنے سے پہلے جو نماز پڑھی جاتی ہے اسے فجر کہتے ہیں۔"
+          },
+          {
+                  "id": "q-isl-7",
+                  "questionText": "Which Angel brought revelations (Wahy) to the Prophets?",
+                  "questionTextUrdu": "کون سے فرشتہ انبیاء کرام پر وحی لے کر آتے تھے؟",
+                  "questionTextHindi": "कौन से फ़रिश्ते अम्बिया-ए-किराम पर वही लेकर आते थे?",
+                  "options": [
+                          "حضرت میکائیلؑ",
+                          "حضرت اسرافیلؑ",
+                          "حضرت جبرائیلؑ",
+                          "حضرت عزرائیلؑ"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "اللہ کا پیغام (وحی) انبیاء تک پہنچانے کی ذمہ داری حضرت جبرائیلؑ کی تھی۔"
+          },
+          {
+                  "id": "q-isl-8",
+                  "questionText": "Who was the first human and first Prophet?",
+                  "questionTextUrdu": "دنیا کے سب سے پہلے انسان اور پہلے نبی کون تھے؟",
+                  "questionTextHindi": "दुनिया के सबसे पहले इंसान और पहले नबी कौन थे?",
+                  "options": [
+                          "حضرت نوحؑ",
+                          "حضرت آدمؑ",
+                          "حضرت ادریسؑ",
+                          "حضرت شیثؑ"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "اللہ تعالیٰ نے سب سے پہلے حضرت آدم علیہ السلام کو پیدا فرمایا۔"
+          },
+          {
+                  "id": "q-isl-9",
+                  "questionText": "What is the first month of the Islamic calendar?",
+                  "questionTextUrdu": "اسلامی (ہجری) کیلنڈر کا پہلا مہینہ کون سا ہے؟",
+                  "questionTextHindi": "इस्लामी (हिजरी) कैलेंडर का पहला महीना कौन सा है?",
+                  "options": [
+                          "صفر",
+                          "محرم",
+                          "شوال",
+                          "ربیع الاول"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "اسلامی سال کا آغاز محرم الحرام کے مہینے سے ہوتا ہے۔"
+          },
+          {
+                  "id": "q-isl-10",
+                  "questionText": "Which Holy Book was revealed to Prophet Musa (AS)?",
+                  "questionTextUrdu": "حضرت موسیٰؑ پر کون سی آسمانی کتاب نازل ہوئی؟",
+                  "questionTextHindi": "हज़रत मूसा (AS) पर कौन सी आसमानी किताब नाज़िल हुई?",
+                  "options": [
+                          "زبور",
+                          "تورات",
+                          "انجیل",
+                          "قرآن مجید"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "اللہ تعالیٰ نے حضرت موسیٰ علیہ السلام پر 'تورات' نازل فرمائی۔"
+          },
+          {
+                  "id": "q-isl-11",
+                  "questionText": "Which Holy Book was revealed to Prophet Isa (AS)?",
+                  "questionTextUrdu": "حضرت عیسیٰؑ پر کون سی آسمانی کتاب نازل ہوئی؟",
+                  "questionTextHindi": "हज़रत ईसा (AS) पर कौन सी आसमानी किताब नाज़िल हुई?",
+                  "options": [
+                          "انجیل",
+                          "تورات",
+                          "زبور",
+                          "قرآن مجید"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "اللہ تعالیٰ نے حضرت عیسیٰ علیہ السلام پر 'انجیل' نازل فرمائی۔"
+          },
+          {
+                  "id": "q-isl-12",
+                  "questionText": "How many names of Allah (Asma-ul-Husna) are commonly known?",
+                  "questionTextUrdu": "اللہ تعالیٰ کے کتنے صفاتی نام مشہور ہیں؟",
+                  "questionTextHindi": "अल्लाह तआला के कितने सिफ़ाती नाम (अस्मा-उल-हुस्ना) मशहूर हैं?",
+                  "options": [
+                          "50",
+                          "70",
+                          "99",
+                          "100"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "اللہ تعالیٰ کے 99 خوبصورت نام ہیں جنہیں اسماء الحسنیٰ کہا جاتا ہے۔"
+          },
+          {
+                  "id": "q-isl-13",
+                  "questionText": "What is the call to prayer called?",
+                  "questionTextUrdu": "نماز کے لیے بلانے کی آواز کو کیا کہتے ہیں؟",
+                  "questionTextHindi": "नमाज़ के लिए बुलाने की आवाज़ को क्या कहते हैं?",
+                  "options": [
+                          "اقامت",
+                          "تکبیر",
+                          "اذان",
+                          "خطبہ"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "مسلمانوں کو مسجد میں نماز کے لیے بلانے کے عمل کو اذان کہتے ہیں۔"
+          },
+          {
+                  "id": "q-isl-14",
+                  "questionText": "Who was the first Caliph of Islam?",
+                  "questionTextUrdu": "اسلام کے پہلے خلیفہ کون تھے؟",
+                  "questionTextHindi": "इस्लाम के पहले खलीफा कौन थे?",
+                  "options": [
+                          "حضرت عمرؓ",
+                          "حضرت علیؓ",
+                          "حضرت عثمانؓ",
+                          "حضرت ابوبکرؓ"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "نبی کریمﷺ کے وصال کے بعد حضرت ابوبکر صدیقؓ مسلمانوں کے پہلے خلیفہ بنے۔"
+          },
+          {
+                  "id": "q-isl-15",
+                  "questionText": "What is washing before prayer called?",
+                  "questionTextUrdu": "نماز سے پہلے پاک ہونے کے عمل کو کیا کہتے ہیں؟",
+                  "questionTextHindi": "नमाज़ से पहले पाक होने के अमल को क्या कहते हैं?",
+                  "options": [
+                          "غسل",
+                          "وضو",
+                          "تیمم",
+                          "طہارت"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "نماز پڑھنے سے پہلے ہاتھ، منہ، سر اور پاؤں دھونے کو وضو کہا جاتا ہے۔"
+          },
+          {
+                  "id": "q-isl-16",
+                  "questionText": "What was the name of Prophet Muhammad's (PBUH) mother?",
+                  "questionTextUrdu": "نبی کریمﷺ کی والدہ ماجدہ کا کیا نام تھا؟",
+                  "questionTextHindi": "नबी करीम (PBUH) की वालिदा माजिदा का क्या नाम था?",
+                  "options": [
+                          "حضرت حلیمہ سعدیہؓ",
+                          "حضرت آمنہؓ",
+                          "حضرت خدیجہؓ",
+                          "حضرت فاطمہؓ"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "آپﷺ کی والدہ کا نام حضرت آمنہ رضی اللہ عنہا تھا۔"
+          },
+          {
+                  "id": "q-isl-17",
+                  "questionText": "What was the name of Prophet Muhammad's (PBUH) father?",
+                  "questionTextUrdu": "نبی کریمﷺ کے والد محترم کا کیا نام تھا؟",
+                  "questionTextHindi": "नबी करीम (PBUH) के वालिद मोहतरम का क्या नाम था?",
+                  "options": [
+                          "حضرت عبدالمطلب",
+                          "حضرت ابوطالب",
+                          "حضرت عبداللہ",
+                          "حضرت حمزہؓ"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "آپﷺ کے والد محترم کا نام حضرت عبداللہ تھا۔"
+          },
+          {
+                  "id": "q-isl-18",
+                  "questionText": "Which festival comes immediately after Ramadan?",
+                  "questionTextUrdu": "رمضان کے فوراً بعد کون سا تہوار آتا ہے؟",
+                  "questionTextHindi": "रमज़ान के फौरन बाद कौन सा त्यौहार आता है?",
+                  "options": [
+                          "عید الاضحیٰ",
+                          "شبِ برأت",
+                          "عید الفطر",
+                          "شبِ معراج"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "رمضان کے روزے مکمل ہونے کی خوشی میں یکم شوال کو عید الفطر منائی جاتی ہے۔"
+          },
+          {
+                  "id": "q-isl-19",
+                  "questionText": "What is the direction Muslims face while praying?",
+                  "questionTextUrdu": "مسلمان نماز پڑھتے وقت کس طرف منہ کرتے ہیں؟",
+                  "questionTextHindi": "मुसलमान नमाज़ पढ़ते वक़्त किस तरफ रुख़ करते हैं?",
+                  "options": [
+                          "مسجدِ نبوی",
+                          "قبلہ (خانہ کعبہ)",
+                          "مسجدِ اقصیٰ",
+                          "سورج کی طرف"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "مسلمان مکہ میں موجود خانہ کعبہ کی طرف رخ کر کے نماز پڑھتے ہیں، جسے قبلہ کہتے ہیں۔"
+          },
+          {
+                  "id": "q-isl-20",
+                  "questionText": "Giving a fixed portion of wealth to the poor is called?",
+                  "questionTextUrdu": "مال داروں پر غریبوں کا جو حق مقرر ہے، اسے کیا کہتے ہیں؟",
+                  "questionTextHindi": "मालदारों पर गरीबों का जो हक़ मुक़र्रर है, उसे क्या कहते हैं?",
+                  "options": [
+                          "زکوٰۃ",
+                          "صدقہ",
+                          "فطرانہ",
+                          "ہدیہ"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "ہر صاحبِ نصاب مسلمان پر سال میں ایک بار اپنے مال کا 2.5٪ غریبوں کو دینا فرض ہے جسے زکوٰۃ کہتے ہیں۔"
+          },
+          {
+                  "id": "q-isl-21",
+                  "questionText": "Who was the second Caliph of Islam?",
+                  "questionTextUrdu": "اسلام کے دوسرے خلیفہ کون تھے؟",
+                  "questionTextHindi": "इस्लाम के दूसरे खलीफा कौन थे?",
+                  "options": [
+                          "حضرت علیؓ",
+                          "حضرت عثمانؓ",
+                          "حضرت ابوبکرؓ",
+                          "حضرت عمرؓ"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "حضرت عمر فاروق رضی اللہ عنہ مسلمانوں کے دوسرے خلیفہ تھے۔"
+          },
+          {
+                  "id": "q-isl-22",
+                  "questionText": "In which city is the Prophet's Mosque (Masjid-e-Nabawi) located?",
+                  "questionTextUrdu": "مسجدِ نبوی کس شہر میں واقع ہے؟",
+                  "questionTextHindi": "मस्जिद-ए-नबवी किस शहर में स्थित है?",
+                  "options": [
+                          "طائف",
+                          "مکہ",
+                          "مدینہ",
+                          "جدہ"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "مسجدِ نبوی اور نبی کریمﷺ کا روضہ مبارک مدینہ منورہ میں ہے۔"
+          },
+          {
+                  "id": "q-isl-23",
+                  "questionText": "Who was the first wife of Prophet Muhammad (PBUH)?",
+                  "questionTextUrdu": "نبی کریمﷺ کی پہلی زوجہ محترمہ کون تھیں؟",
+                  "questionTextHindi": "नबी करीम (PBUH) की पहली ज़ौजा (पत्नी) कौन थीं?",
+                  "options": [
+                          "حضرت عائشہؓ",
+                          "حضرت خدیجہؓ",
+                          "حضرت زینبؓ",
+                          "حضرت حفصہؓ"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "حضرت خدیجہ رضی اللہ عنہا آپﷺ کی پہلی بیوی تھیں اور عورتوں میں سب سے پہلے ایمان لائیں۔"
+          },
+          {
+                  "id": "q-isl-24",
+                  "questionText": "What is the prayer offered after sunset called?",
+                  "questionTextUrdu": "سورج غروب ہونے کے بعد کون سی نماز پڑھی جاتی ہے؟",
+                  "questionTextHindi": "सूरज डूबने के बाद कौन सी नमाज़ पढ़ी जाती है?",
+                  "options": [
+                          "عصر",
+                          "عشاء",
+                          "مغرب",
+                          "تہجد"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "سورج کے ڈوبتے ہی مغرب کی نماز کا وقت شروع ہو جاتا ہے۔"
+          },
+          {
+                  "id": "q-isl-25",
+                  "questionText": "The festival of sacrifice is associated with which Prophet?",
+                  "questionTextUrdu": "عید الاضحیٰ (قربانی والی عید) کس نبی کی سنت ہے؟",
+                  "questionTextHindi": "ईद-उल-अज़हा (क़ुरबानी की ईद) किस नबी की सुन्नत है?",
+                  "options": [
+                          "حضرت اسماعیلؑ",
+                          "حضرت ابراہیمؑ",
+                          "حضرت موسیٰؑ",
+                          "حضرت عیسیٰؑ"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "ہم حضرت ابراہیم علیہ السلام اور حضرت اسماعیل علیہ السلام کی قربانی کی یاد میں عید الاضحیٰ مناتے ہیں۔"
+          },
+          {
+                  "id": "q-isl-26",
+                  "questionText": "What is the meaning of the word \"Islam\"?",
+                  "questionTextUrdu": "لفظ \"اسلام\" کا کیا مطلب ہے؟",
+                  "questionTextHindi": "शब्द \"इस्लाम\" का क्या अर्थ है?",
+                  "options": [
+                          "शांति (Peace) और अल्लाह की आज्ञा मानना",
+                          "युद्ध (War)",
+                          "प्रकाश (Light)",
+                          "ज्ञान (Knowledge)"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "इस्लाम का मतलब है अल्लाह की मर्ज़ी के आगे सिर झुकाना और शांति फैलाना।"
+          },
+          {
+                  "id": "q-isl-27",
+                  "questionText": "What is the 12th and final month of the Islamic calendar?",
+                  "questionTextUrdu": "اسلامی کیلنڈر کا 12واں اور آخری مہینہ کون سا ہے؟",
+                  "questionTextHindi": "इस्लामी कैलेंडर का 12वाँ और आखिरी महीना कौन सा है?",
+                  "options": [
+                          "मुहर्रम",
+                          "रमज़ान",
+                          "शव्वाल",
+                          "ज़ुल-हिज्जा (ज़िलहज)"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "ज़ुल-हिज्जा इस्लामी साल का आखिरी महीना है, इसी महीने में हज किया जाता है।"
+          },
+          {
+                  "id": "q-isl-28",
+                  "questionText": "How many times do Muslims walk around the Kaaba during Tawaf?",
+                  "questionTextUrdu": "طواف کے دوران کعبہ کے کتنے چکر لگائے جاتے ہیں؟",
+                  "questionTextHindi": "तवाफ़ के दौरान काबा के कितने चक्कर लगाए जाते हैं?",
+                  "options": [
+                          "3",
+                          "5",
+                          "7",
+                          "10"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "उमरा या हज के दौरान काबा के 7 चक्कर लगाने को तवाफ़ कहते हैं।"
+          },
+          {
+                  "id": "q-isl-29",
+                  "questionText": "Which prayer has no Adhan and no Iqamah?",
+                  "questionTextUrdu": "وہ کون سی نماز ہے جس کی کوئی اذان اور اقامت نہیں ہوتی؟",
+                  "questionTextHindi": "वह कौन सी नमाज़ है जिसकी कोई अज़ान और इकामत नहीं होती?",
+                  "options": [
+                          "फ़ज़र की नमाज़",
+                          "जुमे की नमाज़",
+                          "जनाज़े की नमाज़",
+                          "असर की नमाज़"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "नमाज़-ए-जनाज़ा (Funeral Prayer) के लिए अज़ान नहीं दी जाती।"
+          },
+          {
+                  "id": "q-isl-30",
+                  "questionText": "Who was the third Caliph of Islam?",
+                  "questionTextUrdu": "اسلام کے تیسرے خلیفہ کون تھے؟",
+                  "questionTextHindi": "इस्लाम के तीसरे खलीफा कौन थे?",
+                  "options": [
+                          "हज़रत अली (RA)",
+                          "हज़रत उस्मान (RA)",
+                          "हज़रत अबू बक्र (RA)",
+                          "हज़रत उमर (RA)"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "हज़रत उस्मान गनी (रज़ि.) इस्लाम के तीसरे खलीफा थे।"
+          },
+          {
+                  "id": "q-isl-31",
+                  "questionText": "Who was the fourth Caliph of Islam?",
+                  "questionTextUrdu": "اسلام کے چوتھے خلیفہ کون تھے؟",
+                  "questionTextHindi": "इस्लाम के चौथे खलीफा कौन थे?",
+                  "options": [
+                          "हज़रत हसन (RA)",
+                          "हज़रत हुसैन (RA)",
+                          "हज़रत मुआविया (RA)",
+                          "हज़रत अली (RA)"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "हज़रत अली (रज़ि.) इस्लाम के चौथे खलीफा थे।"
+          },
+          {
+                  "id": "q-isl-32",
+                  "questionText": "What is the night prayer called?",
+                  "questionTextUrdu": "رات کی آخری نماز کا کیا نام ہے؟",
+                  "questionTextHindi": "रात की सबसे आखिरी नमाज़ कौन सी है?",
+                  "options": [
+                          "इशा (Isha)",
+                          "मग़रिब (Maghrib)",
+                          "ज़ुहर (Zuhr)",
+                          "असर (Asr)"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "रात के समय पढ़ी जाने वाली 5वीं और आखिरी फ़र्ज़ नमाज़ इशा है।"
+          },
+          {
+                  "id": "q-isl-33",
+                  "questionText": "Which Angel is responsible for blowing the trumpet on the Day of Judgment?",
+                  "questionTextUrdu": "قیامت کے دن صور پھونکنے کی ذمہ داری کس فرشتے کی ہے؟",
+                  "questionTextHindi": "क़यामत के दिन शंख (सूर) फूंकने की ज़िम्मेदारी किस फरिश्ते की है?",
+                  "options": [
+                          "हज़रत जिब्रील (AS)",
+                          "हज़रत इसराफ़ील (AS)",
+                          "हज़रत मीकाईल (AS)",
+                          "हज़रत इज़राईल (AS)"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "हज़रत इसराफ़ील (AS) क़यामत के दिन सूर (trumpet) फूकेंगे जिससे दुनिया खत्म हो जाएगी।"
+          },
+          {
+                  "id": "q-isl-34",
+                  "questionText": "What is the Angel of Death called?",
+                  "questionTextUrdu": "موت کے فرشتے (روح قبض کرنے والے فرشتے) کا نام کیا ہے؟",
+                  "questionTextHindi": "मौत के फरिश्ते (रूह निकालने वाले फरिश्ते) का क्या नाम है?",
+                  "options": [
+                          "हज़रत मीकाईल (AS)",
+                          "हज़रत इज़राईल (AS)",
+                          "हज़रत रिज़वान (AS)",
+                          "हज़रत मालिक (AS)"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "हज़रत इज़राईल (AS) को मलकुल मौत (मौत का फरिश्ता) कहा जाता है।"
+          },
+          {
+                  "id": "q-isl-35",
+                  "questionText": "What is the prayer called which is read only in Ramadan after Isha?",
+                  "questionTextUrdu": "رمضان میں عشاء کے بعد پڑھی جانے والی خاص نماز کو کیا کہتے ہیں؟",
+                  "questionTextHindi": "रमज़ान में इशा के बाद पढ़ी जाने वाली विशेष नमाज़ को क्या कहते हैं?",
+                  "options": [
+                          "तरावीह (Tarawih)",
+                          "तहज्जुद (Tahajjud)",
+                          "इशराक़ (Ishraq)",
+                          "चाश्त (Chasht)"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "रमज़ान के महीने में इशा की नमाज़ के बाद तरावीह पढ़ी जाती है जिसमें क़ुरआन सुना जाता है।"
+          },
+          {
+                  "id": "q-isl-36",
+                  "questionText": "Which holy book was revealed to Prophet Dawud (AS)?",
+                  "questionTextUrdu": "حضرت داؤدؑ پر کون سی کتاب نازل ہوئی؟",
+                  "questionTextHindi": "हज़रत दाऊद (AS) पर कौन सी किताब नाज़िल हुई?",
+                  "options": [
+                          "क़ुरआन",
+                          "ज़बूर (Psalms)",
+                          "तौरात",
+                          "इंजील"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "अल्लाह ने हज़रत दाऊद (AS) पर 'ज़बूर' नाज़िल फ़रमाई थी।"
+          },
+          {
+                  "id": "q-isl-37",
+                  "questionText": "What is the person who calls the Adhan called?",
+                  "questionTextUrdu": "اذان دینے والے شخص کو کیا کہتے ہیں؟",
+                  "questionTextHindi": "अज़ान देने वाले व्यक्ति को क्या कहा जाता है?",
+                  "options": [
+                          "इमाम (Imam)",
+                          "मुअज़्ज़िन (Mu'azzin)",
+                          "हाफ़िज़ (Hafiz)",
+                          "मौलवी (Maulvi)"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "जो व्यक्ति नमाज़ के लिए मस्जिद से आवाज़ (अज़ान) देता है, उसे मुअज़्ज़िन कहते हैं।"
+          },
+          {
+                  "id": "q-isl-38",
+                  "questionText": "Who leads the congregational prayer?",
+                  "questionTextUrdu": "مسجد میں جماعت کی امامت کون کراتا ہے؟",
+                  "questionTextHindi": "मस्जिद में जमात के साथ नमाज़ कौन पढ़ाता है?",
+                  "options": [
+                          "खतीब",
+                          "मुअज़्ज़िन",
+                          "इमाम (Imam)",
+                          "मुफ़्ती"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "नमाज़ का नेतृत्व करने वाले (आगे खड़े होने वाले) व्यक्ति को इमाम कहा जाता है।"
+          },
+          {
+                  "id": "q-isl-39",
+                  "questionText": "Which relative of the Prophet (PBUH) took care of him after his grandfather's death?",
+                  "questionTextUrdu": "دادا کے انتقال کے بعد نبی کریمﷺ کی پرورش کس نے کی؟",
+                  "questionTextHindi": "दादा के इंतकाल के बाद नबी (PBUH) की परवरिश किसने की?",
+                  "options": [
+                          "हज़रत अबू तालिब (चाचा)",
+                          "हज़रत अब्बास (चाचा)",
+                          "हज़रत हमज़ा (चाचा)",
+                          "हज़रत अबू लहब (चाचा)"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "अब्दुल मुत्तलिब के इंतकाल के बाद उनके चाचा अबू तालिब ने उनकी देखभाल की।"
+          },
+          {
+                  "id": "q-isl-40",
+                  "questionText": "What is the washing of the whole body for purification called?",
+                  "questionTextUrdu": "مکمل پاکی کے لیے پورے جسم کو غسل دینے کو کیا کہتے ہیں؟",
+                  "questionTextHindi": "पूरी तरह से पाक होने के लिए पूरे शरीर को धोने (नहाने) को क्या कहते हैं?",
+                  "options": [
+                          "वुज़ू",
+                          "ग़ुस्ل (Ghusl)",
+                          "तयम्मुम",
+                          "मसाह"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "शरिया के अनुसार पूरे शरीर को खास तरीके से धोने को ग़ुस्ल कहते हैं।"
+          },
+          {
+                  "id": "q-isl-41",
+                  "questionText": "How many times is the Adhan called in a day?",
+                  "questionTextUrdu": "ایک دن میں کتنی بار اذان دی جاتی ہے؟",
+                  "questionTextHindi": "एक दिन में कितनी बार अज़ान दी जाती है?",
+                  "options": [
+                          "3",
+                          "4",
+                          "5",
+                          "7"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "5 वक़्त की नमाज़ के लिए मस्जिद से 5 बार ही अज़ान दी जाती है।"
+          },
+          {
+                  "id": "q-isl-42",
+                  "questionText": "Where do Muslims go to perform Hajj?",
+                  "questionTextUrdu": "مسلمان حج کرنے کے لیے کہاں جاتے ہیں؟",
+                  "questionTextHindi": "मुसलमान हज करने के लिए कहाँ जाते हैं?",
+                  "options": [
+                          "जेरूसलम",
+                          "मदीना",
+                          "इस्तांबुल",
+                          "मक्का (Makkah)"
+                  ],
+                  "correctOptionIndex": 3,
+                  "explanation": "हज सिर्फ और सिर्फ मक्का (सऊदी अरब) में काबा और उसके आस-पास के स्थानों पर किया जाता है।"
+          },
+          {
+                  "id": "q-isl-43",
+                  "questionText": "Which Prophet built the Kaaba?",
+                  "questionTextUrdu": "خانہ کعبہ کی تعمیر کن انبیاء نے کی تھی؟",
+                  "questionTextHindi": "काबा की इमारत का निर्माण किन नबियों ने किया था?",
+                  "options": [
+                          "हज़रत आदम (AS)",
+                          "हज़रत इब्राहीम और हज़रत इस्माईल (AS)",
+                          "हज़रत मूसा (AS)",
+                          "हज़रत ईसा (AS)"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "अल्लाह के हुक्म से हज़रत इब्राहीम (AS) और उनके बेटे हज़रत इस्माईल (AS) ने काबा बनाया था।"
+          },
+          {
+                  "id": "q-isl-44",
+                  "questionText": "What is it called when there is no water, and dust/sand is used to purify oneself?",
+                  "questionTextUrdu": "جب پانی نہ ہو تو پاک مٹی سے طہارت حاصل کرنے کو کیا کہتے ہیں؟",
+                  "questionTextHindi": "जब पानी न हो, तो पाक होने के लिए मिट्टी का उपयोग करने को क्या कहते हैं?",
+                  "options": [
+                          "ग़ुस्ल",
+                          "वुज़ू",
+                          "तयम्मुम (Tayammum)",
+                          "सुन्नत"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "पानी न मिलने की मजबूरी में पाक मिट्टी से चेहरा और हाथ पोछने को तयम्मुम कहते हैं।"
+          },
+          {
+                  "id": "q-isl-45",
+                  "questionText": "Which animal did Prophet Salih (AS) bring out of a rock?",
+                  "questionTextUrdu": "حضرت صالحؑ کے معجزے کے طور پر پہاڑ سے کون سا جانور نکلا تھا؟",
+                  "questionTextHindi": "हज़रत सालेह (AS) के चमत्कार के रूप में पहाड़ से कौन सा जानवर निकला था?",
+                  "options": [
+                          "ऊंटनी (She-camel)",
+                          "घोड़ा",
+                          "बकरी",
+                          "गाय"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "अल्लाह के हुक्म से चट्टान फट कर एक ऊंटनी (नाक़तल्लाह) निकली थी।"
+          },
+          {
+                  "id": "q-isl-46",
+                  "questionText": "What is the meal eaten before dawn during fasting called?",
+                  "questionTextUrdu": "روزہ رکھنے کے لیے صبح صادق سے پہلے کھائے جانے والے کھانے کو کیا کہتے ہیں؟",
+                  "questionTextHindi": "रोज़ा रखने के लिए सुबह सूरज निकलने से पहले जो खाना खाया जाता है, उसे क्या कहते हैं?",
+                  "options": [
+                          "इफ़्तार (Iftar)",
+                          "सहरी (Suhoor)",
+                          "दावत",
+                          "फितर"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "सुबह के समय रोज़े की नीयत से खाए जाने वाले भोजन को सहरी (Suhoor) कहते हैं।"
+          },
+          {
+                  "id": "q-isl-47",
+                  "questionText": "What is the meal eaten to break the fast at sunset called?",
+                  "questionTextUrdu": "سورج غروب ہونے پر روزہ کھولنے کے کھانے کو کیا کہتے ہیں؟",
+                  "questionTextHindi": "सूरज डूबने पर रोज़ा खोलने के लिए खाए जाने वाले भोजन को क्या कहते हैं?",
+                  "options": [
+                          "इफ़्तार (Iftar)",
+                          "सहरी (Suhoor)",
+                          "वलीमा",
+                          "सदक़ा"
+                  ],
+                  "correctOptionIndex": 0,
+                  "explanation": "मग़रिब की अज़ान के समय खजूर या पानी से रोज़ा खोलने को इफ़्तार कहते हैं।"
+          },
+          {
+                  "id": "q-isl-48",
+                  "questionText": "Which Prophet could speak to animals and control the Jinn?",
+                  "questionTextUrdu": "وہ کون سے نبی تھے جو جانوروں سے بات کر سکتے تھے اور جنوں پر حکومت کرتے تھے؟",
+                  "questionTextHindi": "वे कौन से नबी थे जो जानवरों से बात कर सकते थे और जिनों पर हुकूमत करते थे?",
+                  "options": [
+                          "हज़रत दाऊद (AS)",
+                          "हज़रत सुलैमान (AS)",
+                          "हज़रत मूसा (AS)",
+                          "हज़रत युसूफ (AS)"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "अल्लाह ने हज़रत सुलैमान (Solomon) को जानवरों की भाषा समझने और जिनों पर हुकूमत करने का चमत्कार दिया था।"
+          },
+          {
+                  "id": "q-isl-49",
+                  "questionText": "What is the shortest Surah in the Quran?",
+                  "questionTextUrdu": "قرآن مجید کی سب سے چھوٹی سورت کون سی ہے؟",
+                  "questionTextHindi": "क़ुरआन की सबसे छोटी सूरत कौन सी है?",
+                  "options": [
+                          "सूरह अल-फातिहा",
+                          "सूरह अल-कौसर (Al-Kawthar)",
+                          "सूरह अल-इखलास",
+                          "सूरह अन-नास"
+                  ],
+                  "correctOptionIndex": 1,
+                  "explanation": "सूरह अल-कौसर में केवल 3 आयतें (Verses) हैं, जो इसे क़ुरआन की सबसे छोटी सूरत बनाती है।"
+          },
+          {
+                  "id": "q-isl-50",
+                  "questionText": "Where did Prophet Muhammad (PBUH) migrate to from Makkah?",
+                  "questionTextUrdu": "حضرت محمدﷺ نے مکہ سے ہجرت کر کے کہاں تشریف لے گئے؟",
+                  "questionTextHindi": "हज़रत मुहम्मद (PBUH) मक्का से हिजरत करके (पलायन करके) कहाँ गए थे?",
+                  "options": [
+                          "सीरिया (Syria)",
+                          "ताइफ़ (Taif)",
+                          "मदीना (Madinah)",
+                          "यमन (Yemen)"
+                  ],
+                  "correctOptionIndex": 2,
+                  "explanation": "मक्का वालों के ज़ुल्म के कारण नबी (PBUH) ने अल्लाह के हुक्म से मदीना (जिसे पहले यसरिब कहा जाता था) की तरफ हिजरत की थी।"
+          }
+  ]
     },
     {
       id: 'quiz-math',
