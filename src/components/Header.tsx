@@ -213,7 +213,7 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Bottom Subnav Ribbon Pills */}
         <div className="flex items-center gap-2 pt-2.5 overflow-x-auto no-scrollbar">
           {navItems.map(item => {
-            const isActive = currentSection === item.id;
+            const isActive = currentSection === item.id || (item.id === 'alphabet' && currentSection.startsWith('alphabet'));
             return (
               <button
                 key={item.id}
@@ -224,7 +224,7 @@ export const Header: React.FC<HeaderProps> = ({
                   if (item.isVault) {
                     onOpenStarVault();
                   } else {
-                    onNavigate(item.id);
+                    onNavigate(item.id === 'alphabet' ? 'alphabet-en' : item.id);
                   }
                 }}
                 className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-xs sm:text-sm font-bold whitespace-nowrap transition-all duration-200 cursor-pointer ${

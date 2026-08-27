@@ -38,10 +38,10 @@ export const StudentHome: React.FC<StudentHomeProps> = ({ onSelectSection, stats
   const heroCards = [
     {
       id: 'alphabet-en',
-      section: 'alphabet',
+      section: 'alphabet-en',
       title: 'English ABC',
       subtitle: 'Learn A to Z with phonics & audio tracing',
-      tag: '4 LANGUAGES',
+      tag: 'A - Z',
       iconText: 'abc',
       iconBg: 'bg-sky-100 text-sky-700',
       bottomBorder: 'border-b-amber-400',
@@ -49,7 +49,7 @@ export const StudentHome: React.FC<StudentHomeProps> = ({ onSelectSection, stats
     },
     {
       id: 'alphabet-ur',
-      section: 'alphabet',
+      section: 'alphabet-ur',
       title: 'Urdu Alif-Bay',
       subtitle: 'Urdu Nastaliq & native pronunciation',
       tag: 'ا - ے',
@@ -71,7 +71,7 @@ export const StudentHome: React.FC<StudentHomeProps> = ({ onSelectSection, stats
     },
     {
       id: 'alphabet-hi',
-      section: 'alphabet',
+      section: 'alphabet-hi',
       title: 'Hindi Varnamala',
       subtitle: 'Akshar, Swar & Vyanjan with audio',
       tag: 'स्वर-व्यंजन',

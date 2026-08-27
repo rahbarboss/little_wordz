@@ -6,21 +6,74 @@ import { playSound, speakText } from '../../utils/audio.ts';
 
 interface AlphabetSectionProps {
   alphabets: AlphabetItem[];
+  initialLanguage?: LanguageCode;
+  allowedLanguages?: LanguageCode[];
 }
 
-export const AlphabetSection: React.FC<AlphabetSectionProps> = ({ alphabets = [] }) => {
-  const [selectedLang, setSelectedLang] = useState<LanguageCode>('en');
+export const AlphabetSection: React.FC<AlphabetSectionProps> = ({
+  alphabets = [],
+  initialLanguage = 'en',
+  allowedLanguages,
+}) => {
+  const [selectedLang, setSelectedLang] = useState<LanguageCode>(initialLanguage);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeModalItem, setActiveModalItem] = useState<AlphabetItem | null>(null);
 
-  const languages = [
+  // Sync selectedLang when initialLanguage changes
+  React.useEffect(() => {
+    if (initialLanguage) {
+      setSelectedLang(initialLanguage);
+    }
+  }, [initialLanguage]);
+
+  const allLanguages = [
     { code: 'en' as LanguageCode, label: 'English (A–Z)', icon: '🇬🇧', fontClass: 'font-fredoka', isRtl: false },
     { code: 'ur' as LanguageCode, label: 'اردو حروف تہجی', icon: '🇵🇰', fontClass: 'font-urdu', isRtl: true },
     { code: 'ar' as LanguageCode, label: 'الْحُرُوفُ الْعَرَبِيَّة', icon: '🇸🇦', fontClass: 'font-arabic', isRtl: true },
     { code: 'hi' as LanguageCode, label: 'हिंदी वर्णमाला', icon: '🇮🇳', fontClass: 'font-hindi', isRtl: false },
   ];
 
-  const currentLangConfig = languages.find(l => l.code === selectedLang) || languages[0];
+  const visibleLanguages = allowedLanguages && allowedLanguages.length > 0
+    ? allLanguages.filter(l => allowedLanguages.includes(l.code))
+    : allLanguages;
+
+  const currentLangConfig = visibleLanguages.find(l => l.code === selectedLang) || visibleLanguages[0] || allLanguages[0];
+
+  // Dynamic header configuration based on active language scope
+  const getHeaderInfo = () => {
+    if (allowedLanguages && allowedLanguages.length === 1) {
+      if (allowedLanguages[0] === 'en') {
+        return {
+          badge: 'English Phonics Lab',
+          title: 'English Alphabet (A to Z)',
+          desc: 'Learn A to Z with letter tracing, human phonics pronunciation, and vocabulary examples.',
+        };
+      }
+      if (allowedLanguages[0] === 'hi') {
+        return {
+          badge: 'हिंदी वर्णमाला शाला',
+          title: 'हिंदी वर्णमाला (Hindi Varnamala)',
+          desc: 'स्वर (Swar) एवं व्यंजन (Vyanjan) - शुद्ध उच्चारण और शब्द उदाहरणों के साथ।',
+        };
+      }
+    }
+    if (allowedLanguages && allowedLanguages.includes('ur') && allowedLanguages.includes('ar')) {
+      return {
+        badge: 'Urdu & Arabic Studio',
+        title: selectedLang === 'ar' ? 'الْحُرُوفُ الْعَرَبِيَّة (Arabic Alphabet)' : 'اردو حروف تہجی (Urdu Alif-Bay)',
+        desc: selectedLang === 'ar'
+          ? 'تَعَلَّمْ حُرُوفَ اللُّغَةِ الْعَرَبِيَّةِ مَعَ النُّطْقِ الصَّحِيحِ وَالْأَمْثِلَةِ.'
+          : 'خوبصورت اردو نستعلیق رسم الخط، مکمل صوتی تلفظ اور آسان مثالوں کے ساتھ۔',
+      };
+    }
+    return {
+      badge: 'Alphabet & Phonics Lab',
+      title: 'Learn Letters & Phonics',
+      desc: 'Select a character card to hear human pronunciation and explore phonetic examples.',
+    };
+  };
+
+  const headerInfo = getHeaderInfo();
 
   const safeAlphabets = alphabets || [];
   const filteredItems = safeAlphabets
@@ -59,12 +112,12 @@ export const AlphabetSection: React.FC<AlphabetSectionProps> = ({ alphabets = []
         <div>
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-md text-[11px] font-semibold uppercase tracking-wider mb-1">
             <Sparkles className="w-3 h-3 text-indigo-600" />
-            Alphabet & Phonics Lab
+            {headerInfo.badge}
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
-            Learn Letters in 4 Languages
+            {headerInfo.title}
           </h1>
-          <p className="text-slate-500 text-xs sm:text-sm mt-0.5">Select a character card to hear human pronunciation and explore phonetic examples.</p>
+          <p className="text-slate-500 text-xs sm:text-sm mt-0.5">{headerInfo.desc}</p>
         </div>
 
         {/* Search Bar */}
@@ -81,28 +134,30 @@ export const AlphabetSection: React.FC<AlphabetSectionProps> = ({ alphabets = []
         </div>
       </div>
 
-      {/* Language Switcher Tabs */}
-      <div className="flex flex-wrap gap-1.5 mb-6 bg-slate-100 p-1.5 rounded-xl border border-slate-200">
-        {languages.map(lang => (
-          <button
-            key={lang.code}
-            type="button"
-            id={`btn-lang-tab-${lang.code}`}
-            onClick={() => {
-              playSound('pop');
-              setSelectedLang(lang.code);
-            }}
-            className={`flex-1 min-w-[130px] flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-              selectedLang === lang.code
-                ? 'bg-white text-slate-900 shadow-xs border border-slate-200'
-                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
-            }`}
-          >
-            <span className="text-base">{lang.icon}</span>
-            <span className={lang.fontClass}>{lang.label}</span>
-          </button>
-        ))}
-      </div>
+      {/* Language Switcher Tabs (Only shown when multiple allowed languages exist, e.g. Urdu & Arabic) */}
+      {visibleLanguages.length > 1 && (
+        <div className="flex flex-wrap gap-1.5 mb-6 bg-slate-100 p-1.5 rounded-xl border border-slate-200">
+          {visibleLanguages.map(lang => (
+            <button
+              key={lang.code}
+              type="button"
+              id={`btn-lang-tab-${lang.code}`}
+              onClick={() => {
+                playSound('pop');
+                setSelectedLang(lang.code);
+              }}
+              className={`flex-1 min-w-[130px] flex items-center justify-center gap-2 py-2 px-3 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                selectedLang === lang.code
+                  ? 'bg-white text-slate-900 shadow-xs border border-slate-200'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
+              }`}
+            >
+              <span className="text-base">{lang.icon}</span>
+              <span className={lang.fontClass}>{lang.label}</span>
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Grid of Letters */}
       <div

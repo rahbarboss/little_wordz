@@ -221,8 +221,40 @@ export default function App() {
               />
             )}
 
+            {/* English Alphabet View: Only English (A to Z) */}
+            {currentSection === 'alphabet-en' && (
+              <AlphabetSection
+                alphabets={database.alphabets || []}
+                initialLanguage="en"
+                allowedLanguages={['en']}
+              />
+            )}
+
+            {/* Urdu Alif-Bay View: Urdu + Arabic Alphabets options */}
+            {(currentSection === 'alphabet-ur' || currentSection === 'alphabet-ar') && (
+              <AlphabetSection
+                alphabets={database.alphabets || []}
+                initialLanguage="ur"
+                allowedLanguages={['ur', 'ar']}
+              />
+            )}
+
+            {/* Hindi Varnamala View: Only Hindi */}
+            {currentSection === 'alphabet-hi' && (
+              <AlphabetSection
+                alphabets={database.alphabets || []}
+                initialLanguage="hi"
+                allowedLanguages={['hi']}
+              />
+            )}
+
+            {/* Generic Alphabet fallback */}
             {currentSection === 'alphabet' && (
-              <AlphabetSection alphabets={database.alphabets || []} />
+              <AlphabetSection
+                alphabets={database.alphabets || []}
+                initialLanguage="en"
+                allowedLanguages={['en']}
+              />
             )}
 
             {currentSection === 'words' && (
