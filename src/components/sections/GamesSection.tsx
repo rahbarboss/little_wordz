@@ -168,7 +168,7 @@ export const GamesSection: React.FC<GamesSectionProps> = ({ quizzes = [], onEarn
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 rounded-2xl bg-fuchsia-50 text-fuchsia-600 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                      🎮
+                      {quiz.iconName || '🎮'}
                     </div>
                     <span className="px-3 py-1 bg-fuchsia-50 text-fuchsia-700 rounded-full text-xs font-bold uppercase tracking-wider font-fredoka">
                       {quiz.questions.length} Questions

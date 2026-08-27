@@ -123,7 +123,22 @@ export interface MathItem {
 
 export interface GKItem {
   id: string;
-  category: 'states' | 'pms' | 'presidents' | 'ministers' | 'symbols' | 'monuments' | 'festivals' | 'space' | 'animals' | 'general' | string;
+  category:
+    | 'states'
+    | 'pms'
+    | 'presidents'
+    | 'home_ministers'
+    | 'education_ministers'
+    | 'finance_ministers'
+    | 'defence_ministers'
+    | 'external_affairs_ministers'
+    | 'symbols'
+    | 'monuments'
+    | 'festivals'
+    | 'space'
+    | 'animals'
+    | 'general'
+    | string;
   titleEn: string;
   titleHi: string;
   titleUr: string;

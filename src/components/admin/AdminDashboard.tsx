@@ -1556,7 +1556,11 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                         <option value="states">States & Capitals (राज्य और राजधानियाँ)</option>
                         <option value="pms">Prime Ministers (प्रधानमंत्री)</option>
                         <option value="presidents">Presidents (राष्ट्रपति)</option>
-                        <option value="ministers">Key Ministers (केंद्रीय मंत्री)</option>
+                        <option value="home_ministers">Ministers of Home Affairs (गृह मंत्री)</option>
+                        <option value="education_ministers">Ministers of Education (शिक्षा मंत्री)</option>
+                        <option value="finance_ministers">Ministers of Finance (वित्त मंत्री)</option>
+                        <option value="defence_ministers">Ministers of Defence (रक्षा मंत्री)</option>
+                        <option value="external_affairs_ministers">Ministers of External Affairs (विदेश मंत्री)</option>
                         <option value="symbols">National Symbols (राष्ट्रीय प्रतीक)</option>
                         <option value="monuments">Monuments & Wonders (ऐतिहासिक स्मारक)</option>
                         <option value="festivals">Festivals & Culture (त्योहार और संस्कृति)</option>
@@ -1996,6 +2000,35 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                               placeholder="e.g. What comes after letter A?"
                               className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-bold"
                             />
+                          </div>
+
+                          {/* Multilingual Support */}
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                            <div>
+                              <label className="block text-[11px] font-bold text-emerald-800 uppercase mb-1">
+                                Question Text (Urdu - اردو)
+                              </label>
+                              <input
+                                type="text"
+                                dir="rtl"
+                                value={q.questionTextUrdu || ''}
+                                onChange={e => handleUpdateQuestion(qIdx, 'questionTextUrdu', e.target.value)}
+                                placeholder="سوال اردو میں..."
+                                className="w-full p-2 bg-emerald-50/50 border border-emerald-200 rounded-xl text-sm font-urdu text-right"
+                              />
+                            </div>
+                            <div>
+                              <label className="block text-[11px] font-bold text-orange-800 uppercase mb-1">
+                                Question Text (Hindi - हिन्दी)
+                              </label>
+                              <input
+                                type="text"
+                                value={q.questionTextHindi || ''}
+                                onChange={e => handleUpdateQuestion(qIdx, 'questionTextHindi', e.target.value)}
+                                placeholder="प्रश्न हिन्दी में..."
+                                className="w-full p-2 bg-orange-50/50 border border-orange-200 rounded-xl text-sm font-hindi"
+                              />
+                            </div>
                           </div>
 
                           {/* 4 Multiple Choice Options */}

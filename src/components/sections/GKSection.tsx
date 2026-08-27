@@ -17,7 +17,11 @@ export const GKSection: React.FC<GKSectionProps> = ({ items = [] }) => {
     states: { label: 'States & Capitals', icon: '🗺️', desc: 'Indian geography' },
     pms: { label: 'Prime Ministers', icon: '🏛️', desc: 'Leaders of India' },
     presidents: { label: 'Presidents', icon: '🇮🇳', desc: 'Heads of State' },
-    ministers: { label: 'Key Ministers', icon: '📚', desc: 'Ministers & Governance' },
+    home_ministers: { label: 'Home Affairs', icon: '🛡️', desc: 'Home Ministers (1947–2026)' },
+    education_ministers: { label: 'Education', icon: '🎓', desc: 'Education Ministers (1947–2026)' },
+    finance_ministers: { label: 'Finance', icon: '💰', desc: 'Finance Ministers (1947–2026)' },
+    defence_ministers: { label: 'Defence', icon: '⚔️', desc: 'Defence Ministers (1947–2026)' },
+    external_affairs_ministers: { label: 'External Affairs', icon: '🌐', desc: 'External Ministers (1947–2026)' },
     symbols: { label: 'National Symbols', icon: '🦚', desc: 'Emblems & Icons' },
     monuments: { label: 'Monuments', icon: '🏰', desc: 'Historic Wonders' },
     festivals: { label: 'Festivals', icon: '🪔', desc: 'Culture & Celebrations' },
@@ -27,7 +31,21 @@ export const GKSection: React.FC<GKSectionProps> = ({ items = [] }) => {
   };
 
   const safeItems = items || [];
-  const presentCategories = Array.from(new Set([...Object.keys(defaultCategories).slice(0, 5), ...safeItems.map(i => i.category)]));
+  const primaryKeys = [
+    'states',
+    'pms',
+    'presidents',
+    'home_ministers',
+    'education_ministers',
+    'finance_ministers',
+    'defence_ministers',
+    'external_affairs_ministers',
+    'symbols',
+  ];
+  const otherKeys = Array.from(new Set(safeItems.map(i => i.category))).filter(c => !primaryKeys.includes(c) && c !== 'ministers');
+  const presentCategories = [...primaryKeys, ...otherKeys].filter(cat => {
+    return safeItems.some(i => i.category === cat) || Object.keys(defaultCategories).includes(cat);
+  });
 
   const categories = presentCategories.map(cat => {
     const info = defaultCategories[cat] || {
@@ -143,6 +161,25 @@ export const GKSection: React.FC<GKSectionProps> = ({ items = [] }) => {
         </div>
       </div>
 
+      {/* Active Section Info Banner */}
+      {(() => {
+        const currentCat = categories.find(c => c.id === activeCategory);
+        return (
+          <div className="flex items-center justify-between bg-gradient-to-r from-teal-700 to-emerald-800 text-white px-5 py-3.5 rounded-2xl mb-6 shadow-sm">
+            <div className="flex items-center gap-3">
+              <span className="text-3xl p-1.5 bg-white/10 rounded-xl">{currentCat?.icon || '🇮🇳'}</span>
+              <div>
+                <h2 className="text-lg font-bold font-fredoka tracking-tight">{currentCat?.label} (1947–2026)</h2>
+                <p className="text-teal-100 text-xs">{currentCat?.desc} • {filteredItems.length} Leaders & Items</p>
+              </div>
+            </div>
+            <span className="hidden sm:inline-block px-3 py-1 bg-white/20 text-white rounded-full text-xs font-bold font-fredoka">
+              {filteredItems.length} Recorded
+            </span>
+          </div>
+        );
+      })()}
+
       {/* GK Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredItems.map(item => {
@@ -167,69 +204,141 @@ export const GKSection: React.FC<GKSectionProps> = ({ items = [] }) => {
               ? item.detailUr || item.detailEn
               : item.detailEn;
 
+          const isLeaderCategory =
+            item.category === 'pms' ||
+            item.category === 'presidents' ||
+            item.category.includes('minister');
+
+          const isSymbolCategory = item.category === 'symbols';
+
+          const subtitleLabel = isLeaderCategory
+            ? selectedLanguage === 'hi'
+              ? 'कार्यकाल'
+              : selectedLanguage === 'ur'
+              ? 'مدتِ خدمت'
+              : 'Tenure / Period'
+            : isSymbolCategory
+            ? selectedLanguage === 'hi'
+              ? 'राष्ट्रीय पहचान / नाम'
+              : selectedLanguage === 'ur'
+              ? 'قومی پہچان / نام'
+              : 'Official Name / Identity'
+            : selectedLanguage === 'hi'
+            ? 'राजधानी'
+            : selectedLanguage === 'ur'
+            ? 'دارالحکومت'
+            : 'Capital';
+
+          const hasValidImageUrl =
+            item.imageUrl &&
+            (item.imageUrl.startsWith('http://') ||
+              item.imageUrl.startsWith('https://') ||
+              item.imageUrl.startsWith('/') ||
+              item.imageUrl.startsWith('data:'));
+
           const audioSpeech = `${displayTitle}. ${
-            displayCapital ? `Capital is ${displayCapital}. ` : ''
+            displayCapital ? `${subtitleLabel}: ${displayCapital}. ` : ''
           }${displayDetail}`;
 
           return (
             <div
               key={item.id}
               id={`gk-card-${item.id}`}
-              className="bg-white rounded-3xl border-2 border-teal-100 p-6 shadow-sm hover:shadow-xl hover:border-teal-300 transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-3xl border-2 border-teal-100 overflow-hidden shadow-sm hover:shadow-xl hover:border-teal-300 transition-all duration-300 flex flex-col justify-between"
               dir={selectedLanguage === 'ur' ? 'rtl' : 'ltr'}
             >
               <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-3xl p-2 bg-teal-50 rounded-2xl border border-teal-100">
-                    {item.imageUrl || '🇮🇳'}
-                  </span>
-                  {item.tenure && (
-                    <span className="px-2.5 py-1 bg-amber-100 text-amber-900 rounded-full text-xs font-bold font-mono">
-                      {item.tenure}
-                    </span>
-                  )}
-                </div>
-
-                <h3
-                  className={`text-xl font-bold text-slate-900 ${
-                    selectedLanguage === 'ur'
-                      ? 'font-urdu text-2xl'
-                      : selectedLanguage === 'hi'
-                      ? 'font-hindi'
-                      : 'font-fredoka'
-                  }`}
-                >
-                  {displayTitle}
-                </h3>
-
-                {displayCapital && (
-                  <div className="mt-2 p-2.5 bg-teal-50/70 rounded-xl border border-teal-200">
-                    <span className="text-xs font-bold text-teal-800 uppercase block">Capital:</span>
-                    <span
-                      className={`text-base font-bold text-slate-800 ${
-                        selectedLanguage === 'ur'
-                          ? 'font-urdu'
-                          : selectedLanguage === 'hi'
-                          ? 'font-hindi'
-                          : 'font-fredoka'
-                      }`}
-                    >
-                      {displayCapital}
-                    </span>
+                {hasValidImageUrl && (
+                  <div className="relative w-full h-52 bg-slate-100 overflow-hidden border-b border-teal-100 group">
+                    <img
+                      src={item.imageUrl}
+                      alt={displayTitle}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                      referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        (e.target as HTMLElement).style.display = 'none';
+                      }}
+                    />
+                    <div className="absolute top-3 right-3 flex items-center gap-2">
+                      <span className="px-3 py-1 bg-white/90 backdrop-blur-md text-teal-900 rounded-full text-xs font-bold font-fredoka shadow-sm">
+                        #{item.order || 1}
+                      </span>
+                    </div>
                   </div>
                 )}
 
-                <p className="text-xs text-slate-600 mt-3 leading-relaxed font-sans">{displayDetail}</p>
+                <div className="p-6 pb-2">
+                  <div className="flex items-center justify-between mb-3">
+                    {!hasValidImageUrl ? (
+                      <span className="text-3xl p-2 bg-teal-50 rounded-2xl border border-teal-100">
+                        {item.imageUrl || '🇮🇳'}
+                      </span>
+                    ) : (
+                      <span className="px-3 py-1 bg-teal-50 text-teal-800 rounded-full text-xs font-bold font-fredoka border border-teal-100">
+                        {selectedLanguage === 'hi'
+                          ? 'राष्ट्रीय प्रतीक'
+                          : selectedLanguage === 'ur'
+                          ? 'قومی علامت'
+                          : 'National Symbol'}
+                      </span>
+                    )}
+                    {item.tenure && (
+                      <span className="px-2.5 py-1 bg-amber-100 text-amber-900 rounded-full text-xs font-bold font-mono">
+                        {item.tenure}
+                      </span>
+                    )}
+                  </div>
+
+                  <h3
+                    className={`text-xl font-bold text-slate-900 ${
+                      selectedLanguage === 'ur'
+                        ? 'font-urdu text-2xl leading-normal'
+                        : selectedLanguage === 'hi'
+                        ? 'font-hindi text-xl'
+                        : 'font-fredoka'
+                    }`}
+                  >
+                    {displayTitle}
+                  </h3>
+
+                  {displayCapital && (
+                    <div className="mt-3 p-3 bg-teal-50/80 rounded-2xl border border-teal-200">
+                      <span className="text-xs font-bold text-teal-800 uppercase tracking-wide block">
+                        {subtitleLabel}:
+                      </span>
+                      <span
+                        className={`text-base font-bold text-slate-800 ${
+                          selectedLanguage === 'ur'
+                            ? 'font-urdu text-lg'
+                            : selectedLanguage === 'hi'
+                            ? 'font-hindi'
+                            : 'font-fredoka'
+                        }`}
+                      >
+                        {displayCapital}
+                      </span>
+                    </div>
+                  )}
+
+                  <p className="text-sm text-slate-600 mt-3.5 leading-relaxed font-sans">{displayDetail}</p>
+                </div>
               </div>
 
-              <div className="mt-6 pt-3 border-t border-slate-100 flex justify-end">
+              <div className="p-6 pt-3 mt-4 border-t border-slate-100">
                 <AudioButton
                   audioUrl={item.audioUrl}
                   audioText={audioSpeech}
                   language={selectedLanguage}
                   size="sm"
                   variant="primary"
-                  label="Listen Fact"
+                  label={
+                    selectedLanguage === 'hi'
+                      ? 'तथ्य सुनें'
+                      : selectedLanguage === 'ur'
+                      ? 'تفصیل سنیں'
+                      : 'Listen Fact'
+                  }
                   className="w-full justify-center"
                 />
               </div>

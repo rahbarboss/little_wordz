@@ -1,6558 +1,10673 @@
-import { AppDatabase } from '../src/types.ts';
+import { AppDatabase } from "../src/types.ts";
 
 export const initialDatabase: AppDatabase = {
-  alphabets: [
-    // English A-Z
-    { id: 'en-a', language: 'en', letter: 'A', phonics: '/eɪ/', exampleWord: 'Apple', exampleWordTranslation: 'Seb (سیب / सेब)', meaning: 'A sweet red or green fruit', imageUrl: '🍎', audioText: 'A for Apple', order: 1 },
-    { id: 'en-b', language: 'en', letter: 'B', phonics: '/biː/', exampleWord: 'Ball', exampleWordTranslation: 'Gend (گیند / गेंद)', meaning: 'A round object used in games', imageUrl: '⚽', audioText: 'B for Ball', order: 2 },
-    { id: 'en-c', language: 'en', letter: 'C', phonics: '/siː/', exampleWord: 'Cat', exampleWordTranslation: 'Billi (بلی / बिल्ली)', meaning: 'A friendly furry pet', imageUrl: '🐱', audioText: 'C for Cat', order: 3 },
-    { id: 'en-d', language: 'en', letter: 'D', phonics: '/diː/', exampleWord: 'Dog', exampleWordTranslation: 'Kutta (کتا / कुत्ता)', meaning: 'A loyal animal friend', imageUrl: '🐶', audioText: 'D for Dog', order: 4 },
-    { id: 'en-e', language: 'en', letter: 'E', phonics: '/iː/', exampleWord: 'Elephant', exampleWordTranslation: 'Hathi (ہاتھی / हाथी)', meaning: 'A big gentle giant with a trunk', imageUrl: '🐘', audioText: 'E for Elephant', order: 5 },
-    { id: 'en-f', language: 'en', letter: 'F', phonics: '/ɛf/', exampleWord: 'Fish', exampleWordTranslation: 'Machhli (مچھلی / मछली)', meaning: 'Swims happily in water', imageUrl: '🐟', audioText: 'F for Fish', order: 6 },
-    { id: 'en-g', language: 'en', letter: 'G', phonics: '/dʒiː/', exampleWord: 'Grapes', exampleWordTranslation: 'Angoor (انگور / अंगूर)', meaning: 'Sweet juicy green or purple fruit', imageUrl: '🍇', audioText: 'G for Grapes', order: 7 },
-    { id: 'en-h', language: 'en', letter: 'H', phonics: '/eɪtʃ/', exampleWord: 'Horse', exampleWordTranslation: 'Ghora (گھوڑا / घोड़ा)', meaning: 'A fast running strong animal', imageUrl: '🐴', audioText: 'H for Horse', order: 8 },
-    { id: 'en-i', language: 'en', letter: 'I', phonics: '/aɪ/', exampleWord: 'Ice Cream', exampleWordTranslation: 'Ice Cream (آئس کریم)', meaning: 'Cold delicious sweet treat', imageUrl: '🍦', audioText: 'I for Ice Cream', order: 9 },
-    { id: 'en-j', language: 'en', letter: 'J', phonics: '/dʒeɪ/', exampleWord: 'Jug', exampleWordTranslation: 'Jug (جگ / जग)', meaning: 'Used for pouring clean water', imageUrl: '🫖', audioText: 'J for Jug', order: 10 },
-    { id: 'en-k', language: 'en', letter: 'K', phonics: '/keɪ/', exampleWord: 'Kite', exampleWordTranslation: 'Patang (پتنگ / पतंग)', meaning: 'Flies high up in the blue sky', imageUrl: '🪁', audioText: 'K for Kite', order: 11 },
-    { id: 'en-l', language: 'en', letter: 'L', phonics: '/ɛl/', exampleWord: 'Lion', exampleWordTranslation: 'Sher (شیر / शेर)', meaning: 'The brave king of the jungle', imageUrl: '🦁', audioText: 'L for Lion', order: 12 },
-    { id: 'en-m', language: 'en', letter: 'M', phonics: '/ɛm/', exampleWord: 'Mango', exampleWordTranslation: 'Aam (آم / आम)', meaning: 'The sweet king of all fruits', imageUrl: '🥭', audioText: 'M for Mango', order: 13 },
-    { id: 'en-n', language: 'en', letter: 'N', phonics: '/ɛn/', exampleWord: 'Nest', exampleWordTranslation: 'Ghosla (گھونسلا / घोंसला)', meaning: 'Cozy little home for birds', imageUrl: '🪺', audioText: 'N for Nest', order: 14 },
-    { id: 'en-o', language: 'en', letter: 'O', phonics: '/oʊ/', exampleWord: 'Orange', exampleWordTranslation: 'Santra (سنترا / संतरा)', meaning: 'Juicy citrus orange fruit', imageUrl: '🍊', audioText: 'O for Orange', order: 15 },
-    { id: 'en-p', language: 'en', letter: 'P', phonics: '/piː/', exampleWord: 'Parrot', exampleWordTranslation: 'Tota (طوطا / तोता)', meaning: 'A green bird that talks', imageUrl: '🦜', audioText: 'P for Parrot', order: 16 },
-    { id: 'en-q', language: 'en', letter: 'Q', phonics: '/kjuː/', exampleWord: 'Queen', exampleWordTranslation: 'Malka / Rani (ملکہ / रानी)', meaning: 'A royal lady with a crown', imageUrl: '👑', audioText: 'Q for Queen', order: 17 },
-    { id: 'en-r', language: 'en', letter: 'R', phonics: '/ɑːr/', exampleWord: 'Rabbit', exampleWordTranslation: 'Khargosh (خرگوش / खरगोश)', meaning: 'Cute hopping animal with long ears', imageUrl: '🐰', audioText: 'R for Rabbit', order: 18 },
-    { id: 'en-s', language: 'en', letter: 'S', phonics: '/ɛs/', exampleWord: 'Sun', exampleWordTranslation: 'Sooraj (سورج / सूरज)', meaning: 'Bright yellow star that warms Earth', imageUrl: '☀️', audioText: 'S for Sun', order: 19 },
-    { id: 'en-t', language: 'en', letter: 'T', phonics: '/tiː/', exampleWord: 'Tree', exampleWordTranslation: 'Darakht / Ped (درخت / पेड़)', meaning: 'Tall green plant giving fresh oxygen', imageUrl: '🌳', audioText: 'T for Tree', order: 20 },
-    { id: 'en-u', language: 'en', letter: 'U', phonics: '/juː/', exampleWord: 'Umbrella', exampleWordTranslation: 'Chhatri (چھتری / छाता)', meaning: 'Protects us from heavy rain', imageUrl: '☂️', audioText: 'U for Umbrella', order: 21 },
-    { id: 'en-v', language: 'en', letter: 'V', phonics: '/viː/', exampleWord: 'Van', exampleWordTranslation: 'Gari (گاڑی / वैन)', meaning: 'Takes kids safely to school', imageUrl: '🚐', audioText: 'V for Van', order: 22 },
-    { id: 'en-w', language: 'en', letter: 'W', phonics: '/ˈdʌbəl.juː/', exampleWord: 'Watch', exampleWordTranslation: 'Ghadi (گھڑی / घड़ी)', meaning: 'Tells us what time it is', imageUrl: '⌚', audioText: 'W for Watch', order: 23 },
-    { id: 'en-x', language: 'en', letter: 'X', phonics: '/ɛks/', exampleWord: 'Xylophone', exampleWordTranslation: 'Baja (ساز / जलतरंग)', meaning: 'Musical instrument with colorful bars', imageUrl: '🎼', audioText: 'X for Xylophone', order: 24 },
-    { id: 'en-y', language: 'en', letter: 'Y', phonics: '/waɪ/', exampleWord: 'Yak', exampleWordTranslation: 'Pahari Bail (پہاڑی بیل)', meaning: 'Fluffy mountain animal', imageUrl: '🐂', audioText: 'Y for Yak', order: 25 },
-    { id: 'en-z', language: 'en', letter: 'Z', phonics: '/zɛd/', exampleWord: 'Zebra', exampleWordTranslation: 'Zebra (زیبرا / ज़ेब्रा)', meaning: 'Wild horse with black and white stripes', imageUrl: '🦓', audioText: 'Z for Zebra', order: 26 },
-
-    // Urdu Alphabet
-    { id: 'ur-alif', language: 'ur', letter: 'ا', phonics: 'Alif', exampleWord: 'انار', exampleWordTranslation: 'Pomegranate (Anar)', meaning: 'Meetha laal phal', imageUrl: '🍎', audioText: 'الف سے انار', order: 1 },
-    { id: 'ur-be', language: 'ur', letter: 'ب', phonics: 'Bay', exampleWord: 'بلی', exampleWordTranslation: 'Cat (Billi)', meaning: 'Pyari si billi', imageUrl: '🐱', audioText: 'بے سے بلی', order: 2 },
-    { id: 'ur-pe', language: 'ur', letter: 'پ', phonics: 'Pay', exampleWord: 'پتنگ', exampleWordTranslation: 'Kite (Patang)', meaning: 'Aasman mein udne wali patang', imageUrl: '🪁', audioText: 'پے سے پتنگ', order: 3 },
-    { id: 'ur-te', language: 'ur', letter: 'ت', phonics: 'Tay', exampleWord: 'تتلی', exampleWordTranslation: 'Butterfly (Titli)', meaning: 'Rang barangi titli', imageUrl: '🦋', audioText: 'تے سے تتلی', order: 4 },
-    { id: 'ur-tte', language: 'ur', letter: 'ٹ', phonics: 'Ttay', exampleWord: 'ٹماٹر', exampleWordTranslation: 'Tomato (Tamatar)', meaning: 'Surkh laal tamatar', imageUrl: '🍅', audioText: 'ٹے سے ٹماٹر', order: 5 },
-    { id: 'ur-se', language: 'ur', letter: 'ث', phonics: 'Say', exampleWord: 'ثمر', exampleWordTranslation: 'Fruits (Samar)', meaning: 'Taaza meetha phal', imageUrl: '🍇', audioText: 'ثے سے ثمر', order: 6 },
-    { id: 'ur-jeem', language: 'ur', letter: 'ج', phonics: 'Jeem', exampleWord: 'جہاز', exampleWordTranslation: 'Airplane (Jahaz)', meaning: 'Hawa mein udne wala jahaz', imageUrl: '✈️', audioText: 'جیم سے جہاز', order: 7 },
-    { id: 'ur-che', language: 'ur', letter: 'چ', phonics: 'Chay', exampleWord: 'چاند', exampleWordTranslation: 'Moon (Chaand)', meaning: 'Raat ka chamakta chaand', imageUrl: '🌙', audioText: 'چے سے چاند', order: 8 },
-    { id: 'ur-bari-he', language: 'ur', letter: 'ح', phonics: 'Hay', exampleWord: 'حقہ / حوض', exampleWordTranslation: 'Pool (Hauz)', meaning: 'Saaf paani ka hauz', imageUrl: '💧', audioText: 'حے سے حوض', order: 9 },
-    { id: 'ur-khe', language: 'ur', letter: 'خ', phonics: 'Khay', exampleWord: 'خرگوش', exampleWordTranslation: 'Rabbit (Khargosh)', meaning: 'Safaid pyara khargosh', imageUrl: '🐰', audioText: 'خے سے خرگوش', order: 10 },
-    { id: 'ur-daal', language: 'ur', letter: 'د', phonics: 'Daal', exampleWord: 'درخت', exampleWordTranslation: 'Tree (Darakht)', meaning: 'Hara bhara darakht', imageUrl: '🌳', audioText: 'دال سے درخت', order: 11 },
-    { id: 'ur-ddaal', language: 'ur', letter: 'ڈ', phonics: 'Ddaal', exampleWord: 'ڈول', exampleWordTranslation: 'Bucket (Dol)', meaning: 'Paani bharne wala dol', imageUrl: '🪣', audioText: 'ڈال سے ڈول', order: 12 },
-    { id: 'ur-zaal', language: 'ur', letter: 'ذ', phonics: 'Zaal', exampleWord: 'ذخیرہ', exampleWordTranslation: 'Store/Treasure', meaning: 'Ilm ka zakheera', imageUrl: '📦', audioText: 'ذال سے ذخیرہ', order: 13 },
-    { id: 'ur-re', language: 'ur', letter: 'ر', phonics: 'Ray', exampleWord: 'ریل گاڑی', exampleWordTranslation: 'Train (Rail Gari)', meaning: 'Chhuk chhuk rail gari', imageUrl: '🚆', audioText: 'رے سے ریل گاڑی', order: 14 },
-    { id: 'ur-rre', language: 'ur', letter: 'ڑ', phonics: 'Rray', exampleWord: 'پہاڑ', exampleWordTranslation: 'Mountain (Pahar)', meaning: 'Ooncha pahar', imageUrl: '🏔️', audioText: 'ڑے سے پہاڑ', order: 15 },
-    { id: 'ur-ze', language: 'ur', letter: 'ز', phonics: 'Zay', exampleWord: 'زرافہ', exampleWordTranslation: 'Giraffe (Zarafa)', meaning: 'Lambi gardan wala zarafa', imageUrl: '🦒', audioText: 'زے سے زرافہ', order: 16 },
-    { id: 'ur-seen', language: 'ur', letter: 'س', phonics: 'Seen', exampleWord: 'سیب', exampleWordTranslation: 'Apple (Saib)', meaning: 'Taaza meetha laal seb', imageUrl: '🍎', audioText: 'سین سے سیب', order: 17 },
-    { id: 'ur-sheen', language: 'ur', letter: 'ش', phonics: 'Sheen', exampleWord: 'شیر', exampleWordTranslation: 'Lion (Sher)', meaning: 'Jungle ka raja sher', imageUrl: '🦁', audioText: 'شین سے شیر', order: 18 },
-    { id: 'ur-swaad', language: 'ur', letter: 'ص', phonics: 'Swaad', exampleWord: 'صابن', exampleWordTranslation: 'Soap (Sabun)', meaning: 'Haath dhone ka sabun', imageUrl: '🧼', audioText: 'صاد سے صابن', order: 19 },
-    { id: 'ur-zwaad', language: 'ur', letter: 'ض', phonics: 'Zwaad', exampleWord: 'ضعیف', exampleWordTranslation: 'Elderly person', meaning: 'Buzurg insaan', imageUrl: '👴', audioText: 'ضاد سے ضعیف', order: 20 },
-    { id: 'ur-toye', language: 'ur', letter: 'ط', phonics: 'Toye', exampleWord: 'طوطا', exampleWordTranslation: 'Parrot (Tota)', meaning: 'Hara bhara tota', imageUrl: '🦜', audioText: 'طوئے سے طوطا', order: 21 },
-    { id: 'ur-zoye', language: 'ur', letter: 'ظ', phonics: 'Zoye', exampleWord: 'ظروف', exampleWordTranslation: 'Utensils (Zuroof)', meaning: 'Bartan', imageUrl: '🥣', audioText: 'ظوئے سے ظروف', order: 22 },
-    { id: 'ur-ain', language: 'ur', letter: 'ع', phonics: 'Ain', exampleWord: 'عینک', exampleWordTranslation: 'Glasses (Ainak)', meaning: 'Dekhne ki ainak', imageUrl: '👓', audioText: 'عین سے عینک', order: 23 },
-    { id: 'ur-ghain', language: 'ur', letter: 'غ', phonics: 'Ghain', exampleWord: 'غبارہ', exampleWordTranslation: 'Balloon (Ghubara)', meaning: 'Rang baranga ghubara', imageUrl: '🎈', audioText: 'غین سے غبارہ', order: 24 },
-    { id: 'ur-fe', language: 'ur', letter: 'ف', phonics: 'Fay', exampleWord: 'فوارہ', exampleWordTranslation: 'Fountain (Fawwara)', meaning: 'Paani ka khubsurat fawwara', imageUrl: '⛲', audioText: 'فے سے فوارہ', order: 25 },
-    { id: 'ur-qaaf', language: 'ur', letter: 'ق', phonics: 'Qaaf', exampleWord: 'قلم', exampleWordTranslation: 'Pen (Qalam)', meaning: 'Likhne wala qalam', imageUrl: '✒️', audioText: 'قاف سے قلم', order: 26 },
-    { id: 'ur-kaaf', language: 'ur', letter: 'ک', phonics: 'Kaaf', exampleWord: 'کتاب', exampleWordTranslation: 'Book (Kitaab)', meaning: 'Ilm wali kitaab', imageUrl: '📖', audioText: 'کاف سے کتاب', order: 27 },
-    { id: 'ur-gaaf', language: 'ur', letter: 'گ', phonics: 'Gaaf', exampleWord: 'گائے', exampleWordTranslation: 'Cow (Gaaye)', meaning: 'Meetha doodh dene wali gaaye', imageUrl: '🐄', audioText: 'گاف سے گائے', order: 28 },
-    { id: 'ur-laam', language: 'ur', letter: 'ل', phonics: 'Laam', exampleWord: 'لومڑی', exampleWordTranslation: 'Fox (Lomri)', meaning: 'Chalaak lomri', imageUrl: '🦊', audioText: 'لام سے لومڑی', order: 29 },
-    { id: 'ur-meem', language: 'ur', letter: 'م', phonics: 'Meem', exampleWord: 'مور', exampleWordTranslation: 'Peacock (Mor)', meaning: 'Khubsurat pankhon wala mor', imageUrl: '🦚', audioText: 'میم سے مور', order: 30 },
-    { id: 'ur-noon', language: 'ur', letter: 'ن', phonics: 'Noon', exampleWord: 'نل', exampleWordTranslation: 'Tap (Nal)', meaning: 'Paani ka nal', imageUrl: '🚰', audioText: 'نون سے نل', order: 31 },
-    { id: 'ur-wao', language: 'ur', letter: 'و', phonics: 'Wao', exampleWord: 'وردی', exampleWordTranslation: 'Uniform (Wardi)', meaning: 'School ki saaf suthri wardi', imageUrl: '👔', audioText: 'واؤ سے وردی', order: 32 },
-    { id: 'ur-chhoti-he', language: 'ur', letter: 'ہ', phonics: 'Chhoti Hay', exampleWord: 'ہاتھی', exampleWordTranslation: 'Elephant (Hathi)', meaning: 'Bada hathi', imageUrl: '🐘', audioText: 'ہے سے ہاتھی', order: 33 },
-    { id: 'ur-hamza', language: 'ur', letter: 'ء', phonics: 'Hamza', exampleWord: 'چائے', exampleWordTranslation: 'Tea (Chai)', meaning: 'Garam garam chai', imageUrl: '☕', audioText: 'ہمزہ', order: 34 },
-    { id: 'ur-chhoti-ye', language: 'ur', letter: 'ی', phonics: 'Chhoti Yay', exampleWord: 'یکہ', exampleWordTranslation: 'Horse Cart', meaning: 'Ghora gari', imageUrl: '🛺', audioText: 'چھوٹی یے سے یکہ', order: 35 },
-    { id: 'ur-bari-ye', language: 'ur', letter: 'ے', phonics: 'Bari Yay', exampleWord: 'طوطے', exampleWordTranslation: 'Parrots (Tote)', meaning: 'Bari yay', imageUrl: '🦜', audioText: 'بڑی یے', order: 36 },
-
-    // Arabic Alphabet
-    { id: 'ar-alif', language: 'ar', letter: 'أ', phonics: 'Alif', exampleWord: 'أَسَد', exampleWordTranslation: 'Lion (Asad)', meaning: 'Malik al-Ghabah', imageUrl: '🦁', audioText: 'أَلِف أَسَد', order: 1 },
-    { id: 'ar-baa', language: 'ar', letter: 'ب', phonics: 'Baa', exampleWord: 'بَيْت', exampleWordTranslation: 'House (Bayt)', meaning: 'Manzil jameel', imageUrl: '🏠', audioText: 'بَاء بَيْت', order: 2 },
-    { id: 'ar-taa', language: 'ar', letter: 'ت', phonics: 'Taa', exampleWord: 'تُفَّاح', exampleWordTranslation: 'Apple (Tuffah)', meaning: 'Fakiha lazeezah', imageUrl: '🍎', audioText: 'تَاء تُفَّاح', order: 3 },
-    { id: 'ar-thaa', language: 'ar', letter: 'ث', phonics: 'Thaa', exampleWord: 'ثَعْلَب', exampleWordTranslation: 'Fox (Tha\'lab)', meaning: 'Hayawan zaki', imageUrl: '🦊', audioText: 'ثَاء ثَعْلَب', order: 4 },
-    { id: 'ar-jeem', language: 'ar', letter: 'ج', phonics: 'Jeem', exampleWord: 'جَمَل', exampleWordTranslation: 'Camel (Jamal)', meaning: 'Safeenat as-sahra', imageUrl: '🐫', audioText: 'جِيم جَمَل', order: 5 },
-    { id: 'ar-haa', language: 'ar', letter: 'ح', phonics: 'Haa', exampleWord: 'حِصَان', exampleWordTranslation: 'Horse (Hisaan)', meaning: 'Hayawan saree', imageUrl: '🐴', audioText: 'حَاء حِصَان', order: 6 },
-    { id: 'ar-khaa', language: 'ar', letter: 'خ', phonics: 'Khaa', exampleWord: 'خُبْز', exampleWordTranslation: 'Bread (Khubz)', meaning: 'Ta\'am tayyib', imageUrl: '🍞', audioText: 'خَاء خُبْز', order: 7 },
-    { id: 'ar-daal', language: 'ar', letter: 'د', phonics: 'Daal', exampleWord: 'دُبّ', exampleWordTranslation: 'Bear (Dubb)', meaning: 'Hayawan kabeer', imageUrl: '🐻', audioText: 'دَال دُبّ', order: 8 },
-    { id: 'ar-dhaal', language: 'ar', letter: 'ذ', phonics: 'Dhaal', exampleWord: 'ذُرَة', exampleWordTranslation: 'Corn (Dhurah)', meaning: 'Nabat asfar lazeez', imageUrl: '🌽', audioText: 'ذَال ذُرَة', order: 9 },
-    { id: 'ar-raa', language: 'ar', letter: 'ر', phonics: 'Raa', exampleWord: 'رُمَّان', exampleWordTranslation: 'Pomegranate (Rumman)', meaning: 'Fakihat al-jannah', imageUrl: '🍎', audioText: 'رَاء رُمَّان', order: 10 },
-    { id: 'ar-zaay', language: 'ar', letter: 'ز', phonics: 'Zaay', exampleWord: 'زَهْرَة', exampleWordTranslation: 'Flower (Zahrah)', meaning: 'Zahrah jameelah', imageUrl: '🌸', audioText: 'زَاي زَهْرَة', order: 11 },
-    { id: 'ar-seen', language: 'ar', letter: 'س', phonics: 'Seen', exampleWord: 'سَمَكَة', exampleWordTranslation: 'Fish (Samakah)', meaning: 'Tasbah fi al-maa', imageUrl: '🐟', audioText: 'سِين سَمَكَة', order: 12 },
-    { id: 'ar-sheen', language: 'ar', letter: 'ش', phonics: 'Sheen', exampleWord: 'شَمْس', exampleWordTranslation: 'Sun (Shams)', meaning: 'Tudi\' ad-dunya', imageUrl: '☀️', audioText: 'شِين شَمْس', order: 13 },
-    { id: 'ar-saad', language: 'ar', letter: 'ص', phonics: 'Saad', exampleWord: 'صَقْر', exampleWordTranslation: 'Falcon (Saqr)', meaning: 'Ta\'ir qawi', imageUrl: '🦅', audioText: 'صَاد صَقْر', order: 14 },
-    { id: 'ar-daad', language: 'ar', letter: 'ض', phonics: 'Daad', exampleWord: 'ضِفْدَع', exampleWordTranslation: 'Frog (Difda\')', meaning: 'Hayawan yaqfiz', imageUrl: '🐸', audioText: 'ضَاد ضِفْدَع', order: 15 },
-    { id: 'ar-taa2', language: 'ar', letter: 'ط', phonics: 'Taa (Emp)', exampleWord: 'طَيَّارَة', exampleWordTranslation: 'Plane (Tayyarah)', meaning: 'Tateer fi as-samaa', imageUrl: '✈️', audioText: 'طَاء طَيَّارَة', order: 16 },
-    { id: 'ar-zaa2', language: 'ar', letter: 'ظ', phonics: 'Zaa (Emp)', exampleWord: 'ظَرْف', exampleWordTranslation: 'Envelope (Zarf)', meaning: 'Rasail jameelah', imageUrl: '✉️', audioText: 'ظَاء ظَرْف', order: 17 },
-    { id: 'ar-ayn', language: 'ar', letter: 'ع', phonics: 'Ayn', exampleWord: 'عَيْن', exampleWordTranslation: 'Eye (Ayn)', meaning: 'Nara biha al-ashyaa', imageUrl: '👁️', audioText: 'عَيْن عَيْن', order: 18 },
-    { id: 'ar-ghayn', language: 'ar', letter: 'غ', phonics: 'Ghayn', exampleWord: 'غَزَال', exampleWordTranslation: 'Deer (Ghazaal)', meaning: 'Ghazal jameel saree', imageUrl: '🦌', audioText: 'غَيْن غَزَال', order: 19 },
-    { id: 'ar-faa', language: 'ar', letter: 'ف', phonics: 'Faa', exampleWord: 'فِيل', exampleWordTranslation: 'Elephant (Feel)', meaning: 'Hayawan dakhm', imageUrl: '🐘', audioText: 'فَاء فِيل', order: 20 },
-    { id: 'ar-qaaf', language: 'ar', letter: 'ق', phonics: 'Qaaf', exampleWord: 'قَمَر', exampleWordTranslation: 'Moon (Qamar)', meaning: 'Yudi\' fi al-layl', imageUrl: '🌙', audioText: 'قَاف قَمَر', order: 21 },
-    { id: 'ar-kaaf', language: 'ar', letter: 'ك', phonics: 'Kaaf', exampleWord: 'كِتَاب', exampleWordTranslation: 'Book (Kitaab)', meaning: 'Naqra\'u fihi', imageUrl: '📖', audioText: 'كَاف كِتَاب', order: 22 },
-    { id: 'ar-laam', language: 'ar', letter: 'ل', phonics: 'Laam', exampleWord: 'لَيْمُون', exampleWordTranslation: 'Lemon (Laymoon)', meaning: 'Hamid wa munish', imageUrl: '🍋', audioText: 'لَام لَيْمُون', order: 23 },
-    { id: 'ar-meem', language: 'ar', letter: 'م', phonics: 'Meem', exampleWord: 'مَسْجِد', exampleWordTranslation: 'Mosque (Masjid)', meaning: 'Bayt Allah ta\'ala', imageUrl: '🕌', audioText: 'مِيم مَسْجِد', order: 24 },
-    { id: 'ar-noon', language: 'ar', letter: 'ن', phonics: 'Noon', exampleWord: 'نَجْم', exampleWordTranslation: 'Star (Najm)', meaning: 'Yalma\' fi as-samaa', imageUrl: '⭐', audioText: 'نُون نَجْم', order: 25 },
-    { id: 'ar-haa2', language: 'ar', letter: 'هـ', phonics: 'Haa', exampleWord: 'هِلَال', exampleWordTranslation: 'Crescent (Hilal)', meaning: 'Bidayat ash-shahr', imageUrl: '🌙', audioText: 'هَاء هِلَال', order: 26 },
-    { id: 'ar-waw', language: 'ar', letter: 'و', phonics: 'Waw', exampleWord: 'وَرْدَة', exampleWordTranslation: 'Rose (Wardah)', meaning: 'Wardah hamra jameelah', imageUrl: '🌹', audioText: 'وَاو وَرْدَة', order: 27 },
-    { id: 'ar-yaa', language: 'ar', letter: 'ي', phonics: 'Yaa', exampleWord: 'يَد', exampleWordTranslation: 'Hand (Yad)', meaning: 'Yad naqiyah', imageUrl: '✋', audioText: 'يَاء يَد', order: 28 },
-
-    // Hindi Varnamala
-    { id: 'hi-a', language: 'hi', letter: 'अ', phonics: 'A', exampleWord: 'अनार', exampleWordTranslation: 'Pomegranate (Anaar)', meaning: 'Laal daano wala phal', imageUrl: '🍎', audioText: 'अ से अनार', order: 1 },
-    { id: 'hi-aa', language: 'hi', letter: 'आ', phonics: 'Aa', exampleWord: 'आम', exampleWordTranslation: 'Mango (Aam)', meaning: 'Phalo ka raja', imageUrl: '🥭', audioText: 'आ से आम', order: 2 },
-    { id: 'hi-i', language: 'hi', letter: 'इ', phonics: 'I', exampleWord: 'इमली', exampleWordTranslation: 'Tamarind (Imli)', meaning: 'Khatti meethi imli', imageUrl: '🫒', audioText: 'इ से इमली', order: 3 },
-    { id: 'hi-ee', language: 'hi', letter: 'ई', phonics: 'Ee', exampleWord: 'ईख', exampleWordTranslation: 'Sugarcane (Eekh)', meaning: 'Meetha ganna', imageUrl: '🎋', audioText: 'ई से ईख', order: 4 },
-    { id: 'hi-u', language: 'hi', letter: 'उ', phonics: 'U', exampleWord: 'उल्लू', exampleWordTranslation: 'Owl (Ullu)', meaning: 'Raat ko jagne wala pakshi', imageUrl: '🦉', audioText: 'उ से उल्लू', order: 5 },
-    { id: 'hi-oo', language: 'hi', letter: 'ऊ', phonics: 'Oo', exampleWord: 'ऊन', exampleWordTranslation: 'Wool (Oon)', meaning: 'Garam kapde banane wala oon', imageUrl: '🧶', audioText: 'ऊ से ऊन', order: 6 },
-    { id: 'hi-ri', language: 'hi', letter: 'ऋ', phonics: 'Ri', exampleWord: 'ऋषि', exampleWordTranslation: 'Sage (Rishi)', meaning: 'Gyan dene wale sadhu', imageUrl: '🧘', audioText: 'ऋ से ऋषि', order: 7 },
-    { id: 'hi-e', language: 'hi', letter: 'ए', phonics: 'E', exampleWord: 'एड़ी', exampleWordTranslation: 'Heel (Aedi)', meaning: 'Pair ki aedi', imageUrl: '🦶', audioText: 'ए से एड़ी', order: 8 },
-    { id: 'hi-ai', language: 'hi', letter: 'ऐ', phonics: 'Ai', exampleWord: 'ऐनक', exampleWordTranslation: 'Spectacles (Ainak)', meaning: 'Aankhon ka chashma', imageUrl: '👓', audioText: 'ऐ से ऐनक', order: 9 },
-    { id: 'hi-o', language: 'hi', letter: 'ओ', phonics: 'O', exampleWord: 'ओखली', exampleWordTranslation: 'Mortar (Okhli)', meaning: 'Kootne wali okhli', imageUrl: '🥣', audioText: 'ओ से ओखली', order: 10 },
-    { id: 'hi-au', language: 'hi', letter: 'औ', phonics: 'Au', exampleWord: 'औरत', exampleWordTranslation: 'Woman (Aurat)', meaning: 'Pyari maa', imageUrl: '👩', audioText: 'औ से औरत', order: 11 },
-    { id: 'hi-ang', language: 'hi', letter: 'अं', phonics: 'Ang', exampleWord: 'अंगूर', exampleWordTranslation: 'Grapes (Angoor)', meaning: 'Meethe angoor', imageUrl: '🍇', audioText: 'अं से अंगूर', order: 12 },
-    { id: 'hi-ka', language: 'hi', letter: 'क', phonics: 'Ka', exampleWord: 'कमल', exampleWordTranslation: 'Lotus (Kamal)', meaning: 'Hamara rashtriya phool', imageUrl: '🪷', audioText: 'क से कमल', order: 13 },
-    { id: 'hi-kha', language: 'hi', letter: 'ख', phonics: 'Kha', exampleWord: 'खरगोश', exampleWordTranslation: 'Rabbit (Khargosh)', meaning: 'Safed chanchal khargosh', imageUrl: '🐰', audioText: 'ख से खरगोश', order: 14 },
-    { id: 'hi-ga', language: 'hi', letter: 'ग', phonics: 'Ga', exampleWord: 'गमला', exampleWordTranslation: 'Flower Pot (Gamla)', meaning: 'Paudhe lagane ka gamla', imageUrl: '🪴', audioText: 'ग से गमला', order: 15 },
-    { id: 'hi-gha', language: 'hi', letter: 'घ', phonics: 'Gha', exampleWord: 'घड़ी', exampleWordTranslation: 'Clock (Ghadi)', meaning: 'Samay batane wali ghadi', imageUrl: '⏰', audioText: 'घ से घड़ी', order: 16 },
-    { id: 'hi-cha', language: 'hi', letter: 'च', phonics: 'Cha', exampleWord: 'चम्मच', exampleWordTranslation: 'Spoon (Chammach)', meaning: 'Kheer khane ka chammach', imageUrl: '🥄', audioText: 'च से चम्मच', order: 17 },
-    { id: 'hi-chha', language: 'hi', letter: 'छ', phonics: 'Chha', exampleWord: 'छतरी', exampleWordTranslation: 'Umbrella (Chhatri)', meaning: 'Barish me bachane wali chhatri', imageUrl: '☂️', audioText: 'छ से छतरी', order: 18 },
-    { id: 'hi-ja', language: 'hi', letter: 'ज', phonics: 'Ja', exampleWord: 'जहाज', exampleWordTranslation: 'Ship/Airplane', meaning: 'Pani aur hawa me chalne wala', imageUrl: '🚢', audioText: 'ज से जहाज', order: 19 },
-    { id: 'hi-jha', language: 'hi', letter: 'झ', phonics: 'Jha', exampleWord: 'झंडा', exampleWordTranslation: 'Flag (Jhanda)', meaning: 'Hamara pyara Tiranga', imageUrl: '🇮🇳', audioText: 'झ से झंडा', order: 20 },
-    { id: 'hi-ta', language: 'hi', letter: 'ट', phonics: 'Ta', exampleWord: 'टमाटर', exampleWordTranslation: 'Tomato (Tamatar)', meaning: 'Lal lal tamatar', imageUrl: '🍅', audioText: 'ट से टमाटर', order: 21 },
-    { id: 'hi-tha', language: 'hi', letter: 'ठ', phonics: 'Tha', exampleWord: 'ठठेरा', exampleWordTranslation: 'Tinker/Coppersmith', meaning: 'Bartan banane wala', imageUrl: '🔨', audioText: 'ठ से ठठेरा', order: 22 },
-    { id: 'hi-da', language: 'hi', letter: 'ड', phonics: 'Da', exampleWord: 'डमरू', exampleWordTranslation: 'Small Drum (Damru)', meaning: 'Baja', imageUrl: '🪘', audioText: 'ड से डमरू', order: 23 },
-    { id: 'hi-dha', language: 'hi', letter: 'ढ', phonics: 'Dha', exampleWord: 'ढक्कन', exampleWordTranslation: 'Lid (Dhakkan)', meaning: 'Bartan dhakne ka', imageUrl: '🍲', audioText: 'ढ से ढक्कन', order: 24 },
-    { id: 'hi-ta2', language: 'hi', letter: 'त', phonics: 'Ta', exampleWord: 'तरबूज', exampleWordTranslation: 'Watermelon (Tarbooz)', meaning: 'Meetha rasila tarbooz', imageUrl: '🍉', audioText: 'त से तरबूज', order: 25 },
-    { id: 'hi-tha2', language: 'hi', letter: 'थ', phonics: 'Tha', exampleWord: 'थर्मस', exampleWordTranslation: 'Thermos (Thermos)', meaning: 'Garam paani rakhne ka', imageUrl: '🍶', audioText: 'थ से थर्मस', order: 26 },
-    { id: 'hi-da2', language: 'hi', letter: 'द', phonics: 'Da', exampleWord: 'दवात', exampleWordTranslation: 'Inkpot (Dawaat)', meaning: 'Siyahi ki dawat', imageUrl: '🖋️', audioText: 'द से दवात', order: 27 },
-    { id: 'hi-dha2', language: 'hi', letter: 'ध', phonics: 'Dha', exampleWord: 'धनुष', exampleWordTranslation: 'Bow (Dhanush)', meaning: 'Teer chalane ka dhanush', imageUrl: '🏹', audioText: 'ध से धनुष', order: 28 },
-    { id: 'hi-na', language: 'hi', letter: 'न', phonics: 'Na', exampleWord: 'नल', exampleWordTranslation: 'Tap (Nal)', meaning: 'Paani ka nal', imageUrl: '🚰', audioText: 'न से नल', order: 29 },
-    { id: 'hi-pa', language: 'hi', letter: 'प', phonics: 'Pa', exampleWord: 'पतंग', exampleWordTranslation: 'Kite (Patang)', meaning: 'Aasman me udti patang', imageUrl: '🪁', audioText: 'प से पतंग', order: 30 },
-    { id: 'hi-pha', language: 'hi', letter: 'फ', phonics: 'Pha', exampleWord: 'फल', exampleWordTranslation: 'Fruits (Phal)', meaning: 'Taaza swadisht phal', imageUrl: '🍓', audioText: 'फ से फल', order: 31 },
-    { id: 'hi-ba', language: 'hi', letter: 'ब', phonics: 'Ba', exampleWord: 'बत्तख', exampleWordTranslation: 'Duck (Battakh)', meaning: 'Pani me tairne wali battakh', imageUrl: '🦆', audioText: 'ब से बत्तख', order: 32 },
-    { id: 'hi-bha', language: 'hi', letter: 'भ', phonics: 'Bha', exampleWord: 'भालू', exampleWordTranslation: 'Bear (Bhalu)', meaning: 'Jungle ka bhalu', imageUrl: '🐻', audioText: 'भ से भालू', order: 33 },
-    { id: 'hi-ma', language: 'hi', letter: 'म', phonics: 'Ma', exampleWord: 'मछली', exampleWordTranslation: 'Fish (Machhli)', meaning: 'Jal ki rani machhli', imageUrl: '🐟', audioText: 'म से मछली', order: 34 },
-    { id: 'hi-ya', language: 'hi', letter: 'य', phonics: 'Ya', exampleWord: 'यज्ञ', exampleWordTranslation: 'Sacred fire ritual', meaning: 'Pavitra yagya', imageUrl: '🔥', audioText: 'य से यज्ञ', order: 35 },
-    { id: 'hi-ra', language: 'hi', letter: 'र', phonics: 'Ra', exampleWord: 'रथ', exampleWordTranslation: 'Chariot (Rath)', meaning: 'Rajao ka rath', imageUrl: '🛞', audioText: 'र से रथ', order: 36 },
-    { id: 'hi-la', language: 'hi', letter: 'ल', phonics: 'La', exampleWord: 'लट्टू', exampleWordTranslation: 'Spinning Top (Lattu)', meaning: 'Ghoomne wala khilona', imageUrl: '🪀', audioText: 'ल से लट्टू', order: 37 },
-    { id: 'hi-va', language: 'hi', letter: 'व', phonics: 'Va', exampleWord: 'वक', exampleWordTranslation: 'Crane Bird (Vak)', meaning: 'Bagula pakshi', imageUrl: '🦩', audioText: 'व से वक', order: 38 },
-    { id: 'hi-sha', language: 'hi', letter: 'श', phonics: 'Sha', exampleWord: 'शलजम', exampleWordTranslation: 'Turnip (Shaljam)', meaning: 'Gunkari sabzi', imageUrl: '🫒', audioText: 'श से शलजम', order: 39 },
-    { id: 'hi-sa', language: 'hi', letter: 'स', phonics: 'Sa', exampleWord: 'सेब / सपेरा', exampleWordTranslation: 'Apple (Seb)', meaning: 'Lal laal meetha seb', imageUrl: '🍎', audioText: 'स से सेब', order: 40 },
-    { id: 'hi-ha', language: 'hi', letter: 'ह', phonics: 'Ha', exampleWord: 'हाथी', exampleWordTranslation: 'Elephant (Hathi)', meaning: 'Bada hathi', imageUrl: '🐘', audioText: 'ह से हाथी', order: 41 },
-    { id: 'hi-ksha', language: 'hi', letter: 'क्ष', phonics: 'Ksha', exampleWord: 'क्षत्रिय', exampleWordTranslation: 'Warrior (Kshatriya)', meaning: 'Veer yoddha', imageUrl: '🛡️', audioText: 'क्ष से क्षत्रिय', order: 42 },
-    { id: 'hi-tra', language: 'hi', letter: 'त्र', phonics: 'Tra', exampleWord: 'त्रिशूल', exampleWordTranslation: 'Trident (Trishul)', meaning: 'Trishul', imageUrl: '🔱', audioText: 'त्र से त्रिशूल', order: 43 },
-    { id: 'hi-gya', language: 'hi', letter: 'ज्ञ', phonics: 'Gya', exampleWord: 'ज्ञानी', exampleWordTranslation: 'Wise Scholar (Gyani)', meaning: 'Gyan se bharpoor', imageUrl: '📚', audioText: 'ज्ञ से ज्ञानी', order: 44 }
-  ],
-  words: [
-    { id: 'w-en-1', language: 'en', letter: 'A', word: 'Apple', meaning: 'A crunchy sweet fruit', phonetic: '/ˈæp.əl/', category: 'Fruits', imageUrl: '🍎', order: 1 },
-    { id: 'w-en-2', language: 'en', letter: 'B', word: 'Book', meaning: 'Filled with knowledge and stories', phonetic: '/bʊk/', category: 'School', imageUrl: '📚', order: 2 },
-    { id: 'w-en-3', language: 'en', letter: 'C', word: 'Car', meaning: 'A vehicle with four wheels', phonetic: '/kɑːr/', category: 'Vehicles', imageUrl: '🚗', order: 3 },
-    { id: 'w-en-4', language: 'en', letter: 'D', word: 'Duck', meaning: 'A yellow bird that quacks', phonetic: '/dʌk/', category: 'Animals', imageUrl: '🦆', order: 4 },
-    { id: 'w-en-5', language: 'en', letter: 'E', word: 'Egg', meaning: 'Healthy breakfast food', phonetic: '/ɛɡ/', category: 'Food', imageUrl: '🥚', order: 5 },
-    { id: 'w-en-6', language: 'en', letter: 'F', word: 'Flower', meaning: 'Colorful blossom in a garden', phonetic: '/ˈflaʊ.ər/', category: 'Nature', imageUrl: '🌸', order: 6 },
-    { id: 'w-ur-1', language: 'ur', letter: 'ا', word: 'انار (Pomegranate)', meaning: 'Lal daano wala mazedar phal', phonetic: 'Anar', category: 'Fruits', imageUrl: '🍎', order: 7 },
-    { id: 'w-ur-2', language: 'ur', letter: 'ب', word: 'بلی (Cat)', meaning: 'Ghar me rehne wali pyari billi', phonetic: 'Billi', category: 'Animals', imageUrl: '🐱', order: 8 },
-    { id: 'w-ur-3', language: 'ur', letter: 'ک', word: 'کتاب (Book)', meaning: 'Padhne likhne ki kitaab', phonetic: 'Kitaab', category: 'School', imageUrl: '📖', order: 9 },
-    { id: 'w-ur-4', language: 'ur', letter: 'گ', word: 'گیند (Ball)', meaning: 'Khelne wali gend', phonetic: 'Gend', category: 'Toys', imageUrl: '⚽', order: 10 },
-    { id: 'w-ar-1', language: 'ar', letter: 'أ', word: 'أَسَد (Lion)', meaning: 'Malik al-Ghabah', phonetic: 'Asad', category: 'Animals', imageUrl: '🦁', order: 11 },
-    { id: 'w-ar-2', language: 'ar', letter: 'م', word: 'مَسْجِد (Mosque)', meaning: 'Baytullah al-kareem', phonetic: 'Masjid', category: 'Places', imageUrl: '🕌', order: 12 },
-    { id: 'w-ar-3', language: 'ar', letter: 'ق', word: 'قَمَر (Moon)', meaning: 'Qamar muneer fi as-samaa', phonetic: 'Qamar', category: 'Nature', imageUrl: '🌙', order: 13 },
-    { id: 'w-ar-4', language: 'ar', letter: 'ك', word: 'كِتَاب (Book)', meaning: 'Noor al-ilm', phonetic: 'Kitaab', category: 'School', imageUrl: '📖', order: 14 },
-    { id: 'w-hi-1', language: 'hi', letter: 'अ', word: 'अनार (Pomegranate)', meaning: 'Meetha rasdar phal', phonetic: 'Anaar', category: 'Fruits', imageUrl: '🍎', order: 15 },
-    { id: 'w-hi-2', language: 'hi', letter: 'क', word: 'कमल (Lotus)', meaning: 'Hamara rashtriya phool', phonetic: 'Kamal', category: 'Nature', imageUrl: '🪷', order: 16 },
-    { id: 'w-hi-3', language: 'hi', letter: 'प', word: 'पानी (Water)', meaning: 'Jeevan dene wala jal', phonetic: 'Paani', category: 'Everyday', imageUrl: '💧', order: 17 },
-    { id: 'w-hi-4', language: 'hi', letter: 'स', word: 'सूरज (Sun)', meaning: 'Prakriti ko roshan karne wala', phonetic: 'Sooraj', category: 'Nature', imageUrl: '☀️', order: 18 }
-  ],
-  sentences: [
+  "alphabets": [
     {
-      id: 's-1',
-      category: 'daily',
-      english: 'I am eating food.',
-      urdu: 'میں کھانا کھا رہا ہوں۔',
-      arabic: 'أَنَا آكُلُ الطَّعَامَ.',
-      hindi: 'मैं खाना खा रहा हूँ।',
-      order: 1
+      "id": "en-a",
+      "language": "en",
+      "letter": "A",
+      "phonics": "/eɪ/",
+      "exampleWord": "Apple",
+      "exampleWordTranslation": "Seb (سیب / सेब)",
+      "meaning": "A sweet red or green fruit",
+      "imageUrl": "🍎",
+      "audioText": "A for Apple",
+      "order": 1
     },
     {
-      id: 's-2',
-      category: 'daily',
-      english: 'I am drinking water.',
-      urdu: 'میں پانی پی رہا ہوں۔',
-      arabic: 'أَنَا أَشْرَبُ الْمَاءَ.',
-      hindi: 'मैं पानी पी रहा हूँ।',
-      order: 2
+      "id": "en-b",
+      "language": "en",
+      "letter": "B",
+      "phonics": "/biː/",
+      "exampleWord": "Ball",
+      "exampleWordTranslation": "Gend (گیند / गेंद)",
+      "meaning": "A round object used in games",
+      "imageUrl": "⚽",
+      "audioText": "B for Ball",
+      "order": 2
     },
     {
-      id: 's-3',
-      category: 'school',
-      english: 'I am going to school.',
-      urdu: 'میں اسکول جا رہا ہوں۔',
-      arabic: 'أَنَا أَذْهَبُ إِلَى الْمَدْرَسَةِ.',
-      hindi: 'मैं स्कूल जा रहा हूँ।',
-      order: 3
+      "id": "en-c",
+      "language": "en",
+      "letter": "C",
+      "phonics": "/siː/",
+      "exampleWord": "Cat",
+      "exampleWordTranslation": "Billi (بلی / बिल्ली)",
+      "meaning": "A friendly furry pet",
+      "imageUrl": "🐱",
+      "audioText": "C for Cat",
+      "order": 3
     },
     {
-      id: 's-4',
-      category: 'school',
-      english: 'I am reading a book.',
-      urdu: 'میں کتاب پڑھ رہا ہوں۔',
-      arabic: 'أَنَا أَقْرَأُ الْكِتَابَ.',
-      hindi: 'मैं किताब पढ़ रहा हूँ।',
-      order: 4
+      "id": "en-d",
+      "language": "en",
+      "letter": "D",
+      "phonics": "/diː/",
+      "exampleWord": "Dog",
+      "exampleWordTranslation": "Kutta (کتا / कुत्ता)",
+      "meaning": "A loyal animal friend",
+      "imageUrl": "🐶",
+      "audioText": "D for Dog",
+      "order": 4
     },
     {
-      id: 's-5',
-      category: 'school',
-      english: 'I am writing in my notebook.',
-      urdu: 'میں اپنی کاپی میں لکھ رہا ہوں۔',
-      arabic: 'أَنَا أَكْتُبُ فِي دَفْتَرِي.',
-      hindi: 'मैं अपनी कॉपी में लिख रहा हूँ।',
-      order: 5
+      "id": "en-e",
+      "language": "en",
+      "letter": "E",
+      "phonics": "/iː/",
+      "exampleWord": "Elephant",
+      "exampleWordTranslation": "Hathi (ہاتھی / हाथी)",
+      "meaning": "A big gentle giant with a trunk",
+      "imageUrl": "🐘",
+      "audioText": "E for Elephant",
+      "order": 5
     },
     {
-      id: 's-6',
-      category: 'daily',
-      english: 'I am playing with my friends.',
-      urdu: 'میں اپنے دوستوں کے ساتھ کھیل رہا ہوں۔',
-      arabic: 'أَنَا أَلْعَبُ مَعَ أَصْدِقَائِي.',
-      hindi: 'मैं अपने दोस्तों के साथ खेल रहा हूँ।',
-      order: 6
+      "id": "en-f",
+      "language": "en",
+      "letter": "F",
+      "phonics": "/ɛf/",
+      "exampleWord": "Fish",
+      "exampleWordTranslation": "Machhli (مچھلی / मछली)",
+      "meaning": "Swims happily in water",
+      "imageUrl": "🐟",
+      "audioText": "F for Fish",
+      "order": 6
     },
     {
-      id: 's-7',
-      category: 'school',
-      english: 'This is my book.',
-      urdu: 'یہ میری کتاب ہے۔',
-      arabic: 'هٰذَا كِتَابِي.',
-      hindi: 'यह मेरी किताब है।',
-      order: 7
+      "id": "en-g",
+      "language": "en",
+      "letter": "G",
+      "phonics": "/dʒiː/",
+      "exampleWord": "Grapes",
+      "exampleWordTranslation": "Angoor (انگور / अंगूर)",
+      "meaning": "Sweet juicy green or purple fruit",
+      "imageUrl": "🍇",
+      "audioText": "G for Grapes",
+      "order": 7
     },
     {
-      id: 's-8',
-      category: 'school',
-      english: 'This is my pen.',
-      urdu: 'یہ میرا قلم ہے۔',
-      arabic: 'هٰذَا قَلَمِي.',
-      hindi: 'यह मेरी कलम है।',
-      order: 8
+      "id": "en-h",
+      "language": "en",
+      "letter": "H",
+      "phonics": "/eɪtʃ/",
+      "exampleWord": "Horse",
+      "exampleWordTranslation": "Ghora (گھوڑا / घोड़ा)",
+      "meaning": "A fast running strong animal",
+      "imageUrl": "🐴",
+      "audioText": "H for Horse",
+      "order": 8
     },
     {
-      id: 's-9',
-      category: 'feelings',
-      english: 'I am very happy today.',
-      urdu: 'میں آج بہت خوش ہوں۔',
-      arabic: 'أَنَا سَعِيدٌ جِدًّا الْيَوْمَ.',
-      hindi: 'मैं आज बहुत खुश हूँ।',
-      order: 9
+      "id": "en-i",
+      "language": "en",
+      "letter": "I",
+      "phonics": "/aɪ/",
+      "exampleWord": "Ice Cream",
+      "exampleWordTranslation": "Ice Cream (آئس کریم)",
+      "meaning": "Cold delicious sweet treat",
+      "imageUrl": "🍦",
+      "audioText": "I for Ice Cream",
+      "order": 9
     },
     {
-      id: 's-10',
-      category: 'greetings',
-      english: 'Good morning, have a nice day!',
-      urdu: 'صبح بخیر، آپ کا دن اچھا گزرے!',
-      arabic: 'صَبَاحُ الْخَيْرِ، يَوْمٌ سَعِيدٌ!',
-      hindi: 'सुप्रभात, आपका दिन शुभ हो!',
-      order: 10
+      "id": "en-j",
+      "language": "en",
+      "letter": "J",
+      "phonics": "/dʒeɪ/",
+      "exampleWord": "Jug",
+      "exampleWordTranslation": "Jug (جگ / जग)",
+      "meaning": "Used for pouring clean water",
+      "imageUrl": "🫖",
+      "audioText": "J for Jug",
+      "order": 10
     },
     {
-      id: 's-11',
-      category: 'greetings',
-      english: 'Good night, sweet dreams!',
-      urdu: 'شب بخیر، میٹھے خواب!',
-      arabic: 'تُصْبِحُ عَلَى خَيْرٍ!',
-      hindi: 'शुभ रात्रि, मीठे सपने!',
-      order: 11
+      "id": "en-k",
+      "language": "en",
+      "letter": "K",
+      "phonics": "/keɪ/",
+      "exampleWord": "Kite",
+      "exampleWordTranslation": "Patang (پتنگ / पतंग)",
+      "meaning": "Flies high up in the blue sky",
+      "imageUrl": "🪁",
+      "audioText": "K for Kite",
+      "order": 11
     },
     {
-      id: 's-12',
-      category: 'manners',
-      english: 'Thank you very much.',
-      urdu: 'آپ کا بہت بہت شکریہ۔',
-      arabic: 'شُكْرًا جَزِيلًا لَكَ.',
-      hindi: 'आपका बहुत-बहुत धन्यवाद।',
-      order: 12
+      "id": "en-l",
+      "language": "en",
+      "letter": "L",
+      "phonics": "/ɛl/",
+      "exampleWord": "Lion",
+      "exampleWordTranslation": "Sher (شیر / शेर)",
+      "meaning": "The brave king of the jungle",
+      "imageUrl": "🦁",
+      "audioText": "L for Lion",
+      "order": 12
     },
     {
-      id: 's-13',
-      category: 'manners',
-      english: 'Please help me.',
-      urdu: 'براہ کرم میری مدد کیجیے۔',
-      arabic: 'مِنْ فَضْلِكَ سَاعِدْنِي.',
-      hindi: 'कृपया मेरी मदद कीजिए।',
-      order: 13
+      "id": "en-m",
+      "language": "en",
+      "letter": "M",
+      "phonics": "/ɛm/",
+      "exampleWord": "Mango",
+      "exampleWordTranslation": "Aam (آم / आम)",
+      "meaning": "The sweet king of all fruits",
+      "imageUrl": "🥭",
+      "audioText": "M for Mango",
+      "order": 13
     },
     {
-      id: 's-14',
-      category: 'daily',
-      english: 'Come here and sit down.',
-      urdu: 'یہاں آئیں اور بیٹھ جائیں۔',
-      arabic: 'تَعَالَ هُنَا وَاجْلِسْ.',
-      hindi: 'यहाँ आओ और बैठ जाओ।',
-      order: 14
+      "id": "en-n",
+      "language": "en",
+      "letter": "N",
+      "phonics": "/ɛn/",
+      "exampleWord": "Nest",
+      "exampleWordTranslation": "Ghosla (گھونسلا / घोंसला)",
+      "meaning": "Cozy little home for birds",
+      "imageUrl": "🪺",
+      "audioText": "N for Nest",
+      "order": 14
     },
     {
-      id: 's-15',
-      category: 'daily',
-      english: 'Stand up and listen carefully.',
-      urdu: 'کھڑے ہو جائیں اور دھیان سے سنیں۔',
-      arabic: 'قِفْ وَاسْتَمِعْ بِعِنَايَةٍ.',
-      hindi: 'खड़े हो जाओ और ध्यान से सुनो।',
-      order: 15
+      "id": "en-o",
+      "language": "en",
+      "letter": "O",
+      "phonics": "/oʊ/",
+      "exampleWord": "Orange",
+      "exampleWordTranslation": "Santra (سنترا / संतरा)",
+      "meaning": "Juicy citrus orange fruit",
+      "imageUrl": "🍊",
+      "audioText": "O for Orange",
+      "order": 15
     },
     {
-      id: 's-16',
-      category: 'daily',
-      english: 'Open the door, please.',
-      urdu: 'براہ کرم دروازہ کھولیں۔',
-      arabic: 'افْتَحِ الْبَابَ مِنْ فَضْلِكَ.',
-      hindi: 'कृपया दरवाज़ा खोलें।',
-      order: 16
+      "id": "en-p",
+      "language": "en",
+      "letter": "P",
+      "phonics": "/piː/",
+      "exampleWord": "Parrot",
+      "exampleWordTranslation": "Tota (طوطا / तोता)",
+      "meaning": "A green bird that talks",
+      "imageUrl": "🦜",
+      "audioText": "P for Parrot",
+      "order": 16
     },
     {
-      id: 's-17',
-      category: 'daily',
-      english: 'Close the window, please.',
-      urdu: 'براہ کرم کھڑکی بند کریں۔',
-      arabic: 'أَغْلِقِ النَّافِذَةَ مِنْ فَضْلِكَ.',
-      hindi: 'कृपया खिड़की बंद करें।',
-      order: 17
+      "id": "en-q",
+      "language": "en",
+      "letter": "Q",
+      "phonics": "/kjuː/",
+      "exampleWord": "Queen",
+      "exampleWordTranslation": "Malka / Rani (ملکہ / रानी)",
+      "meaning": "A royal lady with a crown",
+      "imageUrl": "👑",
+      "audioText": "Q for Queen",
+      "order": 17
     },
     {
-      id: 's-18',
-      category: 'greetings',
-      english: 'Peace be upon you (Assalamu Alaikum).',
-      urdu: 'السلام علیکم ورحمۃ اللہ وبرکاتہ۔',
-      arabic: 'السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ.',
-      hindi: 'अस्सलाम वालेकुम व रहमतुल्लाह व बरकातहू।',
-      order: 18
+      "id": "en-r",
+      "language": "en",
+      "letter": "R",
+      "phonics": "/ɑːr/",
+      "exampleWord": "Rabbit",
+      "exampleWordTranslation": "Khargosh (خرگوش / खरगोश)",
+      "meaning": "Cute hopping animal with long ears",
+      "imageUrl": "🐰",
+      "audioText": "R for Rabbit",
+      "order": 18
     },
     {
-      id: 's-19',
-      category: 'daily',
-      english: 'I want to sleep early tonight.',
-      urdu: 'میں آج رات جلدی سونا چاہتا ہوں۔',
-      arabic: 'أُرِيدُ أَنْ أَنَامَ مُبَكِّرًا اللَّيْلَةَ.',
-      hindi: 'मैं आज रात जल्दी सोना चाहता हूँ।',
-      order: 19
+      "id": "en-s",
+      "language": "en",
+      "letter": "S",
+      "phonics": "/ɛs/",
+      "exampleWord": "Sun",
+      "exampleWordTranslation": "Sooraj (سورج / सूरज)",
+      "meaning": "Bright yellow star that warms Earth",
+      "imageUrl": "☀️",
+      "audioText": "S for Sun",
+      "order": 19
     },
     {
-      id: 's-20',
-      category: 'daily',
-      english: 'What time is it right now?',
-      urdu: 'اس وقت کیا ٹائم ہوا ہے؟',
-      arabic: 'كَمِ السَّاعَةُ الْآنَ؟',
-      hindi: 'अभी क्या समय हुआ है?',
-      order: 20
+      "id": "en-t",
+      "language": "en",
+      "letter": "T",
+      "phonics": "/tiː/",
+      "exampleWord": "Tree",
+      "exampleWordTranslation": "Darakht / Ped (درخت / पेड़)",
+      "meaning": "Tall green plant giving fresh oxygen",
+      "imageUrl": "🌳",
+      "audioText": "T for Tree",
+      "order": 20
     },
     {
-      id: 's-21',
-      category: 'daily',
-      english: 'The weather is very pleasant today.',
-      urdu: 'آج موسم بہت خوشگوار ہے۔',
-      arabic: 'الطَّقْسُ لَطِيفٌ جِدًّا الْيَوْمَ.',
-      hindi: 'आज मौसम बहुत सुहावना है।',
-      order: 21
+      "id": "en-u",
+      "language": "en",
+      "letter": "U",
+      "phonics": "/juː/",
+      "exampleWord": "Umbrella",
+      "exampleWordTranslation": "Chhatri (چھتری / छाता)",
+      "meaning": "Protects us from heavy rain",
+      "imageUrl": "☂️",
+      "audioText": "U for Umbrella",
+      "order": 21
     },
     {
-      id: 's-22',
-      category: 'school',
-      english: 'The teacher is explaining the lesson.',
-      urdu: 'استاد سبق سمجھا رہے ہیں۔',
-      arabic: 'الْمُعَلِّمُ يَشْرَحُ الدَّرْسَ.',
-      hindi: 'शिक्षक पाठ समझा रहे हैं।',
-      order: 22
+      "id": "en-v",
+      "language": "en",
+      "letter": "V",
+      "phonics": "/viː/",
+      "exampleWord": "Van",
+      "exampleWordTranslation": "Gari (گاڑی / वैन)",
+      "meaning": "Takes kids safely to school",
+      "imageUrl": "🚐",
+      "audioText": "V for Van",
+      "order": 22
     },
     {
-      id: 's-23',
-      category: 'school',
-      english: 'I have completed my homework.',
-      urdu: 'میں نے اپنا ہوم ورک مکمل کر لیا ہے۔',
-      arabic: 'أَنْهَيْتُ وَاجِبِي الْمَنْزِلِيَّ.',
-      hindi: 'मैंने अपना होमवर्क पूरा कर लिया है।',
-      order: 23
+      "id": "en-w",
+      "language": "en",
+      "letter": "W",
+      "phonics": "/ˈdʌbəl.juː/",
+      "exampleWord": "Watch",
+      "exampleWordTranslation": "Ghadi (گھڑی / घड़ी)",
+      "meaning": "Tells us what time it is",
+      "imageUrl": "⌚",
+      "audioText": "W for Watch",
+      "order": 23
     },
     {
-      id: 's-24',
-      category: 'school',
-      english: 'Can I borrow your pencil?',
-      urdu: 'کیا میں آپ کی پنسل لے سکتا ہوں؟',
-      arabic: 'هَلْ يُمْكِنُنِي اسْتِعَارَةُ قَلَمِكَ الرَّصَاصِ؟',
-      hindi: 'क्या मैं आपकी पेंसिल उधार ले सकता हूँ?',
-      order: 24
+      "id": "en-x",
+      "language": "en",
+      "letter": "X",
+      "phonics": "/ɛks/",
+      "exampleWord": "Xylophone",
+      "exampleWordTranslation": "Baja (ساز / जलतरंग)",
+      "meaning": "Musical instrument with colorful bars",
+      "imageUrl": "🎼",
+      "audioText": "X for Xylophone",
+      "order": 24
     },
     {
-      id: 's-25',
-      category: 'school',
-      english: 'Our exams will start next week.',
-      urdu: 'ہمارے امتحانات اگلے ہفتے شروع ہوں گے۔',
-      arabic: 'سَتَبْدَأُ امْتِحَانَاتُنَا الْأُسْبُوعَ الْقَادِمَ.',
-      hindi: 'हमारी परीक्षाएं अगले हफ्ते शुरू होंगी।',
-      order: 25
+      "id": "en-y",
+      "language": "en",
+      "letter": "Y",
+      "phonics": "/waɪ/",
+      "exampleWord": "Yak",
+      "exampleWordTranslation": "Pahari Bail (پہاڑی بیل)",
+      "meaning": "Fluffy mountain animal",
+      "imageUrl": "🐂",
+      "audioText": "Y for Yak",
+      "order": 25
     },
     {
-      id: 's-26',
-      category: 'greetings',
-      english: 'How is everyone in your family?',
-      urdu: 'آپ کے گھر والے کیسے ہیں؟',
-      arabic: 'كَيْفَ حَالُ الْجَمِيعِ فِي عَائِلَتِكَ؟',
-      hindi: 'आपके परिवार में सब कैसे हैं?',
-      order: 26
+      "id": "en-z",
+      "language": "en",
+      "letter": "Z",
+      "phonics": "/zɛd/",
+      "exampleWord": "Zebra",
+      "exampleWordTranslation": "Zebra (زیبرا / ज़ेब्रा)",
+      "meaning": "Wild horse with black and white stripes",
+      "imageUrl": "🦓",
+      "audioText": "Z for Zebra",
+      "order": 26
     },
     {
-      id: 's-27',
-      category: 'greetings',
-      english: 'Welcome to our home.',
-      urdu: 'ہمارے گھر میں خوش آمدید۔',
-      arabic: 'مَرْحَبًا بِكُمْ فِي مَنْزِلِنَا.',
-      hindi: 'हमारे घर में आपका स्वागत है।',
-      order: 27
+      "id": "ur-alif",
+      "language": "ur",
+      "letter": "ا",
+      "phonics": "Alif",
+      "exampleWord": "انار",
+      "exampleWordTranslation": "Pomegranate (Anar)",
+      "meaning": "Meetha laal phal",
+      "imageUrl": "🍎",
+      "audioText": "الف سے انار",
+      "order": 1
     },
     {
-      id: 's-28',
-      category: 'greetings',
-      english: 'See you again tomorrow.',
-      urdu: 'کل آپ سے دوبارہ ملاقات ہوگی۔',
-      arabic: 'أَرَاكَ غَدًا مَرَّةً أُخْرَى.',
-      hindi: 'कल आपसे फिर मुलाकात होगी।',
-      order: 28
+      "id": "ur-be",
+      "language": "ur",
+      "letter": "ب",
+      "phonics": "Bay",
+      "exampleWord": "بلی",
+      "exampleWordTranslation": "Cat (Billi)",
+      "meaning": "Pyari si billi",
+      "imageUrl": "🐱",
+      "audioText": "بے سے بلی",
+      "order": 2
     },
     {
-      id: 's-29',
-      category: 'manners',
-      english: 'I am sorry for my mistake.',
-      urdu: 'میں اپنی غلطی کے لیے معافی چاہتا ہوں۔',
-      arabic: 'أَنَا آسِفٌ عَلَى خَطَئِي.',
-      hindi: 'मैं अपनी गलती के लिए माफ़ी चाहता हूँ।',
-      order: 29
+      "id": "ur-pe",
+      "language": "ur",
+      "letter": "پ",
+      "phonics": "Pay",
+      "exampleWord": "پتنگ",
+      "exampleWordTranslation": "Kite (Patang)",
+      "meaning": "Aasman mein udne wali patang",
+      "imageUrl": "🪁",
+      "audioText": "پے سے پتنگ",
+      "order": 3
     },
     {
-      id: 's-30',
-      category: 'manners',
-      english: 'Excuse me, where is the restroom?',
-      urdu: 'معاف کیجیے گا، واش روم کہاں ہے؟',
-      arabic: 'مَعْذِرَةً، أَيْنَ دَوْرَةُ الْمِيَاهِ؟',
-      hindi: 'माफ़ कीजिएगा, शौचालय कहाँ है?',
-      order: 30
+      "id": "ur-te",
+      "language": "ur",
+      "letter": "ت",
+      "phonics": "Tay",
+      "exampleWord": "تتلی",
+      "exampleWordTranslation": "Butterfly (Titli)",
+      "meaning": "Rang barangi titli",
+      "imageUrl": "🦋",
+      "audioText": "تے سے تتلی",
+      "order": 4
     },
     {
-      id: 's-31',
-      category: 'manners',
-      english: 'Could you please repeat that?',
-      urdu: 'کیا آپ براہ کرم اسے دہرا سکتے ہیں؟',
-      arabic: 'هَلْ يُمْكِنُكَ إِعَادَةُ ذَلِكَ مِنْ فَضْلِكَ؟',
-      hindi: 'क्या आप कृपया इसे दोहरा सकते हैं?',
-      order: 31
+      "id": "ur-tte",
+      "language": "ur",
+      "letter": "ٹ",
+      "phonics": "Ttay",
+      "exampleWord": "ٹماٹر",
+      "exampleWordTranslation": "Tomato (Tamatar)",
+      "meaning": "Surkh laal tamatar",
+      "imageUrl": "🍅",
+      "audioText": "ٹے سے ٹماٹر",
+      "order": 5
     },
     {
-      id: 's-32',
-      category: 'manners',
-      english: 'You are welcome. (Reply to thank you)',
-      urdu: 'کوئی بات نہیں / خوش آمدید۔',
-      arabic: 'عَلَى الرُّحْبِ وَالسَّعَةِ.',
-      hindi: 'कोई बात नहीं / आपका स्वागत है।',
-      order: 32
+      "id": "ur-se",
+      "language": "ur",
+      "letter": "ث",
+      "phonics": "Say",
+      "exampleWord": "ثمر",
+      "exampleWordTranslation": "Fruits (Samar)",
+      "meaning": "Taaza meetha phal",
+      "imageUrl": "🍇",
+      "audioText": "ثے سے ثمر",
+      "order": 6
     },
     {
-      id: 's-33',
-      category: 'feelings',
-      english: 'I feel very tired right now.',
-      urdu: 'میں اس وقت بہت تھکاوٹ محسوس کر رہا ہوں۔',
-      arabic: 'أَشْعُرُ بِتَعَبٍ شَدِيدٍ الْآنَ.',
-      hindi: 'मुझे अभी बहुत थकान महसूस हो रही है।',
-      order: 33
+      "id": "ur-jeem",
+      "language": "ur",
+      "letter": "ج",
+      "phonics": "Jeem",
+      "exampleWord": "جہاز",
+      "exampleWordTranslation": "Airplane (Jahaz)",
+      "meaning": "Hawa mein udne wala jahaz",
+      "imageUrl": "✈️",
+      "audioText": "جیم سے جہاز",
+      "order": 7
     },
     {
-      id: 's-34',
-      category: 'feelings',
-      english: 'I am excited about the trip.',
-      urdu: 'میں اس سفر کے لیے بہت پرجوش ہوں۔',
-      arabic: 'أَنَا مُتَحَمِّسٌ لِلرِّحْلَةِ.',
-      hindi: 'मैं इस यात्रा के लिए बहुत उत्साहित हूँ।',
-      order: 34
+      "id": "ur-che",
+      "language": "ur",
+      "letter": "چ",
+      "phonics": "Chay",
+      "exampleWord": "چاند",
+      "exampleWordTranslation": "Moon (Chaand)",
+      "meaning": "Raat ka chamakta chaand",
+      "imageUrl": "🌙",
+      "audioText": "چے سے چاند",
+      "order": 8
     },
     {
-      id: 's-35',
-      category: 'feelings',
-      english: 'She is sad because she lost her watch.',
-      urdu: 'وہ اداس ہے کیونکہ اس کی گھڑی کھو گئی ہے۔',
-      arabic: 'هِيَ حَزِينَةٌ لِأَنَّهَا أَضَاعَتْ سَاعَتَهَا.',
-      hindi: 'वह उदास है क्योंकि उसकी घड़ी खो गई है।',
-      order: 35
+      "id": "ur-bari-he",
+      "language": "ur",
+      "letter": "ح",
+      "phonics": "Hay",
+      "exampleWord": "حقہ / حوض",
+      "exampleWordTranslation": "Pool (Hauz)",
+      "meaning": "Saaf paani ka hauz",
+      "imageUrl": "💧",
+      "audioText": "حے سے حوض",
+      "order": 9
     },
     {
-      id: 's-36',
-      category: 'feelings',
-      english: 'He is angry about the delay.',
-      urdu: 'وہ تاخیر کی وجہ سے غصے میں ہے۔',
-      arabic: 'إِنَّهُ غَاضِبٌ بِسَبَبِ التَّأْخِيرِ.',
-      hindi: 'वह देरी की वजह से गुस्से में है।',
-      order: 36
+      "id": "ur-khe",
+      "language": "ur",
+      "letter": "خ",
+      "phonics": "Khay",
+      "exampleWord": "خرگوش",
+      "exampleWordTranslation": "Rabbit (Khargosh)",
+      "meaning": "Safaid pyara khargosh",
+      "imageUrl": "🐰",
+      "audioText": "خے سے خرگوش",
+      "order": 10
     },
     {
-      id: 's-37',
-      category: 'daily',
-      english: 'I am going to the market to buy groceries.',
-      urdu: 'میں سودا سلف خریدنے بازار جا رہا ہوں۔',
-      arabic: 'أَنَا ذَاهِبٌ إِلَى السُّوقِ لِشِرَاءِ الْبِقَالَةِ.',
-      hindi: 'मैं किराने का सामान खरीदने बाज़ार जा रहा हूँ।',
-      order: 37
+      "id": "ur-daal",
+      "language": "ur",
+      "letter": "د",
+      "phonics": "Daal",
+      "exampleWord": "درخت",
+      "exampleWordTranslation": "Tree (Darakht)",
+      "meaning": "Hara bhara darakht",
+      "imageUrl": "🌳",
+      "audioText": "دال سے درخت",
+      "order": 11
+    },
+    {
+      "id": "ur-ddaal",
+      "language": "ur",
+      "letter": "ڈ",
+      "phonics": "Ddaal",
+      "exampleWord": "ڈول",
+      "exampleWordTranslation": "Bucket (Dol)",
+      "meaning": "Paani bharne wala dol",
+      "imageUrl": "🪣",
+      "audioText": "ڈال سے ڈول",
+      "order": 12
+    },
+    {
+      "id": "ur-zaal",
+      "language": "ur",
+      "letter": "ذ",
+      "phonics": "Zaal",
+      "exampleWord": "ذخیرہ",
+      "exampleWordTranslation": "Store/Treasure",
+      "meaning": "Ilm ka zakheera",
+      "imageUrl": "📦",
+      "audioText": "ذال سے ذخیرہ",
+      "order": 13
+    },
+    {
+      "id": "ur-re",
+      "language": "ur",
+      "letter": "ر",
+      "phonics": "Ray",
+      "exampleWord": "ریل گاڑی",
+      "exampleWordTranslation": "Train (Rail Gari)",
+      "meaning": "Chhuk chhuk rail gari",
+      "imageUrl": "🚆",
+      "audioText": "رے سے ریل گاڑی",
+      "order": 14
+    },
+    {
+      "id": "ur-rre",
+      "language": "ur",
+      "letter": "ڑ",
+      "phonics": "Rray",
+      "exampleWord": "پہاڑ",
+      "exampleWordTranslation": "Mountain (Pahar)",
+      "meaning": "Ooncha pahar",
+      "imageUrl": "🏔️",
+      "audioText": "ڑے سے پہاڑ",
+      "order": 15
+    },
+    {
+      "id": "ur-ze",
+      "language": "ur",
+      "letter": "ز",
+      "phonics": "Zay",
+      "exampleWord": "زرافہ",
+      "exampleWordTranslation": "Giraffe (Zarafa)",
+      "meaning": "Lambi gardan wala zarafa",
+      "imageUrl": "🦒",
+      "audioText": "زے سے زرافہ",
+      "order": 16
+    },
+    {
+      "id": "ur-seen",
+      "language": "ur",
+      "letter": "س",
+      "phonics": "Seen",
+      "exampleWord": "سیب",
+      "exampleWordTranslation": "Apple (Saib)",
+      "meaning": "Taaza meetha laal seb",
+      "imageUrl": "🍎",
+      "audioText": "سین سے سیب",
+      "order": 17
+    },
+    {
+      "id": "ur-sheen",
+      "language": "ur",
+      "letter": "ش",
+      "phonics": "Sheen",
+      "exampleWord": "شیر",
+      "exampleWordTranslation": "Lion (Sher)",
+      "meaning": "Jungle ka raja sher",
+      "imageUrl": "🦁",
+      "audioText": "شین سے شیر",
+      "order": 18
+    },
+    {
+      "id": "ur-swaad",
+      "language": "ur",
+      "letter": "ص",
+      "phonics": "Swaad",
+      "exampleWord": "صابن",
+      "exampleWordTranslation": "Soap (Sabun)",
+      "meaning": "Haath dhone ka sabun",
+      "imageUrl": "🧼",
+      "audioText": "صاد سے صابن",
+      "order": 19
+    },
+    {
+      "id": "ur-zwaad",
+      "language": "ur",
+      "letter": "ض",
+      "phonics": "Zwaad",
+      "exampleWord": "ضعیف",
+      "exampleWordTranslation": "Elderly person",
+      "meaning": "Buzurg insaan",
+      "imageUrl": "👴",
+      "audioText": "ضاد سے ضعیف",
+      "order": 20
+    },
+    {
+      "id": "ur-toye",
+      "language": "ur",
+      "letter": "ط",
+      "phonics": "Toye",
+      "exampleWord": "طوطا",
+      "exampleWordTranslation": "Parrot (Tota)",
+      "meaning": "Hara bhara tota",
+      "imageUrl": "🦜",
+      "audioText": "طوئے سے طوطا",
+      "order": 21
+    },
+    {
+      "id": "ur-zoye",
+      "language": "ur",
+      "letter": "ظ",
+      "phonics": "Zoye",
+      "exampleWord": "ظروف",
+      "exampleWordTranslation": "Utensils (Zuroof)",
+      "meaning": "Bartan",
+      "imageUrl": "🥣",
+      "audioText": "ظوئے سے ظروف",
+      "order": 22
+    },
+    {
+      "id": "ur-ain",
+      "language": "ur",
+      "letter": "ع",
+      "phonics": "Ain",
+      "exampleWord": "عینک",
+      "exampleWordTranslation": "Glasses (Ainak)",
+      "meaning": "Dekhne ki ainak",
+      "imageUrl": "👓",
+      "audioText": "عین سے عینک",
+      "order": 23
+    },
+    {
+      "id": "ur-ghain",
+      "language": "ur",
+      "letter": "غ",
+      "phonics": "Ghain",
+      "exampleWord": "غبارہ",
+      "exampleWordTranslation": "Balloon (Ghubara)",
+      "meaning": "Rang baranga ghubara",
+      "imageUrl": "🎈",
+      "audioText": "غین سے غبارہ",
+      "order": 24
+    },
+    {
+      "id": "ur-fe",
+      "language": "ur",
+      "letter": "ف",
+      "phonics": "Fay",
+      "exampleWord": "فوارہ",
+      "exampleWordTranslation": "Fountain (Fawwara)",
+      "meaning": "Paani ka khubsurat fawwara",
+      "imageUrl": "⛲",
+      "audioText": "فے سے فوارہ",
+      "order": 25
+    },
+    {
+      "id": "ur-qaaf",
+      "language": "ur",
+      "letter": "ق",
+      "phonics": "Qaaf",
+      "exampleWord": "قلم",
+      "exampleWordTranslation": "Pen (Qalam)",
+      "meaning": "Likhne wala qalam",
+      "imageUrl": "✒️",
+      "audioText": "قاف سے قلم",
+      "order": 26
+    },
+    {
+      "id": "ur-kaaf",
+      "language": "ur",
+      "letter": "ک",
+      "phonics": "Kaaf",
+      "exampleWord": "کتاب",
+      "exampleWordTranslation": "Book (Kitaab)",
+      "meaning": "Ilm wali kitaab",
+      "imageUrl": "📖",
+      "audioText": "کاف سے کتاب",
+      "order": 27
+    },
+    {
+      "id": "ur-gaaf",
+      "language": "ur",
+      "letter": "گ",
+      "phonics": "Gaaf",
+      "exampleWord": "گائے",
+      "exampleWordTranslation": "Cow (Gaaye)",
+      "meaning": "Meetha doodh dene wali gaaye",
+      "imageUrl": "🐄",
+      "audioText": "گاف سے گائے",
+      "order": 28
+    },
+    {
+      "id": "ur-laam",
+      "language": "ur",
+      "letter": "ل",
+      "phonics": "Laam",
+      "exampleWord": "لومڑی",
+      "exampleWordTranslation": "Fox (Lomri)",
+      "meaning": "Chalaak lomri",
+      "imageUrl": "🦊",
+      "audioText": "لام سے لومڑی",
+      "order": 29
+    },
+    {
+      "id": "ur-meem",
+      "language": "ur",
+      "letter": "م",
+      "phonics": "Meem",
+      "exampleWord": "مور",
+      "exampleWordTranslation": "Peacock (Mor)",
+      "meaning": "Khubsurat pankhon wala mor",
+      "imageUrl": "🦚",
+      "audioText": "میم سے مور",
+      "order": 30
+    },
+    {
+      "id": "ur-noon",
+      "language": "ur",
+      "letter": "ن",
+      "phonics": "Noon",
+      "exampleWord": "نل",
+      "exampleWordTranslation": "Tap (Nal)",
+      "meaning": "Paani ka nal",
+      "imageUrl": "🚰",
+      "audioText": "نون سے نل",
+      "order": 31
+    },
+    {
+      "id": "ur-wao",
+      "language": "ur",
+      "letter": "و",
+      "phonics": "Wao",
+      "exampleWord": "وردی",
+      "exampleWordTranslation": "Uniform (Wardi)",
+      "meaning": "School ki saaf suthri wardi",
+      "imageUrl": "👔",
+      "audioText": "واؤ سے وردی",
+      "order": 32
+    },
+    {
+      "id": "ur-chhoti-he",
+      "language": "ur",
+      "letter": "ہ",
+      "phonics": "Chhoti Hay",
+      "exampleWord": "ہاتھی",
+      "exampleWordTranslation": "Elephant (Hathi)",
+      "meaning": "Bada hathi",
+      "imageUrl": "🐘",
+      "audioText": "ہے سے ہاتھی",
+      "order": 33
+    },
+    {
+      "id": "ur-hamza",
+      "language": "ur",
+      "letter": "ء",
+      "phonics": "Hamza",
+      "exampleWord": "چائے",
+      "exampleWordTranslation": "Tea (Chai)",
+      "meaning": "Garam garam chai",
+      "imageUrl": "☕",
+      "audioText": "ہمزہ",
+      "order": 34
+    },
+    {
+      "id": "ur-chhoti-ye",
+      "language": "ur",
+      "letter": "ی",
+      "phonics": "Chhoti Yay",
+      "exampleWord": "یکہ",
+      "exampleWordTranslation": "Horse Cart",
+      "meaning": "Ghora gari",
+      "imageUrl": "🛺",
+      "audioText": "چھوٹی یے سے یکہ",
+      "order": 35
+    },
+    {
+      "id": "ur-bari-ye",
+      "language": "ur",
+      "letter": "ے",
+      "phonics": "Bari Yay",
+      "exampleWord": "طوطے",
+      "exampleWordTranslation": "Parrots (Tote)",
+      "meaning": "Bari yay",
+      "imageUrl": "🦜",
+      "audioText": "بڑی یے",
+      "order": 36
+    },
+    {
+      "id": "ar-alif",
+      "language": "ar",
+      "letter": "أ",
+      "phonics": "Alif",
+      "exampleWord": "أَسَد",
+      "exampleWordTranslation": "Lion (Asad)",
+      "meaning": "Malik al-Ghabah",
+      "imageUrl": "🦁",
+      "audioText": "أَلِف أَسَد",
+      "order": 1
+    },
+    {
+      "id": "ar-baa",
+      "language": "ar",
+      "letter": "ب",
+      "phonics": "Baa",
+      "exampleWord": "بَيْت",
+      "exampleWordTranslation": "House (Bayt)",
+      "meaning": "Manzil jameel",
+      "imageUrl": "🏠",
+      "audioText": "بَاء بَيْت",
+      "order": 2
+    },
+    {
+      "id": "ar-taa",
+      "language": "ar",
+      "letter": "ت",
+      "phonics": "Taa",
+      "exampleWord": "تُفَّاح",
+      "exampleWordTranslation": "Apple (Tuffah)",
+      "meaning": "Fakiha lazeezah",
+      "imageUrl": "🍎",
+      "audioText": "تَاء تُفَّاح",
+      "order": 3
+    },
+    {
+      "id": "ar-thaa",
+      "language": "ar",
+      "letter": "ث",
+      "phonics": "Thaa",
+      "exampleWord": "ثَعْلَب",
+      "exampleWordTranslation": "Fox (Tha'lab)",
+      "meaning": "Hayawan zaki",
+      "imageUrl": "🦊",
+      "audioText": "ثَاء ثَعْلَب",
+      "order": 4
+    },
+    {
+      "id": "ar-jeem",
+      "language": "ar",
+      "letter": "ج",
+      "phonics": "Jeem",
+      "exampleWord": "جَمَل",
+      "exampleWordTranslation": "Camel (Jamal)",
+      "meaning": "Safeenat as-sahra",
+      "imageUrl": "🐫",
+      "audioText": "جِيم جَمَل",
+      "order": 5
+    },
+    {
+      "id": "ar-haa",
+      "language": "ar",
+      "letter": "ح",
+      "phonics": "Haa",
+      "exampleWord": "حِصَان",
+      "exampleWordTranslation": "Horse (Hisaan)",
+      "meaning": "Hayawan saree",
+      "imageUrl": "🐴",
+      "audioText": "حَاء حِصَان",
+      "order": 6
+    },
+    {
+      "id": "ar-khaa",
+      "language": "ar",
+      "letter": "خ",
+      "phonics": "Khaa",
+      "exampleWord": "خُبْز",
+      "exampleWordTranslation": "Bread (Khubz)",
+      "meaning": "Ta'am tayyib",
+      "imageUrl": "🍞",
+      "audioText": "خَاء خُبْز",
+      "order": 7
+    },
+    {
+      "id": "ar-daal",
+      "language": "ar",
+      "letter": "د",
+      "phonics": "Daal",
+      "exampleWord": "دُبّ",
+      "exampleWordTranslation": "Bear (Dubb)",
+      "meaning": "Hayawan kabeer",
+      "imageUrl": "🐻",
+      "audioText": "دَال دُبّ",
+      "order": 8
+    },
+    {
+      "id": "ar-dhaal",
+      "language": "ar",
+      "letter": "ذ",
+      "phonics": "Dhaal",
+      "exampleWord": "ذُرَة",
+      "exampleWordTranslation": "Corn (Dhurah)",
+      "meaning": "Nabat asfar lazeez",
+      "imageUrl": "🌽",
+      "audioText": "ذَال ذُرَة",
+      "order": 9
+    },
+    {
+      "id": "ar-raa",
+      "language": "ar",
+      "letter": "ر",
+      "phonics": "Raa",
+      "exampleWord": "رُمَّان",
+      "exampleWordTranslation": "Pomegranate (Rumman)",
+      "meaning": "Fakihat al-jannah",
+      "imageUrl": "🍎",
+      "audioText": "رَاء رُمَّان",
+      "order": 10
+    },
+    {
+      "id": "ar-zaay",
+      "language": "ar",
+      "letter": "ز",
+      "phonics": "Zaay",
+      "exampleWord": "زَهْرَة",
+      "exampleWordTranslation": "Flower (Zahrah)",
+      "meaning": "Zahrah jameelah",
+      "imageUrl": "🌸",
+      "audioText": "زَاي زَهْرَة",
+      "order": 11
+    },
+    {
+      "id": "ar-seen",
+      "language": "ar",
+      "letter": "س",
+      "phonics": "Seen",
+      "exampleWord": "سَمَكَة",
+      "exampleWordTranslation": "Fish (Samakah)",
+      "meaning": "Tasbah fi al-maa",
+      "imageUrl": "🐟",
+      "audioText": "سِين سَمَكَة",
+      "order": 12
+    },
+    {
+      "id": "ar-sheen",
+      "language": "ar",
+      "letter": "ش",
+      "phonics": "Sheen",
+      "exampleWord": "شَمْس",
+      "exampleWordTranslation": "Sun (Shams)",
+      "meaning": "Tudi' ad-dunya",
+      "imageUrl": "☀️",
+      "audioText": "شِين شَمْس",
+      "order": 13
+    },
+    {
+      "id": "ar-saad",
+      "language": "ar",
+      "letter": "ص",
+      "phonics": "Saad",
+      "exampleWord": "صَقْر",
+      "exampleWordTranslation": "Falcon (Saqr)",
+      "meaning": "Ta'ir qawi",
+      "imageUrl": "🦅",
+      "audioText": "صَاد صَقْر",
+      "order": 14
+    },
+    {
+      "id": "ar-daad",
+      "language": "ar",
+      "letter": "ض",
+      "phonics": "Daad",
+      "exampleWord": "ضِفْدَع",
+      "exampleWordTranslation": "Frog (Difda')",
+      "meaning": "Hayawan yaqfiz",
+      "imageUrl": "🐸",
+      "audioText": "ضَاد ضِفْدَع",
+      "order": 15
+    },
+    {
+      "id": "ar-taa2",
+      "language": "ar",
+      "letter": "ط",
+      "phonics": "Taa (Emp)",
+      "exampleWord": "طَيَّارَة",
+      "exampleWordTranslation": "Plane (Tayyarah)",
+      "meaning": "Tateer fi as-samaa",
+      "imageUrl": "✈️",
+      "audioText": "طَاء طَيَّارَة",
+      "order": 16
+    },
+    {
+      "id": "ar-zaa2",
+      "language": "ar",
+      "letter": "ظ",
+      "phonics": "Zaa (Emp)",
+      "exampleWord": "ظَرْف",
+      "exampleWordTranslation": "Envelope (Zarf)",
+      "meaning": "Rasail jameelah",
+      "imageUrl": "✉️",
+      "audioText": "ظَاء ظَرْف",
+      "order": 17
+    },
+    {
+      "id": "ar-ayn",
+      "language": "ar",
+      "letter": "ع",
+      "phonics": "Ayn",
+      "exampleWord": "عَيْن",
+      "exampleWordTranslation": "Eye (Ayn)",
+      "meaning": "Nara biha al-ashyaa",
+      "imageUrl": "👁️",
+      "audioText": "عَيْن عَيْن",
+      "order": 18
+    },
+    {
+      "id": "ar-ghayn",
+      "language": "ar",
+      "letter": "غ",
+      "phonics": "Ghayn",
+      "exampleWord": "غَزَال",
+      "exampleWordTranslation": "Deer (Ghazaal)",
+      "meaning": "Ghazal jameel saree",
+      "imageUrl": "🦌",
+      "audioText": "غَيْن غَزَال",
+      "order": 19
+    },
+    {
+      "id": "ar-faa",
+      "language": "ar",
+      "letter": "ف",
+      "phonics": "Faa",
+      "exampleWord": "فِيل",
+      "exampleWordTranslation": "Elephant (Feel)",
+      "meaning": "Hayawan dakhm",
+      "imageUrl": "🐘",
+      "audioText": "فَاء فِيل",
+      "order": 20
+    },
+    {
+      "id": "ar-qaaf",
+      "language": "ar",
+      "letter": "ق",
+      "phonics": "Qaaf",
+      "exampleWord": "قَمَر",
+      "exampleWordTranslation": "Moon (Qamar)",
+      "meaning": "Yudi' fi al-layl",
+      "imageUrl": "🌙",
+      "audioText": "قَاف قَمَر",
+      "order": 21
+    },
+    {
+      "id": "ar-kaaf",
+      "language": "ar",
+      "letter": "ك",
+      "phonics": "Kaaf",
+      "exampleWord": "كِتَاب",
+      "exampleWordTranslation": "Book (Kitaab)",
+      "meaning": "Naqra'u fihi",
+      "imageUrl": "📖",
+      "audioText": "كَاف كِتَاب",
+      "order": 22
+    },
+    {
+      "id": "ar-laam",
+      "language": "ar",
+      "letter": "ل",
+      "phonics": "Laam",
+      "exampleWord": "لَيْمُون",
+      "exampleWordTranslation": "Lemon (Laymoon)",
+      "meaning": "Hamid wa munish",
+      "imageUrl": "🍋",
+      "audioText": "لَام لَيْمُون",
+      "order": 23
+    },
+    {
+      "id": "ar-meem",
+      "language": "ar",
+      "letter": "م",
+      "phonics": "Meem",
+      "exampleWord": "مَسْجِد",
+      "exampleWordTranslation": "Mosque (Masjid)",
+      "meaning": "Bayt Allah ta'ala",
+      "imageUrl": "🕌",
+      "audioText": "مِيم مَسْجِد",
+      "order": 24
+    },
+    {
+      "id": "ar-noon",
+      "language": "ar",
+      "letter": "ن",
+      "phonics": "Noon",
+      "exampleWord": "نَجْم",
+      "exampleWordTranslation": "Star (Najm)",
+      "meaning": "Yalma' fi as-samaa",
+      "imageUrl": "⭐",
+      "audioText": "نُون نَجْم",
+      "order": 25
+    },
+    {
+      "id": "ar-haa2",
+      "language": "ar",
+      "letter": "هـ",
+      "phonics": "Haa",
+      "exampleWord": "هِلَال",
+      "exampleWordTranslation": "Crescent (Hilal)",
+      "meaning": "Bidayat ash-shahr",
+      "imageUrl": "🌙",
+      "audioText": "هَاء هِلَال",
+      "order": 26
+    },
+    {
+      "id": "ar-waw",
+      "language": "ar",
+      "letter": "و",
+      "phonics": "Waw",
+      "exampleWord": "وَرْدَة",
+      "exampleWordTranslation": "Rose (Wardah)",
+      "meaning": "Wardah hamra jameelah",
+      "imageUrl": "🌹",
+      "audioText": "وَاو وَرْدَة",
+      "order": 27
+    },
+    {
+      "id": "ar-yaa",
+      "language": "ar",
+      "letter": "ي",
+      "phonics": "Yaa",
+      "exampleWord": "يَد",
+      "exampleWordTranslation": "Hand (Yad)",
+      "meaning": "Yad naqiyah",
+      "imageUrl": "✋",
+      "audioText": "يَاء يَد",
+      "order": 28
+    },
+    {
+      "id": "hi-a",
+      "language": "hi",
+      "letter": "अ",
+      "phonics": "A",
+      "exampleWord": "अनार",
+      "exampleWordTranslation": "Pomegranate (Anaar)",
+      "meaning": "Laal daano wala phal",
+      "imageUrl": "🍎",
+      "audioText": "अ से अनार",
+      "order": 1
+    },
+    {
+      "id": "hi-aa",
+      "language": "hi",
+      "letter": "आ",
+      "phonics": "Aa",
+      "exampleWord": "आम",
+      "exampleWordTranslation": "Mango (Aam)",
+      "meaning": "Phalo ka raja",
+      "imageUrl": "🥭",
+      "audioText": "आ से आम",
+      "order": 2
+    },
+    {
+      "id": "hi-i",
+      "language": "hi",
+      "letter": "इ",
+      "phonics": "I",
+      "exampleWord": "इमली",
+      "exampleWordTranslation": "Tamarind (Imli)",
+      "meaning": "Khatti meethi imli",
+      "imageUrl": "🫒",
+      "audioText": "इ से इमली",
+      "order": 3
+    },
+    {
+      "id": "hi-ee",
+      "language": "hi",
+      "letter": "ई",
+      "phonics": "Ee",
+      "exampleWord": "ईख",
+      "exampleWordTranslation": "Sugarcane (Eekh)",
+      "meaning": "Meetha ganna",
+      "imageUrl": "🎋",
+      "audioText": "ई से ईख",
+      "order": 4
+    },
+    {
+      "id": "hi-u",
+      "language": "hi",
+      "letter": "उ",
+      "phonics": "U",
+      "exampleWord": "उल्लू",
+      "exampleWordTranslation": "Owl (Ullu)",
+      "meaning": "Raat ko jagne wala pakshi",
+      "imageUrl": "🦉",
+      "audioText": "उ से उल्लू",
+      "order": 5
+    },
+    {
+      "id": "hi-oo",
+      "language": "hi",
+      "letter": "ऊ",
+      "phonics": "Oo",
+      "exampleWord": "ऊन",
+      "exampleWordTranslation": "Wool (Oon)",
+      "meaning": "Garam kapde banane wala oon",
+      "imageUrl": "🧶",
+      "audioText": "ऊ से ऊन",
+      "order": 6
+    },
+    {
+      "id": "hi-ri",
+      "language": "hi",
+      "letter": "ऋ",
+      "phonics": "Ri",
+      "exampleWord": "ऋषि",
+      "exampleWordTranslation": "Sage (Rishi)",
+      "meaning": "Gyan dene wale sadhu",
+      "imageUrl": "🧘",
+      "audioText": "ऋ से ऋषि",
+      "order": 7
+    },
+    {
+      "id": "hi-e",
+      "language": "hi",
+      "letter": "ए",
+      "phonics": "E",
+      "exampleWord": "एड़ी",
+      "exampleWordTranslation": "Heel (Aedi)",
+      "meaning": "Pair ki aedi",
+      "imageUrl": "🦶",
+      "audioText": "ए से एड़ी",
+      "order": 8
+    },
+    {
+      "id": "hi-ai",
+      "language": "hi",
+      "letter": "ऐ",
+      "phonics": "Ai",
+      "exampleWord": "ऐनक",
+      "exampleWordTranslation": "Spectacles (Ainak)",
+      "meaning": "Aankhon ka chashma",
+      "imageUrl": "👓",
+      "audioText": "ऐ से ऐनक",
+      "order": 9
+    },
+    {
+      "id": "hi-o",
+      "language": "hi",
+      "letter": "ओ",
+      "phonics": "O",
+      "exampleWord": "ओखली",
+      "exampleWordTranslation": "Mortar (Okhli)",
+      "meaning": "Kootne wali okhli",
+      "imageUrl": "🥣",
+      "audioText": "ओ से ओखली",
+      "order": 10
+    },
+    {
+      "id": "hi-au",
+      "language": "hi",
+      "letter": "औ",
+      "phonics": "Au",
+      "exampleWord": "औरत",
+      "exampleWordTranslation": "Woman (Aurat)",
+      "meaning": "Pyari maa",
+      "imageUrl": "👩",
+      "audioText": "औ से औरत",
+      "order": 11
+    },
+    {
+      "id": "hi-ang",
+      "language": "hi",
+      "letter": "अं",
+      "phonics": "Ang",
+      "exampleWord": "अंगूर",
+      "exampleWordTranslation": "Grapes (Angoor)",
+      "meaning": "Meethe angoor",
+      "imageUrl": "🍇",
+      "audioText": "अं से अंगूर",
+      "order": 12
+    },
+    {
+      "id": "hi-ka",
+      "language": "hi",
+      "letter": "क",
+      "phonics": "Ka",
+      "exampleWord": "कमल",
+      "exampleWordTranslation": "Lotus (Kamal)",
+      "meaning": "Hamara rashtriya phool",
+      "imageUrl": "🪷",
+      "audioText": "क से कमल",
+      "order": 13
+    },
+    {
+      "id": "hi-kha",
+      "language": "hi",
+      "letter": "ख",
+      "phonics": "Kha",
+      "exampleWord": "खरगोश",
+      "exampleWordTranslation": "Rabbit (Khargosh)",
+      "meaning": "Safed chanchal khargosh",
+      "imageUrl": "🐰",
+      "audioText": "ख से खरगोश",
+      "order": 14
+    },
+    {
+      "id": "hi-ga",
+      "language": "hi",
+      "letter": "ग",
+      "phonics": "Ga",
+      "exampleWord": "गमला",
+      "exampleWordTranslation": "Flower Pot (Gamla)",
+      "meaning": "Paudhe lagane ka gamla",
+      "imageUrl": "🪴",
+      "audioText": "ग से गमला",
+      "order": 15
+    },
+    {
+      "id": "hi-gha",
+      "language": "hi",
+      "letter": "घ",
+      "phonics": "Gha",
+      "exampleWord": "घड़ी",
+      "exampleWordTranslation": "Clock (Ghadi)",
+      "meaning": "Samay batane wali ghadi",
+      "imageUrl": "⏰",
+      "audioText": "घ से घड़ी",
+      "order": 16
+    },
+    {
+      "id": "hi-cha",
+      "language": "hi",
+      "letter": "च",
+      "phonics": "Cha",
+      "exampleWord": "चम्मच",
+      "exampleWordTranslation": "Spoon (Chammach)",
+      "meaning": "Kheer khane ka chammach",
+      "imageUrl": "🥄",
+      "audioText": "च से चम्मच",
+      "order": 17
+    },
+    {
+      "id": "hi-chha",
+      "language": "hi",
+      "letter": "छ",
+      "phonics": "Chha",
+      "exampleWord": "छतरी",
+      "exampleWordTranslation": "Umbrella (Chhatri)",
+      "meaning": "Barish me bachane wali chhatri",
+      "imageUrl": "☂️",
+      "audioText": "छ से छतरी",
+      "order": 18
+    },
+    {
+      "id": "hi-ja",
+      "language": "hi",
+      "letter": "ज",
+      "phonics": "Ja",
+      "exampleWord": "जहाज",
+      "exampleWordTranslation": "Ship/Airplane",
+      "meaning": "Pani aur hawa me chalne wala",
+      "imageUrl": "🚢",
+      "audioText": "ज से जहाज",
+      "order": 19
+    },
+    {
+      "id": "hi-jha",
+      "language": "hi",
+      "letter": "झ",
+      "phonics": "Jha",
+      "exampleWord": "झंडा",
+      "exampleWordTranslation": "Flag (Jhanda)",
+      "meaning": "Hamara pyara Tiranga",
+      "imageUrl": "🇮🇳",
+      "audioText": "झ से झंडा",
+      "order": 20
+    },
+    {
+      "id": "hi-ta",
+      "language": "hi",
+      "letter": "ट",
+      "phonics": "Ta",
+      "exampleWord": "टमाटर",
+      "exampleWordTranslation": "Tomato (Tamatar)",
+      "meaning": "Lal lal tamatar",
+      "imageUrl": "🍅",
+      "audioText": "ट से टमाटर",
+      "order": 21
+    },
+    {
+      "id": "hi-tha",
+      "language": "hi",
+      "letter": "ठ",
+      "phonics": "Tha",
+      "exampleWord": "ठठेरा",
+      "exampleWordTranslation": "Tinker/Coppersmith",
+      "meaning": "Bartan banane wala",
+      "imageUrl": "🔨",
+      "audioText": "ठ से ठठेरा",
+      "order": 22
+    },
+    {
+      "id": "hi-da",
+      "language": "hi",
+      "letter": "ड",
+      "phonics": "Da",
+      "exampleWord": "डमरू",
+      "exampleWordTranslation": "Small Drum (Damru)",
+      "meaning": "Baja",
+      "imageUrl": "🪘",
+      "audioText": "ड से डमरू",
+      "order": 23
+    },
+    {
+      "id": "hi-dha",
+      "language": "hi",
+      "letter": "ढ",
+      "phonics": "Dha",
+      "exampleWord": "ढक्कन",
+      "exampleWordTranslation": "Lid (Dhakkan)",
+      "meaning": "Bartan dhakne ka",
+      "imageUrl": "🍲",
+      "audioText": "ढ से ढक्कन",
+      "order": 24
+    },
+    {
+      "id": "hi-ta2",
+      "language": "hi",
+      "letter": "त",
+      "phonics": "Ta",
+      "exampleWord": "तरबूज",
+      "exampleWordTranslation": "Watermelon (Tarbooz)",
+      "meaning": "Meetha rasila tarbooz",
+      "imageUrl": "🍉",
+      "audioText": "त से तरबूज",
+      "order": 25
+    },
+    {
+      "id": "hi-tha2",
+      "language": "hi",
+      "letter": "थ",
+      "phonics": "Tha",
+      "exampleWord": "थर्मस",
+      "exampleWordTranslation": "Thermos (Thermos)",
+      "meaning": "Garam paani rakhne ka",
+      "imageUrl": "🍶",
+      "audioText": "थ से थर्मस",
+      "order": 26
+    },
+    {
+      "id": "hi-da2",
+      "language": "hi",
+      "letter": "द",
+      "phonics": "Da",
+      "exampleWord": "दवात",
+      "exampleWordTranslation": "Inkpot (Dawaat)",
+      "meaning": "Siyahi ki dawat",
+      "imageUrl": "🖋️",
+      "audioText": "द से दवात",
+      "order": 27
+    },
+    {
+      "id": "hi-dha2",
+      "language": "hi",
+      "letter": "ध",
+      "phonics": "Dha",
+      "exampleWord": "धनुष",
+      "exampleWordTranslation": "Bow (Dhanush)",
+      "meaning": "Teer chalane ka dhanush",
+      "imageUrl": "🏹",
+      "audioText": "ध से धनुष",
+      "order": 28
+    },
+    {
+      "id": "hi-na",
+      "language": "hi",
+      "letter": "न",
+      "phonics": "Na",
+      "exampleWord": "नल",
+      "exampleWordTranslation": "Tap (Nal)",
+      "meaning": "Paani ka nal",
+      "imageUrl": "🚰",
+      "audioText": "न से नल",
+      "order": 29
+    },
+    {
+      "id": "hi-pa",
+      "language": "hi",
+      "letter": "प",
+      "phonics": "Pa",
+      "exampleWord": "पतंग",
+      "exampleWordTranslation": "Kite (Patang)",
+      "meaning": "Aasman me udti patang",
+      "imageUrl": "🪁",
+      "audioText": "प से पतंग",
+      "order": 30
+    },
+    {
+      "id": "hi-pha",
+      "language": "hi",
+      "letter": "फ",
+      "phonics": "Pha",
+      "exampleWord": "फल",
+      "exampleWordTranslation": "Fruits (Phal)",
+      "meaning": "Taaza swadisht phal",
+      "imageUrl": "🍓",
+      "audioText": "फ से फल",
+      "order": 31
+    },
+    {
+      "id": "hi-ba",
+      "language": "hi",
+      "letter": "ब",
+      "phonics": "Ba",
+      "exampleWord": "बत्तख",
+      "exampleWordTranslation": "Duck (Battakh)",
+      "meaning": "Pani me tairne wali battakh",
+      "imageUrl": "🦆",
+      "audioText": "ब से बत्तख",
+      "order": 32
+    },
+    {
+      "id": "hi-bha",
+      "language": "hi",
+      "letter": "भ",
+      "phonics": "Bha",
+      "exampleWord": "भालू",
+      "exampleWordTranslation": "Bear (Bhalu)",
+      "meaning": "Jungle ka bhalu",
+      "imageUrl": "🐻",
+      "audioText": "भ से भालू",
+      "order": 33
+    },
+    {
+      "id": "hi-ma",
+      "language": "hi",
+      "letter": "म",
+      "phonics": "Ma",
+      "exampleWord": "मछली",
+      "exampleWordTranslation": "Fish (Machhli)",
+      "meaning": "Jal ki rani machhli",
+      "imageUrl": "🐟",
+      "audioText": "म से मछली",
+      "order": 34
+    },
+    {
+      "id": "hi-ya",
+      "language": "hi",
+      "letter": "य",
+      "phonics": "Ya",
+      "exampleWord": "यज्ञ",
+      "exampleWordTranslation": "Sacred fire ritual",
+      "meaning": "Pavitra yagya",
+      "imageUrl": "🔥",
+      "audioText": "य से यज्ञ",
+      "order": 35
+    },
+    {
+      "id": "hi-ra",
+      "language": "hi",
+      "letter": "र",
+      "phonics": "Ra",
+      "exampleWord": "रथ",
+      "exampleWordTranslation": "Chariot (Rath)",
+      "meaning": "Rajao ka rath",
+      "imageUrl": "🛞",
+      "audioText": "र से रथ",
+      "order": 36
+    },
+    {
+      "id": "hi-la",
+      "language": "hi",
+      "letter": "ल",
+      "phonics": "La",
+      "exampleWord": "लट्टू",
+      "exampleWordTranslation": "Spinning Top (Lattu)",
+      "meaning": "Ghoomne wala khilona",
+      "imageUrl": "🪀",
+      "audioText": "ल से लट्टू",
+      "order": 37
+    },
+    {
+      "id": "hi-va",
+      "language": "hi",
+      "letter": "व",
+      "phonics": "Va",
+      "exampleWord": "वक",
+      "exampleWordTranslation": "Crane Bird (Vak)",
+      "meaning": "Bagula pakshi",
+      "imageUrl": "🦩",
+      "audioText": "व से वक",
+      "order": 38
+    },
+    {
+      "id": "hi-sha",
+      "language": "hi",
+      "letter": "श",
+      "phonics": "Sha",
+      "exampleWord": "शलजम",
+      "exampleWordTranslation": "Turnip (Shaljam)",
+      "meaning": "Gunkari sabzi",
+      "imageUrl": "🫒",
+      "audioText": "श से शलजम",
+      "order": 39
+    },
+    {
+      "id": "hi-sa",
+      "language": "hi",
+      "letter": "स",
+      "phonics": "Sa",
+      "exampleWord": "सेब / सपेरा",
+      "exampleWordTranslation": "Apple (Seb)",
+      "meaning": "Lal laal meetha seb",
+      "imageUrl": "🍎",
+      "audioText": "स से सेब",
+      "order": 40
+    },
+    {
+      "id": "hi-ha",
+      "language": "hi",
+      "letter": "ह",
+      "phonics": "Ha",
+      "exampleWord": "हाथी",
+      "exampleWordTranslation": "Elephant (Hathi)",
+      "meaning": "Bada hathi",
+      "imageUrl": "🐘",
+      "audioText": "ह से हाथी",
+      "order": 41
+    },
+    {
+      "id": "hi-ksha",
+      "language": "hi",
+      "letter": "क्ष",
+      "phonics": "Ksha",
+      "exampleWord": "क्षत्रिय",
+      "exampleWordTranslation": "Warrior (Kshatriya)",
+      "meaning": "Veer yoddha",
+      "imageUrl": "🛡️",
+      "audioText": "क्ष से क्षत्रिय",
+      "order": 42
+    },
+    {
+      "id": "hi-tra",
+      "language": "hi",
+      "letter": "त्र",
+      "phonics": "Tra",
+      "exampleWord": "त्रिशूल",
+      "exampleWordTranslation": "Trident (Trishul)",
+      "meaning": "Trishul",
+      "imageUrl": "🔱",
+      "audioText": "त्र से त्रिशूल",
+      "order": 43
+    },
+    {
+      "id": "hi-gya",
+      "language": "hi",
+      "letter": "ज्ञ",
+      "phonics": "Gya",
+      "exampleWord": "ज्ञानी",
+      "exampleWordTranslation": "Wise Scholar (Gyani)",
+      "meaning": "Gyan se bharpoor",
+      "imageUrl": "📚",
+      "audioText": "ज्ञ से ज्ञानी",
+      "order": 44
     }
   ],
-  surahs: [
+  "words": [
     {
-      id: 'surah-1',
-      number: 1,
-      nameArabic: 'سُورَةُ الْفَاتِحَة',
-      nameEnglish: 'Al-Fatiha',
-      nameUrdu: 'سورۃ الفاتحہ',
-      meaningEnglish: 'The Opening',
-      versesCount: 7,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/1.mp3',
-      order: 1,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ', textUrdu: 'شروع اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے۔', textEnglish: 'In the name of Allah, the Entirely Merciful, the Especially Merciful.', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3' },
-        { numberInSurah: 2, textArabic: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ', textUrdu: 'سب تعریفیں اللہ ہی کے لیے ہیں جو تمام جہانوں کا پالنے والا ہے۔', textEnglish: '[All] praise is [due] to Allah, Lord of the worlds -', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/2.mp3' },
-        { numberInSurah: 3, textArabic: 'الرَّحْمَٰنِ الرَّحِيمِ', textUrdu: 'بڑا مہربان نہایت رحم والا ہے۔', textEnglish: 'The Entirely Merciful, the Especially Merciful,', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/3.mp3' },
-        { numberInSurah: 4, textArabic: 'مَالِكِ يَوْمِ الدِّينِ', textUrdu: 'روزِ جزا کا مالک ہے۔', textEnglish: 'Sovereign of the Day of Recompense.', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/4.mp3' },
-        { numberInSurah: 5, textArabic: 'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ', textUrdu: 'ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔', textEnglish: 'It is You we worship and You we ask for help.', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/5.mp3' },
-        { numberInSurah: 6, textArabic: 'اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ', textUrdu: 'ہمیں سیدھا راستہ دکھا۔', textEnglish: 'Guide us to the straight path -', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6.mp3' },
-        { numberInSurah: 7, textArabic: 'صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ', textUrdu: 'ان لوگوں کا راستہ جن پر تو نے انعام فرمایا، نہ ان کا جن پر غضب نازل ہوا اور نہ گمراہوں کا۔', textEnglish: 'The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray.', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/7.mp3' }
-      ]
+      "id": "w-en-1",
+      "language": "en",
+      "letter": "A",
+      "word": "Apple",
+      "meaning": "A crunchy sweet fruit",
+      "phonetic": "/ˈæp.əl/",
+      "category": "Fruits",
+      "imageUrl": "🍎",
+      "order": 1
     },
     {
-      id: 'surah-93',
-      number: 93,
-      nameArabic: 'سُورَةُ الضُّحَىٰ',
-      nameEnglish: 'Ad-Duha',
-      nameUrdu: 'سورۃ الضحیٰ',
-      meaningEnglish: 'The Morning Hours',
-      versesCount: 11,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3',
-      order: 2,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'وَالضُّحَىٰ', textUrdu: 'قسم ہے چاشت کے وقت کی!', textEnglish: 'By the morning sunlight,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3' },
-        { numberInSurah: 2, textArabic: 'وَاللَّيْلِ إِذَا سَجَىٰ', textUrdu: 'اور رات کی جب وہ چھا جائے!', textEnglish: 'And by the night when it covers with darkness,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3' },
-        { numberInSurah: 3, textArabic: 'مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ', textUrdu: 'آپ کے رب نے نہ تو آپ کو چھوڑا ہے اور نہ وہ ناراض ہوا ہے۔', textEnglish: 'Your Lord has not taken leave of you, [O Muhammad], nor has He detested [you].', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3' },
-        { numberInSurah: 4, textArabic: 'وَلَلْآخِرَةُ خَيْرٌ لَّكَ مِنَ الْأُولَىٰ', textUrdu: 'اور یقیناً آخرت آپ کے لیے دنیا سے کہیں بہتر ہے۔', textEnglish: 'And the Hereafter is better for you than the first [life].', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3' },
-        { numberInSurah: 5, textArabic: 'وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ', textUrdu: 'اور عنقریب آپ کا رب آپ کو اتنا عطا فرمائے گا کہ آپ خوش ہو جائیں گے۔', textEnglish: 'And your Lord is going to give you, and you will be satisfied.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3' },
-        { numberInSurah: 6, textArabic: 'أَلَمْ يَجِدْكَ يَتِيمًا فَآوَىٰ', textUrdu: 'کیا اس نے آپ کو یتیم پا کر پناہ نہیں دی؟', textEnglish: 'Did He not find you an orphan and give [you] refuge?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3' },
-        { numberInSurah: 7, textArabic: 'وَوَجَدَكَ ضَالًّا فَهَدَىٰ', textUrdu: 'اور اس نے آپ کو راستہ کی تلاش میں پایا تو سیدھا راستہ دکھایا۔', textEnglish: 'And He found you lost and guided [you],', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3' },
-        { numberInSurah: 8, textArabic: 'وَوَجَدَكَ عَائِلًا فَأَغْنَىٰ', textUrdu: 'اور اس نے آپ کو ضرورت مند پایا تو غنی کر دیا۔', textEnglish: 'And He found you poor and made [you] self-sufficient.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3' },
-        { numberInSurah: 9, textArabic: 'فَأَمَّا الْيَتِيمَ فَلَا تَقْهَرْ', textUrdu: 'پس آپ بھی یتیم پر سختی نہ کیجیے۔', textEnglish: 'So as for the orphan, do not oppress [him].', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3' },
-        { numberInSurah: 10, textArabic: 'وَأَمَّا السَّائِلَ فَلَا تَنْهَرْ', textUrdu: 'اور مانگنے والے کو نہ جھڑکیے۔', textEnglish: 'And as for the petitioner, do not repel [him].', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3' },
-        { numberInSurah: 11, textArabic: 'وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ', textUrdu: 'اور اپنے رب کی نعمتوں کا خوب چرچا کیجیے۔', textEnglish: 'But as for the favor of your Lord, report [it].', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3' }
-      ]
+      "id": "w-en-2",
+      "language": "en",
+      "letter": "B",
+      "word": "Book",
+      "meaning": "Filled with knowledge and stories",
+      "phonetic": "/bʊk/",
+      "category": "School",
+      "imageUrl": "📚",
+      "order": 2
     },
     {
-      id: 'surah-94',
-      number: 94,
-      nameArabic: 'سُورَةُ الشَّرْح',
-      nameEnglish: 'Ash-Sharh',
-      nameUrdu: 'سورۃ الشرح',
-      meaningEnglish: 'The Relief & Expansion',
-      versesCount: 8,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3',
-      order: 3,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ', textUrdu: 'کیا ہم نے آپ کی خاطر آپ کا سینہ کشادہ نہیں فرمایا؟', textEnglish: 'Did We not expand for you, [O Muhammad], your breast?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3' },
-        { numberInSurah: 2, textArabic: 'وَوَضَعْنَا عَنكَ وِزْرَكَ', textUrdu: 'اور ہم نے آپ پر سے آپ کا بوجھ اتار دیا۔', textEnglish: 'And We removed from you your burden', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3' },
-        { numberInSurah: 3, textArabic: 'الَّذِي أَنقَضَ ظَهْرَكَ', textUrdu: 'جس نے آپ کی پیٹھ توڑ رکھی تھی۔', textEnglish: 'Which had weighed upon your back', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3' },
-        { numberInSurah: 4, textArabic: 'وَرَفَعْنَا لَكَ ذِكْرَكَ', textUrdu: 'اور ہم نے آپ کا ذکر بلند کر دیا۔', textEnglish: 'And raised high for you your repute.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3' },
-        { numberInSurah: 5, textArabic: 'فَإِنَّ مَعَ الْعُسْرِ يُسْرًا', textUrdu: 'پس یقیناً ہر مشکل کے ساتھ آسانی ہے۔', textEnglish: 'For indeed, with hardship [will be] ease.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3' },
-        { numberInSurah: 6, textArabic: 'إِنَّ مَعَ الْعُسْرِ يُسْرًا', textUrdu: 'بے شک ہر مشکل کے ساتھ آسانی ہے۔', textEnglish: 'Indeed, with hardship [will be] ease.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3' },
-        { numberInSurah: 7, textArabic: 'فَإِذَا فَرَغْتَ فَانصَبْ', textUrdu: 'پس جب آپ فارغ ہوں تو عبادت میں محنت کیجیے۔', textEnglish: 'So when you have finished [your duties], then stand up [for worship].', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3' },
-        { numberInSurah: 8, textArabic: 'وَإِلَىٰ رَبِّكَ فَارْغَب', textUrdu: 'اور اپنے رب ہی کی طرف رغبت رکھیے۔', textEnglish: 'And to your Lord direct [your] longing.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3' }
-      ]
+      "id": "w-en-3",
+      "language": "en",
+      "letter": "C",
+      "word": "Car",
+      "meaning": "A vehicle with four wheels",
+      "phonetic": "/kɑːr/",
+      "category": "Vehicles",
+      "imageUrl": "🚗",
+      "order": 3
     },
     {
-      id: 'surah-95',
-      number: 95,
-      nameArabic: 'سُورَةُ التِّين',
-      nameEnglish: 'At-Tin',
-      nameUrdu: 'سورۃ التین',
-      meaningEnglish: 'The Fig',
-      versesCount: 8,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3',
-      order: 4,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'وَالتِّينِ وَالزَّيْتُونِ', textUrdu: 'قسم ہے انجیر کی اور زیتون کی!', textEnglish: 'By the fig and the olive', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3' },
-        { numberInSurah: 2, textArabic: 'وَطُورِ سِينِينَ', textUrdu: 'اور طورِ سینا کی!', textEnglish: 'And [by] Mount Sinai', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3' },
-        { numberInSurah: 3, textArabic: 'وَهَٰذَا الْبَلَدِ الْأَمِينِ', textUrdu: 'اور اس امن والے شہر (مکہ) کی!', textEnglish: 'And [by] this secure city [Makkah],', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3' },
-        { numberInSurah: 4, textArabic: 'لَقَدْ خَلَقْنَا الْإِنسَانَ فِي أَحْسَنِ تَقْوِيمٍ', textUrdu: 'یقیناً ہم نے انسان کو بہترین ساخت پر پیدا کیا۔', textEnglish: 'We have certainly created man in the best of stature;', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3' },
-        { numberInSurah: 5, textArabic: 'ثُمَّ رَدَدْنَاهُ أَسْفَلَ سَافِلِينَ', textUrdu: 'پھر ہم نے اسے پست ترین حالت میں لوٹا دیا۔', textEnglish: 'Then We return him to the lowest of the low,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3' },
-        { numberInSurah: 6, textArabic: 'إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ', textUrdu: 'سوائے ان کے جو ایمان لائے اور نیک عمل کیے، پس ان کے لیے کبھی ختم نہ ہونے والا اجر ہے۔', textEnglish: 'Except for those who believe and do righteous deeds, for they will have a reward uninterrupted.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3' },
-        { numberInSurah: 7, textArabic: 'فَمَا يُكَذِّبُكَ بَعْدُ بِالدِّينِ', textUrdu: 'پھر اس کے بعد کون سی چیز تمہیں جزا و سزا کو جھٹلانے پر آمادہ کرتی ہے؟', textEnglish: 'So what yet causes you to deny the Recompense?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3' },
-        { numberInSurah: 8, textArabic: 'أَلَيْسَ اللَّهُ بِأَحْكَمِ الْحَاكِمِينَ', textUrdu: 'کیا اللہ سب حاکموں سے بڑا حاکم نہیں ہے؟', textEnglish: 'Is not Allah the most just of judges?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3' }
-      ]
+      "id": "w-en-4",
+      "language": "en",
+      "letter": "D",
+      "word": "Duck",
+      "meaning": "A yellow bird that quacks",
+      "phonetic": "/dʌk/",
+      "category": "Animals",
+      "imageUrl": "🦆",
+      "order": 4
     },
     {
-      id: 'surah-96',
-      number: 96,
-      nameArabic: 'سُورَةُ الْعَلَق',
-      nameEnglish: 'Al-Alaq',
-      nameUrdu: 'سورۃ العلق',
-      meaningEnglish: 'The Clot (First Revelation)',
-      versesCount: 19,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3',
-      order: 5,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ', textUrdu: 'پڑھیے اپنے رب کے نام کے ساتھ جس نے پیدا کیا۔', textEnglish: 'Recite in the name of your Lord who created -', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 2, textArabic: 'خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ', textUrdu: 'اس نے انسان کو جمے ہوئے خون کے لوتھڑے سے پیدا کیا۔', textEnglish: 'Created man from a clinging substance.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 3, textArabic: 'اقْرَأْ وَرَبُّكَ الْأَكْرَمُ', textUrdu: 'پڑھیے اور آپ کا رب سب سے بڑا کریم ہے۔', textEnglish: 'Recite, and your Lord is the most Generous -', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 4, textArabic: 'الَّذِي عَلَّمَ بِالْقَلَمِ', textUrdu: 'جس نے قلم کے ذریعے علم سکھایا۔', textEnglish: 'Who taught by the pen -', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 5, textArabic: 'عَلَّمَ الْإِنسَانَ مَا لَمْ يَعْلَمْ', textUrdu: 'انسان کو وہ سکھایا جو وہ نہیں جانتا تھا۔', textEnglish: 'Taught man that which he knew not.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 6, textArabic: 'كَلَّا إِنَّ الْإِنسَانَ لَيَطْغَىٰ', textUrdu: 'ہرگز نہیں، یقیناً انسان سرکشی کرتا ہے۔', textEnglish: 'No! [But] indeed, man transgresses', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 7, textArabic: 'أَن رَّآهُ اسْتَغْنَىٰ', textUrdu: 'اس بات پر کہ وہ اپنے آپ کو بے نیاز دیکھتا ہے۔', textEnglish: 'Because he sees himself self-sufficient.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 8, textArabic: 'إِنَّ إِلَىٰ رَبِّكَ الرُّجْعَىٰ', textUrdu: 'یقیناً آپ کے رب ہی کی طرف لوٹنا ہے۔', textEnglish: 'Indeed, to your Lord is the return.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 9, textArabic: 'أَرَأَيْتَ الَّذِي يَنْهَىٰ', textUrdu: 'کیا آپ نے اس شخص کو دیکھا جو روکتا ہے؟', textEnglish: 'Have you seen the one who forbids', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 10, textArabic: 'عَبْدًا إِذَا صَلَّىٰ', textUrdu: 'ایک بندے کو جب وہ نماز پڑھتا ہے۔', textEnglish: 'A servant when he prays?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 11, textArabic: 'أَرَأَيْتَ إِن كَانَ عَلَى الْهُدَىٰ', textUrdu: 'بھلا بتائیے اگر وہ ہدایت پر ہو؟', textEnglish: 'Have you seen if he is upon guidance', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 12, textArabic: 'أَوْ أَمَرَ بِالتَّقْوَىٰ', textUrdu: 'یا پرہیزگاری کا حکم دیتا ہو؟', textEnglish: 'Or enjoins righteousness?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 13, textArabic: 'أَرَأَيْتَ إِن كَذَّبَ وَتَوَلَّىٰ', textUrdu: 'بھلا دیکھیے اگر اس نے جھٹلایا اور منہ موڑا؟', textEnglish: 'Have you seen if he denies and turns away -', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 14, textArabic: 'أَلَمْ يَعْلَم بِأَنَّ اللَّهَ يَرَىٰ', textUrdu: 'کیا وہ نہیں جانتا کہ اللہ سب کچھ دیکھ رہا ہے؟', textEnglish: 'Does he not know that Allah sees?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 15, textArabic: 'كَلَّا لَئِن لَّمْ يَنتَهِ لَنَسْفَعًا بِالنَّاصِيَةِ', textUrdu: 'ہرگز نہیں، اگر وہ باز نہ آیا تو ہم پیشانی کے بال پکڑ کر گھسیٹیں گے۔', textEnglish: 'No! If he does not desist, We will surely drag him by the forelock -', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 16, textArabic: 'نَاصِيَةٍ كَاذِبَةٍ خَاطِئَةٍ', textUrdu: 'جھوٹی، خطا کار پیشانی۔', textEnglish: 'A lying, sinning forelock.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 17, textArabic: 'فَلْيَدْعُ نَادِيَهُ', textUrdu: 'پس وہ اپنی مجلس والوں کو بلا لے۔', textEnglish: 'Then let him call his associates;', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 18, textArabic: 'سَنَدْعُ الزَّبَانِيَةَ', textUrdu: 'ہم بھی عذاب کے فرشتوں کو بلائیں گے۔', textEnglish: 'We will call the angels of Hell.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' },
-        { numberInSurah: 19, textArabic: 'كَلَّا لَا تُطِعْهُ وَاسْجُدْ وَاقْتَرِب', textUrdu: 'ہرگز اس کا کہنا نہ مانیں، اور سجدہ کیجیے اور اللہ کا قرب حاصل کیجیے۔', textEnglish: 'No! Do not obey him. But prostrate and draw near [to Allah].', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3' }
-      ]
+      "id": "w-en-5",
+      "language": "en",
+      "letter": "E",
+      "word": "Egg",
+      "meaning": "Healthy breakfast food",
+      "phonetic": "/ɛɡ/",
+      "category": "Food",
+      "imageUrl": "🥚",
+      "order": 5
     },
     {
-      id: 'surah-97',
-      number: 97,
-      nameArabic: 'سُورَةُ الْقَدْر',
-      nameEnglish: 'Al-Qadr',
-      nameUrdu: 'سورۃ القدر',
-      meaningEnglish: 'The Night of Decree',
-      versesCount: 5,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3',
-      order: 6,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ', textUrdu: 'بے شک ہم نے اس (قرآن) کو شبِ قدر میں نازل فرمایا۔', textEnglish: 'Indeed, We sent the Qur\'an down during the Night of Decree.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3' },
-        { numberInSurah: 2, textArabic: 'وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ', textUrdu: 'اور آپ کو کیا معلوم کہ شبِ قدر کیا ہے؟', textEnglish: 'And what can make you know what is the Night of Decree?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3' },
-        { numberInSurah: 3, textArabic: 'لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ', textUrdu: 'شبِ قدر ہزار مہینوں سے بہتر ہے۔', textEnglish: 'The Night of Decree is better than a thousand months.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3' },
-        { numberInSurah: 4, textArabic: 'تَنَزَّلُ الْمَلَائِكَةُ وَالرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ', textUrdu: 'اس میں فرشتے اور روح القدس اپنے رب کے حکم سے ہر کام کے لیے اترتے ہیں۔', textEnglish: 'The angels and the Spirit descend therein by permission of their Lord for every matter.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3' },
-        { numberInSurah: 5, textArabic: 'سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ', textUrdu: 'یہ رات طلوعِ فجر تک سراسر سلامتی ہے۔', textEnglish: 'Peace it is until the emergence of dawn.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3' }
-      ]
+      "id": "w-en-6",
+      "language": "en",
+      "letter": "F",
+      "word": "Flower",
+      "meaning": "Colorful blossom in a garden",
+      "phonetic": "/ˈflaʊ.ər/",
+      "category": "Nature",
+      "imageUrl": "🌸",
+      "order": 6
     },
     {
-      id: 'surah-98',
-      number: 98,
-      nameArabic: 'سُورَةُ الْبَيِّنَة',
-      nameEnglish: 'Al-Bayyinah',
-      nameUrdu: 'سورۃ البینہ',
-      meaningEnglish: 'The Clear Proof',
-      versesCount: 8,
-      revelationType: 'Medinan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3',
-      order: 7,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'لَمْ يَكُنِ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ مُنفَكِّينَ حَتَّىٰ تَأْتِيَهُمُ الْبَيِّنَةُ', textUrdu: 'اہلِ کتاب میں سے کفر کرنے والے اور مشرکین باز آنے والے نہ تھے جب تک کہ ان کے پاس واضح دلیل نہ آ جاتی۔', textEnglish: 'Those who disbelieved among the People of the Scripture and the polytheists were not to be parted until there came to them clear evidence -', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3' },
-        { numberInSurah: 2, textArabic: 'رَسُولٌ مِّنَ اللَّهِ يَتْلُو صُحُفًا مُّطَهَّرَةً', textUrdu: 'اللہ کی طرف سے ایک رسول جو پاکیزہ صحیفے پڑھ کر سنائے۔', textEnglish: 'A Messenger from Allah, reciting purified scriptures', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3' },
-        { numberInSurah: 3, textArabic: 'فِيهَا كُتُبٌ قَيِّمَةٌ', textUrdu: 'جن میں بالکل سیدھی اور درست تحریریں ہیں۔', textEnglish: 'Within which are correct writings.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3' },
-        { numberInSurah: 4, textArabic: 'وَمَا تَفَرَّقَ الَّذِينَ أُوتُوا الْكِتَابَ إِلَّا مِن بَعْدِ مَا جَاءَتْهُمُ الْبَيِّنَةُ', textUrdu: 'اور اہلِ کتاب میں پھوٹ نہیں پڑی مگر اس کے بعد کہ ان کے پاس روشن دلیل آ گئی۔', textEnglish: 'Nor did those who were given the Scripture become divided until after there had come to them clear evidence.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3' },
-        { numberInSurah: 5, textArabic: 'وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ حُنَفَاءَ وَيُقِيمُوا الصَّلَاةَ وَيُؤْتُوا الزَّكَاةَ ۚ وَذَٰلِكَ دِينُ الْقَيِّمَةِ', textUrdu: 'اور انہیں صرف یہی حکم دیا گیا تھا کہ وہ یکسو ہو کر خلوصِ نیت سے اللہ کی بندگی کریں اور نماز قائم کریں اور زکوٰۃ دیں۔ اور یہی درست دین ہے۔', textEnglish: 'And they were not commanded except to worship Allah, [being] sincere to Him in religion, inclining to truth, and to establish prayer and to give zakah. And that is the correct religion.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3' },
-        { numberInSurah: 6, textArabic: 'إِنَّ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ فِي نَارِ جَهَنَّمَ خَالِدِينَ فِيهَا ۚ أُولَٰئِكَ هُمْ شَرُّ الْبَرِيَّةِ', textUrdu: 'بے شک جو لوگ اہلِ کتاب اور مشرکین میں سے کافر ہوئے وہ جہنم کی آگ میں ہوں گے، ہمیشہ اس میں رہیں گے۔ یہی لوگ بدترین مخلوق ہیں۔', textEnglish: 'Indeed, they who disbelieved among the People of the Scripture and the polytheists will be in the fire of Hell, abiding eternally therein. Those are the worst of creatures.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3' },
-        { numberInSurah: 7, textArabic: 'إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ أُولَٰئِكَ هُمْ خَيْرُ الْبَرِيَّةِ', textUrdu: 'بے شک جو لوگ ایمان لائے اور انہوں نے نیک عمل کیے، وہی لوگ بہترین مخلوق ہیں۔', textEnglish: 'Indeed, they who have believed and done righteous deeds - those are the best of creatures.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3' },
-        { numberInSurah: 8, textArabic: 'جَزَاؤُهُمْ عِندَ رَبِّهِمْ جَنَّاتُ عَدْنٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ خَالِدِينَ فِيهَا أَبَدًا ۖ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ ۚ ذَٰلِكَ لِمَنْ خَشِيَ رَبَّهُ', textUrdu: 'ان کا بدلہ ان کے رب کے پاس سدا بہار باغات ہیں جن کے نیچے نہریں بہتی ہیں، وہ ان میں ہمیشہ رہیں گے۔ اللہ ان سے راضی ہوا اور وہ اس سے راضی ہوئے۔ یہ اس شخص کے لیے ہے جو اپنے رب سے ڈرا۔', textEnglish: 'Their reward with their Lord will be gardens of perpetual residence beneath which rivers flow, wherein they will abide forever, Allah being pleased with them and they with Him. That is for whoever has feared his Lord.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3' }
-      ]
+      "id": "w-ur-1",
+      "language": "ur",
+      "letter": "ا",
+      "word": "انار (Pomegranate)",
+      "meaning": "Lal daano wala mazedar phal",
+      "phonetic": "Anar",
+      "category": "Fruits",
+      "imageUrl": "🍎",
+      "order": 7
     },
     {
-      id: 'surah-99',
-      number: 99,
-      nameArabic: 'سُورَةُ الزَّلْزَلَة',
-      nameEnglish: 'Az-Zalzalah',
-      nameUrdu: 'سورۃ الزلزلہ',
-      meaningEnglish: 'The Earthquake',
-      versesCount: 8,
-      revelationType: 'Medinan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3',
-      order: 8,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا', textUrdu: 'جب زمین اپنی پوری شدت سے ہلا دی جائے گی!', textEnglish: 'When the earth is shaken with its [final] earthquake', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3' },
-        { numberInSurah: 2, textArabic: 'وَأَخْرَجَتِ الْأَرْضُ أَثْقَالَهَا', textUrdu: 'اور زمین اپنے اندر کے بوجھ باہر نکال پھینکے گی!', textEnglish: 'And the earth discharges its burdens', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3' },
-        { numberInSurah: 3, textArabic: 'وَقَالَ الْإِنسَانُ مَا لَهَا', textUrdu: 'اور انسان کہے گا کہ اسے کیا ہو گیا ہے؟', textEnglish: 'And man says, "What is [wrong] with it?"', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3' },
-        { numberInSurah: 4, textArabic: 'يَوْمَئِذٍ تُحَدِّثُ أَخْبَارَهَا', textUrdu: 'اس دن وہ اپنے حالات بیان کرے گی۔', textEnglish: 'That Day, it will report its news', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3' },
-        { numberInSurah: 5, textArabic: 'بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا', textUrdu: 'کیونکہ آپ کے رب نے اسے یہی حکم دیا ہوگا۔', textEnglish: 'Because your Lord has commanded it.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3' },
-        { numberInSurah: 6, textArabic: 'يَوْمَئِذٍ يَصْدُرُ النَّاسُ أَشْتَاتًا لِّيُرَوْا أَعْمَالَهُمْ', textUrdu: 'اس دن لوگ مختلف گروہوں میں نکلیں گے تاکہ ان کے اعمال دکھائے جائیں۔', textEnglish: 'That Day, the people will depart separated [into categories] to be shown [the result of] their deeds.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3' },
-        { numberInSurah: 7, textArabic: 'فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ', textUrdu: 'پس جس نے ذرہ برابر نیکی کی ہوگی وہ اسے دیکھ لے گا۔', textEnglish: 'So whoever does an atom\'s weight of good will see it,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3' },
-        { numberInSurah: 8, textArabic: 'وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُ', textUrdu: 'اور جس نے ذرہ برابر برائی کی ہوگی وہ اسے بھی دیکھ لے گا۔', textEnglish: 'And whoever does an atom\'s weight of evil will see it.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3' }
-      ]
+      "id": "w-ur-2",
+      "language": "ur",
+      "letter": "ب",
+      "word": "بلی (Cat)",
+      "meaning": "Ghar me rehne wali pyari billi",
+      "phonetic": "Billi",
+      "category": "Animals",
+      "imageUrl": "🐱",
+      "order": 8
     },
     {
-      id: 'surah-100',
-      number: 100,
-      nameArabic: 'سُورَةُ الْعَادِيَات',
-      nameEnglish: 'Al-Adiyat',
-      nameUrdu: 'سورۃ العادیات',
-      meaningEnglish: 'The Courser / Charging Steeds',
-      versesCount: 11,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3',
-      order: 9,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'وَالْعَادِيَاتِ ضَبْحًا', textUrdu: 'قسم ہے ہانپتے ہوئے دوڑنے والے گھوڑوں کی!', textEnglish: 'By the racers, panting,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3' },
-        { numberInSurah: 2, textArabic: 'فَالْمُورِيَاتِ قَدْحًا', textUrdu: 'پھر ٹاپوں سے چنگاریاں نکالنے والوں کی!', textEnglish: 'And the producers of sparks [when] striking', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3' },
-        { numberInSurah: 3, textArabic: 'فَالْمُغِيرَاتِ صُبْحًا', textUrdu: 'پھر صبح کے وقت حملہ کرنے والوں کی!', textEnglish: 'And the chargers at dawn,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3' },
-        { numberInSurah: 4, textArabic: 'فَأَثَرْنَ بِهِ نَقْعًا', textUrdu: 'پھر اس وقت گرد و غبار اڑانے والوں کی!', textEnglish: 'Stirring up thereby [clouds of] dust,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3' },
-        { numberInSurah: 5, textArabic: 'فَوَسَطْنَ بِهِ جَمْعًا', textUrdu: 'پھر اس کے ساتھ دشمن کی فوج میں گھس جانے والوں کی!', textEnglish: 'Arriving thereby in the center collectively,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3' },
-        { numberInSurah: 6, textArabic: 'إِنَّ الْإِنسَانَ لِرَبِّهِ لَكَنُودٌ', textUrdu: 'بے شک انسان اپنے رب کا بڑا ناشکرا ہے۔', textEnglish: 'Indeed mankind, to his Lord, is ungrateful.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3' },
-        { numberInSurah: 7, textArabic: 'وَإِنَّهُ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ', textUrdu: 'اور وہ خود بھی اس بات پر گواہ ہے۔', textEnglish: 'And indeed, to that he is to witness.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3' },
-        { numberInSurah: 8, textArabic: 'وَإِنَّهُ لِحُبِّ الْخَيْرِ لَشَدِيدٌ', textUrdu: 'اور وہ مال کی محبت میں بہت سخت ہے۔', textEnglish: 'And indeed he is, in love of wealth, intense.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3' },
-        { numberInSurah: 9, textArabic: 'أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِي الْقُبُورِ', textUrdu: 'کیا وہ نہیں جانتا جب قبروں میں جو کچھ ہے نکال لیا جائے گا؟', textEnglish: 'But does he not know that when the contents of the graves are scattered', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3' },
-        { numberInSurah: 10, textArabic: 'وَحُصِّلَ مَا فِي الصُّدُورِ', textUrdu: 'اور جو کچھ سینوں میں ہے ظاہر کر دیا جائے گا؟', textEnglish: 'And that within the breasts is obtained,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3' },
-        { numberInSurah: 11, textArabic: 'إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌ', textUrdu: 'یقیناً ان کا رب اس دن ان کے حال سے پوری طرح باخبر ہوگا۔', textEnglish: 'Indeed, their Lord with them, that Day, is [fully] Acquainted.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3' }
-      ]
+      "id": "w-ur-3",
+      "language": "ur",
+      "letter": "ک",
+      "word": "کتاب (Book)",
+      "meaning": "Padhne likhne ki kitaab",
+      "phonetic": "Kitaab",
+      "category": "School",
+      "imageUrl": "📖",
+      "order": 9
     },
     {
-      id: 'surah-101',
-      number: 101,
-      nameArabic: 'سُورَةُ الْقَارِعَة',
-      nameEnglish: 'Al-Qari\'ah',
-      nameUrdu: 'سورۃ القارعہ',
-      meaningEnglish: 'The Calamity / Striking Hour',
-      versesCount: 11,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3',
-      order: 10,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'الْقَارِعَةُ', textUrdu: 'کھڑکھڑانے والی آفت!', textEnglish: 'The Striking Calamity -', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3' },
-        { numberInSurah: 2, textArabic: 'مَا الْقَارِعَةُ', textUrdu: 'وہ کھڑکھڑانے والی کیا ہے؟', textEnglish: 'What is the Striking Calamity?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3' },
-        { numberInSurah: 3, textArabic: 'وَمَا أَدْرَاكَ مَا الْقَارِعَةُ', textUrdu: 'اور آپ کو کیا معلوم کہ وہ کھڑکھڑانے والی کیا ہے؟', textEnglish: 'And what can make you know what is the Striking Calamity?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3' },
-        { numberInSurah: 4, textArabic: 'يَوْمَ يَكُونُ النَّاسُ كَالْفَرَاشِ الْمَبْثُوثِ', textUrdu: 'جس دن لوگ بکھرے ہوئے پروانوں کی طرح ہو جائیں گے۔', textEnglish: 'It is the Day when people will be like moths, dispersed,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3' },
-        { numberInSurah: 5, textArabic: 'وَتَكُونُ الْجِبَالُ كَالْعِهْنِ الْمَنفُوشِ', textUrdu: 'اور پہاڑ دھنی ہوئی اون کی طرح ہو جائیں گے۔', textEnglish: 'And the mountains will be like wool, fluffed up.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3' },
-        { numberInSurah: 6, textArabic: 'فَأَمَّا مَن ثَقُلَتْ مَوَازِينُهُ', textUrdu: 'پس جس کے پلڑے بھاری ہوں گے۔', textEnglish: 'Then as for one whose scales are heavy [with good deeds],', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3' },
-        { numberInSurah: 7, textArabic: 'فَهُوَ فِي عِيشَةٍ رَّاضِيَةٍ', textUrdu: 'تو وہ من پسند عیش میں ہوگا۔', textEnglish: 'He will be in a pleasant life.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3' },
-        { numberInSurah: 8, textArabic: 'وَأَمَّا مَنْ خَفَّتْ مَوَازِينُهُ', textUrdu: 'اور جس کے پلڑے ہلکے ہوں گے۔', textEnglish: 'But as for one whose scales are light,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3' },
-        { numberInSurah: 9, textArabic: 'فَأُمُّهُ هَاوِيَةٌ', textUrdu: 'تو اس کا ٹھکانہ ہاویہ (گہری کھائی) ہوگا۔', textEnglish: 'His refuge will be an abyss.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3' },
-        { numberInSurah: 10, textArabic: 'وَمَا أَدْرَاكَ مَا هِيَهْ', textUrdu: 'اور آپ کو کیا معلوم کہ وہ کیا ہے؟', textEnglish: 'And what can make you know what that is?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3' },
-        { numberInSurah: 11, textArabic: 'نَارٌ حَامِيَةٌ', textUrdu: 'وہ دہکتی ہوئی آگ ہے!', textEnglish: 'It is a Fire, intensely hot.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3' }
-      ]
+      "id": "w-ur-4",
+      "language": "ur",
+      "letter": "گ",
+      "word": "گیند (Ball)",
+      "meaning": "Khelne wali gend",
+      "phonetic": "Gend",
+      "category": "Toys",
+      "imageUrl": "⚽",
+      "order": 10
     },
     {
-      id: 'surah-102',
-      number: 102,
-      nameArabic: 'سُورَةُ التَّكَاثُر',
-      nameEnglish: 'At-Takathur',
-      nameUrdu: 'سورۃ التکاثر',
-      meaningEnglish: 'Competition in Increase',
-      versesCount: 8,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3',
-      order: 11,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'أَلْهَاكُمُ التَّكَاثُرُ', textUrdu: 'تمہیں کثرت کی ہوس نے غافل کر دیا۔', textEnglish: 'Competition in [worldly] increase diverts you', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3' },
-        { numberInSurah: 2, textArabic: 'حَتَّىٰ زُرْتُمُ الْمَقَابِرَ', textUrdu: 'یہاں تک کہ تم نے قبریں جا دیکھیں۔', textEnglish: 'Until you visit the graveyards.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3' },
-        { numberInSurah: 3, textArabic: 'كَلَّا سَوْفَ تَعْلَمُونَ', textUrdu: 'ہرگز نہیں، عنقریب تم جان لو گے۔', textEnglish: 'No! You are going to know.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3' },
-        { numberInSurah: 4, textArabic: 'ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ', textUrdu: 'پھر ہرگز نہیں، جلد ہی تم جان لو گے۔', textEnglish: 'Then no! You are going to know.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3' },
-        { numberInSurah: 5, textArabic: 'كَلَّا لَوْ تَعْلَمُونَ عِلْمَ الْيَقِينِ', textUrdu: 'ہرگز نہیں! کاش تم یقینی علم کے ساتھ جانتے۔', textEnglish: 'No! If you only knew with knowledge of certainty...', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3' },
-        { numberInSurah: 6, textArabic: 'لَتَرَوُنَّ الْجَحِيمَ', textUrdu: 'تم ضرور جہنم کو دیکھو گے۔', textEnglish: 'You will surely see the Hellfire.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3' },
-        { numberInSurah: 7, textArabic: 'ثُمَّ لَتَرَوُنَّهَا عَيْنَ الْيَقِينِ', textUrdu: 'پھر تم اسے یقین کی آنکھ سے دیکھو گے۔', textEnglish: 'Then you will surely see it with the eye of certainty.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3' },
-        { numberInSurah: 8, textArabic: 'ثُمَّ لَتُسْأَلُنَّ يَوْمَئِذٍ عَنِ النَّعِيمِ', textUrdu: 'پھر اس دن تم سے نعمتوں کے بارے میں ضرور سوال کیا جائے گا۔', textEnglish: 'Then you will surely be asked that Day about pleasure.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3' }
-      ]
+      "id": "w-ar-1",
+      "language": "ar",
+      "letter": "أ",
+      "word": "أَسَد (Lion)",
+      "meaning": "Malik al-Ghabah",
+      "phonetic": "Asad",
+      "category": "Animals",
+      "imageUrl": "🦁",
+      "order": 11
     },
     {
-      id: 'surah-103',
-      number: 103,
-      nameArabic: 'سُورَةُ الْعَصْر',
-      nameEnglish: 'Al-Asr',
-      nameUrdu: 'سورۃ العصر',
-      meaningEnglish: 'The Declining Day',
-      versesCount: 3,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/103.mp3',
-      order: 12,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'وَالْعَصْرِ', textUrdu: 'قسم ہے زمانے کی!', textEnglish: 'By time,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/103.mp3' },
-        { numberInSurah: 2, textArabic: 'إِنَّ الْإِنسَانَ لَفِي خُسْرٍ', textUrdu: 'بے شک تمام انسان خسارے میں ہیں۔', textEnglish: 'Indeed, mankind is in loss,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/103.mp3' },
-        { numberInSurah: 3, textArabic: 'إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ', textUrdu: 'سوائے ان کے جو ایمان لائے اور نیک عمل کیے اور ایک دوسرے کو حق کی وصیت اور صبر کی تلقین کی۔', textEnglish: 'Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/103.mp3' }
-      ]
+      "id": "w-ar-2",
+      "language": "ar",
+      "letter": "م",
+      "word": "مَسْجِد (Mosque)",
+      "meaning": "Baytullah al-kareem",
+      "phonetic": "Masjid",
+      "category": "Places",
+      "imageUrl": "🕌",
+      "order": 12
     },
     {
-      id: 'surah-104',
-      number: 104,
-      nameArabic: 'سُورَةُ الْهُمَزَة',
-      nameEnglish: 'Al-Humazah',
-      nameUrdu: 'سورۃ الہمزہ',
-      meaningEnglish: 'The Slanderer',
-      versesCount: 9,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3',
-      order: 13,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ', textUrdu: 'تباہی ہے ہر طعنہ زنی کرنے والے اور عیب جوئی کرنے والے کے لیے!', textEnglish: 'Woe to every scorner and mocker', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3' },
-        { numberInSurah: 2, textArabic: 'الَّذِي جَمَعَ مَالًا وَعَدَّدَهُ', textUrdu: 'جس نے مال جمع کیا اور اسے گن گن کر رکھا۔', textEnglish: 'Who collects wealth and [continuously] counts it.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3' },
-        { numberInSurah: 3, textArabic: 'يَحْسَبُ أَنَّ مَالَهُ أَخْلَدَهُ', textUrdu: 'وہ سمجھتا ہے کہ اس کا مال اسے ہمیشہ زندہ رکھے گا۔', textEnglish: 'He thinks that his wealth will make him immortal.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3' },
-        { numberInSurah: 4, textArabic: 'كَلَّا ۖ لَيُنبَذَنَّ فِي الْحُطَمَةِ', textUrdu: 'ہرگز نہیں! وہ ضرور حطمہ (توڑ پھوڑ دینے والی آگ) میں پھینکا جائے گا۔', textEnglish: 'No! He will surely be thrown into the Crusher.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3' },
-        { numberInSurah: 5, textArabic: 'وَمَا أَدْرَاكَ مَا الْحُطَمَةُ', textUrdu: 'اور آپ کو کیا معلوم کہ حطمہ کیا ہے؟', textEnglish: 'And what can make you know what is the Crusher?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3' },
-        { numberInSurah: 6, textArabic: 'نَارُ اللَّهِ الْمُوقَدَةُ', textUrdu: 'وہ اللہ کی بھڑکائی ہوئی آگ ہے۔', textEnglish: 'It is the fire of Allah, [eternally] fueled,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3' },
-        { numberInSurah: 7, textArabic: 'الَّتِي تَطَّلِعُ عَلَى الْأَفْئِدَةِ', textUrdu: 'جو دلوں تک پہنچ جائے گی۔', textEnglish: 'Which mounts directed at the hearts.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3' },
-        { numberInSurah: 8, textArabic: 'إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ', textUrdu: 'بے شک وہ ان پر بند کر دی جائے گی۔', textEnglish: 'Indeed, Hellfire will be closed down upon them', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3' },
-        { numberInSurah: 9, textArabic: 'فِي عَمَدٍ مُّمَدَّدَةٍ', textUrdu: 'لمبے لمبے ستونوں میں۔', textEnglish: 'In extended columns.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3' }
-      ]
+      "id": "w-ar-3",
+      "language": "ar",
+      "letter": "ق",
+      "word": "قَمَر (Moon)",
+      "meaning": "Qamar muneer fi as-samaa",
+      "phonetic": "Qamar",
+      "category": "Nature",
+      "imageUrl": "🌙",
+      "order": 13
     },
     {
-      id: 'surah-105',
-      number: 105,
-      nameArabic: 'سُورَةُ الْفِيل',
-      nameEnglish: 'Al-Fil',
-      nameUrdu: 'سورۃ الفیل',
-      meaningEnglish: 'The Elephant',
-      versesCount: 5,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3',
-      order: 14,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ', textUrdu: 'کیا آپ نے نہیں دیکھا کہ آپ کے رب نے ہاتھی والوں کے ساتھ کیا کیا؟', textEnglish: 'Have you not considered, [O Muhammad], how your Lord dealt with the companions of the elephant?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3' },
-        { numberInSurah: 2, textArabic: 'أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ', textUrdu: 'کیا اس نے ان کی چال کو برباد نہیں کر دیا؟', textEnglish: 'Did He not make their plan into misguidance?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3' },
-        { numberInSurah: 3, textArabic: 'وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ', textUrdu: 'اور ان پر پرندوں کے غول کے غول بھیجے۔', textEnglish: 'And He sent against them birds in flocks,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3' },
-        { numberInSurah: 4, textArabic: 'تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ', textUrdu: 'جو ان پر پکی ہوئی مٹی کے پتھر پھینک رہے تھے۔', textEnglish: 'Striking them with stones of hard clay,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3' },
-        { numberInSurah: 5, textArabic: 'فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ', textUrdu: 'پس اس نے انہیں کھائے ہوئے بھوسے جیسا کر دیا۔', textEnglish: 'And He made them like eaten straw.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3' }
-      ]
+      "id": "w-ar-4",
+      "language": "ar",
+      "letter": "ك",
+      "word": "كِتَاب (Book)",
+      "meaning": "Noor al-ilm",
+      "phonetic": "Kitaab",
+      "category": "School",
+      "imageUrl": "📖",
+      "order": 14
     },
     {
-      id: 'surah-106',
-      number: 106,
-      nameArabic: 'سُورَةُ قُرَيْش',
-      nameEnglish: 'Quraysh',
-      nameUrdu: 'سورۃ قریش',
-      meaningEnglish: 'Quraysh',
-      versesCount: 4,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3',
-      order: 15,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'لِإِيلَافِ قُرَيْشٍ', textUrdu: 'قریش کو مانوس کرنے کی خاطر!', textEnglish: 'For the accustomed security of the Quraysh -', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3' },
-        { numberInSurah: 2, textArabic: 'إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ', textUrdu: 'انہیں سردی اور گرمی کے سفر سے مانوس کرنے کی خاطر!', textEnglish: 'Their accustomed security [in] the caravan of winter and summer -', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3' },
-        { numberInSurah: 3, textArabic: 'فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ', textUrdu: 'پس انہیں چاہیے کہ وہ اس گھر (خانہ کعبہ) کے رب کی عبادت کریں۔', textEnglish: 'Let them worship the Lord of this House,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3' },
-        { numberInSurah: 4, textArabic: 'الَّذِي أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ', textUrdu: 'جس نے انہیں بھوک میں کھانا کھلایا اور خوف سے امن بخشا۔', textEnglish: 'Who has fed them, [saving them] from hunger and made them safe, [saving them] from fear.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3' }
-      ]
+      "id": "w-hi-1",
+      "language": "hi",
+      "letter": "अ",
+      "word": "अनार (Pomegranate)",
+      "meaning": "Meetha rasdar phal",
+      "phonetic": "Anaar",
+      "category": "Fruits",
+      "imageUrl": "🍎",
+      "order": 15
     },
     {
-      id: 'surah-107',
-      number: 107,
-      nameArabic: 'سُورَةُ الْمَاعُون',
-      nameEnglish: 'Al-Ma\'un',
-      nameUrdu: 'سورۃ الماعون',
-      meaningEnglish: 'Small Kindnesses',
-      versesCount: 7,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3',
-      order: 16,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ', textUrdu: 'کیا آپ نے اس شخص کو دیکھا جو جزا و سزا کو جھٹلاتا ہے؟', textEnglish: 'Have you seen the one who denies the Recompense?', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3' },
-        { numberInSurah: 2, textArabic: 'فَذَٰلِكَ الَّذِي يَدُعُّ الْيَتِيمَ', textUrdu: 'یہ وہی ہے جو یتیم کو دھکے دیتا ہے۔', textEnglish: 'For that is the one who drives away the orphan', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3' },
-        { numberInSurah: 3, textArabic: 'وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ', textUrdu: 'اور مسکین کو کھانا کھلانے کی ترغیب نہیں دیتا۔', textEnglish: 'And does not encourage the feeding of the poor.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3' },
-        { numberInSurah: 4, textArabic: 'فَوَيلٌ لِّلْمُصَلِّينَ', textUrdu: 'پس ہلاکت ہے ان نماز پڑھنے والوں کے لیے!', textEnglish: 'So woe to those who pray', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3' },
-        { numberInSurah: 5, textArabic: 'الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ', textUrdu: 'جو اپنی نماز سے غافل ہیں۔', textEnglish: '[But] who are heedless of their prayer -', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3' },
-        { numberInSurah: 6, textArabic: 'الَّذِينَ هُمْ يُرَاءُونَ', textUrdu: 'جو صرف دکھاوا کرتے ہیں۔', textEnglish: 'Those who make show [of their deeds]', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3' },
-        { numberInSurah: 7, textArabic: 'وَيَمْنَعُونَ الْمَاعُونَ', textUrdu: 'اور روزمرہ استعمال کی معمولی چیزیں مانگے پر دینے سے روکتے ہیں۔', textEnglish: 'And withhold [simple] assistance.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3' }
-      ]
+      "id": "w-hi-2",
+      "language": "hi",
+      "letter": "क",
+      "word": "कमल (Lotus)",
+      "meaning": "Hamara rashtriya phool",
+      "phonetic": "Kamal",
+      "category": "Nature",
+      "imageUrl": "🪷",
+      "order": 16
     },
     {
-      id: 'surah-108',
-      number: 108,
-      nameArabic: 'سُورَةُ الْكَوْثَر',
-      nameEnglish: 'Al-Kawthar',
-      nameUrdu: 'سورۃ الکوثر',
-      meaningEnglish: 'The Abundance',
-      versesCount: 3,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/108.mp3',
-      order: 17,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ', textUrdu: 'بے شک ہم نے آپ کو کوثر (بے انتہا بھلائی) عطا فرمائی۔', textEnglish: 'Indeed, We have granted you, [O Muhammad], al-Kawthar.', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6205.mp3' },
-        { numberInSurah: 2, textArabic: 'فَصَلِّ لِرَبِّكَ وَانْحَرْ', textUrdu: 'پس آپ اپنے رب کے لیے نماز پڑھیں اور قربانی کریں۔', textEnglish: 'So pray to your Lord and sacrifice [to Him alone].', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6206.mp3' },
-        { numberInSurah: 3, textArabic: 'إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ', textUrdu: 'یقیناً آپ کا دشمن ہی بے نام و نشان رہنے والا ہے۔', textEnglish: 'Indeed, your enemy is the one cut off.', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6207.mp3' }
-      ]
+      "id": "w-hi-3",
+      "language": "hi",
+      "letter": "प",
+      "word": "पानी (Water)",
+      "meaning": "Jeevan dene wala jal",
+      "phonetic": "Paani",
+      "category": "Everyday",
+      "imageUrl": "💧",
+      "order": 17
     },
     {
-      id: 'surah-109',
-      number: 109,
-      nameArabic: 'سُورَةُ الْكَافِرُونَ',
-      nameEnglish: 'Al-Kafirun',
-      nameUrdu: 'سورۃ الکافرون',
-      meaningEnglish: 'The Disbelievers',
-      versesCount: 6,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3',
-      order: 18,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'قُلْ يَا أَيُّهَا الْكَافِرُونَ', textUrdu: 'آپ کہہ دیجیے کہ اے کافرو!', textEnglish: 'Say, "O disbelievers,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3' },
-        { numberInSurah: 2, textArabic: 'لَا أَعْبُدُ مَا تَعْبُدُونَ', textUrdu: 'میں ان بتوں کی پوجا نہیں کرتا جنہیں تم پوجتے ہو۔', textEnglish: 'I do not worship what you worship.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3' },
-        { numberInSurah: 3, textArabic: 'وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ', textUrdu: 'اور نہ تم اس کی بندگی کرتے ہو جس کی میں بندگی کرتا ہوں۔', textEnglish: 'Nor are you worshippers of what I worship.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3' },
-        { numberInSurah: 4, textArabic: 'وَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ', textUrdu: 'اور نہ میں آئندہ ان کی پوجا کروں گا جن کی تم نے پوجا کی۔', textEnglish: 'Nor will I be a worshipper of what you worship.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3' },
-        { numberInSurah: 5, textArabic: 'وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ', textUrdu: 'اور نہ تم اس کی بندگی کرنے والے ہو جس کی میں بندگی کرتا ہوں۔', textEnglish: 'Nor will you be worshippers of what I worship.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3' },
-        { numberInSurah: 6, textArabic: 'لَكُمْ دِينُكُمْ وَلِيَ دِينِ', textUrdu: 'تمہارے لیے تمہارا دین اور میرے لیے میرا دین ہے۔', textEnglish: 'For you is your religion, and for me is my religion."', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3' }
-      ]
-    },
-    {
-      id: 'surah-110',
-      number: 110,
-      nameArabic: 'سُورَةُ النَّصْر',
-      nameEnglish: 'An-Nasr',
-      nameUrdu: 'سورۃ النصر',
-      meaningEnglish: 'The Divine Support',
-      versesCount: 3,
-      revelationType: 'Medinan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/110.mp3',
-      order: 19,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ', textUrdu: 'جب اللہ کی مدد اور فتح آ پہنچے!', textEnglish: 'When the victory of Allah has come and the conquest,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/110.mp3' },
-        { numberInSurah: 2, textArabic: 'وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا', textUrdu: 'اور آپ لوگوں کو دیکھ لیں کہ وہ فوج در فوج اللہ کے دین میں داخل ہو رہے ہیں۔', textEnglish: 'And you see the people entering into the religion of Allah in multitudes,', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/110.mp3' },
-        { numberInSurah: 3, textArabic: 'فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا', textUrdu: 'تو اپنے رب کی حمد کے ساتھ تسبیح کیجیے اور اس سے مغفرت مانگیے، بے شک وہ بڑا معاف فرمانے والا ہے۔', textEnglish: 'Then exalt [Him] with praise of your Lord and ask forgiveness of Him. Indeed, He is ever Accepting of repentance.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/110.mp3' }
-      ]
-    },
-    {
-      id: 'surah-111',
-      number: 111,
-      nameArabic: 'سُورَةُ الْمَسَد',
-      nameEnglish: 'Al-Lahab (Al-Masad)',
-      nameUrdu: 'سورۃ اللھب',
-      meaningEnglish: 'The Palm Fiber / The Flame',
-      versesCount: 5,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3',
-      order: 20,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ', textUrdu: 'ٹوٹ گئے ابو لہب کے دونوں ہاتھ اور وہ خود بھی برباد ہو گیا!', textEnglish: 'May the hands of Abu Lahab be ruined, and ruined is he.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3' },
-        { numberInSurah: 2, textArabic: 'مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ', textUrdu: 'نہ تو اس کا مال اس کے کچھ کام آیا اور نہ وہ جو اس نے کمایا۔', textEnglish: 'His wealth will not avail him or that which he gained.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3' },
-        { numberInSurah: 3, textArabic: 'سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ', textUrdu: 'وہ عنقریب شعلہ زن آگ میں داخل ہوگا۔', textEnglish: 'He will [enter to] burn in a Fire of [blazing] flame', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3' },
-        { numberInSurah: 4, textArabic: 'وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ', textUrdu: 'اور اس کی عورت بھی جو لکڑیاں ڈھونے والی ہے۔', textEnglish: 'And his wife [as well] - the carrier of firewood.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3' },
-        { numberInSurah: 5, textArabic: 'فِي جِيدِهَا حَبْلٌ مِّن مَّسَدٍ', textUrdu: 'اس کی گردن میں بٹی ہوئی رسی ہوگی۔', textEnglish: 'Around her neck is a rope of [twisted] fiber.', audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3' }
-      ]
-    },
-    {
-      id: 'surah-112',
-      number: 112,
-      nameArabic: 'سُورَةُ الْإِخْلَاص',
-      nameEnglish: 'Al-Ikhlas',
-      nameUrdu: 'سورۃ الاخلاص',
-      meaningEnglish: 'The Sincerity (Purity of Faith)',
-      versesCount: 4,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/112.mp3',
-      order: 21,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'قُلْ هُوَ اللَّهُ أَحَدٌ', textUrdu: 'کہہ دیجیے کہ وہ اللہ ایک ہے۔', textEnglish: 'Say, "He is Allah, [who is] One,', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6222.mp3' },
-        { numberInSurah: 2, textArabic: 'اللَّهُ الصَّمَدُ', textUrdu: 'اللہ بے نیاز ہے۔', textEnglish: 'Allah, the Eternal Refuge.', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6223.mp3' },
-        { numberInSurah: 3, textArabic: 'لَمْ يَلِدْ وَلَمْ يُولَدْ', textUrdu: 'نہ اس کی کوئی اولاد ہے اور نہ وہ کسی کی اولاد ہے۔', textEnglish: 'He neither begets nor is born,', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6224.mp3' },
-        { numberInSurah: 4, textArabic: 'وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ', textUrdu: 'اور کوئی اس کا ہمسر نہیں۔', textEnglish: 'Nor is there to Him any equivalent."', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6225.mp3' }
-      ]
-    },
-    {
-      id: 'surah-113',
-      number: 113,
-      nameArabic: 'سُورَةُ الْفَلَق',
-      nameEnglish: 'Al-Falaq',
-      nameUrdu: 'سورۃ الفلق',
-      meaningEnglish: 'The Daybreak',
-      versesCount: 5,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/113.mp3',
-      order: 22,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ', textUrdu: 'آپ کہہ دیجیے کہ میں صبح کے رب کی پناہ مانگتا ہوں۔', textEnglish: 'Say, "I seek refuge in the Lord of daybreak,', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6226.mp3' },
-        { numberInSurah: 2, textArabic: 'مِن شَرِّ مَا خَلَقَ', textUrdu: 'ہر اس چیز کی برائی سے جو اس نے پیدا کی۔', textEnglish: 'From the evil of that which He created,', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6227.mp3' },
-        { numberInSurah: 3, textArabic: 'وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ', textUrdu: 'اور اندھیری رات کی برائی سے جب وہ چھا جائے۔', textEnglish: 'And from the evil of darkness when it settles,', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6228.mp3' },
-        { numberInSurah: 4, textArabic: 'وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ', textUrdu: 'اور گرہوں میں پھونکنے والیوں کی برائی سے۔', textEnglish: 'And from the evil of the blowers in knots,', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6229.mp3' },
-        { numberInSurah: 5, textArabic: 'وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ', textUrdu: 'اور حسد کرنے والے کی برائی سے جب وہ حسد کرے۔', textEnglish: 'And from the evil of an envier when he envies."', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6230.mp3' }
-      ]
-    },
-    {
-      id: 'surah-114',
-      number: 114,
-      nameArabic: 'سُورَةُ النَّاس',
-      nameEnglish: 'An-Nas',
-      nameUrdu: 'سورۃ الناس',
-      meaningEnglish: 'Mankind',
-      versesCount: 6,
-      revelationType: 'Meccan',
-      audioUrl: 'https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/114.mp3',
-      order: 23,
-      ayahs: [
-        { numberInSurah: 1, textArabic: 'قُلْ أَعُوذُ بِرَبِّ النَّاسِ', textUrdu: 'آپ کہہ دیجیے کہ میں انسانوں کے رب کی پناہ میں آتا ہوں۔', textEnglish: 'Say, "I seek refuge in the Lord of mankind,', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6231.mp3' },
-        { numberInSurah: 2, textArabic: 'مَلِكِ النَّاسِ', textUrdu: 'جو انسانوں کا بادشاہ ہے۔', textEnglish: 'The Sovereign of mankind.', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6232.mp3' },
-        { numberInSurah: 3, textArabic: 'إِلَٰهِ النَّاسِ', textUrdu: 'جو انسانوں کا معبودِ برحق ہے۔', textEnglish: 'The God of mankind,', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6233.mp3' },
-        { numberInSurah: 4, textArabic: 'مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ', textUrdu: 'وسوسہ ڈالنے والے، پیچھے ہٹ جانے والے شیطان کے شر سے۔', textEnglish: 'From the evil of the retreating whisperer -', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6234.mp3' },
-        { numberInSurah: 5, textArabic: 'الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ', textUrdu: 'جو لوگوں کے سینوں میں وسوسے ڈالتا ہے۔', textEnglish: 'Who whispers [evil] into the breasts of mankind -', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6235.mp3' },
-        { numberInSurah: 6, textArabic: 'مِنَ الْجِنَّةِ وَالنَّاسِ', textUrdu: 'خواہ وہ جنات میں سے ہو یا انسانوں میں سے۔', textEnglish: 'From among the jinn and mankind."', audioUrl: 'https://cdn.islamic.network/quran/audio/128/ar.alafasy/6236.mp3' }
-      ]
+      "id": "w-hi-4",
+      "language": "hi",
+      "letter": "स",
+      "word": "सूरज (Sun)",
+      "meaning": "Prakriti ko roshan karne wala",
+      "phonetic": "Sooraj",
+      "category": "Nature",
+      "imageUrl": "☀️",
+      "order": 18
     }
   ],
-  islamicItems: [
-    // Six Kalimas
+  "sentences": [
     {
-      id: 'kalima-1',
-      category: 'kalimas',
-      title: 'First Kalima — Tayyab (Purity)',
-      titleArabic: 'الْكَلِمَةُ الطَّيِّبَة',
-      arabicText: 'لَا إِلٰهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ',
-      pronunciation: 'Laa ilaaha illal Lahoo Mohammadur Rasool Ul Laah',
-      translationEnglish: 'There is no god worthy of worship except Allah, and Muhammad is the Messenger of Allah.',
-      translationUrdu: 'اللہ کے سوا کوئی معبود نہیں، محمد صلی اللہ علیہ وسلم اللہ کے رسول ہیں۔',
-      translationHindi: 'अल्लाह के सिवा कोई इबादत के लायक नहीं, हज़रत मुहम्मद (सल्लल्लाहु अलैहि वसल्लम) अल्लाह के रसूल हैं।',
-      explanation: 'The foundation of Islamic belief and faith in the oneness of Allah.',
-      order: 1
+      "id": "s-1",
+      "category": "daily",
+      "english": "I am eating food.",
+      "urdu": "میں کھانا کھا رہا ہوں۔",
+      "arabic": "أَنَا آكُلُ الطَّعَامَ.",
+      "hindi": "मैं खाना खा रहा हूँ।",
+      "order": 1
     },
     {
-      id: 'kalima-2',
-      category: 'kalimas',
-      title: 'Second Kalima — Shahadat (Evidence)',
-      titleArabic: 'كَلِمَةُ الشَّهَادَة',
-      arabicText: 'أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ',
-      pronunciation: 'Ash-hadu an laa ilaaha illal-lahu wahdahu laa shareeka lahu wa ash-hadu anna Muhammadan \'abduhu wa rasooluh',
-      translationEnglish: 'I bear witness that there is no deity except Allah alone without partner, and I bear witness that Muhammad is His servant and Messenger.',
-      translationUrdu: 'میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں وہ اکیلا ہے اس کا کوئی شریک نہیں اور میں گواہی دیتا ہوں کہ محمد (صلی اللہ علیہ وسلم) اس کے بندے اور رسول ہیں۔',
-      translationHindi: 'मैं गवाही देता हूँ कि अल्लाह के सिवा कोई इबादत के लायक नहीं, वह अकेला है उसका कोई साझीदार नहीं, और मुहम्मद (सल्ल.) उसके बन्दे और रसूल हैं।',
-      explanation: 'Declaration of Faith witnessed with heart and tongue.',
-      order: 2
+      "id": "s-2",
+      "category": "daily",
+      "english": "I am drinking water.",
+      "urdu": "میں پانی پی رہا ہوں۔",
+      "arabic": "أَنَا أَشْرَبُ الْمَاءَ.",
+      "hindi": "मैं पानी पी रहा हूँ।",
+      "order": 2
     },
     {
-      id: 'kalima-3',
-      category: 'kalimas',
-      title: 'Third Kalima — Tamjeed (Glory of Allah)',
-      titleArabic: 'كَلِمَةُ التَّمْجِيد',
-      arabicText: 'سُبْحَانَ اللهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلٰهَ إِلَّا اللهُ وَاللهُ أَكْبَرُ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ الْعَلِيِّ الْعَظِيمِ',
-      pronunciation: 'Subhanallaahi wal hamdu lillaahi wa laa ilaaha illal laahu wallaahu Akbar, wa laa hawla wa laa quwwata illaa billaahil \'aliyyil \'azeem',
-      translationEnglish: 'Glory be to Allah, all praise is due to Allah, there is no god but Allah, Allah is the Greatest, and there is no power or strength except with Allah, the Most High, the Supreme.',
-      translationUrdu: 'اللہ پاک ہے اور سب تعریف اللہ ہی کے لیے ہے اور اللہ کے سوا کوئی معبود نہیں اور اللہ سب سے بڑا ہے، اور گناہوں سے بچنے کی طاقت اور نیکی کی قوت صرف اللہ ہی کی توفیق سے ہے۔',
-      translationHindi: 'अल्लाह पाक है और सब तारीफें अल्लाह ही के लिए हैं, और अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे बड़ा है।',
-      explanation: 'Glorifying and praising Allah with the most beautiful words.',
-      order: 3
+      "id": "s-3",
+      "category": "school",
+      "english": "I am going to school.",
+      "urdu": "میں اسکول جا رہا ہوں۔",
+      "arabic": "أَنَا أَذْهَبُ إِلَى الْمَدْرَسَةِ.",
+      "hindi": "मैं स्कूल जा रहा हूँ।",
+      "order": 3
     },
     {
-      id: 'kalima-4',
-      category: 'kalimas',
-      title: 'Fourth Kalima — Tauheed (Oneness)',
-      titleArabic: 'كَلِمَةُ التَّوْحِيد',
-      arabicText: 'لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ وَهُوَ حَيٌّ لَا يَمُوتُ أَبَدًا أَبَدًا، ذُو الْجَلَالِ وَالْإِكْرَامِ، بِيَدِهِ الْخَيْرُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ',
-      pronunciation: 'Laa ilaaha illal-lahu wahdahu laa shareeka lahu, lahul mulku wa lahul hamdu, yuhyee wa yumeetu wa huwa hayyun laa yamootu abadan abada, dhul jalaali wal ikraam, biyadihil khayr, wa huwa \'ala kulli shay\'in qadeer',
-      translationEnglish: 'There is no god but Allah alone, Who has no partner. His is the dominion and His is the praise. He gives life and causes death, and He is Alive and never dies. Possessor of Majesty and Honor, in His hand is all goodness, and He has power over all things.',
-      translationUrdu: 'اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، اسی کی بادشاہی ہے اور اسی کے لیے تمام تعریفیں ہیں، وہی جلاتا ہے اور وہی مارتا ہے، وہ ہمیشہ زندہ رہنے والا ہے کبھی نہیں مرے گا، بزرگی اور عزت والا ہے، بھلائی اسی کے ہاتھ میں ہے اور وہ ہر چیز پر قادر ہے۔',
-      translationHindi: 'अल्लाह के सिवा कोई माबूद नहीं, वह अकेला है, उसका कोई साझी नहीं, उसी का मुल्क है और उसी के लिए सारी तारीफें हैं।',
-      order: 4
+      "id": "s-4",
+      "category": "school",
+      "english": "I am reading a book.",
+      "urdu": "میں کتاب پڑھ رہا ہوں۔",
+      "arabic": "أَنَا أَقْرَأُ الْكِتَابَ.",
+      "hindi": "मैं किताब पढ़ रहा हूँ।",
+      "order": 4
     },
     {
-      id: 'kalima-5',
-      category: 'kalimas',
-      title: 'Fifth Kalima — Astaghfar (Forgiveness)',
-      titleArabic: 'كَلِمَةُ الِاسْتِغْفَار',
-      arabicText: 'أَسْتَغْفِرُ اللهَ رَبِّي مِنْ كُلِّ ذَنْبٍ أَذْنَبْتُهُ عَمَدًا أَوْ خَطَأً، سِرًّا أَوْ عَلَانِيَةً، وَأَتُوبُ إِلَيْهِ مِنَ الذَّنْبِ الَّذِي أَعْلَمُ وَمِنَ الذَّنْبِ الَّذِي لَا أَعْلَمُ، إِنَّكَ أَنْتَ عَلَّامُ الْغُيُوبِ وَسَتَّارُ الْعُيُوبِ وَغَفَّارُ الذُّنُوبِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ الْعَلِيِّ الْعَظِيمِ',
-      pronunciation: 'Astaghfirullah Rabbi min kulli zambin aznabtuhu \'amadan aw khata-an sirran aw \'alaniyataw wa atoobu ilayhi...',
-      translationEnglish: 'I seek forgiveness from Allah, my Lord, for every sin I committed intentionally or mistakenly, secretly or openly, and I turn to Him in repentance...',
-      translationUrdu: 'میں اللہ سے اپنے تمام گناہوں کی معافی مانگتا ہوں جو میں نے جان بوجھ کر کیے یا بھول کر، چھپ کر کیے یا کھل کر...',
-      translationHindi: 'मैं अपने रब अल्लाह से अपने हर गुनाह की माफी मांगता हूँ...',
-      order: 5
+      "id": "s-5",
+      "category": "school",
+      "english": "I am writing in my notebook.",
+      "urdu": "میں اپنی کاپی میں لکھ رہا ہوں۔",
+      "arabic": "أَنَا أَكْتُبُ فِي دَفْتَرِي.",
+      "hindi": "मैं अपनी कॉपी में लिख रहा हूँ।",
+      "order": 5
     },
     {
-      id: 'kalima-6',
-      category: 'kalimas',
-      title: 'Sixth Kalima — Rad-e-Kufr (Rejection of Disbelief)',
-      titleArabic: 'كَلِمَةُ رَدِّ الْكُفْر',
-      arabicText: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ أَنْ أُشْرِكَ بِكَ شَيْئًا وَأَنَا أَعْلَمُ بِهِ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ بِهِ، تُبْتُ عَنْهُ وَتَبَرَّأْتُ مِنَ الْكُفْرِ وَالشِّرْكِ وَالْكِذْبِ وَالْغِيبَةِ وَالْبِدْعَةِ وَالنَّمِيمَةِ وَالْفَوَاحِشِ وَالْبُهْتَانِ وَالْمَعَاصِي كُلِّهَا، وَأَسْلَمْتُ وَأَقُولُ لَا إِلٰهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ',
-      pronunciation: 'Allahumma innee a\'oodhu bika min an ushrika bika shay-an wa-ana a\'lamu bihee wa-astaghfiruka limaa laa a\'lamu bihee...',
-      translationEnglish: 'O Allah! I seek protection in You from that I should join any partner with You knowingly, and I ask Your forgiveness from that which I do not know...',
-      translationUrdu: 'اے اللہ! میں تیری پناہ مانگتا ہوں اس بات سے کہ میں جان بوجھ کر کسی کو تیرا شریک ٹھہراؤں، اور تجھ سے معافی مانگتا ہوں اس بات کی جسے میں نہیں جانتا...',
-      translationHindi: 'ऐ अल्लाह! मैं तेरी पनाह मांगता हूँ इस बात से कि मैं जान-बूझकर किसी को तेरा शरीक ठहराऊँ...',
-      order: 6
-    },
-
-    // Wudu Learning
-    {
-      id: 'wudu-guide',
-      category: 'wudu',
-      title: 'How to Perform Wudu (Ablution) Step-by-Step',
-      titleArabic: 'كَيْفِيَّةُ الْوُضُوء',
-      arabicText: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
-      translationEnglish: 'Step-by-step simple visual guide to make Wudu cleanly and correctly for kids.',
-      translationUrdu: 'بچوں کے لیے وضو کرنے کا مکمل اور آسان تصویری طریقہ۔',
-      translationHindi: 'बच्चों के लिए वुज़ू करने का आसान और मुकम्मल तरीका।',
-      explanation: 'Wudu cleans our body and prepares our heart for prayer before Allah.',
-      steps: [
-        { stepNumber: 1, title: 'Intention (Niyyah) & Bismillah', description: 'Make intention in heart for Wudu and say "Bismillah-ir-Rahman-ir-Raheem".', arabicText: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ' },
-        { stepNumber: 2, title: 'Wash Hands (3 Times)', description: 'Wash both hands up to the wrists thoroughly 3 times, cleaning between fingers.', arabicText: 'غَسْلُ الْيَدَيْنِ' },
-        { stepNumber: 3, title: 'Rinse Mouth (3 Times)', description: 'Take clean water in your right hand, rinse your mouth gently 3 times.', arabicText: 'الْمَضْمَضَةُ' },
-        { stepNumber: 4, title: 'Clean Nose (3 Times)', description: 'Sniff water gently into nostrils with right hand and blow out with left hand 3 times.', arabicText: 'الِاسْتِنْشَاقُ' },
-        { stepNumber: 5, title: 'Wash Entire Face (3 Times)', description: 'Wash face from forehead to chin and ear to ear completely 3 times.', arabicText: 'غَسْلُ الْوَجْهِ' },
-        { stepNumber: 6, title: 'Wash Arms up to Elbows (3 Times)', description: 'Wash right arm including elbow 3 times, then left arm 3 times.', arabicText: 'غَسْلُ الْيَدَيْنِ إِلَى الْمِرْفَقَيْنِ' },
-        { stepNumber: 7, title: 'Wipe Head & Ears (Masah - 1 Time)', description: 'Wipe wet hands over head from front to back, then wipe inside and back of ears.', arabicText: 'مَسْحُ الرَّأْسِ وَالْأُذُنَيْنِ' },
-        { stepNumber: 8, title: 'Wash Both Feet up to Ankles (3 Times)', description: 'Wash right foot including ankle 3 times, then left foot 3 times, cleaning between toes.', arabicText: 'غَسْلُ الرِّجْلَيْنِ إِلَى الْكَعْبَيْنِ' }
-      ],
-      order: 7
-    },
-
-    // Salah / Namaz Guide
-    {
-      id: 'salah-guide',
-      category: 'salah',
-      title: 'How to Pray Salah (Namaz) Step-by-Step',
-      titleArabic: 'تَعَلُّمُ الصَّلَاة',
-      arabicText: 'حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلَاةِ الْوُسْطَىٰ',
-      translationEnglish: 'Complete children guide to standing, bowing, prostrating, and reciting in Salah.',
-      translationUrdu: 'بچوں کے لیے نماز کا آسان اور مکمل طریقہ۔',
-      translationHindi: 'बच्चों के लिए नमाज़ सीखने का सरल व सम्पूर्ण तरीका।',
-      steps: [
-        { stepNumber: 1, title: 'Takbeer Tahreemah', description: 'Stand facing Qiblah with pure intention. Raise hands to ears and say "Allahu Akbar".', arabicText: 'اللهُ أَكْبَرُ' },
-        { stepNumber: 2, title: 'Qiyam (Standing) & Thana', description: 'Fold right hand over left below chest. Recite Thana: "Subhanakallahumma...", Surah Al-Fatiha, and another Surah.', arabicText: 'سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ' },
-        { stepNumber: 3, title: 'Ruku (Bowing)', description: 'Say "Allahu Akbar" and bow with hands on knees and flat back. Recite 3 times: "Subhana Rabbiyal Azeem".', arabicText: 'سُبْحَانَ رَبِّيَ الْعَظِيمِ' },
-        { stepNumber: 4, title: 'Qawmah (Standing straight up)', description: 'Rise straight from bowing saying "Sami Allahu liman hamidah", then "Rabbana lakal hamd".', arabicText: 'سَمِعَ اللهُ لِمَنْ حَمِدَهُ، رَبَّنَا لَكَ الْحَمْدُ' },
-        { stepNumber: 5, title: 'Sajdah (Prostration)', description: 'Say "Allahu Akbar" and prostrate with forehead, nose, palms, knees, and toes on ground. Recite 3 times: "Subhana Rabbiyal A\'la".', arabicText: 'سُبْحَانَ رَبِّيَ الْأَعْلَىٰ' },
-        { stepNumber: 6, title: 'Jalsah (Sitting between Sajdahs)', description: 'Sit up straight saying "Allahu Akbar", then perform second Sajdah the same way.', arabicText: 'رَبِّ اغْفِرْ لِي' },
-        { stepNumber: 7, title: 'Tashahhud (Sitting for Attahiyyat)', description: 'Sit peacefully and recite: "Attahiyyatu Lillahi was-salawatu wat-tayyibat..." followed by Durood Ibrahim.', arabicText: 'التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ' },
-        { stepNumber: 8, title: 'Tasleem (Concluding the prayer)', description: 'Turn face to right saying "Assalamu alaykum wa rahmatullah", then to left saying same.', arabicText: 'السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ' }
-      ],
-      order: 8
-    },
-
-    // Daily Duas & Supplications (Full Comprehensive 34+ Collection)
-    {
-      id: 'dua-leaving-house',
-      category: 'duas',
-      title: 'Dua when Leaving the House (گھر سے نکلنے کی دعا)',
-      titleArabic: 'دُعَاءُ الْخُرُوجِ مِنَ الْمَنْزِل',
-      arabicText: 'بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ',
-      pronunciation: 'Bismillahi tawakkaltu \'alallahi, la hawla wa la quwwata illa billah',
-      translationEnglish: 'In the name of Allah, I place my trust in Allah, and there is no might nor power except with Allah.',
-      translationUrdu: 'اللہ کے نام سے، میں نے اللہ پر بھروسہ کیا، گناہوں سے بچنے اور نیکی کرنے کی طاقت اللہ ہی کی طرف سے ہے۔',
-      translationHindi: 'अल्लाह के नाम से, मैंने अल्लाह पर भरोसा किया, और कोई ताक़त और कुव्वत नहीं सिवाय अल्लाह के।',
-      order: 1
+      "id": "s-6",
+      "category": "daily",
+      "english": "I am playing with my friends.",
+      "urdu": "میں اپنے دوستوں کے ساتھ کھیل رہا ہوں۔",
+      "arabic": "أَنَا أَلْعَبُ مَعَ أَصْدِقَائِي.",
+      "hindi": "मैं अपने दोस्तों के साथ खेल रहा हूँ।",
+      "order": 6
     },
     {
-      id: 'dua-entering-house',
-      category: 'duas',
-      title: 'Dua when Entering the House (گھر میں داخل ہونے کی دعا)',
-      titleArabic: 'دُعَاءُ دُخُولِ الْمَنْزِل',
-      arabicText: 'بِسْمِ اللَّهِ وَلَجْنَا، وَبِسْمِ اللَّهِ خَرَجْنَا، وَعَلَى رَبِّنَا تَوَكَّلْنَا',
-      pronunciation: 'Bismillahi walajna, wa bismillahi kharajna, wa \'ala Rabbina tawakkalna',
-      translationEnglish: 'In the name of Allah we enter, and in the name of Allah we leave, and upon our Lord we place our trust.',
-      translationUrdu: 'اللہ کے نام سے ہم داخل ہوئے اور اللہ کے نام سے ہم نکلے، اور اپنے رب ہی پر ہم نے بھروسہ کیا۔',
-      translationHindi: 'अल्लाह के नाम से हम दाखिल हुए और अल्लाह के नाम से निकले, और अपने रब पर हमने भरोसा किया।',
-      order: 2
+      "id": "s-7",
+      "category": "school",
+      "english": "This is my book.",
+      "urdu": "یہ میری کتاب ہے۔",
+      "arabic": "هٰذَا كِتَابِي.",
+      "hindi": "यह मेरी किताब है।",
+      "order": 7
     },
     {
-      id: 'dua-entering-restroom',
-      category: 'duas',
-      title: 'Dua before Entering the Restroom (بیت الخلاء میں داخل ہونے کی دعا)',
-      titleArabic: 'دُعَاءُ دُخُولِ الْخَلَاءِ',
-      arabicText: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ',
-      pronunciation: 'Allahumma innee a\'oodhu bika minal khubuthi wal khabaa\'ith',
-      translationEnglish: 'O Allah, I seek refuge in You from the male and female evil spirits.',
-      translationUrdu: 'اے اللہ! میں خبیث جنوں اور خبیث جننیوں (کی برائی) سے تیری پناہ مانگتا ہوں۔',
-      translationHindi: 'ऐ अल्लाह! मैं ख़बीस जिन्नों और जिन्नियों (की बुराई) से तेरी पनाह मांगता हूँ।',
-      order: 3
+      "id": "s-8",
+      "category": "school",
+      "english": "This is my pen.",
+      "urdu": "یہ میرا قلم ہے۔",
+      "arabic": "هٰذَا قَلَمِي.",
+      "hindi": "यह मेरी कलम है।",
+      "order": 8
     },
     {
-      id: 'dua-leaving-restroom',
-      category: 'duas',
-      title: 'Dua after Leaving the Restroom (بیت الخلاء سے نکلنے کی دعا)',
-      titleArabic: 'دُعَاءُ الْخُرُوجِ مِنَ الْخَلَاءِ',
-      arabicText: 'غُفْرَانَكَ',
-      pronunciation: 'Ghufranaka',
-      translationEnglish: '(O Allah) I seek Your forgiveness.',
-      translationUrdu: 'اے اللہ! میں تیری بخشش مانگتا ہوں۔',
-      translationHindi: 'ऐ अल्लाह! मैं तेरी मग़फ़िरत (माफ़ी) चाहता हूँ।',
-      order: 4
+      "id": "s-9",
+      "category": "feelings",
+      "english": "I am very happy today.",
+      "urdu": "میں آج بہت خوش ہوں۔",
+      "arabic": "أَنَا سَعِيدٌ جِدًّا الْيَوْمَ.",
+      "hindi": "मैं आज बहुत खुश हूँ।",
+      "order": 9
     },
     {
-      id: 'dua-wearing-clothes',
-      category: 'duas',
-      title: 'Dua when Wearing Clothes (کپڑے پہننے کی دعا)',
-      titleArabic: 'دُعَاءُ لُبْسِ الثَّوْب',
-      arabicText: 'الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا الثَّوْبَ وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ',
-      pronunciation: 'Alhamdu lillahilladhi kasani hadhath-thawba wa razaqaneehi min ghayri hawlim-minni wa la quwwah',
-      translationEnglish: 'All praise is for Allah who has clothed me with this garment and provided it for me, with no power or might from myself.',
-      translationUrdu: 'تمام تعریفیں اس اللہ کے لیے ہیں جس نے مجھے یہ کپڑا پہنایا اور میری کسی طاقت اور قوت کے بغیر مجھے یہ عطا فرمایا۔',
-      translationHindi: 'तमाम तारीफें अल्लाह के लिए हैं जिसने मुझे यह कपड़ा पहनाया और मेरी किसी ताक़त के बिना मुझे यह अता फरमाया।',
-      order: 5
+      "id": "s-10",
+      "category": "greetings",
+      "english": "Good morning, have a nice day!",
+      "urdu": "صبح بخیر، آپ کا دن اچھا گزرے!",
+      "arabic": "صَبَاحُ الْخَيْرِ، يَوْمٌ سَعِيدٌ!",
+      "hindi": "सुप्रभात, आपका दिन शुभ हो!",
+      "order": 10
     },
     {
-      id: 'dua-entering-mosque',
-      category: 'duas',
-      title: 'Dua when Entering the Mosque (مسجد میں داخل ہونے کی دعا)',
-      titleArabic: 'دُعَاءُ دُخُولِ الْمَسْجِد',
-      arabicText: 'اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ',
-      pronunciation: 'Allahummaf-tah lee abwaaba rahmatik',
-      translationEnglish: 'O Allah, open the doors of Your mercy for me.',
-      translationUrdu: 'اے اللہ! میرے لیے اپنی رحمت کے دروازے کھول دے۔',
-      translationHindi: 'ऐ अल्लाह! मेरे लिए अपनी रहमत के दरवाज़े खोल दे।',
-      order: 6
+      "id": "s-11",
+      "category": "greetings",
+      "english": "Good night, sweet dreams!",
+      "urdu": "شب بخیر، میٹھے خواب!",
+      "arabic": "تُصْبِحُ عَلَى خَيْرٍ!",
+      "hindi": "शुभ रात्रि, मीठे सपने!",
+      "order": 11
     },
     {
-      id: 'dua-leaving-mosque',
-      category: 'duas',
-      title: 'Dua when Leaving the Mosque (مسجد سے نکلنے کی دعا)',
-      titleArabic: 'دُعَاءُ الْخُرُوجِ مِنَ الْمَسْجِد',
-      arabicText: 'اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ',
-      pronunciation: 'Allahumma innee as\'aluka min fadlik',
-      translationEnglish: 'O Allah, I ask You from Your bounty.',
-      translationUrdu: 'اے اللہ! بے شک میں تجھ سے تیرا فضل مانگتا ہوں۔',
-      translationHindi: 'ऐ अल्लाह! मैं तुझसे तेरा फ़ज़ल मांगता हूँ।',
-      order: 7
+      "id": "s-12",
+      "category": "manners",
+      "english": "Thank you very much.",
+      "urdu": "آپ کا بہت بہت شکریہ۔",
+      "arabic": "شُكْرًا جَزِيلًا لَكَ.",
+      "hindi": "आपका बहुत-बहुत धन्यवाद।",
+      "order": 12
     },
     {
-      id: 'dua-looking-mirror',
-      category: 'duas',
-      title: 'Dua when Looking in the Mirror (آئینہ دیکھنے کی دعا)',
-      titleArabic: 'دُعَاءُ النَّظَرِ فِي الْمِرْآة',
-      arabicText: 'اللَّهُمَّ أَنْتَ حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي',
-      pronunciation: 'Allahumma anta hassanta khalqee fahassin khuluqee',
-      translationEnglish: 'O Allah, You have made my physical form beautiful, so make my character beautiful as well.',
-      translationUrdu: 'اے اللہ! تو نے میری صورت اچھی بنائی ہے، پس میری سیرت بھی اچھی بنا دے۔',
-      translationHindi: 'ऐ अल्लाह! तूने मेरी सूरत अच्छी बनाई है, पस मेरा अख़लाक़ भी अच्छा बना दे।',
-      order: 8
+      "id": "s-13",
+      "category": "manners",
+      "english": "Please help me.",
+      "urdu": "براہ کرم میری مدد کیجیے۔",
+      "arabic": "مِنْ فَضْلِكَ سَاعِدْنِي.",
+      "hindi": "कृपया मेरी मदद कीजिए।",
+      "order": 13
     },
     {
-      id: 'dua-drinking-milk',
-      category: 'duas',
-      title: 'Dua after Drinking Milk (دودھ پینے کے بعد کی دعا)',
-      titleArabic: 'دُعَاءُ شُرْبِ اللَّبَن',
-      arabicText: 'اللَّهُمَّ بَارِكْ لَنَا فِيهِ وَزِدْنَا مِنْهُ',
-      pronunciation: 'Allahumma barik lana feehi wa zidna minh',
-      translationEnglish: 'O Allah, bless it for us and give us more of it.',
-      translationUrdu: 'اے اللہ! اس میں ہمارے لیے برکت عطا فرما اور ہمیں اس سے زیادہ دے۔',
-      translationHindi: 'ऐ अल्लाह! इसमें हमारे लिए बरकत अता फरमा और हमें इससे ज़्यादा दे।',
-      order: 9
+      "id": "s-14",
+      "category": "daily",
+      "english": "Come here and sit down.",
+      "urdu": "یہاں آئیں اور بیٹھ جائیں۔",
+      "arabic": "تَعَالَ هُنَا وَاجْلِسْ.",
+      "hindi": "यहाँ आओ और बैठ जाओ।",
+      "order": 14
     },
     {
-      id: 'dua-after-sneezing',
-      category: 'duas',
-      title: 'Dua after Sneezing (چھینک آنے کے بعد کی دعا)',
-      titleArabic: 'دُعَاءُ الْعُطَاس',
-      arabicText: 'الْحَمْدُ لِلَّهِ',
-      pronunciation: 'Alhamdulillah',
-      translationEnglish: 'All praise is for Allah.',
-      translationUrdu: 'تمام تعریفیں اللہ کے لیے ہیں۔',
-      translationHindi: 'तमाम तारीफें अल्लाह के लिए हैं।',
-      order: 10
+      "id": "s-15",
+      "category": "daily",
+      "english": "Stand up and listen carefully.",
+      "urdu": "کھڑے ہو جائیں اور دھیان سے سنیں۔",
+      "arabic": "قِفْ وَاسْتَمِعْ بِعِنَايَةٍ.",
+      "hindi": "खड़े हो जाओ और ध्यान से सुनो।",
+      "order": 15
     },
     {
-      id: 'dua-reply-sneezing',
-      category: 'duas',
-      title: 'Dua when replying to someone who Sneezes (چھینکنے والے کے جواب کی دعا)',
-      titleArabic: 'تَشْمِيتُ الْعَاطِس',
-      arabicText: 'يَرْحَمُكَ اللَّهُ',
-      pronunciation: 'Yarhamukallah',
-      translationEnglish: 'May Allah have mercy on you.',
-      translationUrdu: 'اللہ تم پر رحم کرے۔',
-      translationHindi: 'अल्लाह तुम पर रहम फरमाए।',
-      order: 11
+      "id": "s-16",
+      "category": "daily",
+      "english": "Open the door, please.",
+      "urdu": "براہ کرم دروازہ کھولیں۔",
+      "arabic": "افْتَحِ الْبَابَ مِنْ فَضْلِكَ.",
+      "hindi": "कृपया दरवाज़ा खोलें।",
+      "order": 16
     },
     {
-      id: 'dua-boarding-vehicle',
-      category: 'duas',
-      title: 'Dua when Boarding a Vehicle / Traveling (سواری پر بیٹھنے / سفر کی دعا)',
-      titleArabic: 'دُعَاءُ الرُّكُوبِ وَالسَّفَر',
-      arabicText: 'سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ',
-      pronunciation: 'Subhanalladhi sakh-khara lana hadha wa ma kunna lahoo muqrineen, wa inna ila Rabbina lamunqaliboon',
-      translationEnglish: 'Glory be to Him who has subjected this to us, and we could not have otherwise subdued it, and indeed we are returning to our Lord.',
-      translationUrdu: 'پاک ہے وہ ذات جس نے اس (سواری) کو ہمارے تابع کر دیا، حالانکہ ہم اسے قابو کرنے والے نہ تھے، اور بے شک ہم اپنے رب کی طرف ہی لوٹ کر جانے والے ہیں۔',
-      translationHindi: 'पाक है वह ज़ात जिसने इसे हमारे काबू में कर दिया, और हम अपने रब की तरफ लौटने वाले हैं।',
-      order: 12
+      "id": "s-17",
+      "category": "daily",
+      "english": "Close the window, please.",
+      "urdu": "براہ کرم کھڑکی بند کریں۔",
+      "arabic": "أَغْلِقِ النَّافِذَةَ مِنْ فَضْلِكَ.",
+      "hindi": "कृपया खिड़की बंद करें।",
+      "order": 17
     },
     {
-      id: 'dua-distress-hardship',
-      category: 'duas',
-      title: 'Dua when in Distress or Hardship (پریشانی اور مصیبت کی دعا)',
-      titleArabic: 'دُعَاءُ الْكَرْبِ (دُعَاءُ يُونُس)',
-      arabicText: 'لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ',
-      pronunciation: 'Laa ilaaha illa anta subhaanaka innee kuntu minaz-zaalimeen',
-      translationEnglish: 'There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.',
-      translationUrdu: 'تیرے سوا کوئی معبود نہیں، تو پاک ہے، بے شک میں ہی ظالموں میں سے تھا۔',
-      translationHindi: 'तेरे सिवा कोई माबूद नहीं, तू पाक है, बेशक मैं ही ज़ालिमों में से था।',
-      order: 13
+      "id": "s-18",
+      "category": "greetings",
+      "english": "Peace be upon you (Assalamu Alaikum).",
+      "urdu": "السلام علیکم ورحمۃ اللہ وبرکاتہ۔",
+      "arabic": "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ.",
+      "hindi": "अस्सलाम वालेकुम व रहमतुल्लाह व बरकातहू।",
+      "order": 18
     },
     {
-      id: 'dua-visiting-sick',
-      category: 'duas',
-      title: 'Dua when Visiting the Sick (بیمار کی عیادت کی دعا)',
-      titleArabic: 'دُعَاءُ عِيَادَةِ الْمَرِيض',
-      arabicText: 'لَا بَأْسَ طَهُورٌ إِنْ شَاءَ اللَّهُ',
-      pronunciation: 'Laa ba\'sa tahoorun in sha\'Allah',
-      translationEnglish: 'Do not worry, it will be a purification (from sins), if Allah wills.',
-      translationUrdu: 'کوئی حرج نہیں، اگر اللہ نے چاہا تو یہ بیماری گناہوں سے پاک کرنے والی ہے۔',
-      translationHindi: 'कोई हरज नहीं, इन्शाअल्लाह यह बीमारी गुनाहों से पाक करने वाली है।',
-      order: 14
+      "id": "s-19",
+      "category": "daily",
+      "english": "I want to sleep early tonight.",
+      "urdu": "میں آج رات جلدی سونا چاہتا ہوں۔",
+      "arabic": "أُرِيدُ أَنْ أَنَامَ مُبَكِّرًا اللَّيْلَةَ.",
+      "hindi": "मैं आज रात जल्दी सोना चाहता हूँ।",
+      "order": 19
     },
     {
-      id: 'dua-hearing-good-news',
-      category: 'duas',
-      title: 'Dua upon Hearing Good News (خوشی کی خبر سننے کی دعا)',
-      titleArabic: 'دُعَاءُ سَمَاعِ الْخَبَرِ السَّارّ',
-      arabicText: 'الْحَمْدُ لِلَّهِ الَّذِي بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ',
-      pronunciation: 'Alhamdu lillahilladhi bini\'matihi tatimmus-saalihaat',
-      translationEnglish: 'All praise is for Allah by whose favor good works are accomplished.',
-      translationUrdu: 'تمام تعریفیں اس اللہ کے لیے ہیں جس کی نعمت سے اچھے کام مکمل ہوتے ہیں۔',
-      translationHindi: 'सब तारीफें अल्लाह के लिए हैं जिसकी नेमत से अच्छे काम पूरे होते हैं।',
-      order: 15
+      "id": "s-20",
+      "category": "daily",
+      "english": "What time is it right now?",
+      "urdu": "اس وقت کیا ٹائم ہوا ہے؟",
+      "arabic": "كَمِ السَّاعَةُ الْآنَ؟",
+      "hindi": "अभी क्या समय हुआ है?",
+      "order": 20
     },
     {
-      id: 'dua-hearing-bad-news',
-      category: 'duas',
-      title: 'Dua upon Hearing Bad News (بری خبر یا مصیبت کے وقت کی دعا)',
-      titleArabic: 'دُعَاءُ الْمُصِيبَة',
-      arabicText: 'إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ',
-      pronunciation: 'Inna lillahi wa inna ilayhi raaji\'oon',
-      translationEnglish: 'Indeed, to Allah we belong and to Him we shall return.',
-      translationUrdu: 'بے شک ہم اللہ ہی کے لیے ہیں اور بے شک ہم اسی کی طرف لوٹ کر جانے والے ہیں۔',
-      translationHindi: 'बेशक हम अल्लाह ही के हैं और हमें उसी की तरफ लौट कर जाना है।',
-      order: 16
+      "id": "s-21",
+      "category": "daily",
+      "english": "The weather is very pleasant today.",
+      "urdu": "آج موسم بہت خوشگوار ہے۔",
+      "arabic": "الطَّقْسُ لَطِيفٌ جِدًّا الْيَوْمَ.",
+      "hindi": "आज मौसम बहुत सुहावना है।",
+      "order": 21
     },
     {
-      id: 'dua-when-angry',
-      category: 'duas',
-      title: 'Dua when Angry (غصہ آنے کی دعا)',
-      titleArabic: 'دُعَاءُ الْغَضَب',
-      arabicText: 'أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ',
-      pronunciation: 'A\'oodhu billahi minash-shaytanir-rajeem',
-      translationEnglish: 'I seek refuge in Allah from the accursed devil.',
-      translationUrdu: 'میں شیطان مردود سے اللہ کی پناہ مانگتا ہوں۔',
-      translationHindi: 'मैं शैतान मर्दूद से अल्लाह की पनाह मांगता हूँ।',
-      order: 17
+      "id": "s-22",
+      "category": "school",
+      "english": "The teacher is explaining the lesson.",
+      "urdu": "استاد سبق سمجھا رہے ہیں۔",
+      "arabic": "الْمُعَلِّمُ يَشْرَحُ الدَّرْسَ.",
+      "hindi": "शिक्षक पाठ समझा रहे हैं।",
+      "order": 22
     },
     {
-      id: 'dua-protection-harm',
-      category: 'duas',
-      title: 'Dua for Protection from Harm (نقصان سے بچاؤ کی دعا)',
-      titleArabic: 'دُعَاءُ الْحِفْظِ وَالْحِمَايَة',
-      arabicText: 'بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ',
-      pronunciation: 'Bismillahilladhi la yadurru ma\'as-mihee shay\'un fil-ardi wa la fis-samaa\'i wa huwas-Samee\'ul \'Aleem',
-      translationEnglish: 'In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, All-Knowing.',
-      translationUrdu: 'اللہ کے نام سے جس کے نام کے ساتھ زمین اور آسمان میں کوئی چیز نقصان نہیں پہنچا سکتی، اور وہ خوب سننے والا اور جاننے والا ہے۔',
-      translationHindi: 'अल्लाह के नाम से जिसके नाम के साथ ज़मीन और आसमान में कोई चीज़ नुकसान नहीं पहुंचा सकती, और वह खूब सुनने और जानने वाला है।',
-      order: 18
+      "id": "s-23",
+      "category": "school",
+      "english": "I have completed my homework.",
+      "urdu": "میں نے اپنا ہوم ورک مکمل کر لیا ہے۔",
+      "arabic": "أَنْهَيْتُ وَاجِبِي الْمَنْزِلِيَّ.",
+      "hindi": "मैंने अपना होमवर्क पूरा कर लिया है।",
+      "order": 23
     },
     {
-      id: 'dua-world-hereafter',
-      category: 'duas',
-      title: 'Dua for Good in this World and the Hereafter (دنیا اور آخرت کی بھلائی کی دعا)',
-      titleArabic: 'دُعَاءُ خَيْرِ الدُّنْيَا وَالْآخِرَة',
-      arabicText: 'رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ',
-      pronunciation: 'Rabbana aatina fid-dunya hasanataw-wa fil-aakhirati hasanataw-wa qina \'adhaban-naar',
-      translationEnglish: 'Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.',
-      translationUrdu: 'اے ہمارے رب! ہمیں دنیا میں بھلائی عطا فرما اور آخرت میں بھی بھلائی عطا فرما اور ہمیں آگ کے عذاب سے بچا۔',
-      translationHindi: 'ऐ हमारे रब! हमें दुनिया में भी भलाई अता फरमा और आख़िरत में भी भलाई दे और हमें आग के अज़ाब से बचा।',
-      order: 19
+      "id": "s-24",
+      "category": "school",
+      "english": "Can I borrow your pencil?",
+      "urdu": "کیا میں آپ کی پنسل لے سکتا ہوں؟",
+      "arabic": "هَلْ يُمْكِنُنِي اسْتِعَارَةُ قَلَمِكَ الرَّصَاصِ؟",
+      "hindi": "क्या मैं आपकी पेंसिल उधार ले सकता हूँ?",
+      "order": 24
     },
     {
-      id: 'dua-iftar',
-      category: 'duas',
-      title: 'Dua for Breaking Fast - Iftar (روزہ افطار کرنے کی دعا)',
-      titleArabic: 'دُعَاءُ الْإِفْطَار',
-      arabicText: 'ذَهَبَ الظَّمَأُ وَابْتَلَّتِ الْعُرُوقُ وَثَبَتَ الْأَجْرُ إِنْ شَاءَ اللَّهُ',
-      pronunciation: 'Dhahabaz-zama\'u wabtallatil \'urooqu wa thabatal ajru in sha\'Allah',
-      translationEnglish: 'The thirst is gone, the veins are moistened, and the reward is confirmed, if Allah wills.',
-      translationUrdu: 'پیاس بجھ گئی، رگیں تر ہو گئیں، اور اگر اللہ نے چاہا تو ثواب پکا ہو گیا۔',
-      translationHindi: 'प्यास बुझ गई, नसें तर हो गईं और इन्शाअल्लाह सवाब पक्का हो गया।',
-      order: 20
+      "id": "s-25",
+      "category": "school",
+      "english": "Our exams will start next week.",
+      "urdu": "ہمارے امتحانات اگلے ہفتے شروع ہوں گے۔",
+      "arabic": "سَتَبْدَأُ امْتِحَانَاتُنَا الْأُسْبُوعَ الْقَادِمَ.",
+      "hindi": "हमारी परीक्षाएं अगले हफ्ते शुरू होंगी।",
+      "order": 25
     },
     {
-      id: 'dua-new-moon',
-      category: 'duas',
-      title: 'Dua upon Sighting the New Moon (نیا چاند دیکھنے کی دعا)',
-      titleArabic: 'دُعَاءُ رُؤْيَةِ الْهِلَال',
-      arabicText: 'اللَّهُمَّ أَهِلَّهُ عَلَيْنَا بِالْأَمْنِ وَالْإِيمَانِ، وَالسَّلَامَةِ وَالْإِسْلَامِ، رَبِّي وَرَبُّكَ اللَّهُ',
-      pronunciation: 'Allahumma ahillahu \'alayna bil-amni wal-eemaan, was-salaamati wal-Islam, Rabbee wa Rabbukallah',
-      translationEnglish: 'O Allah, let this moon appear on us with security and faith, and with safety and Islam. (O moon!) Your Lord and my Lord is Allah.',
-      translationUrdu: 'اے اللہ! اس چاند کو ہم پر امن و ایمان، اور سلامتی و اسلام کے ساتھ طلوع فرما، (اے چاند!) میرا اور تیرا رب اللہ ہے۔',
-      translationHindi: 'ऐ अल्लाह! इस चाँद को हम पर अमन व ईमान और सलामती व इस्लाम के साथ तुलू फरमा।',
-      order: 21
+      "id": "s-26",
+      "category": "greetings",
+      "english": "How is everyone in your family?",
+      "urdu": "آپ کے گھر والے کیسے ہیں؟",
+      "arabic": "كَيْفَ حَالُ الْجَمِيعِ فِي عَائِلَتِكَ؟",
+      "hindi": "आपके परिवार में सब कैसे हैं?",
+      "order": 26
     },
     {
-      id: 'dua-when-raining',
-      category: 'duas',
-      title: 'Dua when it Rains (بارش ہوتے وقت کی دعا)',
-      titleArabic: 'دُعَاءُ نُزُولِ الْمَطَر',
-      arabicText: 'اللَّهُمَّ صَيِّبًا نَافِعًا',
-      pronunciation: 'Allahumma sayyiban naafi\'aa',
-      translationEnglish: 'O Allah, (make it) a beneficial downpour.',
-      translationUrdu: 'اے اللہ! اس بارش کو نفع بخش بنا دے۔',
-      translationHindi: 'ऐ अल्लाह! इस बारिश को फायदेमंद बना दे।',
-      order: 22
+      "id": "s-27",
+      "category": "greetings",
+      "english": "Welcome to our home.",
+      "urdu": "ہمارے گھر میں خوش آمدید۔",
+      "arabic": "مَرْحَبًا بِكُمْ فِي مَنْزِلِنَا.",
+      "hindi": "हमारे घर में आपका स्वागत है।",
+      "order": 27
     },
     {
-      id: 'dua-hearing-thunder',
-      category: 'duas',
-      title: 'Dua upon Hearing Thunder (بادل گرجنے کی دعا)',
-      titleArabic: 'دُعَاءُ سَمَاعِ الرَّعْد',
-      arabicText: 'سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةُ مِنْ خِيفَتِهِ',
-      pronunciation: 'Subhanalladhi yusabbihur-ra\'du bihamdihee wal-malaa\'ikatu min kheefatih',
-      translationEnglish: 'Glory be to Him whom the thunder glorifies with His praise, and the angels from the fear of Him.',
-      translationUrdu: 'پاک ہے وہ ذات جس کی حمد کے ساتھ بادل کی گرج تسبیح کرتی ہے، اور فرشتے اس کے خوف سے تسبیح کرتے ہیں۔',
-      translationHindi: 'पाक है वह ज़ात जिसकी तारीफ के साथ बादल की गरज तस्बीह करती है और फ़रिश्ते उसके खौफ से तस्बीह करते हैं।',
-      order: 23
+      "id": "s-28",
+      "category": "greetings",
+      "english": "See you again tomorrow.",
+      "urdu": "کل آپ سے دوبارہ ملاقات ہوگی۔",
+      "arabic": "أَرَاكَ غَدًا مَرَّةً أُخْرَى.",
+      "hindi": "कल आपसे फिर मुलाकात होगी।",
+      "order": 28
     },
     {
-      id: 'dua-steadfast-heart',
-      category: 'duas',
-      title: 'Dua for Steadfastness of the Heart (دل کی ثابت قدمی کی دعا)',
-      titleArabic: 'دُعَاءُ ثَبَاتِ الْقَلْب',
-      arabicText: 'يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ',
-      pronunciation: 'Yaa Muqallibal quloobi thabbit qalbee \'ala deenik',
-      translationEnglish: 'O Changer of the hearts, make my heart firm upon Your religion.',
-      translationUrdu: 'اے دلوں کو پھیرنے والے! میرے دل کو اپنے دین پر ثابت قدم رکھ۔',
-      translationHindi: 'ऐ दिलों को फेरने वाले! मेरे दिल को अपने दीन पर क़ायम रख।',
-      order: 24
+      "id": "s-29",
+      "category": "manners",
+      "english": "I am sorry for my mistake.",
+      "urdu": "میں اپنی غلطی کے لیے معافی چاہتا ہوں۔",
+      "arabic": "أَنَا آسِفٌ عَلَى خَطَئِي.",
+      "hindi": "मैं अपनी गलती के लिए माफ़ी चाहता हूँ।",
+      "order": 29
     },
     {
-      id: 'dua-visiting-graveyard',
-      category: 'duas',
-      title: 'Dua when Visiting the Graveyard (قبرستان میں داخل ہونے کی دعا)',
-      titleArabic: 'دُعَاءُ زِيَارَةِ الْقُبُور',
-      arabicText: 'السَّلَامُ عَلَيْكُمْ أَهْلَ الدِّيَارِ مِنَ الْمُؤْمِنِينَ وَالْمُسْلِمِينَ',
-      pronunciation: 'Assalamu \'alaykum ahlad-diyaari minal mu\'mineena wal muslimeen',
-      translationEnglish: 'Peace be upon you, O inhabitants of the dwellings, believers and Muslims.',
-      translationUrdu: 'اے ان گھروں (قبروں) میں رہنے والے مومنو اور مسلمانو! تم پر سلامتی ہو۔',
-      translationHindi: 'ऐ कब्रों में रहने वाले मोमिनो और मुसलमानो! तुम पर सलामती हो।',
-      order: 25
+      "id": "s-30",
+      "category": "manners",
+      "english": "Excuse me, where is the restroom?",
+      "urdu": "معاف کیجیے گا، واش روم کہاں ہے؟",
+      "arabic": "مَعْذِرَةً، أَيْنَ دَوْرَةُ الْمِيَاهِ؟",
+      "hindi": "माफ़ कीजिएगा, शौचालय कहाँ है?",
+      "order": 30
     },
     {
-      id: 'dua-ending-gathering',
-      category: 'duas',
-      title: 'Dua for Ending a Gathering (مجلس کے اختتام کی دعا)',
-      titleArabic: 'دُعَاءُ كَفَّارَةِ الْمَجْلِس',
-      arabicText: 'سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ',
-      pronunciation: 'Subhanakallahumma wa bihamdika, ash-hadu an laa ilaaha illa anta, astaghfiruka wa atoobu ilayk',
-      translationEnglish: 'Glory is to You, O Allah, and praise is to You. I bear witness that there is none worthy of worship but You. I seek Your forgiveness and repent to You.',
-      translationUrdu: 'اے اللہ! تو پاک ہے اور تیری ہی تعریف ہے، میں گواہی دیتا ہوں کہ تیرے سوا کوئی معبود نہیں، میں تجھ سے بخشش مانگتا ہوں اور تیری طرف توبہ کرتا ہوں۔',
-      translationHindi: 'ऐ अल्लाह! तू पाक है और तेरी ही तारीफ है, मैं गवाही देता हूँ कि तेरे सिवा कोई माबूद नहीं, मैं तुझसे माफ़ी मांगता हूँ।',
-      order: 26
+      "id": "s-31",
+      "category": "manners",
+      "english": "Could you please repeat that?",
+      "urdu": "کیا آپ براہ کرم اسے دہرا سکتے ہیں؟",
+      "arabic": "هَلْ يُمْكِنُكَ إِعَادَةُ ذَلِكَ مِنْ فَضْلِكَ؟",
+      "hindi": "क्या आप कृपया इसे दोहरा सकते हैं?",
+      "order": 31
     },
     {
-      id: 'dua-asking-forgiveness',
-      category: 'duas',
-      title: 'Dua for Asking Forgiveness (مغفرت طلب کرنے کی دعا)',
-      titleArabic: 'دُعَاءُ طَلَبِ الْمَغْفِرَة',
-      arabicText: 'رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ',
-      pronunciation: 'Rabbigh-fir lee wa tub \'alayya innaka antat-Tawwaabur-Raheem',
-      translationEnglish: 'O my Lord, forgive me and accept my repentance, indeed You are the Accepting of repentance, the Merciful.',
-      translationUrdu: 'اے میرے رب! مجھے بخش دے اور میری توبہ قبول فرما، بے شک تو ہی توبہ قبول کرنے والا، نہایت رحم کرنے والا ہے۔',
-      translationHindi: 'ऐ मेरे रब! मुझे बख्श दे और मेरी तौबा कुबूल फरमा, बेशक तू तौबा कुबूल करने वाला और रहम करने वाला है।',
-      order: 27
+      "id": "s-32",
+      "category": "manners",
+      "english": "You are welcome. (Reply to thank you)",
+      "urdu": "کوئی بات نہیں / خوش آمدید۔",
+      "arabic": "عَلَى الرُّحْبِ وَالسَّعَةِ.",
+      "hindi": "कोई बात नहीं / आपका स्वागत है।",
+      "order": 32
     },
     {
-      id: 'dua-difficult-task',
-      category: 'duas',
-      title: 'Dua when Facing a Difficult Task (مشکل کام کے وقت کی دعا)',
-      titleArabic: 'دُعَاءُ تَيْسِيرِ الْأُمُور',
-      arabicText: 'اللَّهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا، وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلًا',
-      pronunciation: 'Allahumma laa sahla illa maa ja\'altahoo sahla, wa anta taj\'alul hazna idha shi\'ta sahla',
-      translationEnglish: 'O Allah, there is no ease except in that which You have made easy, and You make the difficulty, if You wish, easy.',
-      translationUrdu: 'اے اللہ! کوئی کام آسان نہیں مگر جسے تو آسان کر دے، اور تو جب چاہے مشکل کو بھی آسان کر دیتا ہے۔',
-      translationHindi: 'ऐ अल्लाह! कोई काम आसान नहीं मगर जिसे तू आसान कर दे, और तू जब चाहे मुश्किल को आसान बना देता है।',
-      order: 28
+      "id": "s-33",
+      "category": "feelings",
+      "english": "I feel very tired right now.",
+      "urdu": "میں اس وقت بہت تھکاوٹ محسوس کر رہا ہوں۔",
+      "arabic": "أَشْعُرُ بِتَعَبٍ شَدِيدٍ الْآنَ.",
+      "hindi": "मुझे अभी बहुत थकान महसूस हो रही है।",
+      "order": 33
     },
     {
-      id: 'dua-entering-market',
-      category: 'duas',
-      title: 'Dua when Entering the Market (بازار میں داخل ہونے کی دعا)',
-      titleArabic: 'دُعَاءُ دُخُولِ السُّوق',
-      arabicText: 'لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِیکَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ، وَهُوَ حَيٌّ لَا يَمُوتُ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ',
-      pronunciation: 'Laa ilaaha illallahu wahdahu la shareeka lah, lahul mulku wa lahul hamdu, yuhyee wa yumeetu, wa huwa hayyun laa yamoot, biyadihil khayr, wa huwa \'ala kulli shay\'in qadeer',
-      translationEnglish: 'There is none worthy of worship except Allah alone, without partner. To Him belongs the dominion, and to Him is all praise. He gives life and causes death, and He is living and does not die. In His hand is all good, and He is over all things competent.',
-      translationUrdu: 'اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے اس کا کوئی شریک نہیں، اسی کی بادشاہی ہے اور اسی کے لیے تمام تعریفیں ہیں، وہی زندہ کرتا ہے اور وہی مارتا ہے، اور وہ ہمیشہ زندہ رہنے والا ہے اسے موت نہیں، اسی کے ہاتھ میں ہر بھلائی ہے اور وہ ہر چیز پر قادر ہے۔',
-      translationHindi: 'अल्लाह के सिवा कोई माबूद नहीं, वह अकेला है उसका कोई साझी नहीं, उसी का मुल्क है और उसी के हाथ में सारी भलाई है।',
-      order: 29
+      "id": "s-34",
+      "category": "feelings",
+      "english": "I am excited about the trip.",
+      "urdu": "میں اس سفر کے لیے بہت پرجوش ہوں۔",
+      "arabic": "أَنَا مُتَحَمِّسٌ لِلرِّحْلَةِ.",
+      "hindi": "मैं इस यात्रा के लिए बहुत उत्साहित हूँ।",
+      "order": 34
     },
     {
-      id: 'dua-seeing-afflicted',
-      category: 'duas',
-      title: 'Dua when Seeing Someone in Affliction (کسی کو مصیبت یا بیماری میں دیکھنے کی دعا)',
-      titleArabic: 'دُعَاءُ رُؤْيَةِ الْمُبْتَلَى',
-      arabicText: 'الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي مِمَّا ابْتَلَاكَ بِهِ وَفَضَّلَنِي عَلَى كَثِيرٍ مِمَّنْ خَلَقَ تَفْضِيلًا',
-      pronunciation: 'Alhamdu lillahilladhi \'aafaanee mim-mabtalaaka bihee wa faddalanee \'ala katheerim-mimman khalaqa tafdeela',
-      translationEnglish: 'All praise is to Allah Who has saved me from what He has afflicted you with, and has greatly preferred me over many of His creation.',
-      translationUrdu: 'تمام تعریفیں اس اللہ کے لیے ہیں جس نے مجھے اس مصیبت سے عافیت دی جس میں اس نے تجھے مبتلا کیا، اور مجھے اپنی بہت سی مخلوقات پر بڑی فضیلت دی۔',
-      translationHindi: 'तमाम तारीफें अल्लाह के लिए हैं जिसने मुझे इस मुसीबत से बचाया जिसमें तुझे मुब्तिला किया।',
-      order: 30
+      "id": "s-35",
+      "category": "feelings",
+      "english": "She is sad because she lost her watch.",
+      "urdu": "وہ اداس ہے کیونکہ اس کی گھڑی کھو گئی ہے۔",
+      "arabic": "هِيَ حَزِينَةٌ لِأَنَّهَا أَضَاعَتْ سَاعَتَهَا.",
+      "hindi": "वह उदास है क्योंकि उसकी घड़ी खो गई है।",
+      "order": 35
     },
     {
-      id: 'dua-thana-salah',
-      category: 'duas',
-      title: 'Thana (ثناء - نماز کی شروعات کی دعا)',
-      titleArabic: 'دُعَاءُ الِاسْتِفْتَاحِ (الثَّنَاء)',
-      arabicText: 'سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ',
-      pronunciation: 'Subhaanakallahumma wa bihamdika, wa tabaarakas-muka, wa ta\'aala jadduka, wa laa ilaaha ghayruk',
-      translationEnglish: 'Glory be to You, O Allah, and all praise is due to You. Blessed is Your name, and high is Your majesty, and there is no deity worthy of worship except You.',
-      translationUrdu: 'اے اللہ! تو پاک ہے اور تیری ہی تعریف ہے، اور تیرا نام برکت والا ہے، اور تیری شان بہت بلند ہے، اور تیرے سوا کوئی معبود نہیں۔',
-      translationHindi: 'ऐ अल्लाह! तू पाक है और तेरी ही तारीफ है, और तेरा नाम बरकत वाला है, और तेरी शान बहुत बुलंद है, और तेरे सिवा कोई माबूद नहीं।',
-      order: 31
+      "id": "s-36",
+      "category": "feelings",
+      "english": "He is angry about the delay.",
+      "urdu": "وہ تاخیر کی وجہ سے غصے میں ہے۔",
+      "arabic": "إِنَّهُ غَاضِبٌ بِسَبَبِ التَّأْخِيرِ.",
+      "hindi": "वह देरी की वजह से गुस्से में है।",
+      "order": 36
     },
     {
-      id: 'dua-attahiyat-tashahhud',
-      category: 'duas',
-      title: 'Attahiyat / Tashahhud (التحيات - نماز میں قعدہ/بیٹھنے کی دعا)',
-      titleArabic: 'التَّشَهُّد (التَّحِيَّات)',
-      arabicText: 'التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ',
-      pronunciation: 'Attahiyyatu lillahi was-salawaatu wat-tayyibaat, assalaamu \'alayka ayyuhan-Nabiyyu wa rahmatullahi wa barakaatuh, assalaamu \'alayna wa \'ala \'ibaadillahis-saaliheen, ash-hadu an laa ilaaha illallahu, wa ash-hadu anna Muhammadan \'abduhoo wa rasooluh',
-      translationEnglish: 'All verbal, physical, and monetary worship is due to Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is no deity worthy of worship except Allah, and I bear witness that Muhammad is His servant and His Messenger.',
-      translationUrdu: 'تمام قولی، بدنی اور مالی عبادتیں اللہ ہی کے لیے ہیں۔ اے نبی! آپ پر سلام ہو اور اللہ کی رحمت اور اس کی برکتیں نازل ہوں۔ ہم پر اور اللہ کے تمام نیک بندوں پر سلام ہو۔ میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، اور میں گواہی دیتا ہوں کہ محمد (ﷺ) اس کے بندے اور رسول ہیں۔',
-      translationHindi: 'तमाम इबादतें अल्लाह ही के लिए हैं। ऐ नबी! आप पर सलाम हो और अल्लाह की रहमत और बरकतें हों। हम पर और अल्लाह के नेक बन्दों पर सलाम हो।',
-      order: 32
-    },
-    {
-      id: 'dua-masoora-salah',
-      category: 'duas',
-      title: 'Dua-e-Masoora (دعائے ماثورہ - نماز کے آخر میں درود کے بعد کی دعا)',
-      titleArabic: 'الدُّعَاءُ الْمَأْثُورُ فِي آخِرِ الصَّلَاة',
-      arabicText: 'اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا، وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ، فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ، وَارْحَمْنِي إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ',
-      pronunciation: 'Allahumma innee zalamtu nafsee zulman katheera, wa la yaghfirudh-dhunooba illa anta, faghfir lee maghfiratam-min \'indika, warhamnee innaka antal Ghafoorur-Raheem',
-      translationEnglish: 'O Allah! I have wronged myself greatly, and none forgives sins except You. So grant me forgiveness from Yourself and have mercy upon me. Indeed, You are the Forgiving, the Merciful.',
-      translationUrdu: 'اے اللہ! بے شک میں نے اپنی جان پر بہت ظلم کیا ہے، اور تیرے سوا کوئی گناہوں کو معاف نہیں کر سکتا، پس مجھے اپنے پاس سے خاص بخشش کے ساتھ معاف فرما اور مجھ پر رحم فرما، بے شک تو ہی بہت بخشنے والا اور نہایت رحم کرنے والا ہے۔',
-      translationHindi: 'ऐ अल्लाह! बेशक मैंने अपनी जान पर बहुत ज़ुल्म किया है, और तेरे सिवा कोई गुनाहों को माफ नहीं कर सकता, पस मुझे अपनी तरफ से खास बख्शिश अता फरमा।',
-      order: 33
-    },
-    {
-      id: 'dua-qunoot-witr',
-      category: 'duas',
-      title: 'Dua-e-Qunoot (دعائے قنوت - نمازِ وتر کی دعا)',
-      titleArabic: 'دُعَاءُ الْقُنُوتِ فِي صَلَاةِ الْوِتْر',
-      arabicText: 'اللَّهُمَّ إِنَّا نَسْتَعِينُكَ وَنَسْتَغْفِرُكَ وَنُؤْمِنُ بِكَ وَنَتَوَكَّلُ عَلَيْكَ وَنُثْنِي عَلَيْكَ الْخَيْرَ، وَنَشْكُرُكَ وَلَا نَكْفُرُكَ، وَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ. اللَّهُمَّ إِيَّاكَ نَعْبُدُ وَلَكَ نُصَلِّي وَنَسْجُدُ وَإِلَيْكَ نَسْعَى وَنَحْفِدُ، وَنَرْجُو رَحْمَتَكَ وَنَخْشَى عَذَابَكَ، إِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحِقٌ',
-      pronunciation: 'Allahumma inna nasta\'eenuka wa nastaghfiruka wa nu\'minu bika wa natawakkalu \'alayka wa nuthnee \'alaykal khayr, wa nashkuruka wa laa nakfuruka, wa nakhla\'u wa natruku may-yafjuruk. Allahumma iyyaka na\'budu wa laka nusallee wa nasjudu wa ilayka nas\'aa wa nahfid, wa narjoo rahmataka wa nakhshaa \'adhaabaka, inna \'adhaabaka bil-kuffaari mulhiq',
-      translationEnglish: 'O Allah! We seek Your help, seek Your forgiveness, believe in You, rely on You, and praise You in the best manner. We thank You and are not ungrateful to You, and we alienate and forsake those who disobey You. O Allah! You alone we worship, to You we pray and prostrate, to You we strive and hasten. We hope for Your mercy and fear Your punishment. Indeed, Your punishment will overtake the disbelievers.',
-      translationUrdu: 'اے اللہ! ہم تجھ سے مدد مانگتے ہیں، تجھ سے بخشش طلب کرتے ہیں، تجھ پر ایمان لاتے ہیں، تجھ پر بھروسہ کرتے ہیں، اور تیری بہت اچھی تعریف کرتے ہیں، ہم تیرا شکر ادا کرتے ہیں اور تیری ناشکری نہیں کرتے، اور جو تیری نافرمانی کرے ہم اس سے الگ ہوتے ہیں اور اسے چھوڑ دیتے ہیں۔ اے اللہ! ہم تیری ہی عبادت کرتے ہیں، تیرے ہی لیے نماز پڑھتے ہیں اور سجدہ کرتے ہیں، اور تیری ہی طرف دوڑتے اور خدمت کے لیے حاضر رہتے ہیں، ہم تیری رحمت کے امیدوار ہیں اور تیرے عذاب سے ڈرتے ہیں، بے شک تیرا عذاب کافروں کو پہنچنے والا ہے۔',
-      translationHindi: 'ऐ अल्लाह! हम तुझसे मदद मांगते हैं, तुझसे बख्शिश चाहते हैं, तुझ पर ईमान लाते हैं, और तुझ पर भरोसा करते हैं। हम तेरी ही इबादत करते हैं, तेरे ही लिए नमाज़ पढ़ते और सजदा करते हैं।',
-      order: 34
-    },
-    {
-      id: 'dua-before-eating',
-      category: 'duas',
-      title: 'Dua Before Eating Food (کھانا کھانے سے پہلے کی دعا)',
-      titleArabic: 'دُعَاءُ قَبْلَ الطَّعَام',
-      arabicText: 'بِسْمِ اللَّهِ وَعَلَىٰ بَرَكَةِ اللَّهِ',
-      pronunciation: 'Bismillahi wa \'ala barakatillah',
-      translationEnglish: 'In the name of Allah and upon the blessings of Allah.',
-      translationUrdu: 'اللہ کے نام کے ساتھ اور اللہ کی برکت پر (میں کھانا شروع کرتا ہوں)۔',
-      translationHindi: 'अल्लाह के नाम से और अल्लाह की बरकत पर।',
-      order: 35
-    },
-    {
-      id: 'dua-after-eating',
-      category: 'duas',
-      title: 'Dua After Finishing Food (کھانا کھانے کے بعد کی دعا)',
-      titleArabic: 'دُعَاءُ بَعْدَ الطَّعَام',
-      arabicText: 'الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ',
-      pronunciation: 'Alhamdu lillahilladhi at\'amana wa saqana wa ja\'alana muslimeen',
-      translationEnglish: 'All praise is due to Allah Who gave us food and drink and made us Muslims.',
-      translationUrdu: 'تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں کھلایا، پلایا اور ہمیں مسلمان بنایا۔',
-      translationHindi: 'तमाम तारीफें अल्लाह के लिए हैं जिसने हमें खिलाया, पिलाया और हमें मुसलमान बनाया।',
-      order: 36
-    },
-    {
-      id: 'dua-sleeping',
-      category: 'duas',
-      title: 'Dua Before Sleeping (سوتے وقت کی دعا)',
-      titleArabic: 'دُعَاءُ النَّوْم',
-      arabicText: 'اللَّهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا',
-      pronunciation: 'Allahumma bismika amootu wa ahya',
-      translationEnglish: 'O Allah, in Your name I die (sleep) and I live (wake up).',
-      translationUrdu: 'اے اللہ! تیرے ہی نام کے ساتھ میں مرتا ہوں اور جیتا ہوں۔',
-      translationHindi: 'ऐ अल्लाह! तेरे ही नाम से मैं सोता हूँ और जागता हूँ।',
-      order: 37
-    },
-    {
-      id: 'dua-waking',
-      category: 'duas',
-      title: 'Dua After Waking Up (نیند سے بیدار ہونے کی دعا)',
-      titleArabic: 'دُعَاءُ الِاسْتِيقَاظ',
-      arabicText: 'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ',
-      pronunciation: 'Alhamdu lillahilladhi ahyana ba\'da ma amatana wa ilayhin-nushoor',
-      translationEnglish: 'All praise is due to Allah Who brought us to life after causing us to die, and to Him is the final return.',
-      translationUrdu: 'تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں مارنے کے بعد زندہ کیا اور اسی کی طرف لوٹ کر جانا ہے۔',
-      translationHindi: 'सब तारीफें अल्लाह के लिए हैं जिसने हमें मौत (नींद) के बाद जिंदगी दी और उसी की तरफ उठना है।',
-      order: 38
-    },
-    {
-      id: 'dua-parents',
-      category: 'duas',
-      title: 'Dua for Parents / Mother & Father (والدین کے لیے دعا)',
-      titleArabic: 'دُعَاءُ الْوَالِدَيْن',
-      arabicText: 'رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا',
-      pronunciation: 'Rabbir hamhuma kama rabbayani sagheera',
-      translationEnglish: 'My Lord, have mercy upon them both as they raised me when I was small.',
-      translationUrdu: 'اے میرے پروردگار! تو ان دونوں پر رحم فرما جس طرح انہوں نے بچپن میں میری پرورش فرمائی۔',
-      translationHindi: 'ऐ मेरे रब! तू मेरे वालिदैन पर रहम फरमा जैसा कि उन्होंने मुझे बचपन में पाला।',
-      order: 39
-    },
-    {
-      id: 'dua-knowledge',
-      category: 'duas',
-      title: 'Dua for Increasing Knowledge (علم میں اضافے کی دعا)',
-      titleArabic: 'دُعَاءُ زِيَادَةِ الْعِلْم',
-      arabicText: 'رَّبِّ زِدْنِي عِلْمًا',
-      pronunciation: 'Rabbi zidnee \'ilma',
-      translationEnglish: 'My Lord, increase me in knowledge.',
-      translationUrdu: 'اے میرے رب! میرے علم میں اضافہ فرما۔',
-      translationHindi: 'ऐ मेरे रब! मेरे इल्म (ज्ञान) में इज़ाफ़ा फरमा।',
-      order: 40
+      "id": "s-37",
+      "category": "daily",
+      "english": "I am going to the market to buy groceries.",
+      "urdu": "میں سودا سلف خریدنے بازار جا رہا ہوں۔",
+      "arabic": "أَنَا ذَاهِبٌ إِلَى السُّوقِ لِشِرَاءِ الْبِقَالَةِ.",
+      "hindi": "मैं किराने का सामान खरीदने बाज़ार जा रहा हूँ।",
+      "order": 37
     }
   ],
-  mathItems: [
-    // Numbers 1 to 100 sample (full numbers logic generated on client, with top seeds)
-    { id: 'm-num-1', type: 'number', number: 1, nameEn: 'One', nameHi: 'एक (Ek)', nameUr: 'ایک (Aik)', audioUrl: '', order: 1 },
-    { id: 'm-num-2', type: 'number', number: 2, nameEn: 'Two', nameHi: 'दो (Do)', nameUr: 'دو (Do)', audioUrl: '', order: 2 },
-    { id: 'm-num-3', type: 'number', number: 3, nameEn: 'Three', nameHi: 'तीन (Teen)', nameUr: 'تین (Teen)', audioUrl: '', order: 3 },
-    { id: 'm-num-4', type: 'number', number: 4, nameEn: 'Four', nameHi: 'चार (Chaar)', nameUr: 'چار (Chaar)', audioUrl: '', order: 4 },
-    { id: 'm-num-5', type: 'number', number: 5, nameEn: 'Five', nameHi: 'पाँच (Paanch)', nameUr: 'پانچ (Paanch)', audioUrl: '', order: 5 },
-    { id: 'm-num-6', type: 'number', number: 6, nameEn: 'Six', nameHi: 'छह (Chhah)', nameUr: 'چھ (Chhay)', audioUrl: '', order: 6 },
-    { id: 'm-num-7', type: 'number', number: 7, nameEn: 'Seven', nameHi: 'सात (Saat)', nameUr: 'سات (Saat)', audioUrl: '', order: 7 },
-    { id: 'm-num-8', type: 'number', number: 8, nameEn: 'Eight', nameHi: 'आठ (Aath)', nameUr: 'آٹھ (Aath)', audioUrl: '', order: 8 },
-    { id: 'm-num-9', type: 'number', number: 9, nameEn: 'Nine', nameHi: 'नौ (Nau)', nameUr: 'نو (Nau)', audioUrl: '', order: 9 },
-    { id: 'm-num-10', type: 'number', number: 10, nameEn: 'Ten', nameHi: 'दस (Das)', nameUr: 'دس (Das)', audioUrl: '', order: 10 },
-
-    // Multiplication Tables 2 to 20
-    {
-      id: 'm-tab-2',
-      type: 'table',
-      tableNumber: 2,
-      tableRows: [
-        { factor: 1, result: 2, audioEn: '2 times 1 is 2', audioHi: 'दो एकम दो', audioUr: 'دو ایکم دو' },
-        { factor: 2, result: 4, audioEn: '2 times 2 is 4', audioHi: 'दो दूनी चार', audioUr: 'دو دونی چار' },
-        { factor: 3, result: 6, audioEn: '2 times 3 is 6', audioHi: 'दो तीया छह', audioUr: 'دو تیا چھ' },
-        { factor: 4, result: 8, audioEn: '2 times 4 is 8', audioHi: 'दो चौके आठ', audioUr: 'دو چوکے آٹھ' },
-        { factor: 5, result: 10, audioEn: '2 times 5 is 10', audioHi: 'दो पंजे दस', audioUr: 'دو پنجے دس' },
-        { factor: 6, result: 12, audioEn: '2 times 6 is 12', audioHi: 'दो छक्के बारह', audioUr: 'دو چھکے بارہ' },
-        { factor: 7, result: 14, audioEn: '2 times 7 is 14', audioHi: 'दो सत्ते चौदह', audioUr: 'دو ستے چودہ' },
-        { factor: 8, result: 16, audioEn: '2 times 8 is 16', audioHi: 'दो अठे सोलह', audioUr: 'دو اٹھے سولہ' },
-        { factor: 9, result: 18, audioEn: '2 times 9 is 18', audioHi: 'दो निम्मे अठारह', audioUr: 'دو نمے اٹھارہ' },
-        { factor: 10, result: 20, audioEn: '2 times 10 is 20', audioHi: 'दो दहाम बीस', audioUr: 'دو دہائے بیس' }
-      ],
-      order: 11
-    },
-    {
-      id: 'm-tab-3',
-      type: 'table',
-      tableNumber: 3,
-      tableRows: [
-        { factor: 1, result: 3, audioEn: '3 times 1 is 3', audioHi: 'तीन एकम तीन', audioUr: 'تین ایکم تین' },
-        { factor: 2, result: 6, audioEn: '3 times 2 is 6', audioHi: 'तीन दूनी छह', audioUr: 'تین دونی چھ' },
-        { factor: 3, result: 9, audioEn: '3 times 3 is 9', audioHi: 'तीन तीया नौ', audioUr: 'تین تیا نو' },
-        { factor: 4, result: 12, audioEn: '3 times 4 is 12', audioHi: 'तीन चौके बारह', audioUr: 'تین چوکے بارہ' },
-        { factor: 5, result: 15, audioEn: '3 times 5 is 15', audioHi: 'तीन पंजे पंद्रह', audioUr: 'تین پنجے پندرہ' },
-        { factor: 6, result: 18, audioEn: '3 times 6 is 18', audioHi: 'तीन छक्के अठारह', audioUr: 'تین چھکے اٹھارہ' },
-        { factor: 7, result: 21, audioEn: '3 times 7 is 21', audioHi: 'तीन सत्ते इक्कीस', audioUr: 'تین ستے اکیس' },
-        { factor: 8, result: 24, audioEn: '3 times 8 is 24', audioHi: 'तीन अठे चौबीस', audioUr: 'تین اٹھے چوبیس' },
-        { factor: 9, result: 27, audioEn: '3 times 9 is 27', audioHi: 'तीन निम्मे सत्ताईस', audioUr: 'تین نمے ستائیس' },
-        { factor: 10, result: 30, audioEn: '3 times 10 is 30', audioHi: 'तीन दहाम तीस', audioUr: 'تین دہائے تیس' }
-      ],
-      order: 12
-    },
-    {
-      id: 'm-tab-5',
-      type: 'table',
-      tableNumber: 5,
-      tableRows: [
-        { factor: 1, result: 5, audioEn: '5 times 1 is 5', audioHi: 'पाँच एकम पाँच', audioUr: 'پانچ ایکم پانچ' },
-        { factor: 2, result: 10, audioEn: '5 times 2 is 10', audioHi: 'पाँच दूनी दस', audioUr: 'پانچ دونی دس' },
-        { factor: 3, result: 15, audioEn: '5 times 3 is 15', audioHi: 'पाँच तीया पंद्रह', audioUr: 'پانچ تیا پندرہ' },
-        { factor: 4, result: 20, audioEn: '5 times 4 is 20', audioHi: 'पाँच चौके बीस', audioUr: 'پانچ چوکے بیس' },
-        { factor: 5, result: 25, audioEn: '5 times 5 is 25', audioHi: 'पाँच पंजे पच्चीस', audioUr: 'پانچ پنجے پچیس' },
-        { factor: 6, result: 30, audioEn: '5 times 6 is 30', audioHi: 'पाँच छक्के तीस', audioUr: 'پانچ چھکے تیس' },
-        { factor: 7, result: 35, audioEn: '5 times 7 is 35', audioHi: 'पाँच सत्ते पैंतीस', audioUr: 'پانچ ستے پینتیس' },
-        { factor: 8, result: 40, audioEn: '5 times 8 is 40', audioHi: 'पाँच अठे चालीस', audioUr: 'پانچ اٹھے چالیس' },
-        { factor: 9, result: 45, audioEn: '5 times 9 is 45', audioHi: 'पाँच निम्मे पैंतालीस', audioUr: 'پانچ نمے پینتالیس' },
-        { factor: 10, result: 50, audioEn: '5 times 10 is 50', audioHi: 'पाँच दहाम पचास', audioUr: 'پانچ دہائے پچاس' }
-      ],
-      order: 13
-    },
-
-    // Arithmetic Practice (50 Levels & Questions)
-    {
-          "id": "m-arith-1",
-          "type": "arithmetic",
-          "question": "5 + 4 = ?",
-          "num1": 5,
-          "operator": "+",
-          "num2": 4,
-          "answer": 9,
-          "options": [
-                7,
-                8,
-                9,
-                10
-          ],
-          "visualObject": "🍎",
-          "visualName": "Apple",
-          "difficulty": "easy",
-          "level": 1,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 14
-    },
-    {
-          "id": "m-arith-2",
-          "type": "arithmetic",
-          "question": "9 - 3 = ?",
-          "num1": 9,
-          "operator": "-",
-          "num2": 3,
-          "answer": 6,
-          "options": [
-                5,
-                6,
-                7,
-                8
-          ],
-          "visualObject": "🍌",
-          "visualName": "Banana",
-          "difficulty": "easy",
-          "level": 1,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 15
-    },
-    {
-          "id": "m-arith-3",
-          "type": "arithmetic",
-          "question": "4 × 2 = ?",
-          "num1": 4,
-          "operator": "×",
-          "num2": 2,
-          "answer": 8,
-          "options": [
-                6,
-                8,
-                10,
-                12
-          ],
-          "visualObject": "🍒",
-          "visualName": "Cherry",
-          "difficulty": "easy",
-          "level": 1,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 16
-    },
-    {
-          "id": "m-arith-4",
-          "type": "arithmetic",
-          "question": "8 ÷ 2 = ?",
-          "num1": 8,
-          "operator": "÷",
-          "num2": 2,
-          "answer": 4,
-          "options": [
-                2,
-                3,
-                4,
-                5
-          ],
-          "visualObject": "🍉",
-          "visualName": "Watermelon",
-          "difficulty": "easy",
-          "level": 1,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 17
-    },
-    {
-          "id": "m-arith-5",
-          "type": "arithmetic",
-          "question": "6 + 3 = ?",
-          "num1": 6,
-          "operator": "+",
-          "num2": 3,
-          "answer": 9,
-          "options": [
-                8,
-                9,
-                10,
-                12
-          ],
-          "visualObject": "🍇",
-          "visualName": "Grapes",
-          "difficulty": "easy",
-          "level": 1,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 18
-    },
-    {
-          "id": "m-arith-6",
-          "type": "arithmetic",
-          "question": "10 - 5 = ?",
-          "num1": 10,
-          "operator": "-",
-          "num2": 5,
-          "answer": 5,
-          "options": [
-                4,
-                5,
-                6,
-                7
-          ],
-          "visualObject": "🍓",
-          "visualName": "Strawberry",
-          "difficulty": "easy",
-          "level": 1,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 19
-    },
-    {
-          "id": "m-arith-7",
-          "type": "arithmetic",
-          "question": "3 × 3 = ?",
-          "num1": 3,
-          "operator": "×",
-          "num2": 3,
-          "answer": 9,
-          "options": [
-                6,
-                9,
-                12,
-                15
-          ],
-          "visualObject": "🍍",
-          "visualName": "Pineapple",
-          "difficulty": "easy",
-          "level": 1,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 20
-    },
-    {
-          "id": "m-arith-8",
-          "type": "arithmetic",
-          "question": "6 ÷ 3 = ?",
-          "num1": 6,
-          "operator": "÷",
-          "num2": 3,
-          "answer": 2,
-          "options": [
-                2,
-                3,
-                4,
-                6
-          ],
-          "visualObject": "🥭",
-          "visualName": "Mango",
-          "difficulty": "easy",
-          "level": 1,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 21
-    },
-    {
-          "id": "m-arith-9",
-          "type": "arithmetic",
-          "question": "7 + 2 = ?",
-          "num1": 7,
-          "operator": "+",
-          "num2": 2,
-          "answer": 9,
-          "options": [
-                8,
-                9,
-                10,
-                11
-          ],
-          "visualObject": "🥝",
-          "visualName": "Kiwi",
-          "difficulty": "easy",
-          "level": 1,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 22
-    },
-    {
-          "id": "m-arith-10",
-          "type": "arithmetic",
-          "question": "8 - 4 = ?",
-          "num1": 8,
-          "operator": "-",
-          "num2": 4,
-          "answer": 4,
-          "options": [
-                2,
-                3,
-                4,
-                5
-          ],
-          "visualObject": "🥥",
-          "visualName": "Coconut",
-          "difficulty": "easy",
-          "level": 1,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 23
-    },
-    {
-          "id": "m-arith-11",
-          "type": "arithmetic",
-          "question": "45 + 23 = ?",
-          "num1": 45,
-          "operator": "+",
-          "num2": 23,
-          "answer": 68,
-          "options": [
-                58,
-                68,
-                78,
-                88
-          ],
-          "visualObject": "⚽",
-          "visualName": "Ball",
-          "difficulty": "medium",
-          "level": 2,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 24
-    },
-    {
-          "id": "m-arith-12",
-          "type": "arithmetic",
-          "question": "78 - 34 = ?",
-          "num1": 78,
-          "operator": "-",
-          "num2": 34,
-          "answer": 44,
-          "options": [
-                34,
-                44,
-                54,
-                64
-          ],
-          "visualObject": "🏀",
-          "visualName": "Basketball",
-          "difficulty": "medium",
-          "level": 2,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 25
-    },
-    {
-          "id": "m-arith-13",
-          "type": "arithmetic",
-          "question": "12 × 4 = ?",
-          "num1": 12,
-          "operator": "×",
-          "num2": 4,
-          "answer": 48,
-          "options": [
-                36,
-                44,
-                48,
-                52
-          ],
-          "visualObject": "🚗",
-          "visualName": "Car",
-          "difficulty": "medium",
-          "level": 2,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 26
-    },
-    {
-          "id": "m-arith-14",
-          "type": "arithmetic",
-          "question": "48 ÷ 4 = ?",
-          "num1": 48,
-          "operator": "÷",
-          "num2": 4,
-          "answer": 12,
-          "options": [
-                10,
-                11,
-                12,
-                14
-          ],
-          "visualObject": "🚕",
-          "visualName": "Taxi",
-          "difficulty": "medium",
-          "level": 2,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 27
-    },
-    {
-          "id": "m-arith-15",
-          "type": "arithmetic",
-          "question": "56 + 32 = ?",
-          "num1": 56,
-          "operator": "+",
-          "num2": 32,
-          "answer": 88,
-          "options": [
-                78,
-                88,
-                98,
-                108
-          ],
-          "visualObject": "🚂",
-          "visualName": "Train",
-          "difficulty": "medium",
-          "level": 2,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 28
-    },
-    {
-          "id": "m-arith-16",
-          "type": "arithmetic",
-          "question": "95 - 40 = ?",
-          "num1": 95,
-          "operator": "-",
-          "num2": 40,
-          "answer": 55,
-          "options": [
-                45,
-                55,
-                65,
-                75
-          ],
-          "visualObject": "✈️",
-          "visualName": "Airplane",
-          "difficulty": "medium",
-          "level": 2,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 29
-    },
-    {
-          "id": "m-arith-17",
-          "type": "arithmetic",
-          "question": "15 × 3 = ?",
-          "num1": 15,
-          "operator": "×",
-          "num2": 3,
-          "answer": 45,
-          "options": [
-                35,
-                40,
-                45,
-                50
-          ],
-          "visualObject": "⭐",
-          "visualName": "Star",
-          "difficulty": "medium",
-          "level": 2,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 30
-    },
-    {
-          "id": "m-arith-18",
-          "type": "arithmetic",
-          "question": "60 ÷ 5 = ?",
-          "num1": 60,
-          "operator": "÷",
-          "num2": 5,
-          "answer": 12,
-          "options": [
-                10,
-                12,
-                14,
-                15
-          ],
-          "visualObject": "🌙",
-          "visualName": "Moon",
-          "difficulty": "medium",
-          "level": 2,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 31
-    },
-    {
-          "id": "m-arith-19",
-          "type": "arithmetic",
-          "question": "80 + 45 = ?",
-          "num1": 80,
-          "operator": "+",
-          "num2": 45,
-          "answer": 125,
-          "options": [
-                115,
-                125,
-                135,
-                145
-          ],
-          "visualObject": "☀️",
-          "visualName": "Sun",
-          "difficulty": "medium",
-          "level": 2,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 32
-    },
-    {
-          "id": "m-arith-20",
-          "type": "arithmetic",
-          "question": "99 - 55 = ?",
-          "num1": 99,
-          "operator": "-",
-          "num2": 55,
-          "answer": 44,
-          "options": [
-                34,
-                44,
-                54,
-                64
-          ],
-          "visualObject": "🌻",
-          "visualName": "Flower",
-          "difficulty": "medium",
-          "level": 2,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 33
-    },
-    {
-          "id": "m-arith-21",
-          "type": "arithmetic",
-          "question": "120 + 45 = ?",
-          "num1": 120,
-          "operator": "+",
-          "num2": 45,
-          "answer": 165,
-          "options": [
-                155,
-                165,
-                175,
-                185
-          ],
-          "visualObject": "🌹",
-          "visualName": "Rose",
-          "difficulty": "hard",
-          "level": 3,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 34
-    },
-    {
-          "id": "m-arith-22",
-          "type": "arithmetic",
-          "question": "150 - 60 = ?",
-          "num1": 150,
-          "operator": "-",
-          "num2": 60,
-          "answer": 90,
-          "options": [
-                80,
-                90,
-                100,
-                110
-          ],
-          "visualObject": "🐶",
-          "visualName": "Dog",
-          "difficulty": "hard",
-          "level": 3,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 35
-    },
-    {
-          "id": "m-arith-23",
-          "type": "arithmetic",
-          "question": "14 × 5 = ?",
-          "num1": 14,
-          "operator": "×",
-          "num2": 5,
-          "answer": 70,
-          "options": [
-                60,
-                65,
-                70,
-                75
-          ],
-          "visualObject": "🐱",
-          "visualName": "Cat",
-          "difficulty": "hard",
-          "level": 3,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 36
-    },
-    {
-          "id": "m-arith-24",
-          "type": "arithmetic",
-          "question": "72 ÷ 6 = ?",
-          "num1": 72,
-          "operator": "÷",
-          "num2": 6,
-          "answer": 12,
-          "options": [
-                11,
-                12,
-                13,
-                14
-          ],
-          "visualObject": "🐰",
-          "visualName": "Rabbit",
-          "difficulty": "hard",
-          "level": 3,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 37
-    },
-    {
-          "id": "m-arith-25",
-          "type": "arithmetic",
-          "question": "235 + 110 = ?",
-          "num1": 235,
-          "operator": "+",
-          "num2": 110,
-          "answer": 345,
-          "options": [
-                325,
-                335,
-                345,
-                355
-          ],
-          "visualObject": "🐻",
-          "visualName": "Bear",
-          "difficulty": "hard",
-          "level": 3,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 38
-    },
-    {
-          "id": "m-arith-26",
-          "type": "arithmetic",
-          "question": "300 - 125 = ?",
-          "num1": 300,
-          "operator": "-",
-          "num2": 125,
-          "answer": 175,
-          "options": [
-                165,
-                175,
-                185,
-                225
-          ],
-          "visualObject": "🦋",
-          "visualName": "Butterfly",
-          "difficulty": "hard",
-          "level": 3,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 39
-    },
-    {
-          "id": "m-arith-27",
-          "type": "arithmetic",
-          "question": "20 × 6 = ?",
-          "num1": 20,
-          "operator": "×",
-          "num2": 6,
-          "answer": 120,
-          "options": [
-                100,
-                110,
-                120,
-                130
-          ],
-          "visualObject": "🐢",
-          "visualName": "Turtle",
-          "difficulty": "hard",
-          "level": 3,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 40
-    },
-    {
-          "id": "m-arith-28",
-          "type": "arithmetic",
-          "question": "90 ÷ 6 = ?",
-          "num1": 90,
-          "operator": "÷",
-          "num2": 6,
-          "answer": 15,
-          "options": [
-                13,
-                14,
-                15,
-                16
-          ],
-          "visualObject": "🍪",
-          "visualName": "Cookie",
-          "difficulty": "hard",
-          "level": 3,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 41
-    },
-    {
-          "id": "m-arith-29",
-          "type": "arithmetic",
-          "question": "450 + 150 = ?",
-          "num1": 450,
-          "operator": "+",
-          "num2": 150,
-          "answer": 600,
-          "options": [
-                500,
-                550,
-                600,
-                650
-          ],
-          "visualObject": "🍩",
-          "visualName": "Donut",
-          "difficulty": "hard",
-          "level": 3,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 42
-    },
-    {
-          "id": "m-arith-30",
-          "type": "arithmetic",
-          "question": "250 - 75 = ?",
-          "num1": 250,
-          "operator": "-",
-          "num2": 75,
-          "answer": 175,
-          "options": [
-                165,
-                175,
-                185,
-                225
-          ],
-          "visualObject": "🍰",
-          "visualName": "Cake",
-          "difficulty": "hard",
-          "level": 3,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 43
-    },
-    {
-          "id": "m-arith-31",
-          "type": "arithmetic",
-          "question": "25 × 6 = ?",
-          "num1": 25,
-          "operator": "×",
-          "num2": 6,
-          "answer": 150,
-          "options": [
-                125,
-                140,
-                150,
-                175
-          ],
-          "visualObject": "🍫",
-          "visualName": "Chocolate",
-          "difficulty": "hard",
-          "level": 4,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 44
-    },
-    {
-          "id": "m-arith-32",
-          "type": "arithmetic",
-          "question": "144 ÷ 12 = ?",
-          "num1": 144,
-          "operator": "÷",
-          "num2": 12,
-          "answer": 12,
-          "options": [
-                11,
-                12,
-                13,
-                14
-          ],
-          "visualObject": "🍬",
-          "visualName": "Candy",
-          "difficulty": "hard",
-          "level": 4,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 45
-    },
-    {
-          "id": "m-arith-33",
-          "type": "arithmetic",
-          "question": "560 + 240 = ?",
-          "num1": 560,
-          "operator": "+",
-          "num2": 240,
-          "answer": 800,
-          "options": [
-                700,
-                760,
-                800,
-                840
-          ],
-          "visualObject": "🍭",
-          "visualName": "Lollipop",
-          "difficulty": "hard",
-          "level": 4,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 46
-    },
-    {
-          "id": "m-arith-34",
-          "type": "arithmetic",
-          "question": "800 - 350 = ?",
-          "num1": 800,
-          "operator": "-",
-          "num2": 350,
-          "answer": 450,
-          "options": [
-                350,
-                400,
-                450,
-                550
-          ],
-          "visualObject": "🍕",
-          "visualName": "Pizza",
-          "difficulty": "hard",
-          "level": 4,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 47
-    },
-    {
-          "id": "m-arith-35",
-          "type": "arithmetic",
-          "question": "35 × 4 = ?",
-          "num1": 35,
-          "operator": "×",
-          "num2": 4,
-          "answer": 140,
-          "options": [
-                120,
-                130,
-                140,
-                150
-          ],
-          "visualObject": "🍔",
-          "visualName": "Burger",
-          "difficulty": "hard",
-          "level": 4,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 48
-    },
-    {
-          "id": "m-arith-36",
-          "type": "arithmetic",
-          "question": "225 ÷ 15 = ?",
-          "num1": 225,
-          "operator": "÷",
-          "num2": 15,
-          "answer": 15,
-          "options": [
-                12,
-                15,
-                18,
-                25
-          ],
-          "visualObject": "🍟",
-          "visualName": "Fries",
-          "difficulty": "hard",
-          "level": 4,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 49
-    },
-    {
-          "id": "m-arith-37",
-          "type": "arithmetic",
-          "question": "1250 + 750 = ?",
-          "num1": 1250,
-          "operator": "+",
-          "num2": 750,
-          "answer": 2000,
-          "options": [
-                1900,
-                2000,
-                2100,
-                2200
-          ],
-          "visualObject": "🚀",
-          "visualName": "Rocket",
-          "difficulty": "hard",
-          "level": 4,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 50
-    },
-    {
-          "id": "m-arith-38",
-          "type": "arithmetic",
-          "question": "1000 - 455 = ?",
-          "num1": 1000,
-          "operator": "-",
-          "num2": 455,
-          "answer": 545,
-          "options": [
-                445,
-                545,
-                555,
-                645
-          ],
-          "visualObject": "🪐",
-          "visualName": "Planet",
-          "difficulty": "hard",
-          "level": 4,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 51
-    },
-    {
-          "id": "m-arith-39",
-          "type": "arithmetic",
-          "question": "50 × 8 = ?",
-          "num1": 50,
-          "operator": "×",
-          "num2": 8,
-          "answer": 400,
-          "options": [
-                350,
-                400,
-                450,
-                500
-          ],
-          "visualObject": "💎",
-          "visualName": "Diamond",
-          "difficulty": "hard",
-          "level": 4,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 52
-    },
-    {
-          "id": "m-arith-40",
-          "type": "arithmetic",
-          "question": "360 ÷ 12 = ?",
-          "num1": 360,
-          "operator": "÷",
-          "num2": 12,
-          "answer": 30,
-          "options": [
-                20,
-                30,
-                40,
-                60
-          ],
-          "visualObject": "👑",
-          "visualName": "Crown",
-          "difficulty": "hard",
-          "level": 4,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 53
-    },
-    {
-          "id": "m-arith-41",
-          "type": "arithmetic",
-          "question": "75 × 4 = ?",
-          "num1": 75,
-          "operator": "×",
-          "num2": 4,
-          "answer": 300,
-          "options": [
-                250,
-                275,
-                300,
-                325
-          ],
-          "visualObject": "🏆",
-          "visualName": "Trophy",
-          "difficulty": "expert",
-          "level": 5,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 54
-    },
-    {
-          "id": "m-arith-42",
-          "type": "arithmetic",
-          "question": "500 ÷ 25 = ?",
-          "num1": 500,
-          "operator": "÷",
-          "num2": 25,
-          "answer": 20,
-          "options": [
-                15,
-                20,
-                25,
-                30
-          ],
-          "visualObject": "🥇",
-          "visualName": "Medal",
-          "difficulty": "expert",
-          "level": 5,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 55
-    },
-    {
-          "id": "m-arith-43",
-          "type": "arithmetic",
-          "question": "2450 + 1550 = ?",
-          "num1": 2450,
-          "operator": "+",
-          "num2": 1550,
-          "answer": 4000,
-          "options": [
-                3800,
-                3900,
-                4000,
-                4100
-          ],
-          "visualObject": "🧩",
-          "visualName": "Puzzle",
-          "difficulty": "expert",
-          "level": 5,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 56
-    },
-    {
-          "id": "m-arith-44",
-          "type": "arithmetic",
-          "question": "5000 - 2200 = ?",
-          "num1": 5000,
-          "operator": "-",
-          "num2": 2200,
-          "answer": 2800,
-          "options": [
-                2600,
-                2800,
-                3200,
-                3800
-          ],
-          "visualObject": "🎲",
-          "visualName": "Dice",
-          "difficulty": "expert",
-          "level": 5,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 57
-    },
-    {
-          "id": "m-arith-45",
-          "type": "arithmetic",
-          "question": "120 × 5 = ?",
-          "num1": 120,
-          "operator": "×",
-          "num2": 5,
-          "answer": 600,
-          "options": [
-                500,
-                550,
-                600,
-                700
-          ],
-          "visualObject": "🎨",
-          "visualName": "Palette",
-          "difficulty": "expert",
-          "level": 5,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 58
-    },
-    {
-          "id": "m-arith-46",
-          "type": "arithmetic",
-          "question": "1000 ÷ 8 = ?",
-          "num1": 1000,
-          "operator": "÷",
-          "num2": 8,
-          "answer": 125,
-          "options": [
-                100,
-                115,
-                125,
-                150
-          ],
-          "visualObject": "🎸",
-          "visualName": "Guitar",
-          "difficulty": "expert",
-          "level": 5,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 59
-    },
-    {
-          "id": "m-arith-47",
-          "type": "arithmetic",
-          "question": "15 × 15 = ?",
-          "num1": 15,
-          "operator": "×",
-          "num2": 15,
-          "answer": 225,
-          "options": [
-                175,
-                205,
-                225,
-                255
-          ],
-          "visualObject": "🎈",
-          "visualName": "Balloon",
-          "difficulty": "expert",
-          "level": 5,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 60
-    },
-    {
-          "id": "m-arith-48",
-          "type": "arithmetic",
-          "question": "840 ÷ 14 = ?",
-          "num1": 840,
-          "operator": "÷",
-          "num2": 14,
-          "answer": 60,
-          "options": [
-                40,
-                50,
-                60,
-                70
-          ],
-          "visualObject": "🎁",
-          "visualName": "Gift",
-          "difficulty": "expert",
-          "level": 5,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 61
-    },
-    {
-          "id": "m-arith-49",
-          "type": "arithmetic",
-          "question": "4500 + 3600 = ?",
-          "num1": 4500,
-          "operator": "+",
-          "num2": 3600,
-          "answer": 8100,
-          "options": [
-                7100,
-                7900,
-                8100,
-                9100
-          ],
-          "visualObject": "💰",
-          "visualName": "Money",
-          "difficulty": "expert",
-          "level": 5,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 62
-    },
-    {
-          "id": "m-arith-50",
-          "type": "arithmetic",
-          "question": "10000 - 4500 = ?",
-          "num1": 10000,
-          "operator": "-",
-          "num2": 4500,
-          "answer": 5500,
-          "options": [
-                4500,
-                5000,
-                5500,
-                6500
-          ],
-          "visualObject": "🧠",
-          "visualName": "Brain",
-          "difficulty": "expert",
-          "level": 5,
-          "topicType": "Arithmetic (+ - x ÷)",
-          "order": 63
-    }
-    ],
-  gkItems: [
-    // Indian States & Capitals
-    {
-      id: 'gk-state-1',
-      category: 'states',
-      titleEn: 'Bihar',
-      titleHi: 'बिहार',
-      titleUr: 'بہار',
-      capitalEn: 'Patna',
-      capitalHi: 'पटना',
-      capitalUr: 'پٹنہ',
-      detailEn: 'Famous for Nalanda University and ancient historic heritage.',
-      detailHi: 'प्राचीन नालंदा विश्वविद्यालय और ऐतिहासिक विरासत के लिए प्रसिद्ध।',
-      detailUr: 'نالندہ یونیورسٹی اور قدیم تاریخی ورثے کے لیے مشہور۔',
-      imageUrl: '🏛️',
-      order: 1
-    },
-    {
-      id: 'gk-state-2',
-      category: 'states',
-      titleEn: 'Uttar Pradesh',
-      titleHi: 'उत्तर प्रदेश',
-      titleUr: 'اتر پردیش',
-      capitalEn: 'Lucknow',
-      capitalHi: 'लखनऊ',
-      capitalUr: 'لکھنؤ',
-      detailEn: 'The most populous state of India, famous for Taj Mahal in Agra.',
-      detailHi: 'भारत का सबसे अधिक जनसंख्या वाला राज्य, आगरा के ताजमहल के लिए प्रसिद्ध।',
-      detailUr: 'آبادی کے لحاظ سے بھارت کی سب سے بڑی ریاست، تاج محل کے لیے مشہور۔',
-      imageUrl: '🕌',
-      order: 2
-    },
-    {
-      id: 'gk-state-3',
-      category: 'states',
-      titleEn: 'Maharashtra',
-      titleHi: 'महाराष्ट्र',
-      titleUr: 'مہاراشٹر',
-      capitalEn: 'Mumbai',
-      capitalHi: 'मुंबई',
-      capitalUr: 'ممبئی',
-      detailEn: 'Financial capital of India, famous for Gateway of India.',
-      detailHi: 'भारत की आर्थिक राजधानी, गेटवे ऑफ इंडिया के लिए प्रसिद्ध।',
-      detailUr: 'بھارت کا معاشی دارالحکومت، گیٹ وے آف انڈیا کے لیے مشہور۔',
-      imageUrl: '🌆',
-      order: 3
-    },
-    {
-      id: 'gk-state-4',
-      category: 'states',
-      titleEn: 'West Bengal',
-      titleHi: 'पश्चिम बंगाल',
-      titleUr: 'مغربی بنگال',
-      capitalEn: 'Kolkata',
-      capitalHi: 'कोलकाता',
-      capitalUr: 'کولکتہ',
-      detailEn: 'City of Joy, famous for Victoria Memorial and Royal Bengal Tigers.',
-      detailHi: 'विक्टोरिया मेमोरियल और रॉयल बंगाल टाइगर के लिए प्रसिद्ध।',
-      detailUr: 'وکٹوریہ میموریل اور رائل بنگال ٹائیگر کے لیے مشہور۔',
-      imageUrl: '🌉',
-      order: 4
-    },
-    {
-      id: 'gk-state-5',
-      category: 'states',
-      titleEn: 'Delhi (NCT)',
-      titleHi: 'दिल्ली (राष्ट्रीय राजधानी क्षेत्र)',
-      titleUr: 'دہلی (قومی دارالحکومت)',
-      capitalEn: 'New Delhi (Capital of India)',
-      capitalHi: 'नई दिल्ली (भारत की राजधानी)',
-      capitalUr: 'نئی دہلی (دارالحکومت بھارت)',
-      detailEn: 'The historic capital of India, home to Red Fort, India Gate, and Rashtrapati Bhavan.',
-      detailHi: 'भारत की ऐतिहासिक राजधानी, लाल किला और इंडिया गेट का घर।',
-      detailUr: 'بھارت کا تاریخی دارالحکومت، لال قلعہ اور انڈیا گیٹ۔',
-      imageUrl: '🏰',
-      order: 5
-    },
-    {
-      id: 'gk-state-6',
-      category: 'states',
-      titleEn: 'Tamil Nadu',
-      titleHi: 'तमिलनाडु',
-      titleUr: 'تمل ناڈو',
-      capitalEn: 'Chennai',
-      capitalHi: 'चेन्नई',
-      capitalUr: 'چنئی',
-      detailEn: 'Famous for historic Dravidian temples and classical music.',
-      detailHi: 'भव्य द्रविड़ मंदिरों और शास्त्रीय संस्कृति के लिए प्रसिद्ध।',
-      detailUr: 'تاریخی دراوڑی مندروں اور ثقافت کے لیے مشہور۔',
-      imageUrl: '🛕',
-      order: 6
-    },
-    {
-      id: 'gk-state-7',
-      category: 'states',
-      titleEn: 'Karnataka',
-      titleHi: 'कर्नाटक',
-      titleUr: 'کرناٹک',
-      capitalEn: 'Bengaluru',
-      capitalHi: 'बेंगलुरु',
-      capitalUr: 'بنگلورو',
-      detailEn: 'The Silicon Valley of India and science technology hub.',
-      detailHi: 'भारत की सिलिकॉन वैली और विज्ञान-तकनीक का केंद्र।',
-      detailUr: 'بھارت کی سلیکون ویلی اور سائنس و ٹیکنالوجی کا مرکز۔',
-      imageUrl: '💻',
-      order: 7
-    },
-    {
-      id: 'gk-state-8',
-      category: 'states',
-      titleEn: 'Rajasthan',
-      titleHi: 'राजस्थान',
-      titleUr: 'راجستھان',
-      capitalEn: 'Jaipur (Pink City)',
-      capitalHi: 'जयपुर (गुलाबी नगर)',
-      capitalUr: 'جے پور (گلابی شہر)',
-      detailEn: 'The largest state by area in India, known for grand palaces and Thar Desert.',
-      detailHi: 'क्षेत्रफल के हिसाब से भारत का सबसे बड़ा राज्य, महलों के लिए प्रसिद्ध।',
-      detailUr: 'رقبے کے لحاظ سے سب سے بڑی ریاست، محلات اور صحرا کے لیے مشہور۔',
-      imageUrl: '🏰',
-      order: 8
-    },
-
-    // Prime Ministers of India
-    {
-      id: 'gk-pm-1',
-      category: 'pms',
-      titleEn: 'Pt. Jawaharlal Nehru',
-      titleHi: 'पंडित जवाहरलाल नेहरू',
-      titleUr: 'پنڈت جواہر لعل نہرو',
-      tenure: '1947 – 1964',
-      detailEn: 'First Prime Minister of independent India, lovingly called "Chacha Nehru" by children.',
-      detailHi: 'स्वतंत्र भारत के प्रथम प्रधानमंत्री, जिन्हें बच्चे प्यार से "चाचा नेहरू" कहते हैं।',
-      detailUr: 'آزاد بھارت کے پہلے وزیر اعظم، جنہیں بچے پیار سے "چاچا نہرو" کہتے تھے۔',
-      imageUrl: '🌹',
-      order: 9
-    },
-    {
-      id: 'gk-pm-2',
-      category: 'pms',
-      titleEn: 'Lal Bahadur Shastri',
-      titleHi: 'लाल बहादुर शास्त्री',
-      titleUr: 'لال بہادر شاستری',
-      tenure: '1964 – 1966',
-      detailEn: 'Second Prime Minister, gave the inspiring slogan "Jai Jawan, Jai Kisan".',
-      detailHi: 'भारत के दूसरे प्रधानमंत्री, जिन्होंने "जय जवान, जय किसान" का नारा दिया।',
-      detailUr: 'دوسرے وزیر اعظم، جنہوں نے "جے جوان، جے کسان" کا مشہور نعرہ دیا۔',
-      imageUrl: '🌾',
-      order: 10
-    },
-    {
-      id: 'gk-pm-3',
-      category: 'pms',
-      titleEn: 'Indira Gandhi',
-      titleHi: 'इंदिरा गांधी',
-      titleUr: 'اندرا گاندھی',
-      tenure: '1966 – 1977, 1980 – 1984',
-      detailEn: 'First female Prime Minister of India, known as the "Iron Lady".',
-      detailHi: 'भारत की पहली महिला प्रधानमंत्री, जिन्हें "लौह महिला" कहा जाता है।',
-      detailUr: 'بھارت کی پہلی خاتون وزیر اعظم، جنہیں آئرن لیڈی کہا جاتا ہے۔',
-      imageUrl: '👩‍💼',
-      order: 11
-    },
-    {
-      id: 'gk-pm-4',
-      category: 'pms',
-      titleEn: 'Atal Bihari Vajpayee',
-      titleHi: 'अटल बिहारी वाजपेयी',
-      titleUr: 'اٹل بہاری واجپائی',
-      tenure: '1996, 1998 – 2004',
-      detailEn: 'Renowned poet and statesman who led India into the new millennium.',
-      detailHi: 'प्रख्यात कवि एवं राजनेता, जिन्होंने भारत को नई सदी में नेतृत्व दिया।',
-      detailUr: 'مشہور شاعر اور مدبر سیاستدان جنہوں نے بھارت کی قیادت کی۔',
-      imageUrl: '📜',
-      order: 12
-    },
-    {
-      id: 'gk-pm-5',
-      category: 'pms',
-      titleEn: 'Dr. Manmohan Singh',
-      titleHi: 'डॉ. मनमोहन सिंह',
-      titleUr: 'ڈاکٹر منموہن سنگھ',
-      tenure: '2004 – 2014',
-      detailEn: 'Eminent economist and 13th Prime Minister of India.',
-      detailHi: 'महान अर्थशास्त्री और भारत के 13वें प्रधानमंत्री।',
-      detailUr: 'معروف ماہر اقتصادیات اور بھارت کے 13ویں وزیر اعظم۔',
-      imageUrl: '🎓',
-      order: 13
-    },
-    {
-      id: 'gk-pm-6',
-      category: 'pms',
-      titleEn: 'Narendra Modi',
-      titleHi: 'नरेंद्र मोदी',
-      titleUr: 'نریندر مودی',
-      tenure: '2014 – Present',
-      detailEn: 'Current Prime Minister of India, promoting Digital India and Make in India.',
-      detailHi: 'भारत के वर्तमान प्रधानमंत्री, जिन्होंने डिजिटल इंडिया और विकसित भारत की पहल की।',
-      detailUr: 'بھارت کے موجودہ وزیر اعظم، ڈیجیٹل انڈیا کے علمبردار۔',
-      imageUrl: '🇮🇳',
-      order: 14
-    },
-
-    // Presidents of India
-    {
-      id: 'gk-pres-1',
-      category: 'presidents',
-      titleEn: 'Dr. Rajendra Prasad',
-      titleHi: 'डॉ. राजेंद्र प्रसाद',
-      titleUr: 'ڈاکٹر راجندر پرساد',
-      tenure: '1950 – 1962',
-      detailEn: 'First President of the Republic of India and President of the Constituent Assembly.',
-      detailHi: 'गणतंत्र भारत के प्रथम राष्ट्रपति और संविधान सभा के अध्यक्ष।',
-      detailUr: 'جمہوریہ بھارت کے پہلے صدر اور آئین ساز اسمبلی کے صدر۔',
-      imageUrl: '🇮🇳',
-      order: 15
-    },
-    {
-      id: 'gk-pres-2',
-      category: 'presidents',
-      titleEn: 'Dr. A.P.J. Abdul Kalam',
-      titleHi: 'डॉ. ए.पी.जे. अब्दुल कलाम',
-      titleUr: 'ڈاکٹر اے پی جے عبد الکلام',
-      tenure: '2002 – 2007',
-      detailEn: '11th President, known as the "Missile Man of India" and the beloved "People\'s President".',
-      detailHi: 'भारत के 11वें राष्ट्रपति, जिन्हें "मिसाइल मैन" और बच्चों का चहेता राष्ट्रपति कहा जाता है।',
-      detailUr: 'بھارت کے 11ویں صدر، جنہیں "میزائل مین" اور عوام کا ہر دلعزیز صدر کہا جاتا ہے۔',
-      imageUrl: '🚀',
-      order: 16
-    },
-    {
-      id: 'gk-pres-3',
-      category: 'presidents',
-      titleEn: 'Droupadi Murmu',
-      titleHi: 'द्रौपदी मुर्मू',
-      titleUr: 'دروپدی مرمو',
-      tenure: '2022 – Present',
-      detailEn: 'Current President of India and the first tribal woman to hold the highest constitutional office.',
-      detailHi: 'भारत की वर्तमान राष्ट्रपति और सर्वोच्च पद संभालने वाली पहली जनजातीय महिला।',
-      detailUr: 'بھارت کی موجودہ صدر اور پہلی قبائلی خاتون صدر۔',
-      imageUrl: '👑',
-      order: 17
-    },
-
-    // Important Ministers
-    {
-      id: 'gk-min-1',
-      category: 'ministers',
-      titleEn: 'Education Minister (Shiksha Mantri)',
-      titleHi: 'शिक्षा मंत्री (केंद्रीय)',
-      titleUr: 'وزیر تعلیم (بھارت)',
-      detailEn: 'Dharmendra Pradhan — Head of Ministry of Education, shaping National Education Policy.',
-      detailHi: 'धर्मेंद्र प्रधान — शिक्षा मंत्रालय के प्रमुख, राष्ट्रीय शिक्षा नीति के निर्माता।',
-      detailUr: 'دھرمیندر پردھان — وزارت تعلیم کے سربراہ، نئی تعلیمی پالیسی کے نگران۔',
-      imageUrl: '📚',
-      order: 18
-    },
-    {
-      id: 'gk-min-2',
-      category: 'ministers',
-      titleEn: 'Home Minister (Griha Mantri)',
-      titleHi: 'गृह मंत्री',
-      titleUr: 'وزیر داخلہ',
-      detailEn: 'Amit Shah — Responsible for internal security and law enforcement of India.',
-      detailHi: 'अमित शाह — आंतरिक सुरक्षा और देश की व्यवस्था के प्रमुख।',
-      detailUr: 'امت شاہ — اندرونی سلامتی اور امن و امان کے ذمہ دار۔',
-      imageUrl: '🛡️',
-      order: 19
-    },
-
-    // National Symbols
-    {
-      id: 'gk-sym-1',
-      category: 'symbols',
-      titleEn: 'National Animal',
-      titleHi: 'राष्ट्रीय पशु',
-      titleUr: 'قومی جانور',
-      detailEn: 'Royal Bengal Tiger (Symbol of grace, strength, and power)',
-      detailHi: 'रॉयल बंगाल टाइगर (शक्ति और सुंदरता का प्रतीक)',
-      detailUr: 'رائل بنگال ٹائیگر (طاقت اور خوبصورتی کی علامت)',
-      imageUrl: '🐅',
-      order: 20
-    },
-    {
-      id: 'gk-sym-2',
-      category: 'symbols',
-      titleEn: 'National Bird',
-      titleHi: 'राष्ट्रीय पक्षी',
-      titleUr: 'قومی پرندہ',
-      detailEn: 'Indian Peacock (Symbol of beauty and vibrant colors)',
-      detailHi: 'भारतीय मोर (सुंदरता और रंगों का प्रतीक)',
-      detailUr: 'بھارتی مور (خوبصورتی اور رنگ برنگے پنکھ)',
-      imageUrl: '🦚',
-      order: 21
-    },
-    {
-      id: 'gk-sym-3',
-      category: 'symbols',
-      titleEn: 'National Flower',
-      titleHi: 'राष्ट्रीय फूल',
-      titleUr: 'قومی پھول',
-      detailEn: 'Lotus (Kamal) — Sacred symbol of purity and auspiciousness',
-      detailHi: 'कमल — पवित्रता और सुंदरता का प्रतीक',
-      detailUr: 'کنول (لوٹس) — پاکیزگی اور خوبصورتی کی علامت',
-      imageUrl: '🪷',
-      order: 22
-    },
-    {
-      id: 'gk-sym-4',
-      category: 'symbols',
-      titleEn: 'National Flag',
-      titleHi: 'राष्ट्रीय ध्वज',
-      titleUr: 'قومی پرچم',
-      detailEn: 'Tiranga (Tricolor with Saffron, White, Green and Ashoka Chakra)',
-      detailHi: 'तिरंगा (केसरिया, सफेद, हरा और 24 तीलियों वाला अशोक चक्र)',
-      detailUr: 'ترنگا (زعفرانی، سفید، سبز اور 24 تیلیوں والا اشوک چکر)',
-      imageUrl: '🇮🇳',
-      order: 23
-    }
-  ],
-  quizzes: [
-    {
-      id: 'quiz-en-alpha',
-      title: 'English Alphabet Master Quiz',
-      category: 'english',
-      subsection: 'Alphabet A to Z',
-      iconName: 'Sparkles',
-      difficulty: 'beginner',
-      isPublished: true,
-      order: 1,
-      questions: [
+  "surahs": [
+    {
+      "id": "surah-1",
+      "number": 1,
+      "nameArabic": "سُورَةُ الْفَاتِحَة",
+      "nameEnglish": "Al-Fatiha",
+      "nameUrdu": "سورۃ الفاتحہ",
+      "meaningEnglish": "The Opening",
+      "versesCount": 7,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/1.mp3",
+      "order": 1,
+      "ayahs": [
         {
-          id: 'q-1',
-          questionText: 'What letter comes immediately after "A"?',
-          questionTextUrdu: 'حرف "A" کے فوراً بعد کون سا حرف آتا ہے؟',
-          questionTextHindi: 'अक्षर "A" के ठीक बाद कौन सा अक्षर आता है?',
-          options: ['C', 'B', 'D', 'E'],
-          correctOptionIndex: 1,
-          explanation: '"B" comes right after "A" in the English Alphabet.'
+          "numberInSurah": 1,
+          "textArabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          "textUrdu": "شروع اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے۔",
+          "textEnglish": "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3"
         },
         {
-          id: 'q-2',
-          questionText: 'Which word starts with the letter "C"?',
-          questionTextUrdu: 'کون سا لفظ "C" سے شروع ہوتا ہے؟',
-          questionTextHindi: 'कौन सा शब्द अक्षर "C" से शुरू होता है?',
-          options: ['Dog', 'Apple', 'Cat', 'Ball'],
-          correctOptionIndex: 2,
-          explanation: '"Cat" starts with the letter C (C for Cat).'
+          "numberInSurah": 2,
+          "textArabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+          "textUrdu": "سب تعریفیں اللہ ہی کے لیے ہیں جو تمام جہانوں کا پالنے والا ہے۔",
+          "textEnglish": "[All] praise is [due] to Allah, Lord of the worlds -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2.mp3"
         },
         {
-          id: 'q-3',
-          questionText: 'Which word comes SECOND if you arrange them like a dictionary?',
-          options: ['Ant', 'Ape', 'Apple', 'Axe'],
-          correctOptionIndex: 1,
-          explanation: 'They all start with "A", so look at the second letter! "n" comes before "p", so Ant is first and Ape is second.'
+          "numberInSurah": 3,
+          "textArabic": "الرَّحْمَٰنِ الرَّحِيمِ",
+          "textUrdu": "بڑا مہربان نہایت رحم والا ہے۔",
+          "textEnglish": "The Entirely Merciful, the Especially Merciful,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3.mp3"
         },
         {
-          id: 'q-4',
-          questionText: 'If you start at "C" and jump forward 3 steps in the alphabet, where do you land?',
-          options: ['E', 'F', 'G', 'H'],
-          correctOptionIndex: 1,
-          explanation: 'Count forward 3 times: C -> D(1) -> E(2) -> F(3).'
+          "numberInSurah": 4,
+          "textArabic": "مَالِكِ يَوْمِ الدِّينِ",
+          "textUrdu": "روزِ جزا کا مالک ہے۔",
+          "textEnglish": "Sovereign of the Day of Recompense.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4.mp3"
         },
         {
-          id: 'q-5',
-          questionText: 'Which of these words has MORE vowels than consonants?',
-          options: ['BIRD', 'TREE', 'IDEA', 'FROG'],
-          correctOptionIndex: 2,
-          explanation: '"IDEA" has 3 vowels (I, E, A) and only 1 consonant (D).'
+          "numberInSurah": 5,
+          "textArabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+          "textUrdu": "ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔",
+          "textEnglish": "It is You we worship and You we ask for help.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5.mp3"
         },
         {
-          id: 'q-6',
-          questionText: 'What is the 5th CONSONANT of the alphabet?',
-          options: ['E', 'F', 'G', 'H'],
-          correctOptionIndex: 2,
-          explanation: 'The first five consonants are B, C, D, F, G (remember, A and E are vowels and get skipped!).'
+          "numberInSurah": 6,
+          "textArabic": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+          "textUrdu": "ہمیں سیدھا راستہ دکھا۔",
+          "textEnglish": "Guide us to the straight path -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6.mp3"
         },
         {
-          id: 'q-7',
-          questionText: 'If we write the alphabet backwards, what is the 3rd letter?',
-          options: ['C', 'X', 'Y', 'W'],
-          correctOptionIndex: 1,
-          explanation: 'Going backwards: Z is 1st, Y is 2nd, and X is 3rd!'
-        },
-        {
-          id: 'q-8',
-          questionText: 'Which letter is exactly in the middle of "A" and "I"?',
-          options: ['D', 'E', 'F', 'G'],
-          correctOptionIndex: 1,
-          explanation: 'Count: A, B, C, D, E, F, G, H, I. "E" sits perfectly in the center.'
-        },
-        {
-          id: 'q-9',
-          questionText: 'If A=1, B=2, and C=3, which word\'s letters add up to exactly 6?',
-          options: ['CAB', 'DAD', 'BED', 'ADD'],
-          correctOptionIndex: 0,
-          explanation: 'Let\'s add them up: C(3) + A(1) + B(2) = 6!'
-        },
-        {
-          id: 'q-10',
-          questionText: 'Which letter is missing in this jumping pattern? B, D, F, H, __',
-          options: ['I', 'J', 'K', 'L'],
-          correctOptionIndex: 1,
-          explanation: 'We are skipping one letter every time. Skip I and jump to J.'
-        },
-        {
-          id: 'q-11',
-          questionText: 'Which word STARTS with a vowel and ENDS with a consonant?',
-          options: ['APPLE', 'IGLOO', 'OSTRICH', 'UMBRELLA'],
-          correctOptionIndex: 2,
-          explanation: 'It starts with "O" (vowel) and ends with "H" (consonant).'
-        },
-        {
-          id: 'q-12',
-          questionText: 'What is the 4th letter of the month that comes right after March?',
-          options: ['R', 'I', 'L', 'A'],
-          correctOptionIndex: 1,
-          explanation: 'The month is APRIL. The letters are A-P-R-I-L.'
-        },
-        {
-          id: 'q-13',
-          questionText: 'How many consonants are in the word "BUTTERFLY"?',
-          options: ['5', '6', '7', '8'],
-          correctOptionIndex: 2,
-          explanation: 'U and E are vowels. The rest (B, T, T, R, F, L, Y) are 7 consonants!'
-        },
-        {
-          id: 'q-14',
-          questionText: 'Which of these letters is drawn using ONLY straight lines?',
-          options: ['C', 'O', 'S', 'H'],
-          correctOptionIndex: 3,
-          explanation: 'H has two straight lines down and one across. No curvy lines!'
-        },
-        {
-          id: 'q-15',
-          questionText: 'If you take the word "SMILE" and remove all the vowels, how many letters are left?',
-          options: ['2', '3', '4', '5'],
-          correctOptionIndex: 1,
-          explanation: 'Take away the vowels I and E. You are left with S, M, L (which is 3 letters).'
-        },
-        {
-          id: 'q-16',
-          questionText: 'Which letter appears exactly TWICE in the word "UMBRELLA"?',
-          options: ['A', 'E', 'L', 'R'],
-          correctOptionIndex: 2,
-          explanation: 'The letter "L" appears twice in U-M-B-R-E-L-L-A.'
+          "numberInSurah": 7,
+          "textArabic": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          "textUrdu": "ان لوگوں کا راستہ جن پر تو نے انعام فرمایا، نہ ان کا جن پر غضب نازل ہوا اور نہ گمراہوں کا۔",
+          "textEnglish": "The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/7.mp3"
         }
       ]
     },
     {
-      id: 'quiz-ar-alpha',
-      title: 'Arabic Alphabet Challenge (حروف الهجاء)',
-      category: 'arabic',
-      subsection: 'Arabic Letters',
-      iconName: 'Sparkles',
-      difficulty: 'beginner',
-      isPublished: true,
-      order: 2,
-      questions: [
+      "id": "surah-87",
+      "number": 87,
+      "nameArabic": "سُورَةُ الْأَعْلَى",
+      "nameEnglish": "Al-A'la",
+      "nameUrdu": "سورۃ الاعلیٰ",
+      "meaningEnglish": "The Most High",
+      "versesCount": 19,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3",
+      "order": 2,
+      "ayahs": [
         {
-          id: 'q-ar-1',
-          questionText: 'Which letter comes first in the Arabic alphabet?',
-          options: ['ب', 'أ', 'ت', 'ج'],
-          correctOptionIndex: 1,
-          explanation: 'Alif (أ) is the first letter of the Arabic alphabet.'
+          "numberInSurah": 1,
+          "textArabic": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
+          "textUrdu": "اپنے بہت بلند رب کے نام کی تسبیح کیجیے!",
+          "textEnglish": "Glorify the name of your Lord, the Most High,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-2',
-          questionText: 'Which letter comes immediately after "أ" (Alif)?',
-          options: ['ت', 'ث', 'ب', 'ج'],
-          correctOptionIndex: 2,
-          explanation: 'Baa (ب) comes right after Alif.'
+          "numberInSurah": 2,
+          "textArabic": "الَّذِي خَلَقَ فَسَوَّىٰ",
+          "textUrdu": "جس نے پیدا کیا اور درست بنایا!",
+          "textEnglish": "Who created and proportioned,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-3',
-          questionText: 'Which letter has ONE dot underneath it?',
-          options: ['ت', 'ب', 'ث', 'ن'],
-          correctOptionIndex: 1,
-          explanation: 'Baa (ب) has one dot placed beneath it.'
+          "numberInSurah": 3,
+          "textArabic": "وَالَّذِي قَدَّرَ فَهَدَىٰ",
+          "textUrdu": "اور جس نے اندازہ ٹھہرایا پھر راہ دکھائی!",
+          "textEnglish": "And Who destined and [then] guided,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-4',
-          questionText: 'Which letter has TWO dots on top?',
-          options: ['ب', 'ت', 'ث', 'ي'],
-          correctOptionIndex: 1,
-          explanation: 'Taa (ت) has two dots above it.'
+          "numberInSurah": 4,
+          "textArabic": "وَالَّذِي أَخْرَجَ الْمَرْعَىٰ",
+          "textUrdu": "اور جس نے چارہ نکالا!",
+          "textEnglish": "And Who brings out the pasture,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-5',
-          questionText: 'Which letter has THREE dots on top?',
-          options: ['ت', 'ب', 'ث', 'ش'],
-          correctOptionIndex: 2,
-          explanation: 'Thaa (ث) has three dots on top in a triangle shape.'
+          "numberInSurah": 5,
+          "textArabic": "فَجَعَلَهُ غُثَاءً أَحْوَىٰ",
+          "textUrdu": "پھر اسے سیاہ کوڑا بنا دیا!",
+          "textEnglish": "And [then] makes it black stubble.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-6',
-          questionText: 'Which letter has a dot in its belly (center)?',
-          options: ['ح', 'ج', 'خ', 'ع'],
-          correctOptionIndex: 1,
-          explanation: 'Jeem (ج) has a single dot inside its curve.'
+          "numberInSurah": 6,
+          "textArabic": "سَنُقْرِئُكَ فَلَا تَنسَىٰ",
+          "textUrdu": "ہم آپ کو پڑھا دیں گے تو آپ نہیں بھولیں گے!",
+          "textEnglish": "We will make you recite, [O Muhammad], and you will not forget,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-7',
-          questionText: 'Which of these letters has NO dots at all?',
-          options: ['ج', 'خ', 'ح', 'ذ'],
-          correctOptionIndex: 2,
-          explanation: 'Haa (ح) has no dots at all.'
+          "numberInSurah": 7,
+          "textArabic": "إِلَّا مَا شَاءَ اللَّهُ ۚ إِنَّهُ يَعْلَمُ الْجَهْرَ وَمَا يَخْفَىٰ",
+          "textUrdu": "سوائے اس کے جو اللہ چاہے، یقیناً وہ کھلی اور چھپی بات کو جانتا ہے۔",
+          "textEnglish": "Except what Allah should will. Indeed, He knows what is declared and what is hidden.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-8',
-          questionText: 'Which letter looks like "ح" but has a dot on top?',
-          options: ['ج', 'خ', 'غ', 'ع'],
-          correctOptionIndex: 1,
-          explanation: 'Khaa (خ) has a dot directly on top.'
+          "numberInSurah": 8,
+          "textArabic": "وَنُيَسِّرُكَ لِلْيُسْرَىٰ",
+          "textUrdu": "اور ہم آپ کے لیے آسان راہ کو اور آسان کر دیں گے۔",
+          "textEnglish": "And We will ease you toward ease.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-9',
-          questionText: 'Which letter comes after "د" (Daal)?',
-          options: ['ر', 'ز', 'ذ', 'س'],
-          correctOptionIndex: 2,
-          explanation: 'Thaal (ذ) comes right after Daal (د).'
+          "numberInSurah": 9,
+          "textArabic": "فَذَكِّرْ إِن نَّفَعَتِ الذِّكْرَىٰ",
+          "textUrdu": "پس آپ نصیحت کرتے رہیے اگر نصیحت فائدہ دے۔",
+          "textEnglish": "So remind, if the reminder should benefit;",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-10',
-          questionText: 'Which letter looks like "ر" (Raa) with a dot above it?',
-          options: ['ز', 'ذ', 'د', 'و'],
-          correctOptionIndex: 0,
-          explanation: 'Zay (ز) is written just like Raa (ر) with a dot on top.'
+          "numberInSurah": 10,
+          "textArabic": "سَيَذَّكَّرُ مَن يَخْشَىٰ",
+          "textUrdu": "جو شخص ڈرتا ہے وہ ضرور نصیحت قبول کرے گا۔",
+          "textEnglish": "He who fears [Allah] will be reminded.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-11',
-          questionText: 'Which letter has three teeth (curves) and NO dots?',
-          options: ['ش', 'س', 'ص', 'ض'],
-          correctOptionIndex: 1,
-          explanation: 'Seen (س) has three small peaks and no dots.'
+          "numberInSurah": 11,
+          "textArabic": "وَيَتَجَنَّبُهَا الْأَشْقَى",
+          "textUrdu": "اور بڑا بدبخت اس سے پہلو تہی کرے گا۔",
+          "textEnglish": "But the wretched one will avoid it -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-12',
-          questionText: 'Which letter has three teeth AND three dots on top?',
-          options: ['س', 'ش', 'ث', 'ص'],
-          correctOptionIndex: 1,
-          explanation: 'Sheen (ش) is Seen with three dots above.'
+          "numberInSurah": 12,
+          "textArabic": "الَّذِي يَصْلَى النَّارَ الْكُبْرَىٰ",
+          "textUrdu": "جو سب سے بڑی آگ میں داخل ہوگا۔",
+          "textEnglish": "[He] who will [enter and] burn in the greatest Fire,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-13',
-          questionText: 'शब्द "شَمْس" (सूरज) का पहला अक्षर कौन सा है?',
-          options: ['س', 'ص', 'ش', 'ق'],
-          correctOptionIndex: 2,
-          explanation: '"شَمْس" (शम्स) शब्द \'ش\' (शीन) से शुरू होता है।'
+          "numberInSurah": 13,
+          "textArabic": "ثُمَّ لَا يَمُوتُ فِيهَا وَلَا يَحْيَىٰ",
+          "textUrdu": "پھر نہ اس میں مرے گا اور نہ جیے گا۔",
+          "textEnglish": "Neither dying therein nor living.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-14',
-          questionText: 'कौन सा अक्षर छाते की मुड़ी हुई डंडी (Umbrella handle) जैसा दिखता है?',
-          options: ['ك', 'ل', 'م', 'أ'],
-          correctOptionIndex: 1,
-          explanation: '\'ل\' (लाम) का आकार छाते की डंडी जैसा होता है।'
+          "numberInSurah": 14,
+          "textArabic": "قَدْ أَفْلَحَ مَن تَزَكَّىٰ",
+          "textUrdu": "یقیناً وہ کامیاب ہوا جو پاک ہو گیا۔",
+          "textEnglish": "He has certainly succeeded who purifies himself",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-15',
-          questionText: 'इस क्रम में कौन सा अक्षर गायब है? ك, ل, __, ن',
-          options: ['هـ', 'م', 'و', 'ي'],
-          correctOptionIndex: 1,
-          explanation: 'सही क्रम है: ك, ل, م (मीम), ن।'
+          "numberInSurah": 15,
+          "textArabic": "وَذَكَرَ اسْمَ رَبِّهِ فَصَلَّىٰ",
+          "textUrdu": "اور اپنے رب کا نام یاد کیا پھر نماز پڑھی۔",
+          "textEnglish": "And mentions the name of his Lord and prays.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-16',
-          questionText: 'इनमें से कौन सा अक्षर अपने आगे (बाद) वाले अक्षर से नहीं जुड़ता?',
-          options: ['ب', 'س', 'د', 'ج'],
-          correctOptionIndex: 2,
-          explanation: '\'د\' (दाल) उन अक्षरों में से एक है जो अपने बाद वाले अक्षर का हाथ नहीं पकड़ते।'
+          "numberInSurah": 16,
+          "textArabic": "بَلْ تُؤْثِرُونَ الْحَيَاةَ الدُّنْيَا",
+          "textUrdu": "بلکہ تم لوگ دنیا کی زندگی کو ترجیح دیتے ہو۔",
+          "textEnglish": "Nay, you prefer the worldly life,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-17',
-          questionText: 'कौन सा अक्षर \'ر\' (रा) जैसा दिखता है लेकिन उस पर एक बिंदु होता है?',
-          options: ['د', 'ذ', 'ز', 'و'],
-          correctOptionIndex: 2,
-          explanation: '\'ز\' (ज़ा) बिल्कुल \'ر\' (रा) जैसा होता है बस ऊपर एक बिंदु होता है।'
+          "numberInSurah": 17,
+          "textArabic": "وَالْآخِرَةُ خَيْرٌ وَأَبْقَىٰ",
+          "textUrdu": "حالانکہ آخرت بہتر اور ہمیشہ باقی رہنے والی ہے۔",
+          "textEnglish": "While the Hereafter is better and more enduring.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-18',
-          questionText: 'अरबी वर्णमाला का तीसरा (3rd) अक्षर कौन सा है?',
-          options: ['ت', 'ث', 'أ', 'ب'],
-          correctOptionIndex: 0,
-          explanation: 'क्रम है: أ (पहला), ب (दूसरा), ت (तीसरा)।'
+          "numberInSurah": 18,
+          "textArabic": "إِنَّ هَٰذَا لَفِي الصُّحُفِ الْأُولَىٰ",
+          "textUrdu": "یقیناً یہ بات پہلے کے صحیفوں میں بھی لکھی ہوئی ہے۔",
+          "textEnglish": "Indeed, this is in the former scriptures,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         },
         {
-          id: 'q-ar-19',
-          questionText: 'इनमें से किस अक्षर के ऊपर दो बिंदु (नुक़्ते) होते हैं?',
-          options: ['ف', 'ق', 'م', 'ك'],
-          correctOptionIndex: 1,
-          explanation: '\'ق\' (क़ाफ़) के ऊपर दो बिंदु होते हैं, जबकि \'ف\' पर सिर्फ एक होता है।'
-        },
-        {
-          id: 'q-ar-20',
-          questionText: 'इनमें से कौन सा अक्षर \'س\' (सीन) का जुड़वा भाई है जिसके ऊपर 3 बिंदु होते हैं?',
-          options: ['ش', 'ص', 'ض', 'ث'],
-          correctOptionIndex: 0,
-          explanation: '\'ش\' (शीन) बिल्कुल \'س\' (सीन) जैसा होता है, बस उस पर 3 बिंदु होते हैं।'
-        },
-        {
-          id: 'q-ar-21',
-          questionText: 'इनमें से किस अक्षर की शक्ल नाव (Boat) जैसी नहीं है?',
-          options: ['ب', 'ت', 'ث', 'ج'],
-          correctOptionIndex: 3,
-          explanation: '(ب, ت, ث) तीनों नाव की तरह होते हैं, जबकि \'ج\' (जीम) की शक्ल अलग है।'
-        },
-        {
-          id: 'q-ar-22',
-          questionText: 'शब्द "كِتَاب" (किताब) का पहला अक्षर कौन सा है?',
-          options: ['ق', 'ك', 'ح', 'ع'],
-          correctOptionIndex: 1,
-          explanation: '"كِتَاب" (किताब) शब्द \'ك\' (काफ़) से शुरू होता है।'
-        },
-        {
-          id: 'q-ar-23',
-          questionText: 'इनमें से किस शब्द के किसी भी अक्षर पर कोई बिंदु (नुक़्ता) नहीं है?',
-          options: ['حِمَار', 'قِطَّة', 'أَسَد', 'كَلْب'],
-          correctOptionIndex: 2,
-          explanation: 'أَسَد (असद यानी शेर) में अलिफ़, सीन और दाल हैं, और इनमें से किसी पर भी बिंदु नहीं होता।'
-        },
-        {
-          id: 'q-ar-24',
-          questionText: 'किस अक्षर के नीचे दो बिंदु (नुक़्ते) होते हैं?',
-          options: ['ق', 'ت', 'ي', 'ث'],
-          correctOptionIndex: 2,
-          explanation: '\'ي\' (या) जब शुरू या बीच में आता है तो उसके नीचे 2 बिंदु होते हैं।'
-        },
-        {
-          id: 'q-ar-25',
-          questionText: 'शब्द "قَمَر" (चाँद) के बिल्कुल बीच में कौन सा अक्षर है?',
-          options: ['ق', 'ر', 'م', 'ن'],
-          correctOptionIndex: 2,
-          explanation: 'قَمَر में (ق - م - ر) आते हैं, इसलिए बीच में \'م\' (मीम) है।'
-        },
-        {
-          id: 'q-ar-26',
-          questionText: 'इनमें से कौन सा शब्द गोल ता \'ة\' (ता मरबूता) पर खत्म होता है?',
-          options: ['بَيْت', 'بِنْت', 'شَجَرَة', 'حُوت'],
-          correctOptionIndex: 2,
-          explanation: '"شَجَرَة" (पेड़) के अंत में गोल ता (ة) आती है जो अरबी में स्त्रीलिंग की पहचान है।'
-        },
-        {
-          id: 'q-ar-27',
-          questionText: 'इनमें से कौन सा पक्षी \'ع\' (ऐन) अक्षर से शुरू होता है?',
-          options: ['عُصْفُور', 'قِطَّة', 'غَزَال', 'كَلْب'],
-          correctOptionIndex: 0,
-          explanation: 'عُصْفُور (उसफ़ूर यानी चिड़िया) \'ع\' (ऐन) से शुरू होता है।'
-        },
-        {
-          id: 'q-ar-28',
-          questionText: 'अगर हम इन अक्षरों (ل - ي - ف) को उल्टा पढ़ें, तो कौन सा शब्द बनेगा?',
-          options: ['قَفْل', 'فِيل', 'لَيْل', 'فُل'],
-          correctOptionIndex: 1,
-          explanation: 'उल्टा पढ़ने पर ف - ي - ل (फ़ील यानी हाथी) बनेगा!'
-        },
-        {
-          id: 'q-ar-29',
-          questionText: 'शब्द "بَاب" (दरवाज़ा) में कुल मिलाकर कितने बिंदु (नुक़्ते) हैं?',
-          options: ['١', '٢', '٣', '٠'],
-          correctOptionIndex: 1,
-          explanation: 'पहले \'ب\' का 1 बिंदु और आखिरी \'ب\' का 1 बिंदु। (1+1=2 अरबी में ٢)।'
-        },
-        {
-          id: 'q-ar-30',
-          questionText: 'कौन सा अक्षर शुरू और अंत में अपनी शक्ल बिल्कुल बदल लेता है (जैसे هَدِيَّة और وَجْه में)?',
-          options: ['ا', 'هـ', 'د', 'ر'],
-          correctOptionIndex: 1,
-          explanation: '\'هـ\' (हा) शुरू में \'هـ\' और अंत में \'ـه\' या \'ه\' लिखा जाता है।'
-        },
-        {
-          id: 'q-ar-31',
-          questionText: 'अगर हम एक-एक अक्षर छोड़कर आगे बढ़ें: \'أ\' से \'ت\' (ب छोड़ा), तो \'ج\' के बाद क्या आएगा?',
-          options: ['د', 'خ', 'ذ', 'ر'],
-          correctOptionIndex: 1,
-          explanation: 'ج, ح, خ। \'ح\' को छोड़ने पर हम \'خ\' (ख़ा) पर पहुँचेंगे।'
-        },
-        {
-          id: 'q-ar-32',
-          questionText: 'इनमें से कौन सा शब्द \'ن\' (नून) अक्षर पर खत्म होता है?',
-          options: ['عَيْن', 'فَم', 'رَأْس', 'قَدَم'],
-          correctOptionIndex: 0,
-          explanation: '"عَيْن" (ऐन यानी आँख) के अंत में \'ن\' (नून) आता है।'
-        },
-        {
-          id: 'q-ar-33',
-          questionText: 'जब \'अलिफ़\' के नीचे \'ज़ेर\' (Kasra) की आवाज़ हो, तो उसे कैसे लिखते हैं?',
-          options: ['أ', 'آ', 'إ', 'ؤ'],
-          correctOptionIndex: 2,
-          explanation: 'ज़ेर होने पर हमज़ा भी अलिफ़ के नीचे आ जाता है, जैसे (إ)।'
-        },
-        {
-          id: 'q-ar-34',
-          questionText: 'इस क्रम को पूरा करें: ا , ب , ت , __ , ج',
-          options: ['ث', 'ح', 'خ', 'د'],
-          correctOptionIndex: 0,
-          explanation: 'अलिफ़, बा, ता के बाद \'ث\' (सा) आता है।'
-        },
-        {
-          id: 'q-ar-35',
-          questionText: '\'ج\' (जीम) के पेट (बीच) में कितने बिंदु होते हैं?',
-          options: ['١', '٢', '٣', '٠'],
-          correctOptionIndex: 0,
-          explanation: '\'ج\' के बीच में सिर्फ एक (١) बिंदु होता है।'
-        },
-        {
-          id: 'q-ar-36',
-          questionText: 'कौन सा अक्षर \'ج\' (जीम) जैसा दिखता है, लेकिन उसके अंदर कोई बिंदु नहीं होता?',
-          options: ['خ', 'ح', 'ع', 'غ'],
-          correctOptionIndex: 1,
-          explanation: '\'ح\' (हा) बिल्कुल खाली होता है, इसमें कोई नुक़्ता नहीं होता।'
-        },
-        {
-          id: 'q-ar-37',
-          questionText: 'इनमें से कौन सा फल \'ت\' (ता) से शुरू होता है?',
-          options: ['تُفَّاحَة', 'بُرْتُقَال', 'مَوْز', 'عِنَب'],
-          correctOptionIndex: 0,
-          explanation: '"تُفَّاحَة" (सेब) \'ت\' (ता) से शुरू होता है।'
+          "numberInSurah": 19,
+          "textArabic": "صُحُفِ إِبْرَاهِيمَ وَمُوسَىٰ",
+          "textUrdu": "یعنی ابراہیم اور موسیٰ کے صحیفوں میں۔",
+          "textEnglish": "The scriptures of Abraham and Moses.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
         }
       ]
     },
     {
-      id: 'quiz-hi-alpha',
-      title: 'हिंदी वर्णमाला क्विज (Hindi Alphabet Quiz)',
-      category: 'hindi',
-      subsection: 'Hindi Letters',
-      iconName: 'Heart',
-      difficulty: 'beginner',
-      isPublished: true,
-      order: 4,
-      questions: [
+      "id": "surah-88",
+      "number": 88,
+      "nameArabic": "سُورَةُ الْغَاشِيَة",
+      "nameEnglish": "Al-Ghashiyah",
+      "nameUrdu": "سورۃ الغاشیہ",
+      "meaningEnglish": "The Overwhelming Event",
+      "versesCount": 26,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3",
+      "order": 3,
+      "ayahs": [
         {
-          id: 'q-hi-1',
-          questionText: 'हिंदी वर्णमाला का पहला स्वर कौन सा है?',
-          options: ['इ', 'अ', 'उ', 'क'],
-          correctOptionIndex: 1,
-          explanation: 'अ से अनार, यह हिंदी वर्णमाला का पहला स्वर है।'
+          "numberInSurah": 1,
+          "textArabic": "هَلْ أَتَاكَ حَدِيثُ الْغَاشِيَةِ",
+          "textUrdu": "کیا آپ کے پاس چھا جانے والی (قیامت) کی خبر پہنچی ہے؟",
+          "textEnglish": "Has there reached you the report of the Overwhelming [event]?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-2',
-          questionText: '"कमल" शब्द किस अक्षर से शुरू होता है?',
-          options: ['ख', 'ग', 'क', 'म'],
-          correctOptionIndex: 2,
-          explanation: 'कमल शब्द "क" अक्षर से शुरू होता है (क से कमल)।'
+          "numberInSurah": 2,
+          "textArabic": "وُجُوهٌ يَوْمَئِذٍ خَاشِعَةٌ",
+          "textUrdu": "اس دن بہت سے چہرے ذلیل و خوار ہوں گے،",
+          "textEnglish": "[Some] faces, that Day, will be humbled,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-3',
-          questionText: 'हिंदी वर्णमाला का सबसे पहला अक्षर कौन सा है?',
-          options: ['आ', 'अ', 'क', 'इ'],
-          correctOptionIndex: 1,
-          explanation: 'हिंदी वर्णमाला (Varnamala) हमेशा स्वर \'अ\' (जैसे अ से अनार) से शुरू होती है।'
+          "numberInSurah": 3,
+          "textArabic": "عَامِلَةٌ نَّاصِبَةٌ",
+          "textUrdu": "محنت کرنے والے، تھک جانے والے،",
+          "textEnglish": "Laboring and exhausted.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-4',
-          questionText: '\'अ\' के ठीक बाद कौन सा अक्षर आता है?',
-          options: ['इ', 'ऊ', 'आ', 'ए'],
-          correctOptionIndex: 2,
-          explanation: '\'अ\' के बाद \'आ\' आता है (जैसे आ से आम)। \'आ\' में एक अतिरिक्त डंडी (मात्रा) होती है।'
+          "numberInSurah": 4,
+          "textArabic": "تَصْلَىٰ نَارًا حَامِيَةً",
+          "textUrdu": "وہ دہکتی ہوئی آگ میں داخل ہوں گے،",
+          "textEnglish": "They will [enter to] burn in an intensely hot Fire.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-5',
-          questionText: '\'क\' के ठीक बाद कौन सा अक्षर आता है?',
-          options: ['ग', 'ख', 'घ', 'च'],
-          correctOptionIndex: 1,
-          explanation: 'सही क्रम है: क, ख, ग, घ। इसलिए \'क\' के बाद \'ख\' आता है।'
+          "numberInSurah": 5,
+          "textArabic": "تُسْقَىٰ مِنْ عَيْنٍ آنِيَةٍ",
+          "textUrdu": "انہیں کھولتے ہوئے چشمے سے پلایا جائے گا،",
+          "textEnglish": "They will be given drink from a boiling spring.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-6',
-          questionText: 'इनमें से कौन सा अक्षर एक \'स्वर\' (Vowel) है?',
-          options: ['प', 'म', 'इ', 'ल'],
-          correctOptionIndex: 2,
-          explanation: 'अ, आ, इ, ई आदि स्वर होते हैं। बाकी (प, म, ल) व्यंजन (Consonants) हैं।'
+          "numberInSurah": 6,
+          "textArabic": "لَّيْسَ لَهُمْ طَعَامٌ إِلَّا مِن ضَرِيعٍ",
+          "textUrdu": "ان کے لیے خاردار جھاڑی کے سوا کوئی کھانا نہ ہوگا،",
+          "textEnglish": "For them there will be no food except from a poisonous, thorny plant",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-7',
-          questionText: '\'च\' और \'ज\' के बीच में कौन सा अक्षर आता है?',
-          options: ['छ', 'झ', 'ट', 'ठ'],
-          correctOptionIndex: 0,
-          explanation: 'वर्णमाला पढ़ते समय हम कहते हैं: च, छ, ज। इसलिए बीच में \'छ\' आता है।'
+          "numberInSurah": 7,
+          "textArabic": "لَّا يُسْمِنُ وَلَا يُغْنِي مِن جُوعٍ",
+          "textUrdu": "جو نہ فربہ کرے اور نہ بھوک مٹائے۔",
+          "textEnglish": "Which neither nourishes nor avails against hunger.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-8',
-          questionText: '\'प\' के ठीक बाद क्या आता है?',
-          options: ['ब', 'भ', 'फ', 'म'],
-          correctOptionIndex: 2,
-          explanation: '\'प\' से पतंग के बाद \'फ\' से फल आता है!'
+          "numberInSurah": 8,
+          "textArabic": "وُجُوهٌ يَوْمَئِذٍ نَّاعِمَةٌ",
+          "textUrdu": "اس دن بہت سے چہرے تروتازہ اور شاداب ہوں گے،",
+          "textEnglish": "[Other] faces, that Day, will show pleasure.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-9',
-          questionText: 'किस अक्षर से "उल्लू" (Owl) शब्द शुरू होता है?',
-          options: ['अ', 'ऊ', 'उ', 'ओ'],
-          correctOptionIndex: 2,
-          explanation: '"उल्लू" शब्द छोटे \'उ\' से शुरू होता है।'
+          "numberInSurah": 9,
+          "textArabic": "لِّسَعْيِهَا رَاضِيَةٌ",
+          "textUrdu": "اپنی کوشش پر راضی اور مطمئن،",
+          "textEnglish": "With their effort [they are] satisfied",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-10',
-          questionText: '\'त\' के बाद कौन सा अक्षर आता है?',
-          options: ['थ', 'द', 'ध', 'न'],
-          correctOptionIndex: 0,
-          explanation: 'त से तरबूज़ के बाद थ से थर्मस (थ) आता है।'
+          "numberInSurah": 10,
+          "textArabic": "فِي جَنَّةٍ عَالِيَةٍ",
+          "textUrdu": "عالی شان جنت میں،",
+          "textEnglish": "In an elevated garden,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-11',
-          questionText: 'इनमें से कौन सा अक्षर एक \'व्यंजन\' (Consonant) है?',
-          options: ['ओ', 'औ', 'ए', 'म'],
-          correctOptionIndex: 3,
-          explanation: 'ओ, औ, ए स्वर हैं। \'म\' (मछली) एक व्यंजन है।'
+          "numberInSurah": 11,
+          "textArabic": "لَّا تَسْمَعُ فِيهَا لَاغِيَةً",
+          "textUrdu": "جہاں وہ کوئی بیہودہ بات نہیں سنیں گے،",
+          "textEnglish": "Where they will hear no unsuitable speech.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-12',
-          questionText: '\'य\' के ठीक बाद कौन सा अक्षर आता है?',
-          options: ['ल', 'व', 'र', 'श'],
-          correctOptionIndex: 2,
-          explanation: 'सही क्रम है: य, र, ल, व। इसलिए \'य\' के बाद \'र\' आता है।'
+          "numberInSurah": 12,
+          "textArabic": "فِيهَا عَيْنٌ جَارِيَةٌ",
+          "textUrdu": "اس میں بہتے ہوئے چشمے ہوں گے،",
+          "textEnglish": "Within it is a flowing spring.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-13',
-          questionText: 'इनमें से किस अक्षर के पेट में एक तिरछी लाइन (लकीर) खींची होती है?',
-          options: ['व', 'ब', 'क', 'प'],
-          correctOptionIndex: 1,
-          explanation: '\'ब\' (बकरी) और \'व\' (वन) एक जैसे दिखते हैं, लेकिन \'ब\' के पेट में एक लाइन कटी होती है।'
+          "numberInSurah": 13,
+          "textArabic": "فِيهَا سُرُرٌ مَّرْفُوعَةٌ",
+          "textUrdu": "اس میں اونچے اونچے تخت ہوں گے،",
+          "textEnglish": "Within it are couches raised high",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-14',
-          questionText: 'शब्द "कमल" (Lotus) का पहला अक्षर कौन सा है?',
-          options: ['म', 'ल', 'क', 'ख'],
-          correctOptionIndex: 2,
-          explanation: 'क + म + ल = कमल! पहला अक्षर \'क\' है।'
+          "numberInSurah": 14,
+          "textArabic": "وَأَكْوَابٌ مَّوْضُوعَةٌ",
+          "textUrdu": "اور قرینے سے رکھے ہوئے آبخورے،",
+          "textEnglish": "And cups put in place",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-15',
-          questionText: '\'ल\' अक्षर से कौन सा शब्द शुरू होता है?',
-          options: ['भालू', 'लट्टू', 'आम', 'केला'],
-          correctOptionIndex: 1,
-          explanation: '\'ल\' से लट्टू (Top) होता है!'
+          "numberInSurah": 15,
+          "textArabic": "وَنَمَارِقُ مَصْفُوفَةٌ",
+          "textUrdu": "اور قطار در قطار لگے ہوئے گاؤ تکیے،",
+          "textEnglish": "And cushions lined up",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-16',
-          questionText: 'इनमें से किस अक्षर के ऊपर एक बिंदी (Anusvara) लगी होती है?',
-          options: ['अ', 'आ', 'अं', 'अः'],
-          correctOptionIndex: 2,
-          explanation: '\'अं\' (अंगूर) के ऊपर हमेशा एक बिंदी (Dot) होती है।'
+          "numberInSurah": 16,
+          "textArabic": "وَزَرَابِيُّ مَبْثُوثَةٌ",
+          "textUrdu": "اور بچھے ہوئے نفیس قالین۔",
+          "textEnglish": "And rich carpets spread around.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-17',
-          questionText: 'शब्द "किताब" (Book) में मूल रूप से पहला अक्षर कौन सा है?',
-          options: ['त', 'ब', 'क', 'ख'],
-          correctOptionIndex: 2,
-          explanation: '"किताब" शब्द \'क\' अक्षर (जिस पर इ की मात्रा लगी है) से शुरू होता है।'
+          "numberInSurah": 17,
+          "textArabic": "أَفَلَا يَنظُرُونَ إِلَى الْإِبِلِ كَيْفَ خُلِقَتْ",
+          "textUrdu": "کیا وہ اونٹوں کی طرف نہیں دیکھتے کہ وہ کیسے بنائے گئے؟",
+          "textEnglish": "Then do they not look at the camels - how they are created?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-18',
-          questionText: 'कौन सा अक्षर \'ट\' जैसा दिखता है, बस नीचे से पूरा गोल (बंद) होता है?',
-          options: ['ढ', 'द', 'ठ', 'ड'],
-          correctOptionIndex: 2,
-          explanation: '\'ट\' आधा गोल होता है, और \'ठ\' (ठठेरा) पूरा गोल होता है।'
+          "numberInSurah": 18,
+          "textArabic": "وَإِلَى السَّمَاءِ كَيْفَ رُفِعَتْ",
+          "textUrdu": "اور آسمان کی طرف کہ وہ کیسا بلند کیا گیا؟",
+          "textEnglish": "And at the sky - how it is raised?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-19',
-          questionText: '\'स\' के ठीक बाद वर्णमाला में कौन सा अक्षर आता है?',
-          options: ['ह', 'क्ष', 'श', 'ष'],
-          correctOptionIndex: 0,
-          explanation: 'सही क्रम है: श, ष, स, ह। \'स\' के बाद \'ह\' (हाथी) आता है।'
+          "numberInSurah": 19,
+          "textArabic": "وَإِلَى الْجِبَالِ كَيْفَ نُصِبَتْ",
+          "textUrdu": "اور پہاڑوں کی طرف کہ وہ کیسے جمائے گئے؟",
+          "textEnglish": "And at the mountains - how they are erected?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-20',
-          questionText: 'इनमें से किस अक्षर को अंग्रेजी के अक्षर \'U\' की तरह नीचे से घुमाकर लिखते हैं?',
-          options: ['ग', 'प', 'न', 'र'],
-          correctOptionIndex: 1,
-          explanation: '\'प\' (पतंग) का आकार नीचे से \'U\' की तरह गोल होता है।'
+          "numberInSurah": 20,
+          "textArabic": "وَإِلَى الْأَرْضِ كَيْفَ سُطِحَتْ",
+          "textUrdu": "اور زمین کی طرف کہ وہ کیسی بچھائی گئی؟",
+          "textEnglish": "And at the earth - how it is spread out?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-21',
-          questionText: 'शब्द "अनार" (Pomegranate) किस अक्षर से शुरू होता है?',
-          options: ['आ', 'अं', 'अ', 'न'],
-          correctOptionIndex: 2,
-          explanation: 'अ से अनार! यह वर्णमाला का सबसे पहला शब्द है जो बच्चे सीखते हैं।'
+          "numberInSurah": 21,
+          "textArabic": "فَذَكِّرْ إِنَّمَا أَنتَ مُذَكِّرٌ",
+          "textUrdu": "پس آپ نصیحت کیجیے، آپ تو بس نصیحت کرنے والے ہیں،",
+          "textEnglish": "So remind, [O Muhammad]; you are only a reminder.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-22',
-          questionText: '\'ड\' और \'ण\' के बीच में क्या आता है?',
-          options: ['ट', 'ठ', 'ढ', 'त'],
-          correctOptionIndex: 2,
-          explanation: 'क्रम है: ट, ठ, ड, ढ, ण। बीच में \'ढ\' (ढक्कन) आता है।'
+          "numberInSurah": 22,
+          "textArabic": "لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ",
+          "textUrdu": "آپ ان پر کوئی داروغہ نہیں ہیں،",
+          "textEnglish": "You are not over them a controller.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-23',
-          questionText: 'क, ख, ग, घ के बाद इस लाइन का आखिरी (5वाँ) अक्षर कौन सा है?',
-          options: ['च', 'ञ', 'ण', 'ङ'],
-          correctOptionIndex: 3,
-          explanation: '\'क\' वर्ग (लाइन) का आखिरी अक्षर \'ङ\' (अंगा) होता है।'
+          "numberInSurah": 23,
+          "textArabic": "إِلَّا مَن تَوَلَّىٰ وَكَفَرَ",
+          "textUrdu": "ہاں جو شخص منہ موڑے اور کفر کرے،",
+          "textEnglish": "However, he who turns away and disbelieves -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-24',
-          questionText: 'शब्द "मछली" के बिल्कुल बीच में कौन सा अक्षर है?',
-          options: ['म', 'छ', 'ल', 'ई'],
-          correctOptionIndex: 1,
-          explanation: 'म + छ + ली = मछली। बीच में \'छ\' (छाता) आता है।'
+          "numberInSurah": 24,
+          "textArabic": "فَيُعَذِّبُهُ اللَّهُ الْعَذَابَ الْأَكْبَرَ",
+          "textUrdu": "تو اللہ اسے سب سے بڑا عذاب دے گا۔",
+          "textEnglish": "Then Allah will punish him with the greatest punishment.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-25',
-          questionText: 'इनमें से किस अक्षर में कोई सीधी खड़ी डंडी (Standing line) नहीं होती?',
-          options: ['क', 'म', 'र', 'प'],
-          correctOptionIndex: 2,
-          explanation: '\'क\', \'म\', \'प\' सब में एक सीधी लाइन होती है, लेकिन \'र\' (रथ) में कोई सीधी लाइन नहीं होती।'
+          "numberInSurah": 25,
+          "textArabic": "إِنَّ إِلَيْنَا إِيَابَهُمْ",
+          "textUrdu": "بے شک ہماری ہی طرف ان کا لوٹنا ہے،",
+          "textEnglish": "Indeed, to Us is their return",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         },
         {
-          id: 'q-hi-26',
-          questionText: 'अगर \'प\' (पतंग) के पेट में एक तिरछी लाइन खींच दें, तो वह कौन सा अक्षर बन जाएगा?',
-          options: ['फ', 'ष', 'श', 'स'],
-          correctOptionIndex: 1,
-          explanation: '\'प\' के बीच में लाइन खींचने से वह \'ष\' (षट्कोण) बन जाता है!'
-        },
-        {
-          id: 'q-hi-27',
-          questionText: '"त्रिशूल" (Trident) शब्द किस अक्षर से शुरू होता है?',
-          options: ['त', 'क्ष', 'त्र', 'ज्ञ'],
-          correctOptionIndex: 2,
-          explanation: 'त्रिशूल शब्द संयुक्त अक्षर \'त्र\' (T-R-A) से शुरू होता है।'
-        },
-        {
-          id: 'q-hi-28',
-          questionText: 'शब्द "मगरमच्छ" (Crocodile) का पहला अक्षर कौन सा है?',
-          options: ['ग', 'म', 'र', 'छ'],
-          correctOptionIndex: 1,
-          explanation: 'मगरमच्छ की शुरुआत \'म\' से होती है।'
-        },
-        {
-          id: 'q-hi-29',
-          questionText: '\'ड\' (डमरू) के बिल्कुल नीचे एक बिंदु (बिंदी) लगाने से कौन सा अक्षर बनता है?',
-          options: ['ढ़', 'ड़', 'ढ', 'झ'],
-          correctOptionIndex: 1,
-          explanation: '\'ड\' के नीचे बिंदी लगाने से \'ड़\' (जैसे सड़क में) बन जाता है।'
-        },
-        {
-          id: 'q-hi-30',
-          questionText: 'इनमें से कौन सा अक्षर स्वर (Vowel) नहीं है?',
-          options: ['ऋ', 'ए', 'ओ', 'स'],
-          correctOptionIndex: 3,
-          explanation: '\'स\' (सेब) एक व्यंजन (Consonant) है। बाकी सब स्वर हैं।'
-        },
-        {
-          id: 'q-hi-31',
-          questionText: 'शब्द "बचपन" (Childhood) में कुल कितने अक्षर हैं?',
-          options: ['2', '3', '4', '5'],
-          correctOptionIndex: 2,
-          explanation: 'ब + च + प + न = कुल 4 अक्षर हैं!'
-        },
-        {
-          id: 'q-hi-32',
-          questionText: '\'ज्ञ\' से कौन सा शब्द बनता है?',
-          options: ['क्षत्रिय', 'त्रिशूल', 'ज्ञानी', 'श्रमिक'],
-          correctOptionIndex: 2,
-          explanation: '\'ज्ञ\' से ज्ञानी (Wise person) बनता है!'
-        },
-        {
-          id: 'q-hi-33',
-          questionText: 'अगर हम \'प\', \'फ\', \'ब\' को उल्टा (पीछे से) पढ़ें, तो सबसे पहले क्या आएगा?',
-          options: ['प', 'फ', 'ब', 'भ'],
-          correctOptionIndex: 2,
-          explanation: 'उल्टा पढ़ने पर सबसे पहले \'ब\', फिर \'फ\', और अंत में \'प\' आएगा।'
-        },
-        {
-          id: 'q-hi-34',
-          questionText: 'इनमें से किस अक्षर के ऊपर पूरी शिरोरेखा (छत वाली लाइन) नहीं खींची जाती?',
-          options: ['क', 'प', 'भ', 'त'],
-          correctOptionIndex: 2,
-          explanation: '\'भ\' और \'ध\' जैसे अक्षरों के ऊपर का गोल हिस्सा खुला रहता है, वहाँ लाइन नहीं खींचते।'
-        },
-        {
-          id: 'q-hi-35',
-          questionText: 'वर्णमाला का सबसे आखिरी संयुक्त अक्षर कौन सा होता है?',
-          options: ['क्ष', 'त्र', 'ज्ञ', 'श्र'],
-          correctOptionIndex: 3,
-          explanation: 'हिंदी वर्णमाला के अंत में क्ष, त्र, ज्ञ और \'श्र\' (जैसे श्रमिक में) आते हैं।'
-        },
-        {
-          id: 'q-hi-36',
-          questionText: '"औ" (Aau) में ऊपर कितनी मात्राएँ (डंडियाँ) लगी होती हैं?',
-          options: ['एक', 'दो', 'तीन', 'एक भी नहीं'],
-          correctOptionIndex: 1,
-          explanation: '\'ओ\' में ऊपर 1 मात्रा होती है, और \'औ\' (औरत) में ऊपर 2 मात्राएँ होती हैं।'
-        },
-        {
-          id: 'q-hi-37',
-          questionText: 'अगर \'व\' के पेट में लाइन खींचें तो वह \'ब\' बनता है। अगर \'च\' की खड़ी डंडी हटा दें तो वह कैसा दिखेगा?',
-          options: ['U जैसा', 'O जैसा', 'C (या आधा चाँद) और एक लेटी लाइन', 'V जैसा'],
-          correctOptionIndex: 2,
-          explanation: '\'च\' से डंडी हटाने पर सिर्फ एक लेटी लाइन और एक आधा गोल हिस्सा बचेगा।'
+          "numberInSurah": 26,
+          "textArabic": "ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُم",
+          "textUrdu": "پھر یقیناً ہمارے ہی ذمے ان کا حساب لینا ہے۔",
+          "textEnglish": "Then indeed, upon Us is their account.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
         }
       ]
     },
     {
-      id: 'quiz-quran',
-      title: 'Quran & Surahs Fun Quiz',
-      category: 'quran',
-      subsection: 'Surahs & Verses',
-      iconName: 'Book',
-      difficulty: 'beginner',
-      isPublished: true,
-      order: 5,
-      questions: [
-          {
-                  "id": "q-qur-1",
-                  "questionText": "What is the first Surah of the Holy Quran?",
-                  "questionTextUrdu": "قرآن پاک کی پہلی سورت کون سی ہے؟",
-                  "questionTextHindi": "पवित्र क़ुरआन की पहली सूरत कौन सी है?",
-                  "options": [
-                          "سورۃ الاخلاص",
-                          "سورۃ البقرہ",
-                          "سورۃ الفاتحہ",
-                          "سورۃ الناس"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "سورۃ الفاتحہ قرآن پاک کی سب سے پہلی سورت ہے، اسی لیے اسے \"فاتحہ\" (آغاز کرنے والی) کہا جاتا ہے۔"
-          },
-          {
-                  "id": "q-qur-2",
-                  "questionText": "What is the last Surah of the Holy Quran?",
-                  "questionTextUrdu": "قرآن پاک کی آخری سورت کون سی ہے؟",
-                  "questionTextHindi": "पवित्र क़ुरआन की आखिरी सूरत कौन सी है?",
-                  "options": [
-                          "سورۃ الفلق",
-                          "سورۃ الناس",
-                          "سورۃ الکافرون",
-                          "سورۃ الاخلاص"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "سورۃ الناس قرآن مجید کی 114ویں اور سب سے آخری سورت ہے۔"
-          },
-          {
-                  "id": "q-qur-3",
-                  "questionText": "Which is the longest Surah in the Quran?",
-                  "questionTextUrdu": "قرآن پاک کی سب سے لمبی سورت کون سی ہے؟",
-                  "questionTextHindi": "क़ुरआन की सबसे लंबी सूरत कौन सी है?",
-                  "options": [
-                          "سورۃ آل عمران",
-                          "سورۃ یسین",
-                          "سورۃ النساء",
-                          "سورۃ البقرہ"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "سورۃ البقرہ قرآن کی سب سے طویل سورت ہے جس میں 286 آیات ہیں۔"
-          },
-          {
-                  "id": "q-qur-4",
-                  "questionText": "Which is the shortest Surah in the Quran?",
-                  "questionTextUrdu": "قرآن پاک کی سب سے چھوٹی سورت کون سی ہے؟",
-                  "questionTextHindi": "क़ुरआन की सबसे छोटी सूरत कौन सी है?",
-                  "options": [
-                          "سورۃ الکوثر",
-                          "سورۃ العصر",
-                          "سورۃ الاخلاص",
-                          "سورۃ الناس"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "سورۃ الکوثر میں صرف 3 مختصر آیات ہیں، جو اسے قرآن کی سب سے چھوٹی سورت بناتی ہیں۔"
-          },
-          {
-                  "id": "q-qur-5",
-                  "questionText": "How many Surahs are there in the Holy Quran in total?",
-                  "questionTextUrdu": "قرآن پاک میں کل کتنی سورتیں ہیں؟",
-                  "questionTextHindi": "पवित्र क़ुरआन में कुल कितनी सूरतें हैं?",
-                  "options": [
-                          "100",
-                          "114",
-                          "120",
-                          "99"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "قرآن پاک میں کل 114 سورتیں ہیں۔"
-          },
-          {
-                  "id": "q-qur-6",
-                  "questionText": "How many Juz (Paras) are in the Quran?",
-                  "questionTextUrdu": "قرآن پاک میں کتنے پارے (جزو) ہیں؟",
-                  "questionTextHindi": "क़ुरआन में कितने पारे (जुज़) हैं?",
-                  "options": [
-                          "30",
-                          "40",
-                          "20",
-                          "114"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "قرآن پاک کو 30 برابر حصوں میں تقسیم کیا گیا ہے جنہیں پارے یا جزو کہا جاتا ہے۔"
-          },
-          {
-                  "id": "q-qur-7",
-                  "questionText": "Which Surah is known as the \"Heart of the Quran\"?",
-                  "questionTextUrdu": "کس سورت کو قرآن پاک کا \"دل\" کہا جاتا ہے؟",
-                  "questionTextHindi": "किस सूरत को क़ुरआन का \"दिल\" कहा जाता है?",
-                  "options": [
-                          "سورۃ الرحمٰن",
-                          "سورۃ الملک",
-                          "سورۃ یسین",
-                          "سورۃ الکہف"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "پیارے نبی کریمﷺ کی حدیث کے مطابق سورۃ یسین قرآن کا دل ہے۔"
-          },
-          {
-                  "id": "q-qur-8",
-                  "questionText": "Which Surah does NOT start with \"Bismillah\"?",
-                  "questionTextUrdu": "کون سی سورت \"بسم اللہ\" سے شروع نہیں ہوتی؟",
-                  "questionTextHindi": "कौन सी सूरत \"बिस्मिल्लाह\" से शुरू नहीं होती?",
-                  "options": [
-                          "سورۃ الانفال",
-                          "سورۃ التوبہ",
-                          "سورۃ یونس",
-                          "سورۃ ہود"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "سورۃ التوبہ واحد سورت ہے جس کے آغاز میں \"بسم اللہ الرحمٰن الرحیم\" نہیں لکھی گئی۔"
-          },
-          {
-                  "id": "q-qur-9",
-                  "questionText": "Which Surah contains \"Bismillah\" twice?",
-                  "questionTextUrdu": "کس سورت میں دو مرتبہ \"بسم اللہ\" آئی ہے؟",
-                  "questionTextHindi": "किस सूरत में दो बार \"बिस्मिल्लाह\" आई है?",
-                  "options": [
-                          "سورۃ النمل",
-                          "سورۃ القصص",
-                          "سورۃ طہٰ",
-                          "سورۃ الاسراء"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "سورۃ النمل میں ایک بار شروع میں اور دوسری بار حضرت سلیمانؑ کے خط (آیت 30) میں بسم اللہ آئی ہے۔"
-          },
-          {
-                  "id": "q-qur-10",
-                  "questionText": "To which Prophet was the Quran revealed?",
-                  "questionTextUrdu": "قرآن پاک کس نبی پر نازل ہوا؟",
-                  "questionTextHindi": "क़ुरआन किस नबी पर नाज़िल (अवतरित) हुआ?",
-                  "options": [
-                          "حضرت عیسیٰؑ",
-                          "حضرت موسیٰؑ",
-                          "حضرت ابراہیمؑ",
-                          "حضرت محمدﷺ"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "قرآن پاک اللہ کی آخری کتاب ہے جو آخری نبی حضرت محمد مصطفیٰﷺ پر نازل ہوئی۔"
-          },
-          {
-                  "id": "q-qur-11",
-                  "questionText": "Which Angel brought the Quran from Allah to the Prophet?",
-                  "questionTextUrdu": "اللہ کی طرف سے نبی کریمﷺ پر قرآن پاک کون سے فرشتہ لے کر آئے؟",
-                  "questionTextHindi": "अल्लाह की तरफ से नबी (PBUH) पर क़ुरआन कौन से फरिश्ते लेकर आए?",
-                  "options": [
-                          "حضرت میکائیلؑ",
-                          "حضرت جبرائیلؑ",
-                          "حضرت اسرافیلؑ",
-                          "حضرت عزرائیلؑ"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "حضرت جبرائیل علیہ السلام اللہ کی طرف سے وحی اور قرآن پاک لے کر آتے تھے۔"
-          },
-          {
-                  "id": "q-qur-12",
-                  "questionText": "In which sacred month was the Quran first revealed?",
-                  "questionTextUrdu": "قرآن پاک کس مبارک مہینے میں نازل ہونا شروع ہوا؟",
-                  "questionTextHindi": "क़ुरआन किस मुबारक महीने में नाज़िल होना शुरू हुआ?",
-                  "options": [
-                          "ماہِ رجب",
-                          "ماہِ شعبان",
-                          "ماہِ رمضان",
-                          "ماہِ ذوالحجہ"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "قرآن پاک کا نزول رمضان المبارک کے بابرکت مہینے میں لیلۃ القدر کی رات شروع ہوا۔"
-          },
-          {
-                  "id": "q-qur-13",
-                  "questionText": "In which night was the Quran first revealed?",
-                  "questionTextUrdu": "قرآن پاک کس رات نازل کیا گیا؟",
-                  "questionTextHindi": "क़ुरआन किस रात नाज़िल किया गया?",
-                  "options": [
-                          "شبِ برات",
-                          "شبِ قدر (لیلۃ القدر)",
-                          "شبِ معراج",
-                          "عید کی رات"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "قرآن پاک لیلۃ القدر (شبِ قدر) کی بابرکت رات کو نازل کیا گیا۔"
-          },
-          {
-                  "id": "q-qur-14",
-                  "questionText": "In which cave did the first revelation of the Quran take place?",
-                  "questionTextUrdu": "قرآن پاک کی پہلی وحی کس غار میں نازل ہوئی؟",
-                  "questionTextHindi": "क़ुरआन की पहली वही किस गुफा (गार) में नाज़िल हुई?",
-                  "options": [
-                          "غارِ ثور",
-                          "غارِ حرا",
-                          "کوہِ طور",
-                          "غارِ صفا"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "مکہ مکرمہ کے قریب جبلِ نور پر واقع \"غارِ حرا\" میں سب سے پہلی وحی نازل ہوئی۔"
-          },
-          {
-                  "id": "q-qur-15",
-                  "questionText": "What was the first word of the Holy Quran revealed to Prophet Muhammad (PBUH)?",
-                  "questionTextUrdu": "قرآن پاک کا سب سے پہلا کون سا لفظ نازل ہوا؟",
-                  "questionTextHindi": "क़ुरआन का सबसे पहला कौन सा लफ्ज़ नाज़िल हुआ?",
-                  "options": [
-                          "قُل (کہو)",
-                          "اِقْرَأْ (پڑھو)",
-                          "اَلْحَمْدُ (سب تعریف)",
-                          "ن (نون)"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "سب سے پہلا لفظ \"اِقْرَأْ\" (پڑھو اپنے رب کے نام سے) نازل ہوا تھا۔"
-          },
-          {
-                  "id": "q-qur-16",
-                  "questionText": "Which Surah was revealed first (the first 5 verses)?",
-                  "questionTextUrdu": "سب سے پہلے کس سورت کی ابتدائی 5 آیات نازل ہوئیں؟",
-                  "questionTextHindi": "सबसे पहले किस सूरत की शुरुआती 5 आयतें नाज़िल हुईं?",
-                  "options": [
-                          "سورۃ الفاتحہ",
-                          "سورۃ العلق",
-                          "سورۃ المدثر",
-                          "سورۃ القلم"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "سورۃ العلق (پارہ 30) کی ابتدائی پانچ آیات غارِ حرا میں سب سے پہلے نازل ہوئیں۔"
-          },
-          {
-                  "id": "q-qur-17",
-                  "questionText": "In which language was the Holy Quran revealed?",
-                  "questionTextUrdu": "قرآن مجید کس زبان میں نازل ہوا؟",
-                  "questionTextHindi": "पवित्र क़ुरआन किस भाषा (ज़बान) में नाज़िल हुआ?",
-                  "options": [
-                          "اردو",
-                          "فارسی",
-                          "عربی",
-                          "عبرانی"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "قرآن پاک فصیح و بلیغ عربی زبان میں نازل ہوا۔"
-          },
-          {
-                  "id": "q-qur-18",
-                  "questionText": "For how many years did the revelation of the Quran continue?",
-                  "questionTextUrdu": "قرآن پاک تقریباً کتنے سالوں کے عرصے میں مکمل نازل ہوا؟",
-                  "questionTextHindi": "क़ुरआन लगभग कितने वर्षों में मुकम्मल नाज़िल हुआ?",
-                  "options": [
-                          "10 سال",
-                          "23 سال",
-                          "30 سال",
-                          "40 سال"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "قرآن پاک تقریباً 23 سال کے عرصے میں موقع بموقع ضرورت کے مطابق نازل ہوا۔"
-          },
-          {
-                  "id": "q-qur-19",
-                  "questionText": "Which Surah is considered equal to one-third (1/3) of the Quran?",
-                  "questionTextUrdu": "کس سورت کو پڑھنے کا ثواب ایک تہائی (1/3) قرآن کے برابر ہے؟",
-                  "questionTextHindi": "किस सूरत को पढ़ने का सवाब एक तिहाई (1/3) क़ुरआन के बराबर है?",
-                  "options": [
-                          "سورۃ الاخلاص",
-                          "سورۃ الفلق",
-                          "سورۃ الکوثر",
-                          "سورۃ الملک"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "حدیث شریف کے مطابق سورۃ الاخلاص پڑھنا ایک تہائی قرآن پڑھنے کے برابر ثواب رکھتا ہے۔"
-          },
-          {
-                  "id": "q-qur-20",
-                  "questionText": "Which Surah is known as the \"Beauty / Adornment of the Quran\" (Uroos-ul-Quran)?",
-                  "questionTextUrdu": "کس سورت کو \"عروس القرآن\" (قرآن کی دلہن/زینت) کہا جاتا ہے؟",
-                  "questionTextHindi": "किस सूरत को \"उरूस-उल-क़ुरआन\" (क़ुरआन की दुल्हन/ज़ीनत) कहा जाता है?",
-                  "options": [
-                          "سورۃ یسین",
-                          "سورۃ الرحمٰن",
-                          "سورۃ الواقعہ",
-                          "سورۃ الفتح"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "حدیث میں سورۃ الرحمٰن کو \"عروس القرآن\" (قرآن کی زینت و دلہن) فرمایا گیا ہے۔"
-          },
-          {
-                  "id": "q-qur-21",
-                  "questionText": "Which Surah protects from the punishment of the grave?",
-                  "questionTextUrdu": "کون سی سورت قبر کے عذاب سے بچاتی اور شفاعت کرتی ہے؟",
-                  "questionTextHindi": "कौन सी सूरत क़ब्र के अज़ाब से बचाती है?",
-                  "options": [
-                          "سورۃ السجدہ",
-                          "سورۃ الملک",
-                          "سورۃ الدخان",
-                          "سورۃ المزمل"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "حدیث پاک میں آیا ہے کہ سورۃ الملک روزانہ رات کو پڑھنے والے کے لیے قبر میں نجات کا ذریعہ بنتی ہے۔"
-          },
-          {
-                  "id": "q-qur-22",
-                  "questionText": "How many times is the name of Prophet \"Muhammad\" (PBUH) mentioned in the Quran?",
-                  "questionTextUrdu": "قرآن پاک میں نبی کریم حضرت محمدﷺ کا نامِ نامی \"محمد\" کتنی بار آیا ہے؟",
-                  "questionTextHindi": "क़ुरआन में नबी करीम (PBUH) का नाम \"मुहम्मद\" कितनी बार आया है?",
-                  "options": [
-                          "4 بار",
-                          "10 بار",
-                          "25 بار",
-                          "1 بار"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "قرآن مجید میں اسمِ مبارک \"محمد\" 4 مرتبہ اور اسمِ مبارک \"احمد\" 1 مرتبہ آیا ہے۔"
-          },
-          {
-                  "id": "q-qur-23",
-                  "questionText": "Which Prophet's name is mentioned the MOST number of times in the Quran?",
-                  "questionTextUrdu": "قرآن مجید میں کس نبی کا نام سب سے زیادہ مرتبہ آیا ہے؟",
-                  "questionTextHindi": "क़ुरआन में किस नबी का नाम सबसे ज़्यादा बार आया है?",
-                  "options": [
-                          "حضرت ابراہیمؑ",
-                          "حضرت موسیٰؑ",
-                          "حضرت عیسیٰؑ",
-                          "حضرت نوحؑ"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "حضرت موسیٰ علیہ السلام کا مبارک نام قرآن پاک میں 136 سے زیادہ مرتبہ ذکر ہوا ہے۔"
-          },
-          {
-                  "id": "q-qur-24",
-                  "questionText": "Which is the greatest Ayat (verse) in the Holy Quran?",
-                  "questionTextUrdu": "قرآن مجید کی سب سے عظیم اور فضیلت والی آیت کون سی ہے؟",
-                  "questionTextHindi": "क़ुरआन की सबसे अज़ीम (महान) आयत कौन सी है?",
-                  "options": [
-                          "آیت الکرسی",
-                          "آیت قطعی",
-                          "آمن الرسول",
-                          "آیت سجدہ"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "سورۃ البقرہ کی آیت نمبر 255 \"آیت الکرسی\" قرآن کی سب سے افضل آیت ہے۔"
-          },
-          {
-                  "id": "q-qur-25",
-                  "questionText": "In which Surah is Ayat-ul-Kursi located?",
-                  "questionTextUrdu": "آیت الکرسی کس سورت میں ہے؟",
-                  "questionTextHindi": "आयत-उल-कुर्सी किस सूरत में है?",
-                  "options": [
-                          "سورۃ آل عمران",
-                          "سورۃ البقرہ",
-                          "سورۃ النساء",
-                          "سورۃ المائدہ"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "آیت الکرسی سورۃ البقرہ (پارہ 3) کی آیت نمبر 255 ہے۔"
-          },
-          {
-                  "id": "q-qur-26",
-                  "questionText": "Which only woman's personal name is explicitly mentioned in the Quran?",
-                  "questionTextUrdu": "قرآن پاک میں کس واحد خاتون کا مبارک نام صراحت کے ساتھ ذکر کیا گیا ہے؟",
-                  "questionTextHindi": "क़ुरआन में किस अकेली महिला का नाम साफ़ तौर पर आया है?",
-                  "options": [
-                          "حضرت مریمؑ",
-                          "حضرت عائشہؓ",
-                          "حضرت فاطمہؓ",
-                          "حضرت خدیجہؓ"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "حضرت عیسیٰؑ کی والدہ ماجدہ \"حضرت مریم علیہا السلام\" کا مبارک نام قرآن میں آیا ہے اور ان کے نام پر پوری سورت بھی ہے۔"
-          },
-          {
-                  "id": "q-qur-27",
-                  "questionText": "Which Surah gives protection against the evil of black magic, jealousy, and whispers?",
-                  "questionTextUrdu": "کونسے سورتیں وسوسوں، حسد اور جادو سے حفاظت کے لیے پڑھی جاتی ہیں (معوذتین)؟",
-                  "questionTextHindi": "कौन सी सूरतें बुरी नज़र, जादू और वसवसों से हिफ़ाज़त के लिए पढ़ी जाती हैं?",
-                  "options": [
-                          "سورۃ الفلق اور سورۃ الناس",
-                          "سورۃ الکوثر اور سورۃ الکافرون",
-                          "سورۃ الفاتحہ اور سورۃ الاخلاص",
-                          "سورۃ الملک اور سورۃ القلم"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "سورۃ الفلق اور سورۃ الناس کو \"معوذتین\" کہا جاتا ہے، جو ہر قسم کی برائی اور حسد سے پناہ دیتی ہیں۔"
-          },
-          {
-                  "id": "q-qur-28",
-                  "questionText": "Which Surah is named after an insect (The Honey Bee)?",
-                  "questionTextUrdu": "کس سورت کا نام \"شہد کی مکھی\" کے نام پر ہے؟",
-                  "questionTextHindi": "किस सूरत का नाम \"शहद की मक्खी\" के नाम पर है?",
-                  "options": [
-                          "سورۃ النمل",
-                          "سورۃ النحل",
-                          "سورۃ العنکبوت",
-                          "سورۃ الفیل"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "عربی میں شہد کی مکھی کو \"نحل\" کہتے ہیں، اسی پر سورۃ النحل کا نام رکھا گیا ہے۔"
-          },
-          {
-                  "id": "q-qur-29",
-                  "questionText": "Which Surah is named after \"The Ant\"?",
-                  "questionTextUrdu": "کس سورت کا نام \"چیونٹی\" کے نام پر رکھا گیا ہے؟",
-                  "questionTextHindi": "किस सूरत का नाम \"चींटी\" (Ant) के नाम पर है?",
-                  "options": [
-                          "سورۃ النمل",
-                          "سورۃ النحل",
-                          "سورۃ البقرہ",
-                          "سورۃ الفیل"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "عربی میں چیونٹی کو \"نمل\" کہتے ہیں، اس سورت میں حضرت سلیمانؑ اور چیونٹی کا واقعہ موجود ہے۔"
-          },
-          {
-                  "id": "q-qur-30",
-                  "questionText": "Which Surah is named after \"The Spider\"?",
-                  "questionTextUrdu": "کس سورت کا نام \"مکڑی\" (Spider) کے نام پر ہے؟",
-                  "questionTextHindi": "किस सूरत का नाम \"मकड़ी\" के नाम पर है?",
-                  "options": [
-                          "سورۃ العنکبوت",
-                          "سورۃ النحل",
-                          "سورۃ الجاثیہ",
-                          "سورۃ الفیل"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "عربی میں مکڑی کو \"عنکبوت\" کہا جاتا ہے۔"
-          },
-          {
-                  "id": "q-qur-31",
-                  "questionText": "Which Surah is named after \"The Elephant\"?",
-                  "questionTextUrdu": "کس سورت کا نام \"ہاتھی\" کے نام پر ہے؟",
-                  "questionTextHindi": "किस सूरत का नाम \"हाथी\" के नाम पर है?",
-                  "options": [
-                          "سورۃ البقرہ",
-                          "سورۃ الفیل",
-                          "سورۃ النحل",
-                          "سورۃ الاسد"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "عربی میں ہاتھی کو \"فیل\" کہتے ہیں، اس سورت میں اصحابِ فیل (ہاتھی والوں) پر عذاب کا ذکر ہے۔"
-          },
-          {
-                  "id": "q-qur-32",
-                  "questionText": "Which Surah is named after \"The Cow\"?",
-                  "questionTextUrdu": "کس سورت کا نام \"گائے\" کے نام پر ہے؟",
-                  "questionTextHindi": "किस सूरत का नाम \"गाय\" के नाम पर है?",
-                  "options": [
-                          "سورۃ الانعام",
-                          "سورۃ البقرہ",
-                          "سورۃ النحل",
-                          "سورۃ المائدہ"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "عربی میں گائے کو \"بقرہ\" کہتے ہیں، جس میں بنی اسرائیل کے گائے ذبح کرنے کے واقعے کا بیان ہے۔"
-          },
-          {
-                  "id": "q-qur-33",
-                  "questionText": "How many Sajdahs (prostrations of recitation) are there in the Quran?",
-                  "questionTextUrdu": "قرآن پاک میں کل کتنے سجدہ تلاوت ہیں؟",
-                  "questionTextHindi": "पवित्र क़ुरआन में कुल कितने सजदा-ए-तिलावत हैं?",
-                  "options": [
-                          "10",
-                          "12",
-                          "14",
-                          "15"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "قرآن مجید میں تلاوت کے کل 14 سجدے مقرر ہیں۔"
-          },
-          {
-                  "id": "q-qur-34",
-                  "questionText": "What are the Surahs revealed in Makkah called?",
-                  "questionTextUrdu": "مکہ مکرمہ میں ہجرت سے پہلے نازل ہونے والی سورتوں کو کیا کہا جاتا ہے؟",
-                  "questionTextHindi": "मक्का में नाज़िल होने वाली सूरतों को क्या कहा जाता है?",
-                  "options": [
-                          "مدنی سورتیں",
-                          "مکی سورتیں",
-                          "کوفی سورتیں",
-                          "بصری سورتیں"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "ہجرتِ مدینہ سے پہلے مکہ مکرمہ میں نازل ہونے والی سورتوں کو \"مکی سورتیں\" کہا جاتا ہے۔"
-          },
-          {
-                  "id": "q-qur-35",
-                  "questionText": "What are the Surahs revealed in Madinah called?",
-                  "questionTextUrdu": "ہجرت کے بعد مدینہ منورہ میں نازل ہونے والی سورتوں کو کیا کہا جاتا ہے؟",
-                  "questionTextHindi": "हिजरत के बाद मदीना में नाज़िल होने वाली सूरतों को क्या कहा जाता है?",
-                  "options": [
-                          "مکی سورتیں",
-                          "مدنی سورتیں",
-                          "شامی سورتیں",
-                          "عراقی سورتیں"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "ہجرت کے بعد مدینہ منورہ کے دور میں نازل ہونے والی سورتوں کو \"مدنی سورتیں\" کہا جاتا ہے۔"
-          },
-          {
-                  "id": "q-qur-36",
-                  "questionText": "Which Surah tells the detailed story of Prophet Yusuf (AS) as the \"Best of Stories\"?",
-                  "questionTextUrdu": "کس سورت میں حضرت یوسفؑ کا واقعہ \"احسن القصص\" (سب سے بہترین قصہ) کے طور پر بیان ہوا ہے؟",
-                  "questionTextHindi": "किस सूरत में हज़रत यूसुफ़ (AS) का पूरा वाक़िआ बयान हुआ है?",
-                  "options": [
-                          "سورۃ یوسف",
-                          "سورۃ یونس",
-                          "سورۃ طہٰ",
-                          "سورۃ ہود"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "سورۃ یوسف میں حضرت یوسف علیہ السلام کی زندگی کا پورا سبق آموز قصہ تفصیل سے بیان کیا گیا ہے۔"
-          },
-          {
-                  "id": "q-qur-37",
-                  "questionText": "Which Surah is recommended to recite every Friday for special light and protection from Dajjal?",
-                  "questionTextUrdu": "جمعہ کے دن کون سی سورت پڑھنے کی خاص فضیلت اور نور کی بشارت ہے؟",
-                  "questionTextHindi": "जुमे (शुक्रवार) के दिन कौन सी सूरत पढ़ने की ख़ास फ़ज़ीलत है?",
-                  "options": [
-                          "سورۃ الکہف",
-                          "سورۃ یسین",
-                          "سورۃ الملک",
-                          "سورۃ الفتح"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "جمعہ کے دن سورۃ الکہف پڑھنے والے کے لیے دونوں جمعوں کے درمیان نور روشن رہتا ہے اور فتنہ دجال سے حفاظت رہتی ہے۔"
-          },
-          {
-                  "id": "q-qur-38",
-                  "questionText": "Which Surah discusses the companions of the cave (Ashab-e-Kahf)?",
-                  "questionTextUrdu": "\"اصحابِ کہف\" (غار والے نوجوانوں) کا ایمان افروز واقعہ کس سورت میں ہے؟",
-                  "questionTextHindi": "\"असहाब-ए-कहफ़\" (गुफ़ा वाले) का वाक़िआ किस सूरत में है?",
-                  "options": [
-                          "سورۃ مریم",
-                          "سورۃ الکہف",
-                          "سورۃ النور",
-                          "سورۃ الحج"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "سورۃ الکہف میں ان سچے مومن نوجوانوں کا ذکر ہے جو اپنے ایمان کی حفاظت کے لیے غار میں پناہ گزیں ہوئے تھے۔"
-          },
-          {
-                  "id": "q-qur-39",
-                  "questionText": "Which Surah is named after \"The Daybreak / Dawn\"?",
-                  "questionTextUrdu": "کس سورت کا مطلب \"صبح کا وقت / پو پھٹنا\" ہے؟",
-                  "questionTextHindi": "किस सूरत का मतलब \"सुबह का वक़्त / भोर\" (Dawn) है?",
-                  "options": [
-                          "سورۃ الفجر",
-                          "سورۃ الضحیٰ",
-                          "سورۃ اللیل",
-                          "سورۃ الفلق"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "سورۃ الفجر کا مطلب \"صبح کی پو / فجر کا وقت\" ہے۔"
-          },
-          {
-                  "id": "q-qur-40",
-                  "questionText": "Which Surah is named after \"The Night\"?",
-                  "questionTextUrdu": "کس سورت کا نام \"رات\" کے نام پر ہے؟",
-                  "questionTextHindi": "किस सूरत का नाम \"रात\" (The Night) के नाम पर है?",
-                  "options": [
-                          "سورۃ الفلق",
-                          "سورۃ اللیل",
-                          "سورۃ القدر",
-                          "سورۃ الشمس"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "عربی میں رات کو \"اللیل\" کہا جاتا ہے۔"
-          },
-          {
-                  "id": "q-qur-41",
-                  "questionText": "Which Surah is named after \"The Sun\"?",
-                  "questionTextUrdu": "کس سورت کا نام \"سورج\" کے نام پر ہے؟",
-                  "questionTextHindi": "किस सूरत का नाम \"سورج\" (The Sun) کے نام پر ہے؟",
-                  "options": [
-                          "سورۃ النجم",
-                          "سورۃ الشمس",
-                          "سورۃ القمر",
-                          "سورۃ الفجر"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "عربی میں سورج کو \"شمس\" کہا جاتا ہے، جس کی قسم اللہ تعالیٰ نے اس سورت میں کھائی ہے۔"
-          },
-          {
-                  "id": "q-qur-42",
-                  "questionText": "Which Surah is named after \"The Moon\"?",
-                  "questionTextUrdu": "کس سورت کا نام \"چاند\" کے نام پر ہے؟",
-                  "questionTextHindi": "किस सूरत का नाम \"चाँद\" (The Moon) کے نام پر ہے?",
-                  "options": [
-                          "سورۃ النور",
-                          "سورۃ القمر",
-                          "سورۃ النجم",
-                          "سورۃ الطارق"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "عربی میں چاند کو \"قمر\" کہا جاتا ہے، اس سورت میں شق القمر (چاند کے دو ٹکڑے ہونے) کے معجزے کا ذکر ہے۔"
-          },
-          {
-                  "id": "q-qur-43",
-                  "questionText": "Which Surah is named after \"Time / The Declining Day\"?",
-                  "questionTextUrdu": "کس سورت کا نام \"زمانہ / وقت\" کے نام پر ہے؟",
-                  "questionTextHindi": "किस सूरत का नाम \"ज़माना / वक़्त\" (Time) के نام पर है?",
-                  "options": [
-                          "سورۃ العصر",
-                          "سورۃ الدھر",
-                          "سورۃ الفجر",
-                          "سورۃ اللیل"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "سورۃ العصر میں اللہ نے زمانے اور وقت کی قسم کھا کر انسان کے خسارے اور کامیابی کے اصول بتائے ہیں۔"
-          },
-          {
-                  "id": "q-qur-44",
-                  "questionText": "Which fruit is mentioned in the very first verse of Surah At-Teen?",
-                  "questionTextUrdu": "سورۃ التین کی پہلی آیت میں کن پھلوں کی قسم کھائی گئی ہے؟",
-                  "questionTextHindi": "सूरत अत-तीन की पहली आयत में किन फलों की क़सम खाई गई है?",
-                  "options": [
-                          "انجیر اور زیتون",
-                          "کھجور اور انار",
-                          "سیب اور انگور",
-                          "کیلا اور امرود"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "وَالتِّيْنِ وَالزَّيْتُوْنِ (قسم ہے انجیر کی اور زیتون کی)۔"
-          },
-          {
-                  "id": "q-qur-45",
-                  "questionText": "In which Surah does the verse \"So which of the favors of your Lord would you deny?\" repeat 31 times?",
-                  "questionTextUrdu": "کس سورت میں \"فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ\" 31 بار دہرائی گئی ہے؟",
-                  "questionTextHindi": "किस सूरत में \"तुम अपने रब की कौन-कौन सी नेमतों को झुठलाओगे?\" 31 बार आया है?",
-                  "options": [
-                          "سورۃ الواقعہ",
-                          "سورۃ الرحمٰن",
-                          "سورۃ الملک",
-                          "سورۃ المزمل"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "سورۃ الرحمٰن میں اللہ تعالیٰ نے جن و انس کو اپنی بے شمار نعمتیں یاد دلاتے ہوئے یہ آیت 31 مرتبہ فرمائی ہے۔"
-          },
-          {
-                  "id": "q-qur-46",
-                  "questionText": "Which Surah discusses the Night of Decree (Laylat-ul-Qadr) and angels descending?",
-                  "questionTextUrdu": "لیلۃ القدر اور فرشتوں کے نزول کی عظمت کس سورت میں بیان کی گئی ہے؟",
-                  "questionTextHindi": "शब-ए-क़द्र की रात की अज़मत किस सूरत में बयान की गई है?",
-                  "options": [
-                          "سورۃ القدر",
-                          "سورۃ الفجر",
-                          "سورۃ الکوثر",
-                          "سورۃ الاخلاص"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "سورۃ القدر میں فرمایا گیا ہے کہ لیلۃ القدر کی رات ہزار مہینوں سے افضل ہے۔"
-          },
-          {
-                  "id": "q-qur-47",
-                  "questionText": "How many verses (Ayahs) are there in Surah Al-Fatiha?",
-                  "questionTextUrdu": "سورۃ الفاتحہ میں کل کتنی آیات ہیں؟",
-                  "questionTextHindi": "सूरह अल-फ़ातिहा में कुल कितनी आयतें हैं?",
-                  "options": [
-                          "5",
-                          "6",
-                          "7",
-                          "8"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "سورۃ الفاتحہ میں بسم اللہ سمیت 7 آیات ہیں، اسی لیے اسے \"السبع المثانی\" بھی کہتے ہیں۔"
-          },
-          {
-                  "id": "q-qur-48",
-                  "questionText": "Which Surah is named after \"Iron\"?",
-                  "questionTextUrdu": "کس سورت کا نام \"لوہا\" (Iron) کے نام پر ہے؟",
-                  "questionTextHindi": "किस सूरत का नाम \"लोहा\" (Iron) के नाम पर है?",
-                  "options": [
-                          "سورۃ النحاس",
-                          "سورۃ الحدید",
-                          "سورۃ الذہب",
-                          "سورۃ الفضہ"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "عربی میں لوہے کو \"حدید\" کہتے ہیں، اس سورت میں اللہ نے لوہے کی طاقت اور فوائد کا ذکر فرمایا ہے۔"
-          },
-          {
-                  "id": "q-qur-49",
-                  "questionText": "Who gathered and compiled the Quran into one standard single Mus-haf book copy for the Ummah?",
-                  "questionTextUrdu": "تمام مسلمانوں کے لیے ایک ہی مصحف (قرآن کے معیاری نسخے) پر جمع فرمانے والے خلیفہ کون ہیں؟",
-                  "questionTextHindi": "क़ुरआन को एक मुसहफ़ (किताब) की शक्ल में जमा करने वाले ख़लीफ़ा कौन हैं?",
-                  "options": [
-                          "حضرت ابوبکر صدیقؓ اور حضرت عثمان غنیؓ",
-                          "حضرت علی المرتضیٰؓ",
-                          "حضرت عمر فاروقؓ",
-                          "حضرت خالد بن ولیدؓ"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "حضرت ابوبکرؓ نے سب سے پہلے ایک کتابی شکل میں جمع کرایا اور حضرت عثمان غنیؓ نے امت کو ایک معیاری مصحف پر متحد فرمایا (جامع القرآن)۔"
-          },
-          {
-                  "id": "q-qur-50",
-                  "questionText": "Which Surah is named after \"The Star\"?",
-                  "questionTextUrdu": "کس سورت کا مطلب \"ستارہ\" ہے؟",
-                  "questionTextHindi": "किस सूरत का मतलब \"तारा\" (Star) है?",
-                  "options": [
-                          "سورۃ النجم",
-                          "سورۃ الفجر",
-                          "سورۃ الشمس",
-                          "سورۃ القمر"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "عربی زبان میں تارے (ستارے) کو \"نجم\" کہا جاتا ہے۔"
-          }
-        ]
+      "id": "surah-89",
+      "number": 89,
+      "nameArabic": "سُورَةُ الْفَجْر",
+      "nameEnglish": "Al-Fajr",
+      "nameUrdu": "سورۃ الفجر",
+      "meaningEnglish": "The Dawn",
+      "versesCount": 30,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3",
+      "order": 4,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَالْفَجْرِ",
+          "textUrdu": "قسم ہے فجر کے وقت کی!",
+          "textEnglish": "By the dawn",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَلَيَالٍ عَشْرٍ",
+          "textUrdu": "اور دس راتوں کی!",
+          "textEnglish": "And [by] ten nights",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَالشَّفْعِ وَالْوَتْرِ",
+          "textUrdu": "اور جفت اور طاق کی!",
+          "textEnglish": "And [by] the even and the odd",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَاللَّيْلِ إِذَا يَسْرِ",
+          "textUrdu": "اور رات کی جب وہ رخصت ہونے لگے!",
+          "textEnglish": "And [by] the night when it passes,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "هَلْ فِي ذَٰلِكَ قَسَمٌ لِّذِي حِجْرٍ",
+          "textUrdu": "کیا اس میں عقل مند کے لیے بڑی قسم ہے؟",
+          "textEnglish": "Is there [not] in [all] that an oath to possessor of reason?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِعَادٍ",
+          "textUrdu": "کیا آپ نے نہیں دیکھا کہ آپ کے رب نے قومِ عاد کے ساتھ کیا کیا؟",
+          "textEnglish": "Have you not considered how your Lord dealt with 'Aad -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "إِرَمَ ذَاتِ الْعِمَادِ",
+          "textUrdu": "ارم کے ساتھ جو بڑے ستونوں والے تھے،",
+          "textEnglish": "With Iram - who had lofty pillars,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "الَّتِي لَمْ يُخْلَقْ مِثْلُهَا فِي الْبِلَادِ",
+          "textUrdu": "جن کی مانند دنیا بھر کے شہروں میں پیدا نہیں کیا گیا تھا،",
+          "textEnglish": "The likes of whom had never been created in the land?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "وَثَمُودَ الَّذِينَ جَابُوا الصَّخْرَ بِالْوَادِ",
+          "textUrdu": "اور ثمود کے ساتھ جنہوں نے وادی میں چٹانوں کو تراشا تھا؟",
+          "textEnglish": "And [with] Thamud, who carved out the rocks in the valley?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "وَفِرْعَوْنَ ذِي الْأَوْتَادِ",
+          "textUrdu": "اور میخوں والے فرعون کے ساتھ؟",
+          "textEnglish": "And [with] Pharaoh, owner of the stakes? -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "الَّذِينَ طَغَوْا فِي الْبِلَادِ",
+          "textUrdu": "جنہوں نے شہروں میں سرکشی مچائی تھی،",
+          "textEnglish": "[All of] whom oppressed within the lands",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 12,
+          "textArabic": "فَأَكْثَرُوا فِيهَا الْفَسَادَ",
+          "textUrdu": "اور ان میں بہت فساد پھیلایا تھا،",
+          "textEnglish": "And caused therein much corruption.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 13,
+          "textArabic": "فَصَبَّ عَلَيْهِمْ رَبُّكَ سَوْطَ عَذَابٍ",
+          "textUrdu": "پس آپ کے رب نے ان پر عذاب کا کوڑا برسایا۔",
+          "textEnglish": "So your Lord poured upon them a scourge of punishment.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 14,
+          "textArabic": "إِنَّ رَبَّكَ لَبِالْمِرْصَادِ",
+          "textUrdu": "بے شک آپ کا رب گھات میں ہے۔",
+          "textEnglish": "Indeed, your Lord is in observation.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 15,
+          "textArabic": "فَأَمَّا الْإِنسَانُ إِذَا مَا ابْتَلَاهُ رَبُّهُ فَأَكْرَمَهُ وَنَعَّمَهُ فَيَقُولُ رَبِّي أَكْرَمَنِ",
+          "textUrdu": "انسان کا یہ حال ہے کہ جب اس کا رب اسے آزماتا ہے اور عزت اور نعمت دیتا ہے تو کہتا ہے کہ میرے رب نے مجھے عزت بخشی۔",
+          "textEnglish": "Now, as for man, when his Lord tests him and [thus] is generous to him and favors him, he says, \"My Lord has honored me.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 16,
+          "textArabic": "وَأَمَّا إِذَا مَا ابْتَلَاهُ فَقَدَرَ عَلَيْهِ رِزْقَهُ فَيَقُولُ رَبِّي أَهَانَنِ",
+          "textUrdu": "اور جب آزماتا ہے اور اس کا رزق تنگ کر دیتا ہے تو کہتا ہے کہ میرے رب نے مجھے ذلیل کر دیا۔",
+          "textEnglish": "But when He tests him and restricts his provision, he says, \"My Lord has humiliated me.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 17,
+          "textArabic": "كَلَّا ۖ بَل لَّا تُكْرِمُونَ الْيَتِيمَ",
+          "textUrdu": "ہرگز نہیں! بلکہ تم لوگ یتیم کی عزت نہیں کرتے،",
+          "textEnglish": "No! But you do not honor the orphan",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 18,
+          "textArabic": "وَلَا تَحَاضُّونَ عَلَىٰ طَعَامِ الْمِسْكِينِ",
+          "textUrdu": "اور مسکین کو کھانا کھلانے کی ایک دوسرے کو ترغیب نہیں دیتے،",
+          "textEnglish": "And you do not encourage one another to feed the poor.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 19,
+          "textArabic": "وَتَأْكُلُونَ التُّرَاثَ أَكْلًا لَّمًّا",
+          "textUrdu": "اور وراثت کا سارا مال سمیٹ کر کھا جاتے ہو،",
+          "textEnglish": "And you consume inheritance, devouring [it] altogether,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 20,
+          "textArabic": "وَتُحِبُّونَ الْمَالَ حُبًّا جَمًّا",
+          "textUrdu": "اور مال سے دل کھول کر حد درجہ محبت رکھتے ہو۔",
+          "textEnglish": "And you love wealth with immense love.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 21,
+          "textArabic": "كَلَّا إِذَا دُكَّتِ الْأَرْضُ دَكًّا دَكًّا",
+          "textUrdu": "ہرگز نہیں! جب زمین کوٹ کوٹ کر ریزہ ریزہ کر دی جائے گی،",
+          "textEnglish": "No! When the earth has been leveled-pounded and crushed -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 22,
+          "textArabic": "وَجَاءَ رَبُّكَ وَالْمَلَكُ صَفًّا صَفًّا",
+          "textUrdu": "اور آپ کے رب کا حکم آئے گا اور فرشتے صف در صف آئیں گے،",
+          "textEnglish": "And your Lord has come and the angels, rank upon rank,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 23,
+          "textArabic": "وَجِيءَ يَوْمَئِذٍ بِجَهَنَّمَ ۚ يَوْمَئِذٍ يَتَذَكَّرُ الْإِنسَانُ وَأَنَّىٰ لَهُ الذِّكْرَىٰ",
+          "textUrdu": "اور اس دن جہنم سامنے لائی جائے گی، اس دن انسان سمجھے گا مگر اب سمجھنے کا کیا فائدہ؟",
+          "textEnglish": "And brought [within view], that Day, is Hell - that Day, man will remember, but how will that remembrance be [sufficient] for him?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 24,
+          "textArabic": "يَقُولُ يَا لَيْتَنِي قَدَّمْتُ لِحَيَاتِي",
+          "textUrdu": "وہ کہے گا: کاش میں نے اپنی اس اصل زندگی کے لیے کچھ آگے بھیجا ہوتا!",
+          "textEnglish": "He will say, \"Oh, I wish I had sent ahead [some good] for my life.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 25,
+          "textArabic": "فَيَوْمَئِذٍ لَّا يُعَذِّبُ عَذَابَهُ أَحَدٌ",
+          "textUrdu": "پس اس دن اللہ کے عذاب جیسا عذاب کوئی نہیں دے گا،",
+          "textEnglish": "So on that Day, none will punish as His punishment,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 26,
+          "textArabic": "وَلَا يُوثِقُ وَثَاقَهُ أَحَدٌ",
+          "textUrdu": "اور نہ اس کے جکڑنے جیسا کوئی جکڑے گا۔",
+          "textEnglish": "And none will bind as His binding.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 27,
+          "textArabic": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ",
+          "textUrdu": "اے مطمئن جان!",
+          "textEnglish": "[To the righteous it will be said], \"O reassured soul,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 28,
+          "textArabic": "ارْجِعِي إِلَىٰ رَبِّكِ رَاضِيَةً مَّرْضِيَّةً",
+          "textUrdu": "اپنے رب کی طرف لوٹ چلو، اس حال میں کہ تو اس سے راضی وہ تجھ سے راضی!",
+          "textEnglish": "Return to your Lord, well-pleased and pleasing [to Him],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 29,
+          "textArabic": "فَادْخُلِي فِي عِبَادِي",
+          "textUrdu": "پس میرے نیک بندوں میں شامل ہو جا،",
+          "textEnglish": "And enter among My [righteous] servants",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 30,
+          "textArabic": "وَادْخُلِي جَنَّتِي",
+          "textUrdu": "اور میری جنت میں داخل ہو جا!",
+          "textEnglish": "And enter My Paradise.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        }
+      ]
     },
     {
-      id: 'quiz-islamic',
-      title: 'Islamic Studies & Kalimas Quiz',
-      category: 'islamic',
-      subsection: 'Faith & Prayers',
-      iconName: 'Star',
-      difficulty: 'beginner',
-      isPublished: true,
-      order: 6,
-      questions: [
-          {
-                  "id": "q-isl-1",
-                  "questionText": "How many pillars of Islam are there?",
-                  "questionTextUrdu": "اسلام کے کتنے بنیادی ارکان ہیں؟",
-                  "questionTextHindi": "इस्लाम के कितने बुनियादी अरकान (स्तंभ) हैं?",
-                  "options": [
-                          "3",
-                          "4",
-                          "5",
-                          "6"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "اسلام کے 5 ارکان ہیں: کلمہ، نماز، روزہ، زکوٰۃ، اور حج۔"
-          },
-          {
-                  "id": "q-isl-2",
-                  "questionText": "Who is the last Prophet of Allah?",
-                  "questionTextUrdu": "اللہ کے آخری نبی کون ہیں؟",
-                  "questionTextHindi": "अल्लाह के आखिरी नबी कौन हैं?",
-                  "options": [
-                          "حضرت عیسیٰؑ",
-                          "حضرت موسیٰؑ",
-                          "حضرت ابراہیمؑ",
-                          "حضرت محمدﷺ"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "حضرت محمدﷺ اللہ کے آخری نبی اور رسول ہیں، ان کے بعد کوئی نبی نہیں آئے گا۔"
-          },
-          {
-                  "id": "q-isl-3",
-                  "questionText": "How many obligatory prayers are there in a day?",
-                  "questionTextUrdu": "ایک دن میں کتنی نمازیں فرض ہیں؟",
-                  "questionTextHindi": "एक दिन में कितनी नमाज़ें फ़र्ज़ हैं?",
-                  "options": [
-                          "3",
-                          "5",
-                          "7",
-                          "4"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "ہر مسلمان پر دن رات میں 5 نمازیں فرض ہیں (فجر، ظہر، عصر، مغرب، عشاء)۔"
-          },
-          {
-                  "id": "q-isl-4",
-                  "questionText": "In which month do Muslims fast?",
-                  "questionTextUrdu": "مسلمان کس مہینے میں روزے رکھتے ہیں؟",
-                  "questionTextHindi": "मुसलमान किस महीने में रोज़े रखते हैं?",
-                  "options": [
-                          "محرم",
-                          "رجب",
-                          "شعبان",
-                          "رمضان"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "رمضان المبارک کے پورے مہینے میں روزے رکھنا مسلمانوں پر فرض ہے۔"
-          },
-          {
-                  "id": "q-isl-5",
-                  "questionText": "Where is the Holy Kaaba located?",
-                  "questionTextUrdu": "خانہ کعبہ کس شہر میں واقع ہے؟",
-                  "questionTextHindi": "खाना काबा किस शहर में स्थित है?",
-                  "options": [
-                          "مدینہ",
-                          "مکہ",
-                          "یروشلم",
-                          "بغداد"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "مسلمانوں کا مقدس ترین گھر خانہ کعبہ سعودی عرب کے شہر مکہ مکرمہ میں ہے۔"
-          },
-          {
-                  "id": "q-isl-6",
-                  "questionText": "What is the name of the morning prayer?",
-                  "questionTextUrdu": "صبح کی نماز کا کیا نام ہے؟",
-                  "questionTextHindi": "सुबह की नमाज़ का क्या नाम है?",
-                  "options": [
-                          "فجر",
-                          "ظہر",
-                          "عصر",
-                          "مغرب"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "سورج نکلنے سے پہلے جو نماز پڑھی جاتی ہے اسے فجر کہتے ہیں۔"
-          },
-          {
-                  "id": "q-isl-7",
-                  "questionText": "Which Angel brought revelations (Wahy) to the Prophets?",
-                  "questionTextUrdu": "کون سے فرشتہ انبیاء کرام پر وحی لے کر آتے تھے؟",
-                  "questionTextHindi": "कौन से फ़रिश्ते अम्बिया-ए-किराम पर वही लेकर आते थे?",
-                  "options": [
-                          "حضرت میکائیلؑ",
-                          "حضرت اسرافیلؑ",
-                          "حضرت جبرائیلؑ",
-                          "حضرت عزرائیلؑ"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "اللہ کا پیغام (وحی) انبیاء تک پہنچانے کی ذمہ داری حضرت جبرائیلؑ کی تھی۔"
-          },
-          {
-                  "id": "q-isl-8",
-                  "questionText": "Who was the first human and first Prophet?",
-                  "questionTextUrdu": "دنیا کے سب سے پہلے انسان اور پہلے نبی کون تھے؟",
-                  "questionTextHindi": "दुनिया के सबसे पहले इंसान और पहले नबी कौन थे?",
-                  "options": [
-                          "حضرت نوحؑ",
-                          "حضرت آدمؑ",
-                          "حضرت ادریسؑ",
-                          "حضرت شیثؑ"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "اللہ تعالیٰ نے سب سے پہلے حضرت آدم علیہ السلام کو پیدا فرمایا۔"
-          },
-          {
-                  "id": "q-isl-9",
-                  "questionText": "What is the first month of the Islamic calendar?",
-                  "questionTextUrdu": "اسلامی (ہجری) کیلنڈر کا پہلا مہینہ کون سا ہے؟",
-                  "questionTextHindi": "इस्लामी (हिजरी) कैलेंडर का पहला महीना कौन सा है?",
-                  "options": [
-                          "صفر",
-                          "محرم",
-                          "شوال",
-                          "ربیع الاول"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "اسلامی سال کا آغاز محرم الحرام کے مہینے سے ہوتا ہے۔"
-          },
-          {
-                  "id": "q-isl-10",
-                  "questionText": "Which Holy Book was revealed to Prophet Musa (AS)?",
-                  "questionTextUrdu": "حضرت موسیٰؑ پر کون سی آسمانی کتاب نازل ہوئی؟",
-                  "questionTextHindi": "हज़रत मूसा (AS) पर कौन सी आसमानी किताब नाज़िल हुई?",
-                  "options": [
-                          "زبور",
-                          "تورات",
-                          "انجیل",
-                          "قرآن مجید"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "اللہ تعالیٰ نے حضرت موسیٰ علیہ السلام پر 'تورات' نازل فرمائی۔"
-          },
-          {
-                  "id": "q-isl-11",
-                  "questionText": "Which Holy Book was revealed to Prophet Isa (AS)?",
-                  "questionTextUrdu": "حضرت عیسیٰؑ پر کون سی آسمانی کتاب نازل ہوئی؟",
-                  "questionTextHindi": "हज़रत ईसा (AS) पर कौन सी आसमानी किताब नाज़िल हुई?",
-                  "options": [
-                          "انجیل",
-                          "تورات",
-                          "زبور",
-                          "قرآن مجید"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "اللہ تعالیٰ نے حضرت عیسیٰ علیہ السلام پر 'انجیل' نازل فرمائی۔"
-          },
-          {
-                  "id": "q-isl-12",
-                  "questionText": "How many names of Allah (Asma-ul-Husna) are commonly known?",
-                  "questionTextUrdu": "اللہ تعالیٰ کے کتنے صفاتی نام مشہور ہیں؟",
-                  "questionTextHindi": "अल्लाह तआला के कितने सिफ़ाती नाम (अस्मा-उल-हुस्ना) मशहूर हैं?",
-                  "options": [
-                          "50",
-                          "70",
-                          "99",
-                          "100"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "اللہ تعالیٰ کے 99 خوبصورت نام ہیں جنہیں اسماء الحسنیٰ کہا جاتا ہے۔"
-          },
-          {
-                  "id": "q-isl-13",
-                  "questionText": "What is the call to prayer called?",
-                  "questionTextUrdu": "نماز کے لیے بلانے کی آواز کو کیا کہتے ہیں؟",
-                  "questionTextHindi": "नमाज़ के लिए बुलाने की आवाज़ को क्या कहते हैं?",
-                  "options": [
-                          "اقامت",
-                          "تکبیر",
-                          "اذان",
-                          "خطبہ"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "مسلمانوں کو مسجد میں نماز کے لیے بلانے کے عمل کو اذان کہتے ہیں۔"
-          },
-          {
-                  "id": "q-isl-14",
-                  "questionText": "Who was the first Caliph of Islam?",
-                  "questionTextUrdu": "اسلام کے پہلے خلیفہ کون تھے؟",
-                  "questionTextHindi": "इस्लाम के पहले खलीफा कौन थे?",
-                  "options": [
-                          "حضرت عمرؓ",
-                          "حضرت علیؓ",
-                          "حضرت عثمانؓ",
-                          "حضرت ابوبکرؓ"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "نبی کریمﷺ کے وصال کے بعد حضرت ابوبکر صدیقؓ مسلمانوں کے پہلے خلیفہ بنے۔"
-          },
-          {
-                  "id": "q-isl-15",
-                  "questionText": "What is washing before prayer called?",
-                  "questionTextUrdu": "نماز سے پہلے پاک ہونے کے عمل کو کیا کہتے ہیں؟",
-                  "questionTextHindi": "नमाज़ से पहले पाक होने के अमल को क्या कहते हैं?",
-                  "options": [
-                          "غسل",
-                          "وضو",
-                          "تیمم",
-                          "طہارت"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "نماز پڑھنے سے پہلے ہاتھ، منہ، سر اور پاؤں دھونے کو وضو کہا جاتا ہے۔"
-          },
-          {
-                  "id": "q-isl-16",
-                  "questionText": "What was the name of Prophet Muhammad's (PBUH) mother?",
-                  "questionTextUrdu": "نبی کریمﷺ کی والدہ ماجدہ کا کیا نام تھا؟",
-                  "questionTextHindi": "नबी करीम (PBUH) की वालिदा माजिदा का क्या नाम था?",
-                  "options": [
-                          "حضرت حلیمہ سعدیہؓ",
-                          "حضرت آمنہؓ",
-                          "حضرت خدیجہؓ",
-                          "حضرت فاطمہؓ"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "آپﷺ کی والدہ کا نام حضرت آمنہ رضی اللہ عنہا تھا۔"
-          },
-          {
-                  "id": "q-isl-17",
-                  "questionText": "What was the name of Prophet Muhammad's (PBUH) father?",
-                  "questionTextUrdu": "نبی کریمﷺ کے والد محترم کا کیا نام تھا؟",
-                  "questionTextHindi": "नबी करीम (PBUH) के वालिद मोहतरम का क्या नाम था?",
-                  "options": [
-                          "حضرت عبدالمطلب",
-                          "حضرت ابوطالب",
-                          "حضرت عبداللہ",
-                          "حضرت حمزہؓ"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "آپﷺ کے والد محترم کا نام حضرت عبداللہ تھا۔"
-          },
-          {
-                  "id": "q-isl-18",
-                  "questionText": "Which festival comes immediately after Ramadan?",
-                  "questionTextUrdu": "رمضان کے فوراً بعد کون سا تہوار آتا ہے؟",
-                  "questionTextHindi": "रमज़ान के फौरन बाद कौन सा त्यौहार आता है?",
-                  "options": [
-                          "عید الاضحیٰ",
-                          "شبِ برأت",
-                          "عید الفطر",
-                          "شبِ معراج"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "رمضان کے روزے مکمل ہونے کی خوشی میں یکم شوال کو عید الفطر منائی جاتی ہے۔"
-          },
-          {
-                  "id": "q-isl-19",
-                  "questionText": "What is the direction Muslims face while praying?",
-                  "questionTextUrdu": "مسلمان نماز پڑھتے وقت کس طرف منہ کرتے ہیں؟",
-                  "questionTextHindi": "मुसलमान नमाज़ पढ़ते वक़्त किस तरफ रुख़ करते हैं?",
-                  "options": [
-                          "مسجدِ نبوی",
-                          "قبلہ (خانہ کعبہ)",
-                          "مسجدِ اقصیٰ",
-                          "سورج کی طرف"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "مسلمان مکہ میں موجود خانہ کعبہ کی طرف رخ کر کے نماز پڑھتے ہیں، جسے قبلہ کہتے ہیں۔"
-          },
-          {
-                  "id": "q-isl-20",
-                  "questionText": "Giving a fixed portion of wealth to the poor is called?",
-                  "questionTextUrdu": "مال داروں پر غریبوں کا جو حق مقرر ہے، اسے کیا کہتے ہیں؟",
-                  "questionTextHindi": "मालदारों पर गरीबों का जो हक़ मुक़र्रर है, उसे क्या कहते हैं?",
-                  "options": [
-                          "زکوٰۃ",
-                          "صدقہ",
-                          "فطرانہ",
-                          "ہدیہ"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "ہر صاحبِ نصاب مسلمان پر سال میں ایک بار اپنے مال کا 2.5٪ غریبوں کو دینا فرض ہے جسے زکوٰۃ کہتے ہیں۔"
-          },
-          {
-                  "id": "q-isl-21",
-                  "questionText": "Who was the second Caliph of Islam?",
-                  "questionTextUrdu": "اسلام کے دوسرے خلیفہ کون تھے؟",
-                  "questionTextHindi": "इस्लाम के दूसरे खलीफा कौन थे?",
-                  "options": [
-                          "حضرت علیؓ",
-                          "حضرت عثمانؓ",
-                          "حضرت ابوبکرؓ",
-                          "حضرت عمرؓ"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "حضرت عمر فاروق رضی اللہ عنہ مسلمانوں کے دوسرے خلیفہ تھے۔"
-          },
-          {
-                  "id": "q-isl-22",
-                  "questionText": "In which city is the Prophet's Mosque (Masjid-e-Nabawi) located?",
-                  "questionTextUrdu": "مسجدِ نبوی کس شہر میں واقع ہے؟",
-                  "questionTextHindi": "मस्जिद-ए-नबवी किस शहर में स्थित है?",
-                  "options": [
-                          "طائف",
-                          "مکہ",
-                          "مدینہ",
-                          "جدہ"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "مسجدِ نبوی اور نبی کریمﷺ کا روضہ مبارک مدینہ منورہ میں ہے۔"
-          },
-          {
-                  "id": "q-isl-23",
-                  "questionText": "Who was the first wife of Prophet Muhammad (PBUH)?",
-                  "questionTextUrdu": "نبی کریمﷺ کی پہلی زوجہ محترمہ کون تھیں؟",
-                  "questionTextHindi": "नबी करीम (PBUH) की पहली ज़ौजा (पत्नी) कौन थीं?",
-                  "options": [
-                          "حضرت عائشہؓ",
-                          "حضرت خدیجہؓ",
-                          "حضرت زینبؓ",
-                          "حضرت حفصہؓ"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "حضرت خدیجہ رضی اللہ عنہا آپﷺ کی پہلی بیوی تھیں اور عورتوں میں سب سے پہلے ایمان لائیں۔"
-          },
-          {
-                  "id": "q-isl-24",
-                  "questionText": "What is the prayer offered after sunset called?",
-                  "questionTextUrdu": "سورج غروب ہونے کے بعد کون سی نماز پڑھی جاتی ہے؟",
-                  "questionTextHindi": "सूरज डूबने के बाद कौन सी नमाज़ पढ़ी जाती है?",
-                  "options": [
-                          "عصر",
-                          "عشاء",
-                          "مغرب",
-                          "تہجد"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "سورج کے ڈوبتے ہی مغرب کی نماز کا وقت شروع ہو جاتا ہے۔"
-          },
-          {
-                  "id": "q-isl-25",
-                  "questionText": "The festival of sacrifice is associated with which Prophet?",
-                  "questionTextUrdu": "عید الاضحیٰ (قربانی والی عید) کس نبی کی سنت ہے؟",
-                  "questionTextHindi": "ईद-उल-अज़हा (क़ुरबानी की ईद) किस नबी की सुन्नत है?",
-                  "options": [
-                          "حضرت اسماعیلؑ",
-                          "حضرت ابراہیمؑ",
-                          "حضرت موسیٰؑ",
-                          "حضرت عیسیٰؑ"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "ہم حضرت ابراہیم علیہ السلام اور حضرت اسماعیل علیہ السلام کی قربانی کی یاد میں عید الاضحیٰ مناتے ہیں۔"
-          },
-          {
-                  "id": "q-isl-26",
-                  "questionText": "What is the meaning of the word \"Islam\"?",
-                  "questionTextUrdu": "لفظ \"اسلام\" کا کیا مطلب ہے؟",
-                  "questionTextHindi": "शब्द \"इस्लाम\" का क्या अर्थ है?",
-                  "options": [
-                          "शांति (Peace) और अल्लाह की आज्ञा मानना",
-                          "युद्ध (War)",
-                          "प्रकाश (Light)",
-                          "ज्ञान (Knowledge)"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "इस्लाम का मतलब है अल्लाह की मर्ज़ी के आगे सिर झुकाना और शांति फैलाना।"
-          },
-          {
-                  "id": "q-isl-27",
-                  "questionText": "What is the 12th and final month of the Islamic calendar?",
-                  "questionTextUrdu": "اسلامی کیلنڈر کا 12واں اور آخری مہینہ کون سا ہے؟",
-                  "questionTextHindi": "इस्लामी कैलेंडर का 12वाँ और आखिरी महीना कौन सा है?",
-                  "options": [
-                          "मुहर्रम",
-                          "रमज़ान",
-                          "शव्वाल",
-                          "ज़ुल-हिज्जा (ज़िलहज)"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "ज़ुल-हिज्जा इस्लामी साल का आखिरी महीना है, इसी महीने में हज किया जाता है।"
-          },
-          {
-                  "id": "q-isl-28",
-                  "questionText": "How many times do Muslims walk around the Kaaba during Tawaf?",
-                  "questionTextUrdu": "طواف کے دوران کعبہ کے کتنے چکر لگائے جاتے ہیں؟",
-                  "questionTextHindi": "तवाफ़ के दौरान काबा के कितने चक्कर लगाए जाते हैं?",
-                  "options": [
-                          "3",
-                          "5",
-                          "7",
-                          "10"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "उमरा या हज के दौरान काबा के 7 चक्कर लगाने को तवाफ़ कहते हैं।"
-          },
-          {
-                  "id": "q-isl-29",
-                  "questionText": "Which prayer has no Adhan and no Iqamah?",
-                  "questionTextUrdu": "وہ کون سی نماز ہے جس کی کوئی اذان اور اقامت نہیں ہوتی؟",
-                  "questionTextHindi": "वह कौन सी नमाज़ है जिसकी कोई अज़ान और इकामत नहीं होती?",
-                  "options": [
-                          "फ़ज़र की नमाज़",
-                          "जुमे की नमाज़",
-                          "जनाज़े की नमाज़",
-                          "असर की नमाज़"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "नमाज़-ए-जनाज़ा (Funeral Prayer) के लिए अज़ान नहीं दी जाती।"
-          },
-          {
-                  "id": "q-isl-30",
-                  "questionText": "Who was the third Caliph of Islam?",
-                  "questionTextUrdu": "اسلام کے تیسرے خلیفہ کون تھے؟",
-                  "questionTextHindi": "इस्लाम के तीसरे खलीफा कौन थे?",
-                  "options": [
-                          "हज़रत अली (RA)",
-                          "हज़रत उस्मान (RA)",
-                          "हज़रत अबू बक्र (RA)",
-                          "हज़रत उमर (RA)"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "हज़रत उस्मान गनी (रज़ि.) इस्लाम के तीसरे खलीफा थे।"
-          },
-          {
-                  "id": "q-isl-31",
-                  "questionText": "Who was the fourth Caliph of Islam?",
-                  "questionTextUrdu": "اسلام کے چوتھے خلیفہ کون تھے؟",
-                  "questionTextHindi": "इस्लाम के चौथे खलीफा कौन थे?",
-                  "options": [
-                          "हज़रत हसन (RA)",
-                          "हज़रत हुसैन (RA)",
-                          "हज़रत मुआविया (RA)",
-                          "हज़रत अली (RA)"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "हज़रत अली (रज़ि.) इस्लाम के चौथे खलीफा थे।"
-          },
-          {
-                  "id": "q-isl-32",
-                  "questionText": "What is the night prayer called?",
-                  "questionTextUrdu": "رات کی آخری نماز کا کیا نام ہے؟",
-                  "questionTextHindi": "रात की सबसे आखिरी नमाज़ कौन सी है?",
-                  "options": [
-                          "इशा (Isha)",
-                          "मग़रिब (Maghrib)",
-                          "ज़ुहर (Zuhr)",
-                          "असर (Asr)"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "रात के समय पढ़ी जाने वाली 5वीं और आखिरी फ़र्ज़ नमाज़ इशा है।"
-          },
-          {
-                  "id": "q-isl-33",
-                  "questionText": "Which Angel is responsible for blowing the trumpet on the Day of Judgment?",
-                  "questionTextUrdu": "قیامت کے دن صور پھونکنے کی ذمہ داری کس فرشتے کی ہے؟",
-                  "questionTextHindi": "क़यामत के दिन शंख (सूर) फूंकने की ज़िम्मेदारी किस फरिश्ते की है?",
-                  "options": [
-                          "हज़रत जिब्रील (AS)",
-                          "हज़रत इसराफ़ील (AS)",
-                          "हज़रत मीकाईल (AS)",
-                          "हज़रत इज़राईल (AS)"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "हज़रत इसराफ़ील (AS) क़यामत के दिन सूर (trumpet) फूकेंगे जिससे दुनिया खत्म हो जाएगी।"
-          },
-          {
-                  "id": "q-isl-34",
-                  "questionText": "What is the Angel of Death called?",
-                  "questionTextUrdu": "موت کے فرشتے (روح قبض کرنے والے فرشتے) کا نام کیا ہے؟",
-                  "questionTextHindi": "मौत के फरिश्ते (रूह निकालने वाले फरिश्ते) का क्या नाम है?",
-                  "options": [
-                          "हज़रत मीकाईल (AS)",
-                          "हज़रत इज़राईल (AS)",
-                          "हज़रत रिज़वान (AS)",
-                          "हज़रत मालिक (AS)"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "हज़रत इज़राईल (AS) को मलकुल मौत (मौत का फरिश्ता) कहा जाता है।"
-          },
-          {
-                  "id": "q-isl-35",
-                  "questionText": "What is the prayer called which is read only in Ramadan after Isha?",
-                  "questionTextUrdu": "رمضان میں عشاء کے بعد پڑھی جانے والی خاص نماز کو کیا کہتے ہیں؟",
-                  "questionTextHindi": "रमज़ान में इशा के बाद पढ़ी जाने वाली विशेष नमाज़ को क्या कहते हैं?",
-                  "options": [
-                          "तरावीह (Tarawih)",
-                          "तहज्जुद (Tahajjud)",
-                          "इशराक़ (Ishraq)",
-                          "चाश्त (Chasht)"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "रमज़ान के महीने में इशा की नमाज़ के बाद तरावीह पढ़ी जाती है जिसमें क़ुरआन सुना जाता है।"
-          },
-          {
-                  "id": "q-isl-36",
-                  "questionText": "Which holy book was revealed to Prophet Dawud (AS)?",
-                  "questionTextUrdu": "حضرت داؤدؑ پر کون سی کتاب نازل ہوئی؟",
-                  "questionTextHindi": "हज़रत दाऊद (AS) पर कौन सी किताब नाज़िल हुई?",
-                  "options": [
-                          "क़ुरआन",
-                          "ज़बूर (Psalms)",
-                          "तौरात",
-                          "इंजील"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "अल्लाह ने हज़रत दाऊद (AS) पर 'ज़बूर' नाज़िल फ़रमाई थी।"
-          },
-          {
-                  "id": "q-isl-37",
-                  "questionText": "What is the person who calls the Adhan called?",
-                  "questionTextUrdu": "اذان دینے والے شخص کو کیا کہتے ہیں؟",
-                  "questionTextHindi": "अज़ान देने वाले व्यक्ति को क्या कहा जाता है?",
-                  "options": [
-                          "इमाम (Imam)",
-                          "मुअज़्ज़िन (Mu'azzin)",
-                          "हाफ़िज़ (Hafiz)",
-                          "मौलवी (Maulvi)"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "जो व्यक्ति नमाज़ के लिए मस्जिद से आवाज़ (अज़ान) देता है, उसे मुअज़्ज़िन कहते हैं।"
-          },
-          {
-                  "id": "q-isl-38",
-                  "questionText": "Who leads the congregational prayer?",
-                  "questionTextUrdu": "مسجد میں جماعت کی امامت کون کراتا ہے؟",
-                  "questionTextHindi": "मस्जिद में जमात के साथ नमाज़ कौन पढ़ाता है?",
-                  "options": [
-                          "खतीब",
-                          "मुअज़्ज़िन",
-                          "इमाम (Imam)",
-                          "मुफ़्ती"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "नमाज़ का नेतृत्व करने वाले (आगे खड़े होने वाले) व्यक्ति को इमाम कहा जाता है।"
-          },
-          {
-                  "id": "q-isl-39",
-                  "questionText": "Which relative of the Prophet (PBUH) took care of him after his grandfather's death?",
-                  "questionTextUrdu": "دادا کے انتقال کے بعد نبی کریمﷺ کی پرورش کس نے کی؟",
-                  "questionTextHindi": "दादा के इंतकाल के बाद नबी (PBUH) की परवरिश किसने की?",
-                  "options": [
-                          "हज़रत अबू तालिब (चाचा)",
-                          "हज़रत अब्बास (चाचा)",
-                          "हज़रत हमज़ा (चाचा)",
-                          "हज़रत अबू लहब (चाचा)"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "अब्दुल मुत्तलिब के इंतकाल के बाद उनके चाचा अबू तालिब ने उनकी देखभाल की।"
-          },
-          {
-                  "id": "q-isl-40",
-                  "questionText": "What is the washing of the whole body for purification called?",
-                  "questionTextUrdu": "مکمل پاکی کے لیے پورے جسم کو غسل دینے کو کیا کہتے ہیں؟",
-                  "questionTextHindi": "पूरी तरह से पाक होने के लिए पूरे शरीर को धोने (नहाने) को क्या कहते हैं?",
-                  "options": [
-                          "वुज़ू",
-                          "ग़ुस्ل (Ghusl)",
-                          "तयम्मुम",
-                          "मसाह"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "शरिया के अनुसार पूरे शरीर को खास तरीके से धोने को ग़ुस्ल कहते हैं।"
-          },
-          {
-                  "id": "q-isl-41",
-                  "questionText": "How many times is the Adhan called in a day?",
-                  "questionTextUrdu": "ایک دن میں کتنی بار اذان دی جاتی ہے؟",
-                  "questionTextHindi": "एक दिन में कितनी बार अज़ान दी जाती है?",
-                  "options": [
-                          "3",
-                          "4",
-                          "5",
-                          "7"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "5 वक़्त की नमाज़ के लिए मस्जिद से 5 बार ही अज़ान दी जाती है।"
-          },
-          {
-                  "id": "q-isl-42",
-                  "questionText": "Where do Muslims go to perform Hajj?",
-                  "questionTextUrdu": "مسلمان حج کرنے کے لیے کہاں جاتے ہیں؟",
-                  "questionTextHindi": "मुसलमान हज करने के लिए कहाँ जाते हैं?",
-                  "options": [
-                          "जेरूसलम",
-                          "मदीना",
-                          "इस्तांबुल",
-                          "मक्का (Makkah)"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "हज सिर्फ और सिर्फ मक्का (सऊदी अरब) में काबा और उसके आस-पास के स्थानों पर किया जाता है।"
-          },
-          {
-                  "id": "q-isl-43",
-                  "questionText": "Which Prophet built the Kaaba?",
-                  "questionTextUrdu": "خانہ کعبہ کی تعمیر کن انبیاء نے کی تھی؟",
-                  "questionTextHindi": "काबा की इमारत का निर्माण किन नबियों ने किया था?",
-                  "options": [
-                          "हज़रत आदम (AS)",
-                          "हज़रत इब्राहीम और हज़रत इस्माईल (AS)",
-                          "हज़रत मूसा (AS)",
-                          "हज़रत ईसा (AS)"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "अल्लाह के हुक्म से हज़रत इब्राहीम (AS) और उनके बेटे हज़रत इस्माईल (AS) ने काबा बनाया था।"
-          },
-          {
-                  "id": "q-isl-44",
-                  "questionText": "What is it called when there is no water, and dust/sand is used to purify oneself?",
-                  "questionTextUrdu": "جب پانی نہ ہو تو پاک مٹی سے طہارت حاصل کرنے کو کیا کہتے ہیں؟",
-                  "questionTextHindi": "जब पानी न हो, तो पाक होने के लिए मिट्टी का उपयोग करने को क्या कहते हैं?",
-                  "options": [
-                          "ग़ुस्ल",
-                          "वुज़ू",
-                          "तयम्मुम (Tayammum)",
-                          "सुन्नत"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "पानी न मिलने की मजबूरी में पाक मिट्टी से चेहरा और हाथ पोछने को तयम्मुम कहते हैं।"
-          },
-          {
-                  "id": "q-isl-45",
-                  "questionText": "Which animal did Prophet Salih (AS) bring out of a rock?",
-                  "questionTextUrdu": "حضرت صالحؑ کے معجزے کے طور پر پہاڑ سے کون سا جانور نکلا تھا؟",
-                  "questionTextHindi": "हज़रत सालेह (AS) के चमत्कार के रूप में पहाड़ से कौन सा जानवर निकला था?",
-                  "options": [
-                          "ऊंटनी (She-camel)",
-                          "घोड़ा",
-                          "बकरी",
-                          "गाय"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "अल्लाह के हुक्म से चट्टान फट कर एक ऊंटनी (नाक़तल्लाह) निकली थी।"
-          },
-          {
-                  "id": "q-isl-46",
-                  "questionText": "What is the meal eaten before dawn during fasting called?",
-                  "questionTextUrdu": "روزہ رکھنے کے لیے صبح صادق سے پہلے کھائے جانے والے کھانے کو کیا کہتے ہیں؟",
-                  "questionTextHindi": "रोज़ा रखने के लिए सुबह सूरज निकलने से पहले जो खाना खाया जाता है, उसे क्या कहते हैं?",
-                  "options": [
-                          "इफ़्तार (Iftar)",
-                          "सहरी (Suhoor)",
-                          "दावत",
-                          "फितर"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "सुबह के समय रोज़े की नीयत से खाए जाने वाले भोजन को सहरी (Suhoor) कहते हैं।"
-          },
-          {
-                  "id": "q-isl-47",
-                  "questionText": "What is the meal eaten to break the fast at sunset called?",
-                  "questionTextUrdu": "سورج غروب ہونے پر روزہ کھولنے کے کھانے کو کیا کہتے ہیں؟",
-                  "questionTextHindi": "सूरज डूबने पर रोज़ा खोलने के लिए खाए जाने वाले भोजन को क्या कहते हैं?",
-                  "options": [
-                          "इफ़्तार (Iftar)",
-                          "सहरी (Suhoor)",
-                          "वलीमा",
-                          "सदक़ा"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "मग़रिब की अज़ान के समय खजूर या पानी से रोज़ा खोलने को इफ़्तार कहते हैं।"
-          },
-          {
-                  "id": "q-isl-48",
-                  "questionText": "Which Prophet could speak to animals and control the Jinn?",
-                  "questionTextUrdu": "وہ کون سے نبی تھے جو جانوروں سے بات کر سکتے تھے اور جنوں پر حکومت کرتے تھے؟",
-                  "questionTextHindi": "वे कौन से नबी थे जो जानवरों से बात कर सकते थे और जिनों पर हुकूमत करते थे?",
-                  "options": [
-                          "हज़रत दाऊद (AS)",
-                          "हज़रत सुलैमान (AS)",
-                          "हज़रत मूसा (AS)",
-                          "हज़रत युसूफ (AS)"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "अल्लाह ने हज़रत सुलैमान (Solomon) को जानवरों की भाषा समझने और जिनों पर हुकूमत करने का चमत्कार दिया था।"
-          },
-          {
-                  "id": "q-isl-49",
-                  "questionText": "What is the shortest Surah in the Quran?",
-                  "questionTextUrdu": "قرآن مجید کی سب سے چھوٹی سورت کون سی ہے؟",
-                  "questionTextHindi": "क़ुरआन की सबसे छोटी सूरत कौन सी है?",
-                  "options": [
-                          "सूरह अल-फातिहा",
-                          "सूरह अल-कौसर (Al-Kawthar)",
-                          "सूरह अल-इखलास",
-                          "सूरह अन-नास"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "सूरह अल-कौसर में केवल 3 आयतें (Verses) हैं, जो इसे क़ुरआन की सबसे छोटी सूरत बनाती है।"
-          },
-          {
-                  "id": "q-isl-50",
-                  "questionText": "Where did Prophet Muhammad (PBUH) migrate to from Makkah?",
-                  "questionTextUrdu": "حضرت محمدﷺ نے مکہ سے ہجرت کر کے کہاں تشریف لے گئے؟",
-                  "questionTextHindi": "हज़रत मुहम्मद (PBUH) मक्का से हिजरत करके (पलायन करके) कहाँ गए थे?",
-                  "options": [
-                          "सीरिया (Syria)",
-                          "ताइफ़ (Taif)",
-                          "मदीना (Madinah)",
-                          "यमन (Yemen)"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "मक्का वालों के ज़ुल्म के कारण नबी (PBUH) ने अल्लाह के हुक्म से मदीना (जिसे पहले यसरिब कहा जाता था) की तरफ हिजरत की थी।"
-          }
-  ]
+      "id": "surah-90",
+      "number": 90,
+      "nameArabic": "سُورَةُ الْبَلَد",
+      "nameEnglish": "Al-Balad",
+      "nameUrdu": "سورۃ البلد",
+      "meaningEnglish": "The City",
+      "versesCount": 20,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3",
+      "order": 5,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "لَا أُقْسِمُ بِهَٰذَا الْبَلَدِ",
+          "textUrdu": "میں اس شہر (مکہ) کی قسم کھاتا ہوں!",
+          "textEnglish": "I swear by this city [Makkah]",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَأَنتَ حِلٌّ بِهَٰذَا الْبَلَدِ",
+          "textUrdu": "اور آپ اس شہر میں مقیم ہیں،",
+          "textEnglish": "And you, [O Muhammad], are free of restriction in this city -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَوَالِدٍ وَمَا وَلَدَ",
+          "textUrdu": "اور قسم ہے باپ کی اور اس کی اولاد کی!",
+          "textEnglish": "And [by] the father and that which was born [of him],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ",
+          "textUrdu": "یقیناً ہم نے انسان کو مشقت میں پیدا کیا ہے۔",
+          "textEnglish": "We have certainly created man into hardship.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "أَيَحْسَبُ أَن لَّن يَقْدِرَ عَلَيْهِ أَحَدٌ",
+          "textUrdu": "کیا وہ سمجھتا ہے کہ اس پر کسی کا بس نہ چلے گا؟",
+          "textEnglish": "Does he think that never will anyone overcome him?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "يَقُولُ أَهْلَكْتُ مَالًا لُّبَدًا",
+          "textUrdu": "وہ کہتا ہے کہ میں نے ڈھیروں مال اڑا دیا۔",
+          "textEnglish": "He says, \"I have spent wealth in abundance.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "أَيَحْسَبُ أَن لَّمْ يَرَهُ أَحَدٌ",
+          "textUrdu": "کیا وہ سمجھتا ہے کہ اسے کسی نے نہیں دیکھا؟",
+          "textEnglish": "Does he think that no one has seen him?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "أَلَمْ نَجْعَل لَّهُ عَيْنَيْنِ",
+          "textUrdu": "کیا ہم نے اسے دو آنکھیں نہیں دیں؟",
+          "textEnglish": "Have We not made for him two eyes?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "وَلِسَانًا وَشَفَتَيْنِ",
+          "textUrdu": "اور ایک زبان اور دو ہونٹ؟",
+          "textEnglish": "And a tongue and two lips?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "وَهَدَيْنَاهُ النَّجْدَيْنِ",
+          "textUrdu": "اور ہم نے اسے دونوں راستے دکھا دیے۔",
+          "textEnglish": "And have shown him the two ways?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "فَلَا اقْتَحَمَ الْعَقَبَةَ",
+          "textUrdu": "مگر وہ دشوار گھاٹی میں داخل نہ ہوا،",
+          "textEnglish": "But he has not broken through the difficult pass.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 12,
+          "textArabic": "وَمَا أَدْرَاكَ مَا الْعَقَبَةُ",
+          "textUrdu": "اور آپ کیا جانیں کہ وہ دشوار گھاٹی کیا ہے؟",
+          "textEnglish": "And what can make you know what is [breaking through] the difficult pass?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 13,
+          "textArabic": "فَكُّ رَقَبَةٍ",
+          "textUrdu": "کسی گردن کا چھڑانا (غلام آزاد کرنا)",
+          "textEnglish": "It is the freeing of a slave",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 14,
+          "textArabic": "أَوْ إِطْعَامٌ فِي يَوْمٍ ذِي مَسْغَبَةٍ",
+          "textUrdu": "یا بھوک والے دن کھانا کھلانا،",
+          "textEnglish": "Or feeding on a day of severe hunger",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 15,
+          "textArabic": "يَتِيمًا ذَا مَقْرَبَةٍ",
+          "textUrdu": "کسی رشتہ دار یتیم کو،",
+          "textEnglish": "An orphan of near relationship",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 16,
+          "textArabic": "أَوْ مِسْكِينًا ذَا مَتْرَبَةٍ",
+          "textUrdu": "یا خاک نشین محتاج مسکین کو،",
+          "textEnglish": "Or a needy person in misery",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 17,
+          "textArabic": "ثُمَّ كَانَ مِنَ الَّذِينَ آمَنُوا وَتَوَاصَوْا بِالصَّبْرِ وَتَوَاصَوْا بِالْمَرْحَمَةِ",
+          "textUrdu": "پھر وہ ان لوگوں میں سے ہوا جو ایمان لائے اور جنہوں نے صبر اور رحم دلی کی وصیت کی،",
+          "textEnglish": "And then being among those who believed and advised one another to patience and advised one another to compassion.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 18,
+          "textArabic": "أُولَٰئِكَ أَصْحَابُ الْمَيْمَنَةِ",
+          "textUrdu": "یہی لوگ دائیں ہاتھ والے (خوش بخت) ہیں،",
+          "textEnglish": "Those are the companions of the right.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 19,
+          "textArabic": "وَالَّذِينَ كَفَرُوا بِآيَاتِنَا هُمْ أَصْحَابُ الْمَشْأَمَةِ",
+          "textUrdu": "اور جنہوں نے ہماری آیتوں کا انکار کیا وہ بائیں ہاتھ والے (بدبخت) ہیں،",
+          "textEnglish": "But they who disbelieved in Our signs - those are the companions of the left.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 20,
+          "textArabic": "عَلَيْهِمْ نَارٌ مُّؤْصَدَةٌ",
+          "textUrdu": "ان پر چاروں طرف سے بند کی ہوئی آگ ہوگی۔",
+          "textEnglish": "Over them will be fire closed in.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        }
+      ]
     },
     {
-      id: 'quiz-math',
-      title: 'Super Math Champions Quiz',
-      category: 'math',
-      subsection: 'Arithmetic & Tables',
-      iconName: 'Calculator',
-      difficulty: 'beginner',
-      isPublished: true,
-      order: 7,
-      questions: [
-          {
-                  "id": "q-mat-1",
-                  "questionText": "What is 5 + 3?",
-                  "questionTextUrdu": "5 + 3 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "5 + 3 कितना होता है?",
-                  "options": [
-                          "7",
-                          "8",
-                          "9",
-                          "6"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "5 में 3 और जोड़ने पर 8 आता है। (If you have 5 apples and get 3 more, you have 8!)"
-          },
-          {
-                  "id": "q-mat-2",
-                  "questionText": "What is 10 - 4?",
-                  "questionTextUrdu": "10 - 4 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "10 - 4 कितना होता है?",
-                  "options": [
-                          "5",
-                          "7",
-                          "6",
-                          "4"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "10 में से 4 घटाने पर 6 बचता है। (Count backwards: 9, 8, 7, 6)."
-          },
-          {
-                  "id": "q-mat-3",
-                  "questionText": "What is 2 x 4?",
-                  "questionTextUrdu": "2 x 4 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "2 x 4 कितना होता है?",
-                  "options": [
-                          "6",
-                          "8",
-                          "10",
-                          "12"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "2 को 4 बार जोड़ें (2+2+2+2) तो 8 आता है! (Two times four is eight)."
-          },
-          {
-                  "id": "q-mat-4",
-                  "questionText": "What is 8 ÷ 2?",
-                  "questionTextUrdu": "8 ÷ 2 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "8 ÷ 2 कितना होता ہے؟",
-                  "options": [
-                          "2",
-                          "3",
-                          "4",
-                          "6"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "8 चीज़ों को 2 लोगों में बराबर बाँटेंगे तो हर एक को 4 मिलेंगी।"
-          },
-          {
-                  "id": "q-mat-5",
-                  "questionText": "What is 7 + 6?",
-                  "questionTextUrdu": "7 + 6 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "7 + 6 कितना होता है?",
-                  "options": [
-                          "12",
-                          "13",
-                          "14",
-                          "15"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "7 और 6 मिलकर 13 होते हैं! (7 + 3 = 10, plus 3 more = 13)."
-          },
-          {
-                  "id": "q-mat-6",
-                  "questionText": "What is 15 - 5?",
-                  "questionTextUrdu": "15 - 5 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "15 - 5 कितना होता है?",
-                  "options": [
-                          "5",
-                          "10",
-                          "15",
-                          "20"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "15 में से 5 निकाल देने पर पूरा 10 बचता है।"
-          },
-          {
-                  "id": "q-mat-7",
-                  "questionText": "What is 3 x 5?",
-                  "questionTextUrdu": "3 x 5 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "3 x 5 कितना होता है?",
-                  "options": [
-                          "8",
-                          "12",
-                          "15",
-                          "18"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "5 की टेबल 3 बार पढ़ें: 5, 10, 15! (Three times five is fifteen)."
-          },
-          {
-                  "id": "q-mat-8",
-                  "questionText": "What is 10 ÷ 5?",
-                  "questionTextUrdu": "10 ÷ 5 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "10 ÷ 5 कितना होता है?",
-                  "options": [
-                          "2",
-                          "5",
-                          "10",
-                          "15"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "5 की टेबल में 10 कितनी बार में आता है? 5 x 2 = 10. तो जवाब 2 है!"
-          },
-          {
-                  "id": "q-mat-9",
-                  "questionText": "What is 9 + 9?",
-                  "questionTextUrdu": "9 + 9 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "9 + 9 कितना होता है?",
-                  "options": [
-                          "16",
-                          "17",
-                          "18",
-                          "19"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "9 और 9 को जोड़ने पर 18 बनता है। (Double of 9 is 18)."
-          },
-          {
-                  "id": "q-mat-10",
-                  "questionText": "What is 12 - 7?",
-                  "questionTextUrdu": "12 - 7 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "12 - 7 कितना होता है?",
-                  "options": [
-                          "4",
-                          "5",
-                          "6",
-                          "7"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "12 में से पहले 2 घटाएं (10 बचा), फिर 5 और घटाएं तो 5 बचेगा!"
-          },
-          {
-                  "id": "q-mat-11",
-                  "questionText": "What is 4 x 4?",
-                  "questionTextUrdu": "4 x 4 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "4 x 4 कितना होता है?",
-                  "options": [
-                          "8",
-                          "12",
-                          "16",
-                          "20"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "4 को 4 से गुणा (multiply) करने पर 16 आता है।"
-          },
-          {
-                  "id": "q-mat-12",
-                  "questionText": "What is 12 ÷ 3?",
-                  "questionTextUrdu": "12 ÷ 3 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "12 ÷ 3 कितना होता है?",
-                  "options": [
-                          "3",
-                          "4",
-                          "5",
-                          "6"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "3 की टेबल पढ़ें: 3 x 4 = 12. इसलिए जवाब 4 है!"
-          },
-          {
-                  "id": "q-mat-13",
-                  "questionText": "What is 8 + 7?",
-                  "questionTextUrdu": "8 + 7 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "8 + 7 कितना होता है?",
-                  "options": [
-                          "14",
-                          "15",
-                          "16",
-                          "17"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "8 में 7 जोड़ने पर 15 आता है।"
-          },
-          {
-                  "id": "q-mat-14",
-                  "questionText": "What is 20 - 10?",
-                  "questionTextUrdu": "20 - 10 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "20 - 10 कितना होता है?",
-                  "options": [
-                          "5",
-                          "10",
-                          "15",
-                          "0"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "20 में से 10 (आधा) निकाल देंगे तो 10 ही बचेगा!"
-          },
-          {
-                  "id": "q-mat-15",
-                  "questionText": "What is 5 x 5?",
-                  "questionTextUrdu": "5 x 5 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "5 x 5 कितना होता है?",
-                  "options": [
-                          "10",
-                          "20",
-                          "25",
-                          "30"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "5 की टेबल 5 बार पढ़ने पर 25 आता है। (Five times five is twenty-five)."
-          },
-          {
-                  "id": "q-mat-16",
-                  "questionText": "What is 16 ÷ 4?",
-                  "questionTextUrdu": "16 ÷ 4 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "16 ÷ 4 कितना होता है?",
-                  "options": [
-                          "2",
-                          "3",
-                          "4",
-                          "8"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "4 x 4 = 16 होता है, इसलिए 16 को 4 से भाग (divide) करने पर 4 आएगा।"
-          },
-          {
-                  "id": "q-mat-17",
-                  "questionText": "What is 14 + 6?",
-                  "questionTextUrdu": "14 + 6 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "14 + 6 कितना होता है?",
-                  "options": [
-                          "18",
-                          "19",
-                          "20",
-                          "21"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "14 में 6 जोड़ने पर पूरा 20 बन जाता है।"
-          },
-          {
-                  "id": "q-mat-18",
-                  "questionText": "What is 18 - 9?",
-                  "questionTextUrdu": "18 - 9 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "18 - 9 कितना होता है?",
-                  "options": [
-                          "8",
-                          "9",
-                          "10",
-                          "11"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "9 + 9 = 18 होता है, इसलिए 18 में से 9 घटाने पर 9 ही बचेगा! (Half of 18 is 9)."
-          },
-          {
-                  "id": "q-mat-19",
-                  "questionText": "What is 10 x 3?",
-                  "questionTextUrdu": "10 x 3 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "10 x 3 कितना होता है?",
-                  "options": [
-                          "13",
-                          "20",
-                          "30",
-                          "40"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "किसी भी नंबर को 10 से गुणा (multiply) करने के लिए उसके आगे '0' लगा दें। (3 और 0 = 30)."
-          },
-          {
-                  "id": "q-mat-20",
-                  "questionText": "What is 20 ÷ 5?",
-                  "questionTextUrdu": "20 ÷ 5 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "20 ÷ 5 कितना होता है?",
-                  "options": [
-                          "3",
-                          "4",
-                          "5",
-                          "6"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "5 की टेबल पढ़ें: 5, 10, 15, 20. यह 4 बार में आता है!"
-          },
-          {
-                  "id": "q-mat-21",
-                  "questionText": "What is 11 + 11?",
-                  "questionTextUrdu": "11 + 11 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "11 + 11 कितना होता है?",
-                  "options": [
-                          "12",
-                          "20",
-                          "22",
-                          "24"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "11 का डबल (दुगना) 22 होता है। (10+10=20 और 1+1=2, तो 22)."
-          },
-          {
-                  "id": "q-mat-22",
-                  "questionText": "What is 25 - 5?",
-                  "questionTextUrdu": "25 - 5 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "25 - 5 कितना होता है?",
-                  "options": [
-                          "15",
-                          "20",
-                          "30",
-                          "35"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "25 में से 5 वापस ले लें तो 20 बचता है।"
-          },
-          {
-                  "id": "q-mat-23",
-                  "questionText": "What is 6 x 2?",
-                  "questionTextUrdu": "6 x 2 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "6 x 2 कितना होता है?",
-                  "options": [
-                          "8",
-                          "10",
-                          "12",
-                          "14"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "6 का डबल 12 होता है। (6 + 6 = 12)."
-          },
-          {
-                  "id": "q-mat-24",
-                  "questionText": "What is 24 ÷ 3?",
-                  "questionTextUrdu": "24 ÷ 3 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "24 ÷ 3 कितना होता है?",
-                  "options": [
-                          "6",
-                          "7",
-                          "8",
-                          "9"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "3 x 8 = 24 होता है!"
-          },
-          {
-                  "id": "q-mat-25",
-                  "questionText": "What is 30 + 20?",
-                  "questionTextUrdu": "30 + 20 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "30 + 20 कितना होता है?",
-                  "options": [
-                          "40",
-                          "50",
-                          "60",
-                          "10"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "3 और 2 मिलकर 5 होते हैं, तो 30 और 20 मिलकर 50 होंगे।"
-          },
-          {
-                  "id": "q-mat-26",
-                  "questionText": "What is 100 - 1?",
-                  "questionTextUrdu": "100 - 1 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "100 - 1 कितना होता है?",
-                  "options": [
-                          "90",
-                          "98",
-                          "99",
-                          "101"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "100 से ठीक पहले वाला नंबर 99 होता है।"
-          },
-          {
-                  "id": "q-mat-27",
-                  "questionText": "What is 7 x 3?",
-                  "questionTextUrdu": "7 x 3 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "7 x 3 कितना होता है?",
-                  "options": [
-                          "10",
-                          "14",
-                          "21",
-                          "24"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "7 की टेबल 3 बार पढ़ें: 7, 14, 21."
-          },
-          {
-                  "id": "q-mat-28",
-                  "questionText": "What is 9 ÷ 3?",
-                  "questionTextUrdu": "9 ÷ 3 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "9 ÷ 3 कितना होता है?",
-                  "options": [
-                          "2",
-                          "3",
-                          "4",
-                          "6"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "3 x 3 = 9 होता है, इसलिए जवाब 3 है।"
-          },
-          {
-                  "id": "q-mat-29",
-                  "questionText": "What is 50 + 50?",
-                  "questionTextUrdu": "50 + 50 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "50 + 50 कितना होता है?",
-                  "options": [
-                          "80",
-                          "90",
-                          "100",
-                          "150"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "50 (आधा) और 50 (आधा) मिलकर पूरा 100 बनाते हैं!"
-          },
-          {
-                  "id": "q-mat-30",
-                  "questionText": "What is 30 - 15?",
-                  "questionTextUrdu": "30 - 15 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "30 - 15 कितना होता है?",
-                  "options": [
-                          "10",
-                          "15",
-                          "20",
-                          "25"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "15 + 15 = 30 होता है, इसलिए 30 में से 15 घटाने पर 15 बचेगा।"
-          },
-          {
-                  "id": "q-mat-31",
-                  "questionText": "What is 6 x 6?",
-                  "questionTextUrdu": "6 x 6 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "6 x 6 कितना होता है?",
-                  "options": [
-                          "12",
-                          "24",
-                          "30",
-                          "36"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "6 को 6 से गुणा (multiply) करने पर 36 आता है। (Six times six is thirty-six)."
-          },
-          {
-                  "id": "q-mat-32",
-                  "questionText": "What is 25 ÷ 5?",
-                  "questionTextUrdu": "25 ÷ 5 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "25 ÷ 5 कितना होता है?",
-                  "options": [
-                          "4",
-                          "5",
-                          "6",
-                          "10"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "5 की टेबल पढ़ें तो 5 x 5 = 25 होता है!"
-          },
-          {
-                  "id": "q-mat-33",
-                  "questionText": "What is 45 + 5?",
-                  "questionTextUrdu": "45 + 5 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "45 + 5 कितना होता है?",
-                  "options": [
-                          "40",
-                          "50",
-                          "55",
-                          "60"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "45 में 5 जोड़ने पर हम सीधे 50 पर पहुँच जाते हैं।"
-          },
-          {
-                  "id": "q-mat-34",
-                  "questionText": "What is 100 - 50?",
-                  "questionTextUrdu": "100 - 50 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "100 - 50 कितना होता है?",
-                  "options": [
-                          "40",
-                          "50",
-                          "60",
-                          "70"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "100 में से आधा (50) निकाल देंगे तो आधा (50) ही बचेगा!"
-          },
-          {
-                  "id": "q-mat-35",
-                  "questionText": "What is 8 x 3?",
-                  "questionTextUrdu": "8 x 3 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "8 x 3 कितना होता है?",
-                  "options": [
-                          "11",
-                          "16",
-                          "21",
-                          "24"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "8 की टेबल 3 बार पढ़ें: 8, 16, 24."
-          },
-          {
-                  "id": "q-mat-36",
-                  "questionText": "What is 30 ÷ 3?",
-                  "questionTextUrdu": "30 ÷ 3 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "30 ÷ 3 कितना होता है?",
-                  "options": [
-                          "5",
-                          "10",
-                          "15",
-                          "20"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "3 x 10 = 30 होता है!"
-          },
-          {
-                  "id": "q-mat-37",
-                  "questionText": "What is 22 + 8?",
-                  "questionTextUrdu": "22 + 8 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "22 + 8 कितना होता है?",
-                  "options": [
-                          "28",
-                          "30",
-                          "32",
-                          "40"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "22 में 8 और जोड़ने पर पूरा 30 बन जाता है।"
-          },
-          {
-                  "id": "q-mat-38",
-                  "questionText": "What is 40 - 10?",
-                  "questionTextUrdu": "40 - 10 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "40 - 10 कितना होता है?",
-                  "options": [
-                          "20",
-                          "30",
-                          "50",
-                          "60"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "4 में से 1 गया 3 बचा, तो 40 में से 10 गया 30 बचेगा।"
-          },
-          {
-                  "id": "q-mat-39",
-                  "questionText": "What is 2 x 9?",
-                  "questionTextUrdu": "2 x 9 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "2 x 9 कितना होता है?",
-                  "options": [
-                          "11",
-                          "16",
-                          "18",
-                          "20"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "9 का डबल 18 होता है (9 + 9 = 18)."
-          },
-          {
-                  "id": "q-mat-40",
-                  "questionText": "What is 50 ÷ 5?",
-                  "questionTextUrdu": "50 ÷ 5 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "50 ÷ 5 कितना होता है?",
-                  "options": [
-                          "5",
-                          "10",
-                          "15",
-                          "20"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "5 की टेबल 10 बार पढ़ने पर 50 आता है!"
-          },
-          {
-                  "id": "q-mat-41",
-                  "questionText": "What is 0 + 99?",
-                  "questionTextUrdu": "0 + 99 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "0 + 99 कितना होता है?",
-                  "options": [
-                          "0",
-                          "90",
-                          "99",
-                          "100"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "किसी भी नंबर में 0 (Zero) जोड़ने पर वो नंबर वैसा ही रहता है।"
-          },
-          {
-                  "id": "q-mat-42",
-                  "questionText": "What is 15 - 15?",
-                  "questionTextUrdu": "15 - 15 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "15 - 15 कितना होता है?",
-                  "options": [
-                          "0",
-                          "1",
-                          "15",
-                          "30"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "जब हम किसी नंबर में से वही नंबर घटा देते हैं, तो 0 (कुछ नहीं) बचता है।"
-          },
-          {
-                  "id": "q-mat-43",
-                  "questionText": "What is 0 x 10?",
-                  "questionTextUrdu": "0 x 10 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "0 x 10 कितना होता है?",
-                  "options": [
-                          "0",
-                          "1",
-                          "10",
-                          "100"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "किसी भी नंबर को 0 से गुणा (Multiply) करने पर हमेशा 0 ही आता है!"
-          },
-          {
-                  "id": "q-mat-44",
-                  "questionText": "What is 100 ÷ 10?",
-                  "questionTextUrdu": "100 ÷ 10 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "100 ÷ 10 कितना होता है?",
-                  "options": [
-                          "5",
-                          "10",
-                          "50",
-                          "100"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "10 x 10 = 100 होता है। 100 को 10 से भाग देने पर 10 आएगा।"
-          },
-          {
-                  "id": "q-mat-45",
-                  "questionText": "What is 75 + 25?",
-                  "questionTextUrdu": "75 + 25 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "75 + 25 कितना होता है?",
-                  "options": [
-                          "80",
-                          "90",
-                          "100",
-                          "125"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "75 और 25 मिलकर पूरा 100 (Century) बनाते हैं।"
-          },
-          {
-                  "id": "q-mat-46",
-                  "questionText": "What is 80 - 40?",
-                  "questionTextUrdu": "80 - 40 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "80 - 40 कितना होता है?",
-                  "options": [
-                          "20",
-                          "30",
-                          "40",
-                          "50"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "40 + 40 = 80 होता है। तो 80 में से 40 घटाने पर 40 ही बचेगा।"
-          },
-          {
-                  "id": "q-mat-47",
-                  "questionText": "What is 9 x 2?",
-                  "questionTextUrdu": "9 x 2 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "9 x 2 कितना होता है?",
-                  "options": [
-                          "11",
-                          "16",
-                          "18",
-                          "20"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "9 को 2 बार जोड़ें (9 + 9) तो 18 आता है।"
-          },
-          {
-                  "id": "q-mat-48",
-                  "questionText": "What is 18 ÷ 2?",
-                  "questionTextUrdu": "18 ÷ 2 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "18 ÷ 2 कितना होता है?",
-                  "options": [
-                          "7",
-                          "8",
-                          "9",
-                          "10"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "18 को 2 हिस्सों में बराबर बाँटेंगे तो हर हिस्से में 9 आएंगे। (Half of 18 is 9)."
-          },
-          {
-                  "id": "q-mat-49",
-                  "questionText": "What is 9 x 9?",
-                  "questionTextUrdu": "9 x 9 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "9 x 9 कितना होता है?",
-                  "options": [
-                          "18",
-                          "81",
-                          "90",
-                          "99"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "9 की टेबल 9 बार पढ़ने पर 81 आता है। (Nine times nine is eighty-one)."
-          },
-          {
-                  "id": "q-mat-50",
-                  "questionText": "What is 40 ÷ 4?",
-                  "questionTextUrdu": "40 ÷ 4 کتنا ہوتا ہے؟",
-                  "questionTextHindi": "40 ÷ 4 कितना होता है?",
-                  "options": [
-                          "4",
-                          "8",
-                          "10",
-                          "14"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "4 की टेबल में 10 बार (4 x 10) पढ़ने पर 40 आता है!"
-          }
-  ]
+      "id": "surah-91",
+      "number": 91,
+      "nameArabic": "سُورَةُ الشَّمْس",
+      "nameEnglish": "Ash-Shams",
+      "nameUrdu": "سورۃ الشمس",
+      "meaningEnglish": "The Sun",
+      "versesCount": 15,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3",
+      "order": 6,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَالشَّمْسِ وَضُحَاهَا",
+          "textUrdu": "قسم ہے سورج کی اور اس کی دھوپ کی!",
+          "textEnglish": "By the sun and its brightness",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَالْقَمَرِ إِذَا تَلَاهَا",
+          "textUrdu": "اور چاند کی جب وہ اس کے پیچھے آئے!",
+          "textEnglish": "And [by] the moon when it follows it",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَالنَّهَارِ إِذَا جَلَّاهَا",
+          "textUrdu": "اور دن کی جب وہ اسے روشن کر دے!",
+          "textEnglish": "And [by] the day when it displays it",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَاللَّيْلِ إِذَا يَغْشَاهَا",
+          "textUrdu": "اور رات کی جب وہ اسے ڈھانپ لے!",
+          "textEnglish": "And [by] the night when it covers it",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَالسَّمَاءِ وَمَا بَنَاهَا",
+          "textUrdu": "اور آسمان کی اور اس کے بنانے والے کی!",
+          "textEnglish": "And [by] the sky and He who built it",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "وَالْأَرْضِ وَمَا طَحَاهَا",
+          "textUrdu": "اور زمین کی اور اس کے بچھانے والے کی!",
+          "textEnglish": "And [by] the earth and He who spread it",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "وَنَفْسٍ وَمَا سَوَّاهَا",
+          "textUrdu": "اور جان کی اور جس نے اسے سنوارا!",
+          "textEnglish": "And [by] the soul and He who proportioned it",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَاهَا",
+          "textUrdu": "پھر اس کے دل میں اس کی برائی اور بھلائی کا الہام کیا،",
+          "textEnglish": "And inspired it [with discernment of] its wickedness and its righteousness,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "قَدْ أَفْلَحَ مَن زَكَّاهَا",
+          "textUrdu": "یقیناً وہ کامیاب ہوا جس نے اپنے نفس کو پاک کیا،",
+          "textEnglish": "He has succeeded who purifies it,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "وَقَدْ خَابَ مَن دَسَّاهَا",
+          "textUrdu": "اور وہ نامراد ہوا جس نے اسے گناہوں میں دبا دیا،",
+          "textEnglish": "And he has failed who instills it [with corruption].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "كَذَّبَتْ ثَمُودُ بِطَغْوَاهَا",
+          "textUrdu": "قوم ثمود نے اپنی سرکشی کی وجہ سے جھٹلایا،",
+          "textEnglish": "Thamud denied [their prophet] by reason of their transgression,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 12,
+          "textArabic": "إِذِ انبَعَثَ أَشْقَاهَا",
+          "textUrdu": "جب ان کا سب سے بڑا بدبخت اٹھ کھڑا ہوا،",
+          "textEnglish": "When the most wretched of them was sent forth.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 13,
+          "textArabic": "فَقَالَ لَهُمْ رَسُولُ اللَّهِ نَاقَةَ اللَّهِ وَسُقْيَاهَا",
+          "textUrdu": "تو اللہ کے رسول نے ان سے کہا کہ اللہ کی اونٹنی اور اس کے پانی پینے کی باری کا خیال رکھو،",
+          "textEnglish": "And the messenger of Allah said to them, \"[Do not harm] the she-camel of Allah or [prevent her from] her drink.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 14,
+          "textArabic": "فَكَذَّبُوهُ فَعَقَرُوهَا فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنبِهِمْ فَسَوَّاهَا",
+          "textUrdu": "مگر انہوں نے پیغمبر کو جھٹلایا اور اونٹنی کو مار ڈالا، پس ان کے رب نے ان کے گناہ پر ان پر تباہی نازل کی اور برابر کر دیا،",
+          "textEnglish": "But they denied him and hamstrung her. So their Lord brought down upon them destruction for their sin and leveled it.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 15,
+          "textArabic": "وَلَا يَخَافُ عُقْبَاهَا",
+          "textUrdu": "اور اسے اس کے انجام کا کوئی خوف نہیں ہے۔",
+          "textEnglish": "And He does not fear the consequence thereof.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        }
+      ]
     },
     {
-      id: 'quiz-gk',
-      title: 'Incredible India & GK Challenge',
-      category: 'gk',
-      subsection: 'States, Capitals & Leaders',
-      iconName: 'Globe',
-      difficulty: 'beginner',
-      isPublished: true,
-      order: 8,
-      questions: [
-          {
-                  "id": "q-gk-1",
-                  "questionText": "What is the Capital of India?",
-                  "questionTextUrdu": "بھارت کا دارالحکومت کیا ہے؟",
-                  "questionTextHindi": "भारत की राजधानी क्या है?",
-                  "options": [
-                          "Mumbai",
-                          "New Delhi",
-                          "Kolkata",
-                          "Chennai"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "New Delhi is the national capital of India, where the Parliament and Rashtrapati Bhavan are located."
-          },
-          {
-                  "id": "q-gk-2",
-                  "questionText": "What is the capital of Maharashtra?",
-                  "questionTextUrdu": "مہاراشٹر کا دارالحکومت کیا ہے؟",
-                  "questionTextHindi": "महाराष्ट्र की राजधानी क्या है?",
-                  "options": [
-                          "Pune",
-                          "Nagpur",
-                          "Mumbai",
-                          "Nashik"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Mumbai is the capital of Maharashtra and the financial capital of India."
-          },
-          {
-                  "id": "q-gk-3",
-                  "questionText": "Which city is the capital of Rajasthan?",
-                  "questionTextUrdu": "راجستھان کا دارالحکومت کون سا شہر ہے؟",
-                  "questionTextHindi": "राजस्थान की राजधानी कौन सा शहर है?",
-                  "options": [
-                          "Udaipur",
-                          "Jodhpur",
-                          "Jaisalmer",
-                          "Jaipur"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "Jaipur is the capital of Rajasthan and is famously known as the \"Pink City\"."
-          },
-          {
-                  "id": "q-gk-4",
-                  "questionText": "What is the capital of West Bengal?",
-                  "questionTextUrdu": "مغربی بنگال کا دارالحکومت کیا ہے؟",
-                  "questionTextHindi": "पश्चिम बंगाल की राजधानी क्या है?",
-                  "options": [
-                          "Kolkata",
-                          "Darjeeling",
-                          "Siliguri",
-                          "Howrah"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "Kolkata (formerly Calcutta) is the capital of West Bengal, situated on the banks of the Hooghly River."
-          },
-          {
-                  "id": "q-gk-5",
-                  "questionText": "What is the capital of Uttar Pradesh (UP)?",
-                  "questionTextUrdu": "اتر پردیش (UP) کا دارالحکومت کیا ہے؟",
-                  "questionTextHindi": "उत्तर प्रदेश (UP) की राजधानी क्या है?",
-                  "options": [
-                          "Kanpur",
-                          "Lucknow",
-                          "Varanasi",
-                          "Agra"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "Lucknow, known as the \"City of Nawabs\", is the capital of Uttar Pradesh."
-          },
-          {
-                  "id": "q-gk-6",
-                  "questionText": "Which city is the capital of Gujarat?",
-                  "questionTextUrdu": "گجرات کا دارالحکومت کون سا شہر ہے؟",
-                  "questionTextHindi": "गुजरात की राजधानी कौन सा शहर है?",
-                  "options": [
-                          "Ahmedabad",
-                          "Surat",
-                          "Gandhinagar",
-                          "Rajkot"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Gandhinagar is the capital of Gujarat, named after Mahatma Gandhi."
-          },
-          {
-                  "id": "q-gk-7",
-                  "questionText": "What is the capital of Bihar?",
-                  "questionTextUrdu": "بہار کا دارالحکومت کیا ہے؟",
-                  "questionTextHindi": "बिहार की राजधानी क्या है?",
-                  "options": [
-                          "Gaya",
-                          "Patna",
-                          "Bhagalpur",
-                          "Muzaffarpur"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "Patna, historically known as Pataliputra, is the capital of Bihar."
-          },
-          {
-                  "id": "q-gk-8",
-                  "questionText": "What is the capital of Kerala?",
-                  "questionTextUrdu": "کیرالہ کا دارالحکومت کیا ہے؟",
-                  "questionTextHindi": "केरल की राजधानी क्या है?",
-                  "options": [
-                          "Kochi",
-                          "Kozhikode",
-                          "Thiruvananthapuram",
-                          "Thrissur"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Thiruvananthapuram (Trivandrum) is the capital of God's Own Country, Kerala."
-          },
-          {
-                  "id": "q-gk-9",
-                  "questionText": "What is the capital of Tamil Nadu?",
-                  "questionTextUrdu": "تمل ناڈو کا دارالحکومت کیا ہے؟",
-                  "questionTextHindi": "तमिलनाडु की राजधानी क्या है?",
-                  "options": [
-                          "Chennai",
-                          "Coimbatore",
-                          "Madurai",
-                          "Ooty"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "Chennai (formerly Madras) is the capital of Tamil Nadu."
-          },
-          {
-                  "id": "q-gk-10",
-                  "questionText": "Which city is the capital of Karnataka?",
-                  "questionTextUrdu": "کرناٹک کا دارالحکومت کون سا شہر ہے؟",
-                  "questionTextHindi": "कर्नाटक की राजधानी कौन सा शहर है?",
-                  "options": [
-                          "Mysuru",
-                          "Mangaluru",
-                          "Bengaluru",
-                          "Hubli"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Bengaluru (Bangalore) is the capital of Karnataka and the IT hub of India."
-          },
-          {
-                  "id": "q-gk-11",
-                  "questionText": "What is the capital of Madhya Pradesh?",
-                  "questionTextUrdu": "مدھیہ پردیش کا دارالحکومت کیا ہے؟",
-                  "questionTextHindi": "मध्य प्रदेश की राजधानी क्या है?",
-                  "options": [
-                          "Indore",
-                          "Bhopal",
-                          "Gwalior",
-                          "Jabalpur"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "Bhopal, known as the City of Lakes, is the capital of Madhya Pradesh."
-          },
-          {
-                  "id": "q-gk-12",
-                  "questionText": "Which city serves as the joint capital of Punjab and Haryana?",
-                  "questionTextUrdu": "کون سا شہر پنجاب اور ہریانہ کا مشترکہ دارالحکومت ہے؟",
-                  "questionTextHindi": "कौन सा शहर पंजाब और हरियाणा की संयुक्त राजधानी है?",
-                  "options": [
-                          "Amritsar",
-                          "Ludhiana",
-                          "Chandigarh",
-                          "Gurugram"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Chandigarh is a Union Territory and the shared capital of both Punjab and Haryana."
-          },
-          {
-                  "id": "q-gk-13",
-                  "questionText": "What is the capital of Assam?",
-                  "questionTextUrdu": "آسام کا دارالحکومت کیا ہے؟",
-                  "questionTextHindi": "असम की राजधानी क्या है?",
-                  "options": [
-                          "Guwahati",
-                          "Dispur",
-                          "Silchar",
-                          "Dibrugarh"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "Dispur is the capital of Assam, located near the city of Guwahati."
-          },
-          {
-                  "id": "q-gk-14",
-                  "questionText": "What is the capital of Goa?",
-                  "questionTextUrdu": "گوا کا دارالحکومت کیا ہے؟",
-                  "questionTextHindi": "गोवा की राजधानी क्या है?",
-                  "options": [
-                          "Vasco da Gama",
-                          "Margao",
-                          "Mapusa",
-                          "Panaji"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "Panaji (or Panjim) is the capital of Goa, India's smallest state by area."
-          },
-          {
-                  "id": "q-gk-15",
-                  "questionText": "What is the capital of Odisha?",
-                  "questionTextUrdu": "اڈیشہ کا دارالحکومت کیا ہے؟",
-                  "questionTextHindi": "ओडिशा की राजधानी क्या है?",
-                  "options": [
-                          "Cuttack",
-                          "Puri",
-                          "Bhubaneswar",
-                          "Rourkela"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Bhubaneswar is the capital of Odisha and is known as the \"Temple City of India\"."
-          },
-          {
-                  "id": "q-gk-16",
-                  "questionText": "When did India get independence from British rule?",
-                  "questionTextUrdu": "بھارت کو برطانوی راج سے آزادی کب ملی؟",
-                  "questionTextHindi": "भारत को ब्रिटिश शासन से आज़ादी कब मिली?",
-                  "options": [
-                          "15 August 1947",
-                          "26 January 1950",
-                          "15 August 1950",
-                          "2 October 1947"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "India became a free country on August 15, 1947, after a long struggle."
-          },
-          {
-                  "id": "q-gk-17",
-                  "questionText": "Who is known as the \"Father of the Nation\" in India?",
-                  "questionTextUrdu": "بھارت میں \"بابائے قوم\" (Father of the Nation) کسے کہا جاتا ہے؟",
-                  "questionTextHindi": "भारत में \"राष्ट्रपिता\" (Father of the Nation) किसे कहा जाता है?",
-                  "options": [
-                          "Jawaharlal Nehru",
-                          "Subhas Chandra Bose",
-                          "Mahatma Gandhi",
-                          "Bhagat Singh"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Mahatma Gandhi (Bapu) led India to independence through non-violence and is called the Father of the Nation."
-          },
-          {
-                  "id": "q-gk-18",
-                  "questionText": "Who gave the famous slogan \"Give me blood, and I shall give you freedom!\"?",
-                  "questionTextUrdu": "\"تم مجھے خون دو، میں تمہیں آزادی دوں گا\" کا مشہور نعرہ کس نے دیا؟",
-                  "questionTextHindi": "\"तुम मुझे खून दो, मैं तुम्हें आज़ादी दूंगा!\" का प्रसिद्ध नारा किसने दिया?",
-                  "options": [
-                          "Bhagat Singh",
-                          "Subhas Chandra Bose",
-                          "Lala Lajpat Rai",
-                          "Mangal Pandey"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "Netaji Subhas Chandra Bose gave this inspiring slogan to the Indian National Army."
-          },
-          {
-                  "id": "q-gk-19",
-                  "questionText": "Who was the first Prime Minister of independent India?",
-                  "questionTextUrdu": "آزاد بھارت کے پہلے وزیر اعظم کون تھے؟",
-                  "questionTextHindi": "आज़ाद भारत के पहले प्रधान मंत्री कौन थे?",
-                  "options": [
-                          "Sardar Patel",
-                          "Lal Bahadur Shastri",
-                          "Jawaharlal Nehru",
-                          "Dr. B.R. Ambedkar"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Pandit Jawaharlal Nehru (Chacha Nehru) became the first PM of India in 1947."
-          },
-          {
-                  "id": "q-gk-20",
-                  "questionText": "Who was the first President of India?",
-                  "questionTextUrdu": "بھارت کے پہلے صدر (President) کون تھے؟",
-                  "questionTextHindi": "भारत के पहले राष्ट्रपति कौन थे?",
-                  "options": [
-                          "Dr. Rajendra Prasad",
-                          "Dr. S. Radhakrishnan",
-                          "Zakir Husain",
-                          "V. V. Giri"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "Dr. Rajendra Prasad served as the first President of India when it became a Republic."
-          },
-          {
-                  "id": "q-gk-21",
-                  "questionText": "Who is known as the \"Iron Man of India\"?",
-                  "questionTextUrdu": "\"آئرن مین آف انڈیا\" (لوہ مرد) کے نام سے کون مشہور ہے؟",
-                  "questionTextHindi": "भारत के \"लौह पुरुष\" (Iron Man) के नाम से कौन प्रसिद्ध है?",
-                  "options": [
-                          "Bhagat Singh",
-                          "Sardar Vallabhbhai Patel",
-                          "Bipin Chandra Pal",
-                          "Bal Gangadhar Tilak"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "Sardar Patel united all the princely states of India, hence he is called the Iron Man."
-          },
-          {
-                  "id": "q-gk-22",
-                  "questionText": "Who wrote the National Anthem of India, \"Jana Gana Mana\"?",
-                  "questionTextUrdu": "بھارت کا قومی ترانہ \"جن گن من\" کس نے لکھا؟",
-                  "questionTextHindi": "भारत का राष्ट्रगान \"जन गण मन\" किसने लिखा?",
-                  "options": [
-                          "Bankim Chandra Chatterjee",
-                          "Rabindranath Tagore",
-                          "Sarojini Naidu",
-                          "Munshi Premchand"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "Nobel laureate Rabindranath Tagore wrote the Indian National Anthem."
-          },
-          {
-                  "id": "q-gk-23",
-                  "questionText": "Which young freedom fighter is popularly known as \"Shaheed-e-Azam\"?",
-                  "questionTextUrdu": "کس نوجوان مجاہد آزادی کو \"شہیدِ اعظم\" کہا جاتا ہے؟",
-                  "questionTextHindi": "किस युवा स्वतंत्रता सेनानी को \"शहीद-ए-आज़म\" के नाम से जाना जाता है?",
-                  "options": [
-                          "Sukhdev",
-                          "Rajguru",
-                          "Chandrashekhar Azad",
-                          "Bhagat Singh"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "Bhagat Singh gave his life for the country at a very young age and is known as Shaheed-e-Azam."
-          },
-          {
-                  "id": "q-gk-24",
-                  "questionText": "When is Republic Day celebrated in India?",
-                  "questionTextUrdu": "بھارت میں یومِ جمہوریہ (Republic Day) کب منایا جاتا ہے؟",
-                  "questionTextHindi": "भारत में गणतंत्र दिवस (Republic Day) कब मनाया जाता है?",
-                  "options": [
-                          "15 August",
-                          "2 October",
-                          "26 January",
-                          "14 November"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "We celebrate Republic Day on 26 January because the Constitution of India came into effect on this day in 1950."
-          },
-          {
-                  "id": "q-gk-25",
-                  "questionText": "Who is considered the chief architect of the Indian Constitution?",
-                  "questionTextUrdu": "آئینِ ہند (Indian Constitution) کا معمارِ اعظم کسے مانا جاتا ہے؟",
-                  "questionTextHindi": "भारतीय संविधान का मुख्य निर्माता किसे माना जाता है?",
-                  "options": [
-                          "Dr. B.R. Ambedkar",
-                          "Jawaharlal Nehru",
-                          "Sardar Patel",
-                          "Mahatma Gandhi"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "Dr. B.R. Ambedkar was the chairman of the drafting committee of the Indian Constitution."
-          },
-          {
-                  "id": "q-gk-26",
-                  "questionText": "The famous \"Dandi March\" in 1930 was related to which movement?",
-                  "questionTextUrdu": "1930 کا مشہور \"ڈانڈی مارچ\" کس تحریک سے متعلق تھا؟",
-                  "questionTextHindi": "1930 का प्रसिद्ध \"दांडी मार्च\" किस आंदोलन से संबंधित था?",
-                  "options": [
-                          "Quit India Movement",
-                          "Salt Satyagraha",
-                          "Non-Cooperation Movement",
-                          "Khilafat Movement"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "Mahatma Gandhi led the Dandi March to protest against the British tax on salt."
-          },
-          {
-                  "id": "q-gk-27",
-                  "questionText": "In which year did the \"Quit India Movement\" (Bharat Chhodo Andolan) start?",
-                  "questionTextUrdu": "\"ہندوستان چھوڑو تحریک\" (Quit India Movement) کس سال شروع ہوئی؟",
-                  "questionTextHindi": "\"भारत छोड़ो आंदोलन\" (Quit India Movement) किस वर्ष शुरू हुआ?",
-                  "options": [
-                          "1920",
-                          "1930",
-                          "1942",
-                          "1947"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Mahatma Gandhi launched the Quit India Movement in August 1942, giving the slogan \"Do or Die\"."
-          },
-          {
-                  "id": "q-gk-28",
-                  "questionText": "Who was the famous queen of Jhansi who fought against the British in 1857?",
-                  "questionTextUrdu": "جھانسی کی وہ مشہور ملکہ کون تھیں جنہوں نے 1857 میں انگریزوں سے جنگ کی؟",
-                  "questionTextHindi": "झाँसी की वह प्रसिद्ध रानी कौन थीं जिन्होंने 1857 में अंग्रेजों से लड़ाई की?",
-                  "options": [
-                          "Rani Padmini",
-                          "Rani Lakshmibai",
-                          "Ahilyabai Holkar",
-                          "Razia Sultan"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "Rani Lakshmibai (Jhansi ki Rani) is a great symbol of bravery in India's first war of independence."
-          },
-          {
-                  "id": "q-gk-29",
-                  "questionText": "Who composed the National Song of India, \"Vande Mataram\"?",
-                  "questionTextUrdu": "بھارت کا قومی گیت \"وندے ماترم\" کس نے لکھا؟",
-                  "questionTextHindi": "भारत का राष्ट्रीय गीत \"वंदे मातरम्\" किसने लिखा?",
-                  "options": [
-                          "Rabindranath Tagore",
-                          "Swami Vivekananda",
-                          "Bankim Chandra Chatterjee",
-                          "Ishwar Chandra Vidyasagar"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Bankim Chandra Chatterjee wrote \"Vande Mataram\", which greatly inspired the freedom fighters."
-          },
-          {
-                  "id": "q-gk-30",
-                  "questionText": "What was the popular slogan coined by Bal Gangadhar Tilak?",
-                  "questionTextUrdu": "بال گنگادھر تلک کا مشہور نعرہ کیا تھا؟",
-                  "questionTextHindi": "बाल गंगाधर तिलक का प्रसिद्ध नारा क्या था?",
-                  "options": [
-                          "Jai Hind",
-                          "Inquilab Zindabad",
-                          "Do or Die",
-                          "Swaraj is my birthright"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "Tilak powerfully declared, \"Swaraj (Self-rule) is my birthright, and I shall have it!\""
-          },
-          {
-                  "id": "q-gk-31",
-                  "questionText": "What is the National Animal of India?",
-                  "questionTextUrdu": "بھارت کا قومی جانور کون سا ہے؟",
-                  "questionTextHindi": "भारत का राष्ट्रीय पशु कौन सा है?",
-                  "options": [
-                          "Lion",
-                          "Elephant",
-                          "Bengal Tiger",
-                          "Leopard"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "The magnificent Bengal Tiger is the National Animal of India."
-          },
-          {
-                  "id": "q-gk-32",
-                  "questionText": "What is the National Bird of India?",
-                  "questionTextUrdu": "بھارت کا قومی پرندہ کون سا ہے؟",
-                  "questionTextHindi": "भारत का राष्ट्रीय पक्षी कौन सा है?",
-                  "options": [
-                          "Peacock",
-                          "Parrot",
-                          "Eagle",
-                          "Pigeon"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "The beautiful Peacock (Mor) is India's National Bird."
-          },
-          {
-                  "id": "q-gk-33",
-                  "questionText": "Which flower is the National Flower of India?",
-                  "questionTextUrdu": "بھارت کا قومی پھول کون سا ہے؟",
-                  "questionTextHindi": "भारत का राष्ट्रीय फूल कौन सा है?",
-                  "options": [
-                          "Rose",
-                          "Sunflower",
-                          "Lotus",
-                          "Jasmine"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "The Lotus (Kamal) is the National Flower of India, symbolizing purity."
-          },
-          {
-                  "id": "q-gk-34",
-                  "questionText": "Which is the National Tree of India?",
-                  "questionTextUrdu": "بھارت کا قومی درخت کون سا ہے؟",
-                  "questionTextHindi": "भारत का राष्ट्रीय वृक्ष (पेड़) कौन सा है?",
-                  "options": [
-                          "Neem Tree",
-                          "Banyan Tree",
-                          "Mango Tree",
-                          "Peepal Tree"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "The Banyan Tree (Bargad), which represents eternal life, is the National Tree."
-          },
-          {
-                  "id": "q-gk-35",
-                  "questionText": "Which famous white marble monument is located in Agra?",
-                  "questionTextUrdu": "آگرہ میں سفید سنگ مرمر کی کون سی مشہور عمارت واقع ہے؟",
-                  "questionTextHindi": "आगरा में सफेद संगमरमर की कौन सी प्रसिद्ध इमारत स्थित है?",
-                  "options": [
-                          "Red Fort",
-                          "Qutub Minar",
-                          "Hawa Mahal",
-                          "Taj Mahal"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "The Taj Mahal in Agra is one of the Seven Wonders of the World."
-          },
-          {
-                  "id": "q-gk-36",
-                  "questionText": "Which is the longest river in India?",
-                  "questionTextUrdu": "بھارت کا سب سے طویل دریا کون سا ہے؟",
-                  "questionTextHindi": "भारत की सबसे लंबी नदी कौन सी है?",
-                  "options": [
-                          "Yamuna",
-                          "Brahmaputra",
-                          "Ganga",
-                          "Godavari"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "The Ganga (Ganges) is the longest and most sacred river in India."
-          },
-          {
-                  "id": "q-gk-37",
-                  "questionText": "What is the name of India's space agency?",
-                  "questionTextUrdu": "بھارت کی خلائی ایجنسی کا کیا نام ہے؟",
-                  "questionTextHindi": "भारत की अंतरिक्ष एजेंसी का क्या नाम है?",
-                  "options": [
-                          "NASA",
-                          "ESA",
-                          "ISRO",
-                          "JAXA"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "ISRO (Indian Space Research Organisation) is India's pride in space exploration."
-          },
-          {
-                  "id": "q-gk-38",
-                  "questionText": "What is the currency of India?",
-                  "questionTextUrdu": "بھارت کی کرنسی (سکہ) کیا ہے؟",
-                  "questionTextHindi": "भारत की मुद्रा (करेंसी) क्या है?",
-                  "options": [
-                          "Dollar",
-                          "Taka",
-                          "Dinar",
-                          "Rupee"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "The official currency of India is the Indian Rupee (₹)."
-          },
-          {
-                  "id": "q-gk-39",
-                  "questionText": "Which monument in Mumbai was built to welcome King George V?",
-                  "questionTextUrdu": "ممبئی کی وہ کون سی عمارت ہے جو کنگ جارج پنجم کے استقبال کے لیے بنائی گئی تھی؟",
-                  "questionTextHindi": "मुंबई का वह कौन सा स्मारक है जो किंग जॉर्ज पंचम के स्वागत के लिए बनाया गया था?",
-                  "options": [
-                          "India Gate",
-                          "Gateway of India",
-                          "Charminar",
-                          "Victoria Memorial"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "The Gateway of India is located in Mumbai, overlooking the Arabian Sea."
-          },
-          {
-                  "id": "q-gk-40",
-                  "questionText": "Where is the India Gate located?",
-                  "questionTextUrdu": "انڈیا گیٹ کہاں واقع ہے؟",
-                  "questionTextHindi": "इंडिया गेट कहाँ स्थित है?",
-                  "options": [
-                          "Mumbai",
-                          "Kolkata",
-                          "New Delhi",
-                          "Chennai"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "India Gate is a war memorial located in the capital, New Delhi. (Don't confuse it with Gateway of India in Mumbai!)"
-          },
-          {
-                  "id": "q-gk-41",
-                  "questionText": "Which city is known as the \"Silicon Valley of India\" because of its IT industry?",
-                  "questionTextUrdu": "آئی ٹی انڈسٹری کی وجہ سے کس شہر کو \"بھارت کی سلیکون ویلی\" کہا جاتا ہے؟",
-                  "questionTextHindi": "IT उद्योग के कारण किस शहर को \"भारत की सिलिकॉन वैली\" कहा जाता है?",
-                  "options": [
-                          "Hyderabad",
-                          "Pune",
-                          "Noida",
-                          "Bengaluru"
-                  ],
-                  "correctOptionIndex": 3,
-                  "explanation": "Bengaluru is the biggest IT (Information Technology) hub in India."
-          },
-          {
-                  "id": "q-gk-42",
-                  "questionText": "What is the national sport of India?",
-                  "questionTextUrdu": "بھارت کا قومی کھیل کون سا ہے؟",
-                  "questionTextHindi": "भारत का राष्ट्रीय खेल कौन सा है?",
-                  "options": [
-                          "Cricket",
-                          "Football",
-                          "Field Hockey",
-                          "Kabaddi"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Although Cricket is very popular, Field Hockey is considered the national sport of India."
-          },
-          {
-                  "id": "q-gk-43",
-                  "questionText": "The famous \"Golden Temple\" (Harmandir Sahib) is located in which city?",
-                  "questionTextUrdu": "مشہور \"گولڈن ٹیمپل\" (سرمئی مندر) کس شہر میں واقع ہے؟",
-                  "questionTextHindi": "प्रसिद्ध \"स्वर्ण मंदिर\" (Golden Temple) किस शहर में स्थित है?",
-                  "options": [
-                          "Chandigarh",
-                          "Amritsar",
-                          "Ludhiana",
-                          "Jalandhar"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "The Golden Temple is the holiest Gurdwara of Sikhism, located in Amritsar, Punjab."
-          },
-          {
-                  "id": "q-gk-44",
-                  "questionText": "How many colors are there in the Indian National Flag (excluding the Ashoka Chakra)?",
-                  "questionTextUrdu": "بھارتی قومی پرچم (ترنگے) میں کتنے رنگ ہیں؟",
-                  "questionTextHindi": "भारतीय राष्ट्रीय ध्वज (तिरंगे) में कितने रंग होते हैं?",
-                  "options": [
-                          "2",
-                          "3",
-                          "4",
-                          "5"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "The Indian flag (Tiranga) has three colors: Saffron, White, and Green."
-          },
-          {
-                  "id": "q-gk-45",
-                  "questionText": "What does the blue wheel in the center of the Indian Flag represent?",
-                  "questionTextUrdu": "بھارتی پرچم کے درمیان میں موجود نیلا پہیہ کیا کہلاتا ہے؟",
-                  "questionTextHindi": "भारतीय ध्वज के बीच में मौजूद नीला चक्र क्या कहलाता है?",
-                  "options": [
-                          "Dharma Chakra",
-                          "Ashoka Chakra",
-                          "Surya Chakra",
-                          "Shanti Chakra"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "It is the Ashoka Chakra, a 24-spoke wheel representing motion and progress."
-          },
-          {
-                  "id": "q-gk-46",
-                  "questionText": "Which state in India is the largest by land area?",
-                  "questionTextUrdu": "رقبے کے لحاظ سے بھارت کا سب سے بڑا ریاست کون سا ہے؟",
-                  "questionTextHindi": "क्षेत्रफल (Area) के हिसाब से भारत का सबसे बड़ा राज्य कौन सा है?",
-                  "options": [
-                          "Maharashtra",
-                          "Uttar Pradesh",
-                          "Rajasthan",
-                          "Madhya Pradesh"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Rajasthan is the largest state in India by land area."
-          },
-          {
-                  "id": "q-gk-47",
-                  "questionText": "Which state in India is the smallest by land area?",
-                  "questionTextUrdu": "رقبے کے لحاظ سے بھارت کا سب سے چھوٹا ریاست کون سا ہے؟",
-                  "questionTextHindi": "क्षेत्रफल (Area) के हिसाब से भारत का सबसे छोटा राज्य कौन सा है?",
-                  "options": [
-                          "Sikkim",
-                          "Goa",
-                          "Tripura",
-                          "Mizoram"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "Goa is the smallest state in India, famous for its beautiful beaches."
-          },
-          {
-                  "id": "q-gk-48",
-                  "questionText": "Which Indian festival is known as the \"Festival of Lights\"?",
-                  "questionTextUrdu": "بھارت کا کون سا تہوار \"روشنیوں کا تہوار\" کہلاتا ہے؟",
-                  "questionTextHindi": "भारत का कौन सा त्योहार \"रोशनी का त्योहार\" कहलाता है?",
-                  "options": [
-                          "Holi",
-                          "Eid",
-                          "Diwali",
-                          "Navratri"
-                  ],
-                  "correctOptionIndex": 2,
-                  "explanation": "Diwali (or Deepavali) is celebrated by lighting diyas and signifies the victory of light over darkness."
-          },
-          {
-                  "id": "q-gk-49",
-                  "questionText": "The famous \"Sun Temple\" is located in which state?",
-                  "questionTextUrdu": "مشہور \"سوریا مندر\" (Sun Temple) کس ریاست میں واقع ہے؟",
-                  "questionTextHindi": "प्रसिद्ध \"सूर्य मंदिर\" (Sun Temple) किस राज्य में स्थित है?",
-                  "options": [
-                          "Odisha",
-                          "Gujarat",
-                          "Tamil Nadu",
-                          "Karnataka"
-                  ],
-                  "correctOptionIndex": 0,
-                  "explanation": "The Konark Sun Temple, designed like a giant chariot, is located in Odisha."
-          },
-          {
-                  "id": "q-gk-50",
-                  "questionText": "How many states are there in India currently?",
-                  "questionTextUrdu": "اس وقت بھارت میں کل کتنی ریاستیں (States) ہیں؟",
-                  "questionTextHindi": "वर्तमान में भारत में कुल कितने राज्य (States) हैं?",
-                  "options": [
-                          "27",
-                          "28",
-                          "29",
-                          "30"
-                  ],
-                  "correctOptionIndex": 1,
-                  "explanation": "Currently, India is a union of 28 States and 8 Union Territories."
-          }
-  ]
+      "id": "surah-92",
+      "number": 92,
+      "nameArabic": "سُورَةُ اللَّيْل",
+      "nameEnglish": "Al-Layl",
+      "nameUrdu": "سورۃ اللیل",
+      "meaningEnglish": "The Night",
+      "versesCount": 21,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3",
+      "order": 7,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَاللَّيْلِ إِذَا يَغْشَىٰ",
+          "textUrdu": "قسم ہے رات کی جب وہ چھا جائے!",
+          "textEnglish": "By the night when it covers",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَالنَّهَارِ إِذَا تَجَلَّىٰ",
+          "textUrdu": "اور دن کی جب وہ روشن ہو جائے!",
+          "textEnglish": "And [by] the day when it appears",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَمَا خَلَقَ الذَّكَرَ وَالْأُنثَىٰ",
+          "textUrdu": "اور اس ذات کی جس نے نر اور مادہ کو پیدا کیا!",
+          "textEnglish": "And [by] He who created the male and female,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "إِنَّ سَعْيَكُمْ لَشَتَّىٰ",
+          "textUrdu": "یقیناً تمہاری کوششیں مختلف قسم کی ہیں،",
+          "textEnglish": "Indeed, your efforts are diverse.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "فَأَمَّا مَنْ أَعْطَىٰ وَاتَّقَىٰ",
+          "textUrdu": "پس جس نے اللہ کی راہ میں دیا اور پرہیزگاری اختیار کی،",
+          "textEnglish": "As for he who gives and fears Allah",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "وَصَدَّقَ بِالْحُسْنَىٰ",
+          "textUrdu": "اور اچھی بات (کلمہ توحید) کی تصدیق کی،",
+          "textEnglish": "And believes in the best [reward],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "فَسَنُيَسِّرُهُ لِلْيُسْرَىٰ",
+          "textUrdu": "تو ہم اسے آسان راستے (جنت) کی توفیق دیں گے،",
+          "textEnglish": "We will ease him toward ease.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَأَمَّا مَن بَخِلَ وَاسْتَغْنَىٰ",
+          "textUrdu": "اور جس نے بخل کیا اور بے پرواہی برتی،",
+          "textEnglish": "But as for he who withholds and considers himself free of need",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "وَكَذَّبَ بِالْحُسْنَىٰ",
+          "textUrdu": "اور اچھی بات کو جھٹلایا،",
+          "textEnglish": "And denies the best [reward],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "فَسَنُيَسِّرُهُ لِلْعُسْرَىٰ",
+          "textUrdu": "تو ہم اسے تنگی کے راستے (جہنم) کے لیے تیار کر دیں گے،",
+          "textEnglish": "We will ease him toward difficulty.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "وَمَا يُغْنِي عَنْهُ مَالُهُ إِذَا تَرَدَّىٰ",
+          "textUrdu": "اور جب وہ ہلاک ہوگا تو اس کا مال اس کے کچھ کام نہ آئے گا،",
+          "textEnglish": "And what will his wealth avail him when he falls?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 12,
+          "textArabic": "إِنَّ عَلَيْنَا لَلْهُدَىٰ",
+          "textUrdu": "بے شک ہدایت کا راستہ دکھانا ہمارے ہی ذمے ہے،",
+          "textEnglish": "Indeed, [incumbent] upon Us is guidance.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 13,
+          "textArabic": "وَإِنَّ لَنَا لَلْآخِرَةَ وَالْأُولَىٰ",
+          "textUrdu": "اور یقیناً آخرت اور دنیا دونوں ہماری ہی ملکیت ہیں،",
+          "textEnglish": "And indeed, to Us belongs the Hereafter and the first [life].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 14,
+          "textArabic": "فَأَنذَرْتُكُمْ نَارًا تَلَظَّىٰ",
+          "textUrdu": "پس میں نے تمہیں بھڑکتی ہوئی آگ سے ڈرا دیا ہے،",
+          "textEnglish": "So I have warned you of a Fire which is blazing.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 15,
+          "textArabic": "لَا يَصْلَاهَا إِلَّا الْأَشْقَى",
+          "textUrdu": "جس میں صرف وہی بڑا بدبخت داخل ہوگا،",
+          "textEnglish": "None will [enter to] burn therein except the most wretched,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 16,
+          "textArabic": "الَّذِي كَذَّبَ وَتَوَلَّىٰ",
+          "textUrdu": "جس نے حق کو جھٹلایا اور منہ موڑا،",
+          "textEnglish": "Who had denied and turned away.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 17,
+          "textArabic": "وَسَيُجَنَّبُهَا الْأَتْقَى",
+          "textUrdu": "اور بڑا متقی اس آگ سے دور رکھا جائے گا،",
+          "textEnglish": "But the righteous one will be spared it -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 18,
+          "textArabic": "الَّذِي يُؤْتِي مَالَهُ يَتَزَكَّىٰ",
+          "textUrdu": "جو پاکیزگی حاصل کرنے کے لیے اپنا مال دیتا ہے،",
+          "textEnglish": "[He] who gives from his wealth to purify himself",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 19,
+          "textArabic": "وَمَا لِأَحَدٍ عِندَهُ مِن نِّعْمَةٍ تُجْزَىٰ",
+          "textUrdu": "اور اس پر کسی کا کوئی احسان نہیں جس کا بدلہ دیا جائے،",
+          "textEnglish": "And not [giving any reform] with him of favor to be recompensed",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 20,
+          "textArabic": "إِلَّا ابْتِغَاءَ وَجْهِ رَبِّهِ الْأَعْلَىٰ",
+          "textUrdu": "بلکہ صرف اپنے عالی شان رب کی رضا چاہنے کے لیے،",
+          "textEnglish": "Except only seeking the countenance of his Lord, Most High.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 21,
+          "textArabic": "وَلَسَوْفَ يَرْضَىٰ",
+          "textUrdu": "اور عنقریب وہ خوش ہو جائے گا۔",
+          "textEnglish": "And he is going to be satisfied.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-93",
+      "number": 93,
+      "nameArabic": "سُورَةُ الضُّحَىٰ",
+      "nameEnglish": "Ad-Duha",
+      "nameUrdu": "سورۃ الضحیٰ",
+      "meaningEnglish": "The Morning Hours",
+      "versesCount": 11,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3",
+      "order": 8,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَالضُّحَىٰ",
+          "textUrdu": "قسم ہے چاشت کے وقت کی!",
+          "textEnglish": "By the morning sunlight,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَاللَّيْلِ إِذَا سَجَىٰ",
+          "textUrdu": "اور رات کی جب وہ چھا جائے!",
+          "textEnglish": "And by the night when it covers with darkness,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+          "textUrdu": "آپ کے رب نے نہ تو آپ کو چھوڑا ہے اور نہ وہ ناراض ہوا ہے۔",
+          "textEnglish": "Your Lord has not taken leave of you, [O Muhammad], nor has He detested [you].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَلَلْآخِرَةُ خَيْرٌ لَّكَ مِنَ الْأُولَىٰ",
+          "textUrdu": "اور یقیناً آخرت آپ کے لیے دنیا سے کہیں بہتر ہے۔",
+          "textEnglish": "And the Hereafter is better for you than the first [life].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ",
+          "textUrdu": "اور عنقریب آپ کا رب آپ کو اتنا عطا فرمائے گا کہ آپ خوش ہو جائیں گے۔",
+          "textEnglish": "And your Lord is going to give you, and you will be satisfied.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "أَلَمْ يَجِدْكَ يَتِيمًا فَآوَىٰ",
+          "textUrdu": "کیا اس نے آپ کو یتیم پا کر پناہ نہیں دی؟",
+          "textEnglish": "Did He not find you an orphan and give [you] refuge?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "وَوَجَدَكَ ضَالًّا فَهَدَىٰ",
+          "textUrdu": "اور اس نے آپ کو راستہ کی تلاش میں پایا تو سیدھا راستہ دکھایا۔",
+          "textEnglish": "And He found you lost and guided [you],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَوَجَدَكَ عَائِلًا فَأَغْنَىٰ",
+          "textUrdu": "اور اس نے آپ کو ضرورت مند پایا تو غنی کر دیا۔",
+          "textEnglish": "And He found you poor and made [you] self-sufficient.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "فَأَمَّا الْيَتِيمَ فَلَا تَقْهَرْ",
+          "textUrdu": "پس آپ بھی یتیم پر سختی نہ کیجیے۔",
+          "textEnglish": "So as for the orphan, do not oppress [him].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "وَأَمَّا السَّائِلَ فَلَا تَنْهَرْ",
+          "textUrdu": "اور مانگنے والے کو نہ جھڑکیے۔",
+          "textEnglish": "And as for the petitioner, do not repel [him].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ",
+          "textUrdu": "اور اپنے رب کی نعمتوں کا خوب چرچا کیجیے۔",
+          "textEnglish": "But as for the favor of your Lord, report [it].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-94",
+      "number": 94,
+      "nameArabic": "سُورَةُ الشَّرْح",
+      "nameEnglish": "Ash-Sharh",
+      "nameUrdu": "سورۃ الشرح",
+      "meaningEnglish": "The Relief & Expansion",
+      "versesCount": 8,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3",
+      "order": 9,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+          "textUrdu": "کیا ہم نے آپ کی خاطر آپ کا سینہ کشادہ نہیں فرمایا؟",
+          "textEnglish": "Did We not expand for you, [O Muhammad], your breast?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَوَضَعْنَا عَنكَ وِزْرَكَ",
+          "textUrdu": "اور ہم نے آپ پر سے آپ کا بوجھ اتار دیا۔",
+          "textEnglish": "And We removed from you your burden",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "الَّذِي أَنقَضَ ظَهْرَكَ",
+          "textUrdu": "جس نے آپ کی پیٹھ توڑ رکھی تھی۔",
+          "textEnglish": "Which had weighed upon your back",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+          "textUrdu": "اور ہم نے آپ کا ذکر بلند کر دیا۔",
+          "textEnglish": "And raised high for you your repute.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+          "textUrdu": "پس یقیناً ہر مشکل کے ساتھ آسانی ہے۔",
+          "textEnglish": "For indeed, with hardship [will be] ease.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "إِنَّ مَعَ الْعُسْرِ يُسْرًا",
+          "textUrdu": "بے شک ہر مشکل کے ساتھ آسانی ہے۔",
+          "textEnglish": "Indeed, with hardship [will be] ease.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "فَإِذَا فَرَغْتَ فَانصَبْ",
+          "textUrdu": "پس جب آپ فارغ ہوں تو عبادت میں محنت کیجیے۔",
+          "textEnglish": "So when you have finished [your duties], then stand up [for worship].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَإِلَىٰ رَبِّكَ فَارْغَب",
+          "textUrdu": "اور اپنے رب ہی کی طرف رغبت رکھیے۔",
+          "textEnglish": "And to your Lord direct [your] longing.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-95",
+      "number": 95,
+      "nameArabic": "سُورَةُ التِّين",
+      "nameEnglish": "At-Tin",
+      "nameUrdu": "سورۃ التین",
+      "meaningEnglish": "The Fig",
+      "versesCount": 8,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3",
+      "order": 10,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَالتِّينِ وَالزَّيْتُونِ",
+          "textUrdu": "قسم ہے انجیر کی اور زیتون کی!",
+          "textEnglish": "By the fig and the olive",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَطُورِ سِينِينَ",
+          "textUrdu": "اور طورِ سینا کی!",
+          "textEnglish": "And [by] Mount Sinai",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَهَٰذَا الْبَلَدِ الْأَمِينِ",
+          "textUrdu": "اور اس امن والے شہر (مکہ) کی!",
+          "textEnglish": "And [by] this secure city [Makkah],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي أَحْسَنِ تَقْوِيمٍ",
+          "textUrdu": "یقیناً ہم نے انسان کو بہترین ساخت پر پیدا کیا۔",
+          "textEnglish": "We have certainly created man in the best of stature;",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "ثُمَّ رَدَدْنَاهُ أَسْفَلَ سَافِلِينَ",
+          "textUrdu": "پھر ہم نے اسے پست ترین حالت میں لوٹا دیا۔",
+          "textEnglish": "Then We return him to the lowest of the low,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ",
+          "textUrdu": "سوائے ان کے جو ایمان لائے اور نیک عمل کیے، پس ان کے لیے کبھی ختم نہ ہونے والا اجر ہے۔",
+          "textEnglish": "Except for those who believe and do righteous deeds, for they will have a reward uninterrupted.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "فَمَا يُكَذِّبُكَ بَعْدُ بِالدِّينِ",
+          "textUrdu": "پھر اس کے بعد کون سی چیز تمہیں جزا و سزا کو جھٹلانے پر آمادہ کرتی ہے؟",
+          "textEnglish": "So what yet causes you to deny the Recompense?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "أَلَيْسَ اللَّهُ بِأَحْكَمِ الْحَاكِمِينَ",
+          "textUrdu": "کیا اللہ سب حاکموں سے بڑا حاکم نہیں ہے؟",
+          "textEnglish": "Is not Allah the most just of judges?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-96",
+      "number": 96,
+      "nameArabic": "سُورَةُ الْعَلَق",
+      "nameEnglish": "Al-Alaq",
+      "nameUrdu": "سورۃ العلق",
+      "meaningEnglish": "The Clot (First Revelation)",
+      "versesCount": 19,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3",
+      "order": 11,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+          "textUrdu": "پڑھیے اپنے رب کے نام کے ساتھ جس نے پیدا کیا۔",
+          "textEnglish": "Recite in the name of your Lord who created -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ",
+          "textUrdu": "اس نے انسان کو جمے ہوئے خون کے لوتھڑے سے پیدا کیا۔",
+          "textEnglish": "Created man from a clinging substance.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "اقْرَأْ وَرَبُّكَ الْأَكْرَمُ",
+          "textUrdu": "پڑھیے اور آپ کا رب سب سے بڑا کریم ہے۔",
+          "textEnglish": "Recite, and your Lord is the most Generous -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "الَّذِي عَلَّمَ بِالْقَلَمِ",
+          "textUrdu": "جس نے قلم کے ذریعے علم سکھایا۔",
+          "textEnglish": "Who taught by the pen -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "عَلَّمَ الْإِنسَانَ مَا لَمْ يَعْلَمْ",
+          "textUrdu": "انسان کو وہ سکھایا جو وہ نہیں جانتا تھا۔",
+          "textEnglish": "Taught man that which he knew not.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "كَلَّا إِنَّ الْإِنسَانَ لَيَطْغَىٰ",
+          "textUrdu": "ہرگز نہیں، یقیناً انسان سرکشی کرتا ہے۔",
+          "textEnglish": "No! [But] indeed, man transgresses",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "أَن رَّآهُ اسْتَغْنَىٰ",
+          "textUrdu": "اس بات پر کہ وہ اپنے آپ کو بے نیاز دیکھتا ہے۔",
+          "textEnglish": "Because he sees himself self-sufficient.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "إِنَّ إِلَىٰ رَبِّكَ الرُّجْعَىٰ",
+          "textUrdu": "یقیناً آپ کے رب ہی کی طرف لوٹنا ہے۔",
+          "textEnglish": "Indeed, to your Lord is the return.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "أَرَأَيْتَ الَّذِي يَنْهَىٰ",
+          "textUrdu": "کیا آپ نے اس شخص کو دیکھا جو روکتا ہے؟",
+          "textEnglish": "Have you seen the one who forbids",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "عَبْدًا إِذَا صَلَّىٰ",
+          "textUrdu": "ایک بندے کو جب وہ نماز پڑھتا ہے۔",
+          "textEnglish": "A servant when he prays?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "أَرَأَيْتَ إِن كَانَ عَلَى الْهُدَىٰ",
+          "textUrdu": "بھلا بتائیے اگر وہ ہدایت پر ہو؟",
+          "textEnglish": "Have you seen if he is upon guidance",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 12,
+          "textArabic": "أَوْ أَمَرَ بِالتَّقْوَىٰ",
+          "textUrdu": "یا پرہیزگاری کا حکم دیتا ہو؟",
+          "textEnglish": "Or enjoins righteousness?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 13,
+          "textArabic": "أَرَأَيْتَ إِن كَذَّبَ وَتَوَلَّىٰ",
+          "textUrdu": "بھلا دیکھیے اگر اس نے جھٹلایا اور منہ موڑا؟",
+          "textEnglish": "Have you seen if he denies and turns away -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 14,
+          "textArabic": "أَلَمْ يَعْلَم بِأَنَّ اللَّهَ يَرَىٰ",
+          "textUrdu": "کیا وہ نہیں جانتا کہ اللہ سب کچھ دیکھ رہا ہے؟",
+          "textEnglish": "Does he not know that Allah sees?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 15,
+          "textArabic": "كَلَّا لَئِن لَّمْ يَنتَهِ لَنَسْفَعًا بِالنَّاصِيَةِ",
+          "textUrdu": "ہرگز نہیں، اگر وہ باز نہ آیا تو ہم پیشانی کے بال پکڑ کر گھسیٹیں گے۔",
+          "textEnglish": "No! If he does not desist, We will surely drag him by the forelock -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 16,
+          "textArabic": "نَاصِيَةٍ كَاذِبَةٍ خَاطِئَةٍ",
+          "textUrdu": "جھوٹی، خطا کار پیشانی۔",
+          "textEnglish": "A lying, sinning forelock.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 17,
+          "textArabic": "فَلْيَدْعُ نَادِيَهُ",
+          "textUrdu": "پس وہ اپنی مجلس والوں کو بلا لے۔",
+          "textEnglish": "Then let him call his associates;",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 18,
+          "textArabic": "سَنَدْعُ الزَّبَانِيَةَ",
+          "textUrdu": "ہم بھی عذاب کے فرشتوں کو بلائیں گے۔",
+          "textEnglish": "We will call the angels of Hell.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 19,
+          "textArabic": "كَلَّا لَا تُطِعْهُ وَاسْجُدْ وَاقْتَرِب",
+          "textUrdu": "ہرگز اس کا کہنا نہ مانیں، اور سجدہ کیجیے اور اللہ کا قرب حاصل کیجیے۔",
+          "textEnglish": "No! Do not obey him. But prostrate and draw near [to Allah].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-97",
+      "number": 97,
+      "nameArabic": "سُورَةُ الْقَدْر",
+      "nameEnglish": "Al-Qadr",
+      "nameUrdu": "سورۃ القدر",
+      "meaningEnglish": "The Night of Decree",
+      "versesCount": 5,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3",
+      "order": 12,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ",
+          "textUrdu": "بے شک ہم نے اس (قرآن) کو شبِ قدر میں نازل فرمایا۔",
+          "textEnglish": "Indeed, We sent the Qur'an down during the Night of Decree.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ",
+          "textUrdu": "اور آپ کو کیا معلوم کہ شبِ قدر کیا ہے؟",
+          "textEnglish": "And what can make you know what is the Night of Decree?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ",
+          "textUrdu": "شبِ قدر ہزار مہینوں سے بہتر ہے۔",
+          "textEnglish": "The Night of Decree is better than a thousand months.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "تَنَزَّلُ الْمَلَائِكَةُ وَالرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ",
+          "textUrdu": "اس میں فرشتے اور روح القدس اپنے رب کے حکم سے ہر کام کے لیے اترتے ہیں۔",
+          "textEnglish": "The angels and the Spirit descend therein by permission of their Lord for every matter.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ",
+          "textUrdu": "یہ رات طلوعِ فجر تک سراسر سلامتی ہے۔",
+          "textEnglish": "Peace it is until the emergence of dawn.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-98",
+      "number": 98,
+      "nameArabic": "سُورَةُ الْبَيِّنَة",
+      "nameEnglish": "Al-Bayyinah",
+      "nameUrdu": "سورۃ البینہ",
+      "meaningEnglish": "The Clear Proof",
+      "versesCount": 8,
+      "revelationType": "Medinan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3",
+      "order": 13,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "لَمْ يَكُنِ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ مُنفَكِّينَ حَتَّىٰ تَأْتِيَهُمُ الْبَيِّنَةُ",
+          "textUrdu": "اہلِ کتاب میں سے کفر کرنے والے اور مشرکین باز آنے والے نہ تھے جب تک کہ ان کے پاس واضح دلیل نہ آ جاتی۔",
+          "textEnglish": "Those who disbelieved among the People of the Scripture and the polytheists were not to be parted until there came to them clear evidence -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "رَسُولٌ مِّنَ اللَّهِ يَتْلُو صُحُفًا مُّطَهَّرَةً",
+          "textUrdu": "اللہ کی طرف سے ایک رسول جو پاکیزہ صحیفے پڑھ کر سنائے۔",
+          "textEnglish": "A Messenger from Allah, reciting purified scriptures",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "فِيهَا كُتُبٌ قَيِّمَةٌ",
+          "textUrdu": "جن میں بالکل سیدھی اور درست تحریریں ہیں۔",
+          "textEnglish": "Within which are correct writings.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَمَا تَفَرَّقَ الَّذِينَ أُوتُوا الْكِتَابَ إِلَّا مِن بَعْدِ مَا جَاءَتْهُمُ الْبَيِّنَةُ",
+          "textUrdu": "اور اہلِ کتاب میں پھوٹ نہیں پڑی مگر اس کے بعد کہ ان کے پاس روشن دلیل آ گئی۔",
+          "textEnglish": "Nor did those who were given the Scripture become divided until after there had come to them clear evidence.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ حُنَفَاءَ وَيُقِيمُوا الصَّلَاةَ وَيُؤْتُوا الزَّكَاةَ ۚ وَذَٰلِكَ دِينُ الْقَيِّمَةِ",
+          "textUrdu": "اور انہیں صرف یہی حکم دیا گیا تھا کہ وہ یکسو ہو کر خلوصِ نیت سے اللہ کی بندگی کریں اور نماز قائم کریں اور زکوٰۃ دیں۔ اور یہی درست دین ہے۔",
+          "textEnglish": "And they were not commanded except to worship Allah, [being] sincere to Him in religion, inclining to truth, and to establish prayer and to give zakah. And that is the correct religion.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "إِنَّ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ فِي نَارِ جَهَنَّمَ خَالِدِينَ فِيهَا ۚ أُولَٰئِكَ هُمْ شَرُّ الْبَرِيَّةِ",
+          "textUrdu": "بے شک جو لوگ اہلِ کتاب اور مشرکین میں سے کافر ہوئے وہ جہنم کی آگ میں ہوں گے، ہمیشہ اس میں رہیں گے۔ یہی لوگ بدترین مخلوق ہیں۔",
+          "textEnglish": "Indeed, they who disbelieved among the People of the Scripture and the polytheists will be in the fire of Hell, abiding eternally therein. Those are the worst of creatures.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ أُولَٰئِكَ هُمْ خَيْرُ الْبَرِيَّةِ",
+          "textUrdu": "بے شک جو لوگ ایمان لائے اور انہوں نے نیک عمل کیے، وہی لوگ بہترین مخلوق ہیں۔",
+          "textEnglish": "Indeed, they who have believed and done righteous deeds - those are the best of creatures.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "جَزَاؤُهُمْ عِندَ رَبِّهِمْ جَنَّاتُ عَدْنٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ خَالِدِينَ فِيهَا أَبَدًا ۖ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ ۚ ذَٰلِكَ لِمَنْ خَشِيَ رَبَّهُ",
+          "textUrdu": "ان کا بدلہ ان کے رب کے پاس سدا بہار باغات ہیں جن کے نیچے نہریں بہتی ہیں، وہ ان میں ہمیشہ رہیں گے۔ اللہ ان سے راضی ہوا اور وہ اس سے راضی ہوئے۔ یہ اس شخص کے لیے ہے جو اپنے رب سے ڈرا۔",
+          "textEnglish": "Their reward with their Lord will be gardens of perpetual residence beneath which rivers flow, wherein they will abide forever, Allah being pleased with them and they with Him. That is for whoever has feared his Lord.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-99",
+      "number": 99,
+      "nameArabic": "سُورَةُ الزَّلْزَلَة",
+      "nameEnglish": "Az-Zalzalah",
+      "nameUrdu": "سورۃ الزلزلہ",
+      "meaningEnglish": "The Earthquake",
+      "versesCount": 8,
+      "revelationType": "Medinan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3",
+      "order": 14,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا",
+          "textUrdu": "جب زمین اپنی پوری شدت سے ہلا دی جائے گی!",
+          "textEnglish": "When the earth is shaken with its [final] earthquake",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَأَخْرَجَتِ الْأَرْضُ أَثْقَالَهَا",
+          "textUrdu": "اور زمین اپنے اندر کے بوجھ باہر نکال پھینکے گی!",
+          "textEnglish": "And the earth discharges its burdens",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَقَالَ الْإِنسَانُ مَا لَهَا",
+          "textUrdu": "اور انسان کہے گا کہ اسے کیا ہو گیا ہے؟",
+          "textEnglish": "And man says, \"What is [wrong] with it?\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "يَوْمَئِذٍ تُحَدِّثُ أَخْبَارَهَا",
+          "textUrdu": "اس دن وہ اپنے حالات بیان کرے گی۔",
+          "textEnglish": "That Day, it will report its news",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا",
+          "textUrdu": "کیونکہ آپ کے رب نے اسے یہی حکم دیا ہوگا۔",
+          "textEnglish": "Because your Lord has commanded it.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "يَوْمَئِذٍ يَصْدُرُ النَّاسُ أَشْتَاتًا لِّيُرَوْا أَعْمَالَهُمْ",
+          "textUrdu": "اس دن لوگ مختلف گروہوں میں نکلیں گے تاکہ ان کے اعمال دکھائے جائیں۔",
+          "textEnglish": "That Day, the people will depart separated [into categories] to be shown [the result of] their deeds.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ",
+          "textUrdu": "پس جس نے ذرہ برابر نیکی کی ہوگی وہ اسے دیکھ لے گا۔",
+          "textEnglish": "So whoever does an atom's weight of good will see it,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُ",
+          "textUrdu": "اور جس نے ذرہ برابر برائی کی ہوگی وہ اسے بھی دیکھ لے گا۔",
+          "textEnglish": "And whoever does an atom's weight of evil will see it.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-100",
+      "number": 100,
+      "nameArabic": "سُورَةُ الْعَادِيَات",
+      "nameEnglish": "Al-Adiyat",
+      "nameUrdu": "سورۃ العادیات",
+      "meaningEnglish": "The Courser / Charging Steeds",
+      "versesCount": 11,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3",
+      "order": 15,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَالْعَادِيَاتِ ضَبْحًا",
+          "textUrdu": "قسم ہے ہانپتے ہوئے دوڑنے والے گھوڑوں کی!",
+          "textEnglish": "By the racers, panting,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "فَالْمُورِيَاتِ قَدْحًا",
+          "textUrdu": "پھر ٹاپوں سے چنگاریاں نکالنے والوں کی!",
+          "textEnglish": "And the producers of sparks [when] striking",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "فَالْمُغِيرَاتِ صُبْحًا",
+          "textUrdu": "پھر صبح کے وقت حملہ کرنے والوں کی!",
+          "textEnglish": "And the chargers at dawn,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "فَأَثَرْنَ بِهِ نَقْعًا",
+          "textUrdu": "پھر اس وقت گرد و غبار اڑانے والوں کی!",
+          "textEnglish": "Stirring up thereby [clouds of] dust,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "فَوَسَطْنَ بِهِ جَمْعًا",
+          "textUrdu": "پھر اس کے ساتھ دشمن کی فوج میں گھس جانے والوں کی!",
+          "textEnglish": "Arriving thereby in the center collectively,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "إِنَّ الْإِنسَانَ لِرَبِّهِ لَكَنُودٌ",
+          "textUrdu": "بے شک انسان اپنے رب کا بڑا ناشکرا ہے۔",
+          "textEnglish": "Indeed mankind, to his Lord, is ungrateful.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "وَإِنَّهُ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ",
+          "textUrdu": "اور وہ خود بھی اس بات پر گواہ ہے۔",
+          "textEnglish": "And indeed, to that he is to witness.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَإِنَّهُ لِحُبِّ الْخَيْرِ لَشَدِيدٌ",
+          "textUrdu": "اور وہ مال کی محبت میں بہت سخت ہے۔",
+          "textEnglish": "And indeed he is, in love of wealth, intense.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِي الْقُبُورِ",
+          "textUrdu": "کیا وہ نہیں جانتا جب قبروں میں جو کچھ ہے نکال لیا جائے گا؟",
+          "textEnglish": "But does he not know that when the contents of the graves are scattered",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "وَحُصِّلَ مَا فِي الصُّدُورِ",
+          "textUrdu": "اور جو کچھ سینوں میں ہے ظاہر کر دیا جائے گا؟",
+          "textEnglish": "And that within the breasts is obtained,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌ",
+          "textUrdu": "یقیناً ان کا رب اس دن ان کے حال سے پوری طرح باخبر ہوگا۔",
+          "textEnglish": "Indeed, their Lord with them, that Day, is [fully] Acquainted.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-101",
+      "number": 101,
+      "nameArabic": "سُورَةُ الْقَارِعَة",
+      "nameEnglish": "Al-Qari'ah",
+      "nameUrdu": "سورۃ القارعہ",
+      "meaningEnglish": "The Calamity / Striking Hour",
+      "versesCount": 11,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3",
+      "order": 16,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "الْقَارِعَةُ",
+          "textUrdu": "کھڑکھڑانے والی آفت!",
+          "textEnglish": "The Striking Calamity -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "مَا الْقَارِعَةُ",
+          "textUrdu": "وہ کھڑکھڑانے والی کیا ہے؟",
+          "textEnglish": "What is the Striking Calamity?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَمَا أَدْرَاكَ مَا الْقَارِعَةُ",
+          "textUrdu": "اور آپ کو کیا معلوم کہ وہ کھڑکھڑانے والی کیا ہے؟",
+          "textEnglish": "And what can make you know what is the Striking Calamity?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "يَوْمَ يَكُونُ النَّاسُ كَالْفَرَاشِ الْمَبْثُوثِ",
+          "textUrdu": "جس دن لوگ بکھرے ہوئے پروانوں کی طرح ہو جائیں گے۔",
+          "textEnglish": "It is the Day when people will be like moths, dispersed,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَتَكُونُ الْجِبَالُ كَالْعِهْنِ الْمَنفُوشِ",
+          "textUrdu": "اور پہاڑ دھنی ہوئی اون کی طرح ہو جائیں گے۔",
+          "textEnglish": "And the mountains will be like wool, fluffed up.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "فَأَمَّا مَن ثَقُلَتْ مَوَازِينُهُ",
+          "textUrdu": "پس جس کے پلڑے بھاری ہوں گے۔",
+          "textEnglish": "Then as for one whose scales are heavy [with good deeds],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "فَهُوَ فِي عِيشَةٍ رَّاضِيَةٍ",
+          "textUrdu": "تو وہ من پسند عیش میں ہوگا۔",
+          "textEnglish": "He will be in a pleasant life.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَأَمَّا مَنْ خَفَّتْ مَوَازِينُهُ",
+          "textUrdu": "اور جس کے پلڑے ہلکے ہوں گے۔",
+          "textEnglish": "But as for one whose scales are light,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "فَأُمُّهُ هَاوِيَةٌ",
+          "textUrdu": "تو اس کا ٹھکانہ ہاویہ (گہری کھائی) ہوگا۔",
+          "textEnglish": "His refuge will be an abyss.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "وَمَا أَدْرَاكَ مَا هِيَهْ",
+          "textUrdu": "اور آپ کو کیا معلوم کہ وہ کیا ہے؟",
+          "textEnglish": "And what can make you know what that is?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "نَارٌ حَامِيَةٌ",
+          "textUrdu": "وہ دہکتی ہوئی آگ ہے!",
+          "textEnglish": "It is a Fire, intensely hot.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-102",
+      "number": 102,
+      "nameArabic": "سُورَةُ التَّكَاثُر",
+      "nameEnglish": "At-Takathur",
+      "nameUrdu": "سورۃ التکاثر",
+      "meaningEnglish": "Competition in Increase",
+      "versesCount": 8,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3",
+      "order": 17,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "أَلْهَاكُمُ التَّكَاثُرُ",
+          "textUrdu": "تمہیں کثرت کی ہوس نے غافل کر دیا۔",
+          "textEnglish": "Competition in [worldly] increase diverts you",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "حَتَّىٰ زُرْتُمُ الْمَقَابِرَ",
+          "textUrdu": "یہاں تک کہ تم نے قبریں جا دیکھیں۔",
+          "textEnglish": "Until you visit the graveyards.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "كَلَّا سَوْفَ تَعْلَمُونَ",
+          "textUrdu": "ہرگز نہیں، عنقریب تم جان لو گے۔",
+          "textEnglish": "No! You are going to know.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ",
+          "textUrdu": "پھر ہرگز نہیں، جلد ہی تم جان لو گے۔",
+          "textEnglish": "Then no! You are going to know.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "كَلَّا لَوْ تَعْلَمُونَ عِلْمَ الْيَقِينِ",
+          "textUrdu": "ہرگز نہیں! کاش تم یقینی علم کے ساتھ جانتے۔",
+          "textEnglish": "No! If you only knew with knowledge of certainty...",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "لَتَرَوُنَّ الْجَحِيمَ",
+          "textUrdu": "تم ضرور جہنم کو دیکھو گے۔",
+          "textEnglish": "You will surely see the Hellfire.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "ثُمَّ لَتَرَوُنَّهَا عَيْنَ الْيَقِينِ",
+          "textUrdu": "پھر تم اسے یقین کی آنکھ سے دیکھو گے۔",
+          "textEnglish": "Then you will surely see it with the eye of certainty.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "ثُمَّ لَتُسْأَلُنَّ يَوْمَئِذٍ عَنِ النَّعِيمِ",
+          "textUrdu": "پھر اس دن تم سے نعمتوں کے بارے میں ضرور سوال کیا جائے گا۔",
+          "textEnglish": "Then you will surely be asked that Day about pleasure.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-103",
+      "number": 103,
+      "nameArabic": "سُورَةُ الْعَصْر",
+      "nameEnglish": "Al-Asr",
+      "nameUrdu": "سورۃ العصر",
+      "meaningEnglish": "The Declining Day",
+      "versesCount": 3,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/103.mp3",
+      "order": 18,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَالْعَصْرِ",
+          "textUrdu": "قسم ہے زمانے کی!",
+          "textEnglish": "By time,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/103.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "إِنَّ الْإِنسَانَ لَفِي خُسْرٍ",
+          "textUrdu": "بے شک تمام انسان خسارے میں ہیں۔",
+          "textEnglish": "Indeed, mankind is in loss,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/103.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
+          "textUrdu": "سوائے ان کے جو ایمان لائے اور نیک عمل کیے اور ایک دوسرے کو حق کی وصیت اور صبر کی تلقین کی۔",
+          "textEnglish": "Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/103.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-104",
+      "number": 104,
+      "nameArabic": "سُورَةُ الْهُمَزَة",
+      "nameEnglish": "Al-Humazah",
+      "nameUrdu": "سورۃ الہمزہ",
+      "meaningEnglish": "The Slanderer",
+      "versesCount": 9,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3",
+      "order": 19,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ",
+          "textUrdu": "تباہی ہے ہر طعنہ زنی کرنے والے اور عیب جوئی کرنے والے کے لیے!",
+          "textEnglish": "Woe to every scorner and mocker",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "الَّذِي جَمَعَ مَالًا وَعَدَّدَهُ",
+          "textUrdu": "جس نے مال جمع کیا اور اسے گن گن کر رکھا۔",
+          "textEnglish": "Who collects wealth and [continuously] counts it.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "يَحْسَبُ أَنَّ مَالَهُ أَخْلَدَهُ",
+          "textUrdu": "وہ سمجھتا ہے کہ اس کا مال اسے ہمیشہ زندہ رکھے گا۔",
+          "textEnglish": "He thinks that his wealth will make him immortal.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "كَلَّا ۖ لَيُنبَذَنَّ فِي الْحُطَمَةِ",
+          "textUrdu": "ہرگز نہیں! وہ ضرور حطمہ (توڑ پھوڑ دینے والی آگ) میں پھینکا جائے گا۔",
+          "textEnglish": "No! He will surely be thrown into the Crusher.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَمَا أَدْرَاكَ مَا الْحُطَمَةُ",
+          "textUrdu": "اور آپ کو کیا معلوم کہ حطمہ کیا ہے؟",
+          "textEnglish": "And what can make you know what is the Crusher?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "نَارُ اللَّهِ الْمُوقَدَةُ",
+          "textUrdu": "وہ اللہ کی بھڑکائی ہوئی آگ ہے۔",
+          "textEnglish": "It is the fire of Allah, [eternally] fueled,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "الَّتِي تَطَّلِعُ عَلَى الْأَفْئِدَةِ",
+          "textUrdu": "جو دلوں تک پہنچ جائے گی۔",
+          "textEnglish": "Which mounts directed at the hearts.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ",
+          "textUrdu": "بے شک وہ ان پر بند کر دی جائے گی۔",
+          "textEnglish": "Indeed, Hellfire will be closed down upon them",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "فِي عَمَدٍ مُّمَدَّدَةٍ",
+          "textUrdu": "لمبے لمبے ستونوں میں۔",
+          "textEnglish": "In extended columns.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-105",
+      "number": 105,
+      "nameArabic": "سُورَةُ الْفِيل",
+      "nameEnglish": "Al-Fil",
+      "nameUrdu": "سورۃ الفیل",
+      "meaningEnglish": "The Elephant",
+      "versesCount": 5,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3",
+      "order": 20,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ",
+          "textUrdu": "کیا آپ نے نہیں دیکھا کہ آپ کے رب نے ہاتھی والوں کے ساتھ کیا کیا؟",
+          "textEnglish": "Have you not considered, [O Muhammad], how your Lord dealt with the companions of the elephant?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ",
+          "textUrdu": "کیا اس نے ان کی چال کو برباد نہیں کر دیا؟",
+          "textEnglish": "Did He not make their plan into misguidance?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ",
+          "textUrdu": "اور ان پر پرندوں کے غول کے غول بھیجے۔",
+          "textEnglish": "And He sent against them birds in flocks,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ",
+          "textUrdu": "جو ان پر پکی ہوئی مٹی کے پتھر پھینک رہے تھے۔",
+          "textEnglish": "Striking them with stones of hard clay,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ",
+          "textUrdu": "پس اس نے انہیں کھائے ہوئے بھوسے جیسا کر دیا۔",
+          "textEnglish": "And He made them like eaten straw.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-106",
+      "number": 106,
+      "nameArabic": "سُورَةُ قُرَيْش",
+      "nameEnglish": "Quraysh",
+      "nameUrdu": "سورۃ قریش",
+      "meaningEnglish": "Quraysh",
+      "versesCount": 4,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3",
+      "order": 21,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "لِإِيلَافِ قُرَيْشٍ",
+          "textUrdu": "قریش کو مانوس کرنے کی خاطر!",
+          "textEnglish": "For the accustomed security of the Quraysh -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+          "textUrdu": "انہیں سردی اور گرمی کے سفر سے مانوس کرنے کی خاطر!",
+          "textEnglish": "Their accustomed security [in] the caravan of winter and summer -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ",
+          "textUrdu": "پس انہیں چاہیے کہ وہ اس گھر (خانہ کعبہ) کے رب کی عبادت کریں۔",
+          "textEnglish": "Let them worship the Lord of this House,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "الَّذِي أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ",
+          "textUrdu": "جس نے انہیں بھوک میں کھانا کھلایا اور خوف سے امن بخشا۔",
+          "textEnglish": "Who has fed them, [saving them] from hunger and made them safe, [saving them] from fear.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-107",
+      "number": 107,
+      "nameArabic": "سُورَةُ الْمَاعُون",
+      "nameEnglish": "Al-Ma'un",
+      "nameUrdu": "سورۃ الماعون",
+      "meaningEnglish": "Small Kindnesses",
+      "versesCount": 7,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3",
+      "order": 22,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ",
+          "textUrdu": "کیا آپ نے اس شخص کو دیکھا جو جزا و سزا کو جھٹلاتا ہے؟",
+          "textEnglish": "Have you seen the one who denies the Recompense?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "فَذَٰلِكَ الَّذِي يَدُعُّ الْيَتِيمَ",
+          "textUrdu": "یہ وہی ہے جو یتیم کو دھکے دیتا ہے۔",
+          "textEnglish": "For that is the one who drives away the orphan",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ",
+          "textUrdu": "اور مسکین کو کھانا کھلانے کی ترغیب نہیں دیتا۔",
+          "textEnglish": "And does not encourage the feeding of the poor.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "فَوَيلٌ لِّلْمُصَلِّينَ",
+          "textUrdu": "پس ہلاکت ہے ان نماز پڑھنے والوں کے لیے!",
+          "textEnglish": "So woe to those who pray",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ",
+          "textUrdu": "جو اپنی نماز سے غافل ہیں۔",
+          "textEnglish": "[But] who are heedless of their prayer -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "الَّذِينَ هُمْ يُرَاءُونَ",
+          "textUrdu": "جو صرف دکھاوا کرتے ہیں۔",
+          "textEnglish": "Those who make show [of their deeds]",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "وَيَمْنَعُونَ الْمَاعُونَ",
+          "textUrdu": "اور روزمرہ استعمال کی معمولی چیزیں مانگے پر دینے سے روکتے ہیں۔",
+          "textEnglish": "And withhold [simple] assistance.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-108",
+      "number": 108,
+      "nameArabic": "سُورَةُ الْكَوْثَر",
+      "nameEnglish": "Al-Kawthar",
+      "nameUrdu": "سورۃ الکوثر",
+      "meaningEnglish": "The Abundance",
+      "versesCount": 3,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/108.mp3",
+      "order": 23,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
+          "textUrdu": "بے شک ہم نے آپ کو کوثر (بے انتہا بھلائی) عطا فرمائی۔",
+          "textEnglish": "Indeed, We have granted you, [O Muhammad], al-Kawthar.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6205.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "فَصَلِّ لِرَبِّكَ وَانْحَرْ",
+          "textUrdu": "پس آپ اپنے رب کے لیے نماز پڑھیں اور قربانی کریں۔",
+          "textEnglish": "So pray to your Lord and sacrifice [to Him alone].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6206.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
+          "textUrdu": "یقیناً آپ کا دشمن ہی بے نام و نشان رہنے والا ہے۔",
+          "textEnglish": "Indeed, your enemy is the one cut off.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6207.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-109",
+      "number": 109,
+      "nameArabic": "سُورَةُ الْكَافِرُونَ",
+      "nameEnglish": "Al-Kafirun",
+      "nameUrdu": "سورۃ الکافرون",
+      "meaningEnglish": "The Disbelievers",
+      "versesCount": 6,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3",
+      "order": 24,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+          "textUrdu": "آپ کہہ دیجیے کہ اے کافرو!",
+          "textEnglish": "Say, \"O disbelievers,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+          "textUrdu": "میں ان بتوں کی پوجا نہیں کرتا جنہیں تم پوجتے ہو۔",
+          "textEnglish": "I do not worship what you worship.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ",
+          "textUrdu": "اور نہ تم اس کی بندگی کرتے ہو جس کی میں بندگی کرتا ہوں۔",
+          "textEnglish": "Nor are you worshippers of what I worship.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ",
+          "textUrdu": "اور نہ میں آئندہ ان کی پوجا کروں گا جن کی تم نے پوجا کی۔",
+          "textEnglish": "Nor will I be a worshipper of what you worship.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ",
+          "textUrdu": "اور نہ تم اس کی بندگی کرنے والے ہو جس کی میں بندگی کرتا ہوں۔",
+          "textEnglish": "Nor will you be worshippers of what I worship.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+          "textUrdu": "تمہارے لیے تمہارا دین اور میرے لیے میرا دین ہے۔",
+          "textEnglish": "For you is your religion, and for me is my religion.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-110",
+      "number": 110,
+      "nameArabic": "سُورَةُ النَّصْر",
+      "nameEnglish": "An-Nasr",
+      "nameUrdu": "سورۃ النصر",
+      "meaningEnglish": "The Divine Support",
+      "versesCount": 3,
+      "revelationType": "Medinan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/110.mp3",
+      "order": 25,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+          "textUrdu": "جب اللہ کی مدد اور فتح آ پہنچے!",
+          "textEnglish": "When the victory of Allah has come and the conquest,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/110.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا",
+          "textUrdu": "اور آپ لوگوں کو دیکھ لیں کہ وہ فوج در فوج اللہ کے دین میں داخل ہو رہے ہیں۔",
+          "textEnglish": "And you see the people entering into the religion of Allah in multitudes,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/110.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا",
+          "textUrdu": "تو اپنے رب کی حمد کے ساتھ تسبیح کیجیے اور اس سے مغفرت مانگیے، بے شک وہ بڑا معاف فرمانے والا ہے۔",
+          "textEnglish": "Then exalt [Him] with praise of your Lord and ask forgiveness of Him. Indeed, He is ever Accepting of repentance.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/110.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-111",
+      "number": 111,
+      "nameArabic": "سُورَةُ الْمَسَد",
+      "nameEnglish": "Al-Lahab (Al-Masad)",
+      "nameUrdu": "سورۃ اللھب",
+      "meaningEnglish": "The Palm Fiber / The Flame",
+      "versesCount": 5,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3",
+      "order": 26,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+          "textUrdu": "ٹوٹ گئے ابو لہب کے دونوں ہاتھ اور وہ خود بھی برباد ہو گیا!",
+          "textEnglish": "May the hands of Abu Lahab be ruined, and ruined is he.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ",
+          "textUrdu": "نہ تو اس کا مال اس کے کچھ کام آیا اور نہ وہ جو اس نے کمایا۔",
+          "textEnglish": "His wealth will not avail him or that which he gained.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ",
+          "textUrdu": "وہ عنقریب شعلہ زن آگ میں داخل ہوگا۔",
+          "textEnglish": "He will [enter to] burn in a Fire of [blazing] flame",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ",
+          "textUrdu": "اور اس کی عورت بھی جو لکڑیاں ڈھونے والی ہے۔",
+          "textEnglish": "And his wife [as well] - the carrier of firewood.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "فِي جِيدِهَا حَبْلٌ مِّن مَّسَدٍ",
+          "textUrdu": "اس کی گردن میں بٹی ہوئی رسی ہوگی۔",
+          "textEnglish": "Around her neck is a rope of [twisted] fiber.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-112",
+      "number": 112,
+      "nameArabic": "سُورَةُ الْإِخْلَاص",
+      "nameEnglish": "Al-Ikhlas",
+      "nameUrdu": "سورۃ الاخلاص",
+      "meaningEnglish": "The Sincerity (Purity of Faith)",
+      "versesCount": 4,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/112.mp3",
+      "order": 27,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+          "textUrdu": "کہہ دیجیے کہ وہ اللہ ایک ہے۔",
+          "textEnglish": "Say, \"He is Allah, [who is] One,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6222.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "اللَّهُ الصَّمَدُ",
+          "textUrdu": "اللہ بے نیاز ہے۔",
+          "textEnglish": "Allah, the Eternal Refuge.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6223.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+          "textUrdu": "نہ اس کی کوئی اولاد ہے اور نہ وہ کسی کی اولاد ہے۔",
+          "textEnglish": "He neither begets nor is born,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6224.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+          "textUrdu": "اور کوئی اس کا ہمسر نہیں۔",
+          "textEnglish": "Nor is there to Him any equivalent.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6225.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-113",
+      "number": 113,
+      "nameArabic": "سُورَةُ الْفَلَق",
+      "nameEnglish": "Al-Falaq",
+      "nameUrdu": "سورۃ الفلق",
+      "meaningEnglish": "The Daybreak",
+      "versesCount": 5,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/113.mp3",
+      "order": 28,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+          "textUrdu": "آپ کہہ دیجیے کہ میں صبح کے رب کی پناہ مانگتا ہوں۔",
+          "textEnglish": "Say, \"I seek refuge in the Lord of daybreak,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6226.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "مِن شَرِّ مَا خَلَقَ",
+          "textUrdu": "ہر اس چیز کی برائی سے جو اس نے پیدا کی۔",
+          "textEnglish": "From the evil of that which He created,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6227.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+          "textUrdu": "اور اندھیری رات کی برائی سے جب وہ چھا جائے۔",
+          "textEnglish": "And from the evil of darkness when it settles,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6228.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
+          "textUrdu": "اور گرہوں میں پھونکنے والیوں کی برائی سے۔",
+          "textEnglish": "And from the evil of the blowers in knots,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6229.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+          "textUrdu": "اور حسد کرنے والے کی برائی سے جب وہ حسد کرے۔",
+          "textEnglish": "And from the evil of an envier when he envies.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6230.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-114",
+      "number": 114,
+      "nameArabic": "سُورَةُ النَّاس",
+      "nameEnglish": "An-Nas",
+      "nameUrdu": "سورۃ الناس",
+      "meaningEnglish": "Mankind",
+      "versesCount": 6,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/114.mp3",
+      "order": 29,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+          "textUrdu": "آپ کہہ دیجیے کہ میں انسانوں کے رب کی پناہ میں آتا ہوں۔",
+          "textEnglish": "Say, \"I seek refuge in the Lord of mankind,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6231.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "مَلِكِ النَّاسِ",
+          "textUrdu": "جو انسانوں کا بادشاہ ہے۔",
+          "textEnglish": "The Sovereign of mankind.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6232.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "إِلَٰهِ النَّاسِ",
+          "textUrdu": "جو انسانوں کا معبودِ برحق ہے۔",
+          "textEnglish": "The God of mankind,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6233.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+          "textUrdu": "وسوسہ ڈالنے والے، پیچھے ہٹ جانے والے شیطان کے شر سے۔",
+          "textEnglish": "From the evil of the retreating whisperer -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6234.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ",
+          "textUrdu": "جو لوگوں کے سینوں میں وسوسے ڈالتا ہے۔",
+          "textEnglish": "Who whispers [evil] into the breasts of mankind -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6235.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "مِنَ الْجِنَّةِ وَالنَّاسِ",
+          "textUrdu": "خواہ وہ جنات میں سے ہو یا انسانوں میں سے۔",
+          "textEnglish": "From among the jinn and mankind.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6236.mp3"
+        }
+      ]
     }
-  ]
-};
+  ],
+  "quranSurahs": [
+    {
+      "id": "surah-1",
+      "number": 1,
+      "nameArabic": "سُورَةُ الْفَاتِحَة",
+      "nameEnglish": "Al-Fatiha",
+      "nameUrdu": "سورۃ الفاتحہ",
+      "meaningEnglish": "The Opening",
+      "versesCount": 7,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/1.mp3",
+      "order": 1,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          "textUrdu": "شروع اللہ کے نام سے جو بڑا مہربان نہایت رحم والا ہے۔",
+          "textEnglish": "In the name of Allah, the Entirely Merciful, the Especially Merciful.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+          "textUrdu": "سب تعریفیں اللہ ہی کے لیے ہیں جو تمام جہانوں کا پالنے والا ہے۔",
+          "textEnglish": "[All] praise is [due] to Allah, Lord of the worlds -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/2.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "الرَّحْمَٰنِ الرَّحِيمِ",
+          "textUrdu": "بڑا مہربان نہایت رحم والا ہے۔",
+          "textEnglish": "The Entirely Merciful, the Especially Merciful,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/3.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "مَالِكِ يَوْمِ الدِّينِ",
+          "textUrdu": "روزِ جزا کا مالک ہے۔",
+          "textEnglish": "Sovereign of the Day of Recompense.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/4.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+          "textUrdu": "ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔",
+          "textEnglish": "It is You we worship and You we ask for help.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/5.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+          "textUrdu": "ہمیں سیدھا راستہ دکھا۔",
+          "textEnglish": "Guide us to the straight path -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+          "textUrdu": "ان لوگوں کا راستہ جن پر تو نے انعام فرمایا، نہ ان کا جن پر غضب نازل ہوا اور نہ گمراہوں کا۔",
+          "textEnglish": "The path of those upon whom You have bestowed favor, not of those who have evoked [Your] anger or of those who are astray.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/7.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-87",
+      "number": 87,
+      "nameArabic": "سُورَةُ الْأَعْلَى",
+      "nameEnglish": "Al-A'la",
+      "nameUrdu": "سورۃ الاعلیٰ",
+      "meaningEnglish": "The Most High",
+      "versesCount": 19,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3",
+      "order": 2,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "سَبِّحِ اسْمَ رَبِّكَ الْأَعْلَى",
+          "textUrdu": "اپنے بہت بلند رب کے نام کی تسبیح کیجیے!",
+          "textEnglish": "Glorify the name of your Lord, the Most High,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "الَّذِي خَلَقَ فَسَوَّىٰ",
+          "textUrdu": "جس نے پیدا کیا اور درست بنایا!",
+          "textEnglish": "Who created and proportioned,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَالَّذِي قَدَّرَ فَهَدَىٰ",
+          "textUrdu": "اور جس نے اندازہ ٹھہرایا پھر راہ دکھائی!",
+          "textEnglish": "And Who destined and [then] guided,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَالَّذِي أَخْرَجَ الْمَرْعَىٰ",
+          "textUrdu": "اور جس نے چارہ نکالا!",
+          "textEnglish": "And Who brings out the pasture,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "فَجَعَلَهُ غُثَاءً أَحْوَىٰ",
+          "textUrdu": "پھر اسے سیاہ کوڑا بنا دیا!",
+          "textEnglish": "And [then] makes it black stubble.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "سَنُقْرِئُكَ فَلَا تَنسَىٰ",
+          "textUrdu": "ہم آپ کو پڑھا دیں گے تو آپ نہیں بھولیں گے!",
+          "textEnglish": "We will make you recite, [O Muhammad], and you will not forget,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "إِلَّا مَا شَاءَ اللَّهُ ۚ إِنَّهُ يَعْلَمُ الْجَهْرَ وَمَا يَخْفَىٰ",
+          "textUrdu": "سوائے اس کے جو اللہ چاہے، یقیناً وہ کھلی اور چھپی بات کو جانتا ہے۔",
+          "textEnglish": "Except what Allah should will. Indeed, He knows what is declared and what is hidden.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَنُيَسِّرُكَ لِلْيُسْرَىٰ",
+          "textUrdu": "اور ہم آپ کے لیے آسان راہ کو اور آسان کر دیں گے۔",
+          "textEnglish": "And We will ease you toward ease.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "فَذَكِّرْ إِن نَّفَعَتِ الذِّكْرَىٰ",
+          "textUrdu": "پس آپ نصیحت کرتے رہیے اگر نصیحت فائدہ دے۔",
+          "textEnglish": "So remind, if the reminder should benefit;",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "سَيَذَّكَّرُ مَن يَخْشَىٰ",
+          "textUrdu": "جو شخص ڈرتا ہے وہ ضرور نصیحت قبول کرے گا۔",
+          "textEnglish": "He who fears [Allah] will be reminded.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "وَيَتَجَنَّبُهَا الْأَشْقَى",
+          "textUrdu": "اور بڑا بدبخت اس سے پہلو تہی کرے گا۔",
+          "textEnglish": "But the wretched one will avoid it -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 12,
+          "textArabic": "الَّذِي يَصْلَى النَّارَ الْكُبْرَىٰ",
+          "textUrdu": "جو سب سے بڑی آگ میں داخل ہوگا۔",
+          "textEnglish": "[He] who will [enter and] burn in the greatest Fire,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 13,
+          "textArabic": "ثُمَّ لَا يَمُوتُ فِيهَا وَلَا يَحْيَىٰ",
+          "textUrdu": "پھر نہ اس میں مرے گا اور نہ جیے گا۔",
+          "textEnglish": "Neither dying therein nor living.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 14,
+          "textArabic": "قَدْ أَفْلَحَ مَن تَزَكَّىٰ",
+          "textUrdu": "یقیناً وہ کامیاب ہوا جو پاک ہو گیا۔",
+          "textEnglish": "He has certainly succeeded who purifies himself",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 15,
+          "textArabic": "وَذَكَرَ اسْمَ رَبِّهِ فَصَلَّىٰ",
+          "textUrdu": "اور اپنے رب کا نام یاد کیا پھر نماز پڑھی۔",
+          "textEnglish": "And mentions the name of his Lord and prays.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 16,
+          "textArabic": "بَلْ تُؤْثِرُونَ الْحَيَاةَ الدُّنْيَا",
+          "textUrdu": "بلکہ تم لوگ دنیا کی زندگی کو ترجیح دیتے ہو۔",
+          "textEnglish": "Nay, you prefer the worldly life,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 17,
+          "textArabic": "وَالْآخِرَةُ خَيْرٌ وَأَبْقَىٰ",
+          "textUrdu": "حالانکہ آخرت بہتر اور ہمیشہ باقی رہنے والی ہے۔",
+          "textEnglish": "While the Hereafter is better and more enduring.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 18,
+          "textArabic": "إِنَّ هَٰذَا لَفِي الصُّحُفِ الْأُولَىٰ",
+          "textUrdu": "یقیناً یہ بات پہلے کے صحیفوں میں بھی لکھی ہوئی ہے۔",
+          "textEnglish": "Indeed, this is in the former scriptures,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        },
+        {
+          "numberInSurah": 19,
+          "textArabic": "صُحُفِ إِبْرَاهِيمَ وَمُوسَىٰ",
+          "textUrdu": "یعنی ابراہیم اور موسیٰ کے صحیفوں میں۔",
+          "textEnglish": "The scriptures of Abraham and Moses.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/87.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-88",
+      "number": 88,
+      "nameArabic": "سُورَةُ الْغَاشِيَة",
+      "nameEnglish": "Al-Ghashiyah",
+      "nameUrdu": "سورۃ الغاشیہ",
+      "meaningEnglish": "The Overwhelming Event",
+      "versesCount": 26,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3",
+      "order": 3,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "هَلْ أَتَاكَ حَدِيثُ الْغَاشِيَةِ",
+          "textUrdu": "کیا آپ کے پاس چھا جانے والی (قیامت) کی خبر پہنچی ہے؟",
+          "textEnglish": "Has there reached you the report of the Overwhelming [event]?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وُجُوهٌ يَوْمَئِذٍ خَاشِعَةٌ",
+          "textUrdu": "اس دن بہت سے چہرے ذلیل و خوار ہوں گے،",
+          "textEnglish": "[Some] faces, that Day, will be humbled,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "عَامِلَةٌ نَّاصِبَةٌ",
+          "textUrdu": "محنت کرنے والے، تھک جانے والے،",
+          "textEnglish": "Laboring and exhausted.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "تَصْلَىٰ نَارًا حَامِيَةً",
+          "textUrdu": "وہ دہکتی ہوئی آگ میں داخل ہوں گے،",
+          "textEnglish": "They will [enter to] burn in an intensely hot Fire.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "تُسْقَىٰ مِنْ عَيْنٍ آنِيَةٍ",
+          "textUrdu": "انہیں کھولتے ہوئے چشمے سے پلایا جائے گا،",
+          "textEnglish": "They will be given drink from a boiling spring.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "لَّيْسَ لَهُمْ طَعَامٌ إِلَّا مِن ضَرِيعٍ",
+          "textUrdu": "ان کے لیے خاردار جھاڑی کے سوا کوئی کھانا نہ ہوگا،",
+          "textEnglish": "For them there will be no food except from a poisonous, thorny plant",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "لَّا يُسْمِنُ وَلَا يُغْنِي مِن جُوعٍ",
+          "textUrdu": "جو نہ فربہ کرے اور نہ بھوک مٹائے۔",
+          "textEnglish": "Which neither nourishes nor avails against hunger.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وُجُوهٌ يَوْمَئِذٍ نَّاعِمَةٌ",
+          "textUrdu": "اس دن بہت سے چہرے تروتازہ اور شاداب ہوں گے،",
+          "textEnglish": "[Other] faces, that Day, will show pleasure.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "لِّسَعْيِهَا رَاضِيَةٌ",
+          "textUrdu": "اپنی کوشش پر راضی اور مطمئن،",
+          "textEnglish": "With their effort [they are] satisfied",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "فِي جَنَّةٍ عَالِيَةٍ",
+          "textUrdu": "عالی شان جنت میں،",
+          "textEnglish": "In an elevated garden,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "لَّا تَسْمَعُ فِيهَا لَاغِيَةً",
+          "textUrdu": "جہاں وہ کوئی بیہودہ بات نہیں سنیں گے،",
+          "textEnglish": "Where they will hear no unsuitable speech.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 12,
+          "textArabic": "فِيهَا عَيْنٌ جَارِيَةٌ",
+          "textUrdu": "اس میں بہتے ہوئے چشمے ہوں گے،",
+          "textEnglish": "Within it is a flowing spring.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 13,
+          "textArabic": "فِيهَا سُرُرٌ مَّرْفُوعَةٌ",
+          "textUrdu": "اس میں اونچے اونچے تخت ہوں گے،",
+          "textEnglish": "Within it are couches raised high",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 14,
+          "textArabic": "وَأَكْوَابٌ مَّوْضُوعَةٌ",
+          "textUrdu": "اور قرینے سے رکھے ہوئے آبخورے،",
+          "textEnglish": "And cups put in place",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 15,
+          "textArabic": "وَنَمَارِقُ مَصْفُوفَةٌ",
+          "textUrdu": "اور قطار در قطار لگے ہوئے گاؤ تکیے،",
+          "textEnglish": "And cushions lined up",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 16,
+          "textArabic": "وَزَرَابِيُّ مَبْثُوثَةٌ",
+          "textUrdu": "اور بچھے ہوئے نفیس قالین۔",
+          "textEnglish": "And rich carpets spread around.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 17,
+          "textArabic": "أَفَلَا يَنظُرُونَ إِلَى الْإِبِلِ كَيْفَ خُلِقَتْ",
+          "textUrdu": "کیا وہ اونٹوں کی طرف نہیں دیکھتے کہ وہ کیسے بنائے گئے؟",
+          "textEnglish": "Then do they not look at the camels - how they are created?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 18,
+          "textArabic": "وَإِلَى السَّمَاءِ كَيْفَ رُفِعَتْ",
+          "textUrdu": "اور آسمان کی طرف کہ وہ کیسا بلند کیا گیا؟",
+          "textEnglish": "And at the sky - how it is raised?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 19,
+          "textArabic": "وَإِلَى الْجِبَالِ كَيْفَ نُصِبَتْ",
+          "textUrdu": "اور پہاڑوں کی طرف کہ وہ کیسے جمائے گئے؟",
+          "textEnglish": "And at the mountains - how they are erected?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 20,
+          "textArabic": "وَإِلَى الْأَرْضِ كَيْفَ سُطِحَتْ",
+          "textUrdu": "اور زمین کی طرف کہ وہ کیسی بچھائی گئی؟",
+          "textEnglish": "And at the earth - how it is spread out?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 21,
+          "textArabic": "فَذَكِّرْ إِنَّمَا أَنتَ مُذَكِّرٌ",
+          "textUrdu": "پس آپ نصیحت کیجیے، آپ تو بس نصیحت کرنے والے ہیں،",
+          "textEnglish": "So remind, [O Muhammad]; you are only a reminder.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 22,
+          "textArabic": "لَّسْتَ عَلَيْهِم بِمُصَيْطِرٍ",
+          "textUrdu": "آپ ان پر کوئی داروغہ نہیں ہیں،",
+          "textEnglish": "You are not over them a controller.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 23,
+          "textArabic": "إِلَّا مَن تَوَلَّىٰ وَكَفَرَ",
+          "textUrdu": "ہاں جو شخص منہ موڑے اور کفر کرے،",
+          "textEnglish": "However, he who turns away and disbelieves -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 24,
+          "textArabic": "فَيُعَذِّبُهُ اللَّهُ الْعَذَابَ الْأَكْبَرَ",
+          "textUrdu": "تو اللہ اسے سب سے بڑا عذاب دے گا۔",
+          "textEnglish": "Then Allah will punish him with the greatest punishment.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 25,
+          "textArabic": "إِنَّ إِلَيْنَا إِيَابَهُمْ",
+          "textUrdu": "بے شک ہماری ہی طرف ان کا لوٹنا ہے،",
+          "textEnglish": "Indeed, to Us is their return",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        },
+        {
+          "numberInSurah": 26,
+          "textArabic": "ثُمَّ إِنَّ عَلَيْنَا حِسَابَهُم",
+          "textUrdu": "پھر یقیناً ہمارے ہی ذمے ان کا حساب لینا ہے۔",
+          "textEnglish": "Then indeed, upon Us is their account.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/88.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-89",
+      "number": 89,
+      "nameArabic": "سُورَةُ الْفَجْر",
+      "nameEnglish": "Al-Fajr",
+      "nameUrdu": "سورۃ الفجر",
+      "meaningEnglish": "The Dawn",
+      "versesCount": 30,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3",
+      "order": 4,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَالْفَجْرِ",
+          "textUrdu": "قسم ہے فجر کے وقت کی!",
+          "textEnglish": "By the dawn",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَلَيَالٍ عَشْرٍ",
+          "textUrdu": "اور دس راتوں کی!",
+          "textEnglish": "And [by] ten nights",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَالشَّفْعِ وَالْوَتْرِ",
+          "textUrdu": "اور جفت اور طاق کی!",
+          "textEnglish": "And [by] the even and the odd",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَاللَّيْلِ إِذَا يَسْرِ",
+          "textUrdu": "اور رات کی جب وہ رخصت ہونے لگے!",
+          "textEnglish": "And [by] the night when it passes,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "هَلْ فِي ذَٰلِكَ قَسَمٌ لِّذِي حِجْرٍ",
+          "textUrdu": "کیا اس میں عقل مند کے لیے بڑی قسم ہے؟",
+          "textEnglish": "Is there [not] in [all] that an oath to possessor of reason?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِعَادٍ",
+          "textUrdu": "کیا آپ نے نہیں دیکھا کہ آپ کے رب نے قومِ عاد کے ساتھ کیا کیا؟",
+          "textEnglish": "Have you not considered how your Lord dealt with 'Aad -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "إِرَمَ ذَاتِ الْعِمَادِ",
+          "textUrdu": "ارم کے ساتھ جو بڑے ستونوں والے تھے،",
+          "textEnglish": "With Iram - who had lofty pillars,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "الَّتِي لَمْ يُخْلَقْ مِثْلُهَا فِي الْبِلَادِ",
+          "textUrdu": "جن کی مانند دنیا بھر کے شہروں میں پیدا نہیں کیا گیا تھا،",
+          "textEnglish": "The likes of whom had never been created in the land?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "وَثَمُودَ الَّذِينَ جَابُوا الصَّخْرَ بِالْوَادِ",
+          "textUrdu": "اور ثمود کے ساتھ جنہوں نے وادی میں چٹانوں کو تراشا تھا؟",
+          "textEnglish": "And [with] Thamud, who carved out the rocks in the valley?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "وَفِرْعَوْنَ ذِي الْأَوْتَادِ",
+          "textUrdu": "اور میخوں والے فرعون کے ساتھ؟",
+          "textEnglish": "And [with] Pharaoh, owner of the stakes? -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "الَّذِينَ طَغَوْا فِي الْبِلَادِ",
+          "textUrdu": "جنہوں نے شہروں میں سرکشی مچائی تھی،",
+          "textEnglish": "[All of] whom oppressed within the lands",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 12,
+          "textArabic": "فَأَكْثَرُوا فِيهَا الْفَسَادَ",
+          "textUrdu": "اور ان میں بہت فساد پھیلایا تھا،",
+          "textEnglish": "And caused therein much corruption.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 13,
+          "textArabic": "فَصَبَّ عَلَيْهِمْ رَبُّكَ سَوْطَ عَذَابٍ",
+          "textUrdu": "پس آپ کے رب نے ان پر عذاب کا کوڑا برسایا۔",
+          "textEnglish": "So your Lord poured upon them a scourge of punishment.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 14,
+          "textArabic": "إِنَّ رَبَّكَ لَبِالْمِرْصَادِ",
+          "textUrdu": "بے شک آپ کا رب گھات میں ہے۔",
+          "textEnglish": "Indeed, your Lord is in observation.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 15,
+          "textArabic": "فَأَمَّا الْإِنسَانُ إِذَا مَا ابْتَلَاهُ رَبُّهُ فَأَكْرَمَهُ وَنَعَّمَهُ فَيَقُولُ رَبِّي أَكْرَمَنِ",
+          "textUrdu": "انسان کا یہ حال ہے کہ جب اس کا رب اسے آزماتا ہے اور عزت اور نعمت دیتا ہے تو کہتا ہے کہ میرے رب نے مجھے عزت بخشی۔",
+          "textEnglish": "Now, as for man, when his Lord tests him and [thus] is generous to him and favors him, he says, \"My Lord has honored me.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 16,
+          "textArabic": "وَأَمَّا إِذَا مَا ابْتَلَاهُ فَقَدَرَ عَلَيْهِ رِزْقَهُ فَيَقُولُ رَبِّي أَهَانَنِ",
+          "textUrdu": "اور جب آزماتا ہے اور اس کا رزق تنگ کر دیتا ہے تو کہتا ہے کہ میرے رب نے مجھے ذلیل کر دیا۔",
+          "textEnglish": "But when He tests him and restricts his provision, he says, \"My Lord has humiliated me.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 17,
+          "textArabic": "كَلَّا ۖ بَل لَّا تُكْرِمُونَ الْيَتِيمَ",
+          "textUrdu": "ہرگز نہیں! بلکہ تم لوگ یتیم کی عزت نہیں کرتے،",
+          "textEnglish": "No! But you do not honor the orphan",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 18,
+          "textArabic": "وَلَا تَحَاضُّونَ عَلَىٰ طَعَامِ الْمِسْكِينِ",
+          "textUrdu": "اور مسکین کو کھانا کھلانے کی ایک دوسرے کو ترغیب نہیں دیتے،",
+          "textEnglish": "And you do not encourage one another to feed the poor.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 19,
+          "textArabic": "وَتَأْكُلُونَ التُّرَاثَ أَكْلًا لَّمًّا",
+          "textUrdu": "اور وراثت کا سارا مال سمیٹ کر کھا جاتے ہو،",
+          "textEnglish": "And you consume inheritance, devouring [it] altogether,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 20,
+          "textArabic": "وَتُحِبُّونَ الْمَالَ حُبًّا جَمًّا",
+          "textUrdu": "اور مال سے دل کھول کر حد درجہ محبت رکھتے ہو۔",
+          "textEnglish": "And you love wealth with immense love.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 21,
+          "textArabic": "كَلَّا إِذَا دُكَّتِ الْأَرْضُ دَكًّا دَكًّا",
+          "textUrdu": "ہرگز نہیں! جب زمین کوٹ کوٹ کر ریزہ ریزہ کر دی جائے گی،",
+          "textEnglish": "No! When the earth has been leveled-pounded and crushed -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 22,
+          "textArabic": "وَجَاءَ رَبُّكَ وَالْمَلَكُ صَفًّا صَفًّا",
+          "textUrdu": "اور آپ کے رب کا حکم آئے گا اور فرشتے صف در صف آئیں گے،",
+          "textEnglish": "And your Lord has come and the angels, rank upon rank,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 23,
+          "textArabic": "وَجِيءَ يَوْمَئِذٍ بِجَهَنَّمَ ۚ يَوْمَئِذٍ يَتَذَكَّرُ الْإِنسَانُ وَأَنَّىٰ لَهُ الذِّكْرَىٰ",
+          "textUrdu": "اور اس دن جہنم سامنے لائی جائے گی، اس دن انسان سمجھے گا مگر اب سمجھنے کا کیا فائدہ؟",
+          "textEnglish": "And brought [within view], that Day, is Hell - that Day, man will remember, but how will that remembrance be [sufficient] for him?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 24,
+          "textArabic": "يَقُولُ يَا لَيْتَنِي قَدَّمْتُ لِحَيَاتِي",
+          "textUrdu": "وہ کہے گا: کاش میں نے اپنی اس اصل زندگی کے لیے کچھ آگے بھیجا ہوتا!",
+          "textEnglish": "He will say, \"Oh, I wish I had sent ahead [some good] for my life.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 25,
+          "textArabic": "فَيَوْمَئِذٍ لَّا يُعَذِّبُ عَذَابَهُ أَحَدٌ",
+          "textUrdu": "پس اس دن اللہ کے عذاب جیسا عذاب کوئی نہیں دے گا،",
+          "textEnglish": "So on that Day, none will punish as His punishment,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 26,
+          "textArabic": "وَلَا يُوثِقُ وَثَاقَهُ أَحَدٌ",
+          "textUrdu": "اور نہ اس کے جکڑنے جیسا کوئی جکڑے گا۔",
+          "textEnglish": "And none will bind as His binding.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 27,
+          "textArabic": "يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ",
+          "textUrdu": "اے مطمئن جان!",
+          "textEnglish": "[To the righteous it will be said], \"O reassured soul,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 28,
+          "textArabic": "ارْجِعِي إِلَىٰ رَبِّكِ رَاضِيَةً مَّرْضِيَّةً",
+          "textUrdu": "اپنے رب کی طرف لوٹ چلو، اس حال میں کہ تو اس سے راضی وہ تجھ سے راضی!",
+          "textEnglish": "Return to your Lord, well-pleased and pleasing [to Him],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 29,
+          "textArabic": "فَادْخُلِي فِي عِبَادِي",
+          "textUrdu": "پس میرے نیک بندوں میں شامل ہو جا،",
+          "textEnglish": "And enter among My [righteous] servants",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        },
+        {
+          "numberInSurah": 30,
+          "textArabic": "وَادْخُلِي جَنَّتِي",
+          "textUrdu": "اور میری جنت میں داخل ہو جا!",
+          "textEnglish": "And enter My Paradise.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/89.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-90",
+      "number": 90,
+      "nameArabic": "سُورَةُ الْبَلَد",
+      "nameEnglish": "Al-Balad",
+      "nameUrdu": "سورۃ البلد",
+      "meaningEnglish": "The City",
+      "versesCount": 20,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3",
+      "order": 5,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "لَا أُقْسِمُ بِهَٰذَا الْبَلَدِ",
+          "textUrdu": "میں اس شہر (مکہ) کی قسم کھاتا ہوں!",
+          "textEnglish": "I swear by this city [Makkah]",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَأَنتَ حِلٌّ بِهَٰذَا الْبَلَدِ",
+          "textUrdu": "اور آپ اس شہر میں مقیم ہیں،",
+          "textEnglish": "And you, [O Muhammad], are free of restriction in this city -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَوَالِدٍ وَمَا وَلَدَ",
+          "textUrdu": "اور قسم ہے باپ کی اور اس کی اولاد کی!",
+          "textEnglish": "And [by] the father and that which was born [of him],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ",
+          "textUrdu": "یقیناً ہم نے انسان کو مشقت میں پیدا کیا ہے۔",
+          "textEnglish": "We have certainly created man into hardship.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "أَيَحْسَبُ أَن لَّن يَقْدِرَ عَلَيْهِ أَحَدٌ",
+          "textUrdu": "کیا وہ سمجھتا ہے کہ اس پر کسی کا بس نہ چلے گا؟",
+          "textEnglish": "Does he think that never will anyone overcome him?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "يَقُولُ أَهْلَكْتُ مَالًا لُّبَدًا",
+          "textUrdu": "وہ کہتا ہے کہ میں نے ڈھیروں مال اڑا دیا۔",
+          "textEnglish": "He says, \"I have spent wealth in abundance.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "أَيَحْسَبُ أَن لَّمْ يَرَهُ أَحَدٌ",
+          "textUrdu": "کیا وہ سمجھتا ہے کہ اسے کسی نے نہیں دیکھا؟",
+          "textEnglish": "Does he think that no one has seen him?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "أَلَمْ نَجْعَل لَّهُ عَيْنَيْنِ",
+          "textUrdu": "کیا ہم نے اسے دو آنکھیں نہیں دیں؟",
+          "textEnglish": "Have We not made for him two eyes?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "وَلِسَانًا وَشَفَتَيْنِ",
+          "textUrdu": "اور ایک زبان اور دو ہونٹ؟",
+          "textEnglish": "And a tongue and two lips?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "وَهَدَيْنَاهُ النَّجْدَيْنِ",
+          "textUrdu": "اور ہم نے اسے دونوں راستے دکھا دیے۔",
+          "textEnglish": "And have shown him the two ways?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "فَلَا اقْتَحَمَ الْعَقَبَةَ",
+          "textUrdu": "مگر وہ دشوار گھاٹی میں داخل نہ ہوا،",
+          "textEnglish": "But he has not broken through the difficult pass.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 12,
+          "textArabic": "وَمَا أَدْرَاكَ مَا الْعَقَبَةُ",
+          "textUrdu": "اور آپ کیا جانیں کہ وہ دشوار گھاٹی کیا ہے؟",
+          "textEnglish": "And what can make you know what is [breaking through] the difficult pass?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 13,
+          "textArabic": "فَكُّ رَقَبَةٍ",
+          "textUrdu": "کسی گردن کا چھڑانا (غلام آزاد کرنا)",
+          "textEnglish": "It is the freeing of a slave",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 14,
+          "textArabic": "أَوْ إِطْعَامٌ فِي يَوْمٍ ذِي مَسْغَبَةٍ",
+          "textUrdu": "یا بھوک والے دن کھانا کھلانا،",
+          "textEnglish": "Or feeding on a day of severe hunger",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 15,
+          "textArabic": "يَتِيمًا ذَا مَقْرَبَةٍ",
+          "textUrdu": "کسی رشتہ دار یتیم کو،",
+          "textEnglish": "An orphan of near relationship",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 16,
+          "textArabic": "أَوْ مِسْكِينًا ذَا مَتْرَبَةٍ",
+          "textUrdu": "یا خاک نشین محتاج مسکین کو،",
+          "textEnglish": "Or a needy person in misery",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 17,
+          "textArabic": "ثُمَّ كَانَ مِنَ الَّذِينَ آمَنُوا وَتَوَاصَوْا بِالصَّبْرِ وَتَوَاصَوْا بِالْمَرْحَمَةِ",
+          "textUrdu": "پھر وہ ان لوگوں میں سے ہوا جو ایمان لائے اور جنہوں نے صبر اور رحم دلی کی وصیت کی،",
+          "textEnglish": "And then being among those who believed and advised one another to patience and advised one another to compassion.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 18,
+          "textArabic": "أُولَٰئِكَ أَصْحَابُ الْمَيْمَنَةِ",
+          "textUrdu": "یہی لوگ دائیں ہاتھ والے (خوش بخت) ہیں،",
+          "textEnglish": "Those are the companions of the right.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 19,
+          "textArabic": "وَالَّذِينَ كَفَرُوا بِآيَاتِنَا هُمْ أَصْحَابُ الْمَشْأَمَةِ",
+          "textUrdu": "اور جنہوں نے ہماری آیتوں کا انکار کیا وہ بائیں ہاتھ والے (بدبخت) ہیں،",
+          "textEnglish": "But they who disbelieved in Our signs - those are the companions of the left.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        },
+        {
+          "numberInSurah": 20,
+          "textArabic": "عَلَيْهِمْ نَارٌ مُّؤْصَدَةٌ",
+          "textUrdu": "ان پر چاروں طرف سے بند کی ہوئی آگ ہوگی۔",
+          "textEnglish": "Over them will be fire closed in.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/90.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-91",
+      "number": 91,
+      "nameArabic": "سُورَةُ الشَّمْس",
+      "nameEnglish": "Ash-Shams",
+      "nameUrdu": "سورۃ الشمس",
+      "meaningEnglish": "The Sun",
+      "versesCount": 15,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3",
+      "order": 6,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَالشَّمْسِ وَضُحَاهَا",
+          "textUrdu": "قسم ہے سورج کی اور اس کی دھوپ کی!",
+          "textEnglish": "By the sun and its brightness",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَالْقَمَرِ إِذَا تَلَاهَا",
+          "textUrdu": "اور چاند کی جب وہ اس کے پیچھے آئے!",
+          "textEnglish": "And [by] the moon when it follows it",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَالنَّهَارِ إِذَا جَلَّاهَا",
+          "textUrdu": "اور دن کی جب وہ اسے روشن کر دے!",
+          "textEnglish": "And [by] the day when it displays it",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَاللَّيْلِ إِذَا يَغْشَاهَا",
+          "textUrdu": "اور رات کی جب وہ اسے ڈھانپ لے!",
+          "textEnglish": "And [by] the night when it covers it",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَالسَّمَاءِ وَمَا بَنَاهَا",
+          "textUrdu": "اور آسمان کی اور اس کے بنانے والے کی!",
+          "textEnglish": "And [by] the sky and He who built it",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "وَالْأَرْضِ وَمَا طَحَاهَا",
+          "textUrdu": "اور زمین کی اور اس کے بچھانے والے کی!",
+          "textEnglish": "And [by] the earth and He who spread it",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "وَنَفْسٍ وَمَا سَوَّاهَا",
+          "textUrdu": "اور جان کی اور جس نے اسے سنوارا!",
+          "textEnglish": "And [by] the soul and He who proportioned it",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "فَأَلْهَمَهَا فُجُورَهَا وَتَقْوَاهَا",
+          "textUrdu": "پھر اس کے دل میں اس کی برائی اور بھلائی کا الہام کیا،",
+          "textEnglish": "And inspired it [with discernment of] its wickedness and its righteousness,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "قَدْ أَفْلَحَ مَن زَكَّاهَا",
+          "textUrdu": "یقیناً وہ کامیاب ہوا جس نے اپنے نفس کو پاک کیا،",
+          "textEnglish": "He has succeeded who purifies it,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "وَقَدْ خَابَ مَن دَسَّاهَا",
+          "textUrdu": "اور وہ نامراد ہوا جس نے اسے گناہوں میں دبا دیا،",
+          "textEnglish": "And he has failed who instills it [with corruption].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "كَذَّبَتْ ثَمُودُ بِطَغْوَاهَا",
+          "textUrdu": "قوم ثمود نے اپنی سرکشی کی وجہ سے جھٹلایا،",
+          "textEnglish": "Thamud denied [their prophet] by reason of their transgression,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 12,
+          "textArabic": "إِذِ انبَعَثَ أَشْقَاهَا",
+          "textUrdu": "جب ان کا سب سے بڑا بدبخت اٹھ کھڑا ہوا،",
+          "textEnglish": "When the most wretched of them was sent forth.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 13,
+          "textArabic": "فَقَالَ لَهُمْ رَسُولُ اللَّهِ نَاقَةَ اللَّهِ وَسُقْيَاهَا",
+          "textUrdu": "تو اللہ کے رسول نے ان سے کہا کہ اللہ کی اونٹنی اور اس کے پانی پینے کی باری کا خیال رکھو،",
+          "textEnglish": "And the messenger of Allah said to them, \"[Do not harm] the she-camel of Allah or [prevent her from] her drink.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 14,
+          "textArabic": "فَكَذَّبُوهُ فَعَقَرُوهَا فَدَمْدَمَ عَلَيْهِمْ رَبُّهُم بِذَنبِهِمْ فَسَوَّاهَا",
+          "textUrdu": "مگر انہوں نے پیغمبر کو جھٹلایا اور اونٹنی کو مار ڈالا، پس ان کے رب نے ان کے گناہ پر ان پر تباہی نازل کی اور برابر کر دیا،",
+          "textEnglish": "But they denied him and hamstrung her. So their Lord brought down upon them destruction for their sin and leveled it.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        },
+        {
+          "numberInSurah": 15,
+          "textArabic": "وَلَا يَخَافُ عُقْبَاهَا",
+          "textUrdu": "اور اسے اس کے انجام کا کوئی خوف نہیں ہے۔",
+          "textEnglish": "And He does not fear the consequence thereof.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/91.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-92",
+      "number": 92,
+      "nameArabic": "سُورَةُ اللَّيْل",
+      "nameEnglish": "Al-Layl",
+      "nameUrdu": "سورۃ اللیل",
+      "meaningEnglish": "The Night",
+      "versesCount": 21,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3",
+      "order": 7,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَاللَّيْلِ إِذَا يَغْشَىٰ",
+          "textUrdu": "قسم ہے رات کی جب وہ چھا جائے!",
+          "textEnglish": "By the night when it covers",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَالنَّهَارِ إِذَا تَجَلَّىٰ",
+          "textUrdu": "اور دن کی جب وہ روشن ہو جائے!",
+          "textEnglish": "And [by] the day when it appears",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَمَا خَلَقَ الذَّكَرَ وَالْأُنثَىٰ",
+          "textUrdu": "اور اس ذات کی جس نے نر اور مادہ کو پیدا کیا!",
+          "textEnglish": "And [by] He who created the male and female,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "إِنَّ سَعْيَكُمْ لَشَتَّىٰ",
+          "textUrdu": "یقیناً تمہاری کوششیں مختلف قسم کی ہیں،",
+          "textEnglish": "Indeed, your efforts are diverse.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "فَأَمَّا مَنْ أَعْطَىٰ وَاتَّقَىٰ",
+          "textUrdu": "پس جس نے اللہ کی راہ میں دیا اور پرہیزگاری اختیار کی،",
+          "textEnglish": "As for he who gives and fears Allah",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "وَصَدَّقَ بِالْحُسْنَىٰ",
+          "textUrdu": "اور اچھی بات (کلمہ توحید) کی تصدیق کی،",
+          "textEnglish": "And believes in the best [reward],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "فَسَنُيَسِّرُهُ لِلْيُسْرَىٰ",
+          "textUrdu": "تو ہم اسے آسان راستے (جنت) کی توفیق دیں گے،",
+          "textEnglish": "We will ease him toward ease.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَأَمَّا مَن بَخِلَ وَاسْتَغْنَىٰ",
+          "textUrdu": "اور جس نے بخل کیا اور بے پرواہی برتی،",
+          "textEnglish": "But as for he who withholds and considers himself free of need",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "وَكَذَّبَ بِالْحُسْنَىٰ",
+          "textUrdu": "اور اچھی بات کو جھٹلایا،",
+          "textEnglish": "And denies the best [reward],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "فَسَنُيَسِّرُهُ لِلْعُسْرَىٰ",
+          "textUrdu": "تو ہم اسے تنگی کے راستے (جہنم) کے لیے تیار کر دیں گے،",
+          "textEnglish": "We will ease him toward difficulty.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "وَمَا يُغْنِي عَنْهُ مَالُهُ إِذَا تَرَدَّىٰ",
+          "textUrdu": "اور جب وہ ہلاک ہوگا تو اس کا مال اس کے کچھ کام نہ آئے گا،",
+          "textEnglish": "And what will his wealth avail him when he falls?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 12,
+          "textArabic": "إِنَّ عَلَيْنَا لَلْهُدَىٰ",
+          "textUrdu": "بے شک ہدایت کا راستہ دکھانا ہمارے ہی ذمے ہے،",
+          "textEnglish": "Indeed, [incumbent] upon Us is guidance.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 13,
+          "textArabic": "وَإِنَّ لَنَا لَلْآخِرَةَ وَالْأُولَىٰ",
+          "textUrdu": "اور یقیناً آخرت اور دنیا دونوں ہماری ہی ملکیت ہیں،",
+          "textEnglish": "And indeed, to Us belongs the Hereafter and the first [life].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 14,
+          "textArabic": "فَأَنذَرْتُكُمْ نَارًا تَلَظَّىٰ",
+          "textUrdu": "پس میں نے تمہیں بھڑکتی ہوئی آگ سے ڈرا دیا ہے،",
+          "textEnglish": "So I have warned you of a Fire which is blazing.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 15,
+          "textArabic": "لَا يَصْلَاهَا إِلَّا الْأَشْقَى",
+          "textUrdu": "جس میں صرف وہی بڑا بدبخت داخل ہوگا،",
+          "textEnglish": "None will [enter to] burn therein except the most wretched,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 16,
+          "textArabic": "الَّذِي كَذَّبَ وَتَوَلَّىٰ",
+          "textUrdu": "جس نے حق کو جھٹلایا اور منہ موڑا،",
+          "textEnglish": "Who had denied and turned away.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 17,
+          "textArabic": "وَسَيُجَنَّبُهَا الْأَتْقَى",
+          "textUrdu": "اور بڑا متقی اس آگ سے دور رکھا جائے گا،",
+          "textEnglish": "But the righteous one will be spared it -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 18,
+          "textArabic": "الَّذِي يُؤْتِي مَالَهُ يَتَزَكَّىٰ",
+          "textUrdu": "جو پاکیزگی حاصل کرنے کے لیے اپنا مال دیتا ہے،",
+          "textEnglish": "[He] who gives from his wealth to purify himself",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 19,
+          "textArabic": "وَمَا لِأَحَدٍ عِندَهُ مِن نِّعْمَةٍ تُجْزَىٰ",
+          "textUrdu": "اور اس پر کسی کا کوئی احسان نہیں جس کا بدلہ دیا جائے،",
+          "textEnglish": "And not [giving any reform] with him of favor to be recompensed",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 20,
+          "textArabic": "إِلَّا ابْتِغَاءَ وَجْهِ رَبِّهِ الْأَعْلَىٰ",
+          "textUrdu": "بلکہ صرف اپنے عالی شان رب کی رضا چاہنے کے لیے،",
+          "textEnglish": "Except only seeking the countenance of his Lord, Most High.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        },
+        {
+          "numberInSurah": 21,
+          "textArabic": "وَلَسَوْفَ يَرْضَىٰ",
+          "textUrdu": "اور عنقریب وہ خوش ہو جائے گا۔",
+          "textEnglish": "And he is going to be satisfied.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/92.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-93",
+      "number": 93,
+      "nameArabic": "سُورَةُ الضُّحَىٰ",
+      "nameEnglish": "Ad-Duha",
+      "nameUrdu": "سورۃ الضحیٰ",
+      "meaningEnglish": "The Morning Hours",
+      "versesCount": 11,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3",
+      "order": 8,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَالضُّحَىٰ",
+          "textUrdu": "قسم ہے چاشت کے وقت کی!",
+          "textEnglish": "By the morning sunlight,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَاللَّيْلِ إِذَا سَجَىٰ",
+          "textUrdu": "اور رات کی جب وہ چھا جائے!",
+          "textEnglish": "And by the night when it covers with darkness,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+          "textUrdu": "آپ کے رب نے نہ تو آپ کو چھوڑا ہے اور نہ وہ ناراض ہوا ہے۔",
+          "textEnglish": "Your Lord has not taken leave of you, [O Muhammad], nor has He detested [you].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَلَلْآخِرَةُ خَيْرٌ لَّكَ مِنَ الْأُولَىٰ",
+          "textUrdu": "اور یقیناً آخرت آپ کے لیے دنیا سے کہیں بہتر ہے۔",
+          "textEnglish": "And the Hereafter is better for you than the first [life].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ",
+          "textUrdu": "اور عنقریب آپ کا رب آپ کو اتنا عطا فرمائے گا کہ آپ خوش ہو جائیں گے۔",
+          "textEnglish": "And your Lord is going to give you, and you will be satisfied.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "أَلَمْ يَجِدْكَ يَتِيمًا فَآوَىٰ",
+          "textUrdu": "کیا اس نے آپ کو یتیم پا کر پناہ نہیں دی؟",
+          "textEnglish": "Did He not find you an orphan and give [you] refuge?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "وَوَجَدَكَ ضَالًّا فَهَدَىٰ",
+          "textUrdu": "اور اس نے آپ کو راستہ کی تلاش میں پایا تو سیدھا راستہ دکھایا۔",
+          "textEnglish": "And He found you lost and guided [you],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَوَجَدَكَ عَائِلًا فَأَغْنَىٰ",
+          "textUrdu": "اور اس نے آپ کو ضرورت مند پایا تو غنی کر دیا۔",
+          "textEnglish": "And He found you poor and made [you] self-sufficient.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "فَأَمَّا الْيَتِيمَ فَلَا تَقْهَرْ",
+          "textUrdu": "پس آپ بھی یتیم پر سختی نہ کیجیے۔",
+          "textEnglish": "So as for the orphan, do not oppress [him].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "وَأَمَّا السَّائِلَ فَلَا تَنْهَرْ",
+          "textUrdu": "اور مانگنے والے کو نہ جھڑکیے۔",
+          "textEnglish": "And as for the petitioner, do not repel [him].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ",
+          "textUrdu": "اور اپنے رب کی نعمتوں کا خوب چرچا کیجیے۔",
+          "textEnglish": "But as for the favor of your Lord, report [it].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/93.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-94",
+      "number": 94,
+      "nameArabic": "سُورَةُ الشَّرْح",
+      "nameEnglish": "Ash-Sharh",
+      "nameUrdu": "سورۃ الشرح",
+      "meaningEnglish": "The Relief & Expansion",
+      "versesCount": 8,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3",
+      "order": 9,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+          "textUrdu": "کیا ہم نے آپ کی خاطر آپ کا سینہ کشادہ نہیں فرمایا؟",
+          "textEnglish": "Did We not expand for you, [O Muhammad], your breast?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَوَضَعْنَا عَنكَ وِزْرَكَ",
+          "textUrdu": "اور ہم نے آپ پر سے آپ کا بوجھ اتار دیا۔",
+          "textEnglish": "And We removed from you your burden",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "الَّذِي أَنقَضَ ظَهْرَكَ",
+          "textUrdu": "جس نے آپ کی پیٹھ توڑ رکھی تھی۔",
+          "textEnglish": "Which had weighed upon your back",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+          "textUrdu": "اور ہم نے آپ کا ذکر بلند کر دیا۔",
+          "textEnglish": "And raised high for you your repute.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+          "textUrdu": "پس یقیناً ہر مشکل کے ساتھ آسانی ہے۔",
+          "textEnglish": "For indeed, with hardship [will be] ease.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "إِنَّ مَعَ الْعُسْرِ يُسْرًا",
+          "textUrdu": "بے شک ہر مشکل کے ساتھ آسانی ہے۔",
+          "textEnglish": "Indeed, with hardship [will be] ease.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "فَإِذَا فَرَغْتَ فَانصَبْ",
+          "textUrdu": "پس جب آپ فارغ ہوں تو عبادت میں محنت کیجیے۔",
+          "textEnglish": "So when you have finished [your duties], then stand up [for worship].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَإِلَىٰ رَبِّكَ فَارْغَب",
+          "textUrdu": "اور اپنے رب ہی کی طرف رغبت رکھیے۔",
+          "textEnglish": "And to your Lord direct [your] longing.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/94.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-95",
+      "number": 95,
+      "nameArabic": "سُورَةُ التِّين",
+      "nameEnglish": "At-Tin",
+      "nameUrdu": "سورۃ التین",
+      "meaningEnglish": "The Fig",
+      "versesCount": 8,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3",
+      "order": 10,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَالتِّينِ وَالزَّيْتُونِ",
+          "textUrdu": "قسم ہے انجیر کی اور زیتون کی!",
+          "textEnglish": "By the fig and the olive",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَطُورِ سِينِينَ",
+          "textUrdu": "اور طورِ سینا کی!",
+          "textEnglish": "And [by] Mount Sinai",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَهَٰذَا الْبَلَدِ الْأَمِينِ",
+          "textUrdu": "اور اس امن والے شہر (مکہ) کی!",
+          "textEnglish": "And [by] this secure city [Makkah],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "لَقَدْ خَلَقْنَا الْإِنسَانَ فِي أَحْسَنِ تَقْوِيمٍ",
+          "textUrdu": "یقیناً ہم نے انسان کو بہترین ساخت پر پیدا کیا۔",
+          "textEnglish": "We have certainly created man in the best of stature;",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "ثُمَّ رَدَدْنَاهُ أَسْفَلَ سَافِلِينَ",
+          "textUrdu": "پھر ہم نے اسے پست ترین حالت میں لوٹا دیا۔",
+          "textEnglish": "Then We return him to the lowest of the low,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ",
+          "textUrdu": "سوائے ان کے جو ایمان لائے اور نیک عمل کیے، پس ان کے لیے کبھی ختم نہ ہونے والا اجر ہے۔",
+          "textEnglish": "Except for those who believe and do righteous deeds, for they will have a reward uninterrupted.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "فَمَا يُكَذِّبُكَ بَعْدُ بِالدِّينِ",
+          "textUrdu": "پھر اس کے بعد کون سی چیز تمہیں جزا و سزا کو جھٹلانے پر آمادہ کرتی ہے؟",
+          "textEnglish": "So what yet causes you to deny the Recompense?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "أَلَيْسَ اللَّهُ بِأَحْكَمِ الْحَاكِمِينَ",
+          "textUrdu": "کیا اللہ سب حاکموں سے بڑا حاکم نہیں ہے؟",
+          "textEnglish": "Is not Allah the most just of judges?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/95.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-96",
+      "number": 96,
+      "nameArabic": "سُورَةُ الْعَلَق",
+      "nameEnglish": "Al-Alaq",
+      "nameUrdu": "سورۃ العلق",
+      "meaningEnglish": "The Clot (First Revelation)",
+      "versesCount": 19,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3",
+      "order": 11,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",
+          "textUrdu": "پڑھیے اپنے رب کے نام کے ساتھ جس نے پیدا کیا۔",
+          "textEnglish": "Recite in the name of your Lord who created -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "خَلَقَ الْإِنسَانَ مِنْ عَلَقٍ",
+          "textUrdu": "اس نے انسان کو جمے ہوئے خون کے لوتھڑے سے پیدا کیا۔",
+          "textEnglish": "Created man from a clinging substance.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "اقْرَأْ وَرَبُّكَ الْأَكْرَمُ",
+          "textUrdu": "پڑھیے اور آپ کا رب سب سے بڑا کریم ہے۔",
+          "textEnglish": "Recite, and your Lord is the most Generous -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "الَّذِي عَلَّمَ بِالْقَلَمِ",
+          "textUrdu": "جس نے قلم کے ذریعے علم سکھایا۔",
+          "textEnglish": "Who taught by the pen -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "عَلَّمَ الْإِنسَانَ مَا لَمْ يَعْلَمْ",
+          "textUrdu": "انسان کو وہ سکھایا جو وہ نہیں جانتا تھا۔",
+          "textEnglish": "Taught man that which he knew not.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "كَلَّا إِنَّ الْإِنسَانَ لَيَطْغَىٰ",
+          "textUrdu": "ہرگز نہیں، یقیناً انسان سرکشی کرتا ہے۔",
+          "textEnglish": "No! [But] indeed, man transgresses",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "أَن رَّآهُ اسْتَغْنَىٰ",
+          "textUrdu": "اس بات پر کہ وہ اپنے آپ کو بے نیاز دیکھتا ہے۔",
+          "textEnglish": "Because he sees himself self-sufficient.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "إِنَّ إِلَىٰ رَبِّكَ الرُّجْعَىٰ",
+          "textUrdu": "یقیناً آپ کے رب ہی کی طرف لوٹنا ہے۔",
+          "textEnglish": "Indeed, to your Lord is the return.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "أَرَأَيْتَ الَّذِي يَنْهَىٰ",
+          "textUrdu": "کیا آپ نے اس شخص کو دیکھا جو روکتا ہے؟",
+          "textEnglish": "Have you seen the one who forbids",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "عَبْدًا إِذَا صَلَّىٰ",
+          "textUrdu": "ایک بندے کو جب وہ نماز پڑھتا ہے۔",
+          "textEnglish": "A servant when he prays?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "أَرَأَيْتَ إِن كَانَ عَلَى الْهُدَىٰ",
+          "textUrdu": "بھلا بتائیے اگر وہ ہدایت پر ہو؟",
+          "textEnglish": "Have you seen if he is upon guidance",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 12,
+          "textArabic": "أَوْ أَمَرَ بِالتَّقْوَىٰ",
+          "textUrdu": "یا پرہیزگاری کا حکم دیتا ہو؟",
+          "textEnglish": "Or enjoins righteousness?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 13,
+          "textArabic": "أَرَأَيْتَ إِن كَذَّبَ وَتَوَلَّىٰ",
+          "textUrdu": "بھلا دیکھیے اگر اس نے جھٹلایا اور منہ موڑا؟",
+          "textEnglish": "Have you seen if he denies and turns away -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 14,
+          "textArabic": "أَلَمْ يَعْلَم بِأَنَّ اللَّهَ يَرَىٰ",
+          "textUrdu": "کیا وہ نہیں جانتا کہ اللہ سب کچھ دیکھ رہا ہے؟",
+          "textEnglish": "Does he not know that Allah sees?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 15,
+          "textArabic": "كَلَّا لَئِن لَّمْ يَنتَهِ لَنَسْفَعًا بِالنَّاصِيَةِ",
+          "textUrdu": "ہرگز نہیں، اگر وہ باز نہ آیا تو ہم پیشانی کے بال پکڑ کر گھسیٹیں گے۔",
+          "textEnglish": "No! If he does not desist, We will surely drag him by the forelock -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 16,
+          "textArabic": "نَاصِيَةٍ كَاذِبَةٍ خَاطِئَةٍ",
+          "textUrdu": "جھوٹی، خطا کار پیشانی۔",
+          "textEnglish": "A lying, sinning forelock.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 17,
+          "textArabic": "فَلْيَدْعُ نَادِيَهُ",
+          "textUrdu": "پس وہ اپنی مجلس والوں کو بلا لے۔",
+          "textEnglish": "Then let him call his associates;",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 18,
+          "textArabic": "سَنَدْعُ الزَّبَانِيَةَ",
+          "textUrdu": "ہم بھی عذاب کے فرشتوں کو بلائیں گے۔",
+          "textEnglish": "We will call the angels of Hell.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        },
+        {
+          "numberInSurah": 19,
+          "textArabic": "كَلَّا لَا تُطِعْهُ وَاسْجُدْ وَاقْتَرِب",
+          "textUrdu": "ہرگز اس کا کہنا نہ مانیں، اور سجدہ کیجیے اور اللہ کا قرب حاصل کیجیے۔",
+          "textEnglish": "No! Do not obey him. But prostrate and draw near [to Allah].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/96.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-97",
+      "number": 97,
+      "nameArabic": "سُورَةُ الْقَدْر",
+      "nameEnglish": "Al-Qadr",
+      "nameUrdu": "سورۃ القدر",
+      "meaningEnglish": "The Night of Decree",
+      "versesCount": 5,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3",
+      "order": 12,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ",
+          "textUrdu": "بے شک ہم نے اس (قرآن) کو شبِ قدر میں نازل فرمایا۔",
+          "textEnglish": "Indeed, We sent the Qur'an down during the Night of Decree.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ",
+          "textUrdu": "اور آپ کو کیا معلوم کہ شبِ قدر کیا ہے؟",
+          "textEnglish": "And what can make you know what is the Night of Decree?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ",
+          "textUrdu": "شبِ قدر ہزار مہینوں سے بہتر ہے۔",
+          "textEnglish": "The Night of Decree is better than a thousand months.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "تَنَزَّلُ الْمَلَائِكَةُ وَالرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ",
+          "textUrdu": "اس میں فرشتے اور روح القدس اپنے رب کے حکم سے ہر کام کے لیے اترتے ہیں۔",
+          "textEnglish": "The angels and the Spirit descend therein by permission of their Lord for every matter.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ",
+          "textUrdu": "یہ رات طلوعِ فجر تک سراسر سلامتی ہے۔",
+          "textEnglish": "Peace it is until the emergence of dawn.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/97.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-98",
+      "number": 98,
+      "nameArabic": "سُورَةُ الْبَيِّنَة",
+      "nameEnglish": "Al-Bayyinah",
+      "nameUrdu": "سورۃ البینہ",
+      "meaningEnglish": "The Clear Proof",
+      "versesCount": 8,
+      "revelationType": "Medinan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3",
+      "order": 13,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "لَمْ يَكُنِ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ مُنفَكِّينَ حَتَّىٰ تَأْتِيَهُمُ الْبَيِّنَةُ",
+          "textUrdu": "اہلِ کتاب میں سے کفر کرنے والے اور مشرکین باز آنے والے نہ تھے جب تک کہ ان کے پاس واضح دلیل نہ آ جاتی۔",
+          "textEnglish": "Those who disbelieved among the People of the Scripture and the polytheists were not to be parted until there came to them clear evidence -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "رَسُولٌ مِّنَ اللَّهِ يَتْلُو صُحُفًا مُّطَهَّرَةً",
+          "textUrdu": "اللہ کی طرف سے ایک رسول جو پاکیزہ صحیفے پڑھ کر سنائے۔",
+          "textEnglish": "A Messenger from Allah, reciting purified scriptures",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "فِيهَا كُتُبٌ قَيِّمَةٌ",
+          "textUrdu": "جن میں بالکل سیدھی اور درست تحریریں ہیں۔",
+          "textEnglish": "Within which are correct writings.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَمَا تَفَرَّقَ الَّذِينَ أُوتُوا الْكِتَابَ إِلَّا مِن بَعْدِ مَا جَاءَتْهُمُ الْبَيِّنَةُ",
+          "textUrdu": "اور اہلِ کتاب میں پھوٹ نہیں پڑی مگر اس کے بعد کہ ان کے پاس روشن دلیل آ گئی۔",
+          "textEnglish": "Nor did those who were given the Scripture become divided until after there had come to them clear evidence.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ حُنَفَاءَ وَيُقِيمُوا الصَّلَاةَ وَيُؤْتُوا الزَّكَاةَ ۚ وَذَٰلِكَ دِينُ الْقَيِّمَةِ",
+          "textUrdu": "اور انہیں صرف یہی حکم دیا گیا تھا کہ وہ یکسو ہو کر خلوصِ نیت سے اللہ کی بندگی کریں اور نماز قائم کریں اور زکوٰۃ دیں۔ اور یہی درست دین ہے۔",
+          "textEnglish": "And they were not commanded except to worship Allah, [being] sincere to Him in religion, inclining to truth, and to establish prayer and to give zakah. And that is the correct religion.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "إِنَّ الَّذِينَ كَفَرُوا مِنْ أَهْلِ الْكِتَابِ وَالْمُشْرِكِينَ فِي نَارِ جَهَنَّمَ خَالِدِينَ فِيهَا ۚ أُولَٰئِكَ هُمْ شَرُّ الْبَرِيَّةِ",
+          "textUrdu": "بے شک جو لوگ اہلِ کتاب اور مشرکین میں سے کافر ہوئے وہ جہنم کی آگ میں ہوں گے، ہمیشہ اس میں رہیں گے۔ یہی لوگ بدترین مخلوق ہیں۔",
+          "textEnglish": "Indeed, they who disbelieved among the People of the Scripture and the polytheists will be in the fire of Hell, abiding eternally therein. Those are the worst of creatures.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ أُولَٰئِكَ هُمْ خَيْرُ الْبَرِيَّةِ",
+          "textUrdu": "بے شک جو لوگ ایمان لائے اور انہوں نے نیک عمل کیے، وہی لوگ بہترین مخلوق ہیں۔",
+          "textEnglish": "Indeed, they who have believed and done righteous deeds - those are the best of creatures.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "جَزَاؤُهُمْ عِندَ رَبِّهِمْ جَنَّاتُ عَدْنٍ تَجْرِي مِن تَحْتِهَا الْأَنْهَارُ خَالِدِينَ فِيهَا أَبَدًا ۖ رَّضِيَ اللَّهُ عَنْهُمْ وَرَضُوا عَنْهُ ۚ ذَٰلِكَ لِمَنْ خَشِيَ رَبَّهُ",
+          "textUrdu": "ان کا بدلہ ان کے رب کے پاس سدا بہار باغات ہیں جن کے نیچے نہریں بہتی ہیں، وہ ان میں ہمیشہ رہیں گے۔ اللہ ان سے راضی ہوا اور وہ اس سے راضی ہوئے۔ یہ اس شخص کے لیے ہے جو اپنے رب سے ڈرا۔",
+          "textEnglish": "Their reward with their Lord will be gardens of perpetual residence beneath which rivers flow, wherein they will abide forever, Allah being pleased with them and they with Him. That is for whoever has feared his Lord.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/98.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-99",
+      "number": 99,
+      "nameArabic": "سُورَةُ الزَّلْزَلَة",
+      "nameEnglish": "Az-Zalzalah",
+      "nameUrdu": "سورۃ الزلزلہ",
+      "meaningEnglish": "The Earthquake",
+      "versesCount": 8,
+      "revelationType": "Medinan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3",
+      "order": 14,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا",
+          "textUrdu": "جب زمین اپنی پوری شدت سے ہلا دی جائے گی!",
+          "textEnglish": "When the earth is shaken with its [final] earthquake",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَأَخْرَجَتِ الْأَرْضُ أَثْقَالَهَا",
+          "textUrdu": "اور زمین اپنے اندر کے بوجھ باہر نکال پھینکے گی!",
+          "textEnglish": "And the earth discharges its burdens",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَقَالَ الْإِنسَانُ مَا لَهَا",
+          "textUrdu": "اور انسان کہے گا کہ اسے کیا ہو گیا ہے؟",
+          "textEnglish": "And man says, \"What is [wrong] with it?\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "يَوْمَئِذٍ تُحَدِّثُ أَخْبَارَهَا",
+          "textUrdu": "اس دن وہ اپنے حالات بیان کرے گی۔",
+          "textEnglish": "That Day, it will report its news",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا",
+          "textUrdu": "کیونکہ آپ کے رب نے اسے یہی حکم دیا ہوگا۔",
+          "textEnglish": "Because your Lord has commanded it.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "يَوْمَئِذٍ يَصْدُرُ النَّاسُ أَشْتَاتًا لِّيُرَوْا أَعْمَالَهُمْ",
+          "textUrdu": "اس دن لوگ مختلف گروہوں میں نکلیں گے تاکہ ان کے اعمال دکھائے جائیں۔",
+          "textEnglish": "That Day, the people will depart separated [into categories] to be shown [the result of] their deeds.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُ",
+          "textUrdu": "پس جس نے ذرہ برابر نیکی کی ہوگی وہ اسے دیکھ لے گا۔",
+          "textEnglish": "So whoever does an atom's weight of good will see it,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُ",
+          "textUrdu": "اور جس نے ذرہ برابر برائی کی ہوگی وہ اسے بھی دیکھ لے گا۔",
+          "textEnglish": "And whoever does an atom's weight of evil will see it.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/99.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-100",
+      "number": 100,
+      "nameArabic": "سُورَةُ الْعَادِيَات",
+      "nameEnglish": "Al-Adiyat",
+      "nameUrdu": "سورۃ العادیات",
+      "meaningEnglish": "The Courser / Charging Steeds",
+      "versesCount": 11,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3",
+      "order": 15,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَالْعَادِيَاتِ ضَبْحًا",
+          "textUrdu": "قسم ہے ہانپتے ہوئے دوڑنے والے گھوڑوں کی!",
+          "textEnglish": "By the racers, panting,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "فَالْمُورِيَاتِ قَدْحًا",
+          "textUrdu": "پھر ٹاپوں سے چنگاریاں نکالنے والوں کی!",
+          "textEnglish": "And the producers of sparks [when] striking",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "فَالْمُغِيرَاتِ صُبْحًا",
+          "textUrdu": "پھر صبح کے وقت حملہ کرنے والوں کی!",
+          "textEnglish": "And the chargers at dawn,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "فَأَثَرْنَ بِهِ نَقْعًا",
+          "textUrdu": "پھر اس وقت گرد و غبار اڑانے والوں کی!",
+          "textEnglish": "Stirring up thereby [clouds of] dust,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "فَوَسَطْنَ بِهِ جَمْعًا",
+          "textUrdu": "پھر اس کے ساتھ دشمن کی فوج میں گھس جانے والوں کی!",
+          "textEnglish": "Arriving thereby in the center collectively,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "إِنَّ الْإِنسَانَ لِرَبِّهِ لَكَنُودٌ",
+          "textUrdu": "بے شک انسان اپنے رب کا بڑا ناشکرا ہے۔",
+          "textEnglish": "Indeed mankind, to his Lord, is ungrateful.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "وَإِنَّهُ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ",
+          "textUrdu": "اور وہ خود بھی اس بات پر گواہ ہے۔",
+          "textEnglish": "And indeed, to that he is to witness.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَإِنَّهُ لِحُبِّ الْخَيْرِ لَشَدِيدٌ",
+          "textUrdu": "اور وہ مال کی محبت میں بہت سخت ہے۔",
+          "textEnglish": "And indeed he is, in love of wealth, intense.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِي الْقُبُورِ",
+          "textUrdu": "کیا وہ نہیں جانتا جب قبروں میں جو کچھ ہے نکال لیا جائے گا؟",
+          "textEnglish": "But does he not know that when the contents of the graves are scattered",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "وَحُصِّلَ مَا فِي الصُّدُورِ",
+          "textUrdu": "اور جو کچھ سینوں میں ہے ظاہر کر دیا جائے گا؟",
+          "textEnglish": "And that within the breasts is obtained,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌ",
+          "textUrdu": "یقیناً ان کا رب اس دن ان کے حال سے پوری طرح باخبر ہوگا۔",
+          "textEnglish": "Indeed, their Lord with them, that Day, is [fully] Acquainted.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/100.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-101",
+      "number": 101,
+      "nameArabic": "سُورَةُ الْقَارِعَة",
+      "nameEnglish": "Al-Qari'ah",
+      "nameUrdu": "سورۃ القارعہ",
+      "meaningEnglish": "The Calamity / Striking Hour",
+      "versesCount": 11,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3",
+      "order": 16,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "الْقَارِعَةُ",
+          "textUrdu": "کھڑکھڑانے والی آفت!",
+          "textEnglish": "The Striking Calamity -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "مَا الْقَارِعَةُ",
+          "textUrdu": "وہ کھڑکھڑانے والی کیا ہے؟",
+          "textEnglish": "What is the Striking Calamity?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَمَا أَدْرَاكَ مَا الْقَارِعَةُ",
+          "textUrdu": "اور آپ کو کیا معلوم کہ وہ کھڑکھڑانے والی کیا ہے؟",
+          "textEnglish": "And what can make you know what is the Striking Calamity?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "يَوْمَ يَكُونُ النَّاسُ كَالْفَرَاشِ الْمَبْثُوثِ",
+          "textUrdu": "جس دن لوگ بکھرے ہوئے پروانوں کی طرح ہو جائیں گے۔",
+          "textEnglish": "It is the Day when people will be like moths, dispersed,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَتَكُونُ الْجِبَالُ كَالْعِهْنِ الْمَنفُوشِ",
+          "textUrdu": "اور پہاڑ دھنی ہوئی اون کی طرح ہو جائیں گے۔",
+          "textEnglish": "And the mountains will be like wool, fluffed up.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "فَأَمَّا مَن ثَقُلَتْ مَوَازِينُهُ",
+          "textUrdu": "پس جس کے پلڑے بھاری ہوں گے۔",
+          "textEnglish": "Then as for one whose scales are heavy [with good deeds],",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "فَهُوَ فِي عِيشَةٍ رَّاضِيَةٍ",
+          "textUrdu": "تو وہ من پسند عیش میں ہوگا۔",
+          "textEnglish": "He will be in a pleasant life.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "وَأَمَّا مَنْ خَفَّتْ مَوَازِينُهُ",
+          "textUrdu": "اور جس کے پلڑے ہلکے ہوں گے۔",
+          "textEnglish": "But as for one whose scales are light,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "فَأُمُّهُ هَاوِيَةٌ",
+          "textUrdu": "تو اس کا ٹھکانہ ہاویہ (گہری کھائی) ہوگا۔",
+          "textEnglish": "His refuge will be an abyss.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 10,
+          "textArabic": "وَمَا أَدْرَاكَ مَا هِيَهْ",
+          "textUrdu": "اور آپ کو کیا معلوم کہ وہ کیا ہے؟",
+          "textEnglish": "And what can make you know what that is?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        },
+        {
+          "numberInSurah": 11,
+          "textArabic": "نَارٌ حَامِيَةٌ",
+          "textUrdu": "وہ دہکتی ہوئی آگ ہے!",
+          "textEnglish": "It is a Fire, intensely hot.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/101.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-102",
+      "number": 102,
+      "nameArabic": "سُورَةُ التَّكَاثُر",
+      "nameEnglish": "At-Takathur",
+      "nameUrdu": "سورۃ التکاثر",
+      "meaningEnglish": "Competition in Increase",
+      "versesCount": 8,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3",
+      "order": 17,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "أَلْهَاكُمُ التَّكَاثُرُ",
+          "textUrdu": "تمہیں کثرت کی ہوس نے غافل کر دیا۔",
+          "textEnglish": "Competition in [worldly] increase diverts you",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "حَتَّىٰ زُرْتُمُ الْمَقَابِرَ",
+          "textUrdu": "یہاں تک کہ تم نے قبریں جا دیکھیں۔",
+          "textEnglish": "Until you visit the graveyards.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "كَلَّا سَوْفَ تَعْلَمُونَ",
+          "textUrdu": "ہرگز نہیں، عنقریب تم جان لو گے۔",
+          "textEnglish": "No! You are going to know.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ",
+          "textUrdu": "پھر ہرگز نہیں، جلد ہی تم جان لو گے۔",
+          "textEnglish": "Then no! You are going to know.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "كَلَّا لَوْ تَعْلَمُونَ عِلْمَ الْيَقِينِ",
+          "textUrdu": "ہرگز نہیں! کاش تم یقینی علم کے ساتھ جانتے۔",
+          "textEnglish": "No! If you only knew with knowledge of certainty...",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "لَتَرَوُنَّ الْجَحِيمَ",
+          "textUrdu": "تم ضرور جہنم کو دیکھو گے۔",
+          "textEnglish": "You will surely see the Hellfire.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "ثُمَّ لَتَرَوُنَّهَا عَيْنَ الْيَقِينِ",
+          "textUrdu": "پھر تم اسے یقین کی آنکھ سے دیکھو گے۔",
+          "textEnglish": "Then you will surely see it with the eye of certainty.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "ثُمَّ لَتُسْأَلُنَّ يَوْمَئِذٍ عَنِ النَّعِيمِ",
+          "textUrdu": "پھر اس دن تم سے نعمتوں کے بارے میں ضرور سوال کیا جائے گا۔",
+          "textEnglish": "Then you will surely be asked that Day about pleasure.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/102.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-103",
+      "number": 103,
+      "nameArabic": "سُورَةُ الْعَصْر",
+      "nameEnglish": "Al-Asr",
+      "nameUrdu": "سورۃ العصر",
+      "meaningEnglish": "The Declining Day",
+      "versesCount": 3,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/103.mp3",
+      "order": 18,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَالْعَصْرِ",
+          "textUrdu": "قسم ہے زمانے کی!",
+          "textEnglish": "By time,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/103.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "إِنَّ الْإِنسَانَ لَفِي خُسْرٍ",
+          "textUrdu": "بے شک تمام انسان خسارے میں ہیں۔",
+          "textEnglish": "Indeed, mankind is in loss,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/103.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
+          "textUrdu": "سوائے ان کے جو ایمان لائے اور نیک عمل کیے اور ایک دوسرے کو حق کی وصیت اور صبر کی تلقین کی۔",
+          "textEnglish": "Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/103.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-104",
+      "number": 104,
+      "nameArabic": "سُورَةُ الْهُمَزَة",
+      "nameEnglish": "Al-Humazah",
+      "nameUrdu": "سورۃ الہمزہ",
+      "meaningEnglish": "The Slanderer",
+      "versesCount": 9,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3",
+      "order": 19,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ",
+          "textUrdu": "تباہی ہے ہر طعنہ زنی کرنے والے اور عیب جوئی کرنے والے کے لیے!",
+          "textEnglish": "Woe to every scorner and mocker",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "الَّذِي جَمَعَ مَالًا وَعَدَّدَهُ",
+          "textUrdu": "جس نے مال جمع کیا اور اسے گن گن کر رکھا۔",
+          "textEnglish": "Who collects wealth and [continuously] counts it.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "يَحْسَبُ أَنَّ مَالَهُ أَخْلَدَهُ",
+          "textUrdu": "وہ سمجھتا ہے کہ اس کا مال اسے ہمیشہ زندہ رکھے گا۔",
+          "textEnglish": "He thinks that his wealth will make him immortal.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "كَلَّا ۖ لَيُنبَذَنَّ فِي الْحُطَمَةِ",
+          "textUrdu": "ہرگز نہیں! وہ ضرور حطمہ (توڑ پھوڑ دینے والی آگ) میں پھینکا جائے گا۔",
+          "textEnglish": "No! He will surely be thrown into the Crusher.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَمَا أَدْرَاكَ مَا الْحُطَمَةُ",
+          "textUrdu": "اور آپ کو کیا معلوم کہ حطمہ کیا ہے؟",
+          "textEnglish": "And what can make you know what is the Crusher?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "نَارُ اللَّهِ الْمُوقَدَةُ",
+          "textUrdu": "وہ اللہ کی بھڑکائی ہوئی آگ ہے۔",
+          "textEnglish": "It is the fire of Allah, [eternally] fueled,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "الَّتِي تَطَّلِعُ عَلَى الْأَفْئِدَةِ",
+          "textUrdu": "جو دلوں تک پہنچ جائے گی۔",
+          "textEnglish": "Which mounts directed at the hearts.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 8,
+          "textArabic": "إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ",
+          "textUrdu": "بے شک وہ ان پر بند کر دی جائے گی۔",
+          "textEnglish": "Indeed, Hellfire will be closed down upon them",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        },
+        {
+          "numberInSurah": 9,
+          "textArabic": "فِي عَمَدٍ مُّمَدَّدَةٍ",
+          "textUrdu": "لمبے لمبے ستونوں میں۔",
+          "textEnglish": "In extended columns.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/104.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-105",
+      "number": 105,
+      "nameArabic": "سُورَةُ الْفِيل",
+      "nameEnglish": "Al-Fil",
+      "nameUrdu": "سورۃ الفیل",
+      "meaningEnglish": "The Elephant",
+      "versesCount": 5,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3",
+      "order": 20,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ",
+          "textUrdu": "کیا آپ نے نہیں دیکھا کہ آپ کے رب نے ہاتھی والوں کے ساتھ کیا کیا؟",
+          "textEnglish": "Have you not considered, [O Muhammad], how your Lord dealt with the companions of the elephant?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ",
+          "textUrdu": "کیا اس نے ان کی چال کو برباد نہیں کر دیا؟",
+          "textEnglish": "Did He not make their plan into misguidance?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ",
+          "textUrdu": "اور ان پر پرندوں کے غول کے غول بھیجے۔",
+          "textEnglish": "And He sent against them birds in flocks,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ",
+          "textUrdu": "جو ان پر پکی ہوئی مٹی کے پتھر پھینک رہے تھے۔",
+          "textEnglish": "Striking them with stones of hard clay,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ",
+          "textUrdu": "پس اس نے انہیں کھائے ہوئے بھوسے جیسا کر دیا۔",
+          "textEnglish": "And He made them like eaten straw.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/105.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-106",
+      "number": 106,
+      "nameArabic": "سُورَةُ قُرَيْش",
+      "nameEnglish": "Quraysh",
+      "nameUrdu": "سورۃ قریش",
+      "meaningEnglish": "Quraysh",
+      "versesCount": 4,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3",
+      "order": 21,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "لِإِيلَافِ قُرَيْشٍ",
+          "textUrdu": "قریش کو مانوس کرنے کی خاطر!",
+          "textEnglish": "For the accustomed security of the Quraysh -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ",
+          "textUrdu": "انہیں سردی اور گرمی کے سفر سے مانوس کرنے کی خاطر!",
+          "textEnglish": "Their accustomed security [in] the caravan of winter and summer -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ",
+          "textUrdu": "پس انہیں چاہیے کہ وہ اس گھر (خانہ کعبہ) کے رب کی عبادت کریں۔",
+          "textEnglish": "Let them worship the Lord of this House,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "الَّذِي أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ",
+          "textUrdu": "جس نے انہیں بھوک میں کھانا کھلایا اور خوف سے امن بخشا۔",
+          "textEnglish": "Who has fed them, [saving them] from hunger and made them safe, [saving them] from fear.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/106.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-107",
+      "number": 107,
+      "nameArabic": "سُورَةُ الْمَاعُون",
+      "nameEnglish": "Al-Ma'un",
+      "nameUrdu": "سورۃ الماعون",
+      "meaningEnglish": "Small Kindnesses",
+      "versesCount": 7,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3",
+      "order": 22,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "أَرَأَيْتَ الَّذِي يُكَذِّبُ بِالدِّينِ",
+          "textUrdu": "کیا آپ نے اس شخص کو دیکھا جو جزا و سزا کو جھٹلاتا ہے؟",
+          "textEnglish": "Have you seen the one who denies the Recompense?",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "فَذَٰلِكَ الَّذِي يَدُعُّ الْيَتِيمَ",
+          "textUrdu": "یہ وہی ہے جو یتیم کو دھکے دیتا ہے۔",
+          "textEnglish": "For that is the one who drives away the orphan",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَلَا يَحُضُّ عَلَىٰ طَعَامِ الْمِسْكِينِ",
+          "textUrdu": "اور مسکین کو کھانا کھلانے کی ترغیب نہیں دیتا۔",
+          "textEnglish": "And does not encourage the feeding of the poor.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "فَوَيلٌ لِّلْمُصَلِّينَ",
+          "textUrdu": "پس ہلاکت ہے ان نماز پڑھنے والوں کے لیے!",
+          "textEnglish": "So woe to those who pray",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "الَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ",
+          "textUrdu": "جو اپنی نماز سے غافل ہیں۔",
+          "textEnglish": "[But] who are heedless of their prayer -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "الَّذِينَ هُمْ يُرَاءُونَ",
+          "textUrdu": "جو صرف دکھاوا کرتے ہیں۔",
+          "textEnglish": "Those who make show [of their deeds]",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        },
+        {
+          "numberInSurah": 7,
+          "textArabic": "وَيَمْنَعُونَ الْمَاعُونَ",
+          "textUrdu": "اور روزمرہ استعمال کی معمولی چیزیں مانگے پر دینے سے روکتے ہیں۔",
+          "textEnglish": "And withhold [simple] assistance.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/107.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-108",
+      "number": 108,
+      "nameArabic": "سُورَةُ الْكَوْثَر",
+      "nameEnglish": "Al-Kawthar",
+      "nameUrdu": "سورۃ الکوثر",
+      "meaningEnglish": "The Abundance",
+      "versesCount": 3,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/108.mp3",
+      "order": 23,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
+          "textUrdu": "بے شک ہم نے آپ کو کوثر (بے انتہا بھلائی) عطا فرمائی۔",
+          "textEnglish": "Indeed, We have granted you, [O Muhammad], al-Kawthar.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6205.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "فَصَلِّ لِرَبِّكَ وَانْحَرْ",
+          "textUrdu": "پس آپ اپنے رب کے لیے نماز پڑھیں اور قربانی کریں۔",
+          "textEnglish": "So pray to your Lord and sacrifice [to Him alone].",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6206.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
+          "textUrdu": "یقیناً آپ کا دشمن ہی بے نام و نشان رہنے والا ہے۔",
+          "textEnglish": "Indeed, your enemy is the one cut off.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6207.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-109",
+      "number": 109,
+      "nameArabic": "سُورَةُ الْكَافِرُونَ",
+      "nameEnglish": "Al-Kafirun",
+      "nameUrdu": "سورۃ الکافرون",
+      "meaningEnglish": "The Disbelievers",
+      "versesCount": 6,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3",
+      "order": 24,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "قُلْ يَا أَيُّهَا الْكَافِرُونَ",
+          "textUrdu": "آپ کہہ دیجیے کہ اے کافرو!",
+          "textEnglish": "Say, \"O disbelievers,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "لَا أَعْبُدُ مَا تَعْبُدُونَ",
+          "textUrdu": "میں ان بتوں کی پوجا نہیں کرتا جنہیں تم پوجتے ہو۔",
+          "textEnglish": "I do not worship what you worship.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ",
+          "textUrdu": "اور نہ تم اس کی بندگی کرتے ہو جس کی میں بندگی کرتا ہوں۔",
+          "textEnglish": "Nor are you worshippers of what I worship.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ",
+          "textUrdu": "اور نہ میں آئندہ ان کی پوجا کروں گا جن کی تم نے پوجا کی۔",
+          "textEnglish": "Nor will I be a worshipper of what you worship.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ",
+          "textUrdu": "اور نہ تم اس کی بندگی کرنے والے ہو جس کی میں بندگی کرتا ہوں۔",
+          "textEnglish": "Nor will you be worshippers of what I worship.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+          "textUrdu": "تمہارے لیے تمہارا دین اور میرے لیے میرا دین ہے۔",
+          "textEnglish": "For you is your religion, and for me is my religion.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/109.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-110",
+      "number": 110,
+      "nameArabic": "سُورَةُ النَّصْر",
+      "nameEnglish": "An-Nasr",
+      "nameUrdu": "سورۃ النصر",
+      "meaningEnglish": "The Divine Support",
+      "versesCount": 3,
+      "revelationType": "Medinan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/110.mp3",
+      "order": 25,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ",
+          "textUrdu": "جب اللہ کی مدد اور فتح آ پہنچے!",
+          "textEnglish": "When the victory of Allah has come and the conquest,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/110.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا",
+          "textUrdu": "اور آپ لوگوں کو دیکھ لیں کہ وہ فوج در فوج اللہ کے دین میں داخل ہو رہے ہیں۔",
+          "textEnglish": "And you see the people entering into the religion of Allah in multitudes,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/110.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ ۚ إِنَّهُ كَانَ تَوَّابًا",
+          "textUrdu": "تو اپنے رب کی حمد کے ساتھ تسبیح کیجیے اور اس سے مغفرت مانگیے، بے شک وہ بڑا معاف فرمانے والا ہے۔",
+          "textEnglish": "Then exalt [Him] with praise of your Lord and ask forgiveness of Him. Indeed, He is ever Accepting of repentance.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/110.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-111",
+      "number": 111,
+      "nameArabic": "سُورَةُ الْمَسَد",
+      "nameEnglish": "Al-Lahab (Al-Masad)",
+      "nameUrdu": "سورۃ اللھب",
+      "meaningEnglish": "The Palm Fiber / The Flame",
+      "versesCount": 5,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3",
+      "order": 26,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ",
+          "textUrdu": "ٹوٹ گئے ابو لہب کے دونوں ہاتھ اور وہ خود بھی برباد ہو گیا!",
+          "textEnglish": "May the hands of Abu Lahab be ruined, and ruined is he.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "مَا أَغْنَىٰ عَنْهُ مَالُهُ وَمَا كَسَبَ",
+          "textUrdu": "نہ تو اس کا مال اس کے کچھ کام آیا اور نہ وہ جو اس نے کمایا۔",
+          "textEnglish": "His wealth will not avail him or that which he gained.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "سَيَصْلَىٰ نَارًا ذَاتَ لَهَبٍ",
+          "textUrdu": "وہ عنقریب شعلہ زن آگ میں داخل ہوگا۔",
+          "textEnglish": "He will [enter to] burn in a Fire of [blazing] flame",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ",
+          "textUrdu": "اور اس کی عورت بھی جو لکڑیاں ڈھونے والی ہے۔",
+          "textEnglish": "And his wife [as well] - the carrier of firewood.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "فِي جِيدِهَا حَبْلٌ مِّن مَّسَدٍ",
+          "textUrdu": "اس کی گردن میں بٹی ہوئی رسی ہوگی۔",
+          "textEnglish": "Around her neck is a rope of [twisted] fiber.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/111.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-112",
+      "number": 112,
+      "nameArabic": "سُورَةُ الْإِخْلَاص",
+      "nameEnglish": "Al-Ikhlas",
+      "nameUrdu": "سورۃ الاخلاص",
+      "meaningEnglish": "The Sincerity (Purity of Faith)",
+      "versesCount": 4,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/112.mp3",
+      "order": 27,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "قُلْ هُوَ اللَّهُ أَحَدٌ",
+          "textUrdu": "کہہ دیجیے کہ وہ اللہ ایک ہے۔",
+          "textEnglish": "Say, \"He is Allah, [who is] One,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6222.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "اللَّهُ الصَّمَدُ",
+          "textUrdu": "اللہ بے نیاز ہے۔",
+          "textEnglish": "Allah, the Eternal Refuge.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6223.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+          "textUrdu": "نہ اس کی کوئی اولاد ہے اور نہ وہ کسی کی اولاد ہے۔",
+          "textEnglish": "He neither begets nor is born,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6224.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+          "textUrdu": "اور کوئی اس کا ہمسر نہیں۔",
+          "textEnglish": "Nor is there to Him any equivalent.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6225.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-113",
+      "number": 113,
+      "nameArabic": "سُورَةُ الْفَلَق",
+      "nameEnglish": "Al-Falaq",
+      "nameUrdu": "سورۃ الفلق",
+      "meaningEnglish": "The Daybreak",
+      "versesCount": 5,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/113.mp3",
+      "order": 28,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
+          "textUrdu": "آپ کہہ دیجیے کہ میں صبح کے رب کی پناہ مانگتا ہوں۔",
+          "textEnglish": "Say, \"I seek refuge in the Lord of daybreak,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6226.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "مِن شَرِّ مَا خَلَقَ",
+          "textUrdu": "ہر اس چیز کی برائی سے جو اس نے پیدا کی۔",
+          "textEnglish": "From the evil of that which He created,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6227.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+          "textUrdu": "اور اندھیری رات کی برائی سے جب وہ چھا جائے۔",
+          "textEnglish": "And from the evil of darkness when it settles,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6228.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
+          "textUrdu": "اور گرہوں میں پھونکنے والیوں کی برائی سے۔",
+          "textEnglish": "And from the evil of the blowers in knots,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6229.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+          "textUrdu": "اور حسد کرنے والے کی برائی سے جب وہ حسد کرے۔",
+          "textEnglish": "And from the evil of an envier when he envies.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6230.mp3"
+        }
+      ]
+    },
+    {
+      "id": "surah-114",
+      "number": 114,
+      "nameArabic": "سُورَةُ النَّاس",
+      "nameEnglish": "An-Nas",
+      "nameUrdu": "سورۃ الناس",
+      "meaningEnglish": "Mankind",
+      "versesCount": 6,
+      "revelationType": "Meccan",
+      "audioUrl": "https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/114.mp3",
+      "order": 29,
+      "ayahs": [
+        {
+          "numberInSurah": 1,
+          "textArabic": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
+          "textUrdu": "آپ کہہ دیجیے کہ میں انسانوں کے رب کی پناہ میں آتا ہوں۔",
+          "textEnglish": "Say, \"I seek refuge in the Lord of mankind,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6231.mp3"
+        },
+        {
+          "numberInSurah": 2,
+          "textArabic": "مَلِكِ النَّاسِ",
+          "textUrdu": "جو انسانوں کا بادشاہ ہے۔",
+          "textEnglish": "The Sovereign of mankind.",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6232.mp3"
+        },
+        {
+          "numberInSurah": 3,
+          "textArabic": "إِلَٰهِ النَّاسِ",
+          "textUrdu": "جو انسانوں کا معبودِ برحق ہے۔",
+          "textEnglish": "The God of mankind,",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6233.mp3"
+        },
+        {
+          "numberInSurah": 4,
+          "textArabic": "مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
+          "textUrdu": "وسوسہ ڈالنے والے، پیچھے ہٹ جانے والے شیطان کے شر سے۔",
+          "textEnglish": "From the evil of the retreating whisperer -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6234.mp3"
+        },
+        {
+          "numberInSurah": 5,
+          "textArabic": "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ",
+          "textUrdu": "جو لوگوں کے سینوں میں وسوسے ڈالتا ہے۔",
+          "textEnglish": "Who whispers [evil] into the breasts of mankind -",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6235.mp3"
+        },
+        {
+          "numberInSurah": 6,
+          "textArabic": "مِنَ الْجِنَّةِ وَالنَّاسِ",
+          "textUrdu": "خواہ وہ جنات میں سے ہو یا انسانوں میں سے۔",
+          "textEnglish": "From among the jinn and mankind.\"",
+          "audioUrl": "https://cdn.islamic.network/quran/audio/128/ar.alafasy/6236.mp3"
+        }
+      ]
+    }
+  ],
+  "islamicItems": [
+    {
+      "id": "kalima-1",
+      "category": "kalimas",
+      "title": "First Kalima — Tayyab (Purity)",
+      "titleArabic": "الْكَلِمَةُ الطَّيِّبَة",
+      "arabicText": "لَا إِلٰهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ",
+      "pronunciation": "Laa ilaaha illal Lahoo Mohammadur Rasool Ul Laah",
+      "translationEnglish": "There is no god worthy of worship except Allah, and Muhammad is the Messenger of Allah.",
+      "translationUrdu": "اللہ کے سوا کوئی معبود نہیں، محمد صلی اللہ علیہ وسلم اللہ کے رسول ہیں۔",
+      "translationHindi": "अल्लाह के सिवा कोई इबादत के लायक नहीं, हज़रत मुहम्मद (सल्लल्लाहु अलैहि वसल्लम) अल्लाह के रसूल हैं।",
+      "explanation": "The foundation of Islamic belief and faith in the oneness of Allah.",
+      "order": 1
+    },
+    {
+      "id": "kalima-2",
+      "category": "kalimas",
+      "title": "Second Kalima — Shahadat (Evidence)",
+      "titleArabic": "كَلِمَةُ الشَّهَادَة",
+      "arabicText": "أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "pronunciation": "Ash-hadu an laa ilaaha illal-lahu wahdahu laa shareeka lahu wa ash-hadu anna Muhammadan 'abduhu wa rasooluh",
+      "translationEnglish": "I bear witness that there is no deity except Allah alone without partner, and I bear witness that Muhammad is His servant and Messenger.",
+      "translationUrdu": "میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں وہ اکیلا ہے اس کا کوئی شریک نہیں اور میں گواہی دیتا ہوں کہ محمد (صلی اللہ علیہ وسلم) اس کے بندے اور رسول ہیں۔",
+      "translationHindi": "मैं गवाही देता हूँ कि अल्लाह के सिवा कोई इबादत के लायक नहीं, वह अकेला है उसका कोई साझीदार नहीं, और मुहम्मद (सल्ल.) उसके बन्दे और रसूल हैं।",
+      "explanation": "Declaration of Faith witnessed with heart and tongue.",
+      "order": 2
+    },
+    {
+      "id": "kalima-3",
+      "category": "kalimas",
+      "title": "Third Kalima — Tamjeed (Glory of Allah)",
+      "titleArabic": "كَلِمَةُ التَّمْجِيد",
+      "arabicText": "سُبْحَانَ اللهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلٰهَ إِلَّا اللهُ وَاللهُ أَكْبَرُ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ الْعَلِيِّ الْعَظِيمِ",
+      "pronunciation": "Subhanallaahi wal hamdu lillaahi wa laa ilaaha illal laahu wallaahu Akbar, wa laa hawla wa laa quwwata illaa billaahil 'aliyyil 'azeem",
+      "translationEnglish": "Glory be to Allah, all praise is due to Allah, there is no god but Allah, Allah is the Greatest, and there is no power or strength except with Allah, the Most High, the Supreme.",
+      "translationUrdu": "اللہ پاک ہے اور سب تعریف اللہ ہی کے لیے ہے اور اللہ کے سوا کوئی معبود نہیں اور اللہ سب سے بڑا ہے، اور گناہوں سے بچنے کی طاقت اور نیکی کی قوت صرف اللہ ہی کی توفیق سے ہے۔",
+      "translationHindi": "अल्लाह पाक है और सब तारीफें अल्लाह ही के लिए हैं, और अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे बड़ा है।",
+      "explanation": "Glorifying and praising Allah with the most beautiful words.",
+      "order": 3
+    },
+    {
+      "id": "kalima-4",
+      "category": "kalimas",
+      "title": "Fourth Kalima — Tauheed (Oneness)",
+      "titleArabic": "كَلِمَةُ التَّوْحِيد",
+      "arabicText": "لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ وَهُوَ حَيٌّ لَا يَمُوتُ أَبَدًا أَبَدًا، ذُو الْجَلَالِ وَالْإِكْرَامِ، بِيَدِهِ الْخَيْرُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+      "pronunciation": "Laa ilaaha illal-lahu wahdahu laa shareeka lahu, lahul mulku wa lahul hamdu, yuhyee wa yumeetu wa huwa hayyun laa yamootu abadan abada, dhul jalaali wal ikraam, biyadihil khayr, wa huwa 'ala kulli shay'in qadeer",
+      "translationEnglish": "There is no god but Allah alone, Who has no partner. His is the dominion and His is the praise. He gives life and causes death, and He is Alive and never dies. Possessor of Majesty and Honor, in His hand is all goodness, and He has power over all things.",
+      "translationUrdu": "اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، اسی کی بادشاہی ہے اور اسی کے لیے تمام تعریفیں ہیں، وہی جلاتا ہے اور وہی مارتا ہے، وہ ہمیشہ زندہ رہنے والا ہے کبھی نہیں مرے گا، بزرگی اور عزت والا ہے، بھلائی اسی کے ہاتھ میں ہے اور وہ ہر چیز پر قادر ہے۔",
+      "translationHindi": "अल्लाह के सिवा कोई माबूद नहीं, वह अकेला है, उसका कोई साझी नहीं, उसी का मुल्क है और उसी के लिए सारी तारीफें हैं।",
+      "order": 4
+    },
+    {
+      "id": "kalima-5",
+      "category": "kalimas",
+      "title": "Fifth Kalima — Astaghfar (Forgiveness)",
+      "titleArabic": "كَلِمَةُ الِاسْتِغْفَار",
+      "arabicText": "أَسْتَغْفِرُ اللهَ رَبِّي مِنْ كُلِّ ذَنْبٍ أَذْنَبْتُهُ عَمَدًا أَوْ خَطَأً، سِرًّا أَوْ عَلَانِيَةً، وَأَتُوبُ إِلَيْهِ مِنَ الذَّنْبِ الَّذِي أَعْلَمُ وَمِنَ الذَّنْبِ الَّذِي لَا أَعْلَمُ، إِنَّكَ أَنْتَ عَلَّامُ الْغُيُوبِ وَسَتَّارُ الْعُيُوبِ وَغَفَّارُ الذُّنُوبِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ الْعَلِيِّ الْعَظِيمِ",
+      "pronunciation": "Astaghfirullah Rabbi min kulli zambin aznabtuhu 'amadan aw khata-an sirran aw 'alaniyataw wa atoobu ilayhi...",
+      "translationEnglish": "I seek forgiveness from Allah, my Lord, for every sin I committed intentionally or mistakenly, secretly or openly, and I turn to Him in repentance...",
+      "translationUrdu": "میں اللہ سے اپنے تمام گناہوں کی معافی مانگتا ہوں جو میں نے جان بوجھ کر کیے یا بھول کر، چھپ کر کیے یا کھل کر...",
+      "translationHindi": "मैं अपने रब अल्लाह से अपने हर गुनाह की माफी मांगता हूँ...",
+      "order": 5
+    },
+    {
+      "id": "kalima-6",
+      "category": "kalimas",
+      "title": "Sixth Kalima — Rad-e-Kufr (Rejection of Disbelief)",
+      "titleArabic": "كَلِمَةُ رَدِّ الْكُفْر",
+      "arabicText": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ أَنْ أُشْرِكَ بِكَ شَيْئًا وَأَنَا أَعْلَمُ بِهِ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ بِهِ، تُبْتُ عَنْهُ وَتَبَرَّأْتُ مِنَ الْكُفْرِ وَالشِّرْكِ وَالْكِذْبِ وَالْغِيبَةِ وَالْبِدْعَةِ وَالنَّمِيمَةِ وَالْفَوَاحِشِ وَالْبُهْتَانِ وَالْمَعَاصِي كُلِّهَا، وَأَسْلَمْتُ وَأَقُولُ لَا إِلٰهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ",
+      "pronunciation": "Allahumma innee a'oodhu bika min an ushrika bika shay-an wa-ana a'lamu bihee wa-astaghfiruka limaa laa a'lamu bihee...",
+      "translationEnglish": "O Allah! I seek protection in You from that I should join any partner with You knowingly, and I ask Your forgiveness from that which I do not know...",
+      "translationUrdu": "اے اللہ! میں تیری پناہ مانگتا ہوں اس بات سے کہ میں جان بوجھ کر کسی کو تیرا شریک ٹھہراؤں، اور تجھ سے معافی مانگتا ہوں اس بات کی جسے میں نہیں جانتا...",
+      "translationHindi": "ऐ अल्लाह! मैं तेरी पनाह मांगता हूँ इस बात से कि मैं जान-बूझकर किसी को तेरा शरीक ठहराऊँ...",
+      "order": 6
+    },
+    {
+      "id": "wudu-guide",
+      "category": "wudu",
+      "title": "How to Perform Wudu (Ablution) Step-by-Step",
+      "titleArabic": "كَيْفِيَّةُ الْوُضُوء",
+      "arabicText": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "translationEnglish": "Step-by-step simple visual guide to make Wudu cleanly and correctly for kids.",
+      "translationUrdu": "بچوں کے لیے وضو کرنے کا مکمل اور آسان تصویری طریقہ۔",
+      "translationHindi": "बच्चों के लिए वुज़ू करने का आसान और मुकम्मल तरीका।",
+      "explanation": "Wudu cleans our body and prepares our heart for prayer before Allah.",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "title": "Intention (Niyyah) & Bismillah",
+          "description": "Make intention in heart for Wudu and say \"Bismillah-ir-Rahman-ir-Raheem\".",
+          "arabicText": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Wash Hands (3 Times)",
+          "description": "Wash both hands up to the wrists thoroughly 3 times, cleaning between fingers.",
+          "arabicText": "غَسْلُ الْيَدَيْنِ"
+        },
+        {
+          "stepNumber": 3,
+          "title": "Rinse Mouth (3 Times)",
+          "description": "Take clean water in your right hand, rinse your mouth gently 3 times.",
+          "arabicText": "الْمَضْمَضَةُ"
+        },
+        {
+          "stepNumber": 4,
+          "title": "Clean Nose (3 Times)",
+          "description": "Sniff water gently into nostrils with right hand and blow out with left hand 3 times.",
+          "arabicText": "الِاسْتِنْشَاقُ"
+        },
+        {
+          "stepNumber": 5,
+          "title": "Wash Entire Face (3 Times)",
+          "description": "Wash face from forehead to chin and ear to ear completely 3 times.",
+          "arabicText": "غَسْلُ الْوَجْهِ"
+        },
+        {
+          "stepNumber": 6,
+          "title": "Wash Arms up to Elbows (3 Times)",
+          "description": "Wash right arm including elbow 3 times, then left arm 3 times.",
+          "arabicText": "غَسْلُ الْيَدَيْنِ إِلَى الْمِرْفَقَيْنِ"
+        },
+        {
+          "stepNumber": 7,
+          "title": "Wipe Head & Ears (Masah - 1 Time)",
+          "description": "Wipe wet hands over head from front to back, then wipe inside and back of ears.",
+          "arabicText": "مَسْحُ الرَّأْسِ وَالْأُذُنَيْنِ"
+        },
+        {
+          "stepNumber": 8,
+          "title": "Wash Both Feet up to Ankles (3 Times)",
+          "description": "Wash right foot including ankle 3 times, then left foot 3 times, cleaning between toes.",
+          "arabicText": "غَسْلُ الرِّجْلَيْنِ إِلَى الْكَعْبَيْنِ"
+        }
+      ],
+      "order": 7
+    },
+    {
+      "id": "salah-guide",
+      "category": "salah",
+      "title": "How to Pray Salah (Namaz) Step-by-Step",
+      "titleArabic": "تَعَلُّمُ الصَّلَاة",
+      "arabicText": "حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلَاةِ الْوُسْطَىٰ",
+      "translationEnglish": "Complete children guide to standing, bowing, prostrating, and reciting in Salah.",
+      "translationUrdu": "بچوں کے لیے نماز کا آسان اور مکمل طریقہ۔",
+      "translationHindi": "बच्चों के लिए नमाज़ सीखने का सरल व सम्पूर्ण तरीका।",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "title": "Takbeer Tahreemah",
+          "description": "Stand facing Qiblah with pure intention. Raise hands to ears and say \"Allahu Akbar\".",
+          "arabicText": "اللهُ أَكْبَرُ"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Qiyam (Standing) & Thana",
+          "description": "Fold right hand over left below chest. Recite Thana: \"Subhanakallahumma...\", Surah Al-Fatiha, and another Surah.",
+          "arabicText": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ"
+        },
+        {
+          "stepNumber": 3,
+          "title": "Ruku (Bowing)",
+          "description": "Say \"Allahu Akbar\" and bow with hands on knees and flat back. Recite 3 times: \"Subhana Rabbiyal Azeem\".",
+          "arabicText": "سُبْحَانَ رَبِّيَ الْعَظِيمِ"
+        },
+        {
+          "stepNumber": 4,
+          "title": "Qawmah (Standing straight up)",
+          "description": "Rise straight from bowing saying \"Sami Allahu liman hamidah\", then \"Rabbana lakal hamd\".",
+          "arabicText": "سَمِعَ اللهُ لِمَنْ حَمِدَهُ، رَبَّنَا لَكَ الْحَمْدُ"
+        },
+        {
+          "stepNumber": 5,
+          "title": "Sajdah (Prostration)",
+          "description": "Say \"Allahu Akbar\" and prostrate with forehead, nose, palms, knees, and toes on ground. Recite 3 times: \"Subhana Rabbiyal A'la\".",
+          "arabicText": "سُبْحَانَ رَبِّيَ الْأَعْلَىٰ"
+        },
+        {
+          "stepNumber": 6,
+          "title": "Jalsah (Sitting between Sajdahs)",
+          "description": "Sit up straight saying \"Allahu Akbar\", then perform second Sajdah the same way.",
+          "arabicText": "رَبِّ اغْفِرْ لِي"
+        },
+        {
+          "stepNumber": 7,
+          "title": "Tashahhud (Sitting for Attahiyyat)",
+          "description": "Sit peacefully and recite: \"Attahiyyatu Lillahi was-salawatu wat-tayyibat...\" followed by Durood Ibrahim.",
+          "arabicText": "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ"
+        },
+        {
+          "stepNumber": 8,
+          "title": "Tasleem (Concluding the prayer)",
+          "description": "Turn face to right saying \"Assalamu alaykum wa rahmatullah\", then to left saying same.",
+          "arabicText": "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ"
+        }
+      ],
+      "order": 8
+    },
+    {
+      "id": "dua-leaving-house",
+      "category": "duas",
+      "title": "Dua when Leaving the House (گھر سے نکلنے کی دعا)",
+      "titleArabic": "دُعَاءُ الْخُرُوجِ مِنَ الْمَنْزِل",
+      "arabicText": "بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+      "pronunciation": "Bismillahi tawakkaltu 'alallahi, la hawla wa la quwwata illa billah",
+      "translationEnglish": "In the name of Allah, I place my trust in Allah, and there is no might nor power except with Allah.",
+      "translationUrdu": "اللہ کے نام سے، میں نے اللہ پر بھروسہ کیا، گناہوں سے بچنے اور نیکی کرنے کی طاقت اللہ ہی کی طرف سے ہے۔",
+      "translationHindi": "अल्लाह के नाम से, मैंने अल्लाह पर भरोसा किया, और कोई ताक़त और कुव्वत नहीं सिवाय अल्लाह के।",
+      "order": 1
+    },
+    {
+      "id": "dua-entering-house",
+      "category": "duas",
+      "title": "Dua when Entering the House (گھر میں داخل ہونے کی دعا)",
+      "titleArabic": "دُعَاءُ دُخُولِ الْمَنْزِل",
+      "arabicText": "بِسْمِ اللَّهِ وَلَجْنَا، وَبِسْمِ اللَّهِ خَرَجْنَا، وَعَلَى رَبِّنَا تَوَكَّلْنَا",
+      "pronunciation": "Bismillahi walajna, wa bismillahi kharajna, wa 'ala Rabbina tawakkalna",
+      "translationEnglish": "In the name of Allah we enter, and in the name of Allah we leave, and upon our Lord we place our trust.",
+      "translationUrdu": "اللہ کے نام سے ہم داخل ہوئے اور اللہ کے نام سے ہم نکلے، اور اپنے رب ہی پر ہم نے بھروسہ کیا۔",
+      "translationHindi": "अल्लाह के नाम से हम दाखिल हुए और अल्लाह के नाम से निकले, और अपने रब पर हमने भरोसा किया।",
+      "order": 2
+    },
+    {
+      "id": "dua-entering-restroom",
+      "category": "duas",
+      "title": "Dua before Entering the Restroom (بیت الخلاء میں داخل ہونے کی دعا)",
+      "titleArabic": "دُعَاءُ دُخُولِ الْخَلَاءِ",
+      "arabicText": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",
+      "pronunciation": "Allahumma innee a'oodhu bika minal khubuthi wal khabaa'ith",
+      "translationEnglish": "O Allah, I seek refuge in You from the male and female evil spirits.",
+      "translationUrdu": "اے اللہ! میں خبیث جنوں اور خبیث جننیوں (کی برائی) سے تیری پناہ مانگتا ہوں۔",
+      "translationHindi": "ऐ अल्लाह! मैं ख़बीस जिन्नों और जिन्नियों (की बुराई) से तेरी पनाह मांगता हूँ।",
+      "order": 3
+    },
+    {
+      "id": "dua-leaving-restroom",
+      "category": "duas",
+      "title": "Dua after Leaving the Restroom (بیت الخلاء سے نکلنے کی دعا)",
+      "titleArabic": "دُعَاءُ الْخُرُوجِ مِنَ الْخَلَاءِ",
+      "arabicText": "غُفْرَانَكَ",
+      "pronunciation": "Ghufranaka",
+      "translationEnglish": "(O Allah) I seek Your forgiveness.",
+      "translationUrdu": "اے اللہ! میں تیری بخشش مانگتا ہوں۔",
+      "translationHindi": "ऐ अल्लाह! मैं तेरी मग़फ़िरत (माफ़ी) चाहता हूँ।",
+      "order": 4
+    },
+    {
+      "id": "dua-wearing-clothes",
+      "category": "duas",
+      "title": "Dua when Wearing Clothes (کپڑے پہننے کی دعا)",
+      "titleArabic": "دُعَاءُ لُبْسِ الثَّوْب",
+      "arabicText": "الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا الثَّوْبَ وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",
+      "pronunciation": "Alhamdu lillahilladhi kasani hadhath-thawba wa razaqaneehi min ghayri hawlim-minni wa la quwwah",
+      "translationEnglish": "All praise is for Allah who has clothed me with this garment and provided it for me, with no power or might from myself.",
+      "translationUrdu": "تمام تعریفیں اس اللہ کے لیے ہیں جس نے مجھے یہ کپڑا پہنایا اور میری کسی طاقت اور قوت کے بغیر مجھے یہ عطا فرمایا۔",
+      "translationHindi": "तमाम तारीफें अल्लाह के लिए हैं जिसने मुझे यह कपड़ा पहनाया और मेरी किसी ताक़त के बिना मुझे यह अता फरमाया।",
+      "order": 5
+    },
+    {
+      "id": "dua-entering-mosque",
+      "category": "duas",
+      "title": "Dua when Entering the Mosque (مسجد میں داخل ہونے کی دعا)",
+      "titleArabic": "دُعَاءُ دُخُولِ الْمَسْجِد",
+      "arabicText": "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+      "pronunciation": "Allahummaf-tah lee abwaaba rahmatik",
+      "translationEnglish": "O Allah, open the doors of Your mercy for me.",
+      "translationUrdu": "اے اللہ! میرے لیے اپنی رحمت کے دروازے کھول دے۔",
+      "translationHindi": "ऐ अल्लाह! मेरे लिए अपनी रहमत के दरवाज़े खोल दे।",
+      "order": 6
+    },
+    {
+      "id": "dua-leaving-mosque",
+      "category": "duas",
+      "title": "Dua when Leaving the Mosque (مسجد سے نکلنے کی دعا)",
+      "titleArabic": "دُعَاءُ الْخُرُوجِ مِنَ الْمَسْجِد",
+      "arabicText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",
+      "pronunciation": "Allahumma innee as'aluka min fadlik",
+      "translationEnglish": "O Allah, I ask You from Your bounty.",
+      "translationUrdu": "اے اللہ! بے شک میں تجھ سے تیرا فضل مانگتا ہوں۔",
+      "translationHindi": "ऐ अल्लाह! मैं तुझसे तेरा फ़ज़ल मांगता हूँ।",
+      "order": 7
+    },
+    {
+      "id": "dua-looking-mirror",
+      "category": "duas",
+      "title": "Dua when Looking in the Mirror (آئینہ دیکھنے کی دعا)",
+      "titleArabic": "دُعَاءُ النَّظَرِ فِي الْمِرْآة",
+      "arabicText": "اللَّهُمَّ أَنْتَ حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",
+      "pronunciation": "Allahumma anta hassanta khalqee fahassin khuluqee",
+      "translationEnglish": "O Allah, You have made my physical form beautiful, so make my character beautiful as well.",
+      "translationUrdu": "اے اللہ! تو نے میری صورت اچھی بنائی ہے، پس میری سیرت بھی اچھی بنا دے۔",
+      "translationHindi": "ऐ अल्लाह! तूने मेरी सूरत अच्छी बनाई है, पस मेरा अख़लाक़ भी अच्छा बना दे।",
+      "order": 8
+    },
+    {
+      "id": "dua-drinking-milk",
+      "category": "duas",
+      "title": "Dua after Drinking Milk (دودھ پینے کے بعد کی دعا)",
+      "titleArabic": "دُعَاءُ شُرْبِ اللَّبَن",
+      "arabicText": "اللَّهُمَّ بَارِكْ لَنَا فِيهِ وَزِدْنَا مِنْهُ",
+      "pronunciation": "Allahumma barik lana feehi wa zidna minh",
+      "translationEnglish": "O Allah, bless it for us and give us more of it.",
+      "translationUrdu": "اے اللہ! اس میں ہمارے لیے برکت عطا فرما اور ہمیں اس سے زیادہ دے۔",
+      "translationHindi": "ऐ अल्लाह! इसमें हमारे लिए बरकत अता फरमा और हमें इससे ज़्यादा दे।",
+      "order": 9
+    },
+    {
+      "id": "dua-after-sneezing",
+      "category": "duas",
+      "title": "Dua after Sneezing (چھینک آنے کے بعد کی دعا)",
+      "titleArabic": "دُعَاءُ الْعُطَاس",
+      "arabicText": "الْحَمْدُ لِلَّهِ",
+      "pronunciation": "Alhamdulillah",
+      "translationEnglish": "All praise is for Allah.",
+      "translationUrdu": "تمام تعریفیں اللہ کے لیے ہیں۔",
+      "translationHindi": "तमाम तारीफें अल्लाह के लिए हैं।",
+      "order": 10
+    },
+    {
+      "id": "dua-reply-sneezing",
+      "category": "duas",
+      "title": "Dua when replying to someone who Sneezes (چھینکنے والے کے جواب کی دعا)",
+      "titleArabic": "تَشْمِيتُ الْعَاطِس",
+      "arabicText": "يَرْحَمُكَ اللَّهُ",
+      "pronunciation": "Yarhamukallah",
+      "translationEnglish": "May Allah have mercy on you.",
+      "translationUrdu": "اللہ تم پر رحم کرے۔",
+      "translationHindi": "अल्लाह तुम पर रहम फरमाए।",
+      "order": 11
+    },
+    {
+      "id": "dua-boarding-vehicle",
+      "category": "duas",
+      "title": "Dua when Boarding a Vehicle / Traveling (سواری پر بیٹھنے / سفر کی دعا)",
+      "titleArabic": "دُعَاءُ الرُّكُوبِ وَالسَّفَر",
+      "arabicText": "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ",
+      "pronunciation": "Subhanalladhi sakh-khara lana hadha wa ma kunna lahoo muqrineen, wa inna ila Rabbina lamunqaliboon",
+      "translationEnglish": "Glory be to Him who has subjected this to us, and we could not have otherwise subdued it, and indeed we are returning to our Lord.",
+      "translationUrdu": "پاک ہے وہ ذات جس نے اس (سواری) کو ہمارے تابع کر دیا، حالانکہ ہم اسے قابو کرنے والے نہ تھے، اور بے شک ہم اپنے رب کی طرف ہی لوٹ کر جانے والے ہیں۔",
+      "translationHindi": "पाक है वह ज़ात जिसने इसे हमारे काबू में कर दिया, और हम अपने रब की तरफ लौटने वाले हैं।",
+      "order": 12
+    },
+    {
+      "id": "dua-distress-hardship",
+      "category": "duas",
+      "title": "Dua when in Distress or Hardship (پریشانی اور مصیبت کی دعا)",
+      "titleArabic": "دُعَاءُ الْكَرْبِ (دُعَاءُ يُونُس)",
+      "arabicText": "لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",
+      "pronunciation": "Laa ilaaha illa anta subhaanaka innee kuntu minaz-zaalimeen",
+      "translationEnglish": "There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.",
+      "translationUrdu": "تیرے سوا کوئی معبود نہیں، تو پاک ہے، بے شک میں ہی ظالموں میں سے تھا۔",
+      "translationHindi": "तेरे सिवा कोई माबूद नहीं, तू पाक है, बेशक मैं ही ज़ालिमों में से था।",
+      "order": 13
+    },
+    {
+      "id": "dua-visiting-sick",
+      "category": "duas",
+      "title": "Dua when Visiting the Sick (بیمار کی عیادت کی دعا)",
+      "titleArabic": "دُعَاءُ عِيَادَةِ الْمَرِيض",
+      "arabicText": "لَا بَأْسَ طَهُورٌ إِنْ شَاءَ اللَّهُ",
+      "pronunciation": "Laa ba'sa tahoorun in sha'Allah",
+      "translationEnglish": "Do not worry, it will be a purification (from sins), if Allah wills.",
+      "translationUrdu": "کوئی حرج نہیں، اگر اللہ نے چاہا تو یہ بیماری گناہوں سے پاک کرنے والی ہے۔",
+      "translationHindi": "कोई हरज नहीं, इन्शाअल्लाह यह बीमारी गुनाहों से पाक करने वाली है।",
+      "order": 14
+    },
+    {
+      "id": "dua-hearing-good-news",
+      "category": "duas",
+      "title": "Dua upon Hearing Good News (خوشی کی خبر سننے کی دعا)",
+      "titleArabic": "دُعَاءُ سَمَاعِ الْخَبَرِ السَّارّ",
+      "arabicText": "الْحَمْدُ لِلَّهِ الَّذِي بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ",
+      "pronunciation": "Alhamdu lillahilladhi bini'matihi tatimmus-saalihaat",
+      "translationEnglish": "All praise is for Allah by whose favor good works are accomplished.",
+      "translationUrdu": "تمام تعریفیں اس اللہ کے لیے ہیں جس کی نعمت سے اچھے کام مکمل ہوتے ہیں۔",
+      "translationHindi": "सब तारीफें अल्लाह के लिए हैं जिसकी नेमत से अच्छे काम पूरे होते हैं।",
+      "order": 15
+    },
+    {
+      "id": "dua-hearing-bad-news",
+      "category": "duas",
+      "title": "Dua upon Hearing Bad News (بری خبر یا مصیبت کے وقت کی دعا)",
+      "titleArabic": "دُعَاءُ الْمُصِيبَة",
+      "arabicText": "إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ",
+      "pronunciation": "Inna lillahi wa inna ilayhi raaji'oon",
+      "translationEnglish": "Indeed, to Allah we belong and to Him we shall return.",
+      "translationUrdu": "بے شک ہم اللہ ہی کے لیے ہیں اور بے شک ہم اسی کی طرف لوٹ کر جانے والے ہیں۔",
+      "translationHindi": "बेशक हम अल्लाह ही के हैं और हमें उसी की तरफ लौट कर जाना है।",
+      "order": 16
+    },
+    {
+      "id": "dua-when-angry",
+      "category": "duas",
+      "title": "Dua when Angry (غصہ آنے کی دعا)",
+      "titleArabic": "دُعَاءُ الْغَضَب",
+      "arabicText": "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+      "pronunciation": "A'oodhu billahi minash-shaytanir-rajeem",
+      "translationEnglish": "I seek refuge in Allah from the accursed devil.",
+      "translationUrdu": "میں شیطان مردود سے اللہ کی پناہ مانگتا ہوں۔",
+      "translationHindi": "मैं शैतान मर्दूद से अल्लाह की पनाह मांगता हूँ।",
+      "order": 17
+    },
+    {
+      "id": "dua-protection-harm",
+      "category": "duas",
+      "title": "Dua for Protection from Harm (نقصان سے بچاؤ کی دعا)",
+      "titleArabic": "دُعَاءُ الْحِفْظِ وَالْحِمَايَة",
+      "arabicText": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+      "pronunciation": "Bismillahilladhi la yadurru ma'as-mihee shay'un fil-ardi wa la fis-samaa'i wa huwas-Samee'ul 'Aleem",
+      "translationEnglish": "In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, All-Knowing.",
+      "translationUrdu": "اللہ کے نام سے جس کے نام کے ساتھ زمین اور آسمان میں کوئی چیز نقصان نہیں پہنچا سکتی، اور وہ خوب سننے والا اور جاننے والا ہے۔",
+      "translationHindi": "अल्लाह के नाम से जिसके नाम के साथ ज़मीन और आसमान में कोई चीज़ नुकसान नहीं पहुंचा सकती, और वह खूब सुनने और जानने वाला है।",
+      "order": 18
+    },
+    {
+      "id": "dua-world-hereafter",
+      "category": "duas",
+      "title": "Dua for Good in this World and the Hereafter (دنیا اور آخرت کی بھلائی کی دعا)",
+      "titleArabic": "دُعَاءُ خَيْرِ الدُّنْيَا وَالْآخِرَة",
+      "arabicText": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+      "pronunciation": "Rabbana aatina fid-dunya hasanataw-wa fil-aakhirati hasanataw-wa qina 'adhaban-naar",
+      "translationEnglish": "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
+      "translationUrdu": "اے ہمارے رب! ہمیں دنیا میں بھلائی عطا فرما اور آخرت میں بھی بھلائی عطا فرما اور ہمیں آگ کے عذاب سے بچا۔",
+      "translationHindi": "ऐ हमारे रब! हमें दुनिया में भी भलाई अता फरमा और आख़िरत में भी भलाई दे और हमें आग के अज़ाब से बचा।",
+      "order": 19
+    },
+    {
+      "id": "dua-iftar",
+      "category": "duas",
+      "title": "Dua for Breaking Fast - Iftar (روزہ افطار کرنے کی دعا)",
+      "titleArabic": "دُعَاءُ الْإِفْطَار",
+      "arabicText": "ذَهَبَ الظَّمَأُ وَابْتَلَّتِ الْعُرُوقُ وَثَبَتَ الْأَجْرُ إِنْ شَاءَ اللَّهُ",
+      "pronunciation": "Dhahabaz-zama'u wabtallatil 'urooqu wa thabatal ajru in sha'Allah",
+      "translationEnglish": "The thirst is gone, the veins are moistened, and the reward is confirmed, if Allah wills.",
+      "translationUrdu": "پیاس بجھ گئی، رگیں تر ہو گئیں، اور اگر اللہ نے چاہا تو ثواب پکا ہو گیا۔",
+      "translationHindi": "प्यास बुझ गई, नसें तर हो गईं और इन्शाअल्लाह सवाब पक्का हो गया।",
+      "order": 20
+    },
+    {
+      "id": "dua-new-moon",
+      "category": "duas",
+      "title": "Dua upon Sighting the New Moon (نیا چاند دیکھنے کی دعا)",
+      "titleArabic": "دُعَاءُ رُؤْيَةِ الْهِلَال",
+      "arabicText": "اللَّهُمَّ أَهِلَّهُ عَلَيْنَا بِالْأَمْنِ وَالْإِيمَانِ، وَالسَّلَامَةِ وَالْإِسْلَامِ، رَبِّي وَرَبُّكَ اللَّهُ",
+      "pronunciation": "Allahumma ahillahu 'alayna bil-amni wal-eemaan, was-salaamati wal-Islam, Rabbee wa Rabbukallah",
+      "translationEnglish": "O Allah, let this moon appear on us with security and faith, and with safety and Islam. (O moon!) Your Lord and my Lord is Allah.",
+      "translationUrdu": "اے اللہ! اس چاند کو ہم پر امن و ایمان، اور سلامتی و اسلام کے ساتھ طلوع فرما، (اے چاند!) میرا اور تیرا رب اللہ ہے۔",
+      "translationHindi": "ऐ अल्लाह! इस चाँद को हम पर अमन व ईमान और सलामती व इस्लाम के साथ तुलू फरमा।",
+      "order": 21
+    },
+    {
+      "id": "dua-when-raining",
+      "category": "duas",
+      "title": "Dua when it Rains (بارش ہوتے وقت کی دعا)",
+      "titleArabic": "دُعَاءُ نُزُولِ الْمَطَر",
+      "arabicText": "اللَّهُمَّ صَيِّبًا نَافِعًا",
+      "pronunciation": "Allahumma sayyiban naafi'aa",
+      "translationEnglish": "O Allah, (make it) a beneficial downpour.",
+      "translationUrdu": "اے اللہ! اس بارش کو نفع بخش بنا دے۔",
+      "translationHindi": "ऐ अल्लाह! इस बारिश को फायदेमंद बना दे।",
+      "order": 22
+    },
+    {
+      "id": "dua-hearing-thunder",
+      "category": "duas",
+      "title": "Dua upon Hearing Thunder (بادل گرجنے کی دعا)",
+      "titleArabic": "دُعَاءُ سَمَاعِ الرَّعْد",
+      "arabicText": "سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةُ مِنْ خِيفَتِهِ",
+      "pronunciation": "Subhanalladhi yusabbihur-ra'du bihamdihee wal-malaa'ikatu min kheefatih",
+      "translationEnglish": "Glory be to Him whom the thunder glorifies with His praise, and the angels from the fear of Him.",
+      "translationUrdu": "پاک ہے وہ ذات جس کی حمد کے ساتھ بادل کی گرج تسبیح کرتی ہے، اور فرشتے اس کے خوف سے تسبیح کرتے ہیں۔",
+      "translationHindi": "पाक है वह ज़ात जिसकी तारीफ के साथ बादल की गरज तस्बीह करती है और फ़रिश्ते उसके खौफ से तस्बीह करते हैं।",
+      "order": 23
+    },
+    {
+      "id": "dua-steadfast-heart",
+      "category": "duas",
+      "title": "Dua for Steadfastness of the Heart (دل کی ثابت قدمی کی دعا)",
+      "titleArabic": "دُعَاءُ ثَبَاتِ الْقَلْب",
+      "arabicText": "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ",
+      "pronunciation": "Yaa Muqallibal quloobi thabbit qalbee 'ala deenik",
+      "translationEnglish": "O Changer of the hearts, make my heart firm upon Your religion.",
+      "translationUrdu": "اے دلوں کو پھیرنے والے! میرے دل کو اپنے دین پر ثابت قدم رکھ۔",
+      "translationHindi": "ऐ दिलों को फेरने वाले! मेरे दिल को अपने दीन पर क़ायम रख।",
+      "order": 24
+    },
+    {
+      "id": "dua-visiting-graveyard",
+      "category": "duas",
+      "title": "Dua when Visiting the Graveyard (قبرستان میں داخل ہونے کی دعا)",
+      "titleArabic": "دُعَاءُ زِيَارَةِ الْقُبُور",
+      "arabicText": "السَّلَامُ عَلَيْكُمْ أَهْلَ الدِّيَارِ مِنَ الْمُؤْمِنِينَ وَالْمُسْلِمِينَ",
+      "pronunciation": "Assalamu 'alaykum ahlad-diyaari minal mu'mineena wal muslimeen",
+      "translationEnglish": "Peace be upon you, O inhabitants of the dwellings, believers and Muslims.",
+      "translationUrdu": "اے ان گھروں (قبروں) میں رہنے والے مومنو اور مسلمانو! تم پر سلامتی ہو۔",
+      "translationHindi": "ऐ कब्रों में रहने वाले मोमिनो और मुसलमानो! तुम पर सलामती हो।",
+      "order": 25
+    },
+    {
+      "id": "dua-ending-gathering",
+      "category": "duas",
+      "title": "Dua for Ending a Gathering (مجلس کے اختتام کی دعا)",
+      "titleArabic": "دُعَاءُ كَفَّارَةِ الْمَجْلِس",
+      "arabicText": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ",
+      "pronunciation": "Subhanakallahumma wa bihamdika, ash-hadu an laa ilaaha illa anta, astaghfiruka wa atoobu ilayk",
+      "translationEnglish": "Glory is to You, O Allah, and praise is to You. I bear witness that there is none worthy of worship but You. I seek Your forgiveness and repent to You.",
+      "translationUrdu": "اے اللہ! تو پاک ہے اور تیری ہی تعریف ہے، میں گواہی دیتا ہوں کہ تیرے سوا کوئی معبود نہیں، میں تجھ سے بخشش مانگتا ہوں اور تیری طرف توبہ کرتا ہوں۔",
+      "translationHindi": "ऐ अल्लाह! तू पाक है और तेरी ही तारीफ है, मैं गवाही देता हूँ कि तेरे सिवा कोई माबूद नहीं, मैं तुझसे माफ़ी मांगता हूँ।",
+      "order": 26
+    },
+    {
+      "id": "dua-asking-forgiveness",
+      "category": "duas",
+      "title": "Dua for Asking Forgiveness (مغفرت طلب کرنے کی دعا)",
+      "titleArabic": "دُعَاءُ طَلَبِ الْمَغْفِرَة",
+      "arabicText": "رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ",
+      "pronunciation": "Rabbigh-fir lee wa tub 'alayya innaka antat-Tawwaabur-Raheem",
+      "translationEnglish": "O my Lord, forgive me and accept my repentance, indeed You are the Accepting of repentance, the Merciful.",
+      "translationUrdu": "اے میرے رب! مجھے بخش دے اور میری توبہ قبول فرما، بے شک تو ہی توبہ قبول کرنے والا، نہایت رحم کرنے والا ہے۔",
+      "translationHindi": "ऐ मेरे रब! मुझे बख्श दे और मेरी तौबा कुबूल फरमा, बेशक तू तौबा कुबूल करने वाला और रहम करने वाला है।",
+      "order": 27
+    },
+    {
+      "id": "dua-difficult-task",
+      "category": "duas",
+      "title": "Dua when Facing a Difficult Task (مشکل کام کے وقت کی دعا)",
+      "titleArabic": "دُعَاءُ تَيْسِيرِ الْأُمُور",
+      "arabicText": "اللَّهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا، وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلًا",
+      "pronunciation": "Allahumma laa sahla illa maa ja'altahoo sahla, wa anta taj'alul hazna idha shi'ta sahla",
+      "translationEnglish": "O Allah, there is no ease except in that which You have made easy, and You make the difficulty, if You wish, easy.",
+      "translationUrdu": "اے اللہ! کوئی کام آسان نہیں مگر جسے تو آسان کر دے، اور تو جب چاہے مشکل کو بھی آسان کر دیتا ہے۔",
+      "translationHindi": "ऐ अल्लाह! कोई काम आसान नहीं मगर जिसे तू आसान कर दे, और तू जब चाहे मुश्किल को आसान बना देता है।",
+      "order": 28
+    },
+    {
+      "id": "dua-entering-market",
+      "category": "duas",
+      "title": "Dua when Entering the Market (بازار میں داخل ہونے کی دعا)",
+      "titleArabic": "دُعَاءُ دُخُولِ السُّوق",
+      "arabicText": "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِیکَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ، وَهُوَ حَيٌّ لَا يَمُوتُ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+      "pronunciation": "Laa ilaaha illallahu wahdahu la shareeka lah, lahul mulku wa lahul hamdu, yuhyee wa yumeetu, wa huwa hayyun laa yamoot, biyadihil khayr, wa huwa 'ala kulli shay'in qadeer",
+      "translationEnglish": "There is none worthy of worship except Allah alone, without partner. To Him belongs the dominion, and to Him is all praise. He gives life and causes death, and He is living and does not die. In His hand is all good, and He is over all things competent.",
+      "translationUrdu": "اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے اس کا کوئی شریک نہیں، اسی کی بادشاہی ہے اور اسی کے لیے تمام تعریفیں ہیں، وہی زندہ کرتا ہے اور وہی مارتا ہے، اور وہ ہمیشہ زندہ رہنے والا ہے اسے موت نہیں، اسی کے ہاتھ میں ہر بھلائی ہے اور وہ ہر چیز پر قادر ہے۔",
+      "translationHindi": "अल्लाह के सिवा कोई माबूद नहीं, वह अकेला है उसका कोई साझी नहीं, उसी का मुल्क है और उसी के हाथ में सारी भलाई है।",
+      "order": 29
+    },
+    {
+      "id": "dua-seeing-afflicted",
+      "category": "duas",
+      "title": "Dua when Seeing Someone in Affliction (کسی کو مصیبت یا بیماری میں دیکھنے کی دعا)",
+      "titleArabic": "دُعَاءُ رُؤْيَةِ الْمُبْتَلَى",
+      "arabicText": "الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي مِمَّا ابْتَلَاكَ بِهِ وَفَضَّلَنِي عَلَى كَثِيرٍ مِمَّنْ خَلَقَ تَفْضِيلًا",
+      "pronunciation": "Alhamdu lillahilladhi 'aafaanee mim-mabtalaaka bihee wa faddalanee 'ala katheerim-mimman khalaqa tafdeela",
+      "translationEnglish": "All praise is to Allah Who has saved me from what He has afflicted you with, and has greatly preferred me over many of His creation.",
+      "translationUrdu": "تمام تعریفیں اس اللہ کے لیے ہیں جس نے مجھے اس مصیبت سے عافیت دی جس میں اس نے تجھے مبتلا کیا، اور مجھے اپنی بہت سی مخلوقات پر بڑی فضیلت دی۔",
+      "translationHindi": "तमाम तारीफें अल्लाह के लिए हैं जिसने मुझे इस मुसीबत से बचाया जिसमें तुझे मुब्तिला किया।",
+      "order": 30
+    },
+    {
+      "id": "dua-thana-salah",
+      "category": "duas",
+      "title": "Thana (ثناء - نماز کی شروعات کی دعا)",
+      "titleArabic": "دُعَاءُ الِاسْتِفْتَاحِ (الثَّنَاء)",
+      "arabicText": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+      "pronunciation": "Subhaanakallahumma wa bihamdika, wa tabaarakas-muka, wa ta'aala jadduka, wa laa ilaaha ghayruk",
+      "translationEnglish": "Glory be to You, O Allah, and all praise is due to You. Blessed is Your name, and high is Your majesty, and there is no deity worthy of worship except You.",
+      "translationUrdu": "اے اللہ! تو پاک ہے اور تیری ہی تعریف ہے، اور تیرا نام برکت والا ہے، اور تیری شان بہت بلند ہے، اور تیرے سوا کوئی معبود نہیں۔",
+      "translationHindi": "ऐ अल्लाह! तू पाक है और तेरी ही तारीफ है, और तेरा नाम बरकत वाला है, और तेरी शान बहुत बुलंद है, और तेरे सिवा कोई माबूद नहीं।",
+      "order": 31
+    },
+    {
+      "id": "dua-attahiyat-tashahhud",
+      "category": "duas",
+      "title": "Attahiyat / Tashahhud (التحيات - نماز میں قعدہ/بیٹھنے کی دعا)",
+      "titleArabic": "التَّشَهُّد (التَّحِيَّات)",
+      "arabicText": "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "pronunciation": "Attahiyyatu lillahi was-salawaatu wat-tayyibaat, assalaamu 'alayka ayyuhan-Nabiyyu wa rahmatullahi wa barakaatuh, assalaamu 'alayna wa 'ala 'ibaadillahis-saaliheen, ash-hadu an laa ilaaha illallahu, wa ash-hadu anna Muhammadan 'abduhoo wa rasooluh",
+      "translationEnglish": "All verbal, physical, and monetary worship is due to Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is no deity worthy of worship except Allah, and I bear witness that Muhammad is His servant and His Messenger.",
+      "translationUrdu": "تمام قولی، بدنی اور مالی عبادتیں اللہ ہی کے لیے ہیں۔ اے نبی! آپ پر سلام ہو اور اللہ کی رحمت اور اس کی برکتیں نازل ہوں۔ ہم پر اور اللہ کے تمام نیک بندوں پر سلام ہو۔ میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، اور میں گواہی دیتا ہوں کہ محمد (ﷺ) اس کے بندے اور رسول ہیں۔",
+      "translationHindi": "तमाम इबादतें अल्लाह ही के लिए हैं। ऐ नबी! आप पर सलाम हो और अल्लाह की रहमत और बरकतें हों। हम पर और अल्लाह के नेक बन्दों पर सलाम हो।",
+      "order": 32
+    },
+    {
+      "id": "dua-masoora-salah",
+      "category": "duas",
+      "title": "Dua-e-Masoora (دعائے ماثورہ - نماز کے آخر میں درود کے بعد کی دعا)",
+      "titleArabic": "الدُّعَاءُ الْمَأْثُورُ فِي آخِرِ الصَّلَاة",
+      "arabicText": "اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا، وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ، فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ، وَارْحَمْنِي إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ",
+      "pronunciation": "Allahumma innee zalamtu nafsee zulman katheera, wa la yaghfirudh-dhunooba illa anta, faghfir lee maghfiratam-min 'indika, warhamnee innaka antal Ghafoorur-Raheem",
+      "translationEnglish": "O Allah! I have wronged myself greatly, and none forgives sins except You. So grant me forgiveness from Yourself and have mercy upon me. Indeed, You are the Forgiving, the Merciful.",
+      "translationUrdu": "اے اللہ! بے شک میں نے اپنی جان پر بہت ظلم کیا ہے، اور تیرے سوا کوئی گناہوں کو معاف نہیں کر سکتا، پس مجھے اپنے پاس سے خاص بخشش کے ساتھ معاف فرما اور مجھ پر رحم فرما، بے شک تو ہی بہت بخشنے والا اور نہایت رحم کرنے والا ہے۔",
+      "translationHindi": "ऐ अल्लाह! बेशक मैंने अपनी जान पर बहुत ज़ुल्म किया है, और तेरे सिवा कोई गुनाहों को माफ नहीं कर सकता, पस मुझे अपनी तरफ से खास बख्शिश अता फरमा।",
+      "order": 33
+    },
+    {
+      "id": "dua-qunoot-witr",
+      "category": "duas",
+      "title": "Dua-e-Qunoot (دعائے قنوت - نمازِ وتر کی دعا)",
+      "titleArabic": "دُعَاءُ الْقُنُوتِ فِي صَلَاةِ الْوِتْر",
+      "arabicText": "اللَّهُمَّ إِنَّا نَسْتَعِينُكَ وَنَسْتَغْفِرُكَ وَنُؤْمِنُ بِكَ وَنَتَوَكَّلُ عَلَيْكَ وَنُثْنِي عَلَيْكَ الْخَيْرَ، وَنَشْكُرُكَ وَلَا نَكْفُرُكَ، وَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ. اللَّهُمَّ إِيَّاكَ نَعْبُدُ وَلَكَ نُصَلِّي وَنَسْجُدُ وَإِلَيْكَ نَسْعَى وَنَحْفِدُ، وَنَرْجُو رَحْمَتَكَ وَنَخْشَى عَذَابَكَ، إِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحِقٌ",
+      "pronunciation": "Allahumma inna nasta'eenuka wa nastaghfiruka wa nu'minu bika wa natawakkalu 'alayka wa nuthnee 'alaykal khayr, wa nashkuruka wa laa nakfuruka, wa nakhla'u wa natruku may-yafjuruk. Allahumma iyyaka na'budu wa laka nusallee wa nasjudu wa ilayka nas'aa wa nahfid, wa narjoo rahmataka wa nakhshaa 'adhaabaka, inna 'adhaabaka bil-kuffaari mulhiq",
+      "translationEnglish": "O Allah! We seek Your help, seek Your forgiveness, believe in You, rely on You, and praise You in the best manner. We thank You and are not ungrateful to You, and we alienate and forsake those who disobey You. O Allah! You alone we worship, to You we pray and prostrate, to You we strive and hasten. We hope for Your mercy and fear Your punishment. Indeed, Your punishment will overtake the disbelievers.",
+      "translationUrdu": "اے اللہ! ہم تجھ سے مدد مانگتے ہیں، تجھ سے بخشش طلب کرتے ہیں، تجھ پر ایمان لاتے ہیں، تجھ پر بھروسہ کرتے ہیں، اور تیری بہت اچھی تعریف کرتے ہیں، ہم تیرا شکر ادا کرتے ہیں اور تیری ناشکری نہیں کرتے، اور جو تیری نافرمانی کرے ہم اس سے الگ ہوتے ہیں اور اسے چھوڑ دیتے ہیں۔ اے اللہ! ہم تیری ہی عبادت کرتے ہیں، تیرے ہی لیے نماز پڑھتے ہیں اور سجدہ کرتے ہیں، اور تیری ہی طرف دوڑتے اور خدمت کے لیے حاضر رہتے ہیں، ہم تیری رحمت کے امیدوار ہیں اور تیرے عذاب سے ڈرتے ہیں، بے شک تیرا عذاب کافروں کو پہنچنے والا ہے۔",
+      "translationHindi": "ऐ अल्लाह! हम तुझसे मदद मांगते हैं, तुझसे बख्शिश चाहते हैं, तुझ पर ईमान लाते हैं, और तुझ पर भरोसा करते हैं। हम तेरी ही इबादत करते हैं, तेरे ही लिए नमाज़ पढ़ते और सजदा करते हैं।",
+      "order": 34
+    },
+    {
+      "id": "dua-before-eating",
+      "category": "duas",
+      "title": "Dua Before Eating Food (کھانا کھانے سے پہلے کی دعا)",
+      "titleArabic": "دُعَاءُ قَبْلَ الطَّعَام",
+      "arabicText": "بِسْمِ اللَّهِ وَعَلَىٰ بَرَكَةِ اللَّهِ",
+      "pronunciation": "Bismillahi wa 'ala barakatillah",
+      "translationEnglish": "In the name of Allah and upon the blessings of Allah.",
+      "translationUrdu": "اللہ کے نام کے ساتھ اور اللہ کی برکت پر (میں کھانا شروع کرتا ہوں)۔",
+      "translationHindi": "अल्लाह के नाम से और अल्लाह की बरकत पर।",
+      "order": 35
+    },
+    {
+      "id": "dua-after-eating",
+      "category": "duas",
+      "title": "Dua After Finishing Food (کھانا کھانے کے بعد کی دعا)",
+      "titleArabic": "دُعَاءُ بَعْدَ الطَّعَام",
+      "arabicText": "الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ",
+      "pronunciation": "Alhamdu lillahilladhi at'amana wa saqana wa ja'alana muslimeen",
+      "translationEnglish": "All praise is due to Allah Who gave us food and drink and made us Muslims.",
+      "translationUrdu": "تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں کھلایا، پلایا اور ہمیں مسلمان بنایا۔",
+      "translationHindi": "तमाम तारीफें अल्लाह के लिए हैं जिसने हमें खिलाया, पिलाया और हमें मुसलमान बनाया।",
+      "order": 36
+    },
+    {
+      "id": "dua-sleeping",
+      "category": "duas",
+      "title": "Dua Before Sleeping (سوتے وقت کی دعا)",
+      "titleArabic": "دُعَاءُ النَّوْم",
+      "arabicText": "اللَّهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا",
+      "pronunciation": "Allahumma bismika amootu wa ahya",
+      "translationEnglish": "O Allah, in Your name I die (sleep) and I live (wake up).",
+      "translationUrdu": "اے اللہ! تیرے ہی نام کے ساتھ میں مرتا ہوں اور جیتا ہوں۔",
+      "translationHindi": "ऐ अल्लाह! तेरे ही नाम से मैं सोता हूँ और जागता हूँ।",
+      "order": 37
+    },
+    {
+      "id": "dua-waking",
+      "category": "duas",
+      "title": "Dua After Waking Up (نیند سے بیدار ہونے کی دعا)",
+      "titleArabic": "دُعَاءُ الِاسْتِيقَاظ",
+      "arabicText": "الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
+      "pronunciation": "Alhamdu lillahilladhi ahyana ba'da ma amatana wa ilayhin-nushoor",
+      "translationEnglish": "All praise is due to Allah Who brought us to life after causing us to die, and to Him is the final return.",
+      "translationUrdu": "تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں مارنے کے بعد زندہ کیا اور اسی کی طرف لوٹ کر جانا ہے۔",
+      "translationHindi": "सब तारीफें अल्लाह के लिए हैं जिसने हमें मौत (नींद) के बाद जिंदगी दी और उसी की तरफ उठना है।",
+      "order": 38
+    },
+    {
+      "id": "dua-parents",
+      "category": "duas",
+      "title": "Dua for Parents / Mother & Father (والدین کے لیے دعا)",
+      "titleArabic": "دُعَاءُ الْوَالِدَيْن",
+      "arabicText": "رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
+      "pronunciation": "Rabbir hamhuma kama rabbayani sagheera",
+      "translationEnglish": "My Lord, have mercy upon them both as they raised me when I was small.",
+      "translationUrdu": "اے میرے پروردگار! تو ان دونوں پر رحم فرما جس طرح انہوں نے بچپن میں میری پرورش فرمائی۔",
+      "translationHindi": "ऐ मेरे रब! तू मेरे वालिदैन पर रहम फरमा जैसा कि उन्होंने मुझे बचपन में पाला।",
+      "order": 39
+    },
+    {
+      "id": "dua-knowledge",
+      "category": "duas",
+      "title": "Dua for Increasing Knowledge (علم میں اضافے کی دعا)",
+      "titleArabic": "دُعَاءُ زِيَادَةِ الْعِلْم",
+      "arabicText": "رَّبِّ زِدْنِي عِلْمًا",
+      "pronunciation": "Rabbi zidnee 'ilma",
+      "translationEnglish": "My Lord, increase me in knowledge.",
+      "translationUrdu": "اے میرے رب! میرے علم میں اضافہ فرما۔",
+      "translationHindi": "ऐ मेरे रब! मेरे इल्म (ज्ञान) में इज़ाफ़ा फरमा।",
+      "order": 40
+    }
+  ],
+  "islamicStudies": [
+    {
+      "id": "kalima-1",
+      "category": "kalimas",
+      "title": "First Kalima — Tayyab (Purity)",
+      "titleArabic": "الْكَلِمَةُ الطَّيِّبَة",
+      "arabicText": "لَا إِلٰهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ",
+      "pronunciation": "Laa ilaaha illal Lahoo Mohammadur Rasool Ul Laah",
+      "translationEnglish": "There is no god worthy of worship except Allah, and Muhammad is the Messenger of Allah.",
+      "translationUrdu": "اللہ کے سوا کوئی معبود نہیں، محمد صلی اللہ علیہ وسلم اللہ کے رسول ہیں۔",
+      "translationHindi": "अल्लाह के सिवा कोई इबादत के लायक नहीं, हज़रत मुहम्मद (सल्लल्लाहु अलैहि वसल्लम) अल्लाह के रसूल हैं।",
+      "explanation": "The foundation of Islamic belief and faith in the oneness of Allah.",
+      "order": 1
+    },
+    {
+      "id": "kalima-2",
+      "category": "kalimas",
+      "title": "Second Kalima — Shahadat (Evidence)",
+      "titleArabic": "كَلِمَةُ الشَّهَادَة",
+      "arabicText": "أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "pronunciation": "Ash-hadu an laa ilaaha illal-lahu wahdahu laa shareeka lahu wa ash-hadu anna Muhammadan 'abduhu wa rasooluh",
+      "translationEnglish": "I bear witness that there is no deity except Allah alone without partner, and I bear witness that Muhammad is His servant and Messenger.",
+      "translationUrdu": "میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں وہ اکیلا ہے اس کا کوئی شریک نہیں اور میں گواہی دیتا ہوں کہ محمد (صلی اللہ علیہ وسلم) اس کے بندے اور رسول ہیں۔",
+      "translationHindi": "मैं गवाही देता हूँ कि अल्लाह के सिवा कोई इबादत के लायक नहीं, वह अकेला है उसका कोई साझीदार नहीं, और मुहम्मद (सल्ल.) उसके बन्दे और रसूल हैं।",
+      "explanation": "Declaration of Faith witnessed with heart and tongue.",
+      "order": 2
+    },
+    {
+      "id": "kalima-3",
+      "category": "kalimas",
+      "title": "Third Kalima — Tamjeed (Glory of Allah)",
+      "titleArabic": "كَلِمَةُ التَّمْجِيد",
+      "arabicText": "سُبْحَانَ اللهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلٰهَ إِلَّا اللهُ وَاللهُ أَكْبَرُ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ الْعَلِيِّ الْعَظِيمِ",
+      "pronunciation": "Subhanallaahi wal hamdu lillaahi wa laa ilaaha illal laahu wallaahu Akbar, wa laa hawla wa laa quwwata illaa billaahil 'aliyyil 'azeem",
+      "translationEnglish": "Glory be to Allah, all praise is due to Allah, there is no god but Allah, Allah is the Greatest, and there is no power or strength except with Allah, the Most High, the Supreme.",
+      "translationUrdu": "اللہ پاک ہے اور سب تعریف اللہ ہی کے لیے ہے اور اللہ کے سوا کوئی معبود نہیں اور اللہ سب سے بڑا ہے، اور گناہوں سے بچنے کی طاقت اور نیکی کی قوت صرف اللہ ہی کی توفیق سے ہے۔",
+      "translationHindi": "अल्लाह पाक है और सब तारीफें अल्लाह ही के लिए हैं, और अल्लाह के सिवा कोई माबूद नहीं, और अल्लाह सबसे बड़ा है।",
+      "explanation": "Glorifying and praising Allah with the most beautiful words.",
+      "order": 3
+    },
+    {
+      "id": "kalima-4",
+      "category": "kalimas",
+      "title": "Fourth Kalima — Tauheed (Oneness)",
+      "titleArabic": "كَلِمَةُ التَّوْحِيد",
+      "arabicText": "لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ وَهُوَ حَيٌّ لَا يَمُوتُ أَبَدًا أَبَدًا، ذُو الْجَلَالِ وَالْإِكْرَامِ، بِيَدِهِ الْخَيْرُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+      "pronunciation": "Laa ilaaha illal-lahu wahdahu laa shareeka lahu, lahul mulku wa lahul hamdu, yuhyee wa yumeetu wa huwa hayyun laa yamootu abadan abada, dhul jalaali wal ikraam, biyadihil khayr, wa huwa 'ala kulli shay'in qadeer",
+      "translationEnglish": "There is no god but Allah alone, Who has no partner. His is the dominion and His is the praise. He gives life and causes death, and He is Alive and never dies. Possessor of Majesty and Honor, in His hand is all goodness, and He has power over all things.",
+      "translationUrdu": "اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، اسی کی بادشاہی ہے اور اسی کے لیے تمام تعریفیں ہیں، وہی جلاتا ہے اور وہی مارتا ہے، وہ ہمیشہ زندہ رہنے والا ہے کبھی نہیں مرے گا، بزرگی اور عزت والا ہے، بھلائی اسی کے ہاتھ میں ہے اور وہ ہر چیز پر قادر ہے۔",
+      "translationHindi": "अल्लाह के सिवा कोई माबूद नहीं, वह अकेला है, उसका कोई साझी नहीं, उसी का मुल्क है और उसी के लिए सारी तारीफें हैं।",
+      "order": 4
+    },
+    {
+      "id": "kalima-5",
+      "category": "kalimas",
+      "title": "Fifth Kalima — Astaghfar (Forgiveness)",
+      "titleArabic": "كَلِمَةُ الِاسْتِغْفَار",
+      "arabicText": "أَسْتَغْفِرُ اللهَ رَبِّي مِنْ كُلِّ ذَنْبٍ أَذْنَبْتُهُ عَمَدًا أَوْ خَطَأً، سِرًّا أَوْ عَلَانِيَةً، وَأَتُوبُ إِلَيْهِ مِنَ الذَّنْبِ الَّذِي أَعْلَمُ وَمِنَ الذَّنْبِ الَّذِي لَا أَعْلَمُ، إِنَّكَ أَنْتَ عَلَّامُ الْغُيُوبِ وَسَتَّارُ الْعُيُوبِ وَغَفَّارُ الذُّنُوبِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ الْعَلِيِّ الْعَظِيمِ",
+      "pronunciation": "Astaghfirullah Rabbi min kulli zambin aznabtuhu 'amadan aw khata-an sirran aw 'alaniyataw wa atoobu ilayhi...",
+      "translationEnglish": "I seek forgiveness from Allah, my Lord, for every sin I committed intentionally or mistakenly, secretly or openly, and I turn to Him in repentance...",
+      "translationUrdu": "میں اللہ سے اپنے تمام گناہوں کی معافی مانگتا ہوں جو میں نے جان بوجھ کر کیے یا بھول کر، چھپ کر کیے یا کھل کر...",
+      "translationHindi": "मैं अपने रब अल्लाह से अपने हर गुनाह की माफी मांगता हूँ...",
+      "order": 5
+    },
+    {
+      "id": "kalima-6",
+      "category": "kalimas",
+      "title": "Sixth Kalima — Rad-e-Kufr (Rejection of Disbelief)",
+      "titleArabic": "كَلِمَةُ رَدِّ الْكُفْر",
+      "arabicText": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ أَنْ أُشْرِكَ بِكَ شَيْئًا وَأَنَا أَعْلَمُ بِهِ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ بِهِ، تُبْتُ عَنْهُ وَتَبَرَّأْتُ مِنَ الْكُفْرِ وَالشِّرْكِ وَالْكِذْبِ وَالْغِيبَةِ وَالْبِدْعَةِ وَالنَّمِيمَةِ وَالْفَوَاحِشِ وَالْبُهْتَانِ وَالْمَعَاصِي كُلِّهَا، وَأَسْلَمْتُ وَأَقُولُ لَا إِلٰهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ",
+      "pronunciation": "Allahumma innee a'oodhu bika min an ushrika bika shay-an wa-ana a'lamu bihee wa-astaghfiruka limaa laa a'lamu bihee...",
+      "translationEnglish": "O Allah! I seek protection in You from that I should join any partner with You knowingly, and I ask Your forgiveness from that which I do not know...",
+      "translationUrdu": "اے اللہ! میں تیری پناہ مانگتا ہوں اس بات سے کہ میں جان بوجھ کر کسی کو تیرا شریک ٹھہراؤں، اور تجھ سے معافی مانگتا ہوں اس بات کی جسے میں نہیں جانتا...",
+      "translationHindi": "ऐ अल्लाह! मैं तेरी पनाह मांगता हूँ इस बात से कि मैं जान-बूझकर किसी को तेरा शरीक ठहराऊँ...",
+      "order": 6
+    },
+    {
+      "id": "wudu-guide",
+      "category": "wudu",
+      "title": "How to Perform Wudu (Ablution) Step-by-Step",
+      "titleArabic": "كَيْفِيَّةُ الْوُضُوء",
+      "arabicText": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+      "translationEnglish": "Step-by-step simple visual guide to make Wudu cleanly and correctly for kids.",
+      "translationUrdu": "بچوں کے لیے وضو کرنے کا مکمل اور آسان تصویری طریقہ۔",
+      "translationHindi": "बच्चों के लिए वुज़ू करने का आसान और मुकम्मल तरीका।",
+      "explanation": "Wudu cleans our body and prepares our heart for prayer before Allah.",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "title": "Intention (Niyyah) & Bismillah",
+          "description": "Make intention in heart for Wudu and say \"Bismillah-ir-Rahman-ir-Raheem\".",
+          "arabicText": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Wash Hands (3 Times)",
+          "description": "Wash both hands up to the wrists thoroughly 3 times, cleaning between fingers.",
+          "arabicText": "غَسْلُ الْيَدَيْنِ"
+        },
+        {
+          "stepNumber": 3,
+          "title": "Rinse Mouth (3 Times)",
+          "description": "Take clean water in your right hand, rinse your mouth gently 3 times.",
+          "arabicText": "الْمَضْمَضَةُ"
+        },
+        {
+          "stepNumber": 4,
+          "title": "Clean Nose (3 Times)",
+          "description": "Sniff water gently into nostrils with right hand and blow out with left hand 3 times.",
+          "arabicText": "الِاسْتِنْشَاقُ"
+        },
+        {
+          "stepNumber": 5,
+          "title": "Wash Entire Face (3 Times)",
+          "description": "Wash face from forehead to chin and ear to ear completely 3 times.",
+          "arabicText": "غَسْلُ الْوَجْهِ"
+        },
+        {
+          "stepNumber": 6,
+          "title": "Wash Arms up to Elbows (3 Times)",
+          "description": "Wash right arm including elbow 3 times, then left arm 3 times.",
+          "arabicText": "غَسْلُ الْيَدَيْنِ إِلَى الْمِرْفَقَيْنِ"
+        },
+        {
+          "stepNumber": 7,
+          "title": "Wipe Head & Ears (Masah - 1 Time)",
+          "description": "Wipe wet hands over head from front to back, then wipe inside and back of ears.",
+          "arabicText": "مَسْحُ الرَّأْسِ وَالْأُذُنَيْنِ"
+        },
+        {
+          "stepNumber": 8,
+          "title": "Wash Both Feet up to Ankles (3 Times)",
+          "description": "Wash right foot including ankle 3 times, then left foot 3 times, cleaning between toes.",
+          "arabicText": "غَسْلُ الرِّجْلَيْنِ إِلَى الْكَعْبَيْنِ"
+        }
+      ],
+      "order": 7
+    },
+    {
+      "id": "salah-guide",
+      "category": "salah",
+      "title": "How to Pray Salah (Namaz) Step-by-Step",
+      "titleArabic": "تَعَلُّمُ الصَّلَاة",
+      "arabicText": "حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلَاةِ الْوُسْطَىٰ",
+      "translationEnglish": "Complete children guide to standing, bowing, prostrating, and reciting in Salah.",
+      "translationUrdu": "بچوں کے لیے نماز کا آسان اور مکمل طریقہ۔",
+      "translationHindi": "बच्चों के लिए नमाज़ सीखने का सरल व सम्पूर्ण तरीका।",
+      "steps": [
+        {
+          "stepNumber": 1,
+          "title": "Takbeer Tahreemah",
+          "description": "Stand facing Qiblah with pure intention. Raise hands to ears and say \"Allahu Akbar\".",
+          "arabicText": "اللهُ أَكْبَرُ"
+        },
+        {
+          "stepNumber": 2,
+          "title": "Qiyam (Standing) & Thana",
+          "description": "Fold right hand over left below chest. Recite Thana: \"Subhanakallahumma...\", Surah Al-Fatiha, and another Surah.",
+          "arabicText": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ"
+        },
+        {
+          "stepNumber": 3,
+          "title": "Ruku (Bowing)",
+          "description": "Say \"Allahu Akbar\" and bow with hands on knees and flat back. Recite 3 times: \"Subhana Rabbiyal Azeem\".",
+          "arabicText": "سُبْحَانَ رَبِّيَ الْعَظِيمِ"
+        },
+        {
+          "stepNumber": 4,
+          "title": "Qawmah (Standing straight up)",
+          "description": "Rise straight from bowing saying \"Sami Allahu liman hamidah\", then \"Rabbana lakal hamd\".",
+          "arabicText": "سَمِعَ اللهُ لِمَنْ حَمِدَهُ، رَبَّنَا لَكَ الْحَمْدُ"
+        },
+        {
+          "stepNumber": 5,
+          "title": "Sajdah (Prostration)",
+          "description": "Say \"Allahu Akbar\" and prostrate with forehead, nose, palms, knees, and toes on ground. Recite 3 times: \"Subhana Rabbiyal A'la\".",
+          "arabicText": "سُبْحَانَ رَبِّيَ الْأَعْلَىٰ"
+        },
+        {
+          "stepNumber": 6,
+          "title": "Jalsah (Sitting between Sajdahs)",
+          "description": "Sit up straight saying \"Allahu Akbar\", then perform second Sajdah the same way.",
+          "arabicText": "رَبِّ اغْفِرْ لِي"
+        },
+        {
+          "stepNumber": 7,
+          "title": "Tashahhud (Sitting for Attahiyyat)",
+          "description": "Sit peacefully and recite: \"Attahiyyatu Lillahi was-salawatu wat-tayyibat...\" followed by Durood Ibrahim.",
+          "arabicText": "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ"
+        },
+        {
+          "stepNumber": 8,
+          "title": "Tasleem (Concluding the prayer)",
+          "description": "Turn face to right saying \"Assalamu alaykum wa rahmatullah\", then to left saying same.",
+          "arabicText": "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ"
+        }
+      ],
+      "order": 8
+    },
+    {
+      "id": "dua-leaving-house",
+      "category": "duas",
+      "title": "Dua when Leaving the House (گھر سے نکلنے کی دعا)",
+      "titleArabic": "دُعَاءُ الْخُرُوجِ مِنَ الْمَنْزِل",
+      "arabicText": "بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+      "pronunciation": "Bismillahi tawakkaltu 'alallahi, la hawla wa la quwwata illa billah",
+      "translationEnglish": "In the name of Allah, I place my trust in Allah, and there is no might nor power except with Allah.",
+      "translationUrdu": "اللہ کے نام سے، میں نے اللہ پر بھروسہ کیا، گناہوں سے بچنے اور نیکی کرنے کی طاقت اللہ ہی کی طرف سے ہے۔",
+      "translationHindi": "अल्लाह के नाम से, मैंने अल्लाह पर भरोसा किया, और कोई ताक़त और कुव्वत नहीं सिवाय अल्लाह के।",
+      "order": 1
+    },
+    {
+      "id": "dua-entering-house",
+      "category": "duas",
+      "title": "Dua when Entering the House (گھر میں داخل ہونے کی دعا)",
+      "titleArabic": "دُعَاءُ دُخُولِ الْمَنْزِل",
+      "arabicText": "بِسْمِ اللَّهِ وَلَجْنَا، وَبِسْمِ اللَّهِ خَرَجْنَا، وَعَلَى رَبِّنَا تَوَكَّلْنَا",
+      "pronunciation": "Bismillahi walajna, wa bismillahi kharajna, wa 'ala Rabbina tawakkalna",
+      "translationEnglish": "In the name of Allah we enter, and in the name of Allah we leave, and upon our Lord we place our trust.",
+      "translationUrdu": "اللہ کے نام سے ہم داخل ہوئے اور اللہ کے نام سے ہم نکلے، اور اپنے رب ہی پر ہم نے بھروسہ کیا۔",
+      "translationHindi": "अल्लाह के नाम से हम दाखिल हुए और अल्लाह के नाम से निकले, और अपने रब पर हमने भरोसा किया।",
+      "order": 2
+    },
+    {
+      "id": "dua-entering-restroom",
+      "category": "duas",
+      "title": "Dua before Entering the Restroom (بیت الخلاء میں داخل ہونے کی دعا)",
+      "titleArabic": "دُعَاءُ دُخُولِ الْخَلَاءِ",
+      "arabicText": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",
+      "pronunciation": "Allahumma innee a'oodhu bika minal khubuthi wal khabaa'ith",
+      "translationEnglish": "O Allah, I seek refuge in You from the male and female evil spirits.",
+      "translationUrdu": "اے اللہ! میں خبیث جنوں اور خبیث جننیوں (کی برائی) سے تیری پناہ مانگتا ہوں۔",
+      "translationHindi": "ऐ अल्लाह! मैं ख़बीस जिन्नों और जिन्नियों (की बुराई) से तेरी पनाह मांगता हूँ।",
+      "order": 3
+    },
+    {
+      "id": "dua-leaving-restroom",
+      "category": "duas",
+      "title": "Dua after Leaving the Restroom (بیت الخلاء سے نکلنے کی دعا)",
+      "titleArabic": "دُعَاءُ الْخُرُوجِ مِنَ الْخَلَاءِ",
+      "arabicText": "غُفْرَانَكَ",
+      "pronunciation": "Ghufranaka",
+      "translationEnglish": "(O Allah) I seek Your forgiveness.",
+      "translationUrdu": "اے اللہ! میں تیری بخشش مانگتا ہوں۔",
+      "translationHindi": "ऐ अल्लाह! मैं तेरी मग़फ़िरत (माफ़ी) चाहता हूँ।",
+      "order": 4
+    },
+    {
+      "id": "dua-wearing-clothes",
+      "category": "duas",
+      "title": "Dua when Wearing Clothes (کپڑے پہننے کی دعا)",
+      "titleArabic": "دُعَاءُ لُبْسِ الثَّوْب",
+      "arabicText": "الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا الثَّوْبَ وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",
+      "pronunciation": "Alhamdu lillahilladhi kasani hadhath-thawba wa razaqaneehi min ghayri hawlim-minni wa la quwwah",
+      "translationEnglish": "All praise is for Allah who has clothed me with this garment and provided it for me, with no power or might from myself.",
+      "translationUrdu": "تمام تعریفیں اس اللہ کے لیے ہیں جس نے مجھے یہ کپڑا پہنایا اور میری کسی طاقت اور قوت کے بغیر مجھے یہ عطا فرمایا۔",
+      "translationHindi": "तमाम तारीफें अल्लाह के लिए हैं जिसने मुझे यह कपड़ा पहनाया और मेरी किसी ताक़त के बिना मुझे यह अता फरमाया।",
+      "order": 5
+    },
+    {
+      "id": "dua-entering-mosque",
+      "category": "duas",
+      "title": "Dua when Entering the Mosque (مسجد میں داخل ہونے کی دعا)",
+      "titleArabic": "دُعَاءُ دُخُولِ الْمَسْجِد",
+      "arabicText": "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+      "pronunciation": "Allahummaf-tah lee abwaaba rahmatik",
+      "translationEnglish": "O Allah, open the doors of Your mercy for me.",
+      "translationUrdu": "اے اللہ! میرے لیے اپنی رحمت کے دروازے کھول دے۔",
+      "translationHindi": "ऐ अल्लाह! मेरे लिए अपनी रहमत के दरवाज़े खोल दे।",
+      "order": 6
+    },
+    {
+      "id": "dua-leaving-mosque",
+      "category": "duas",
+      "title": "Dua when Leaving the Mosque (مسجد سے نکلنے کی دعا)",
+      "titleArabic": "دُعَاءُ الْخُرُوجِ مِنَ الْمَسْجِد",
+      "arabicText": "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",
+      "pronunciation": "Allahumma innee as'aluka min fadlik",
+      "translationEnglish": "O Allah, I ask You from Your bounty.",
+      "translationUrdu": "اے اللہ! بے شک میں تجھ سے تیرا فضل مانگتا ہوں۔",
+      "translationHindi": "ऐ अल्लाह! मैं तुझसे तेरा फ़ज़ल मांगता हूँ।",
+      "order": 7
+    },
+    {
+      "id": "dua-looking-mirror",
+      "category": "duas",
+      "title": "Dua when Looking in the Mirror (آئینہ دیکھنے کی دعا)",
+      "titleArabic": "دُعَاءُ النَّظَرِ فِي الْمِرْآة",
+      "arabicText": "اللَّهُمَّ أَنْتَ حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",
+      "pronunciation": "Allahumma anta hassanta khalqee fahassin khuluqee",
+      "translationEnglish": "O Allah, You have made my physical form beautiful, so make my character beautiful as well.",
+      "translationUrdu": "اے اللہ! تو نے میری صورت اچھی بنائی ہے، پس میری سیرت بھی اچھی بنا دے۔",
+      "translationHindi": "ऐ अल्लाह! तूने मेरी सूरत अच्छी बनाई है, पस मेरा अख़लाक़ भी अच्छा बना दे।",
+      "order": 8
+    },
+    {
+      "id": "dua-drinking-milk",
+      "category": "duas",
+      "title": "Dua after Drinking Milk (دودھ پینے کے بعد کی دعا)",
+      "titleArabic": "دُعَاءُ شُرْبِ اللَّبَن",
+      "arabicText": "اللَّهُمَّ بَارِكْ لَنَا فِيهِ وَزِدْنَا مِنْهُ",
+      "pronunciation": "Allahumma barik lana feehi wa zidna minh",
+      "translationEnglish": "O Allah, bless it for us and give us more of it.",
+      "translationUrdu": "اے اللہ! اس میں ہمارے لیے برکت عطا فرما اور ہمیں اس سے زیادہ دے۔",
+      "translationHindi": "ऐ अल्लाह! इसमें हमारे लिए बरकत अता फरमा और हमें इससे ज़्यादा दे।",
+      "order": 9
+    },
+    {
+      "id": "dua-after-sneezing",
+      "category": "duas",
+      "title": "Dua after Sneezing (چھینک آنے کے بعد کی دعا)",
+      "titleArabic": "دُعَاءُ الْعُطَاس",
+      "arabicText": "الْحَمْدُ لِلَّهِ",
+      "pronunciation": "Alhamdulillah",
+      "translationEnglish": "All praise is for Allah.",
+      "translationUrdu": "تمام تعریفیں اللہ کے لیے ہیں۔",
+      "translationHindi": "तमाम तारीफें अल्लाह के लिए हैं।",
+      "order": 10
+    },
+    {
+      "id": "dua-reply-sneezing",
+      "category": "duas",
+      "title": "Dua when replying to someone who Sneezes (چھینکنے والے کے جواب کی دعا)",
+      "titleArabic": "تَشْمِيتُ الْعَاطِس",
+      "arabicText": "يَرْحَمُكَ اللَّهُ",
+      "pronunciation": "Yarhamukallah",
+      "translationEnglish": "May Allah have mercy on you.",
+      "translationUrdu": "اللہ تم پر رحم کرے۔",
+      "translationHindi": "अल्लाह तुम पर रहम फरमाए।",
+      "order": 11
+    },
+    {
+      "id": "dua-boarding-vehicle",
+      "category": "duas",
+      "title": "Dua when Boarding a Vehicle / Traveling (سواری پر بیٹھنے / سفر کی دعا)",
+      "titleArabic": "دُعَاءُ الرُّكُوبِ وَالسَّفَر",
+      "arabicText": "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ",
+      "pronunciation": "Subhanalladhi sakh-khara lana hadha wa ma kunna lahoo muqrineen, wa inna ila Rabbina lamunqaliboon",
+      "translationEnglish": "Glory be to Him who has subjected this to us, and we could not have otherwise subdued it, and indeed we are returning to our Lord.",
+      "translationUrdu": "پاک ہے وہ ذات جس نے اس (سواری) کو ہمارے تابع کر دیا، حالانکہ ہم اسے قابو کرنے والے نہ تھے، اور بے شک ہم اپنے رب کی طرف ہی لوٹ کر جانے والے ہیں۔",
+      "translationHindi": "पाक है वह ज़ात जिसने इसे हमारे काबू में कर दिया, और हम अपने रब की तरफ लौटने वाले हैं।",
+      "order": 12
+    },
+    {
+      "id": "dua-distress-hardship",
+      "category": "duas",
+      "title": "Dua when in Distress or Hardship (پریشانی اور مصیبت کی دعا)",
+      "titleArabic": "دُعَاءُ الْكَرْبِ (دُعَاءُ يُونُس)",
+      "arabicText": "لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",
+      "pronunciation": "Laa ilaaha illa anta subhaanaka innee kuntu minaz-zaalimeen",
+      "translationEnglish": "There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.",
+      "translationUrdu": "تیرے سوا کوئی معبود نہیں، تو پاک ہے، بے شک میں ہی ظالموں میں سے تھا۔",
+      "translationHindi": "तेरे सिवा कोई माबूद नहीं, तू पाक है, बेशक मैं ही ज़ालिमों में से था।",
+      "order": 13
+    },
+    {
+      "id": "dua-visiting-sick",
+      "category": "duas",
+      "title": "Dua when Visiting the Sick (بیمار کی عیادت کی دعا)",
+      "titleArabic": "دُعَاءُ عِيَادَةِ الْمَرِيض",
+      "arabicText": "لَا بَأْسَ طَهُورٌ إِنْ شَاءَ اللَّهُ",
+      "pronunciation": "Laa ba'sa tahoorun in sha'Allah",
+      "translationEnglish": "Do not worry, it will be a purification (from sins), if Allah wills.",
+      "translationUrdu": "کوئی حرج نہیں، اگر اللہ نے چاہا تو یہ بیماری گناہوں سے پاک کرنے والی ہے۔",
+      "translationHindi": "कोई हरज नहीं, इन्शाअल्लाह यह बीमारी गुनाहों से पाक करने वाली है।",
+      "order": 14
+    },
+    {
+      "id": "dua-hearing-good-news",
+      "category": "duas",
+      "title": "Dua upon Hearing Good News (خوشی کی خبر سننے کی دعا)",
+      "titleArabic": "دُعَاءُ سَمَاعِ الْخَبَرِ السَّارّ",
+      "arabicText": "الْحَمْدُ لِلَّهِ الَّذِي بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ",
+      "pronunciation": "Alhamdu lillahilladhi bini'matihi tatimmus-saalihaat",
+      "translationEnglish": "All praise is for Allah by whose favor good works are accomplished.",
+      "translationUrdu": "تمام تعریفیں اس اللہ کے لیے ہیں جس کی نعمت سے اچھے کام مکمل ہوتے ہیں۔",
+      "translationHindi": "सब तारीफें अल्लाह के लिए हैं जिसकी नेमत से अच्छे काम पूरे होते हैं।",
+      "order": 15
+    },
+    {
+      "id": "dua-hearing-bad-news",
+      "category": "duas",
+      "title": "Dua upon Hearing Bad News (بری خبر یا مصیبت کے وقت کی دعا)",
+      "titleArabic": "دُعَاءُ الْمُصِيبَة",
+      "arabicText": "إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ",
+      "pronunciation": "Inna lillahi wa inna ilayhi raaji'oon",
+      "translationEnglish": "Indeed, to Allah we belong and to Him we shall return.",
+      "translationUrdu": "بے شک ہم اللہ ہی کے لیے ہیں اور بے شک ہم اسی کی طرف لوٹ کر جانے والے ہیں۔",
+      "translationHindi": "बेशक हम अल्लाह ही के हैं और हमें उसी की तरफ लौट कर जाना है।",
+      "order": 16
+    },
+    {
+      "id": "dua-when-angry",
+      "category": "duas",
+      "title": "Dua when Angry (غصہ آنے کی دعا)",
+      "titleArabic": "دُعَاءُ الْغَضَب",
+      "arabicText": "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+      "pronunciation": "A'oodhu billahi minash-shaytanir-rajeem",
+      "translationEnglish": "I seek refuge in Allah from the accursed devil.",
+      "translationUrdu": "میں شیطان مردود سے اللہ کی پناہ مانگتا ہوں۔",
+      "translationHindi": "मैं शैतान मर्दूद से अल्लाह की पनाह मांगता हूँ।",
+      "order": 17
+    },
+    {
+      "id": "dua-protection-harm",
+      "category": "duas",
+      "title": "Dua for Protection from Harm (نقصان سے بچاؤ کی دعا)",
+      "titleArabic": "دُعَاءُ الْحِفْظِ وَالْحِمَايَة",
+      "arabicText": "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+      "pronunciation": "Bismillahilladhi la yadurru ma'as-mihee shay'un fil-ardi wa la fis-samaa'i wa huwas-Samee'ul 'Aleem",
+      "translationEnglish": "In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, All-Knowing.",
+      "translationUrdu": "اللہ کے نام سے جس کے نام کے ساتھ زمین اور آسمان میں کوئی چیز نقصان نہیں پہنچا سکتی، اور وہ خوب سننے والا اور جاننے والا ہے۔",
+      "translationHindi": "अल्लाह के नाम से जिसके नाम के साथ ज़मीन और आसमान में कोई चीज़ नुकसान नहीं पहुंचा सकती, और वह खूब सुनने और जानने वाला है।",
+      "order": 18
+    },
+    {
+      "id": "dua-world-hereafter",
+      "category": "duas",
+      "title": "Dua for Good in this World and the Hereafter (دنیا اور آخرت کی بھلائی کی دعا)",
+      "titleArabic": "دُعَاءُ خَيْرِ الدُّنْيَا وَالْآخِرَة",
+      "arabicText": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+      "pronunciation": "Rabbana aatina fid-dunya hasanataw-wa fil-aakhirati hasanataw-wa qina 'adhaban-naar",
+      "translationEnglish": "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
+      "translationUrdu": "اے ہمارے رب! ہمیں دنیا میں بھلائی عطا فرما اور آخرت میں بھی بھلائی عطا فرما اور ہمیں آگ کے عذاب سے بچا۔",
+      "translationHindi": "ऐ हमारे रब! हमें दुनिया में भी भलाई अता फरमा और आख़िरत में भी भलाई दे और हमें आग के अज़ाब से बचा।",
+      "order": 19
+    },
+    {
+      "id": "dua-iftar",
+      "category": "duas",
+      "title": "Dua for Breaking Fast - Iftar (روزہ افطار کرنے کی دعا)",
+      "titleArabic": "دُعَاءُ الْإِفْطَار",
+      "arabicText": "ذَهَبَ الظَّمَأُ وَابْتَلَّتِ الْعُرُوقُ وَثَبَتَ الْأَجْرُ إِنْ شَاءَ اللَّهُ",
+      "pronunciation": "Dhahabaz-zama'u wabtallatil 'urooqu wa thabatal ajru in sha'Allah",
+      "translationEnglish": "The thirst is gone, the veins are moistened, and the reward is confirmed, if Allah wills.",
+      "translationUrdu": "پیاس بجھ گئی، رگیں تر ہو گئیں، اور اگر اللہ نے چاہا تو ثواب پکا ہو گیا۔",
+      "translationHindi": "प्यास बुझ गई, नसें तर हो गईं और इन्शाअल्लाह सवाब पक्का हो गया।",
+      "order": 20
+    },
+    {
+      "id": "dua-new-moon",
+      "category": "duas",
+      "title": "Dua upon Sighting the New Moon (نیا چاند دیکھنے کی دعا)",
+      "titleArabic": "دُعَاءُ رُؤْيَةِ الْهِلَال",
+      "arabicText": "اللَّهُمَّ أَهِلَّهُ عَلَيْنَا بِالْأَمْنِ وَالْإِيمَانِ، وَالسَّلَامَةِ وَالْإِسْلَامِ، رَبِّي وَرَبُّكَ اللَّهُ",
+      "pronunciation": "Allahumma ahillahu 'alayna bil-amni wal-eemaan, was-salaamati wal-Islam, Rabbee wa Rabbukallah",
+      "translationEnglish": "O Allah, let this moon appear on us with security and faith, and with safety and Islam. (O moon!) Your Lord and my Lord is Allah.",
+      "translationUrdu": "اے اللہ! اس چاند کو ہم پر امن و ایمان، اور سلامتی و اسلام کے ساتھ طلوع فرما، (اے چاند!) میرا اور تیرا رب اللہ ہے۔",
+      "translationHindi": "ऐ अल्लाह! इस चाँद को हम पर अमन व ईमान और सलामती व इस्लाम के साथ तुलू फरमा।",
+      "order": 21
+    },
+    {
+      "id": "dua-when-raining",
+      "category": "duas",
+      "title": "Dua when it Rains (بارش ہوتے وقت کی دعا)",
+      "titleArabic": "دُعَاءُ نُزُولِ الْمَطَر",
+      "arabicText": "اللَّهُمَّ صَيِّبًا نَافِعًا",
+      "pronunciation": "Allahumma sayyiban naafi'aa",
+      "translationEnglish": "O Allah, (make it) a beneficial downpour.",
+      "translationUrdu": "اے اللہ! اس بارش کو نفع بخش بنا دے۔",
+      "translationHindi": "ऐ अल्लाह! इस बारिश को फायदेमंद बना दे।",
+      "order": 22
+    },
+    {
+      "id": "dua-hearing-thunder",
+      "category": "duas",
+      "title": "Dua upon Hearing Thunder (بادل گرجنے کی دعا)",
+      "titleArabic": "دُعَاءُ سَمَاعِ الرَّعْد",
+      "arabicText": "سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةُ مِنْ خِيفَتِهِ",
+      "pronunciation": "Subhanalladhi yusabbihur-ra'du bihamdihee wal-malaa'ikatu min kheefatih",
+      "translationEnglish": "Glory be to Him whom the thunder glorifies with His praise, and the angels from the fear of Him.",
+      "translationUrdu": "پاک ہے وہ ذات جس کی حمد کے ساتھ بادل کی گرج تسبیح کرتی ہے، اور فرشتے اس کے خوف سے تسبیح کرتے ہیں۔",
+      "translationHindi": "पाक है वह ज़ात जिसकी तारीफ के साथ बादल की गरज तस्बीह करती है और फ़रिश्ते उसके खौफ से तस्बीह करते हैं।",
+      "order": 23
+    },
+    {
+      "id": "dua-steadfast-heart",
+      "category": "duas",
+      "title": "Dua for Steadfastness of the Heart (دل کی ثابت قدمی کی دعا)",
+      "titleArabic": "دُعَاءُ ثَبَاتِ الْقَلْب",
+      "arabicText": "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ",
+      "pronunciation": "Yaa Muqallibal quloobi thabbit qalbee 'ala deenik",
+      "translationEnglish": "O Changer of the hearts, make my heart firm upon Your religion.",
+      "translationUrdu": "اے دلوں کو پھیرنے والے! میرے دل کو اپنے دین پر ثابت قدم رکھ۔",
+      "translationHindi": "ऐ दिलों को फेरने वाले! मेरे दिल को अपने दीन पर क़ायम रख।",
+      "order": 24
+    },
+    {
+      "id": "dua-visiting-graveyard",
+      "category": "duas",
+      "title": "Dua when Visiting the Graveyard (قبرستان میں داخل ہونے کی دعا)",
+      "titleArabic": "دُعَاءُ زِيَارَةِ الْقُبُور",
+      "arabicText": "السَّلَامُ عَلَيْكُمْ أَهْلَ الدِّيَارِ مِنَ الْمُؤْمِنِينَ وَالْمُسْلِمِينَ",
+      "pronunciation": "Assalamu 'alaykum ahlad-diyaari minal mu'mineena wal muslimeen",
+      "translationEnglish": "Peace be upon you, O inhabitants of the dwellings, believers and Muslims.",
+      "translationUrdu": "اے ان گھروں (قبروں) میں رہنے والے مومنو اور مسلمانو! تم پر سلامتی ہو۔",
+      "translationHindi": "ऐ कब्रों में रहने वाले मोमिनो और मुसलमानो! तुम पर सलामती हो।",
+      "order": 25
+    },
+    {
+      "id": "dua-ending-gathering",
+      "category": "duas",
+      "title": "Dua for Ending a Gathering (مجلس کے اختتام کی دعا)",
+      "titleArabic": "دُعَاءُ كَفَّارَةِ الْمَجْلِس",
+      "arabicText": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ",
+      "pronunciation": "Subhanakallahumma wa bihamdika, ash-hadu an laa ilaaha illa anta, astaghfiruka wa atoobu ilayk",
+      "translationEnglish": "Glory is to You, O Allah, and praise is to You. I bear witness that there is none worthy of worship but You. I seek Your forgiveness and repent to You.",
+      "translationUrdu": "اے اللہ! تو پاک ہے اور تیری ہی تعریف ہے، میں گواہی دیتا ہوں کہ تیرے سوا کوئی معبود نہیں، میں تجھ سے بخشش مانگتا ہوں اور تیری طرف توبہ کرتا ہوں۔",
+      "translationHindi": "ऐ अल्लाह! तू पाक है और तेरी ही तारीफ है, मैं गवाही देता हूँ कि तेरे सिवा कोई माबूद नहीं, मैं तुझसे माफ़ी मांगता हूँ।",
+      "order": 26
+    },
+    {
+      "id": "dua-asking-forgiveness",
+      "category": "duas",
+      "title": "Dua for Asking Forgiveness (مغفرت طلب کرنے کی دعا)",
+      "titleArabic": "دُعَاءُ طَلَبِ الْمَغْفِرَة",
+      "arabicText": "رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ",
+      "pronunciation": "Rabbigh-fir lee wa tub 'alayya innaka antat-Tawwaabur-Raheem",
+      "translationEnglish": "O my Lord, forgive me and accept my repentance, indeed You are the Accepting of repentance, the Merciful.",
+      "translationUrdu": "اے میرے رب! مجھے بخش دے اور میری توبہ قبول فرما، بے شک تو ہی توبہ قبول کرنے والا، نہایت رحم کرنے والا ہے۔",
+      "translationHindi": "ऐ मेरे रब! मुझे बख्श दे और मेरी तौबा कुबूल फरमा, बेशक तू तौबा कुबूल करने वाला और रहम करने वाला है।",
+      "order": 27
+    },
+    {
+      "id": "dua-difficult-task",
+      "category": "duas",
+      "title": "Dua when Facing a Difficult Task (مشکل کام کے وقت کی دعا)",
+      "titleArabic": "دُعَاءُ تَيْسِيرِ الْأُمُور",
+      "arabicText": "اللَّهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا، وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلًا",
+      "pronunciation": "Allahumma laa sahla illa maa ja'altahoo sahla, wa anta taj'alul hazna idha shi'ta sahla",
+      "translationEnglish": "O Allah, there is no ease except in that which You have made easy, and You make the difficulty, if You wish, easy.",
+      "translationUrdu": "اے اللہ! کوئی کام آسان نہیں مگر جسے تو آسان کر دے، اور تو جب چاہے مشکل کو بھی آسان کر دیتا ہے۔",
+      "translationHindi": "ऐ अल्लाह! कोई काम आसान नहीं मगर जिसे तू आसान कर दे, और तू जब चाहे मुश्किल को आसान बना देता है।",
+      "order": 28
+    },
+    {
+      "id": "dua-entering-market",
+      "category": "duas",
+      "title": "Dua when Entering the Market (بازار میں داخل ہونے کی دعا)",
+      "titleArabic": "دُعَاءُ دُخُولِ السُّوق",
+      "arabicText": "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِیکَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ، وَهُوَ حَيٌّ لَا يَمُوتُ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+      "pronunciation": "Laa ilaaha illallahu wahdahu la shareeka lah, lahul mulku wa lahul hamdu, yuhyee wa yumeetu, wa huwa hayyun laa yamoot, biyadihil khayr, wa huwa 'ala kulli shay'in qadeer",
+      "translationEnglish": "There is none worthy of worship except Allah alone, without partner. To Him belongs the dominion, and to Him is all praise. He gives life and causes death, and He is living and does not die. In His hand is all good, and He is over all things competent.",
+      "translationUrdu": "اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے اس کا کوئی شریک نہیں، اسی کی بادشاہی ہے اور اسی کے لیے تمام تعریفیں ہیں، وہی زندہ کرتا ہے اور وہی مارتا ہے، اور وہ ہمیشہ زندہ رہنے والا ہے اسے موت نہیں، اسی کے ہاتھ میں ہر بھلائی ہے اور وہ ہر چیز پر قادر ہے۔",
+      "translationHindi": "अल्लाह के सिवा कोई माबूद नहीं, वह अकेला है उसका कोई साझी नहीं, उसी का मुल्क है और उसी के हाथ में सारी भलाई है।",
+      "order": 29
+    },
+    {
+      "id": "dua-seeing-afflicted",
+      "category": "duas",
+      "title": "Dua when Seeing Someone in Affliction (کسی کو مصیبت یا بیماری میں دیکھنے کی دعا)",
+      "titleArabic": "دُعَاءُ رُؤْيَةِ الْمُبْتَلَى",
+      "arabicText": "الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي مِمَّا ابْتَلَاكَ بِهِ وَفَضَّلَنِي عَلَى كَثِيرٍ مِمَّنْ خَلَقَ تَفْضِيلًا",
+      "pronunciation": "Alhamdu lillahilladhi 'aafaanee mim-mabtalaaka bihee wa faddalanee 'ala katheerim-mimman khalaqa tafdeela",
+      "translationEnglish": "All praise is to Allah Who has saved me from what He has afflicted you with, and has greatly preferred me over many of His creation.",
+      "translationUrdu": "تمام تعریفیں اس اللہ کے لیے ہیں جس نے مجھے اس مصیبت سے عافیت دی جس میں اس نے تجھے مبتلا کیا، اور مجھے اپنی بہت سی مخلوقات پر بڑی فضیلت دی۔",
+      "translationHindi": "तमाम तारीफें अल्लाह के लिए हैं जिसने मुझे इस मुसीबत से बचाया जिसमें तुझे मुब्तिला किया।",
+      "order": 30
+    },
+    {
+      "id": "dua-thana-salah",
+      "category": "duas",
+      "title": "Thana (ثناء - نماز کی شروعات کی دعا)",
+      "titleArabic": "دُعَاءُ الِاسْتِفْتَاحِ (الثَّنَاء)",
+      "arabicText": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ",
+      "pronunciation": "Subhaanakallahumma wa bihamdika, wa tabaarakas-muka, wa ta'aala jadduka, wa laa ilaaha ghayruk",
+      "translationEnglish": "Glory be to You, O Allah, and all praise is due to You. Blessed is Your name, and high is Your majesty, and there is no deity worthy of worship except You.",
+      "translationUrdu": "اے اللہ! تو پاک ہے اور تیری ہی تعریف ہے، اور تیرا نام برکت والا ہے، اور تیری شان بہت بلند ہے، اور تیرے سوا کوئی معبود نہیں۔",
+      "translationHindi": "ऐ अल्लाह! तू पाक है और तेरी ही तारीफ है, और तेरा नाम बरकत वाला है, और तेरी शान बहुत बुलंद है, और तेरे सिवा कोई माबूद नहीं।",
+      "order": 31
+    },
+    {
+      "id": "dua-attahiyat-tashahhud",
+      "category": "duas",
+      "title": "Attahiyat / Tashahhud (التحيات - نماز میں قعدہ/بیٹھنے کی دعا)",
+      "titleArabic": "التَّشَهُّد (التَّحِيَّات)",
+      "arabicText": "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "pronunciation": "Attahiyyatu lillahi was-salawaatu wat-tayyibaat, assalaamu 'alayka ayyuhan-Nabiyyu wa rahmatullahi wa barakaatuh, assalaamu 'alayna wa 'ala 'ibaadillahis-saaliheen, ash-hadu an laa ilaaha illallahu, wa ash-hadu anna Muhammadan 'abduhoo wa rasooluh",
+      "translationEnglish": "All verbal, physical, and monetary worship is due to Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is no deity worthy of worship except Allah, and I bear witness that Muhammad is His servant and His Messenger.",
+      "translationUrdu": "تمام قولی، بدنی اور مالی عبادتیں اللہ ہی کے لیے ہیں۔ اے نبی! آپ پر سلام ہو اور اللہ کی رحمت اور اس کی برکتیں نازل ہوں۔ ہم پر اور اللہ کے تمام نیک بندوں پر سلام ہو۔ میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، اور میں گواہی دیتا ہوں کہ محمد (ﷺ) اس کے بندے اور رسول ہیں۔",
+      "translationHindi": "तमाम इबादतें अल्लाह ही के लिए हैं। ऐ नबी! आप पर सलाम हो और अल्लाह की रहमत और बरकतें हों। हम पर और अल्लाह के नेक बन्दों पर सलाम हो।",
+      "order": 32
+    },
+    {
+      "id": "dua-masoora-salah",
+      "category": "duas",
+      "title": "Dua-e-Masoora (دعائے ماثورہ - نماز کے آخر میں درود کے بعد کی دعا)",
+      "titleArabic": "الدُّعَاءُ الْمَأْثُورُ فِي آخِرِ الصَّلَاة",
+      "arabicText": "اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا، وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ، فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ، وَارْحَمْنِي إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ",
+      "pronunciation": "Allahumma innee zalamtu nafsee zulman katheera, wa la yaghfirudh-dhunooba illa anta, faghfir lee maghfiratam-min 'indika, warhamnee innaka antal Ghafoorur-Raheem",
+      "translationEnglish": "O Allah! I have wronged myself greatly, and none forgives sins except You. So grant me forgiveness from Yourself and have mercy upon me. Indeed, You are the Forgiving, the Merciful.",
+      "translationUrdu": "اے اللہ! بے شک میں نے اپنی جان پر بہت ظلم کیا ہے، اور تیرے سوا کوئی گناہوں کو معاف نہیں کر سکتا، پس مجھے اپنے پاس سے خاص بخشش کے ساتھ معاف فرما اور مجھ پر رحم فرما، بے شک تو ہی بہت بخشنے والا اور نہایت رحم کرنے والا ہے۔",
+      "translationHindi": "ऐ अल्लाह! बेशक मैंने अपनी जान पर बहुत ज़ुल्म किया है, और तेरे सिवा कोई गुनाहों को माफ नहीं कर सकता, पस मुझे अपनी तरफ से खास बख्शिश अता फरमा।",
+      "order": 33
+    },
+    {
+      "id": "dua-qunoot-witr",
+      "category": "duas",
+      "title": "Dua-e-Qunoot (دعائے قنوت - نمازِ وتر کی دعا)",
+      "titleArabic": "دُعَاءُ الْقُنُوتِ فِي صَلَاةِ الْوِتْر",
+      "arabicText": "اللَّهُمَّ إِنَّا نَسْتَعِينُكَ وَنَسْتَغْفِرُكَ وَنُؤْمِنُ بِكَ وَنَتَوَكَّلُ عَلَيْكَ وَنُثْنِي عَلَيْكَ الْخَيْرَ، وَنَشْكُرُكَ وَلَا نَكْفُرُكَ، وَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ. اللَّهُمَّ إِيَّاكَ نَعْبُدُ وَلَكَ نُصَلِّي وَنَسْجُدُ وَإِلَيْكَ نَسْعَى وَنَحْفِدُ، وَنَرْجُو رَحْمَتَكَ وَنَخْشَى عَذَابَكَ، إِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحِقٌ",
+      "pronunciation": "Allahumma inna nasta'eenuka wa nastaghfiruka wa nu'minu bika wa natawakkalu 'alayka wa nuthnee 'alaykal khayr, wa nashkuruka wa laa nakfuruka, wa nakhla'u wa natruku may-yafjuruk. Allahumma iyyaka na'budu wa laka nusallee wa nasjudu wa ilayka nas'aa wa nahfid, wa narjoo rahmataka wa nakhshaa 'adhaabaka, inna 'adhaabaka bil-kuffaari mulhiq",
+      "translationEnglish": "O Allah! We seek Your help, seek Your forgiveness, believe in You, rely on You, and praise You in the best manner. We thank You and are not ungrateful to You, and we alienate and forsake those who disobey You. O Allah! You alone we worship, to You we pray and prostrate, to You we strive and hasten. We hope for Your mercy and fear Your punishment. Indeed, Your punishment will overtake the disbelievers.",
+      "translationUrdu": "اے اللہ! ہم تجھ سے مدد مانگتے ہیں، تجھ سے بخشش طلب کرتے ہیں، تجھ پر ایمان لاتے ہیں، تجھ پر بھروسہ کرتے ہیں، اور تیری بہت اچھی تعریف کرتے ہیں، ہم تیرا شکر ادا کرتے ہیں اور تیری ناشکری نہیں کرتے، اور جو تیری نافرمانی کرے ہم اس سے الگ ہوتے ہیں اور اسے چھوڑ دیتے ہیں۔ اے اللہ! ہم تیری ہی عبادت کرتے ہیں، تیرے ہی لیے نماز پڑھتے ہیں اور سجدہ کرتے ہیں، اور تیری ہی طرف دوڑتے اور خدمت کے لیے حاضر رہتے ہیں، ہم تیری رحمت کے امیدوار ہیں اور تیرے عذاب سے ڈرتے ہیں، بے شک تیرا عذاب کافروں کو پہنچنے والا ہے۔",
+      "translationHindi": "ऐ अल्लाह! हम तुझसे मदद मांगते हैं, तुझसे बख्शिश चाहते हैं, तुझ पर ईमान लाते हैं, और तुझ पर भरोसा करते हैं। हम तेरी ही इबादत करते हैं, तेरे ही लिए नमाज़ पढ़ते और सजदा करते हैं।",
+      "order": 34
+    },
+    {
+      "id": "dua-before-eating",
+      "category": "duas",
+      "title": "Dua Before Eating Food (کھانا کھانے سے پہلے کی دعا)",
+      "titleArabic": "دُعَاءُ قَبْلَ الطَّعَام",
+      "arabicText": "بِسْمِ اللَّهِ وَعَلَىٰ بَرَكَةِ اللَّهِ",
+      "pronunciation": "Bismillahi wa 'ala barakatillah",
+      "translationEnglish": "In the name of Allah and upon the blessings of Allah.",
+      "translationUrdu": "اللہ کے نام کے ساتھ اور اللہ کی برکت پر (میں کھانا شروع کرتا ہوں)۔",
+      "translationHindi": "अल्लाह के नाम से और अल्लाह की बरकत पर।",
+      "order": 35
+    },
+    {
+      "id": "dua-after-eating",
+      "category": "duas",
+      "title": "Dua After Finishing Food (کھانا کھانے کے بعد کی دعا)",
+      "titleArabic": "دُعَاءُ بَعْدَ الطَّعَام",
+      "arabicText": "الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ",
+      "pronunciation": "Alhamdu lillahilladhi at'amana wa saqana wa ja'alana muslimeen",
+      "translationEnglish": "All praise is due to Allah Who gave us food and drink and made us Muslims.",
+      "translationUrdu": "تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں کھلایا، پلایا اور ہمیں مسلمان بنایا۔",
+      "translationHindi": "तमाम तारीफें अल्लाह के लिए हैं जिसने हमें खिलाया, पिलाया और हमें मुसलमान बनाया।",
+      "order": 36
+    },
+    {
+      "id": "dua-sleeping",
+      "category": "duas",
+      "title": "Dua Before Sleeping (سوتے وقت کی دعا)",
+      "titleArabic": "دُعَاءُ النَّوْم",
+      "arabicText": "اللَّهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا",
+      "pronunciation": "Allahumma bismika amootu wa ahya",
+      "translationEnglish": "O Allah, in Your name I die (sleep) and I live (wake up).",
+      "translationUrdu": "اے اللہ! تیرے ہی نام کے ساتھ میں مرتا ہوں اور جیتا ہوں۔",
+      "translationHindi": "ऐ अल्लाह! तेरे ही नाम से मैं सोता हूँ और जागता हूँ।",
+      "order": 37
+    },
+    {
+      "id": "dua-waking",
+      "category": "duas",
+      "title": "Dua After Waking Up (نیند سے بیدار ہونے کی دعا)",
+      "titleArabic": "دُعَاءُ الِاسْتِيقَاظ",
+      "arabicText": "الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
+      "pronunciation": "Alhamdu lillahilladhi ahyana ba'da ma amatana wa ilayhin-nushoor",
+      "translationEnglish": "All praise is due to Allah Who brought us to life after causing us to die, and to Him is the final return.",
+      "translationUrdu": "تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں مارنے کے بعد زندہ کیا اور اسی کی طرف لوٹ کر جانا ہے۔",
+      "translationHindi": "सब तारीफें अल्लाह के लिए हैं जिसने हमें मौत (नींद) के बाद जिंदगी दी और उसी की तरफ उठना है।",
+      "order": 38
+    },
+    {
+      "id": "dua-parents",
+      "category": "duas",
+      "title": "Dua for Parents / Mother & Father (والدین کے لیے دعا)",
+      "titleArabic": "دُعَاءُ الْوَالِدَيْن",
+      "arabicText": "رَّبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
+      "pronunciation": "Rabbir hamhuma kama rabbayani sagheera",
+      "translationEnglish": "My Lord, have mercy upon them both as they raised me when I was small.",
+      "translationUrdu": "اے میرے پروردگار! تو ان دونوں پر رحم فرما جس طرح انہوں نے بچپن میں میری پرورش فرمائی۔",
+      "translationHindi": "ऐ मेरे रब! तू मेरे वालिदैन पर रहम फरमा जैसा कि उन्होंने मुझे बचपन में पाला।",
+      "order": 39
+    },
+    {
+      "id": "dua-knowledge",
+      "category": "duas",
+      "title": "Dua for Increasing Knowledge (علم میں اضافے کی دعا)",
+      "titleArabic": "دُعَاءُ زِيَادَةِ الْعِلْم",
+      "arabicText": "رَّبِّ زِدْنِي عِلْمًا",
+      "pronunciation": "Rabbi zidnee 'ilma",
+      "translationEnglish": "My Lord, increase me in knowledge.",
+      "translationUrdu": "اے میرے رب! میرے علم میں اضافہ فرما۔",
+      "translationHindi": "ऐ मेरे रब! मेरे इल्म (ज्ञान) में इज़ाफ़ा फरमा।",
+      "order": 40
+    }
+  ],
+  "mathItems": [
+    {
+      "id": "m-num-1",
+      "type": "number",
+      "number": 1,
+      "nameEn": "One",
+      "nameHi": "एक (Ek)",
+      "nameUr": "ایک (Aik)",
+      "audioUrl": "",
+      "order": 1
+    },
+    {
+      "id": "m-num-2",
+      "type": "number",
+      "number": 2,
+      "nameEn": "Two",
+      "nameHi": "दो (Do)",
+      "nameUr": "دو (Do)",
+      "audioUrl": "",
+      "order": 2
+    },
+    {
+      "id": "m-num-3",
+      "type": "number",
+      "number": 3,
+      "nameEn": "Three",
+      "nameHi": "तीन (Teen)",
+      "nameUr": "تین (Teen)",
+      "audioUrl": "",
+      "order": 3
+    },
+    {
+      "id": "m-num-4",
+      "type": "number",
+      "number": 4,
+      "nameEn": "Four",
+      "nameHi": "चार (Chaar)",
+      "nameUr": "چار (Chaar)",
+      "audioUrl": "",
+      "order": 4
+    },
+    {
+      "id": "m-num-5",
+      "type": "number",
+      "number": 5,
+      "nameEn": "Five",
+      "nameHi": "पाँच (Paanch)",
+      "nameUr": "پانچ (Paanch)",
+      "audioUrl": "",
+      "order": 5
+    },
+    {
+      "id": "m-num-6",
+      "type": "number",
+      "number": 6,
+      "nameEn": "Six",
+      "nameHi": "छह (Chhah)",
+      "nameUr": "چھ (Chhay)",
+      "audioUrl": "",
+      "order": 6
+    },
+    {
+      "id": "m-num-7",
+      "type": "number",
+      "number": 7,
+      "nameEn": "Seven",
+      "nameHi": "सात (Saat)",
+      "nameUr": "سات (Saat)",
+      "audioUrl": "",
+      "order": 7
+    },
+    {
+      "id": "m-num-8",
+      "type": "number",
+      "number": 8,
+      "nameEn": "Eight",
+      "nameHi": "आठ (Aath)",
+      "nameUr": "آٹھ (Aath)",
+      "audioUrl": "",
+      "order": 8
+    },
+    {
+      "id": "m-num-9",
+      "type": "number",
+      "number": 9,
+      "nameEn": "Nine",
+      "nameHi": "नौ (Nau)",
+      "nameUr": "نو (Nau)",
+      "audioUrl": "",
+      "order": 9
+    },
+    {
+      "id": "m-num-10",
+      "type": "number",
+      "number": 10,
+      "nameEn": "Ten",
+      "nameHi": "दस (Das)",
+      "nameUr": "دس (Das)",
+      "audioUrl": "",
+      "order": 10
+    },
+    {
+      "id": "m-tab-2",
+      "type": "table",
+      "tableNumber": 2,
+      "tableRows": [
+        {
+          "factor": 1,
+          "result": 2,
+          "audioEn": "2 times 1 is 2",
+          "audioHi": "दो एकम दो",
+          "audioUr": "دو ایکم دو"
+        },
+        {
+          "factor": 2,
+          "result": 4,
+          "audioEn": "2 times 2 is 4",
+          "audioHi": "दो दूनी चार",
+          "audioUr": "دو دونی چار"
+        },
+        {
+          "factor": 3,
+          "result": 6,
+          "audioEn": "2 times 3 is 6",
+          "audioHi": "दो तीया छह",
+          "audioUr": "دو تیا چھ"
+        },
+        {
+          "factor": 4,
+          "result": 8,
+          "audioEn": "2 times 4 is 8",
+          "audioHi": "दो चौके आठ",
+          "audioUr": "دو چوکے آٹھ"
+        },
+        {
+          "factor": 5,
+          "result": 10,
+          "audioEn": "2 times 5 is 10",
+          "audioHi": "दो पंजे दस",
+          "audioUr": "دو پنجے دس"
+        },
+        {
+          "factor": 6,
+          "result": 12,
+          "audioEn": "2 times 6 is 12",
+          "audioHi": "दो छक्के बारह",
+          "audioUr": "دو چھکے بارہ"
+        },
+        {
+          "factor": 7,
+          "result": 14,
+          "audioEn": "2 times 7 is 14",
+          "audioHi": "दो सत्ते चौदह",
+          "audioUr": "دو ستے چودہ"
+        },
+        {
+          "factor": 8,
+          "result": 16,
+          "audioEn": "2 times 8 is 16",
+          "audioHi": "दो अठे सोलह",
+          "audioUr": "دو اٹھے سولہ"
+        },
+        {
+          "factor": 9,
+          "result": 18,
+          "audioEn": "2 times 9 is 18",
+          "audioHi": "दो निम्मे अठारह",
+          "audioUr": "دو نمے اٹھارہ"
+        },
+        {
+          "factor": 10,
+          "result": 20,
+          "audioEn": "2 times 10 is 20",
+          "audioHi": "दो दहाम बीस",
+          "audioUr": "دو دہائے بیس"
+        }
+      ],
+      "order": 11
+    },
+    {
+      "id": "m-tab-3",
+      "type": "table",
+      "tableNumber": 3,
+      "tableRows": [
+        {
+          "factor": 1,
+          "result": 3,
+          "audioEn": "3 times 1 is 3",
+          "audioHi": "तीन एकम तीन",
+          "audioUr": "تین ایکم تین"
+        },
+        {
+          "factor": 2,
+          "result": 6,
+          "audioEn": "3 times 2 is 6",
+          "audioHi": "तीन दूनी छह",
+          "audioUr": "تین دونی چھ"
+        },
+        {
+          "factor": 3,
+          "result": 9,
+          "audioEn": "3 times 3 is 9",
+          "audioHi": "तीन तीया नौ",
+          "audioUr": "تین تیا نو"
+        },
+        {
+          "factor": 4,
+          "result": 12,
+          "audioEn": "3 times 4 is 12",
+          "audioHi": "तीन चौके बारह",
+          "audioUr": "تین چوکے بارہ"
+        },
+        {
+          "factor": 5,
+          "result": 15,
+          "audioEn": "3 times 5 is 15",
+          "audioHi": "तीन पंजे पंद्रह",
+          "audioUr": "تین پنجے پندرہ"
+        },
+        {
+          "factor": 6,
+          "result": 18,
+          "audioEn": "3 times 6 is 18",
+          "audioHi": "तीन छक्के अठारह",
+          "audioUr": "تین چھکے اٹھارہ"
+        },
+        {
+          "factor": 7,
+          "result": 21,
+          "audioEn": "3 times 7 is 21",
+          "audioHi": "तीन सत्ते इक्कीस",
+          "audioUr": "تین ستے اکیس"
+        },
+        {
+          "factor": 8,
+          "result": 24,
+          "audioEn": "3 times 8 is 24",
+          "audioHi": "तीन अठे चौबीस",
+          "audioUr": "تین اٹھے چوبیس"
+        },
+        {
+          "factor": 9,
+          "result": 27,
+          "audioEn": "3 times 9 is 27",
+          "audioHi": "तीन निम्मे सत्ताईस",
+          "audioUr": "تین نمے ستائیس"
+        },
+        {
+          "factor": 10,
+          "result": 30,
+          "audioEn": "3 times 10 is 30",
+          "audioHi": "तीन दहाम तीस",
+          "audioUr": "تین دہائے تیس"
+        }
+      ],
+      "order": 12
+    },
+    {
+      "id": "m-tab-5",
+      "type": "table",
+      "tableNumber": 5,
+      "tableRows": [
+        {
+          "factor": 1,
+          "result": 5,
+          "audioEn": "5 times 1 is 5",
+          "audioHi": "पाँच एकम पाँच",
+          "audioUr": "پانچ ایکم پانچ"
+        },
+        {
+          "factor": 2,
+          "result": 10,
+          "audioEn": "5 times 2 is 10",
+          "audioHi": "पाँच दूनी दस",
+          "audioUr": "پانچ دونی دس"
+        },
+        {
+          "factor": 3,
+          "result": 15,
+          "audioEn": "5 times 3 is 15",
+          "audioHi": "पाँच तीया पंद्रह",
+          "audioUr": "پانچ تیا پندرہ"
+        },
+        {
+          "factor": 4,
+          "result": 20,
+          "audioEn": "5 times 4 is 20",
+          "audioHi": "पाँच चौके बीस",
+          "audioUr": "پانچ چوکے بیس"
+        },
+        {
+          "factor": 5,
+          "result": 25,
+          "audioEn": "5 times 5 is 25",
+          "audioHi": "पाँच पंजे पच्चीस",
+          "audioUr": "پانچ پنجے پچیس"
+        },
+        {
+          "factor": 6,
+          "result": 30,
+          "audioEn": "5 times 6 is 30",
+          "audioHi": "पाँच छक्के तीस",
+          "audioUr": "پانچ چھکے تیس"
+        },
+        {
+          "factor": 7,
+          "result": 35,
+          "audioEn": "5 times 7 is 35",
+          "audioHi": "पाँच सत्ते पैंतीस",
+          "audioUr": "پانچ ستے پینتیس"
+        },
+        {
+          "factor": 8,
+          "result": 40,
+          "audioEn": "5 times 8 is 40",
+          "audioHi": "पाँच अठे चालीस",
+          "audioUr": "پانچ اٹھے چالیس"
+        },
+        {
+          "factor": 9,
+          "result": 45,
+          "audioEn": "5 times 9 is 45",
+          "audioHi": "पाँच निम्मे पैंतालीस",
+          "audioUr": "پانچ نمے پینتالیس"
+        },
+        {
+          "factor": 10,
+          "result": 50,
+          "audioEn": "5 times 10 is 50",
+          "audioHi": "पाँच दहाम पचास",
+          "audioUr": "پانچ دہائے پچاس"
+        }
+      ],
+      "order": 13
+    },
+    {
+      "id": "m-arith-1",
+      "type": "arithmetic",
+      "question": "5 + 4 = ?",
+      "num1": 5,
+      "operator": "+",
+      "num2": 4,
+      "answer": 9,
+      "options": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "visualObject": "🍎",
+      "visualName": "Apple",
+      "difficulty": "easy",
+      "level": 1,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 14
+    },
+    {
+      "id": "m-arith-2",
+      "type": "arithmetic",
+      "question": "9 - 3 = ?",
+      "num1": 9,
+      "operator": "-",
+      "num2": 3,
+      "answer": 6,
+      "options": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "visualObject": "🍌",
+      "visualName": "Banana",
+      "difficulty": "easy",
+      "level": 1,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 15
+    },
+    {
+      "id": "m-arith-3",
+      "type": "arithmetic",
+      "question": "4 × 2 = ?",
+      "num1": 4,
+      "operator": "×",
+      "num2": 2,
+      "answer": 8,
+      "options": [
+        6,
+        8,
+        10,
+        12
+      ],
+      "visualObject": "🍒",
+      "visualName": "Cherry",
+      "difficulty": "easy",
+      "level": 1,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 16
+    },
+    {
+      "id": "m-arith-4",
+      "type": "arithmetic",
+      "question": "8 ÷ 2 = ?",
+      "num1": 8,
+      "operator": "÷",
+      "num2": 2,
+      "answer": 4,
+      "options": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "visualObject": "🍉",
+      "visualName": "Watermelon",
+      "difficulty": "easy",
+      "level": 1,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 17
+    },
+    {
+      "id": "m-arith-5",
+      "type": "arithmetic",
+      "question": "6 + 3 = ?",
+      "num1": 6,
+      "operator": "+",
+      "num2": 3,
+      "answer": 9,
+      "options": [
+        8,
+        9,
+        10,
+        12
+      ],
+      "visualObject": "🍇",
+      "visualName": "Grapes",
+      "difficulty": "easy",
+      "level": 1,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 18
+    },
+    {
+      "id": "m-arith-6",
+      "type": "arithmetic",
+      "question": "10 - 5 = ?",
+      "num1": 10,
+      "operator": "-",
+      "num2": 5,
+      "answer": 5,
+      "options": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "visualObject": "🍓",
+      "visualName": "Strawberry",
+      "difficulty": "easy",
+      "level": 1,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 19
+    },
+    {
+      "id": "m-arith-7",
+      "type": "arithmetic",
+      "question": "3 × 3 = ?",
+      "num1": 3,
+      "operator": "×",
+      "num2": 3,
+      "answer": 9,
+      "options": [
+        6,
+        9,
+        12,
+        15
+      ],
+      "visualObject": "🍍",
+      "visualName": "Pineapple",
+      "difficulty": "easy",
+      "level": 1,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 20
+    },
+    {
+      "id": "m-arith-8",
+      "type": "arithmetic",
+      "question": "6 ÷ 3 = ?",
+      "num1": 6,
+      "operator": "÷",
+      "num2": 3,
+      "answer": 2,
+      "options": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "visualObject": "🥭",
+      "visualName": "Mango",
+      "difficulty": "easy",
+      "level": 1,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 21
+    },
+    {
+      "id": "m-arith-9",
+      "type": "arithmetic",
+      "question": "7 + 2 = ?",
+      "num1": 7,
+      "operator": "+",
+      "num2": 2,
+      "answer": 9,
+      "options": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "visualObject": "🥝",
+      "visualName": "Kiwi",
+      "difficulty": "easy",
+      "level": 1,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 22
+    },
+    {
+      "id": "m-arith-10",
+      "type": "arithmetic",
+      "question": "8 - 4 = ?",
+      "num1": 8,
+      "operator": "-",
+      "num2": 4,
+      "answer": 4,
+      "options": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "visualObject": "🥥",
+      "visualName": "Coconut",
+      "difficulty": "easy",
+      "level": 1,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 23
+    },
+    {
+      "id": "m-arith-11",
+      "type": "arithmetic",
+      "question": "45 + 23 = ?",
+      "num1": 45,
+      "operator": "+",
+      "num2": 23,
+      "answer": 68,
+      "options": [
+        58,
+        68,
+        78,
+        88
+      ],
+      "visualObject": "⚽",
+      "visualName": "Ball",
+      "difficulty": "medium",
+      "level": 2,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 24
+    },
+    {
+      "id": "m-arith-12",
+      "type": "arithmetic",
+      "question": "78 - 34 = ?",
+      "num1": 78,
+      "operator": "-",
+      "num2": 34,
+      "answer": 44,
+      "options": [
+        34,
+        44,
+        54,
+        64
+      ],
+      "visualObject": "🏀",
+      "visualName": "Basketball",
+      "difficulty": "medium",
+      "level": 2,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 25
+    },
+    {
+      "id": "m-arith-13",
+      "type": "arithmetic",
+      "question": "12 × 4 = ?",
+      "num1": 12,
+      "operator": "×",
+      "num2": 4,
+      "answer": 48,
+      "options": [
+        36,
+        44,
+        48,
+        52
+      ],
+      "visualObject": "🚗",
+      "visualName": "Car",
+      "difficulty": "medium",
+      "level": 2,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 26
+    },
+    {
+      "id": "m-arith-14",
+      "type": "arithmetic",
+      "question": "48 ÷ 4 = ?",
+      "num1": 48,
+      "operator": "÷",
+      "num2": 4,
+      "answer": 12,
+      "options": [
+        10,
+        11,
+        12,
+        14
+      ],
+      "visualObject": "🚕",
+      "visualName": "Taxi",
+      "difficulty": "medium",
+      "level": 2,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 27
+    },
+    {
+      "id": "m-arith-15",
+      "type": "arithmetic",
+      "question": "56 + 32 = ?",
+      "num1": 56,
+      "operator": "+",
+      "num2": 32,
+      "answer": 88,
+      "options": [
+        78,
+        88,
+        98,
+        108
+      ],
+      "visualObject": "🚂",
+      "visualName": "Train",
+      "difficulty": "medium",
+      "level": 2,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 28
+    },
+    {
+      "id": "m-arith-16",
+      "type": "arithmetic",
+      "question": "95 - 40 = ?",
+      "num1": 95,
+      "operator": "-",
+      "num2": 40,
+      "answer": 55,
+      "options": [
+        45,
+        55,
+        65,
+        75
+      ],
+      "visualObject": "✈️",
+      "visualName": "Airplane",
+      "difficulty": "medium",
+      "level": 2,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 29
+    },
+    {
+      "id": "m-arith-17",
+      "type": "arithmetic",
+      "question": "15 × 3 = ?",
+      "num1": 15,
+      "operator": "×",
+      "num2": 3,
+      "answer": 45,
+      "options": [
+        35,
+        40,
+        45,
+        50
+      ],
+      "visualObject": "⭐",
+      "visualName": "Star",
+      "difficulty": "medium",
+      "level": 2,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 30
+    },
+    {
+      "id": "m-arith-18",
+      "type": "arithmetic",
+      "question": "60 ÷ 5 = ?",
+      "num1": 60,
+      "operator": "÷",
+      "num2": 5,
+      "answer": 12,
+      "options": [
+        10,
+        12,
+        14,
+        15
+      ],
+      "visualObject": "🌙",
+      "visualName": "Moon",
+      "difficulty": "medium",
+      "level": 2,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 31
+    },
+    {
+      "id": "m-arith-19",
+      "type": "arithmetic",
+      "question": "80 + 45 = ?",
+      "num1": 80,
+      "operator": "+",
+      "num2": 45,
+      "answer": 125,
+      "options": [
+        115,
+        125,
+        135,
+        145
+      ],
+      "visualObject": "☀️",
+      "visualName": "Sun",
+      "difficulty": "medium",
+      "level": 2,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 32
+    },
+    {
+      "id": "m-arith-20",
+      "type": "arithmetic",
+      "question": "99 - 55 = ?",
+      "num1": 99,
+      "operator": "-",
+      "num2": 55,
+      "answer": 44,
+      "options": [
+        34,
+        44,
+        54,
+        64
+      ],
+      "visualObject": "🌻",
+      "visualName": "Flower",
+      "difficulty": "medium",
+      "level": 2,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 33
+    },
+    {
+      "id": "m-arith-21",
+      "type": "arithmetic",
+      "question": "120 + 45 = ?",
+      "num1": 120,
+      "operator": "+",
+      "num2": 45,
+      "answer": 165,
+      "options": [
+        155,
+        165,
+        175,
+        185
+      ],
+      "visualObject": "🌹",
+      "visualName": "Rose",
+      "difficulty": "hard",
+      "level": 3,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 34
+    },
+    {
+      "id": "m-arith-22",
+      "type": "arithmetic",
+      "question": "150 - 60 = ?",
+      "num1": 150,
+      "operator": "-",
+      "num2": 60,
+      "answer": 90,
+      "options": [
+        80,
+        90,
+        100,
+        110
+      ],
+      "visualObject": "🐶",
+      "visualName": "Dog",
+      "difficulty": "hard",
+      "level": 3,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 35
+    },
+    {
+      "id": "m-arith-23",
+      "type": "arithmetic",
+      "question": "14 × 5 = ?",
+      "num1": 14,
+      "operator": "×",
+      "num2": 5,
+      "answer": 70,
+      "options": [
+        60,
+        65,
+        70,
+        75
+      ],
+      "visualObject": "🐱",
+      "visualName": "Cat",
+      "difficulty": "hard",
+      "level": 3,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 36
+    },
+    {
+      "id": "m-arith-24",
+      "type": "arithmetic",
+      "question": "72 ÷ 6 = ?",
+      "num1": 72,
+      "operator": "÷",
+      "num2": 6,
+      "answer": 12,
+      "options": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "visualObject": "🐰",
+      "visualName": "Rabbit",
+      "difficulty": "hard",
+      "level": 3,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 37
+    },
+    {
+      "id": "m-arith-25",
+      "type": "arithmetic",
+      "question": "235 + 110 = ?",
+      "num1": 235,
+      "operator": "+",
+      "num2": 110,
+      "answer": 345,
+      "options": [
+        325,
+        335,
+        345,
+        355
+      ],
+      "visualObject": "🐻",
+      "visualName": "Bear",
+      "difficulty": "hard",
+      "level": 3,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 38
+    },
+    {
+      "id": "m-arith-26",
+      "type": "arithmetic",
+      "question": "300 - 125 = ?",
+      "num1": 300,
+      "operator": "-",
+      "num2": 125,
+      "answer": 175,
+      "options": [
+        165,
+        175,
+        185,
+        225
+      ],
+      "visualObject": "🦋",
+      "visualName": "Butterfly",
+      "difficulty": "hard",
+      "level": 3,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 39
+    },
+    {
+      "id": "m-arith-27",
+      "type": "arithmetic",
+      "question": "20 × 6 = ?",
+      "num1": 20,
+      "operator": "×",
+      "num2": 6,
+      "answer": 120,
+      "options": [
+        100,
+        110,
+        120,
+        130
+      ],
+      "visualObject": "🐢",
+      "visualName": "Turtle",
+      "difficulty": "hard",
+      "level": 3,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 40
+    },
+    {
+      "id": "m-arith-28",
+      "type": "arithmetic",
+      "question": "90 ÷ 6 = ?",
+      "num1": 90,
+      "operator": "÷",
+      "num2": 6,
+      "answer": 15,
+      "options": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "visualObject": "🍪",
+      "visualName": "Cookie",
+      "difficulty": "hard",
+      "level": 3,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 41
+    },
+    {
+      "id": "m-arith-29",
+      "type": "arithmetic",
+      "question": "450 + 150 = ?",
+      "num1": 450,
+      "operator": "+",
+      "num2": 150,
+      "answer": 600,
+      "options": [
+        500,
+        550,
+        600,
+        650
+      ],
+      "visualObject": "🍩",
+      "visualName": "Donut",
+      "difficulty": "hard",
+      "level": 3,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 42
+    },
+    {
+      "id": "m-arith-30",
+      "type": "arithmetic",
+      "question": "250 - 75 = ?",
+      "num1": 250,
+      "operator": "-",
+      "num2": 75,
+      "answer": 175,
+      "options": [
+        165,
+        175,
+        185,
+        225
+      ],
+      "visualObject": "🍰",
+      "visualName": "Cake",
+      "difficulty": "hard",
+      "level": 3,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 43
+    },
+    {
+      "id": "m-arith-31",
+      "type": "arithmetic",
+      "question": "25 × 6 = ?",
+      "num1": 25,
+      "operator": "×",
+      "num2": 6,
+      "answer": 150,
+      "options": [
+        125,
+        140,
+        150,
+        175
+      ],
+      "visualObject": "🍫",
+      "visualName": "Chocolate",
+      "difficulty": "hard",
+      "level": 4,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 44
+    },
+    {
+      "id": "m-arith-32",
+      "type": "arithmetic",
+      "question": "144 ÷ 12 = ?",
+      "num1": 144,
+      "operator": "÷",
+      "num2": 12,
+      "answer": 12,
+      "options": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "visualObject": "🍬",
+      "visualName": "Candy",
+      "difficulty": "hard",
+      "level": 4,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 45
+    },
+    {
+      "id": "m-arith-33",
+      "type": "arithmetic",
+      "question": "560 + 240 = ?",
+      "num1": 560,
+      "operator": "+",
+      "num2": 240,
+      "answer": 800,
+      "options": [
+        700,
+        760,
+        800,
+        840
+      ],
+      "visualObject": "🍭",
+      "visualName": "Lollipop",
+      "difficulty": "hard",
+      "level": 4,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 46
+    },
+    {
+      "id": "m-arith-34",
+      "type": "arithmetic",
+      "question": "800 - 350 = ?",
+      "num1": 800,
+      "operator": "-",
+      "num2": 350,
+      "answer": 450,
+      "options": [
+        350,
+        400,
+        450,
+        550
+      ],
+      "visualObject": "🍕",
+      "visualName": "Pizza",
+      "difficulty": "hard",
+      "level": 4,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 47
+    },
+    {
+      "id": "m-arith-35",
+      "type": "arithmetic",
+      "question": "35 × 4 = ?",
+      "num1": 35,
+      "operator": "×",
+      "num2": 4,
+      "answer": 140,
+      "options": [
+        120,
+        130,
+        140,
+        150
+      ],
+      "visualObject": "🍔",
+      "visualName": "Burger",
+      "difficulty": "hard",
+      "level": 4,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 48
+    },
+    {
+      "id": "m-arith-36",
+      "type": "arithmetic",
+      "question": "225 ÷ 15 = ?",
+      "num1": 225,
+      "operator": "÷",
+      "num2": 15,
+      "answer": 15,
+      "options": [
+        12,
+        15,
+        18,
+        25
+      ],
+      "visualObject": "🍟",
+      "visualName": "Fries",
+      "difficulty": "hard",
+      "level": 4,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 49
+    },
+    {
+      "id": "m-arith-37",
+      "type": "arithmetic",
+      "question": "1250 + 750 = ?",
+      "num1": 1250,
+      "operator": "+",
+      "num2": 750,
+      "answer": 2000,
+      "options": [
+        1900,
+        2000,
+        2100,
+        2200
+      ],
+      "visualObject": "🚀",
+      "visualName": "Rocket",
+      "difficulty": "hard",
+      "level": 4,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 50
+    },
+    {
+      "id": "m-arith-38",
+      "type": "arithmetic",
+      "question": "1000 - 455 = ?",
+      "num1": 1000,
+      "operator": "-",
+      "num2": 455,
+      "answer": 545,
+      "options": [
+        445,
+        545,
+        555,
+        645
+      ],
+      "visualObject": "🪐",
+      "visualName": "Planet",
+      "difficulty": "hard",
+      "level": 4,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 51
+    },
+    {
+      "id": "m-arith-39",
+      "type": "arithmetic",
+      "question": "50 × 8 = ?",
+      "num1": 50,
+      "operator": "×",
+      "num2": 8,
+      "answer": 400,
+      "options": [
+        350,
+        400,
+        450,
+        500
+      ],
+      "visualObject": "💎",
+      "visualName": "Diamond",
+      "difficulty": "hard",
+      "level": 4,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 52
+    },
+    {
+      "id": "m-arith-40",
+      "type": "arithmetic",
+      "question": "360 ÷ 12 = ?",
+      "num1": 360,
+      "operator": "÷",
+      "num2": 12,
+      "answer": 30,
+      "options": [
+        20,
+        30,
+        40,
+        60
+      ],
+      "visualObject": "👑",
+      "visualName": "Crown",
+      "difficulty": "hard",
+      "level": 4,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 53
+    },
+    {
+      "id": "m-arith-41",
+      "type": "arithmetic",
+      "question": "75 × 4 = ?",
+      "num1": 75,
+      "operator": "×",
+      "num2": 4,
+      "answer": 300,
+      "options": [
+        250,
+        275,
+        300,
+        325
+      ],
+      "visualObject": "🏆",
+      "visualName": "Trophy",
+      "difficulty": "expert",
+      "level": 5,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 54
+    },
+    {
+      "id": "m-arith-42",
+      "type": "arithmetic",
+      "question": "500 ÷ 25 = ?",
+      "num1": 500,
+      "operator": "÷",
+      "num2": 25,
+      "answer": 20,
+      "options": [
+        15,
+        20,
+        25,
+        30
+      ],
+      "visualObject": "🥇",
+      "visualName": "Medal",
+      "difficulty": "expert",
+      "level": 5,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 55
+    },
+    {
+      "id": "m-arith-43",
+      "type": "arithmetic",
+      "question": "2450 + 1550 = ?",
+      "num1": 2450,
+      "operator": "+",
+      "num2": 1550,
+      "answer": 4000,
+      "options": [
+        3800,
+        3900,
+        4000,
+        4100
+      ],
+      "visualObject": "🧩",
+      "visualName": "Puzzle",
+      "difficulty": "expert",
+      "level": 5,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 56
+    },
+    {
+      "id": "m-arith-44",
+      "type": "arithmetic",
+      "question": "5000 - 2200 = ?",
+      "num1": 5000,
+      "operator": "-",
+      "num2": 2200,
+      "answer": 2800,
+      "options": [
+        2600,
+        2800,
+        3200,
+        3800
+      ],
+      "visualObject": "🎲",
+      "visualName": "Dice",
+      "difficulty": "expert",
+      "level": 5,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 57
+    },
+    {
+      "id": "m-arith-45",
+      "type": "arithmetic",
+      "question": "120 × 5 = ?",
+      "num1": 120,
+      "operator": "×",
+      "num2": 5,
+      "answer": 600,
+      "options": [
+        500,
+        550,
+        600,
+        700
+      ],
+      "visualObject": "🎨",
+      "visualName": "Palette",
+      "difficulty": "expert",
+      "level": 5,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 58
+    },
+    {
+      "id": "m-arith-46",
+      "type": "arithmetic",
+      "question": "1000 ÷ 8 = ?",
+      "num1": 1000,
+      "operator": "÷",
+      "num2": 8,
+      "answer": 125,
+      "options": [
+        100,
+        115,
+        125,
+        150
+      ],
+      "visualObject": "🎸",
+      "visualName": "Guitar",
+      "difficulty": "expert",
+      "level": 5,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 59
+    },
+    {
+      "id": "m-arith-47",
+      "type": "arithmetic",
+      "question": "15 × 15 = ?",
+      "num1": 15,
+      "operator": "×",
+      "num2": 15,
+      "answer": 225,
+      "options": [
+        175,
+        205,
+        225,
+        255
+      ],
+      "visualObject": "🎈",
+      "visualName": "Balloon",
+      "difficulty": "expert",
+      "level": 5,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 60
+    },
+    {
+      "id": "m-arith-48",
+      "type": "arithmetic",
+      "question": "840 ÷ 14 = ?",
+      "num1": 840,
+      "operator": "÷",
+      "num2": 14,
+      "answer": 60,
+      "options": [
+        40,
+        50,
+        60,
+        70
+      ],
+      "visualObject": "🎁",
+      "visualName": "Gift",
+      "difficulty": "expert",
+      "level": 5,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 61
+    },
+    {
+      "id": "m-arith-49",
+      "type": "arithmetic",
+      "question": "4500 + 3600 = ?",
+      "num1": 4500,
+      "operator": "+",
+      "num2": 3600,
+      "answer": 8100,
+      "options": [
+        7100,
+        7900,
+        8100,
+        9100
+      ],
+      "visualObject": "💰",
+      "visualName": "Money",
+      "difficulty": "expert",
+      "level": 5,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 62
+    },
+    {
+      "id": "m-arith-50",
+      "type": "arithmetic",
+      "question": "10000 - 4500 = ?",
+      "num1": 10000,
+      "operator": "-",
+      "num2": 4500,
+      "answer": 5500,
+      "options": [
+        4500,
+        5000,
+        5500,
+        6500
+      ],
+      "visualObject": "🧠",
+      "visualName": "Brain",
+      "difficulty": "expert",
+      "level": 5,
+      "topicType": "Arithmetic (+ - x ÷)",
+      "order": 63
+    }
+  ],
+  "gkItems": [
+    {
+      "id": "gk-state-1",
+      "category": "states",
+      "titleEn": "Bihar",
+      "titleHi": "बिहार",
+      "titleUr": "بہار",
+      "capitalEn": "Patna",
+      "capitalHi": "पटना",
+      "capitalUr": "پٹنہ",
+      "detailEn": "Famous for Nalanda University and ancient historic heritage.",
+      "detailHi": "प्राचीन नालंदा विश्वविद्यालय और ऐतिहासिक विरासत के लिए प्रसिद्ध।",
+      "detailUr": "نالندہ یونیورسٹی اور قدیم تاریخی ورثے کے لیے مشہور۔",
+      "imageUrl": "🏛️",
+      "order": 1
+    },
+    {
+      "id": "gk-state-2",
+      "category": "states",
+      "titleEn": "Uttar Pradesh",
+      "titleHi": "उत्तर प्रदेश",
+      "titleUr": "اتر پردیش",
+      "capitalEn": "Lucknow",
+      "capitalHi": "लखनऊ",
+      "capitalUr": "لکھنؤ",
+      "detailEn": "The most populous state of India, famous for Taj Mahal in Agra.",
+      "detailHi": "भारत का सबसे अधिक जनसंख्या वाला राज्य, आगरा के ताजमहल के लिए प्रसिद्ध।",
+      "detailUr": "آبادی کے لحاظ سے بھارت کی سب سے بڑی ریاست، تاج محل کے لیے مشہور۔",
+      "imageUrl": "🕌",
+      "order": 2
+    },
+    {
+      "id": "gk-state-3",
+      "category": "states",
+      "titleEn": "Maharashtra",
+      "titleHi": "महाराष्ट्र",
+      "titleUr": "مہاراشٹر",
+      "capitalEn": "Mumbai",
+      "capitalHi": "मुंबई",
+      "capitalUr": "ممبئی",
+      "detailEn": "Financial capital of India, famous for Gateway of India.",
+      "detailHi": "भारत की आर्थिक राजधानी, गेटवे ऑफ इंडिया के लिए प्रसिद्ध।",
+      "detailUr": "بھارت کا معاشی دارالحکومت، گیٹ وے آف انڈیا کے لیے مشہور۔",
+      "imageUrl": "🌆",
+      "order": 3
+    },
+    {
+      "id": "gk-state-4",
+      "category": "states",
+      "titleEn": "West Bengal",
+      "titleHi": "पश्चिम बंगाल",
+      "titleUr": "مغربی بنگال",
+      "capitalEn": "Kolkata",
+      "capitalHi": "कोलकाता",
+      "capitalUr": "کولکتہ",
+      "detailEn": "City of Joy, famous for Victoria Memorial and Royal Bengal Tigers.",
+      "detailHi": "विक्टोरिया मेमोरियल और रॉयल बंगाल टाइगर के लिए प्रसिद्ध।",
+      "detailUr": "وکٹوریہ میموریل اور رائل بنگال ٹائیگر کے لیے مشہور۔",
+      "imageUrl": "🌉",
+      "order": 4
+    },
+    {
+      "id": "gk-state-5",
+      "category": "states",
+      "titleEn": "Delhi (NCT)",
+      "titleHi": "दिल्ली (राष्ट्रीय राजधानी क्षेत्र)",
+      "titleUr": "دہلی (قومی دارالحکومت)",
+      "capitalEn": "New Delhi (Capital of India)",
+      "capitalHi": "नई दिल्ली (भारत की राजधानी)",
+      "capitalUr": "نئی دہلی (دارالحکومت بھارت)",
+      "detailEn": "The historic capital of India, home to Red Fort, India Gate, and Rashtrapati Bhavan.",
+      "detailHi": "भारत की ऐतिहासिक राजधानी, लाल किला और इंडिया गेट का घर।",
+      "detailUr": "بھارت کا تاریخی دارالحکومت، لال قلعہ اور انڈیا گیٹ۔",
+      "imageUrl": "🏰",
+      "order": 5
+    },
+    {
+      "id": "gk-state-6",
+      "category": "states",
+      "titleEn": "Tamil Nadu",
+      "titleHi": "तमिलनाडु",
+      "titleUr": "تمل ناڈو",
+      "capitalEn": "Chennai",
+      "capitalHi": "चेन्नई",
+      "capitalUr": "چنئی",
+      "detailEn": "Famous for historic Dravidian temples and classical music.",
+      "detailHi": "भव्य द्रविड़ मंदिरों और शास्त्रीय संस्कृति के लिए प्रसिद्ध।",
+      "detailUr": "تاریخی دراوڑی مندروں اور ثقافت کے لیے مشہور۔",
+      "imageUrl": "🛕",
+      "order": 6
+    },
+    {
+      "id": "gk-state-7",
+      "category": "states",
+      "titleEn": "Karnataka",
+      "titleHi": "कर्नाटक",
+      "titleUr": "کرناٹک",
+      "capitalEn": "Bengaluru",
+      "capitalHi": "बेंगलुरु",
+      "capitalUr": "بنگلورو",
+      "detailEn": "The Silicon Valley of India and science technology hub.",
+      "detailHi": "भारत की सिलिकॉन वैली और विज्ञान-तकनीक का केंद्र।",
+      "detailUr": "بھارت کی سلیکون ویلی اور سائنس و ٹیکنالوجی کا مرکز۔",
+      "imageUrl": "💻",
+      "order": 7
+    },
+    {
+      "id": "gk-state-8",
+      "category": "states",
+      "titleEn": "Rajasthan",
+      "titleHi": "राजस्थान",
+      "titleUr": "راجستھان",
+      "capitalEn": "Jaipur (Pink City)",
+      "capitalHi": "जयपुर (गुलाबी नगर)",
+      "capitalUr": "جے پور (گلابی شہر)",
+      "detailEn": "The largest state by area in India, known for grand palaces and Thar Desert.",
+      "detailHi": "क्षेत्रफल के हिसाब से भारत का सबसे बड़ा राज्य, महलों के लिए प्रसिद्ध।",
+      "detailUr": "رقبے کے لحاظ سے سب سے بڑی ریاست، محلات اور صحرا کے لیے مشہور۔",
+      "imageUrl": "🏰",
+      "order": 8
+    },
+    {
+      "id": "pm-1",
+      "category": "pms",
+      "titleEn": "Pt. Jawaharlal Nehru",
+      "titleHi": "पंडित जवाहरलाल नेहरू",
+      "titleUr": "پنڈت جواہر لعل نہرو",
+      "tenure": "1947 – 1964",
+      "detailEn": "First and longest-serving Prime Minister of independent India (16 years, 286 days), celebrated as the Architect of Modern India.",
+      "detailHi": "स्वतंत्र भारत के प्रथम और सबसे लंबे समय तक सेवा देने वाले प्रधानमंत्री (16 वर्ष, 286 दिन), जिन्हें आधुनिक भारत का निर्माता कहा जाता है।",
+      "detailUr": "آزاد ہندوستان کے پہلے اور سب سے طویل مدت تک خدمات انجام دینے والے وزیر اعظم، جنہیں جدید بھارت کا معمار کہا جاتا ہے۔",
+      "imageUrl": "🇮🇳",
+      "order": 1
+    },
+    {
+      "id": "pm-2",
+      "category": "pms",
+      "titleEn": "Gulzarilal Nanda",
+      "titleHi": "गुलजारीलाल नंदा",
+      "titleUr": "گلزاری لال نندا",
+      "tenure": "Acting: 1964, 1966",
+      "detailEn": "Served twice as interim/acting Prime Minister of India following the demise of Jawaharlal Nehru in 1964 and Lal Bahadur Shastri in 1966.",
+      "detailHi": "जवाहरलाल नेहरू (1964) और लाल बहादुर शास्त्री (1966) के निधन के बाद दो बार भारत के कार्यवाहक प्रधानमंत्री के रूप में कार्यभार संभाला।",
+      "detailUr": "جواہر لعل نہرو (1964) اور لال بہادر شاستری (1966) کے انتقال کے بعد دو مرتبہ ہندوستان کے نگراں/قائم مقام وزیر اعظم رہے۔",
+      "imageUrl": "🇮🇳",
+      "order": 2
+    },
+    {
+      "id": "pm-3",
+      "category": "pms",
+      "titleEn": "Lal Bahadur Shastri",
+      "titleHi": "लाल बहादुर शास्त्री",
+      "titleUr": "لال بہادر شاستری",
+      "tenure": "1964 – 1966",
+      "detailEn": "Second Prime Minister of India who gave the immortal national slogan \"Jai Jawan, Jai Kisan\" during the 1965 war.",
+      "detailHi": "भारत के दूसरे प्रधानमंत्री जिन्होंने 1965 के भारत-पाकिस्तान युद्ध के दौरान \"जय जवान, जय किसान\" का अमर नारा दिया।",
+      "detailUr": "ہندوستان کے دوسرے وزیر اعظم جنہوں نے 1965 کی جنگ کے دوران مشہور قومی نعرہ \"جے جوان، جے کسان\" دیا۔",
+      "imageUrl": "🇮🇳",
+      "order": 3
+    },
+    {
+      "id": "pm-4",
+      "category": "pms",
+      "titleEn": "Indira Gandhi",
+      "titleHi": "इंदिरा गांधी",
+      "titleUr": "اندرا گاندھی",
+      "tenure": "1966–1977, 1980–1984",
+      "detailEn": "First and only female Prime Minister of India, distinguished leader of the 1971 Bangladesh Liberation War and national development programs.",
+      "detailHi": "भारत की पहली और एकमात्र महिला प्रधानमंत्री, जिन्होंने 1971 के मुक्ति संग्राम और देश के विकास में ऐतिहासिक भूमिका निभाई।",
+      "detailUr": "ہندوستان کی پہلی اور واحد خاتون وزیر اعظم، جنہوں نے 1971 کی جنگ اور قومی ترقی کے منصوبوں میں تاریخی قیادت فراہم کی۔",
+      "imageUrl": "🇮🇳",
+      "order": 4
+    },
+    {
+      "id": "pm-5",
+      "category": "pms",
+      "titleEn": "Morarji Desai",
+      "titleHi": "मोरारजी देसाई",
+      "titleUr": "مورار جی دیسائی",
+      "tenure": "1977 – 1979",
+      "detailEn": "First non-Congress Prime Minister of India who led the Janata Party government after the 1977 general elections.",
+      "detailHi": "भारत के पहले गैर-कांग्रेसी प्रधानमंत्री, जिन्होंने 1977 के आम चुनावों के बाद जनता पार्टी की पहली गैर-कांग्रेसी सरकार का नेतृत्व किया।",
+      "detailUr": "ہندوستان کے پہلے غیر کانگریسی وزیر اعظم، جنہوں نے 1977 کے عام انتخابات کے بعد جنتا پارٹی حکومت کی قیادت کی۔",
+      "imageUrl": "🇮🇳",
+      "order": 5
+    },
+    {
+      "id": "pm-6",
+      "category": "pms",
+      "titleEn": "Charan Singh",
+      "titleHi": "चौधरी चरण सिंह",
+      "titleUr": "چودھری چرن سنگھ",
+      "tenure": "1979 – 1980",
+      "detailEn": "Dedicated champion of Indian farmers and rural welfare, whose birth anniversary (23 December) is celebrated as National Farmers' Day (Kisan Diwas).",
+      "detailHi": "भारतीय किसानों और ग्रामीण सशक्तिकरण के मसीहा, जिनके जन्मदिन (23 दिसंबर) को राष्ट्रीय किसान दिवस के रूप में मनाया जाता है।",
+      "detailUr": "ہندوستانی کسانوں اور دیہی فلاح و بہبود کے عظیم رہنما، جن کے یومِ پیدائش 23 دسمبر کو قومی یومِ کسان منایا جاتا ہے۔",
+      "imageUrl": "🇮🇳",
+      "order": 6
+    },
+    {
+      "id": "pm-7",
+      "category": "pms",
+      "titleEn": "Rajiv Gandhi",
+      "titleHi": "राजीव गांधी",
+      "titleUr": "راجیو گاندھی",
+      "tenure": "1984 – 1989",
+      "detailEn": "Youngest Prime Minister of India (assumed office at age 40), pioneer of India's telecommunications, IT, and computer revolution.",
+      "detailHi": "भारत के सबसे युवा प्रधानमंत्री (40 वर्ष की आयु में), जिन्हें देश में कंप्यूटर, आईटी और दूरसंचार क्रांति का जनक माना जाता है।",
+      "detailUr": "ہندوستان کے سب سے کم عمر وزیر اعظم (40 برس کی عمر میں)، جنہیں بھارت میں ٹیلی کام، آئی ٹی اور کمپیوٹر انقلاب کا بانی سمجھا جاتا ہے۔",
+      "imageUrl": "🇮🇳",
+      "order": 7
+    },
+    {
+      "id": "pm-8",
+      "category": "pms",
+      "titleEn": "V. P. Singh (Vishwanath Pratap Singh)",
+      "titleHi": "विश्वनाथ प्रताप सिंह",
+      "titleUr": "وی پی سنگھ (وشواناتھ پرتاپ سنگھ)",
+      "tenure": "1989 – 1990",
+      "detailEn": "Prime Minister who led the National Front government and implemented the landmark Mandal Commission recommendations for affirmative action.",
+      "detailHi": "राष्ट्रीय मोर्चा सरकार के प्रधानमंत्री जिन्होंने सामाजिक न्याय के लिए ऐतिहासिक मंडल आयोग की सिफारिशों को लागू किया।",
+      "detailUr": "نیشنل فرنٹ حکومت کے سربراہ جنہوں نے پسماندہ طبقات کے حقوق اور سماجی انصاف کے لیے منڈل کمیشن کی سفارشات نافذ کیں۔",
+      "imageUrl": "🇮🇳",
+      "order": 8
+    },
+    {
+      "id": "pm-9",
+      "category": "pms",
+      "titleEn": "Chandra Shekhar",
+      "titleHi": "चन्द्र शेखर",
+      "titleUr": "چندر شیکھر",
+      "tenure": "1990 – 1991",
+      "detailEn": "Prominent socialist leader popularly called \"Young Turk\", who served as the 8th Prime Minister heading the Samajwadi Janata Party.",
+      "detailHi": "\"युवा तुर्क\" के नाम से मशहूर प्रख्यात समाजवादी नेता, जिन्होंने समाजवादी जनता पार्टी के प्रमुख के रूप में भारत के 8वें प्रधानमंत्री का पद संभाला।",
+      "detailUr": "\"ینگ ترک\" کے نام سے مشہور عظیم سوشلسٹ رہنما، جنہوں نے سماجوادی جنتا پارٹی کی قیادت کرتے ہوئے 8ویں وزیر اعظم کے فرائض انجام دیے۔",
+      "imageUrl": "🇮🇳",
+      "order": 9
+    },
+    {
+      "id": "pm-10",
+      "category": "pms",
+      "titleEn": "P. V. Narasimha Rao",
+      "titleHi": "पी. वी. नरसिम्हा राव",
+      "titleUr": "پی وی نرسمہا راؤ",
+      "tenure": "1991 – 1996",
+      "detailEn": "Revered as the \"Father of Indian Economic Reforms\" for initiating LPG (Liberalisation, Privatisation, Globalisation), brilliant scholar and polyglot.",
+      "detailHi": "भारतीय आर्थिक उदारीकरण (LPG सुधारों) के जनक, महान विद्वान और 17 से अधिक भाषाओं के ज्ञाता।",
+      "detailUr": "ہندوستانی معاشی اصلاحات (ایل پی جی) کے معمار، ممتاز دانشور اور 17 زبانوں کے ماہر رہنما۔",
+      "imageUrl": "🇮🇳",
+      "order": 10
+    },
+    {
+      "id": "pm-11",
+      "category": "pms",
+      "titleEn": "Atal Bihari Vajpayee",
+      "titleHi": "अटल बिहारी वाजपेयी",
+      "titleUr": "اٹل بہاری واجپئی",
+      "tenure": "1996, 1998 – 2004",
+      "detailEn": "Eminent statesman, visionary orator, poet and Bharat Ratna awardee who oversaw Pokhran-II nuclear tests and the Golden Quadrilateral project.",
+      "detailHi": "महान राजनेता, कवि और भारत रत्न से सम्मानित जिन्होंने पोखरण-II परमाणु परीक्षण और स्वर्णिم चतुर्भुज राष्ट्रीय राजमार्ग नेटवर्क का निर्माण कराया।",
+      "detailUr": "بے مثال سیاست دان، سحر انگیز خطیب، شاعر اور بھارت رتن یافتہ رہنما جنہوں نے پوکھرن-II ایٹمی تجربات اور سنہری چوکور ہائی وے نیٹ ورک بنوایا۔",
+      "imageUrl": "🇮🇳",
+      "order": 11
+    },
+    {
+      "id": "pm-12",
+      "category": "pms",
+      "titleEn": "H. D. Deve Gowda",
+      "titleHi": "एच. डी. देवेगौड़ा",
+      "titleUr": "ایچ ڈی دیوے گوڑا",
+      "tenure": "1996 – 1997",
+      "detailEn": "11th Prime Minister of India who led the United Front coalition government; former Chief Minister of Karnataka.",
+      "detailHi": "भारत के 11वें प्रधानमंत्री जिन्होंने संयुक्त मोर्चा गठबंधन सरकार का नेतृत्व किया; कर्नाटक के पूर्व मुख्यमंत्री।",
+      "detailUr": "ہندوستان کے 11ویں وزیر اعظم جنہوں نے یونائیٹڈ فرنٹ مخلوط حکومت کی قیادت کی؛ کرناٹک کے سابق وزیر اعلیٰ۔",
+      "imageUrl": "🇮🇳",
+      "order": 12
+    },
+    {
+      "id": "pm-13",
+      "category": "pms",
+      "titleEn": "I. K. Gujral (Inder Kumar Gujral)",
+      "titleHi": "इंद्र कुमार गुजराल",
+      "titleUr": "اندر کمار گجرال",
+      "tenure": "1997 – 1998",
+      "detailEn": "Distinguished diplomat and Prime Minister who authored the famous \"Gujral Doctrine\" to maintain peaceful foreign ties with neighboring countries.",
+      "detailHi": "प्रख्यात राजनयिक और प्रधानमंत्री जिन्होंने पड़ोसी देशों के साथ शांति और मित्रता के लिए प्रसिद्ध \"गुजराल सिद्धांत\" दिया।",
+      "detailUr": "ممتاز سفارت کار اور وزیر اعظم جنہوں نے ہمسایہ ممالک کے ساتھ خوشگوار تعلقات کے لیے تاریخی \"گجرال ڈاکٹرین\" وضع کیا۔",
+      "imageUrl": "🇮🇳",
+      "order": 13
+    },
+    {
+      "id": "pm-14",
+      "category": "pms",
+      "titleEn": "Dr. Manmohan Singh",
+      "titleHi": "डॉ. मनमोहन सिंह",
+      "titleUr": "ڈاکٹر منموہن سنگھ",
+      "tenure": "2004 – 2014",
+      "detailEn": "World-renowned economist and first Sikh Prime Minister of India; implemented RTI (Right to Information), MGNREGA, and Indo-US Nuclear Deal.",
+      "detailHi": "विश्व प्रसिद्ध अर्थशास्त्री और भारत के पहले सिख प्रधानमंत्री; जिन्होंने आरटीआई (सूचना का अधिकार), मनरेगा और भारत-अमेरिका असैन्य परमाणु समझौता लागू किया।",
+      "detailUr": "عالمی شہرت یافتہ ماہرِ معاشیات اور پہلے سکھ وزیر اعظم؛ جنہوں نے آر ٹی آئی (حقِ معلومات)، منریگا اور تاریخی جوہری معاہدہ نافذ کیا۔",
+      "imageUrl": "🇮🇳",
+      "order": 14
+    },
+    {
+      "id": "pm-15",
+      "category": "pms",
+      "titleEn": "Narendra Modi",
+      "titleHi": "नरेंद्र मोदी",
+      "titleUr": "نریندر مودی",
+      "tenure": "2014 – Present",
+      "detailEn": "Incumbent 14th Prime Minister of India, led major national initiatives including Digital India, Make in India, Chandrayaan-3 lunar landing, and G20 leadership.",
+      "detailHi": "भारत के वर्तमान 14वें प्रधानमंत्री, जिन्होंने डिजिटल इंडिया, मेक इन इंडिया, चंद्रयान-3 मिशन और भारत की जी-20 अध्यक्षता का सफल नेतृत्व किया।",
+      "detailUr": "ہندوستان کے موجودہ 14ویں وزیر اعظم، جنہوں نے ڈیجیٹل انڈیا، میک ان انڈیا، چندریان-3 چاند مشن اور جی 20 صدارت کی تاریخی قیادت کی۔",
+      "imageUrl": "🇮🇳",
+      "order": 15
+    },
+    {
+      "id": "pres-1",
+      "category": "presidents",
+      "titleEn": "Dr. Rajendra Prasad",
+      "titleHi": "डॉ. राजेंद्र प्रसाद",
+      "titleUr": "ڈاکٹر راجندر پرساد",
+      "tenure": "1950 – 1962",
+      "detailEn": "First and longest-serving President of India (12 years); President of the Constituent Assembly that created the Constitution of India; Bharat Ratna (1962).",
+      "detailHi": "भारत के प्रथम और सबसे लंबे समय तक सेवा देने वाले राष्ट्रपति (12 वर्ष); संविधान सभा के अध्यक्ष और भारत रत्न (1962)।",
+      "detailUr": "ہندوستان کے پہلے اور سب سے طویل مدت تک رہنے والے صدر (12 سال)؛ آئینِ ہند تیار کرنے والی دستور ساز اسمبلی کے صدر اور بھارت رتن۔",
+      "imageUrl": "🇮🇳",
+      "order": 1
+    },
+    {
+      "id": "pres-2",
+      "category": "presidents",
+      "titleEn": "Dr. Sarvepalli Radhakrishnan",
+      "titleHi": "डॉ. सर्वपल्ली राधाकृष्णन",
+      "titleUr": "ڈاکٹر سروپلی رادھا کرشنن",
+      "tenure": "1962 – 1967",
+      "detailEn": "World-renowned philosopher, statesman, and 2nd President of India; his birthday on September 5 is celebrated nationwide as Teachers' Day.",
+      "detailHi": "विश्वविख्यात दार्शनिक, राजनेता और भारत के दूसरे राष्ट्रपति; उनके जन्मदिवस (5 सितंबर) को पूरे भारत में राष्ट्रीय शिक्षक दिवस के रूप में मनाया जाता है।",
+      "detailUr": "عالمی شہرت یافتہ فلسفی، مفکر اور بھارت کے دوسرے صدر؛ ان کی تاریخ پیدائش 5 ستمبر کو ملک بھر میں یوم اساتذہ (ٹیچرز ڈے) کے طور پر منایا جاتا ہے۔",
+      "imageUrl": "🇮🇳",
+      "order": 2
+    },
+    {
+      "id": "pres-3",
+      "category": "presidents",
+      "titleEn": "Dr. Zakir Husain",
+      "titleHi": "डॉ. ज़ाकिर हुसैन",
+      "titleUr": "ڈاکٹر ذاکر حسین",
+      "tenure": "1967 – 1969",
+      "detailEn": "Third President of India, first Muslim President, distinguished educationist and co-founder of Jamia Millia Islamia; first president to die in office (1969).",
+      "detailHi": "भारत के तीसरे राष्ट्रपति, प्रथम मुस्लिम राष्ट्रपति, महान शिक्षाविद और जामिया मिलिया इस्लामिया के सह-संस्थापक; पद पर रहते हुए दिवंगत होने वाले प्रथम राष्ट्रपति।",
+      "detailUr": "ہندوستان کے تیسرے اور پہلے مسلم صدر، نامور ماہر تعلیم اور جامعہ ملیہ اسلامیہ کے شریک بانی؛ عہدے کے دوران وفات پانے والے پہلے صدر۔",
+      "imageUrl": "🇮🇳",
+      "order": 3
+    },
+    {
+      "id": "pres-4",
+      "category": "presidents",
+      "titleEn": "V. V. Giri (Varahagiri Venkata Giri)",
+      "titleHi": "वी. वी. गिरि",
+      "titleUr": "وی وی گری",
+      "tenure": "1969 – 1974",
+      "detailEn": "Fourth President of India, veteran trade unionist elected as an independent candidate (also served as acting president, along with Chief Justice Mohammad Hidayatullah in 1969).",
+      "detailHi": "भारत के चौथे राष्ट्रपति, स्वतंत्र उम्मीदवार के रूप में निर्वाचित प्रमुख ट्रेड यूनियन नेता (1969 में कार्यवाहक राष्ट्रपति रहे, तथा चीफ जस्टिस मोहम्मद हिदायतुल्ला ने भी कार्यवाहक पद संभाला)।",
+      "detailUr": "ہندوستان کے چوتھے صدر، آزاد امیدوار کے طور پر منتخب ہونے والے نامور ٹریڈ یونین لیڈر (1969 میں قائم مقام صدر رہے اور چیف جسٹس محمد ہدایت اللہ نے بھی نگراں صدر کی حیثیت سے خدمات انجام دیں)۔",
+      "imageUrl": "🇮🇳",
+      "order": 4
+    },
+    {
+      "id": "pres-5",
+      "category": "presidents",
+      "titleEn": "Fakhruddin Ali Ahmed",
+      "titleHi": "फ़ख़रुद्दीन अली अहमद",
+      "titleUr": "فخر الدین علی احمد",
+      "tenure": "1974 – 1977",
+      "detailEn": "Fifth President of India who proclaimed the national emergency in 1975; second president to die in office (followed by acting president B. D. Jatti).",
+      "detailHi": "भारत के पांचवें राष्ट्रपति जिन्होंने 1975 के राष्ट्रीय आपातकाल की घोषणा की; पद पर रहते हुए दिवंगत होने वाले दूसरे राष्ट्रपति (जिसके बाद बी. डी. जत्ती कार्यवाहक राष्ट्रपति बने)।",
+      "detailUr": "ہندوستان کے پانچویں صدر جنہوں نے 1975 میں ایمرجنسی نافذ کی؛ عہدے پر انتقال کرنے والے دوسرے صدر (جس کے بعد بی ڈی جتی نے نگراں صدر کے فرائض انجام دیے)۔",
+      "imageUrl": "🇮🇳",
+      "order": 5
+    },
+    {
+      "id": "pres-6",
+      "category": "presidents",
+      "titleEn": "Neelam Sanjiva Reddy",
+      "titleHi": "नीलम संजीव रेड्डी",
+      "titleUr": "نیلم سنجیوا ریڈی",
+      "tenure": "1977 – 1982",
+      "detailEn": "Sixth President of India and the only president to be elected completely unopposed (unanimously) by all political parties; former Speaker of Lok Sabha.",
+      "detailHi": "भारत के छठे राष्ट्रपति और सभी राजनीतिक दलों द्वारा निर्विरोध (सर्वसम्मति से) चुने जाने वाले एकमात्र राष्ट्रपति; पूर्व लोकसभा अध्यक्ष।",
+      "detailUr": "ہندوستان کے چھٹے صدر اور تمام سیاسی پارٹیوں کی متفقہ حمایت سے بلامقابلہ منتخب ہونے والے واحد صدر؛ سابق اسپیکر لوک سبھا۔",
+      "imageUrl": "🇮🇳",
+      "order": 6
+    },
+    {
+      "id": "pres-7",
+      "category": "presidents",
+      "titleEn": "Giani Zail Singh",
+      "titleHi": "ज्ञानी जैल सिंह",
+      "titleUr": "گیانی ذیل سنگھ",
+      "tenure": "1982 – 1987",
+      "detailEn": "Seventh President of India and the first Sikh to hold the office; former Chief Minister of Punjab and Union Minister of Home Affairs.",
+      "detailHi": "भारत के सातवें राष्ट्रपति और राष्ट्रपति पद संभालने वाले पहले सिख नेता; पंजाब के पूर्व मुख्यमंत्री और केंद्रीय गृह मंत्री।",
+      "detailUr": "ہندوستان کے ساتویں صدر اور یہ اعلیٰ ترین منصب سنبھالنے والے پہلے سکھ صدر؛ پنجاب کے سابق وزیر اعلیٰ اور مرکزی وزیر داخلہ۔",
+      "imageUrl": "🇮🇳",
+      "order": 7
+    },
+    {
+      "id": "pres-8",
+      "category": "presidents",
+      "titleEn": "R. Venkataraman (Ramaswamy Venkataraman)",
+      "titleHi": "आर. वेंकटरमण",
+      "titleUr": "آر وینکٹارمن",
+      "tenure": "1987 – 1992",
+      "detailEn": "Eighth President of India, eminent lawyer, freedom fighter, and Union Finance & Defence Minister who administered oaths to four Prime Ministers.",
+      "detailHi": "भारत के आठवें राष्ट्रपति, प्रख्यात वकील, स्वतंत्रता सेनानी और पूर्व केंद्रीय वित्त व रक्षा मंत्री जिन्होंने चार प्रधानमंत्रियों को पद की शपथ दिलाई।",
+      "detailUr": "ہندوستان کے آٹھویں صدر، نامور قانون دان، مجاہد آزادی اور سابق وزیر خزانہ و دفاع جنہوں نے چار وزرائے اعظم کو حلف دلایا۔",
+      "imageUrl": "🇮🇳",
+      "order": 8
+    },
+    {
+      "id": "pres-9",
+      "category": "presidents",
+      "titleEn": "Dr. Shankar Dayal Sharma",
+      "titleHi": "डॉ. शंकर दयाल शर्मा",
+      "titleUr": "ڈاکٹر شنکر دیال شرما",
+      "tenure": "1992 – 1997",
+      "detailEn": "Ninth President of India, scholar with a doctorate in law from Cambridge University, freedom fighter, former Governor, and Vice President of India.",
+      "detailHi": "भारत के नौवें राष्ट्रपति, कैम्ब्रिज विश्वविद्यालय से कानून में डॉक्टरेट, स्वतंत्रता सेनानी और पूर्व उपराष्ट्रपति व राज्यपाल।",
+      "detailUr": "ہندوستان کے نویں صدر، کیمبرج یونیورسٹی سے قانون میں پی ایچ ڈی یافتہ اسکالر، مجاہد آزادی اور سابق نائب صدر و گورنر۔",
+      "imageUrl": "🇮🇳",
+      "order": 9
+    },
+    {
+      "id": "pres-10",
+      "category": "presidents",
+      "titleEn": "K. R. Narayanan (Kocheril Raman Narayanan)",
+      "titleHi": "के. आर. नारायणन",
+      "titleUr": "کے آر نارائنن",
+      "tenure": "1997 – 2002",
+      "detailEn": "Tenth President of India, first Dalit President and first person from Kerala to hold the highest constitutional office; distinguished diplomat and author.",
+      "detailHi": "भारत के 10वें राष्ट्रपति, देश के प्रथम दलित राष्ट्रपति और केरल से इस पद पर पहुंचने वाले पहले व्यक्ति; प्रख्यात राजनयिक और लेखक।",
+      "detailUr": "ہندوستان کے دسویں صدر، پہلے دلت صدر اور کیرالہ سے یہ منصب حاصل کرنے والے پہلے شخص؛ ممتاز سفارت کار اور مصنف۔",
+      "imageUrl": "🇮🇳",
+      "order": 10
+    },
+    {
+      "id": "pres-11",
+      "category": "presidents",
+      "titleEn": "Dr. A. P. J. Abdul Kalam",
+      "titleHi": "डॉ. ए. पी. जे. अब्दुल कलाम",
+      "titleUr": "ڈاکٹر اے پی جے عبد الکلام",
+      "tenure": "2002 – 2007",
+      "detailEn": "Eleventh President of India, widely celebrated as the \"Missile Man of India\" and the \"People's President\", legendary aerospace scientist and Bharat Ratna (1997).",
+      "detailHi": "भारत के 11वें राष्ट्रपति, जिन्हें \"मिसाइल मैन\" और \"जनता के राष्ट्रपति\" के रूप में प्यार से याद किया जाता है, महान वैज्ञानिक और भारत रत्न (1997)।",
+      "detailUr": "ہندوستان کے گیارہویں صدر، جنہیں \"میزائل مین\" اور \"عوامی صدر\" کے لقب سے جانا جاتا ہے، عظیم خلائی سائنس دان اور بھارت رتن۔",
+      "imageUrl": "🇮🇳",
+      "order": 11
+    },
+    {
+      "id": "pres-12",
+      "category": "presidents",
+      "titleEn": "Pratibha Patil (Pratibha Devisingh Patil)",
+      "titleHi": "प्रतिभा देवीसिंह पाटिल",
+      "titleUr": "پربھا دیوی سنگھ پاٹل",
+      "tenure": "2007 – 2012",
+      "detailEn": "Twelfth President of India and the first woman to hold the office of President of the Republic of India; former Governor of Rajasthan.",
+      "detailHi": "भारत की 12वीं राष्ट्रपति और भारत गणराज्य की पहली महिला राष्ट्रपति; राजस्थान की पूर्व राज्यपाल।",
+      "detailUr": "ہندوستان کی بارہویں صدر اور جمہوریہ ہند کی پہلی خاتون صدر؛ راجستھان کی سابق گورنر۔",
+      "imageUrl": "🇮🇳",
+      "order": 12
+    },
+    {
+      "id": "pres-13",
+      "category": "presidents",
+      "titleEn": "Pranab Mukherjee",
+      "titleHi": "प्रणब मुखर्जी",
+      "titleUr": "پرنب مکھرجی",
+      "tenure": "2012 – 2017",
+      "detailEn": "Thirteenth President of India, veteran statesman who led Finance, Defence, and External Affairs ministries over five decades; awarded Bharat Ratna in 2019.",
+      "detailHi": "भारत के 13वें राष्ट्रपति, पांच दशकों तक वित्त, रक्षा और विदेश मंत्रालयों को संभालने वाले वरिष्ठ राजनेता; 2019 में भारत रत्न से सम्मानित।",
+      "detailUr": "ہندوستان کے تیرہویں صدر، پانچ دہائیوں تک وزارتِ خزانہ، دفاع اور خارجہ کی سربراہی کرنے والے مدبر سیاست دان؛ بھارت رتن (2019)۔",
+      "imageUrl": "🇮🇳",
+      "order": 13
+    },
+    {
+      "id": "pres-14",
+      "category": "presidents",
+      "titleEn": "Ram Nath Kovind",
+      "titleHi": "राम नाथ कोविंद",
+      "titleUr": "رام ناتھ کووند",
+      "tenure": "2017 – 2022",
+      "detailEn": "Fourteenth President of India, veteran Supreme Court advocate, champion of constitutional values and former Governor of Bihar.",
+      "detailHi": "भारत के 14वें राष्ट्रपति, सर्वोच्च न्यायालय के वरिष्ठ अधिवक्ता, सामाजिक न्याय के पक्षधर और बिहार के पूर्व राज्यपाल।",
+      "detailUr": "ہندوستان کے چودہویں صدر، سپریم کورٹ کے سینئر وکیل، آئینی اقدار کے علمبردار اور بہار کے سابق گورنر۔",
+      "imageUrl": "🇮🇳",
+      "order": 14
+    },
+    {
+      "id": "pres-15",
+      "category": "presidents",
+      "titleEn": "Droupadi Murmu",
+      "titleHi": "द्रौपदी मुर्मू",
+      "titleUr": "دروپدی مرمو",
+      "tenure": "2022 – Present",
+      "detailEn": "Fifteenth and incumbent President of India, first tribal woman and youngest person to assume the Presidency of India; former Governor of Jharkhand.",
+      "detailHi": "भारत की 15वीं और वर्तमान राष्ट्रपति, भारत की पहली आदिवासी महिला राष्ट्रपति और सबसे कम उम्र की राष्ट्रपति; झारखंड की पूर्व राज्यपाल।",
+      "detailUr": "ہندوستان کی پندرہویں اور موجودہ صدر، بھارت کی پہلی قبائلی خاتون صدر اور کم ترین عمر میں یہ منصب سنبھالنے والی شخصیت؛ جھارکھنڈ کی سابق گورنر۔",
+      "imageUrl": "🇮🇳",
+      "order": 15
+    },
+    {
+      "id": "home_ministers-1",
+      "category": "home_ministers",
+      "titleEn": "Sardar Vallabhbhai Patel",
+      "titleHi": "सरदार वल्लभभाई पटेल",
+      "titleUr": "سردار ولبھ بھائی پٹیل",
+      "capitalEn": "1947–1950",
+      "capitalHi": "कार्यकाल: 1947–1950",
+      "capitalUr": "مدت: 1947–1950",
+      "detailEn": "Sardar Vallabhbhai Patel served as Minister (1947–1950). First Home Minister and Deputy Prime Minister of India, Iron Man of India who unified 565 princely states.",
+      "detailHi": "सरदार वल्लभभाई पटेल (1947–1950)। भारत के पहले गृह मंत्री और उप प्रधानमंत्री, जिन्होंने 565 रियासतों का एकीकरण किया।",
+      "detailUr": "سردار ولبھ بھائی پٹیل (1947–1950)۔ ہندوستان کے پہلے وزیر داخلہ اور نائب وزیر اعظم، جنہوں نے 565 ریاستوں کو متحد کیا۔",
+      "imageUrl": "🛡️",
+      "audioUrl": "",
+      "tenure": "1947–1950",
+      "order": 101
+    },
+    {
+      "id": "home_ministers-2",
+      "category": "home_ministers",
+      "titleEn"x�ܽmoG�&������ݑK�z�^�?Q�-˶dAt{0,RU)V�U��YUR�X\�����3�V{��Bc�&i6E��(�ƀ�E���?��n�s"2#2�D��d˷ѰHVfVfd<'N����G�sG���2���~����ko���~�o���ڋ���}|�{��������/�|��g/W����߯�ā�k�>�k��t�n��k�������py�7�f^�m�?�N�k��a�o�Յ3��{���M�s4w���{����bqC���=׹t_{sÍ�*sd3������Xy� �4=��]
+�a���!�:����{}�Bt3��Q|�B�b��E׽��f�{~��⼠#.�������G�7P�-����Eq�C��"�r��w���^,Ί?�X|�bq݃k.n��\?�oZ�����"~���X�����7�"���_�}���������t{o~(�>�������B�2\��2�MqȦ7\��z��7O������m��8�/鍅RL�6���~��������F�CmN�A�3��<��7���}�_�ol©������4������&�x&TV4+����Z�e������7���^P�䙇/T������ ��w�V�Ѿ�wG��������]����^�a{�Fg�l�ss����6?@l�ul�đ������AЌ:��p�%|�k��f�_���a�M.�¶�Л7A�]š����]�6���XC��� z��'�&?~#�2��,~���_'������ҟɌ�/%�k�"�ʡ�=U�G�ޛ/R@z��6\���p��X�m㧻û�w����,@_@y^����ca���т;?�Rp/���-�PL��~��_kyW�n�A7-�J���W�Sޗ�xq*�+����X1��������+~_��=��s�̞֚�w�Hܖ�Э.$��^0��5���X���X��]ߋ�F8�	�Պ�v�>��x�����,�˿��,�#��D� #��.�_P�"x�^?�_�k9��,��ڊ�/��m�������t?�d2ȑ�!�!ژu��=�z�Oz��z���$a9�3��G�a���nW�m�%�Oba�Ga��؄S����������l�����ma����Qږ��Nmˉ�e��my_��g�����DK����O�c����-�l���Ns/]�F�p�V�{/���4��"XCs�����5n��X���e�C�\H����|�n��o	s�]��?��v-h���;&lЕ8?%T;���x9�]��ٖg���8��?��N@����Լ��p���]�t�Q��8��<l���ZV&-�n��qs����2���2X<v	`�2\�Ħ8qN݄xC�l��Ow��`�"��M��D������������L��z���'�{&�����-`qY,�>���9z?ٖ�SvE�����Wr�7�@�~�[���ě��46'��ܜ��i�%���l�����f/�)lµ(V6�����x~�v'+�ү����,���ZM<�g
+�r���}j<�?K��#�d^���C-e�����$2�#�uq̖8P�}A�;�7	����d�$�.�4�Q��aVFk��05'��S��?���-�v�~�k�7�.c
+6p9�R�&�/�<�XmI�����q|���*���}�����$�ͩ7��ܜ!�����p�@]G�������Ba>���ر���%�(��� �K�#t'���+.	~E܅��� ��(�~歑QH"ty��"��K�[��5��Ǽvc��l�S���3|�rF>K>�濿X�����]y.�%�e����h�S�����H���E�0�w�R��A�O� �� h��0)�g�"�/��������L�é���tm�����rwʏ���T�r�OՎ���{���Οs0�4�O�����.�y�`�"�y�D������#u�`�@$�@�MB>����p(4yο&v ��e��7o���(�
+FE )�����8�A��$?A�'�����P\��-���?B�S�=����:�>"i�L)�O����z�l�Ċ���ՠٜaSr�9�n��;f�J���+�?��� � ?!O��!Z����#�p�ݩ:hg�͡=�����xu-����#�z�����l	W�J,6����x'�v	��D�7d�#YZ��_ �����gF�`V��EnkY��_d ����Z��h>�	���||o��,�SxF`o�t�a��{��Y�.��Q��\L�ř���蛵��9pV�ބط��N�oi�I��;�!�;.�����O�:{n��#�Z��9x�+x��;ӀZ��K���!�)H8�oU���F��r�-y��j=��bw��Tx@^
+�rѾ1�Pȏ�7�<T��o>�����JR$_���ެX�g�o�����!>��7�{c{�on�>J\�N�ˣoV���ڸ|u7��������i��͡7d�M{r�������?��* �X��v�3���xD�����VS ��jP,�-���A8i�%�D�νO��1��~Uk��+� �\�����s���b�h�����K�s�O�)�+���v����(������b�r������&�#vq�,C���%7=�.�A/lB>�pݵ������9$�B�EK�)}����0�u~%�i�wm�{v�l�J%�Nɕv�E��Q��,�#E^�ʼ��K�B��;�����K��2=:�%���@eW�����_�����7�XS���e��� ��U`t�Zz�A�?]�A�_�@��Ln�
+Z����(�h}��92etZ���4&O�lLZ�X���h�R�+�?e����6c_��~�+xI\�{I��Wz�!	`�;[겋�|��ܧ\�&�̝�]G���12ZuB���y����k)��R�"�7���#�z�s��K~�5��X0Wz�]��lrMU"�I���}Y/|M��\qN���ip��v�SXE_%<5R���W��
+�mG��ɔJ��6�vT�ܦy��[���;]�0�?7���:�s�[]F�˲���&�Y<�t�.T�
+��<�"��Q�
+��\0���Kd-����/���I![���h�������ܧ���z����p�v`?R�Y���3uPɞ�Ce�H��spT��)���;��є7�_k�ޥ+�3@̨�_
+�;m�rQ���8����K	&*y���*�F��ɽz�QO�B.XvH���1%P��5�ǔ�]0\�쐱�e�H��e~ڤ��P�u�~}ץ��~�]�Z~��7�<�	�&�Pz������c2��Qg�J+.�Z?ٽ�9,��֟� "0�;b�7xS��L��1n��#u[ǊC��dwø��.z������ףAW֑����󮜿�ºƫ0��]�+<V�!��m�Ւ��:����ӻ�n�0��g����U��_�N#�Q��ҽ]��;X��[FI�4��$g�wM�V�-@��)l�GZb�����P�u�~�W�_lS�'�󽚝�W�	���GL�W퇞�tw�{H��&�E���iH��͚ ˑ�į>�����Ӻk�q��g�V�nz��:.����Z�_������ܼ򧫥p=wm'gd;�z�s�|�C�����g>T��%���c>3���\&8W�	G�F��*���ۛŤ�í�v��]�Z�� ��LM@�Ⱓ���^�m��9Sg�͟�3�#�l��ˤ	�� �� >�m�}�`\9�}tĻ�#�W�h���f2��.�J��-�/�F��b=�O�n{'Ƚ�E%�(��ڤ��
+����v�Z�3/�~B{��BI�f�~�%�˖9��B�ױ�^�q[x�~7���ݨ����U��c��B���/�؀���0p"��m��X ��C��K��A�e48��Ԫ�{�V��)�&S��?��g���Ӱ�(�)?��N ����9
+Ⱦ��i4/���c�x�F�*3�$­���'��Hѷ,��U����_�6\�P�u�~��EpBo�}��`��5g�!���G-�d��v�W��q\�]�P$[U�*�?7�ܑ:>�Qa�)�u�W.�}�QW���Ng �{�Q;����Gt5��}�µ�[0��c'�0��|�-�)�/�=��8�T�E�咽������#��꺰��q�8 ��دC{��HCuؓ��;R�V4�:wm�Z)�+Tr�_����#�xS���*+���#�¿�P�/_��,3�2����#K��ke=-F�؛o�IT�����?��d�ƃ��P�E�ɠ�?G��+Ƅ����qO,�w{g!��ށy_��]_#�?w.���m��c���B�ڰ^�TX�(y�u�lv���������B���e����.w<"p�8=|s�{�|]����T�,;V��l��+�w��m~��\�>�R�-�>�3�k������v��0V ��F����:״�#ͭ�6V3�]"m�J�fӁ?%W�*���6�8�B	����C�>�}�\R|�t^��D��]�7��&2���R�E���[��>�H�/��d�)+�;@A��M�s��h�W�Ȑ�5fG��\4�'��*{s<��
+�^��:7����F��1��5�>��- lj��Qx~�h���чPW�m��d�u#�o����]�b܈�7�/���� F[Y��p�V�Q��yM�B����t�w��{�}��*�M�a�%u��yaQ�1h�E�K�L8:p���x0�װzl�i����ֹ�b�B�ر��z��=5����v���mYx$�s�i=qϞ%,bj��'hn��N����/X�=F�S��v��E��Hcu͍���:�v�7��b�ި��Vy���x�eՌ�����N擻:5~��3��KM@���c��ή�7���<Ӛ�����3�U)܂24��eh�ss`�i4n�c��\]vԁ;!����S�K��ZR��s��[Q�D�L/كѶ╃f��)�T���yƥ�-�ܜ1��=��$�4��*��(:�6~����!��� .=��u֥(�P�v�~�x'����9�eG�v��`/c��*�K���♡a)�)��C�uz�փu`'�ρZ���q��z���5,����h:�����u�&��D�`1�()��&bAu��Ij!����dd����q���&z�F�7�����Qb�:wRx�Jǂ栁�\/�C�r�=�,��~��Ư��{~[l*���;�M�*.˕$z�F��dt��uڤ&[s����y􍠊*t���!�(ɟؐ�	�u�����͆�-Gh��1���bI�[�=e���t���K���@�Ŀ֦�͋?�����9��'|���0%��Nx�;���A;�#ǩ����Eb�~�yߙ֮���T����� 'c��1<���ڞ>k<~����X�PVi�⹺�=͏%*�-
+M�+(�-5�ͱB�#�AQ}lb�V�.an��$A������1�LZ<��-"������}w0�H�e|..���ߪD�-�R�OXǊ֏�핵~�	�Z�[�x�6��Si%�fz��&�U���O��Ȫ<Ŭ�68�����?�&_��ͩ<�4hӌq��5rm���C�,����k�A��w=��/^y��o)1��MȷdI҇��U)X�ԧ�����qI�~��7уp�0s����6��� O\�]J�	X�߅�C�aT0�̐�����L�,L�t��AW���B��}G�Nm�[�Mk�u7X�It`!��
+�$���J(!0(4�%4�t�[�G<�
+�Q/�n�^ҠߊĿ�Qз�'���x,��U�D}��òGt�j|�)̠��cU����X�yR#�+�7I��O��p$�R�忭4�����,���B�R��RL���/6�H�7��Մ�]?�x�w�%y}|]����D.�W\:@��Jb�� ��a�-�;�`+��F�k��G�E�Xb0���Z�``������F��Dn6�5 ��)&��T�� ��LI�ʐ��d��"�m��Ͱ�l��a�@�N�E���ϊGz��5�,Y�E���۠�M2��ܡ��2��� �B��u�~�s���ѯm����'O��!�ƃT�U�7���F��46Bv���b>�(��ƪ1%U�}~n��we�l�g2cea�aN�@��r%�{�Uɲڜ��f_���OX_G���L��u��ssh���Y��I$��sئ�7�����)�\P���p�w��C��Q6�P{_E���v�#O��]Q���T���d��L��t���QӚ��$�$��59?�g��A�ʼw�tA��r��?O1�\�[O�ff�����+4?]R��Z6�2I�� ����b�U?b@����Gz��lƳ���:(a���o<j��T�Vl��j�G�͌�\u}�4�nԑ�t¹p>h�Bo�ъ"��~��jP>�bW���A?�?�.�ѭ>OmV�7Z���S��+ ���a���o�.�/�CHC\�_��a��=�d����T���N-���1B������Z�gv�)��X���R�i�F�q��	rߣ�29�@.�w�*�Gf�s25U�iCY�06�-?�R���>��a�"��yM�����	J#`3<T0�Kl��[�R���w�H���:^����.���e�������~�Q�V�U��S��ޒ�"Ķ��U��_%�.k��_&U2�g)�,�ce6��3ng�o�Gq��9��@�?C��T=[5�[fW
+}���Ci���L��.�A�{��L�HT�AoE�q2���s�q�`e0DG���!,�'R�z�;�9��4���:�[��(%;�� 'Ɏs�Uh���C�6��p*zԴ{�.�{������7a�Z���t�eQ�^�HP��<P����g�Kx�z^:Of����>9
+Jk�H1�"��'E��P�Z	ð*�������	����55f|U^�"W��䞐+"�)	�����2��;���v�ݹ}�
+Tw�8��ox�ⰏY�$Oe)�	�b����MF7����e^�y�.�r6���^JX�5o�g��O�:K��	�[fUv����{{�P'�BQ���KJe�
+b;�+e�*;ĕ����QǗi��/�j�~��X�%I�������^�:u�l�k�ѱ��3$#�|d����i�@���ǀ�.���Cl�-iɐ\|��%;�n�9�n��:`5��#j�b���d�E���Md��/n,�vE)� ������ylV�&�$$�~�������.JN��7�g��c(�.���]Q����R&K�)�3\��U�	��Dy�$'����ls��2��eƈ�fׯQ̎���O��M���+H��~ꄜ�s9�)&�\�]_]Fc�3�;���s�64I��g?��z�U<˭L��vn�L�h���)`��/���;�;�}@���P��5)x�VZq8���m_X��"[l�^���-Jh(��c�"c�dm�ss��ib3yn������;�	eVM��j~�(���T�rK�VU���$}��ݕ.	f�+F���N�T�,���P�NxR��>e��Wes�d☍�t4 �-��(��1VQ친�̘Q��Ȍ�J�4ɲ%��0�7`�m��. ���^�U������%�60z?�vΫ?}�W<|�����)��O_�y�I�׵�K�<�'��xXxoA�/��v�ޑ��$z����8�O��U�8����<2+��P̄K��<l�h������`�?2Cړ)��B���8�B��'�{W�vؘ� )�h�Mq�ͨ��@�Ms�o��x����ƍ���i
+�V[�pOW�����,ӏ4+x{H6�ױH�:��'�w>)�t�V]���c��b��1��u����-L��@4�$�#w��ᏸЏ6�b���ѨZ;���T0@�&C���8�Zb�mu6��b��ل����g�ER���ttj)�M9z ��B"T�Ċ3hG��0Zۘ��b'�˴���1a9��� ��#�#1��%�nw��D�߼g�Wom��j���Eɣ�uȐ��32<�'F������X��� ��IXW|��+%\\W%)$(c�_�,\�be�&��A�8���Lz%Te��RBV�� ����i���n�C���ۄex��KC)?r
+16̩��;};O����!�r�)�b������w3�M�O��ŹLLa���f*9�Z��친�e҆�@�E#�Ku��a��s��ۨ���W��7�6/�,�̊-��bx���|�`�ύ�U�8U��T:͖R�
+�H�����n��ɲ���]]`���ږ��
+P�� hPO��=7���&WNf�8���@Xx��CY�֡w=jz�Cx�H���	BW�p�%���Mo:���ַ��0o� �)��X�k��J������Σk��;Pq0%���e]��9K%�j]3¼qd�M5sqdbzA��%̪@�,j�P��bwC9�#޴ZfRl����������Q��;d ��v�5E$4!�Ja*�D�9(��1�*(��cQB��m�9^_a������RM�Α���k ^��K\�m&'�b�R���E)�cN)+�X��+��
+:/d�4��+��^��b��8��z���Ձ-����y'��&l�é^H�Z�#�[Qh-#����ܲ^�a׼Zm��82܇M�����c�/�fh�<o[�A�X���	*3��AZ�rbaI���쫕6��
+�2.ǜ2.V+p���_s眪i�!����t\�t��Y� 4��q���R����^(;q�o=MA�ܒT�/^�)�xq⭫�C^���o�@�*��(�C���%)|�=5i�K&�K�J9�۲m�o��疴��������ѫ9�~�G"lR8�	���l���q4�N��U˦8�����a[L�k>W6u_�s�(�4Y�W���O�y|T�q�,�����{n��#�*���9t���+�3b�+n�u�xʻ*����4U|��o��7�x��|~l�o' Z�{ɺ��y���?�(����=��)b�/�����b�ۃ�!�}��ÔeJ�VT`A�����;�9�j	1��@˿�hU�89�
+Tp������W�~��.I9�e��1�n��m������W�B�Z~��WB�%7B%$Y�j�~u��"�N� �{ݒ#n�_�u���+��X��~��S�SŊ�UMt�zc^qt[�:�"�ً����&Io�Z0؍h�!Q=b�:��Ga"��pȣ@���d[�O��<~	�� vcu#���ūo��X^�է����	nE�e�9��e��7�x��dyT�
+�7�,���{�
+��
+|� I�{���Z����qc���s�	
+�
+��!~����z߅���2 ; �wF.�N��Uk�8Փ
+}�S~�����������Z���8ĶP��?�e;J��z.�"a��H�:�`t~��xĞ�Ct��L�98��e�/¦�lP����׌��}�utY�4-�T*Y�&^��J6�,v��qr4��԰���)vU��J�\��։a>�ڟ�-S�H��s`PPL&0��0Z��2�R0W-�:v��N ��h��3bv���(���A�#Yx�����L��T��Am|d�]�Z�^�����R���*7괿8V���u�U�<Ҭ���%��sT?g����ׁ֕��M\����kG)��ͯ��VLx^���O��i�g�G�l���2P�c���S�B�u���'c���?�Ks4ʕJkϜ��)�����z}'?Oz*�Q2B��٩	�Z�u�E^�[~�	�bP������� ����鋌ԛ�[��=+X~�\#��6�(�|�5��Y�c?X�:��b��~)F�����?��
+�m���?{o	�L�����
+�YS�=��T+�#M�*]�i�.~��@���=�RTL��܁ ��
+ W��4��$7�R�,�v�nCWQd�Or���T�.��`��w�s����8%UQ���ᚴ�W��p�<P�.�&ѥ}
+}p`]!� y�G�Zj;�8�$��\F��S���[���i���W.}P�p��As2�[�٠�rt3�\<v��A�5ސy���c'=�����K鲟�1��5�� �5�e�@<��8���0�#��'� <j��͓ �C�� �	�a=v�wpD��	_<*�~��R�?�(�C�)U)�w�V׻��[l��}d^!KM�M��l�Zɑ �Ufv��S������0�?Rǰ��n� ֮أ��dڂ�k	~�oW���5�{H��+����6��]P�؛Ff9���=������bj���a>� ,>��]��HX��y��Z �\ى�Rzd�O�îZ�<��B�r>w�;/�/����}l��Z��D�;Y�Ƹ�wo�n�.�1�[�SΟ������NWP]#�v�t��*w#t�����NyӠy�^Jqf�h��� �{�G�g���)��1�8�+/t]n0�o�b%��>̇ uQ��@q{ST4����k�Nv*q�T$�d$��:��К5*[fR�`W-J�L!J9x��/��w���^r��9�ԿD�D�o�>�+�2�htG�Q��Sb� Mr�Ta[K�?7�����j�e�8��+���[����Gw�j��r�@�.�~�m�ޡ0 ,�+�����jw� ��D�����js��z�c�R��2P�F_ u���4�LI얫Ks� ��`'��D@'I��<A��-av���EJf�D��(�p�dK��F&o ��r�R��V-�_�9]i���k�Ee��Kn�$T��I��J�RB8�Y�^4ċ�i�{^sSW�k�q�X�K�MxN��2m$�{��f�����V�����hǄȩ4��o���7���p���e���z�ǝjy�254�Z���d:1�\N�����^'W�j<p��&�����o���(W��V
+�܊���O��)���oD���ڋ���sp�p�O-#k?(��MO���!�{T0�L�ƮJ�<��2�r0��1���[��J1�ȣ|�y�er�Ot��Ja� �*ȜZ����iF.	�d@AҖ!28�k`��1�5��~{�Α�s��iu}b^6oZ��Z~�*^�?9����7�9:�����o��D�S�c��ʾL��ؼ��q�NZ�LI�oӝ~%�N˸Ӻ⩤��|rl��0�lC�LX���V�)A�ur�����
+�j�U���f��s�}Jp6��j�.��?B��2v�ۦ.�2 ;ؠ_��x�!r�
+��z�PW�vk;���͟n�4�+❗L=�G�㝩_)��>�=�f��<Ƃ��G?�e=I΢�R�֟���:����9���:�����W���4A�w}�n�x�+�T?�n�1JH�t��>ӂ~�(|�PA-q�N(�%�������r��%�i��BO=O��FzKo�L`�� ��'��!�uB�O��,� T[�&�|�]�̄����!9{e�t����4CHl�/��I[�䄡2*���\�Ŗ������6΃5e��aߦ�3��4��`�ao�Z�<��bȞ�m��L�J����p��A3��  2��Q;N��;���C!��`��'㰁��a c7�,]��wF��
+m��s� �j��f���t��M;���]���8��^��zۜY��D1���V��n�,�R,���p^�������g@�2�aı1��J��T>� �@�d��F�~��T.V�L���w��,5"����&�h~��A(�Y(�.��X�6~����z�#mS$��N�m��T����Δ���.w�~.�:#r)oFq����['#YC!�e��������Ni5hT&��"�¯^(��"����B�uZ�&�gdE	�m|o��qB�f����YL��Q~7��Km�\G0~[֧]e2Fj!���z��4��Jʼj� =���m�	�5Z+�?�����~���/5�dG\��-Np�t��GAw�����1�S��[��Æ^�ٗK�R^��;�̗�X�ND�:��Xc�H2�Q �d$�Յ�	�$�j5���#i�'�C�_Be�H�<��g���7C��K��BA�S����R�FQX~���Y:OOo�RA�Y�5da���:7Ȩ�2l��oD�.:��UB�J�SZX�s�֛�_�tJQ\�p�S^+��+��yͻ4�j��O"�ߊW�i��	����¸YlGDʤt^O��=7�����kcD8,�� ���8�Z��[}^7݊�8d�{kG��+��XO}�Dq�5?��H���m���$r�rle�3�;!��.��Knk���I���uz�τ�(�H�pc9�����]g	��M�.���-52�gR��j�W��[9$�jG�ί�-ZM�!N��}0p_�+��:�'�\N�	>iP��v�,�������?�]����P��#�=��&TT~���u\�;�T?퇇��2����׌Ûz��ܼ!�����u�FA�%pd!�H��mޡlF�_�Ew'�����C�Lx�kf~
+�h�V<�ɺ�C�e,��0��WM}.L�^:OnΖ�LJ��P��*���N�p{nz�#u���aO]�(2�8� >N\�t�B�0�_�8� VB�|j%�El�ټ[�_W�W��U���䂝EQ#�^~�ثV�ĩ��,y*Δ*��JiRU+�$}%��&����2ZZ\lc�r��oa�z�8��x��]��I>T4�6Q���CJ�J7��_���S	��'ux�������r�#Gu{v-�"���BN)8���ѿ?O:K�]�3e�U� ���
+�� ���;dr��WD-��vܩ�fA����fk��J��>��\� �f�^
+���4@
+z����>�F�:�N���8S�c�?7����Yqm8ت�hU����m��%��>ҧ�H+/�K/������)L��8ڗ���Z{%�m
+M�WM��6�j�w�����O�s�#D9�◸Z�gA��jeE��Yɺ"�׺J�bg�⤖6��ْ
+����$f�
+>Tv^@�h�2�,�WB���R�*�9��4�&A�hQ(,Q3X4�6�¬�
+%9?/�p�JF_l�9��\2s�Gk2�%b�!Mxܩ�f!�8P�%�ۉZ9�uY�)�;J�+���aTQ'�%yƞ˩��g�H��VQ��(.��� ��JJL�����B��6o�B�g�Z?659�%>Ӕ�R�VEX�mz�-�������k7o#�gTQ�*�9��2ǩ� f<G���ߗ�O�l�(*vP[͡�R��ɒ ԩjf����{j�`�y_t֠����'��tC�&K��A��jY**�ez>�>�oL�3A�v\IJ~��I��=,s	%���7��m)G�vyE���8�W)o�pv�p����=����!T���@U9W @6��5ȋ�E;x�v"k��fr��n1��.��4Ǡ�`�`��D�|�)����q����5��
+��}Z��~�����Q�KHV������H �D��c�?����$T��_�Wm�ξ뜎���%���/HVu*���R
+q�}ǝ�]�����I��:�8���4S�Sn����:FQ��4"�$99��?r=�:ޘw�P%=�_��9I"qb�����ۿ,��KnKEKU�Rϴ+��%ܘ�{!���],�G��S�C�$瞊��E��h -��͂�����I0D��p���7K�+�ܻ���2*�%���Π�:�X%�;b����|"�!�?2X�gX
+�j:���o�����Ԧ�ܜ�W��j��v	�P�$�%[DĮ����l��^O��o�1W�޴8,����$�L/aC�z���K�V˥�o���9���i���K�c� SuxzwJ�J���0[�q�`�lEe�Q:P��՟
+@I�$eQ[�ʉas[��&����e�Y{�*�s�-Q�r�KA^�~����ɩ�au?�u.��Y�O֮Q�F+���z����'��@����+�d�����.�PhӕZ	m��	��BXN�8��%�<���t(�y:��W8�_�GY��%:M���R�*>��4T�sg��t�����עh�g�$���wU\|7�U�%zT��Ϧ�ժ�8=��\�+��Y��֔�T+6s��8���gx����x���Z�g+{�B�涸�6��	_�Gb��T���|�*��E��+����f>����ށ�l����"�$u&�o��=|��]4��->C�{�W�R�zt�1��yܩOfA�j�~����P�,��R��^m�w7��a#��-�޶�	��x�=\��EQ��� ��ڣ�A��̞,�YiO�����J��Va=�p�Wd���Аږ����uL�n&eC��T]�.�?bH9�h��*���MJ	��e�:C�;��,`>P��x<�z���NdNZ�QĄ��M"�Z�Zhx;<���b-9A�\N �հO��@ �L�-qD��B5	��l6�?����0�!��_�=�M$G�ͳߝ��}�빨x�.�=�z�����7G�f3����o%
+���`�l�F���rU���iC7��Bp߼����L�Q��7X��C��{�$
+��w��;��-�锏������Z!'�U��>�;~��&�~��o�"��d+�c3������S�p�	�T�0� ���!nK}e/��V1A��W~�\:���i ��a
+x�2A��M\�NS9���1�7���E|����W��1ZgL�0�q�l�[͉��b�}�|sQ�wd��Mޠw�s�;�m�i�{\a',2?Ԯs͊X��Ș:y�Pnlo���J�(��|���B��dM퇫�J��A)��܁V�q�o7�����_ڮm�����1���Bq%��J����e�ƘM�>n���c�=8O�������;���[�����kuBq�t@U �-��޼��Tx�lW^t�Q�;`��÷>�m�墳?�X�,�BB�J��Z/Ê&P�$K�QΎ��*�B䧘9$V�J��%�)����0�a��=�#�d�t�,��_��m^%�f���@�pʈ�S�R�@\>"<�i�p�n�����񻓬(�j;#1�U��$3S����P��Uˇ]�\u���H��T��L��� ��,���v�Z��9у���v@�Hr��b@[c��{;�(���	�"F����+��sJ���e��3�Z�$8�\%I�}���6Cz�D溭:�MV�m l'f&��9mXa�a��2�l������Eӝ��iS�e>_��,�Ȍ�e���Uj�7L�M9c�T����vK�s��N�å����<UH�]��|�[�Y�9 _-�Sb�����$,o�h��t����l@�H��������E���� V2�~�y��M��w�%�_"MD�(p+�̻���)!FS4Z�\�_�¿�#x	OH݆���f��1�3 ��K�Z�O*C	����X���$@!ю����h��q�� ?�RK���[�8��%�Ut�8�w)�F<}s���IN�#��p�㘃Ek��2<�vt)�Ir�:��ܜ)��!�Ȏgԅ�$�4�B���'z�|#Y��������gPf��s�q�%mE�?�A<�o�B�C篞���I�c�ݓ��Z) >R?�����HS~RsIw���6�/Q��}l�!v�.='�NC��|6a-�� ���.@&�&h���]U�`�=m�aRrU�F԰�i�ZW�O�b0�>�,�*M����b`Ԋ��`�+Ig��d�b1��I�N�i;���i<䏴U���	=��kqI2��a��2�*.ʀ�'������I_�u�7�V�ex�h���$y�ްl6o?�2���c%���1��2�O|�M���x��z�M�{���U��,�<��B�-�e��U0�� L�P90q���61���զ(��$h���R��T�\F��Ã���[��ԛZuP;�NF5�h�7��;����@bp���s�ͻHj
+��j�Q]�V鿪�%/C���e� �I�g�wPA��C��w�l�ɪK�x.cqA�s����Du%8()(�MR��9��U�$S�S����7BXi���>��]Pzy�^��7��qm� ����WBpE��+���\R�z�4�do��D<����:*;����'�r�x��
+[����\"��>-�iHNv�E�����e��4X�vm�|(#��KÄ�������vȱ�p
+��1�T��&U�]QG��?�`a�JK,��R�R��1�7������u���H{} �=t%�j�/8|�ub�=�3����H�p"2��[U�����V"�Y"�["_�U���B>�z8W[y�g#'ܵI6c�;�V_x��v��|wo�T�/ ���J����C�)�)����B�}�_YӋ�(��Ȯ��:�;���K��z�I�9��4���9��Sf�s�0�n�������kL�ٕڕ�ύ���Y��=�P:KU�����"�,�f}d�/�|����TWV�D�!D��9�6G��L���f��߄g�*� ��5!���^�%�=�P����~
+��8��D�d2M��׃� 5��bCI)!��&&�&/�ҖT^�S���տ�Rb�D�x�N �?7���;��X��FJz$�ʼ��Pi��k������z�ɗ[
+^)X�(?6��$�+��5e��T���\���rj���"����J��$�J+v�ZҲ�^�?$x!�� �_��2N���^��WA`��V����?�6Z���bW�~��H!$�/��^��L�8u:�yr���+�������7~�]o�ZS�o���~� J��
+&z?�T�t�׍ݦ�;�<M�`^�S`t�'���νe8��D#�6��2J�����p>��r8[`�e�>��3�`K
+��l ��hF�Ak8,�P��ۅ���W��n -'�bip�����/f|\��}�&ڣ�)_H�#�Nلo=+P��sc�*��4md�m�r�������J�vR�}iW�y_�~2�G�����V;^��Uq�d%K,�x�@~V�ɖV~"�(���/��i����<"��E-]�\NO��q��^����d煬{��[� �����P� ��+���և���!�$�誛��y��=���Xan� 	���C��A�_q#E��Xղ�!,�̼���zCEDj�h�QGV5�����}����e����M)�=��ˌIaY�x��+���~SL�[lo�3|EK4c�\�O�hm�+Ypv5(>�:]��E5�ՠ?xA5�2|0t!�E1(��ޭHx��x#��P��q�Tz[V*��<��u7��5��������6��-��CJ�m�̑�贂�Ot��93��hL�a ����*�4Hr�T�4q�K�*0?��&���Z�i�K�C-�+p��#N�����=Q$vL~˿�:��iP^�R2d����ω�J���z����4����nvk=-Z�ںh��i��n���; ���S!6
+�N�1bTti��g��L�����o2��l�cUn�n&�S���-;���r	�*�L���v�W���2D%h��Z���">���L��P�s����޻�]'[p��+#M2�Uθ?#��kQ3�g,�_��Z�x(�����*h�W�􂼽LM_�k��%��YM�&�p���jҖ�g�a�/���~�,�aw����X�MX{�u��)�#�k*,�`���X=�7L�A�b�U-��Һa)�>&>�Z���9�ۀ��%���ѣV�5؞��788�O8u�,��@eL�(������/ك� ��H;9d��͢��m&���5j���V��c��H�ZN��7#���Zo�pz���?s�{Ϗ'�6!�M�@m������Ｄ��Q�;�_�y��8��>q��L�<���C/�U�;aOn�ӊE��Ȭ~:f+~���~F_T�a��T�Ӓcq�0O}�ЋL= ��5�k?}�p ��Qޱ��`A��*0ft ��`�jj0��Jqoe+4~]v����)�m@)"pM�͏;3�z��]qh��bS/,JQ����I�Y�B*J���{�98#{�lJ��q�ަz��i!��m�>a	D\�a-G�r�D8<V���D�~�8���Y��s��Yy׮"`�Q�!�;�k��.��FI `�^(P�ў �]\���n@�
+n��~x��=�J�J����%�IȚ�IW�&<�)��;��\���#~w�L�l4�h;��|N�띿�5�m�Q%K�py�m̰ �`�����m�Q��Ty�L��:��4j� ������Dt�w#�m�a��:�:ISᔗ����d�Z��M�zX�u.� ��J񆫫@�.��ʺ��o�/�rp�{;�;��(���;���~B�hP��eOn%`?���0ݣdͷ����P���?Ϣ�O���Wa�O�H���%�;�n$�K�]���%diē�L�c��&��ޓ�U�[H���K��m)�� �v1`�K��
+�k�<?�R�Wd;P��82`�w�Q�# �\��W��rĤ�$I��v ��c��ϵ���ss��ipk���Z]v�Qw���:<��A�M���a%}���D����O����y'v�Q��^KV�ǒ�<��^$d�xCU�m+S��.)9���,�iO���x�,��|ʴ�XA!���\ ��	6z�bw��7������-`��C_�&� � ,�YG��tK�]�����+	�_�_��˨p0.C%.�{�A`���!��bp��;q�?�?�Y�D�@��)ױ_����_dt���,	q%�=��~<@�r�?���o?� ��m�
+��(�A����ɒ����������=��ON��K����Z����+���QK��W�8���u���IR/��CH����E���L���X!WڒҫW�<t�˩0���1)P�ċ?�&c�9 q-����7��»��S�Õ��C���~p�TS���IobO� 2���o)�>�[L���=��JK���
+;1x.o�P��Z�}'�y�=�|?�"t�d���\惣 T�|C�0Ȳ������JtB�� �8��A�7��Q�e��Y'jj&���qr|��5��9(aPfMԿ�s��I9O���ד\���`O�]1­p��D͠�yu��S�򾥉df�t�R�o��W!�<�u�?�%=.��a��E��(�7�N^'�2K��X�O�{Z|J�#�k�a�nG>��Ei���h�?�92
+<%􎐫��d��5Nf�$C�+� r���"?�y�掬'���cQ���y���w��}�;+�o*��V�`�&�������(���Sq��*��uK~���s��ۢ��R}���\Ey� ��˂X�@R�|D�������ZV,���ҟ�ܩ��V��i�����ot��ڕP�H�UO_QN}i6�����%*dJ9=�s�8�z>K����^b1Ѻ�&����ޡs�'^7�U!��t;�p�o�QJi�:7_��P&��DxL�8�����F�>]��K�m$���%�d��x�peY�(8*뙩h���5(��ň`S��F�2zzYY�B��c�(2�9�g�rZFl��/��f%I!���8u�N8�	�?�!}��/b�²W,Pğa/ ����a[�ח�����*c��x�)mN�Y�f��J��F#%��gx�I:z�d�vQ�I9�P�\ 3O�	�5I�yޒc�Ә{ףv;������^~G�����i�%A+�V���{J�W(�O�I���i�6���XJv4����+�qM�8D�� 9y�?�b$�6��� ��h�?�T\ Ð��,h#��|�����Ƕ9��ǜBBD3i������~O�֛=7b'�w�_u������pv��ZS�_�m�����7�n��EVm	Iڝ<�q�%lR��b��"�R��\��˚�`YE0+�or�X\K��_�j�T@n| '�i΀�>���p	>��(�󫣓��s
+�8@�$�*��6]�k��mn��ݺ��7+F�����bk�<��CK�Xb��d&B�\���$�І���}�TN�KJ����N(��z\=��\�y3j�)����oS�t��@v��ƒ�\�_3^����F��z�b�$���I�`D T�κ��Q�z�2�n�����������c� ��'�uo"�>�ҪR�T<X�ș:^,�C1�'���f�װ���W��a7�<bE�q>�=w�`I#�zVbe�@v��%V�39���ւ=7g-�G��B �Z�+"_�p�u��FV��E{Y�5
+���_Na��h�J�Z���F4,b&u;�x���I���	|;�,�b-L�v��9��ϕ�s��I�����W����Fޯ�̶�Q6Hg"�}��8���5Cl2oxo�a�mb�z.J�d���8�
+;�]�����; =8C������+}�����2TLۊ0湗(�Қឩ�$/�s�GP]k'������BC��&d4�'�H�R�pO!y@����_�Զ�qpH �9uuƁ�V4��֖�Z�E9Ξ��0�~i���:�2_Z�Sq��0!>����Ԧ[P]_IL+��d����ry�+0�k��i�yfs}�Ǹ-�w�Fh�}�� ��j�����
+Z�CQ���j��O��0K��Z=w(��-�B(�y%�]J��2��S)�+?� 9����q1�aˏÄ����y@��5M!�˻�l�r*.o������c�U�3��V	Zs�h�x�P����Md?���8�!_�;P��	�|���.��䜻t�� ��^/�\k�H	�S�J�J/+�~��9:���ʽ�Yw�I��n��}���/��n\oG�,KI����\�%I��fgK���&���# ��{9�t���n���;X>Ĭ^��'<Y�77\���i���'�$��`3��JK���DPxd��gUsj9l��Qu7��Vu�V���HN܊���3-����V��g;�
+O��[��'\3�c<F��z����- ��|%���Q,����؀4�NBd�.�s��m�$�׌�^� o����ͬ�bR,��*_X1ܛ�A�2�"G�.>X�]?�6�T������cN)"�����r��舘�bV����]�#ګ2F�d�W�$y���w�j�]�lm<�W�uQ�t(Y�~� ,��9���F3o~�8>[u!N�M@E��Z7T�-�~d���v\����e��Rt���.�_z]\��	!q�8�:���V�j�����ۖ���`E�>�����tN%��/x�VI�&��+W�3�S��gU��&I%�?���ÿ�O5�Z��f�u�Es@����&ł�`�2Q�?��@f��G~	v6��Î�b��AY��l�X�bpU#d�ߩrq��j�r��V��Q��l˟�9��5��Mf�:9�_r4�����P����"�&���u
+�ssV&�)�f�ga�ERf���)o¿&��t�O�=�Jy�p��`�
+z�p��n8$gH2x���Ą�����3�faWv!��r.Ԇ�.�_4?a�$	T�:K.����O,���'�
+�2�[��]�;��A���J���u����9�����@pHUI%����z�t���Z1pV6I��X���/��G�$�N"�d�ۿt��jS|�,���*���������|��
+����<�"��$�������f�_��2��_���?�ӎ`�x��(P� 
+މ~t'�C>���-^�����[�8ˣ�oD�n?�>E�m�anC���^i);@PIm���E6��#濎n���b9瘛.�B��]L�ֈ�)��q�mr��q�rm�����q)�k��qZJ�9e.nĬX0p9�T/�ͺ��P۱O|�8� G��|��g���ss���#_��
+��q?l�X����M_6���5�jo:j���zB�5Սnu�p����QC��.��[�
+�[S�1���Sj">+1s/�恬����,_���I����^�e���t�)�%Yե�i��2��o���
+�<�M F��R%#cRz�?��}Q*�F{�a��t�T���Z��U{��TE��Q؜�(pk0�V�ni�CRA|E��R5���nJ�w�.q�b��S��c���:��E�͞�������pl��B�r�Qa'�בf�!����:��^L�_TN�����߇y{�f�hj��V����,�vrX��I Oˏș�:�R�&�z�J�S���I>P�����s�)����c� ��QȄT�k2����c��V��6��~���R=����e�m%9Bcb���1�Y��iaU��-�f/춼��-v��F�:K�q��*�;K�,vS�������ǰ<E��=t��Ea������-J~�
+T��� Yv�<#���a��X,���b*7��=�7�q4�lOфʑ��G�+��s���t���|�z�`&����<�TJ�^���S�����9N�2V��9珬X�\���n�_�
+�e���.���h�{�����u�Nؐ���U��=p"�xLْ�C8�:EP��ϣ�M�	���ѷU����Rx��5t���~o�sR��K-|�c�d��R��)�j��q\U��g6�S-);�� �GV��֮{A@��CU�N�5~����ǯ�+�+œ�=�q����H1��!�Wf���w��14��c@T���O#�"�5�_O�x��sv�X��Hd��H�e&���Kz1�¹p
+��c�?�����jkD�W�����d�����M`'Xw$�i=J��z�Y'X�{sLXV{椣��1�yQ�t{Z�R�ۭx�}�ɜ�d��V8��+j�qN��`�+!(Y"��+I�k��ih1ob;y4B���ʨ�dX�9�h �5��d�4���ggu#��pз�����*,��ޖVdJ��m��0�8��/*j�T�?O�i��h�����:Z���)��j �.��Z!����NK�Q��B��|�&cRG��7P�bYՄ��t�fnjAjV�q�S-ȯ��j�Պ3��r"�L��X N�����4�,��&������?�.�K8m�^�M�pU�k��0�ú=Q5��O��m��>�t��MJ��b�)m�]s&g<X+`����^ܢ���ج�bs�#c�"�H,S��L�#Π�˰���ӽ�2�C~r&���-�2��CS͞����2�2���P����	R�q�-����б��h�G��^i(81u}Ü��djըUGl�T�h3}.���6z�:a-#n�
+��򁫿$�l��4�u0�i�0����e���%�^�JKܞ�ʴ�M����Wę?�4#e�e)��2΍�(����c�#���[I����h�$*Ѓ��[�cԮs99&F�?}���X����ǁ8F���|�c��7\��y7�U��7<j E�����f�y��SC���[л�Kf���%�i��5N1��N�ެCbϟ˨Ľɴ��U�TW1�l��?�":��OxG��΅7öwYJ��5��^�:َ�A�!q���{Y���N	ڬ�m��ؼxxua��'�p�؅��e���Ґ�sU�{�t"�)(-Mrt;��7�j�?   ��ԽksT׵.�}��>D���>�bn9�ه]���KR�V/�/��B	�n�`�㰷cH�! W
+x�D7�������9�\sݻ�J��V�˘�>��:�j"	�gm&������?(��TAU@(_Ȗ�[�	��*T�6NC���>�l��ȫ�y�QZ����|ҳ!^�3�"7�#��W��]�ܐw؄�s�I��'��'.{p,|����B���đ���b� 8tL�Nv��8��RC^�Ӊd�L������:el���l�����ծ�W��"�{����1�+�˦�e�ɳ{l�"i�'d쳡v�;�6�$q�"�K����(��~��``زsm��vO�ΰ��!�h�{|��QRz�^_}f49��]�H��ajx����ͤ���Ryq�6;��Q�]�F�y�d$�d�Ŝ_��V>�W�܈?���][=�b��k�~V"��Q�i����\�R���O�狼�dDO-�a�ȩ��{����_Ե�u&���5�Z.^+]q�2ߛ*���s�	���	�Y�eX�8�*U�I�É`߀���l��>��e�G��o���_K�І����_{�:�$��'���>�?��e�K�fA�'Og��f��h.���&��{��( ��tL;����#nw�!��}��f�Z\�����/�\����RyW���
+�����(�I���u�
+�E��QR�K�]r����*;ܧ"ZK���� ���jh׻z���iVY���T�m�iek�xA*���W�#�M�)�CѦ~0�U�z�?�!��"{j�S�⢚D�xF�����Л�iD��ҏaC�h�yr Z�ޙ+$d��Vˑ>�w��Lb����~Q�����3�T��I����j̷�q����,&J -gQ� �ꕽF�7��$5'XU��.�TQ�ۗq.�dWlǫe� �a��)`�+!q�?�G����)
+Ti�,�7.X�~Bz���<�����2V�	�9J�*�YW�FSt�yQ�_Ŗ�WܚS-9�
+�����k�%�iOW�J�b�e�^It=V���`������S�U��a�І�T��Uq�.�O����zW�8�J��H��0��� j�f���=��)N�5v�N.��~!Zί]��N�(��5��*Z�S���|;��W�4��j�N��/���`�8:��i%��Y����!م�(�R�tE��"�����Z�<�?�BgJ��H���7�?o�?оR�_(���>z��U@�#T-J?�9<3گ��_��_����x��#w��R�߆�W+�k�W�Yn�OS`,2�mI��(#�R��#ׇyK/Ϻ
+[}�������Nl�?((���1�]�� �\�e�2␺��3G���-�����^�^�!��J����c���n`fq�$��SL]��y�o�d��.�ዪ�*j����U&�+d4P�ɴW�n}E9o�?ҳ����ϑ�YиnJ��g��t���*���<��X�s�-�S����nJ�7.&�Wݦ_��s�O~��~�Ei��L9��\������SBT~�^���q�]�lTj�e�6{pʛ;4?�ս������ё��ã�����L�ÇG�F�~�4�ޛ����>]��9L����;|��3
+]2)l��9�;ׁ0?I/ �y=Z�Y��|a�ކD7�]���іL�O�ע`}��Bp�6m��� ��K1�u�4�|���cl��!T�Ѱ�煉^Q�D>��xm!~�89UE�z��ߣ;���#�>eC�<2� �􍟐�WL�R[��N��v㈖���u�;�ؘ 5A��(L��S�9,�?	��麘v�:(����	��}#ʔ}T��ʁ��Ig�J?���O0}�����{���:ñ���T��ʔW���)��8施k�&���ڬ�� ��5Q81��ɒ�H��Ʋ^�H����>GL6��b\��>8�s�GP�9܆qWg4��?���,M��РcP��?��a�hh _��Ȭ�g�
+�����X^r��*���U���,�))�ZO��.w�Ӳ2��rĥ��6���'b1����jͪ�b�l�����G�H�v�}����yk�G�Jyٓ�0�_/��mK�e��ܣ�<�F}
+f��Ǳ>�3��)S�[^-3d�SP�O�z�}�����%̚��p�޶W�S�V6
+Ǵ��:��m��w ��}>���"V\&�?&��͙t�ԨbGI�l��1_����k�+%v�zՙC�i?9>L�P}�17yh���𡷽�n��I��M�;q�/{3���ՙC ���Пt����LX�'e��dw*��:��������6�q։��GIt�ddMJp���%�8�k)�y]ꕋ,�7����m׋&8VQ��L�*EL��3����B8<@�;lj=�>+��
+�s;��90v������c��D�a�Ĉ���ܼWC�S-͔*d��}�eS��c �@�$����T�u�
+�s�$����~X��X�� ��7
+�?:dO+#Z�d��5SKI(&��jY � :��%Z�J�bC��B}b~���]݅y��V��rq�7�����&R��c{�pS)D�]��ƶH���"6`��P�o�d��_�^�����h���#%�m�$7lL�["�Pw�����bjf���"�S��_������0�/q�U� ������I�+���P=��C��"�o�3)(oR
+�5���!��g����%E�,���L�%[������و��A)�	2Eװu�,�_XA���,Y�/?�dW5ص+"��4�:pdx��Б��#��G��Gܱ#�S���ФD4�V5�҉K�<N"��~�_w��\>AE�)��W`D+J����>N�'/7�G$yzU	p�j$=�lĈ���E�"
+͡)�,��׽y�8��,ċ��a�$�0�S���p_��͠!���ɷ����[C�
+���<��(���l�z)�'o�	;�p��J�J,7dI���΂(ЪPLa� �Y�4Q�0�E���K��V�����!|�T�b2 Ŝjˀ�`�h$����}��f9��z�����JK"{��%�h��,x_�}��l��&1[l�E�3��T���>^���.U;_@۱	�d���cu��ùc|s����͞x~�rX#]��^�D���~j�Ux����z�XV�sy�29nA\���9��������Σ���@K�}�����CG���Zg��ܖ}}��T)M��|TI�%4]�YΖc��]r����>:920t$��K��d�Q��"��`a�_L�fܸl�d+AKJi��'z۵5W��8��Ҏ�!p�?Ҝ���@�C�b�7�u����~t���aNS.�M[��*z��xq�鼂\�@ڑ��jbXM��P��-`�¤���x)�SeG������V��|�T�NdC,`�z�Q�����U�w�T���`՝��M�T�)�3S*��}­ �cո��RIh�4���[*�|�T.�KӮ�a�:��#L�و�:�b��W�Y����{��?T��������_*�7��NP���������syA�يr�~E��e��ǯ�Q-����M�]v�.c��{�ʓ4��a.JH��k���Kʲ� �c�~άfM3�|��Vˏ �cY��Đ�. U��v>����^Z��R�F;6����8�?5��-��I	�(;&K�b��<N|X*��ݛ�Ҟ��[H���mI�I�HV6CH�"k[�N\xY��{E�Z!���..��r���4��/*�����@�å2�8,�a��o=I�)cN�����-w�J�� �G�(������ܞ��eQ�Ysr�$j�Q�l���df�`�ДW�� A7�9�F�v}=ޞW�'���+3�X�9V[�Ĺ~$�vJ�>2���»:����/�����h�T��뮓�����B�+�9�3�A��v�E��2�؛f�q��6���?J)63��$i@�$��+��K�]z�<�\v��v�Q�ܟ�-�{ԭ=�_��'h�4�J��m��0 S���c{�[fxޖ�m��X�X>���FF��'AR�9c�Ӈ󋈤�o��D}���L|�)&�xp���c���:�(�Um�ʂW�K�@o&}(`S6��F��(�s��Mz�Ҙ5��ĳ=��Gx�zHL�r��<>nD�P�t͙BN]�]Kh?lu}���r�Yש�'j�T)��2��P!���T狥��
+���2��P#�z��ys�8_%�WJ��_b�Q,.��� b�^s�_L(�2��u�a��m��N�,�f��%c���ZN��/�2�`�X��BZ��:��>�T L6�a�q��h�B�����)���l���I k�~�B�
+������I�2ab70b_����Y%r�hbOg��>� ֍���]b��,o�4�FI�)�ףb����
+_}������G������K�ZAa����gg�	�?<v�:zdp��9rx�88yxp0?�OK¯WM|���~7Y�1���T���{trT7O��*
+�����1�Ks��oK��5��J+'��������S��JS�s'��̬Sv+�$W�1�C"r��ާ��rȜ�'g�j$\%��O���;��J)�W�kʩx����Z�t�Uϫ�X
+��p��P(�KinΫ�4�$+�X��Ȭ[����U�X"����S�w�VKWj�NoRC�F�<�k��]29��ͯڰr;�EG���(	sy��No�k���:���m?��e����&1dW�^��L�;�'�zxE6U��j����8���4ύ:�:1L��T��<{�Q��f�=�1
+������ke��lo`�0�A�V��XC�����ۤ��K!aA�h���-xppt����Б���Ɂ����#G��b~���L
+~�Q�w�����R�:��-�^+���,�%�D2Z�̢峎߼�c� ���0|D~�8�O���TK�ؖ��}z��
+��D���J�ǲ9:�p�	�K��*;�D��Ǘ��Z5�uګ��}!�ϻ�s~��*�kI/� L&�}�`$�d�y�Q)��Q��ri��n��N��R��r�+��@ٕ��'N �����30��L��]s�zŭ�0�ګageg�sX��;/�	�ʥӓF[=�,�g�RY�+WنE�Jk�E6���	2��\L��-��u��~��q��C����GY71&����Ό��ݥ��&Y]�i�u��36 ~~�E^�#�K���GY��,��ؼ)mX�o�6����VI��`/g[�&oX�D�1�?�����B!rzJ�jSIf�M�4`%�˔���ѣ�G��ǎ�|9:�><:�_�$�wS@�����$"�o0#�oÁ^r��<�ܤԎYq��&�*Eϗ:�(�'��J�yDP�?Ȭ]n��N�4k�+(��5��RQ�j:��%3Hfq�(j�p���,�w��PON�ɭ����0�l/�f���Y?2&�P�c��2/,�������2���K�Z��/�U+[���H΂�#X��b\L��2KN(1Y.a`B������6�g�:Vuf��F�ʕ�Tv|�]����Q4�(r7�Y�)�gD���N%�0��OJ��1�^�ɪ�m��6�[\��Ӎ_j�I��%���0=-qeE��8��<�e;�8K�����g�P���:�8ʣ�K�u#�K�:~01#tb�K��u�~d_�?���;�bO��jF�vU���Nrț4PC(�L�$�u��5��Y�Q%Ψt05b%��P�a��%&mjd���&�Q�����o�u�7zxxl��D��w������#G��mȼ�$TzzUw�^*w�:��o )A��qo��N�����r�~�D�KV��&/Q�qF��ZNn��p!W�_jɺ�d�4�bѶ) U�%F^�x��E�<0co~֙�b֩T��Zׄ�)f{���8[֥���شpP�]����y4ŀ�O�m$
+#G�:�j�}f�)�{�W���nţ��ZŹ���Y�L��
+
+��1����W�R��\�:Y�%���/(Sr�!$�yx�D]՝i �?���ˍ)%\F-O~+D����Qz�잇$:ւ��*+؇��U���4�W���o���dW���#�	�����_ԛhNE���X��v�ߚ͉8�'6��`�>I�
+�p��@Z��@ȩy_����K�'f�G�]��Q����xiWv�������A,�m�#8PKp�r?�,dD`���z�S^sW"�C��.�q�#�N�!���H�DR�*���vD�R�l�+=~C�N��(�#F���Y�/Hs�_����+s9��?�&�Z��/RG�/@4.��q%���F����,.6���\�S����`��2�I��r9vP��rP��Uo��ի%�6H�&cAh���gK�(Hޭc����!�T�G�J��҉G����+���`�5�2:mkg�(*'u������QdUn�<x�&��Gv���y�>w�����}��B�*-wMF;7��?�C��^�󷦊Qv%_�F�jz'� �}X���k�f�"���T��m���į�qrB��/�Ԑ�3,(e ��c޵,9`�o$�B�S�'�OB�,_�6���͏���=l�E�H��M���v�6#OdF�t�W<
+V����ؑ���#SS� u��#m���!����TN�7��@���,��/�x�92$��KF�v�J�>��(�v��u
+.
+JCy��K�B�PC�bC���j���v���4ר�#*gV�?����[Ʊ�$%�?!A�&3W��T�C��{��ۉn�J��7�'�X,�q%�ܤO����}�Xe '���|ի�|e�IWMaʫVKE�Jop&��xt��˯�-��Jڒ�k �\?C�C�1h��AV�="�þ˔�`Y�����Py+\�b:�o.���֋i�|�Oz�D�"MgK�]I�o�;��F�����`�6E���"�}x��`��LAa#�S�\Ak&$�}f6�?��ݏ3�9<2<�?\�v�����H����)L�):��2��+�_��'�C/�S�rC9y���r�F�b\���bp70��.r|�5�O(!>�3;��3w��z	Tp�t��6��U�6F����x�$*�_I�P֪|}�jq�^���cm s��м���Z.Ȝ�W˲^�ܧ��+?~�`��nҩ1^�Z���k��r���4͜W���WWA���EgA��Gb;�T�f%��Ȩ(�:06z���J��ŒoW���E�2)��&|�&_�a��Q)����~W���n�.3��O_�U�)N9�	�L�׺�@A���\$m
+�-�"|�+�2H$��񘌪KUg���F�Q�E����}7(AN��jc䁞�U��e��%��L=߲����v�<��zi�օj[2�٨�����]�[���3�k�gndȑ4����r��6�b2�_-���zE���Py\�����"#l7w[�~�5�d�1�'�M��@;rĬj��u>��5���PY�0��!�8k[�Vw,�>:646:�?<2rt؝v��&�6�VZ�>��O-t"��+�%�������[_l̻���"���mG�#w����K�Z�R���s�d��'Q?�#QNZ��zR\�(���0N�e�L��'�RF��'$tbz�&ρ�B���{�a�#���'�wAt9���x�QRG���v"�z����on�Tq9t½�T��Ze�OU̬��A`�^n�N�s$��U�w�G��k��w���Q6��� +���h����B��s�єW��JS �ˈ!���26W'[G�_�����s��A��:��>��d�QKF����P#��Z|����i�P���q�׵4[��{nɭ����t�	�����f���9�� ��C��2.��m����!O*�~Gu�}I��
+�C����Nv�0�r]\�L�w>�ِ���� �>ԒL@^�"rJ7B�Y%$+T{U��m���	JIk��6QK��Au�	�� \�ot����l4��zV���Cg(�9tMB�����w6��%5v9ý��&���4w�S�{dp��Ƽ����s���b;27�`�Ht p����D�/8s���/����Z'	�e����wd��M�4D���SD,T��4�U��
+���+TM��ղ���>%sUc-��
+���UJ�Ӈ�tcn~�v�@���
+x�4��;�U7w���Hn�C�Ӻ�W�b�ʠ�S�QC��Q��St��ԃ]]����b*S�Oԝ+n��nx�L�8� +��w�1�o�)R�;�CA��Jm�Z�d�;CN����n�Vs
+�����gZ���{�7�G���8���;I#ɧ2��4ɂ�����7�A(�;b�:�����2�d�<���QA�<��`�F��GKŞ�3���X,'��0u6��75m	��[+�T� _���$�b%n4����K;�=���:/�b�����;xt���;=:ІtKCh�/�řN2/����8]g�q�|e`�]ws6ې�sq|(��IO��~c7�����}�M#���#j��0 ���(\X(��V��T�������xI�p�,
+�X������5�Q�Ԝ����
+�/@�Z���[�4@ծ����rV9��~�Z��t�94�p��E����:U���z��Ѳ7��]�ʙ->��j	LFB��pˍ�5͠vǜ���㍩*�������Ŀ]�arʼS�8s(*�U�ؘbYY������GTfe՝*��+���Á��4DG�tΫV(��{��x�l��q���pd�,�5l`?Q���4u�_���V�� 3!�+鴤��B������(p{��/tJ�}l��� f �_�1�`�3n�/�����͛*F���0)����=�T��ځy�Vw�t��μ��l��?"�60<�gWg�f��1���QLT[��+��ö1?�-/���=7���W�K�"�ѐ�x[�
+U�Pp��{�S�
+��wT�`4
+i���6��J��kܺKAһY�=::v�������@��awz`lll`td�u �c������q����$C�#��#
+��)*~��
+-xv����i�T��Ȫ-46/h�K���ˠ���WDB0(��¹k*2s��>�(�=?�Ԙ��G*K���U�~�}?v����Ok���`BUr���!TU��@0�7�{ 4�1�A����-��%��q���������&�~1�e�>[q�| ��*V$��[%�\>��{� Q���YWR�H�'H(�dA Y��"wI��ή���@*k��"�|;�oj0QD�G��-����D@�U�-vrsi��.a�V�c�c}󜐯��K�`q���i��ұ����;ɊѧJTf���zs^�A��@T؃@9�ĲO؄ԨP�����f},"*�7aR-�J�� ������<��m~a�-:�,ia�
+J���6�6{:t��Ѹno�0�����~�ח����Dh�|�n��غ&JaE)��y��Q�3�q���a��6M�@݋l��77�y�t�8��0~���CT�C�Ip Re=�zzj5��z��!a�259�)`_%�餆p'� LP"�3�,��lO+���v�.��/���Ew�W��R�S���V�4ŬzI�w�`k����*j>���r�����S�6�!!E1��=����#�M�(D{�|V��D0�%J�{���et��vBc���&��3·�ëVG1ҳ+�\�w]Y�EAA���_7$�)�A#��@��)[�p��r'��׾�;6:8vx�������#c�awlp�82�Ni�3�?��<��F�tk����'�K]��w+�Ny~V�(�v�ߞ�̔��.�3���Y�l�<�n6ug��W_��5��/�K�Q����4�UΡ6�a�y�z��*��@���Q���'ݙR�����j�e<�u��p�z!���7��B��i�+�?���xf��C��
+[��ms	��R�4g�_>0~��/���n�ؠ��&����-R�)��Z�orM�l)���{~M��q�q
+��YR�$��(���4C��v���@6:�����6� ��j���7o�/]>n��?�~<y@�7���@:O� ڃ�g��p�X���_>pf�[TE�UssR�M��o�?}��1�L��Y�-."0k�^3zA0�\>p<u�;�p����{yJ\x?�ԕ�B��L9����1"�UD��e!��Lp���� &�n�(�9hb0�&��0���9.
+�)����D
+CI�������ϝ�i��5�S�bq������b�ؤS]Ȳ�㕺��n������kf�m\M^L:\}�扲�]Q�S� )W�gpSE��I+��Ҽ|�f�S＋��6e8iSN���a|L��C�k����_s`Æ�w����#�Cv���=z,G1�F�n�[��o?����P@ʘO����x��'
+����� ��Va(����;[{5�W(��"={��Iq,�2�����v�R�eY�c�/Z"b��IkIO�89n-���ow�k�ہJp.Cj"��}�d��>B[�'&
+'���TeCf>�`���s�Ο?7�ljE��P"LX:j<KGy�}��ֱ>q�O��o���E���QE5,*��I�I.7^���v�4?��muGSX�5��fn`1��=��l4v`��xX:Ͽ?�6��7�9�o{X��C�+�}�|���A�3Ǖ����Y�EK?�R��K�?8��V�s�T,���z�8�'K��l�0����6��}>u�d�����0���B`�̼[�v��b'���4������0�7yÎ�9�Ĩ
+���%���QK$y��Z�����NZ�O�ȱƇ����[�ၓ�Ә�H��G����ʥ7őL�9p8}Εj5U�Q���y����9����{��<\�_?��x�;T��x#1CB��h%ݴ$��K�8�k7��4q���Z��41~q�+�j���N諚�g�i/\8c���Ϝ?�t������O/�{��œgΌwGt��̄��é/�{U?>��)�N�3�lH�#}�3\�,�>��?l�R�]���h��M����5�A�&7~���3ܞ^�3 �����O��ɶ��F�)s*��!6���ޝ�8y�3��&�F�Ks$�q4�q�;��nH'�#�p�	��E�]g@��ҭ��ĳ��D����ծ�^�ε�hs=��o�2�!�D8�L���2Yg�R��P���"��k���ZE����c:�a��F��ߓm=m&i�b��I��Ξ>sR�K�{W]����{����m���;����r(�q8�q�K'��\s�iH�t� �B���^�g��E��TX�\32���P�)����N�����P�%���ѓ���bwX���L���[^xC�����ѓ�g��ٖ,�`
+���ܠ�D;r�ɶ>�e�/���n�G��������l��("�A�N(�k)|�頍��V`�"��>ai��-��y��?7�%��v���γ�r>x�_�1�D�譒,��̖=J�bE~��!q�������h�@o%
+���r'�&IH���f�)�Nپ����lщDsHʛ�Y�z��_����[�Ԏ[��$�#D��:��u֦�c�����S�y�7E���n�1l��X��Y�ŘC��Dǃ��ө(��~�u+��'���~�*��/$���ծ�����
+Y�87˃2t�S#�lK�h.)�>�����ʘ�Y/\3���V�eU�%2����������	���1oekL@\��2�,�o�J~�e�~3���<}���_��Ԁ�N_��M���M���דLR���ʶ~i��U6��m�K«4.��m&�:Ń�1����<vf�A�m�� ���Rl�+<�2���d[����y�)O����"��,��+[�N�%���ұ_#�o�}�Wd��3�N��i���gc��CE~�Bɷ"Y]�[�\�7n�X�*�z��g=��'��#�iM�z�������]0k.�����m6�K�!'��N1`�O������{M�<��S'� �
+��eB�iHﱮL\�ux��"�v���&.��K�1{(��u8�c��j��m��)Z�9lX�_�����_��m-��?���3'/���Z�`�w8���RU,l�9]2�5R�#�|o,���g
+�}�Ba�<U�?��3&� �<�_�^u�8���ў	[r>����u�h�xLK�g��.HE����m���Sϻ`���MY�,��,O�}jBkՒe�7{������ڦń�<���m�"$�ߖy�� �4
+jrE:|'��y϶��-U[ƛ�ϝhO�>��y���sgN��m؎�2�N9�;6;i��N�<���bd�}�R��+pM�v�R"��>�/}��1�t�m9m[{�-��c�"ԾߒJ�áߟ��'&@��b6B͒/'��bޫq�i>���A[����Aas]� ���?4�#A��,�ě8��Ȱ��&:��p�g̑^y���%�Td�I	P&=��۶���'�]�gϟ{礕�t8O�0o��}ȂHz��y4�s����V)���ɹ͖�~��j6sh(Ct'�dŔ]��k�9�O%�,�4Ow��.e�B�ӔZ�L�x+�lgO��lь����d����i���9V�p��m/��te����2A|=�o����������K.�q�1�3��֧�'�O���I���֧T�Ժ�܄/�>m��[����p�c�o��Y�x���w�0^u&�?��{,�Q�����nT�X�7��3|"�=f��Y�S�b;���"k��`�F
+�	�Cܢ���_A\�۰~zQ��5[�u�O�ba,#�a5��=HZ��g�r�b�/X���F�k�A6t޾�|qKs�~�߱���ܰ��#rp�׷IxS�5�=���_�ogb?���r�=9�%yr.���dKb�i�n7���oq���4��υ1���m����Y�׭Ϗ�����ӌ��?3M�&)f]�D�Z�a������4-(�d��股E��e�/"��d�Q�.�H	m�����mtgì��j� 0ι�����cp9l��U[�E��v2Q��i���^�?m ���M	~���&e�uOs�n�/o\nsu~�1��n%�9�4f�}����bSNnM�����f��L�RGQ��:Xa���Z��|ԣZ���Y��f߻D����A���m[�iOs��A���o(8�����`v�] ,ȭ��Mk����;��;������@�X�v��"��2�=�m"«����a\��f����������x�#A��w2T�Z[e�p���+[����#r���������u�;��񫶔���_&&���+�)8���h�	����b��[��!F��Aw;�Op�!=���ɶO�9�-1T�ơ]Wk�Po|蝬�4���K�e�U&���:�{��g���:�{R��[,<<d ��g��Іl� �������'9Q�16�C~��/p�QDr�WO�THC�蹻)[l���n�LOz�!�ڧ����X�b����O�g%W���KOs�fŽsw{���P��5Qm���YgZ���q��e���n�����R*W)��bf\�f������R3�W�C�6�`���\18�����a������}��M�8�/���+Ү�\c������Ik�u���"�s�ѻ�֔��@/j>��z[7���oO���x{��6�'�g��ɱY�>���)��"�@B_/R���i��"+M�Ȧ�p����d�-���R,���r&}�=k�nZ��B������M�,�/�2�W7J�[0cY�E�dk�]K/�et�p1|�w�kC�h��'Z71K�^βUaS�ڜ���4It�&��L0�B�rwg�c��C	�H�«�dʆ��\�͑��<����_(�۰K��'6�ub;l~j{����Uא:�>/X`�8�/^��z7��- SV�:��kj`M�����q��rR|O���cZ�i��r�]W�7ͱ�� ]"�]Sō�o/4�%7u�r�C�Q�Z�H{![\��Ůz�Ҝ��Үh����o���R��7טw��)��Ks�_����m�S��|h:Z^_��Ry���{�R�nС���O�̶�9�{|��y���&�Ҷ+�#T�'�l�[.�̘�-�U3�q	_���K���(���0���Sf]����j�kp"��,[(P+��1ϩ���[Cx�#̛K�K�&�kȨ�G�Z��i5O�T�����Y�C8Z���}�e~�莲|"��Z�Q�js��c �p�;FB\�2�C���n�0g���i����!2�� I���pJ��wߪb�a0#��Q�){�_f���.��ؓ��1��V�T�M/��v;�j�����#�^�bR#n
+ �~c�5\�@�/?Y�Oh) tOiD���.yk�g�.mF��쭐D���R�sy�~*-�F��h}ЁF�d�Y���
+p�c%*�fٶ���r�>�zv_#H����r"�|̜�+N�#�]N)jWz���mCt)�_c^��я^�~�|����!����cz�.9��K�M($��4��)�Bv|Ļo��a]u2����(�M	T�ƶ9rd9��Sؙ�9oˑML!�'�B����ӱN+�MЬ�v����Z�B�;�lT��0�����n��Cq� �(��5K���ܮ姨v�,�Z��9����O4����b�ǝwwh�>m�q� v2ɬt`5�.**��N;jG��i���e�#��7xEZ�W��l���$�����Pӽ�_*N�V���к����c���y_	��5�ܣE�%Y�����j��;�&K`K�R��j��	]��<)��O�ZWl���P�b��E��7EAQ�uf,�����k�P��F$��c0�f�W����p�ԂE���ܼ��?��Æ��I�̬K~c��=��Nn��[��lk���J�{ B���N1�d���?�9'DZ�r8��Q-2(w^�ggIG%yF�4M$1��L�`8�naxt���q`��ۭ[�@z3	�մ��P$�q����S�����:%ݖ��=��[=�j��w+12�#Bl���_{��y (AX�����K�|q��2�}�:���
+�H�B��PΒ��m�b�iv������d�(#X�@�
+ZĚ�7E�\����u�(��E6LY��pN�i�:��|7bt��#�R��y�h�[I%���l��ަ���=^6FŲ�3^���_�]�"�&�X�vS�Q�Ǥ�����~��tA�����qjU�p�/�j��XCQ|�$��A3�6�Pv`�������co��	8|��~%L���ʑ����9v����|�GWHq)F��I���3e:��b��UA�u
+�c��k#˦ٱ";�`3��ne�\�(XT�㰸�k�>��.��(S.�ל�E�a��I�x��ש'Fw�B?찌��Z��&̾�Kqܥ��C;�y����[b�(6������.�2ݪCoF[_����Q{�{tf�\��ڃ.j�Qq�kP�8g!X[�=��z�SP�>'�f�sm��en�}7"�lK�q;T��O~�O��|�1V]!p�b�m�����wF�l)���S���;Y2��꭛�g�z��/��<��H�S�SU�^;����3b����X�9.���;Jo���]`�����w���S�JZ��c��sU��@9��[�x�C��������iHAi�o˷7���Y�ԭ'��r�����m͚�VL9@?�U���J���QV����r�m�n���R��S�8sN��U���g��V���|�5�t�	�*��}���{hhZ[��J#����|ڥ̏�������LhӖ��YF�|s�Q_c������򢡻�,mS$�"�A��6�;�j�a�#�;ĂCL�?�_�$�[p%��Ǘ��D��X�f�a�ɾU���ȯ�dA�}~�F�l�zXL�X�ua�[�t	�b��3�c�WM��%*�Jo�y���=[d0sݛ	� �ٚ(נ���7e��D�v�+�Ah���¿ػ������]r�$(:&.w�l���Bǒ�п�����+�ʿH�fF�'x���=/_Og��0T�ܰ�gӾ��5��jv��w��Q���#��G���)_V<%]!Ş�l�`��7�-p�Z�J��RPC*M�R�S����Ӵ&�ïe4�}c{��Z��|2x�5.2�}F��^���U�B�J��K{�Ȫ��������@��-$i�Xڎ�~�[2�Q���g�!@�����aտ��:�'���?>��+�*�ݒ9��ɰ+3����$roU2 �����ڋ�g_ر/t	p*Ue��#O�no@�ʾ���t��!ִ[���vf��!��K�yu���"w�$�w�G&(&lF<ԇ�{�����I�N���o)�G_��Pa`�ݞ�m���F��e�KY6�Xpz�똵�AE)�u�y����3^�Q{�e}�^��(���9Q�?�6П��M��g�VVzνHs�����iI��P+7U �FhG�)�8��r��!�ƥ��Y�54��xDa�f˪�����)!}�(�W��'(�i�(���#��AKH�v�(8x���!�EhAlv�����(�@k���/�E&x��sZ�hVhg�пօi��y?�����Z�`B�d���4ȃ�;.yg���6��t�	!�%-cxM�Ș&#�,Pm%��d5U��:�Y$�&��g�@���}ᛮ�������XL�R��J��di��#�k���':w��b���_�u?B����u!k�8��ø�ϩ���/��"���iT~qQ��Q��6	B[O���X���������|����:��A�l��F�R����Pe;��5m���|�l�dx!bV�+�<�ƒ�~0E�oΝ��4��DB�bI6�br�˟��h�ȴ���3�I�:y���c�*�G������ƌ�}��,rٲ.�Duג�#y��ș��|���?�Uqˈ��=:�����tRށۓ�ǲ��aɡ��m���"�_���iW�I֦��}�[�����X���4~)
+�Z��-F����YLÖ{�ϻ�;�Ɏ����D�,B!�*�gb�����^'ܨ7��6	G�/�}
+����ܻn7��Jlg�����	�mf&]�;�[.U�(�(i�g�ڈ�˴pB�P>��q����lB�	9{k`m!�G�OyGA�>U�G�~�b8����T�n���A,�>�Y�{�������K�rT�F$?��d�j�L��b�1K�wU�%O2����N<W>U&�o{��iñ���A;�~ ����=LTKE���?}Vw��ct˱ۗ�����J�B�����ݖ5D*�3$��`�'�/���'[�KX���Ue�7�x՛򊥲��BFt���K�Ԁ�􅶌C�g93@oY>�dd��
+$���(R�����,߾yȲs�-e���8HA�y@#��������&�jݎ{�,M�7���BC\�b �}��x-�с�?]�-�п��05�'���G'f/��-���NY
+ekM1&9(��s��;��s��Ζ��Y�+�.�%�QXF�`p[����G�%O7�����\�?�d���8?��jO2pI�VzNL�,?��s0u��5�T0bTő��t]�v��YSᅲ�"
+�)�\1�V�t�F�U�]Ko!oB���)�}f�O�����)����ʹ�W�VUd�.�PD| d�D$}w��e§��9-/��#�
+ղ'�TI;�_�,4��Ä�| !��e��
+9}!��/<'��'h������$۞�Ʉ� �了��4���f�=,h4�~ha����c�[�`V�vd�G B�����"�qb��9�)!��8�rE^l�o{0�jj�\n�:�� �J�΃�p+�}�yI���L��7H��6�-���bP9a>� �D�*uF]n�i���)�Z\TF��Ei��V���JB�Z� ����#(�zD0[j���?�]�����z��f�˟�:�L7ߏޔ��m�^����g�j�R��\��{��t��FƖ��_)qA:�_�ī�ߣW����֬Jһ�L�
+R�������4� �������������:��ݒ�_�t�
+GheQm�b��jt^XH*o(:�u5�;����S�����
+����K��lM�ը����ĵ	� �k#����5n$�����ی���m`���6��u�T�YWL���:�����)�� h�~��w����u���y��,Z/��������#����������"o����
+��|\��v��`��uE$˧�I(�Ϛ��Q�����o�3��N��|O �Ts��E��7��z���pKkޱ��L�inzҥ~4ѿ."w������t;bi���*�"~�ѧ���C�U�����y��|�Z�������Q/��+���*���?gYH׉.���N��&�+���uX��:e�`�CmP"�1���U��ǸI��?B]Q�"iP�Rs�Ǐ�ۼuí�?z�=ދ�|B�j>�L��f�45�)ҫ̸�(K��	=���&Lw�cʌ'ÀY�K����!�{�����y;GM��0�Dbzx�Mn��2��>=Z;�|��s5��"��Q���X��*ײSe��*@��Y�Z=d�j��K ����05��k�8��#��Kp���{�7d�#r����0Q3P4��m-�!d�[ ���5iE�FkEI�8���k88�u��\���;�]sNeA��N�E��?%�����xu�����
+���D-f�j��\������Z����9�+��n`���Zw=�i���0����N.��/M.�l�Q.8U��K4����'ҸM����w���Z��C)���s>>~(���we���0dm����&$��p��� �2t�
+}�S47�{�X^ŧ��!�K�w�jx�MI�	;@���}�;ѡő�$cQ*EgM\�x�*�a�z��m��Adv�@*�E=	��[fq�@s�u����e�:����qF�����>�]��M1�P���~��l-�v�U�%d����^�<Z_RǗ$,��@֡
+�/����{)#7�H����m�ϑ�[7Dh̦p����I��yv&�=�&Ν��:��R}6�X�6W*���Ld�+r�Z�c|X�}�I� �w��y������ ��H���f�LV�n�-#����D�Q9��[Z]k= 6 y�u����
+XA�%�k\�<%�Z�jX�Ab��I�v�WGr��n[gX�� {�si8��^�a�n>�������h���W�;�J-HԢ~�4����Jm##F�t�V+����t:f����{ S�dVR_�4���A��_���0b���@�v?*��yBb>O�yV�Ǯwl��ՊUT)4Z
+8�`[qD��䍛�gl�<A�%l9����l5��{��:�,��m�A�)!;u'�Mx�Q���7?�Ӗz:U����bF;�Xx��ǂ��]�=�ڶ�q�ioѺ���[8� ���D��2��KmӜ���W��/��N�s��-@$+)��
+�H�&�u�m���"ٛ�	*�F������;���1�?���[8��N"6;3N��cn<^�q�b��5ff��NW�91�\�s�.�:�|�yNvM�0�b����<��==d#��a>��8���~}�S�#_�P��p�ػ���x��-_ݑ�:�c� �+�$�ħ�
+q.�3qӁ/Ǟ�i���&�:�W�m����ۺ��D���z��Ӗ�3eR�
+�*J4�,~�@��ܭ����'�NW$�9SU�(�@����<k;d�K,�؇��E��cv�|��-i�E�H�F�?I5\z8|($)����ҡ�JY�Ju��gh&H���O�^��i�糤v8�	��+ҐdsFy`�va�nC�Ʋ�mV`�X�����xn���6P;�����!�'��4�WJ('�O�r���^��i����G��$G�.��L��isI�9��r+��[T�ط������}VN7�M��^�&�o��镃0	Un;�"�0%&��4%N9W]Q,�$$�2�,��u�+`�L��|)�b�'k$�/�t�0nH��3��EI�=���\t�ӛ�7�SٌN���#��5�/7q�_"0s}���:d�D�K�3��WV8;�FjP3P�2k�v"���=t�H�1�o#i��<1xF92��2]_��p��渨�+��lc֙�s�R�m���f��X��(�0M�E��dH�P��.�=��1=�γi7Z��$
+�u^���j�3��������1���X���[�����֧�7i!ב�W]����, A��{��6�ܫˡ�`������e 1�ɳ�̺8����jR�s������D��t��_��J��t:����!C$�:52H��:�:��I%`q����q�:�V�K���Y[�NvD#-9�l	V09�(�f�^虝�48$e��,��/jo���e�-���oGC�O�Ojuf8�pf\��#}n�g�!�ﲑ��d��Y�"�3(�s��0��M��QK��V�-D��Y���?��hdpW�8��y- �g�cS �]C5���P�I۞��^|˫�Y�j��:՚V��g�Ҕ*��j3�����O�@��
+%f�g\�=ü�C�Q.�aS5!
+�i���,1 ͝��T$g�cb8,�J���<}����Z�?k������ԡ���?��B
+�@D�}��X,Րjk���>:������Wq��%У��zd�V��NˬW�����Zǜ�<��f^�m3��K� va��Vs2�S��NvE/�� '�?����F^eZ�{�O�}��p$/Uj��P���	�Q��F�"�3gPQ�,|�z���v*1��ɉQ�\�Q_��xѫV�܊�%%
+�V=���(�ӕt�<�]&���>�m�e!�$�ƺ�����.�C���U*#�&���g���������ޛ��P%���CRf��c��J�ʐP�-kK�CҪ��\�ZP��V�#���T$���%ɦ���Rs���T>M�U��P�*���F�T�5O�Lչ�%�%"����N�;�$(�k�J�V�OIާ�ɻyJ|N�$~	uc e,)�襆D�"�+�iѶy�};�>�R��ͭ��i��R�M��<���V(���2b�~��Š�ݗ�RDV�I���,r�R������;&�[gs�KsnMU�T�9�_�)/P�J�p��;x�m�H������ ʡ�UX���?���M����d���u����7��B��ıձ%��U��]�Pe��TJ�r!�-�r�V~���˃#�w��]Q��%�y]7Sq����9��-F>�ɕ��C����Y��逓� $���/M�Jcnҭ������Ѱ���)3΀Y �Kn�m
+�D�E��&^ا��xˡ�J��
+�� h���'����eHp�0�f׳k���d��V�%��1t`�H"-�P��	�<��g��C���N]( �.$k�7,��o�`I!Ӌ��(	j]��X�:�$�[aKd�v�ʀ����K��I���(7)� +�����L��?���ȧ���K<�zW&]�h���������IbX7����av?�����ů�m�d���iTk%Q��$ݹ1#+�%�mf���dڹ2
+��&����TB��#�����Ü���n#�!�<��To<�椵�T�\�Z8���锵���)M��pOw5nV*t����'c�V3���QL;��ꥒ,�J�n��wK'�l)p� `_@yI7#*2�?K��OB���	)�鏋�?�ih�?�ԗ�[`Cp%7�n�G�*�L��J�2��(@�lOZk*�)�u6�����)�|�hW�P��K:��x�r�y3�Δ���.�A\sf����ݫ�2���eg�
+X�3��>�;�){��B�p*E5<�E,��2mT�?�	؄#��	�X4��m	��Q�I O��F ) x���Js/��{;u)���d�Ddw��pd����%Vٞ�q��A<�������F�{���*����b��\����&(���z8��tF(G*�-ق1�	5�������My���Wd-�1��x"��U���)�G��>�p�_�����O�
+��\.
+g�f>b ��(L�ySq�1��^�mz`�(9���v<мdA�y%�zF��o�l)��/�nb��]� ̘^��.�
+x��˷��� ��m�%�Re�(��_��i����Ň���o/#��&�����*���7���$��J����_-s56��DQr���L�_)կ����"��4r�y������E��F�$���%�pewL��d��O ��P&��@�q�	�'z&�K��!�����(��/��I�6�h���}��æ�6��Gh;���[���'��� ���H<Yv�g��-嬬��
+��d�5^f^�	Ub�m�p@,��wC�Ro^
+:?��U�碇E�x-��h/�JI�Rd�X��sQr
+&l
+%��u�-p�퟈��k�5�/ʽ}{�N�d����
+�h�)�M��&f,pn����6U��u���#�+�@�k��^�Z�Kʉa]���]��U�V��:����V����0*b��W��`:�Mғ4\�O�([���@m���گ�O�a��P.|D+���EBK�R����}�
+	.qXm �ҳ�s��{Q��� ��릀��:W� ̒S�T7���ΆT�cb���F�#7~�	��c Ym&����_2]�~"�3�su���	$!$R�8eI�n o�b�-����l��+�Zm9��l�����q���0.G-E�zszum�)�*��>*}{�q|Բa���j{+���a�]3���N�y�޸�*+�����rp2��S��p�/�n��ӕ�`��m�Ei�xE�G�,s1o�-�9���֝�Zݫ.����m�Ӣ0~�׬>�Q��%����rk����C��"'��!N��/��<��熬�FJ�JB ��qQ�a�@�I�B�󡺃1��c`��6W'(�����i�:�>�w�)^����skB��c��E�1#R�2qsCif	/���RGl�U�\�љ,)�B�*V��Ѹ+��B*��LC��t�%���,;ɛ�sa��:�p�ު��΂����6_8eQ&\:�j*`8���w�ٛ�3�ֲ�._�<}�i"{f��J�c��{J�����noI�gFS�u.v=#&���Bu�:������ s�Yg���fN-9��H+��]ѓt��41����y��xH78Ы녷I��$)��$��o=&FL������NH?݁˝2�˹T�j�j.�78��NE9�
+"�k��d����3;��%��{�xeInIX"���H�q��z��XU��
+�{���������Bys7�����.��F3�ծ�|'V�u?'Qe#%�e$�D�[In-���x�Ti�\<u�3Ғ:)���������CB�G&YX*m��6&�+�m 1u_>�,LV]�8����?'�=Go*��{ʣ��#�ux3� ��^��q�@�]r%o�a���s�(EoCa��3qG�B܇�P7UlB��
+��ۮ�i�}�D��.<	B�!�e�ywW��G���vH�-����Sg�s�qu�����(�!1���������.���0���i�iޔ's�(Ҽ|�o�F�pg��K�v��&5�����c9�L��RjP�L��$
+Cu!Y���U������h��&%@rw��TdSC�S,�&ՋI���q"Uh�Ý�}�z^�4���h��D�o���C����%���d�J��	�K��é`��;I�M�������,g+
+�[��(Z���s[{I� ��覷C�o��P�Gե9T�Pݩr�R�̠��)g�eU��!_��)�ݒ[��8|}��M� ���� G�iYZ�m�Y8t���}��nXǩ������lm��[%�~'�\�K�JmQ�c�T/@Y��l~���רK�C�m��d(���6J�`Y��t /$CzR=/9��Ќ��'\7="��T��{�[����e��4����$��Q��8!K\Ky�j�o0������Eik�9�5Ch�U�:S������}����
+�.�u%Xս.$����[�r�0��	�L��j;,�p�	�ֿo��M]����?ah}����A�6�τ�����/���U�� �^y
+��H�Pk}�ro�Ñ��:��CQ���%�GH����^���^�*� �5�Q.�gQt+� 6[u�]�.�'����º��>k~��.)���b6��
+�=��{��K����}���_�ן���3֐��b�E]u����x�P�g?��u��a"}�ȷ���_�wmEİ����W���'r\��ϮC����ɂ���+���]�����\�ű���HAƚ��BbԇR2"5Bq���(���o��F���` ֎-�9�t����.(|U��3�B������qs�SNrm���̤�kE4i���0ɏ���#����/p���8e�S�,������`ׅهC^X2���Y\���|I^Q��]��*f�:��[��'���� �	��Ji,zW����G�9ONb�Zg�2��(�/8�5+7Vj����`f�|��Q	�1�ꦞK��g
+F�]g죫fH�54�vڅ�i�H��h��XwRaSV�i7Z|B�Ǻ�j\/+e8�;س�+L���#2��E��[i�9�����NW;�H��Gg��������M
+$I�w�^�H��$��DB�N�eg-�?{]E	�7FQ�o��Ӛ7��m�Vɖ�r�=,�8��;'�M	�zb�!�Z$��(%χ{/U)�NW��5�Fʮ8ۨ��:�b�����;��;7�̦s�url,�6���Kt �'3P2�1���l-�]ه';zS�'�-jPB)x�,��0�`��)����?�m�OU�<����o�����1���V��<�݀��˞4!� Cy��t��.9��	ߔ�Wa��*��Ci�2Qo4�d #h�G*c�{d��@3��a֍��3��I��I��-n$Aؐw�����N
+�݇�1�VBU��mA$��^�8姤\(v��Ho��aMU$F��d��)_�YB���&�(P�Ӓ���pc�tX]w�-�6B�Ohq�6��$X�W�.I:��ϞH����Wd>v���:��5�Mi��߽ņ�gJ�h����O�Θ�}5J�/���\iJ��@�T/����@?�b	l���w�riΩ��*�Qݎ�y3^u���TkL�8��|�)�g�%���ҔW94���������ti�Q�ӛ'ݙR���oK���r�6��<�Ն+��E��qD~V�i�K�1���'F��������7�2td6��oU�TMIȞ��<�hA.�xK����j��ߕ_	ȸNk��&W����g�XA��>�kl��kC��c����XD�������:	��#F�[�3��D����]�Kv~|�i�md��HH)�vO!���Z]�_ =Q��\}�o����ש�;s�b��"l#�mW�����|$~y�(*�0���b4�ٗ!ynM�Ob4Y��q��v�n=H�ي�=`�`�`=�<����Eg!Yrw�m_ziߎ:h�1�|��B�n�W�;߇������/�z$�v�^���2�w�ڌ�+61#�F���(�_�h�EIX]0ڸ�(�E}��G����G���aY�7uR$�l���5{�C�T������
+ژ�l�n�ߖ��n��;��2K;qW�M����wȇ#ɋ=�_��0U!�@#�b[]�㚫=ջ�ؒ�K����AݖB��4yft� ���2z5��8�Nv4�-����O�)6���#��;�Eqf��?G�T��$2���	��\���0��� �p�x�FةT�f��ր' ~G�ps"�LD�x"t5�+�� ��%�9`����݉�K�C_)1E�n7O��yU�c��Nff�dؼ�Q���d���B�Ϸ��߾�93iE��$N�k�`J�t3����V>����j|/�74W�7t�A$�U��Q�U���g��gM~��.�bE(�4�5~�0s��2����H?�[�m�e�el�C��R��h��}
+��3i$��	�gC��~�v6b{,g{V��*T�e|����c\�NA%Y�\��[�m�����}�"�ۺd�j��J��[-ml�7�7�ﰣ��IX�d\��!�H���J�f'o'��� %���Nʜh8� ��"�Y�~:�f'�P�a7�N�T�'�0�s��C�Y����o����*�����{�L��������=X�0�U�:@K<����1�k�qҏ"v38�XP *����j�힝~S�u��gze�Fj�G:�]����bGZF!����prU��\	(QI4��la���
+L��eXlE��;����z��~�D�1D����VH��1��r1d.!��W�|+]ˤ3�I7^F'�=*��j�*����;�4���+5#t��<�0�LV(�Z���`y;�L�N�Q�7V"�0���@t���(�$+.R ReKB�`�zSY�ik�,�e�ĖV��C�}��2�Gx6�ܥأ�㮓�̕��6����^?+�܄�v�ǟQ���f�f��P�N��s�k��I,���   ���}[w׵���+~҈�V�.H#\���6"�������.�ݥTw#�O��l��w0{8�x��Ȳ��G~8B�/����3�\�Z�궪�d��H���y��<���-`M�_*\��X��6��K�V�=����Tt��*9�� M��Ou�-��G"�Mz��������0�ۼ��'D��3��>s;�O#�lY���JʇW���� cO_�c�vET��ك�V�8��VU$�G�����WFFJv��K45�L+�7m˚3��&*e���f�F�e��[�	�9������(Zy�ʚ�4Oi5ak��X��_Q��S�G,��Ǭ��@b�����MY��5��xx��T�cJT$���i  =w,D����%��ƣ������!7a��}F�^d�R]���#a��&D3p�ix�uUBQ�p"tcń|��������V�uv
+;�b�bv�^�aY��~J�`����1��O�����/
+�׹Ռ)��	JE1E�b>�,�E b��3���G�h��rp��a%�Ǥ��:g�b3�]-&+J�����h؏+{��WLy���y�/h� ��<S4⟐��(�*z����];���ނ��uD�J_�_���b�R�B���4�N�P[��o�X�a֤}�62!E�k������rd2�]��e5*�G*�ġ����z����QE"��r(k4�WV�;�O�L -���j�e��E戙_�D���o�ew雭�u- ޜDW!��9}��3��y�m�p�[&ty���
+�< �b�ǖ�à"�l����K�I�]�u5k[��@�m��6c�b���jq�Z���዗�z���{ͦ[�.<��?� f-F�h3�K^����z=��c���&��-�L��t��Bd~����B>�XD���%���7��~�@͖l�M� |FT��Z�:�?��A�"�F��Cƭ��tfA�X(U���#d������?��=��ӘLB���*dY���H�A�Z'�j^ ء�ںY��ܬ��_�TF�(�T�V��Wܿ*�'^ePJ՝i�*f�J�j$�z���𪼫�-K
+��J�ȓF �D��ÝX�t���@�Ri0�ĒE���4�N"��m��p˯�
+k�Ĥ�}9�1��M�Z�LN�,��Px�|:=������e��6�}��آ���Xr�F�.�i}?�]b=s��4��+�n	yu4�^���v�Zd��dH��G7oS�D��>)�{�6��HQ�r�v�&ar���J���W���;�E��	�~	����_��#����3��r㼜��b��5���y�'^T�ӻ�w�ױ���,PB@��_7�ؠ
+LQ� �\���R�#'�����ߪ�g��'�q����=�	��l+7����Q^�-�7şK	�%�\�o\f�LU��z�ei���3~���8�K^m�>��8Kޠuev�:.�6{S�QD�"y�`m<�12ʬ�&b�G&{}R�vZ=7ה�O0��%�ߨ�p~�a'����l3�9�-3����%���{�L�>E{�_��@ 7?Da(�=&w��.̺�K7n-��
+���mx�{�p��cL?�[�S^4,~s��H�L���R���1�:�v���]��9�p@Z׹�WH��O��T�'��9NBщv���[����@{����0zBr�|1j��K	�33��x��� }B�1ª��EW��{K�Y0X�Y�&&���;�+TQ mB՚��."<r�q\�]Z�^��̔rG�Pٶ3xs�,u[9��?�A�a�%`]˝E3k�Tk_Mԣ�E'���|���"��V���*��nW�W�\f#Z�E?��� R�-&TQ��(�)d�	��yv�����z;v)"0y���iJ}מ��y
+Y#�"��W)��߉X����0�~���P��(_B�؋�WÂ��;|2���D��e;$?K!fHB�#�\131*=�ɸ!c	@�.���ɑ��י%
+r��L= J{�ӑ��'
+�xJ%�c�j_����Y����@o�|�>��)�y�E��t�_%;���Hq�M6��3Ц�Ϯd�`m��������	�=�b	�+D�����
+�}��z_��	ž�TAc���;*�m�**��S��V��DQ��D�������V�@��4�n������D%@��E�L^��J*I��ͼx��>���]9muxS��p��=~3��,�tf�]n��՛�b���T��P&�q�ca�i,0'�-�)���k� U�gə��S/����>�l*W��+���I�#?	�4�ѮV;���7�R�G2��4����_H�%J�R�%�(U�C�Hw!"�JI��d�n�A�\`��	�z&�Wv�%�B</P�#��[wڬ峣��h�?���cCl���>�
+�s�P쨪�=5A���;�q˲7d[��lWV�v{���os��F�_h�[r]C��D���6w��t�6W���k�m$�ھAok�~�X�zW%��ȇ�p�Q���m��(��N�
+���劬�#3bQ`�������N�J���S3�f{�D�2�=�"~:p�h̺7�����B�śn�%(�� k۫m�sK�-���5���Xd�l$����)�d������ʯ0A�=((AP}xp8ޥ�oI�w�b���i�Z�?�]%���( ���(���F�����!ؓ�Iyk��	,�(6�#BQ�@�h�]E�{G�#����u'�MA�/f3�����I��������im�e"ONDNභXb��$���yژ���>���\�{���9��=��EXFo��{�L�_Bϐ���\D2R>�2��nmG��[��hj�9���n��W��҈ix�_�����M�UR�nF�3d�|NQ���-f�im��k��C��Z�}U�-�&��n��d�C�(l���)����[B�KW��[7�\�m����;�2u2���@ ��pW��D$U9k;��6i�>��yA�v[ɋO�c
+Y��	b��i��v�u�#�G�f]m�J)~K��{ϩ*":�!<w0R�/V��5ښ$mR���L>껲J2i&C�g ���w�{$�}�%W�_�^���a��݃ލ�ߌ���&�H8~I�` �Z��Zr.��j�S?q�Q�FQ����*��&��1>x-�+"j3�*�6�r��!R����7����������L�K¸vh���6��#�d<�O|�l{�֘*�^J�l�\pgɫǶ��cn�QO�;�.uk���s�M��h��oc'����l�x�ic��<c5�(=5Y��?�����W��k�?�9�G�H���-fA֑nh&�n脳ԭ%B����@7T2��5����M2T.�P|��5
+��u��4��-�&$�k���r+K3%��פ�z����v(�a*T��V���, `����},��I	ۏ�$�a��ؒ��j"�3P'�}�3���@���-��]�ݿ�T���:4�)�����N3!:����
+*��0p�{���c��dhI�CZfl��3�}�t�;F�,8�t����0����Hs�u�Jx���4n�cy��j+�-�|�}gGsIg`�	$�5���М�-a�I�CC�V�0���U>JOL��'ZfO��}_._42��Wa��Te/;�s��(�U$�;�F�u�%$��k��Ez��L��ƥԀ^H�9��U��v�;���HJ�d,r�Q�_V������$�4vp��5�S�38��k8�S��7�f��$��]�Ny�(MPz�� ��=�վ��Ҏ���׈�rK���A��+�x�1�_TY;�0a�yJ�F|�9�<�?࿖��O��)��]ݗ���ט���zI��������U�����Т���]���mg��Zt��+J���V�V3p,'�����J��w�wS�c`�T�O��>(�8���T�qj���H�m��ڑ�ڍ�S��&w;wC;$��*�dԧ���e��q(~W÷�"�ЂT%� �	�\O^37�=�X��'9p��m7��[Z��jB�榴v�2'�Ka%��Aꪼ�c����HbQy�T�0�c�XP|S�٨J�~,�1�����ҋ{V�L@S���CWU�Ihj�����
+�u<R�E7Β8@f�������U0�T�����*�tw�'�V7 y�d��K��Q����0o��r�_G~L���dޖ���q�\�+�U�I��	�%[��da�H�n'�#j�)�w��	���d_������K-ua�1����5�d�|ٸ:�_�q���+���N��
+�~gX��ݯ�\'F�GJ+i�(T��L�kt����Q�/R) a/Z*7�#s�R���3�TW_ѝ���5mE����\���򑫍�=r[����~��ŦmrRV�M!z����7�NfC�N�9�0F|WI��r�m����a�p�.���/S?.�QF��nC�5|مV�^'L|�-9�*����Q�~����C�C�6ϭ�'�����v�&�.y)�~q��u�C���R�/z#�=���6'�yR�;r��z�R��!܏!2f�P��K6�/iq�T����r��KУ%�#�Umn�Lw%��$��lv�q=����^l=6e[Y�`��36t�2Ԏ�%,ˎ�$�%��t%����bLh��=�����RԗN�k:V�jJuN;���u}�]0���](����~/lI�e� �D�{!����5ة�g�
+M����DD+�smO�r�ܾ�1q�M���{q�[��&"���9B�뺔�T����a������/eQ�t��u�n���w�ٟ�Cb���ᕄ�*��o�4�ᶒ��7��pL���s���`~�^u0��i�L����o0T\K��ל��l��	��Ӻܛ�F���Ȇ_&��9��|E�fh�u�P���(=m�5���N�i�ѳ�}[�Y22����#D��sݠ���[HV�����bཹN��l��-ۭ�~��}�N(s�F�f�e����5��r,A#uKJQ��z�7�&�뿕�j���Q�����ж(��3��,��!؜N+�"�D�=L;xEХ��L�$ማ��s��i�V�u}���-�z64����B]���b�+j3����&����5�n�AF��e��-��Ǟd�΂,]ڔ�~�Qc�E�j��:�����N�7h���yӍnm5�W��mJ+n5w��D���bp���ԛD�����;�[��񦢃���� ��>=�(����":;z��AhQPN�sz<Z��)���Ԡq]��mh����dv�L.��-?��%��k=� PJ�`�W��~�oi�����_��Eğ�{\r-.���<2��Ed�5}��8̦��S�|��O���$0GNJf7ɹ��&�\���r�b�a�J�6�?��!�kZH��I�9�\s g�7������	���{�-�����ig�SOT���m���{�ڰt�vJ�X��N4�����g��k�K8<<����`��B�{K��\mb�-�7�S�Ay?-bcײ�7�y��v.�硊�p�i.[XY%��i��G�Sǥ"v�L�#�$6�3�dn����0竢�H���%V�ܖg�C�5YwWTm�Ko�"RqT���{��׈;�~Ak��^�x;37��9��Po.��9LEb�浜x�	�Q����t[Et[f��|������i���m�D����L�ך��VnM��%l���dk����%Q�i�z�4�8�&E�����ob7�,wq��x��t�b���x���G���n �Y*`�."�@�y�3��|���d��ݙ6�؂G�^��t;�,�)���4ܶ<�{��Ӥ�w�݆��y����y�Z�.0�΃����^�\w���.~�N�u�?��Y?gG��r�;!A���!����8�͕Ot����2i�C����o�Ժ���¥�_�d�Oc��D9zp\St����zu���#� ��@�e����e�����!Gl4�(k��;�1��A��+mE|Qa�l,w��i���xI����6�s�I�@7kH���wזz��_�W���mu،3������������&ۮ����*��ba��ו���e����c^x�Z�.�J�o��Ud�.�j�g��A&������ �|Q}��G�.Q�Z��U6����������WW����F�/������ص��M�����h�M_��Q�ԁp�o�j�������Cg�x�F6i�0(���c��B0X��=:��:�w(𷗄���������x9[��T���� ^eT�2z ��2T~�r�-6�m���Q��m�������W�tZ꘿�`�qLPǫE�T3V�2�by�iiK��i]]�ֻ��$Ş��m�*�5
+�2]�ޗ����U5կ�g�U�,�>\xx\�n��Q��w.����m��8��z�Rc���?�:.���[5'��,gЎ{��ח�Lp0j8��/kF�-yY��K�0��!��Ɛ[x.�&G�|8T��e�d��<�f��o)��0���tV���^��5���pm���r��ԹS�,J��+�*Vk�M'�.R��s�9��&�wsŪ#�R�x$7�i}lf���5�c�X�"<Yj�W���_U��?%�Iӱ/1���f1�M�o[y\�/��p�۸b��r���s���t��Բ�腌��m<�;5b��Qh�k
+ 7�����X����ƞH�}Y/�]$��j2?j)��k�������J�\��hcð%��n��n�%���W5HRɎU���$(�|�Lg���Yy9�s�ܞ����&��di��6�Up�����H~葟�G�Q|��qcK�b�	qe�N��dU�Ē]Z#EObWYν�L�xӸ�+;ޟ+;^�+k.e���X�ђ�f���VV�>�6�&nS6�.z�Q綳�:���g��.5���"9���C��x���cRUN$ݵ:��ge"���e��@ͻ���d[j�C�S�R@z[�*cV�d~ZK>Vj@9�fo�JII�1MxOd��Hı*��5�{�5-�]�j�d~����ǂ����3����,g�.��_�8��&��.���XJNx*M;#�`cC�y[* ǭ�U`|d��i}�)?*�-2sB�5�+mB�d{ȋ}
+j�k*xWY[E�X7���@�ܡ�CLs�,=����d0::b��U�jЮ�Ю��~tZ8;-31O}�-����������U��R�V��K~^b@|��c��<^V���x��; i����4Ȫդ�E��2���/H�Ӧ������Vl_��W�.u\�3u\-5u��Δ�%UTSr�<����t�J�-O�+�o��j����V�j�Y�/&�E���ZѿKڨ�}ZIߕ�v`H����{��ş�y}���R�ϱ,�PƢ�����$�Bu,��5�U�jtּ����Q~!>��䞱�ƍ�'�VRDR��<ѧWI�k�E/�RjmT�;׌�{D�]�.�HM���ń-|:�g�@Ik=e�唹�bpY�͏���Ɍ�r��e���J��kj�:b���y=R��j�L�'�X�%ڬG���ک#����wR�׆VQ�);e8է.�*UX�r�����K�R<�I�����"F����U�8��4����LPS��Td,�WV��L��Ah��Q�hԡʰ��q^Uk�(o̸2�@yYԣ���2��y��`k��X-�]�`���n�X��Ѥ��xZl��s*����q��d~Z���ϟ<�.��!�c��"9��We�&
+Fxi)GK�������ܶ�7"[����0�U���6d��7�;^j �P5cYގU$W�7�*�<?߻ߚ7�Y�&���_E~ZՉ����i7W��e�z�,+��ٯ�b��������Kf9/"��bGܛ�0���:��\E�G���Iа��b�#օS�w�UDe7�v�ʩ��ϩ�,թ5��X�q?Nm�:�,��N�S;N혽b��.���y�⼾��2��7Ԡ��me$�h��QVa�j��d��C��a���g�L���F�/f�&p�"������1�r�+"��hI�KyS�dYM<�o5�X���y��=Y�!��w��y�F�j�QA���d�M*�ً{jqB"��"5:�?����r��Y�XV'���|gb���
+�OX��-k����/�V�i�d'Sv�eU����caP��4������z���R���ủ���e��:P
+�6�7�3��6�?"�MN�z x�����g�i�!aq^��兄����uvd�I��2�j2H��D8(u[-j�<f�(��;%�R���#v)�qm��W��7�K
+��l�1~Z?��M��$�J]%qJ!��03G!�9���~��-�#U��-0���/V�?����&/��`�t�y�*�6���˦�$"����7��"���+q^���X�P�0�C1���|��q����Bx'e~���Uk�����8�������P'�KY�1�\�p�N�n]��'�8"GXJ�w,�_�Ȓ[�Ʀ�j����%�*����:ׂ0��\kEYI�v�^D�>>+��J����G�g!b�BIݬ��I}w��	�[գ񱷴ϜRj9,t����nzÔUm���T�!4��l�=U��<��3)3����$�s6p�kɾ��*i_���V����9*"nՖ/��+"^f[~��>�+�&v,q��9��cd����XV4�~f��/�o�Ͽךܚ��f�U<����<�L�ۚw��:	}�)Q
+����bǝE����~�>p��$2џl�3���$��K���/�q����ePh�������X�0V���EsO��Q4��z������¸��~����Ak���L�9�xQ��u��	�Q7^>�7��}�x�m��J���r	�!X�Yc-�p�t��I眠��Zb�?���Y���cu��b����5+q(�
+[�յ;;�ԝ�_=+�7���սg��4;�,�l�u�R�䅜L��
+����sݖk ș_����O�[(G����^Mw�ZNk�K@�-@r"�8�n��,'��y����-FZ<6���#��of�D������0
+
+ܜ|��6�0*����5��8��9^'���z�E�k;��O��OF�����bb6�������2[h�K�*��w�y�v��;�(�
+{��k8��4,�"���o��Bؔ(k�q�4_����͙krv���7���\r݆ך��>�5��n`�S�R���	���as~ \Ш�N��^�!��:]�J���f��B��?N��|>��w�leY5n�Wp�;��֮��_�̗L�`��q�{[ �g����;rx��R���@������]N+&~>���^���!h���6�ut>pʱ��E�L1������̴/�3�����ɉ�f����K�0:����AJ-�B�]���}	��_%v��tkΌS3�NH����?�`x�;�@�,��r� �"�5�5�5s�:4��B�a���h����]������m��Ɇ�yPF�Ig��H�N�x	���	����ܜ�e2D]z�սv�<�]�+p�i���p��5��U�ظ�i7p�-1�;Mx.	|$�ンMf�~�����5�G�P��.x�NlKXy�i�v�"2�B�jl�B��+���L2TN��Cm�K�������b�z�v�N�k�f�u�����e1��je�D�<�R�<+�gP+>��T|\Yعb��c	̓�w�˱cŽhv,\�$p��d���A��i'��tld������A�0��_��[jd�YI�5�ND�e�[�^>�q�rd��8F� HM�Z7vy��wg
+�Z��)��>���#m`Oy���Ѽ�R�r�\B$y3![��Dȱ���4�t	�?Y��J)�����H?�gsy+h��Э4m7���N�u/�^��_�\�uə!�r�e�6�'&W�_�<� ��1 �
+I���<i� ���;��j'���u�&j�).�{f6����'U��?��zϖ6��A*F���f�uڦ�A\Ǵ�����{���Ȃ�G��y^A�_�� ��p�~���Wcp�4����zP��jU�j슣���̷��B��(Q�� <l���]B'԰mNx혯4�5f�&zNx3 �I)�_7���\k��d�)B�ɯa�^�'}I��f����SJ�#ҡ����i����1��c�9��㛯-v�1w��\*b�d��g�? o�u�Kq��&;��v���kc*��,c��^���e��d�}���L�^��QA�����@<#��.k�{�i���XL��n�H,6��/��2=d�k/���Fh�`�Dy�2��y5Q��C�a��E�iͺl.���1�?tn������h��`�2�`�����C�����R�p��F�&�����Y���ܑ6��Y���x䑄�4j���
+�qv�;߅M[�3J��}��}c����cU��َ?��CK����θ�N��d����f�� �7\sH�u�S�yH���5�r�~��u�g Wg��/�X,^9��;��>��J�=��_CA9�t)J<!$тF�A��^�ldu�E���P�)�+�^�ߑր�	�)����m�����E� ys֭���tw�kAvl�c~;9�#�	1���Z�Ȩ�J���0H��dW����R�z�w��巆/{~�^�c�.7����5�s�>�w.�r"��g�?� 'q�컙��׆��CW��`�xh��Ҏ��͟\|'�)p�>�ƫ�(E7�ψ��~<�K��RρW0��S�#UV>�@�.x��心��1��j�.R���M���O��S�J_�����EKu�����N0��#�Q O��.r	١���\e2��X�|+�z�G�c��<��88�}�\Z���7C�< �b�-�ͬ���p_��'�V{�<�����(����%v��Ѡ�l�Ar��>[�~�@ٜ<�g�����Mn鎭��f���K��u�ee�)f����!w�o�u�<V�=G�=��$WU!�&���8�0�}o����0)�A#�2v�f��iX��i�f���av�����hsƭ-8%���^���f Kp��_��,ѠqFٹh�Ib]u��$���m{��ފtu��m�g����l��J�'���'T��w.�$(�N�,D���Z�Y�h9���q�����3�|x���O��)ǐM�Y����u�z�8*+����)�Ykl�$����0�A�k�����j��H�#~�ڿ��ߛ䈣�ؿ��UT�O��oR�N��<M��\0~��ا�].ޮ��_��/9B�+�M�����
+�֔���\@~��3S�%	�c�"H�ϙٌc �N�b���p��g�f]|�n��  ���E�Ƴnc�G�Z�z��ٺkز�[�7'��1�;�f��o��M�f.�"i�]���m�l�4pG��u
+"a����[�����86���W����d�%J�{B5_�dLx�k��פ��99��6��Z�
+f�v�%װ�;3� 0���|,���/������n����]s�S�	�� @N7p1�p�Vb&#A��E����*$��u�a7,��݆�I��g��G?v��@��o.3����*ڕz�j���*p���2)	�=�Ƙ̑��8���&��ٍ���T
+��m�sɩ�h���k��@u���/>���tw�^s/�*�c�bS����XX)���1����?�{B�5�9�|��18�a�]��Cϙwc��(̬ន�A���v�Yf�ܙ��E}��� ������ �T�0�_kPEa���h~Ia0.Z0+'|�o܈��H���*ښhM�1�1vֿ�6���G�v�Ս.:�v-|�k����q�z����M[2h�x����� (���ȃ��hN&���Y�0�a���=w�9�����tݠ߳�K�m^�*��&�����T��]����c���8��I�n�B�mBl���ǻ>W�9���WymꈍDt7���q���ӟM0���9n�[U�8X.^��.��a����Y����hr3�d���,؅0j{�� ���3������m� �}�D�I�8����f���;�V�S�8�_)� �-
+�Wa�� ����o泡�������w��T�(dr�~���<8{��ryykhA�Hn�k�E��Jࡥ��O]O����XM�6@;�eg> �F��[��}�q)q����wu���HWHMBfm�6�� �Sdf��|�2�_�љY��Z��Xa�	^�Hx�����8)u��_��΃3���;\R��C9����W/�W^��
+�x���
+�G��{�@����r��GV������G���vfS�D���/(�,bט��p����2��pS�����E�%~�3i�Եf��	O �]�Ѯa�
+E1��|�	���|�s��iaY.���4���*�= �vz|����Rzr�H�u����A�ޡ�&�h*	v��C��F��P��(,��SٶU�Ū̧t/o��Wye����'Iܳ�\�+��Ya��ɕ�9�&7-��>��'�DL���n�ߐ�?<MqKrGi�O%,\tEܥ�N8�0Wkz-#7AG>p���k�?
+"{����S�%�{��;�mt�V9�ܸ6  ��1<4�<�14������q9��E;�qh,����f��(�f��h -�m��Ufk6��݇�^=��*"��{���u�D�{[���8��h�NZ���d�lK����ݘR.!���[r��л�.`kT�l׳�׮#P�iz�e�M]��(�Իq�D���@0o,�|� ��k[�]��CI% "{R���^.>��b�p�[�� �40�� ͪ��[[[�0=��E`��C�f�����֘~�%ܚ��o���f�o�P��X����ʽ�2��N=��/',GK��s]l2���,�G�%�<0�6憱�p0v�r�:����O.�c�I� -��5��t
+��(�ڔö�^�t�r�3m\�	;���E��wĊ�g��.؟�fp��_t�"��̖T�5���7�͢�_6oݬ��5����1/���l"#5{���˚)M��lN�3��
+�� t�g�a�s�v~S.#��q�n����]��3~@rDj�u���E�j��b-�w��e �lb�y���*������n�?%CJ��n;���N<�<�A�`��
+�y�4$l}�c���vZ���PD�����g�*|ҽM�_������Q2=�����`?�9�Mz"1�z������^?纋�ٖ�+"����:� L�Ai>�b�A3���2.,&���N9��<<����А2t6�V��xڪ��=�\�{_Qt㪊w|�OIp�CX����kK�Z�j0+�q�k䳯���Lb����-^��#��M��D-:��T��V�&�+N;ж�v����C��S�ӝ��W3�q�Yr�H�H�\ ��\���S)���[*�2�^v[��~�W勿����z�`�� [L0, IYO9nޔ�6HS��6a(�G�VK�~E7��t�C1�Q
+�l���N���	�z�!���r�����s�)Th��"�"l �!��\0t��>6,:Hl,�5R�Y��pJ�Dl�\t��c�m�.,ڽ�Mש3~�Z�&�lD9e_��!JD[�]�P��B���]�{�X�c�-�N5�l�����Ұ�������?[��i�΃�$�/A;����o�L����a�XS�H?(Ԟc7����]�B �^�	#O\���d�`)�̼����K/��,�04b]*�7�ʹ�,��q�t��X�^��=>�um��r�v�l�o�v��9s���fP�	�_�:�t�F��nc�As���̻�C��m�H��Y%�Ҍ�憐p��'�Oy��!�>��OY�t*�I"~I������P6��mq!Fi*K��ԯ�bG��bV��V���/i<'O��5>�	^��̛�g�3���p�iō/�Z�xp�S��0�W8�1u�\Ssv�%'�]�21h�7���,�����6�gc,ǁ0�ǰ�9F��ʵ��2{4pfH��s��FE:t}ҭ�{�`	��	�'��E��/-l���(�I��9$�d���W��Γ��i�S����g)��qSz�AM�4k�S7v���[�:X�7���^�-y�z�$�~2h��� �N�f�� o2�uc�:s�*h��(���]��h��	,�8*d��d�!��Ō��{ȁ�[`����(��m��%��!��;��s�7!��GBCc��^(��J!�u��$dXRE�)���RD�%1���U$,���~��O-���%���^,שh�J1B�8!�f�y�;�!�}�����;[o�~y���z vf#�$ڋ�ח��,9���%>�9Iо"��ov�5B��~g6���6j���ԧ`��D��F�N����p��C䐇�~#	��)�j���D@����ߨ��W�s��Sּֽ�M;uof�P�KJ��pjU�[�xE"�$ئ/���� ^�#�E�[{O#RR������Re�q�PtX]������"Of0E8F&�������ʽ�4���PiF��{)k�~�Ciw��0�����^[����!�"g��̬�)�4�a��'ަ�7n �۾�m8�l��h�ѭ)�]���d!p,&()��Գ��n�O4@uF�/��٠*��a����,ٹ*Q|����_����S7&;��w$��Rm�k���F�4&���L��s��� だd���B����������5fxM�I8�:|c1Ϸ��ht]l�v�$>�u7M�T��蓠���Mθ�D��0��ow0�HD �U%�AhDR����|ʖܠ�_D��Ij�>%j1^J#��/d��B�+�zi@AwYnqC������)G��ē�J��{�|����UǆA�/H4)�� k�d\"�X��2F��I����B�N@&��2C-C���}�1"�]���or;"��%Y{�{|�2$h��U#��.�o��8
+7�1�y��=62<j�F�,��X����ѪgCV�E`d�Yl,�8��f�d��6�e ���kx�d\��(*_>y	����&_��Q0�<c��I��� �������~1r�
+�� ��!��`'5Ftª+�m��ڋΜ4bS%x�2��d��r�c�h�����:9W��^Q�3��+��O��~�~$��-�$g�p�A|���v�%�I���H/zf��|�F�ȹ8�����
+Į{�z`�yg��-�2
+��y�[p��j{T.*L��֧�$�KQvVs��V}��v�� ���������*���}������{��S���>~(F�Ͽ&���$'_�!��7�e�~>g�5'�[e&@�3B%�N�W�z��`��a��� h��ox�G5b���Ё�w�x��d=�/3գ�{A6��� eg;���*v�� ��Y�x��u��� H����"~�
+$=P�̤Pܥ���d�\����b����kL��r�?R�j>.Wi(4������I6-VDߤ1����2�̘��ֺ�M�ըFr�A��X�Ί�ky��_��.�`��O�)�<����oW��:R����g���/���ף��=�
+4]�H�.y���m.)\�p0���Q_j[!�$(n��9���H���Ae&g�<���0@�œ�6&�0��0�����U��.aGg�=�4�f�Щn�Yi|ڙ��iz����'�/�����xG�aC�����Mq�43ɕv{!�b­���,.�G�䮫K���m��S��ŶBa�TU��<�aG�=����6�>����zp%��ͺ�}�<w�)�SʅV�C��4�{kd�]Ge��V��m,B͉�@���7gLH�O�m������]�lo®��]J�S���x6uoʞ��,�I/V*���(�	8�J|Ƒ(����v��[�H�ܦ�v/Ҥ������Y�;;�5���ݔ��|��x�|�������<P����.<C�!ʭ��!�3��.�ͨ�|�p�-�V z`)�N��	.�O�KT�x9R*���ē���a�1�un�0�k��5Ux+2'Ȃ\i|�K8�!��A�XX��qƅh�B1`�6F�Ȼ�B=��j����t��� ���qPXB13�w4�����	/��>�����>��,bF�:��i�g�U���b��YdA��|@�:��b����il"B��tn"HSD��ᔝʦ��>��XN�����"�ȶ��m�#'a9=�D�Q� ��Ɵ�¹����i�Mq��У��H��l��5�K�\�cz��Y���F�r����&��آJ��T6���
+="3)�Ax�#F��!�iS���1��ٞ�2�W�I�&�Ƅ�ڻ��C�e��g���1�3���# �q�5�?}�6�|�ׂcjco��Υ�0�����*�;J�	~��~�~��t�~�"N(E�Oڶ�ߤ]PI�!r&F�ڪ��|��U�
+�7a��e�l�H
+�ˌ;�ȺܰQ��)�͚�	��So^{�����Ã�/�د��-���!w]'zm��n����D�9�C�,�i��y�/�>�ܑb�X��x3�M�0��"�+*hBͼ�x���R�k2���-9�2��ؑ5̊�O&]we1�tK~nb��B�Ȏ�pfO�m !�v(�����
+%q� ��ޤ@R�}��d��\gљ��D[��ӎ�����n ��)������T��	���8���G��Ē���_��6�w��o.�`��n�H0@�O����̺w���u(���C0~ �"I4��z�	N󢷈�m�d�
+�
+zp颿	�]\
+G��W��N�A����w���J9��ܰ2F�QS�d�;�U���!3�r���?/���[	�ma�H܇ǇY�:l3�"p�|�U5�()z�Fó+���&�>a���|�q4�z,����H�H��
+?��E����7h��JN�bv�Kx���`Vu��e�=eH�����p�����6|�c�5�=Ǿ��%đM�c���%L� C#��;^ܜ*�Sl�M���4���G�9~.p:΢Fu�E�T����N1�K O&��ݶ��uj9+~w��#SV�>2��� ��d�	�"���E�e#'r��a	Yb�-V�wD�n��2�z�����N�m�c�X��B
+[��G��!q�n����+LN�6��t��&�	Z�ɑ���k6�����H ��y��J�)Pq�)4_!gv�ք��-�s��N�Mla,$?:h��^�"��'�Bx֛DvV(E:�t�a��k�u|]�� ���T�Fu�g�c�k�yR,엁l�6�0fr��p,ާJ�b{l�{�c�	�7�j`,]������xJ��Ťx��o�L}͘Ͳv�;IG�-Hs�����u{.�y��Dr3����t���3�,J����)���wY
+����DN�/� A�k�:s�7�A5n��D_�s��Zn�qE��i��b���"��{���� =⓽�p�$��}��!��`�T��8?0;��`&��)]���?�S�O$�O�>mw�E�O�p|�d,]�t������/�o���'�g��mC_(D���Rn�%��z+y������vCH���S"]U�;$%�"�u������Dz����R�� �q/��OAV|��T�j��/SF.�<����.�^cJY�Sq�5E,Iz�>]���{��j���>�����Ӕr8�7����2@��I��U`��;i�C���Β�\ȳ��8��_�` �!�wD��A�z|P��܏�x�#Q�s9��@X!_w��U�.�.�(u[���T��`����F�����(QW�����jN�ZCp�kj�JC��������JCL�D�_op�=}c7h�Hޖ�����ۅ�[g6�wW9���`^5�.��.���ز�[�O�D�5I#��� �xx%��A����([����cw4r�`2D�m$r=#ZW��.Uu�%�<M��oFO;�^>q��t���_J"e ��99h�[�f���?���K!̖���3����*��c�G�&�66B5;0E*Ւ�o:�B,o�ǹY���t$���"NC>݀ОH�Ɠ���t"i����kT�Ƭ�>8��f�^�+d�✨Tr�M��_r�w~��H�#]�&��T�}'���s�>�mkK{VA%���C�9����I�,#�����Z��SIxC�}�Pd2^wMM�ȋ��
+9��.����ꟳA�T����E��G��ˬJ����|����o����q���u)=�^�����΂Ӯ����N�](��X��w�E�Ċ-V3s}�5J��!�=��q(np6�Ko�	 "�%�~G�R���h��o}o����*?3*��*�#2�絛��en_`F�e��oO{�M�����V���q���g3��F��ҝ��h}�ut��3VM���ꁷ\����=�m�E�4��� a��^��䈳Ħ���ҚMg,�s����2���z��-��7��KHm����Wsp����g�|J�p��l����|J){����	O�J��b_o@h���`ʭ��]�f�*%�(.?�l���0���"�ە�`%�|�!�"�p�F`��"�fk�P�<b�w� ��e�	�k�1
+G����/�߲���u�y8�6i��
+^ht���9a���P�p�
+�t_)��C��g�������0��y��Z��J9P��9> �,�<ȅX�we�Ɩ��;�����~tl�⁥˓�k�Z�IԴ}�S;Ո�ԀZI�)�-I&����u�0����;C<D��f�����9�倱�A��.?�<���o�iE���c�z	��S�o+�ݹ┻�z��ۂ��v~9�ya��M|h��=����u�N�n&+�S�7��5�u�ݏ��N�h�=~��8��u<)z��a�? >ZN�!��r,��[#p���) 		v�&� ��bf �L�6��tQ�����jh��n��.�����1��d��������/��3-�n�4ɾ��C����ڿ�V����[,?���`�
+3f~t���GX���8/Q�����夢B�\�U7k	��ipN���������B2غ�'���=qQl�ߓ%LS�t���F��&�r0��jw���5���bR�KL�d?�,*y�G8!ϸUE����y�;�b��[L�W��(�����#).s�°$f�W�fx���tM!:,��ψQ�c4�R�[!rb���-�,@����ds��r��(o��O�o8�Z�[�q�t[�@�_>��������v��	��hӒ?�R6����ZF:��b-Q=������nT�e��ȕ2�����ꫛ<1��B+'����@�?f�'�y��3�I�s���D���I`f��Qf��~�'���#�ɽ:�eWus��E`�^�,]�+����E4�zS�xu�:Gq�2�H�.م��Z/	M�$��vo��Q|r h�S��]4�����1�{'�S���%_ �v>�m���TYw�c�*�0�l��[�4��|�f�ۄ�g5�b�3ڢ�#0yϷ��E})�m�A�1J����S����yb*Q���?��Gb-�*P��R�S"��# ̋[�G7�M��ĸ5ٺp��پ�nܢY2��ܴ�q�\�8��)�`ɒ�1�X�3�[����:\�K�	+��	t�&��+���+N(�l�e��8�b,�"�0�K�P��i��B(3#��rB��\�f�s�0E@� >��k�,�q��cޔ�_Z'��W���0�6E�S�w��>2&ɔMu/qU��NVH�(���94�z� r���v~=Q�T ���]!k��t
+M'Rl�����;K�͌܊�2��=��`��Z~2)�"<rD0�[�!��}a���Y���7�O�>�/��z����Ag������$N����F��*��ElI 쥉;�+�h��ݚ�j����k��IU�x��B���hGZ�J�X��9$V�ag�u7��a*����X �le$�$�]�v�#ȩZ}�ɣI����y�ɣD����a$/K��Y
+�^�ʬf��#}�m�V`^�
+��"ikC
+,p&T0���}*n1d�}c*8U} u��PLvC�fMb���)$화�Bs�CMFZ�{be}�n4�_Rk�h_���jk�O�<R"k��"U�@�7g���c��D�ͭ$*Nk�̨�x�D��n&��C^���NHF����G��.;�j�q���L�>��@��gn&1�-�����V�ARj���v�����>)��r�� H���h �iח���SwJ����pv�g[�^�/1��b��՘� ����i�1>p�o�<,�2���_Ov��!���ӜA뱤�荚�B����x֙�Z��VA1�&��E��]���nJ���Q6wG�"�X�n`[�3�%��GV��Hu�c�;m���(ȣ�'��.��͚	[Df� F>��&�oICO2<�.����u�(��v�XOȘh��Zu�H�N���
+�:(�j̥�No�5�7p�����p�I�d�&q����\��:b���r/H��bv������L�
+ǩ
+�s��O{_�E�<;V	���[���}�Oh�xl�.��"";�En�!r��� ��לe��si�Yv]�d,K ق��6!Xan�X9�@i�N���씪	�|smBoP�g�h�b�!4���@�wn.�6�gS$Zf�$ϭUhjf߂�Ԥ��}� k3��G�n��� W�r9�?�x��n�~�?!�bUp*[��V�����W%��r��$evʨ�T�J]�-L{i,�4�h�\w�����uu�#���$����N�^�Z���sXoaa�hV�0x���b[������m$��ؔ{����'�$Yǧ8�x��b��d��;�BۖnQ�Vߜm�;&#����Y�|2 6�"��\��n۫ٗ�e��!�"x�-96�4ľ���t�!��)Ğ����p ��z��sX�b!���ݔ�0�K�|�����o�\0��(@.���,\'�3���7~�<�(r?b6��S��ιٜ�'��q
+E6@��̺�|b��}����<R�`E8*v܂��܂�{܂��0����>����Y��a/�m�����e�+i�s5�r��J�k ��Y�Sg���Ir�!Q���Qv�m�%�?N;A�	�~g���  ���]]oW��ϯ(E+a����������$��I4���qw�.�]թ��#�D ��hw�e�ʲe�ap 8i�H�+lr��'�y�W�9����Svs1�U�u��缟ϫ�����ń	[UZ�ڊ��1�|f�K�pс킴"�5�n�^�	����	~kU�
+ �{o��m��v����bj�a��-;�@��9��pf)03��V<�����]~ӠI����*�CQh�B`b��:��A��aW��+��R�7
+�C�<���M�Q����߮p+}Kvf]e���=�y��_P^�ZA�e�w�F��h˙giJͨ��ͤs���L�<R@�s|��\��\R��J;�U�X$�+�Qt�b�P,D�Q��%��cIhdlL:ԳTS��C#��Ű����	�R-�N�ꅲ�25.b�(���T��Σ��s������D�jo�/	9�P�xX_��m�*��K�/Pf~��<����\��L�$2��"����k�$0?�Ha* n���ؙ��;���:�X�d&�z_s@rg��%9k�Y��*c�8���{�����X���zQ��
+dPI����[��4��'f�Kfo,�Z����#��G�q���@	IT�'r	�L�`�ۚ�d!:t,{H��y1�]-�F��fg�(�zO�£W��ϓ���H�[d��yQ�wի4���<��U� �$�|;VҫT/3�o1g����a��zL=A�$���Їv]�� �6���T��O�c�R�X��2Ջ��%-�b	��#���+�>:j�s�H�},�J�T�e+�y!M�e�1&�ź�:ڶ9F����r�/��ܷ-���-P�1�G��&d�G���!ϖ	������Q]�;���asoS�EqЄSf<��.wH�����೽��[~�Z���:���Ԋ�φbޣ�pj1���d^��~�C��U��\Nu23��*/E���MB��)d��^�8�B�-`���~d�-q��]U᠄ S���B����D!onZ��E��U��XVqx�Qk[�LqtIÒ�Z�n�h��+��*��/�-��wE�F�bU�e���Y �=o����p(3F�8�L��v��Eĸ�n�b'�`Qb����¨X#���`��{���w���,f�@'1�p;Wh�� �L<�	�zN���6��mY�HN�0C�IP�n�5_�;,H+rd6u��9A���~�Ǧ�E{�Q$?[�����V�� �d�~`�Ͱg��R���5Z�d����`p��Ҳ,灪F&B��d�r�?m�QeξL��9Nb)�Ԉ�Nd���Ć���\����σ&}ƤE���\�)�E-�,i�ˮ,�d�j�XS�F���R+�J)dfN}%��0��m��32 !�wv�!����.��H���'���x�����z/~�Q64��Be1l1k�(cQc$�2r_�CCl�Gk��9}I9*`Kq�_�:KV�[Z�2�h��*~88NѯW�'�"`�E��r�&��";4a1\�j2��h>tR�w��{��غC�������׬�i�1���+Z~�{\������T�R?ꦂ7�g�%#���ߒ(����2�G�!��9 tf���=��"	��7X�K�g:!��dv���2Y�b��������E��F�1Ϧ��yK�`��C��B�tn�2G��f����Ò��7q-��؜�����+��d��;���*xT����M�h��dv�3��ͅ�1�=�eBO�2$�d�x8�BCbD=>��3R:��00�������ʬ��!�8HW(��_� X&��_�2ra	��-
+$�C���[�f�W�A��,� ��n�"�6�2!�tx~�l�����(f�1��"��4�8X�Ρ+�T@L�ƱRTQ�����􍢪գ�E"9/4�<�HR������BI�6Gᦀ�W�^��{w�D(�R��vt1�Sh�[=��7�ɫ�Jc�h�Ɲ`{���a��`�׼�g���}�N������< �Hl6�p��hاV������꩘�dh��Pz�7}�mOFZh?zΉ.��������xR�S O	���6@g=�ra����G0��Ɇ�\���o��F-�X1./��!���G&��J�d�q�6Ja@D��.!�E���\�31��N~�_5=G��W�V��Yf75cAv�j9vE�ȡ����A�Nd��G��}dR\:қ�`�D��Mq�w��%P�Ù�㩠׉���^�������u���Cp��>��:&TS����<��m^�y�����~�ߜ�|�����������܂�
+�O;�!qС?�9�"g<�n�d�,w�#��:�nA�Jlp�؀-r���Lzꏊ�z,�E�z��I��ԙG��H��w����.�o]�{yY�`�j��]���@�xX7��0m��>??b�{�S�8�Fu��K�T�Μ�0_ZYsdɧ�T*w�Gai�O��>�B�q�1]��f���+(%�ﱉӅ��u`:j��x�|�����krv�f�࢟]��b���y�u��9� [�k@�I�ruX�Z��a�w�UQL	�@�Jځ&i{_H	�L��^̰��Ռɰ%���j�����b�"�W�Y�7wX�͡%�V�k��� ����@jIwP��9�д�>3��"!�X��	jaG�y�[��ob���wX����r�L����i�I��K�,�-�w�@v��C�V(�L��T��,p̰:��P@̂	�G��'-z����� B�$�Ǖ��%�I�>
+�ܾǊ2L5��@l�i�VZ��N�j�N��@��Et?趉w�D�J r�h�hX "t���Twa��Vw�nF���	'H'` '�sOu��n,u��DU��u��Q.�b��@��U���n�I�q��c��a�9�ĠkN�K�����C/��G���
+��c�������`�L����XV=����p��4�E���6/�~T�=h�5^��XCi�5Fȋ�no�e`��/��UO����S��ŀ�߁�Yg�d!+!����
+$��)EA�L��S�P}���p���怄��,^%^�x�h����6�>Z��Hi�5�M�4�'��yڑ��:���0�Õ���Bz1����)3�v��.�Q�	��r���-�8u��[��7Ö���n�"GO�x����zui��j?��ň"p����%`%���b��+�ƶ��Z�cͭ����i���*�*�F<	&B��c�|�<�첲-�>h���߲_�q8�W��gHՊ���V��B��K���n��s(��`P�{��X�aB�q�`�zʈ�-�����qZp�4Q��f8re�-�O�ab�c���0����񙌅#�b�S#j)Y����q�`z�c�Yi;���
+iF� �ms�����A�q-�1��Z��ר86�Zw���?t�����J~���R%��MQG0ӎ� ��/D���:'�Z5I�M"����dH�Ɋ8�v�*��mD�8N�d�DȌ�B.����*�sR��'	�%�S2}�\x<��,�2�C��U��@j�
+4(+�Q�j�D:l�F:l�R:̾־��D>���u�����j"E�Z��;vN�J���n%³��w%��İ�&(�������)z�;K97���Ѯ}���d�*�����,C��0��U��ɍ{a7�H�ᒹbu����C��jδ�q�M�P���A�.3Epa���0)�d�V�}5XtAi+��;�:ä~p�ow	o����9O/%ˢ,h�Zh4V��̬��C��&,:3��l���⾰��`~����)n@�/Š�hT�l�J��P�;���?e���p��j��<�ۤ�eD$��\�(O>���X/E�N�ב�c�{����M�ݺ����`�u��?�����𩄟�W>���S�/'@�UAz\sѮ��w�cZ�JT���yVT-v6a~=���e�?}��E����_x&��״;�^)Y�d/c��y'c�]�U~$��)�d*p�d�~a|�)a����]��A\b����o1%�����՗�?�n�"ib�5#��$�S32�Ri�Y�o��7�'����S�!�X̸P��� ���zw)�d�#ω����q#��Ӣ+R��Њ��!������/a��ꝕZ����iE��J�H2�7I�~	�.���u0��_���v���:)$/Gn�m���{���u�����<t;��ݫ����*Xl7�A��[z����hz��מ�~�L��`�7�%�;�ޛ���L�|Ϗz$v�Y�7*�o
+pR��x�`�>���T�<��N�n�����f�f)�[u�F�߻�g���xpB���
+?�}Ҍ�+�R�њ��d�cFX�\)�P,Ŋ *��פ ��0)'�7���]�\��}��� ʷ̠x\��>�ZXj�C����y��!�-������w�Ah����Ҁvo��ҭ�����,$��o	4 �A��p5��h9~�}O(��$9�Mf~��ݿr��-����[E8�29��ܵ��g��CfI���3��L��]Ƈ�mڠ��w�]���"�y��5gI��HM#�E����[��{Kt'k����6����G"�"�GG�0��F5R�=���m��b�U���^z?��9d!v	o
+���ǃ߸��B�=BB�"��g��O�����+*�m�e����Ά��Dg�{����4���]V�Nq*��ځ�/'����A3�U�0 *o%���?�x�p� c�Ž�\����N�9��]��؆���Q�^p��-�LD_	L�"ݡI9'b���p`
+㜎Zd5�'w�&rQ2�B��xk�
+i���������;���%���7 �)��Tdu����G��d���S�4k�����| ?�)W��k�ӗv� ��tꪲ�X��[h�I޷{���<b�@�ݶ9��_N�@�)j�q�h�|�ʒK��_}�K~t�|��%�F㽊�N��'��wk����]���Z��;O��S\����^?hm���)��x'I/�[t�ߎVL�0xp�$�^ԣ��"��d qo/�����o,@�w%� ���`9ټ7����[cJ�.Wx����%Nd�/i����S�}x����'G7�e'���E�!Iy���[��{*��Tq�˛*Q���5⼇���y�{�k�n��l�5��}6 ~���GO�N�����%$�YN�b}{g��H��т��	��6�n c��Zm��g�7;l<�3�����T���:�I?x���<&��Pn��F�AT+M� �P����?WLYg>c���� a4�,aØ���o���C�ء� ���`����J�w)�f{n��0�%��g�%b�/!��UxS���x'
+}o1��^;gG>��x,�J��/��1������+�?�Jk��l���Ā~B5���s�O"�Xls�r���h��>� ���rC�;N��'RJ��P��|nD����?݂-E&(�?�N�����u��W�N�hbp|}g��q|���bM�P�*iy�)va���g��)8)I}�O�M�_ ]zW]�q�� |�I\��B� �O��V=�"�%�*p����g#P[	��K����f��ا�u�R�!�l�������!���/G��s�Wv '���F,^*�p�Q�����4�f�
+4"���k�%��{�>/H�r�k/���HH��p%肜N؊���dz��^'���K��,�E��fڊ��� ��ꍔ��M�"��Mq��E%��D a�6���Q�\�M�%��n]�`�Mm��+c�R뫂��=熎��d��b�b�R�ʲG��f�vuj� m�m���:60���N��vR��Z�>�ǯÍ��+c�\�����I�
+���RIx�9;l�n��E�|���H��u[mg��+w5���kST�4�^���Á�ڥ�(���rh�EMH���]a��h[B��*.��e)��\���f�U�x���wo��0�V车�wՔ�=C� �F'�0��Z���N[��Ar�Y�N��7���W��
+6�U 褉 ,|K3��}u�κ7��\��>F7��{� �ͱw�k�'�#���[�}���y�)�c1�-���ٗ~�<y���A]0�A�<�B�Lk=ɯ&���t��}v�3Vr�uӮ&��	��h�Wb��1������S�
+B�#��;��Y@+�t,��i^��\�xѱdm=�0���tN��;f�0�,�Z}����ԕ� l>���A�)��d�+�X��:����p�A�˫���/��OnH�~p�7[-[��H�������2��-�cذ,���K�Ȥ��s�`���B9�����j'��!ʑ{�L��"K��M
+�ǔ��̩�Qz��A���̰�e8J0��D�(���^K��L��=�뮫Z]�З�@���{�O��s�$�0�w�����59��<�D�{RxH�eG�S��e������?��7���W�3��@�߆srk�͚^81[��W_�9�����]�Pnԕjb}�*�2��������+
+C�%��Te7:�ͺ�$U����(hX������B��-!)��V4��tM�Q����Km���coGq߷��)���b���n@�K��2=�����deLP^�ui���h�>"��ak�����~>'�)n�>6�?B���5ӥ�͢����X�wU �v��4�����UJC����6��kF-�b;6�Q .���\��e�ӗ ����͎��R`�O����жli�eQo�!I0���SWl%��B�5;�Ǣ���z�S���9(S�7e��8)�趚 h��W�)��7v��ŝg\H"������ӑz;N���f�� fE�zp>�Lֽ��E�9?��A�ѡ��I�t�@b�P4�4���Z�L3��Z��n@�ҕJ��w�m�.w�����ih8t�Z�`��p����Z�� #�_�9�����IY��:1T�qF^+�m+���m��:]Ҟ���fH�7��ZH6���މ�U����O^-)��g=cs7�0�l�y�59ȅM[m�7 ��W��A�M�� ��թ~/Z��Ex����gf=�v�3�ܗg��|D}�� �!(���?��g�G����X���V8M�8A.�5c��Fj�b�&���2fo��Nz��7���X@OS�1㿯�{�\ed�:$�FN.]�]�d�G@ײ�^������%f�1z]�x�c����=�,�aX����ZT�)�U�'<V��2X$�A*j�6�8��9�v}�v��T|���%��Q0ؓ�Q�rs����
+e��_���JB��}��ӣ����g[Ư6�3�L gHQ��>��>������_����ȡ��:�?eWG����fVe���g��-�8��8o�����jׂ���!�_ Vᤩ��7���]"�Xw�\q��u�뇃�G��a&���/�53L<�G�jb?�(ʒ��O�m��mh[����r����=>���D���_ب4[B}?�7EF�����;ˢP�� �爍�,��x�.=��+�;��Y9��� =��%�Ċ�!�$҉�:ίʟ�.]�?���yj���k����^�׎���]�`@��Sd@�J�k���_���   �� 3��_
