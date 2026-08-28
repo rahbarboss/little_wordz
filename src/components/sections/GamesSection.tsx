@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { QuizItem, QuizQuestion } from '../../types.ts';
-import { AudioButton } from '../AudioButton.tsx';
 import { Sparkles, Gamepad2, Trophy, Star, CheckCircle2, XCircle, ArrowRight, RotateCcw, Award } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { playSound, speakText } from '../../utils/audio.ts';
+import { playSound } from '../../utils/audio.ts';
 
 interface GamesSectionProps {
   quizzes: QuizItem[];
@@ -299,17 +298,6 @@ export const GamesSection: React.FC<GamesSectionProps> = ({ quizzes = [], onEarn
                     {selectedQuiz.questions[currentQuestionIndex].questionTextArabic}
                   </p>
                 )}
-
-                {/* Listen Question Button */}
-                <div className="mt-3 flex">
-                  <AudioButton
-                    audioText={selectedQuiz.questions[currentQuestionIndex].questionText}
-                    language="en"
-                    size="sm"
-                    variant="pill"
-                    label="Listen Question"
-                  />
-                </div>
               </div>
 
               {/* Options List (A, B, C, D) */}

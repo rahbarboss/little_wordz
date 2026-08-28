@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { GKItem } from '../../types.ts';
-import { AudioButton } from '../AudioButton.tsx';
 import { Sparkles, MapPin, Users, Award, Flag, Search, Filter } from 'lucide-react';
 import { playSound } from '../../utils/audio.ts';
 
@@ -138,7 +137,7 @@ export const GKSection: React.FC<GKSectionProps> = ({ items = [] }) => {
 
       {/* Language Switcher for GK Content */}
       <div className="flex items-center justify-between mb-6 bg-teal-50 p-2.5 rounded-2xl border border-teal-200">
-        <span className="text-xs font-bold font-fredoka text-teal-900 ml-2">Language Display & Voice:</span>
+        <span className="text-xs font-bold font-fredoka text-teal-900 ml-2">Language Display:</span>
         <div className="flex gap-2">
           {(['en', 'hi', 'ur'] as const).map(l => (
             <button
@@ -236,10 +235,6 @@ export const GKSection: React.FC<GKSectionProps> = ({ items = [] }) => {
               item.imageUrl.startsWith('/') ||
               item.imageUrl.startsWith('data:'));
 
-          const audioSpeech = `${displayTitle}. ${
-            displayCapital ? `${subtitleLabel}: ${displayCapital}. ` : ''
-          }${displayDetail}`;
-
           return (
             <div
               key={item.id}
@@ -268,7 +263,7 @@ export const GKSection: React.FC<GKSectionProps> = ({ items = [] }) => {
                   </div>
                 )}
 
-                <div className="p-6 pb-2">
+                <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     {!hasValidImageUrl ? (
                       <span className="text-3xl p-2 bg-teal-50 rounded-2xl border border-teal-100">
@@ -323,24 +318,6 @@ export const GKSection: React.FC<GKSectionProps> = ({ items = [] }) => {
 
                   <p className="text-sm text-slate-600 mt-3.5 leading-relaxed font-sans">{displayDetail}</p>
                 </div>
-              </div>
-
-              <div className="p-6 pt-3 mt-4 border-t border-slate-100">
-                <AudioButton
-                  audioUrl={item.audioUrl}
-                  audioText={audioSpeech}
-                  language={selectedLanguage}
-                  size="sm"
-                  variant="primary"
-                  label={
-                    selectedLanguage === 'hi'
-                      ? 'तथ्य सुनें'
-                      : selectedLanguage === 'ur'
-                      ? 'تفصیل سنیں'
-                      : 'Listen Fact'
-                  }
-                  className="w-full justify-center"
-                />
               </div>
             </div>
           );
