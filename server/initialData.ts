@@ -10370,20 +10370,263 @@ export const initialDatabase: AppDatabase = {
     "id": "home_ministers-2",
     "category": "home_ministers",
     "titleEn": "C. Rajagopalachari",
-    "titleHi": "à¤¸à¥€. à¤°à¤¾à¤œà¤—xœ¼ZoO#ÇÏ§˜úE…ğÁ—ŞUQeàş¤‚Q¤–S5xïÀz×7»ÇU'zªVºŞ)R[é”Æ"G¸´—äE¿Ä¿±úšĞç™İµ÷/¶‰ÛHg¯Ÿ™gæ™ß<¿ß<³¤¹ÿi³vÔ¬7k¯åçŸåç×Íı3CşËXÜÒØ‡"s“dœo{Ä9uœcrqRß­Ÿ;õÇÄùÛÅØN{Mß«D«Ü¢Ú-ıFoFşıñŸàk4Ò~—c{³öÌŸö³fíÄÿùú&I÷t#ªo;'ÎQb?…Y”{LæÈt…–*ÕhI¥‚“‰5¦j’»F…‘®sÓb‚†ÊæÈ{Ô´Èc	İÃw˜ÎÕˆ±LŞÕN	ÕÂÀU`,Ó¢3+TÏ…cğy¨æ.W÷×fíóf:üá@šû5püÊk­ágÍıOàk»YÛC³ö}³öŠà˜µøHÂÃ°œéPº½†ö§ğ_¯šµ7r´Ã`@‡0¦ì&/¢ëŞxJ›õú:ß8GĞ{‡\¼l<ç:ÈaœSèrJœcüÂñĞF`wßÀïİú&‘}Oı°x…–!/5ë‡çùâ?gô›¨­pÃkj¥1ÓmÁR²Ñ
-Ãõä¹¶ßz³(è¢BŠü¦â¥ˆ9<ÖÎE‹•±ïb›„ïAâLP•*¶ ó*ä•à¡^~š¸™€{uìoÒ‹æş¦»oÿ”¿ÏäöÖäg
-Wëİ9llÂÎœ º‡Ü@=…¦×G%0×Çz¦išg”¦±~Aš& tO[ce%5Šö%V¢ĞÏRÉƒqNğ —OÜ†^úp é<®ÿÆt©·¡EÊcwFÙ‰¸•2Ä´…‘ ;ş>òÆª´(0É±Çïdf_/áU©Ã‹sd¼säÒøúº±‡^'`~UBà±hûÆ97ö.¾#œ†| ÇY}ºÖwOúÂñX¢µ9>ÖÇÇ¯Æñ™Î‘¢²FuN1Ÿ§7Uz¶lÆ?“Yò­Ü¶/á÷N³ö…thÿ2åP>hìÁÆ¹¢zp±¨‚È¦RüÆÏ —üÈÈxÏOóŒR<Ö/Jñ0$©GNO±ªmm¤±³²5[¶#§;îÇQù÷ÀÊf&º|Z“JÌ´ıGÛ%ëxZ¿p“(xÚØìc‰Ğ¦àx7,\‰‚Å
-·ğôPÉ |,ê\ƒ’OW•æd
-nËùŞİgWéß$’eFqL©vó#£7`ás‚™L·z¤™ç(âj22LKyç9b‰å|…RÄ¾66Ü”G$×Kve	ÂŒp/Tà­“Æ°Q…Øâ†NLpgræî%¡J/[£¤v ò¨ıäGPğLá>Ğ2
-xNvşí¢5‚¡]o­ 6òOFò“”Š·¾–cøwC$‘ˆ'd¨—œmöéÚ3÷mşğ!3Áşë ![”Äæa¦—‡ıZÙç6ŞÒËH9)jU•.1Ë$?%sª¡ó’Ùî$/sÚ¦½d²&“<˜…¤†Q>‚`cğ’¡ÏBY‡æ«T¬j,Ğªğåe^²5KÎ±ÄÊ\‡kZÀÛœ³—p^†K²„ÍZM-LZ–û6Üç 6"AT‚ÈD`	y/°vúHå%•hr]¤3	]ÆgÏTüEØß¨Æç–“¡~`˜ˆ¦¢†_e¿ï…¦)B ìïËÙ€èìAÙ…=¨jT§şÖLxÑ^V-oE©"~P/@y‡ÈÄ™ÌårÙv†:ã™ï„'µ|í‚ë¶°¸^ö±uZÌ«U-fº…µíVÔğ~øŞ`¹V®»“¬sK•+ó“ã'½a7ÖC.Vè*ó`4lĞøk«×°ƒ]ÌLR«{g¢ø,D±ÔïÁüeN–‚‹p—ë€UñóîĞLÒ:[(v¢ØÉÒ
-D€â»ï$œ#¸+c%ö!8µU0›,~8ršòİµ…a,³á¸ş®¬ğdé»ßUªäû*}ù«HŸ-:)ß%p]¼tHıNI¸sºí›`„N;p~‚	+Pçy—	èFóäúfÌz³œôS!İYAú4¾œ%½.ß+º»æ;l@©ô^€3^×†¸`cGxÓK}ËùÖ-Yv!Â'^Ò=ú¸F”ÀGpuÙIo†›ÍÅK¿9¶a˜Î "•AõS6.C'—‡——¡MêVT*ÔREeÈ,–à²ì)*
-—&
-’& ¾'¹mëÉâ± ŒªºÑWé»ŠtT:×LîŸ'o‘1òéö$&P!j¸5¼İOpãe÷mª™¤ĞÃÙ]éDåI8Ó,yÂQ¬Ì›ä‡çŸı!ğñVà¹{ÀÆ¢ptƒ`98æ-ÂÏûï‚ÿhpÉí	Æ›Xò¯ÏaÆîz;
-ÃèHÌ’Y
-ıL®±8Ößy\ÀèÈU*›òj¢¹÷ü;Ó ?³r:ª‘ùÊ’¡¥\âÊ«i"äu›–¬”»[q
-¥¯4~	
-!rNºg´P™àBi½é6wğº*ŒõhvÌ1Z2J«dP¾ëÿßX\sßœfc}q+j½EË°}L±Xk+¬9ºf’àø7MÛÌ^E®{’ô¯xY§ît·¹0­´·¿İîÀœ•#¿¤ëPX"Ÿeª°£`Î@«UP]Qy´uJÈ¿3ùqNP“*Ñ.óØT9à‰ÖÏâÄ­Xü—æˆÓr
-N¦¨BØø‚ï
-;Õ¥bŞ;É7gj|ÚĞV©E£æY¶N¦˜ß I•é:ÓÇÃ©5—¿BİOıèRsWĞbnj´ÂKÉ‚ì¶‘yËV8“ïÔ¸¦Q‘"ÇŞPiš|›¯1 2vÿ?¾Y+\E aMú®±7}ƒ(”kÄ€0ÊÔLHUĞ,§ç©FUUX}˜%TÈ?ö?¬z-(/MÁV†]H_%×İ-½	çîŠ"Sª­ÂWÑ„ZV_’oñß5Õ^è[ĞÃË8W©§©ÆAEKTÓ˜Ò-ÌÓİØàKTiÛŒµ 
-ƒ-ïÊ
-c1Ynµ®«ØÚGa^hÉ®7 Y	ş˜pÈAüéÆlœ±UZ©ÈÿÃájÚšÖlº„àÓ£Ÿü  ÿÿ r'Ïa
+    "titleHi": "à¤¸à¥€. à¤°à¤¾à¤œà¤—à¥‹à¤ªà¤¾à¤²à¤¾à¤šà¤¾à¤°à¥€",
+    "titleUr": "Ø³ÛŒ Ø±Ø§Ø¬ Ú¯ÙˆÙ¾Ø§Ù„ Ø¢Ú†Ø§Ø±ÛŒÛ",
+    "capitalEn": "1950â€“1951",
+    "capitalHi": "à¤•à¤¾à¤°à¥à¤¯à¤•à¤¾à¤²: 1950â€“1951",
+    "capitalUr": "Ù…Ø¯Øª: 1950â€“1951",
+    "detailEn": "C. Rajagopalachari served as Home Minister (1950â€“1951). Last Governor-General of India and esteemed statesman.",
+    "detailHi": "à¤¸à¥€. à¤°à¤¾à¤œà¤—à¥‹à¤ªà¤¾à¤²à¤¾à¤šà¤¾à¤°à¥€ (1950â€“1951)à¥¤ à¤­à¤¾à¤°à¤¤ à¤•à¥‡ à¤…à¤‚à¤¤à¤¿à¤® à¤—à¤µà¤°à¥à¤¨à¤°-à¤œà¤¨à¤°à¤² à¤”à¤° à¤®à¤¹à¤¾à¤¨ à¤°à¤¾à¤œà¤¨à¥‡à¤¤à¤¾à¥¤",
+    "detailUr": "Ø³ÛŒ Ø±Ø§Ø¬ Ú¯ÙˆÙ¾Ø§Ù„ Ø¢Ú†Ø§Ø±ÛŒÛ (1950â€“1951)Û” ÛÙ†Ø¯ÙˆØ³ØªØ§Ù† Ú©Û’ Ø¢Ø®Ø±ÛŒ Ú¯ÙˆØ±Ù†Ø± Ø¬Ù†Ø±Ù„ Ø§ÙˆØ± Ù…Ø¹Ø±ÙˆÙ Ù…Ø¯Ø¨Ø±Û”",
+    "imageUrl": "ğŸ›¡ï¸",
+    "audioUrl": "",
+    "tenure": "1950â€“1951",
+    "order": 102
+},
+    {
+    "id": "home_ministers-3",
+    "category": "home_ministers",
+    "titleEn": "Lal Bahadur Shastri",
+    "titleHi": "à¤²à¤¾à¤² à¤¬à¤¹à¤¾à¤¦à¥à¤° à¤¶à¤¾à¤¸à¥à¤¤à¥à¤°à¥€",
+    "titleUr": "Ù„Ø§Ù„ Ø¨ÛØ§Ø¯Ø± Ø´Ø§Ø³ØªØ±ÛŒ",
+    "capitalEn": "1961â€“1963",
+    "capitalHi": "à¤•à¤¾à¤°à¥à¤¯à¤•à¤¾à¤²: 1961â€“1963",
+    "capitalUr": "Ù…Ø¯Øª: 1961â€“1963",
+    "detailEn": "Lal Bahadur Shastri served as Home Minister (1961â€“1963) and later became the 2nd Prime Minister of India.",
+    "detailHi": "à¤²à¤¾à¤² à¤¬à¤¹à¤¾à¤¦à¥à¤° à¤¶à¤¾à¤¸à¥à¤¤à¥à¤°à¥€ (1961â€“1963)à¥¤ à¤­à¤¾à¤°à¤¤ à¤•à¥‡ à¤—à¥ƒà¤¹ à¤®à¤‚à¤¤à¥à¤°à¥€ à¤”à¤° à¤¬à¤¾à¤¦ à¤®à¥‡à¤‚ à¤­à¤¾à¤°à¤¤ à¤•à¥‡ à¤¦à¥‚à¤¸à¤°à¥‡ à¤ªà¥à¤°à¤§à¤¾à¤¨ à¤®à¤‚à¤¤à¥à¤°à¥€ à¤¬à¤¨à¥‡à¥¤",
+    "detailUr": "Ù„Ø§Ù„ Ø¨ÛØ§Ø¯Ø± Ø´Ø§Ø³ØªØ±ÛŒ (1961â€“1963)Û” Ø¨Ú¾Ø§Ø±Øª Ú©Û’ ÙˆØ²ÛŒØ± Ø¯Ø§Ø®Ù„Û Ø§ÙˆØ± Ø¨Ø¹Ø¯ Ù…ÛŒÚº Ø¯ÙˆØ³Ø±Û’ ÙˆØ²ÛŒØ± Ø§Ø¹Ø¸Ù… Ø¨Ù†Û’Û”",
+    "imageUrl": "ğŸ›¡ï¸",
+    "audioUrl": "",
+    "tenure": "1961â€“1963",
+    "order": 103
+},
+    {
+    "id": "home_ministers-4",
+    "category": "home_ministers",
+    "titleEn": "L. K. Advani (Lal Krishna Advani)",
+    "titleHi": "à¤²à¤¾à¤² à¤•à¥ƒà¤·à¥à¤£ à¤†à¤¡à¤µà¤¾à¤£à¥€",
+    "titleUr": "Ø§ÛŒÙ„ Ú©Û’ Ø§ÚˆÙˆØ§Ù†ÛŒ",
+    "capitalEn": "1998â€“2004",
+    "capitalHi": "à¤•à¤¾à¤°à¥à¤¯à¤•à¤¾à¤²: 1998â€“2004",
+    "capitalUr": "Ù…Ø¯Øª: 1998â€“2004",
+    "detailEn": "Lal Krishna Advani served as Home Minister and Deputy Prime Minister of India (1998â€“2004).",
+    "detailHi": "à¤²à¤¾à¤² à¤•à¥ƒà¤·à¥à¤£ à¤†à¤¡à¤µà¤¾à¤£à¥€ (1998â€“2004)à¥¤ à¤­à¤¾à¤°à¤¤ à¤•à¥‡ à¤—à¥ƒà¤¹ à¤®à¤‚à¤¤à¥à¤°à¥€ à¤”à¤° à¤‰à¤ª à¤ªà¥à¤°à¤§à¤¾à¤¨à¤®à¤‚à¤¤à¥à¤°à¥€ à¤°à¤¹à¥‡à¥¤",
+    "detailUr": "Ø§ÛŒÙ„ Ú©Û’ Ø§ÚˆÙˆØ§Ù†ÛŒ (1998â€“2004)Û” Ø¨Ú¾Ø§Ø±Øª Ú©Û’ ÙˆØ²ÛŒØ± Ø¯Ø§Ø®Ù„Û à¤”à¤° Ù†Ø§Ø¦Ø¨ ÙˆØ²ÛŒØ± Ø§Ø¹Ø¸Ù… Ø±ÛÛ’Û”",
+    "imageUrl": "ğŸ›¡ï¸",
+    "audioUrl": "",
+    "tenure": "1998â€“2004",
+    "order": 104
+},
+    {
+    "id": "home_ministers-5",
+    "category": "home_ministers",
+    "titleEn": "Amit Shah (Amit Anilchandra Shah)",
+    "titleHi": "à¤…à¤®à¤¿à¤¤ à¤¶à¤¾à¤¹",
+    "titleUr": "Ø§Ù…ÛŒØª Ø´Ø§Û",
+    "capitalEn": "2019â€“Present",
+    "capitalHi": "à¤•à¤¾à¤°à¥à¤¯à¤•à¤¾à¤²: 2019â€“à¤µà¤°à¥à¤¤à¤®à¤¾à¤¨",
+    "capitalUr": "Ù…Ø¯Øª: 2019â€“ØªØ§Ø­Ø§Ù„",
+    "detailEn": "Amit Shah is the incumbent Home Minister of India and Minister of Co-operation since 2019.",
+    "detailHi": "à¤…à¤®à¤¿à¤¤ à¤¶à¤¾à¤¹ (2019â€“à¤µà¤°à¥à¤¤à¤®à¤¾à¤¨)à¥¤ 2019 à¤¸à¥‡ à¤­à¤¾à¤°à¤¤ à¤•à¥‡ à¤—à¥ƒà¤¹ à¤®à¤‚à¤¤à¥à¤°à¥€ à¤”à¤° à¤¸à¤¹à¤•à¤¾à¤°à¤¿à¤¤à¤¾ à¤®à¤‚à¤¤à¥à¤°à¥€ à¤¹à¥ˆà¤‚à¥¤",
+    "detailUr": "Ø§Ù…ÛŒØª Ø´Ø§Û (2019â€“ØªØ§Ø­Ø§Ù„)Û” 2019 Ø³Û’ ÛÙ†Ø¯ÙˆØ³ØªØ§Ù† Ú©Û’ Ù…ÙˆØ¬ÙˆØ¯Û ÙˆØ²ÛŒØ± Ø¯Ø§Ø®Ù„Û ÛÛŒÚºÛ”",
+    "imageUrl": "ğŸ›¡ï¸",
+    "audioUrl": "",
+    "tenure": "2019â€“Present",
+    "order": 105
+}
+  ],
+  "quizzes": [
+    {
+      "id": "quiz-eng-1",
+      "title": "English Alphabets & Phonics",
+      "category": "english",
+      "subsection": "Letters & Words",
+      "iconName": "Sparkles",
+      "difficulty": "beginner",
+      "isPublished": true,
+      "order": 1,
+      "questions": [
+        {
+          "id": "q-eng-1",
+          "questionText": "Which letter comes after letter A?",
+          "options": [
+            "C",
+            "B",
+            "D",
+            "Z"
+          ],
+          "correctOptionIndex": 1,
+          "explanation": "B comes right after A in the English alphabet (A, B, C...)"
+        },
+        {
+          "id": "q-eng-2",
+          "questionText": "What is the starting letter of \"Apple\"?",
+          "options": [
+            "A",
+            "E",
+            "O",
+            "B"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Apple starts with the letter A!"
+        },
+        {
+          "id": "q-eng-3",
+          "questionText": "Which letter makes the sound /k/ as in \"Cat\"?",
+          "options": [
+            "M",
+            "T",
+            "C",
+            "S"
+          ],
+          "correctOptionIndex": 2,
+          "explanation": "C makes the /k/ sound in Cat!"
+        }
+      ]
+    },
+    {
+      "id": "quiz-urdu-1",
+      "title": "Ø§Ø±Ø¯Ùˆ Ø­Ø±ÙˆÙ ØªÛØ¬ÛŒ (Urdu Alphabets)",
+      "category": "urdu",
+      "subsection": "Huroof-e-Tahajji",
+      "iconName": "Gamepad2",
+      "difficulty": "beginner",
+      "isPublished": true,
+      "order": 2,
+      "questions": [
+        {
+          "id": "q-ur-1",
+          "questionText": "Ø§Ø±Ø¯Ùˆ Ø­Ø±ÙˆÙ ØªÛØ¬ÛŒ Ú©Ø§ Ù¾ÛÙ„Ø§ Ø­Ø±Ù Ú©ÙˆÙ† Ø³Ø§ ÛÛ’ØŸ",
+          "options": [
+            "Ø¨",
+            "Ø§Ù„Ù",
+            "Ø¬",
+            "Ø¯"
+          ],
+          "correctOptionIndex": 1,
+          "explanation": "Ø§Ù„Ù (Alif) Ø§Ø±Ø¯Ùˆ Ø­Ø±ÙˆÙ ØªÛØ¬ÛŒ Ú©Ø§ Ù¾ÛÙ„Ø§ Ø­Ø±Ù ÛÛ’Û”"
+        },
+        {
+          "id": "q-ur-2",
+          "questionText": "Ø­Ø±Ù \"Ø¨\" Ú©Û’ Ù†ÛŒÚ†Û’ Ú©ØªÙ†Û’ Ù†Ù‚Ø·Û’ ÛÙˆØªÛ’ ÛÛŒÚºØŸ",
+          "options": [
+            "Ø¯Ùˆ Ù†Ù‚Ø·Û’",
+            "ØªÛŒÙ† Ù†Ù‚Ø·Û’",
+            "Ø§ÛŒÚ© Ù†Ù‚Ø·Û",
+            "Ú©ÙˆØ¦ÛŒ Ù†ÛÛŒÚº"
+          ],
+          "correctOptionIndex": 2,
+          "explanation": "Ø­Ø±Ù \"Ø¨\" Ú©Û’ Ù†ÛŒÚ†Û’ Ø§ÛŒÚ© Ù†Ù‚Ø·Û ÛÙˆØªØ§ ÛÛ’Û”"
+        }
+      ]
+    },
+    {
+      "id": "quiz-math-1",
+      "title": "Math Numbers & Addition",
+      "category": "math",
+      "subsection": "Addition Fun",
+      "iconName": "Trophy",
+      "difficulty": "beginner",
+      "isPublished": true,
+      "order": 3,
+      "questions": [
+        {
+          "id": "q-m-1",
+          "questionText": "What is 2 + 3 = ?",
+          "options": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ],
+          "correctOptionIndex": 1,
+          "explanation": "2 + 3 equals 5!"
+        },
+        {
+          "id": "q-m-2",
+          "questionText": "Count the apples: ğŸ ğŸ ğŸ + ğŸ ğŸ = ?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "correctOptionIndex": 2,
+          "explanation": "3 apples + 2 apples = 5 apples total!"
+        }
+      ]
+    },
+    {
+      "id": "quiz-gk-1",
+      "title": "India GK & National Symbols",
+      "category": "gk",
+      "subsection": "India Facts",
+      "iconName": "Award",
+      "difficulty": "beginner",
+      "isPublished": true,
+      "order": 4,
+      "questions": [
+        {
+          "id": "q-gk-1",
+          "questionText": "What is the National Bird of India?",
+          "options": [
+            "Sparrow",
+            "Peacock (à¤®à¥‹à¤° / Ù…ÙˆØ±)",
+            "Parrot",
+            "Eagle"
+          ],
+          "correctOptionIndex": 1,
+          "explanation": "The Peacock (Pavo cristatus) is the National Bird of India."
+        },
+        {
+          "id": "q-gk-2",
+          "questionText": "Who was the First Prime Minister of India?",
+          "options": [
+            "Pt. Jawaharlal Nehru",
+            "Mahatma Gandhi",
+            "Dr. Rajendra Prasad",
+            "Sardar Patel"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Pandit Jawaharlal Nehru served as the first Prime Minister of independent India."
+        }
+      ]
+    },
+    {
+      "id": "quiz-islamic-1",
+      "title": "Islamic Studies & Pillars",
+      "category": "islamic",
+      "subsection": "Five Pillars of Islam",
+      "iconName": "Sparkles",
+      "difficulty": "beginner",
+      "isPublished": true,
+      "order": 5,
+      "questions": [
+        {
+          "id": "q-isl-1",
+          "questionText": "How many daily obligatory prayers (Salah / Namaz) are there?",
+          "options": [
+            "3",
+            "4",
+            "5",
+            "7"
+          ],
+          "correctOptionIndex": 2,
+          "explanation": "There are 5 daily obligatory prayers in Islam: Fajr, Dhuhr, Asr, Maghrib, and Isha."
+        },
+        {
+          "id": "q-isl-2",
+          "questionText": "What is the First Kalima called?",
+          "options": [
+            "Kalima Tayyibah",
+            "Kalima Shahadat",
+            "Kalima Tamjeed",
+            "Kalima Tawheed"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "The first Kalima is Kalima Tayyibah (La ilaha illallah Muhammadur Rasulullah)."
+        }
+      ]
+    }
+  ]
+};
