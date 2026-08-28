@@ -66,6 +66,11 @@ function getLocalDatabase(): AppDatabase {
           });
         }
 
+        let gkItems = parsed.gkItems || initialDatabase.gkItems;
+        if (initialDatabase.gkItems && initialDatabase.gkItems.length >= (gkItems ? gkItems.length : 0)) {
+          gkItems = initialDatabase.gkItems;
+        }
+
         const merged: AppDatabase = {
           ...initialDatabase,
           ...parsed,
@@ -73,6 +78,7 @@ function getLocalDatabase(): AppDatabase {
           quranSurahs: surahs,
           islamicItems,
           islamicStudies: islamicItems,
+          gkItems,
           quizzes,
         };
         saveLocalDatabase(merged);

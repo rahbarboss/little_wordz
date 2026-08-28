@@ -1,4 +1,4 @@
-import { AppDatabase } from "../src/types.ts";
+import { AppDatabase } from "../src/types.js";
 
 export const initialDatabase: AppDatabase = {
   "alphabets": [
@@ -9962,27 +9962,35 @@ export const initialDatabase: AppDatabase = {
     {
       "id": "pm-1",
       "category": "pms",
-      "titleEn": "Pt. Jawaharlal Nehru",
+      "titleEn": "Jawaharlal Nehru",
       "titleHi": "पंडित जवाहरलाल नेहरू",
       "titleUr": "پنڈت جواہر لعل نہرو",
-      "tenure": "1947 – 1964",
-      "detailEn": "First and longest-serving Prime Minister of independent India (16 years, 286 days), celebrated as the Architect of Modern India.",
-      "detailHi": "स्वतंत्र भारत के प्रथम और सबसे लंबे समय तक सेवा देने वाले प्रधानमंत्री (16 वर्ष, 286 दिन), जिन्हें आधुनिक भारत का निर्माता कहा जाता है।",
-      "detailUr": "آزاد ہندوستان کے پہلے اور سب سے طویل مدت تک خدمات انجام دینے والے وزیر اعظم، جنہیں جدید بھارت کا معمار کہا جاتا ہے۔",
+      "capitalEn": "1947–1964",
+      "capitalHi": "कार्यकाल: 1947–1964",
+      "capitalUr": "مدت: 1947–1964",
+      "detailEn": "First and longest-serving Prime Minister of independent India (1947–1964), visionary architect of modern India, industrialization, and science.",
+      "detailHi": "स्वतंत्र भारत के प्रथम और सबसे लंबे समय तक रहने वाले प्रधानमंत्री (1947–1964), आधुनिक भारत, विज्ञान और पंचवर्षीय योजनाओं के निर्माता।",
+      "detailUr": "آزاد ہندوستان کے پہلے اور سب سے طویل عرصے تک رہنے والے وزیر اعظم (1947–1964)، جدید ہندوستان، سائنس اور صنعت کاری کے معمار۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "1947–1964",
       "order": 1
     },
     {
       "id": "pm-2",
       "category": "pms",
       "titleEn": "Gulzarilal Nanda",
-      "titleHi": "गुलजारीलाल नंदा",
-      "titleUr": "گلزاری لال نندا",
-      "tenure": "Acting: 1964, 1966",
-      "detailEn": "Served twice as interim/acting Prime Minister of India following the demise of Jawaharlal Nehru in 1964 and Lal Bahadur Shastri in 1966.",
-      "detailHi": "जवाहरलाल नेहरू (1964) और लाल बहादुर शास्त्री (1966) के निधन के बाद दो बार भारत के कार्यवाहक प्रधानमंत्री के रूप में कार्यभार संभाला।",
-      "detailUr": "جواہر لعل نہرو (1964) اور لال بہادر شاستری (1966) کے انتقال کے بعد دو مرتبہ ہندوستان کے نگراں/قائم مقام وزیر اعظم رہے۔",
+      "titleHi": "गुलजारीलाल नंदा (कार्यवाहक)",
+      "titleUr": "گلزاری لال نندا (قائم مقام)",
+      "capitalEn": "Acting: 1964, 1966",
+      "capitalHi": "कार्यवाहक: 1964, 1966",
+      "capitalUr": "قائم مقام: 1964، 1966",
+      "detailEn": "Served as Acting Prime Minister of India twice (1964 after Nehru, 1966 after Shastri), dedicated Gandhian leader and economist.",
+      "detailHi": "भारत के दो बार कार्यवाहक प्रधानमंत्री रहे (1964 नेहरू जी के बाद, 1966 शास्त्री जी के बाद), समर्पित गांधीवादी नेता और अर्थशास्त्री।",
+      "detailUr": "ہندوستان کے دو مرتبہ قائم مقام وزیر اعظم رہے (1964 نہرو کے بعد، 1966 شاستری کے بعد)، مخلص گاندھیائی رہنما اور ماہر معاشیات۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "Acting: 1964, 1966",
       "order": 2
     },
     {
@@ -9991,11 +9999,15 @@ export const initialDatabase: AppDatabase = {
       "titleEn": "Lal Bahadur Shastri",
       "titleHi": "लाल बहादुर शास्त्री",
       "titleUr": "لال بہادر شاستری",
-      "tenure": "1964 – 1966",
-      "detailEn": "Second Prime Minister of India who gave the immortal national slogan \"Jai Jawan, Jai Kisan\" during the 1965 war.",
-      "detailHi": "भारत के दूसरे प्रधानमंत्री जिन्होंने 1965 के भारत-पाकिस्तान युद्ध के दौरान \"जय जवान, जय किसान\" का अमर नारा दिया।",
-      "detailUr": "ہندوستان کے دوسرے وزیر اعظم جنہوں نے 1965 کی جنگ کے دوران مشہور قومی نعرہ \"جے جوان، جے کسان\" دیا۔",
+      "capitalEn": "1964–1966",
+      "capitalHi": "कार्यकाल: 1964–1966",
+      "capitalUr": "مدت: 1964–1966",
+      "detailEn": "2nd Prime Minister of India, coined the inspiring slogan \"Jai Jawan Jai Kisan\", led India during 1965 and promoted White Revolution.",
+      "detailHi": "भारत के दूसरे प्रधानमंत्री जिन्होंने \"जय जवान, जय किसान\" का नारा दिया और 1965 के युद्ध में देश का कुशल नेतृत्व किया।",
+      "detailUr": "ہندوستان کے دوسرے وزیر اعظم جنہوں نے \"جے جوان، جے کسان\" کا تاریخی نعرہ دیا اور 1965 کی جنگ میں بے مثال قیادت کی۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "1964–1966",
       "order": 3
     },
     {
@@ -10004,11 +10016,15 @@ export const initialDatabase: AppDatabase = {
       "titleEn": "Indira Gandhi",
       "titleHi": "इंदिरा गांधी",
       "titleUr": "اندرا گاندھی",
-      "tenure": "1966–1977, 1980–1984",
-      "detailEn": "First and only female Prime Minister of India, distinguished leader of the 1971 Bangladesh Liberation War and national development programs.",
-      "detailHi": "भारत की पहली और एकमात्र महिला प्रधानमंत्री, जिन्होंने 1971 के मुक्ति संग्राम और देश के विकास में ऐतिहासिक भूमिका निभाई।",
-      "detailUr": "ہندوستان کی پہلی اور واحد خاتون وزیر اعظم، جنہوں نے 1971 کی جنگ اور قومی ترقی کے منصوبوں میں تاریخی قیادت فراہم کی۔",
+      "capitalEn": "1966–1977, 1980–1984",
+      "capitalHi": "कार्यकाल: 1966–1977, 1980–1984",
+      "capitalUr": "مدت: 1966–1977، 1980–1984",
+      "detailEn": "First female Prime Minister of India, known as the \"Iron Lady of India\", led India in 1971 and spearheaded the Green Revolution.",
+      "detailHi": "भारत की पहली महिला प्रधानमंत्री (\"आयरन लेडी\"), जिन्होंने 1971 के युद्ध में निर्णायक विजय दिलाई और हरित क्रांति को बढ़ावा दिया।",
+      "detailUr": "ہندوستان کی پہلی خاتون وزیر اعظم (\"آئرن لیڈی\")، جنہوں نے 1971 کی جنگ میں تاریخی فتح دلائی اور زرعی انقلاب لایا۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "1966–1977, 1980–1984",
       "order": 4
     },
     {
@@ -10017,24 +10033,32 @@ export const initialDatabase: AppDatabase = {
       "titleEn": "Morarji Desai",
       "titleHi": "मोरारजी देसाई",
       "titleUr": "مورار جی دیسائی",
-      "tenure": "1977 – 1979",
-      "detailEn": "First non-Congress Prime Minister of India who led the Janata Party government after the 1977 general elections.",
-      "detailHi": "भारत के पहले गैर-कांग्रेसी प्रधानमंत्री, जिन्होंने 1977 के आम चुनावों के बाद जनता पार्टी की पहली गैर-कांग्रेसी सरकार का नेतृत्व किया।",
-      "detailUr": "ہندوستان کے پہلے غیر کانگریسی وزیر اعظم، جنہوں نے 1977 کے عام انتخابات کے بعد جنتا پارٹی حکومت کی قیادت کی۔",
+      "capitalEn": "1977–1979",
+      "capitalHi": "कार्यकाल: 1977–1979",
+      "capitalUr": "مدت: 1977–1979",
+      "detailEn": "First non-Congress Prime Minister of India heading the Janata Party government; staunch Gandhian and Bharat Ratna awardee.",
+      "detailHi": "भारत के पहले गैर-कांग्रेसी प्रधानमंत्री (जनता पार्टी सरकार), दृढ़ गांधीवादी विचारक और भारत रत्न से सम्मानित।",
+      "detailUr": "ہندوستان کے پہلے غیر کانگریسی وزیر اعظم (جنتا پارٹی حکومت)، سخت گیر گاندھیائی رہنما اور بھارت رتن یافتہ۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "1977–1979",
       "order": 5
     },
     {
       "id": "pm-6",
       "category": "pms",
-      "titleEn": "Charan Singh",
+      "titleEn": "Charan Singh (Chaudhary Charan Singh)",
       "titleHi": "चौधरी चरण सिंह",
       "titleUr": "چودھری چرن سنگھ",
-      "tenure": "1979 – 1980",
-      "detailEn": "Dedicated champion of Indian farmers and rural welfare, whose birth anniversary (23 December) is celebrated as National Farmers' Day (Kisan Diwas).",
-      "detailHi": "भारतीय किसानों और ग्रामीण सशक्तिकरण के मसीहा, जिनके जन्मदिन (23 दिसंबर) को राष्ट्रीय किसान दिवस के रूप में मनाया जाता है।",
-      "detailUr": "ہندوستانی کسانوں اور دیہی فلاح و بہبود کے عظیم رہنما، جن کے یومِ پیدائش 23 دسمبر کو قومی یومِ کسان منایا جاتا ہے۔",
+      "capitalEn": "1979–1980",
+      "capitalHi": "कार्यकाल: 1979–1980",
+      "capitalUr": "مدت: 1979–1980",
+      "detailEn": "Champion of Indian farmers (Kisan Leader) who dedicated his life for agricultural reforms, rural economy, and land tenancy rights.",
+      "detailHi": "भारतीय किसानों के मसीहा (किसान नेता) जिन्होंने ग्रामीण अर्थव्यवस्था और कृषि सुधारों के लिए जीवन समर्पित किया।",
+      "detailUr": "ہندوستانی کسانوں کے مسیحا اور عظیم رہنما جنہوں نے زرعی اصلاحات اور کسانوں کے حقوق کے لیے تاریخی خدمات انجام دیں۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "1979–1980",
       "order": 6
     },
     {
@@ -10043,11 +10067,15 @@ export const initialDatabase: AppDatabase = {
       "titleEn": "Rajiv Gandhi",
       "titleHi": "राजीव गांधी",
       "titleUr": "راجیو گاندھی",
-      "tenure": "1984 – 1989",
-      "detailEn": "Youngest Prime Minister of India (assumed office at age 40), pioneer of India's telecommunications, IT, and computer revolution.",
-      "detailHi": "भारत के सबसे युवा प्रधानमंत्री (40 वर्ष की आयु में), जिन्हें देश में कंप्यूटर, आईटी और दूरसंचार क्रांति का जनक माना जाता है।",
-      "detailUr": "ہندوستان کے سب سے کم عمر وزیر اعظم (40 برس کی عمر میں)، جنہیں بھارت میں ٹیلی کام، آئی ٹی اور کمپیوٹر انقلاب کا بانی سمجھا جاتا ہے۔",
+      "capitalEn": "1984–1989",
+      "capitalHi": "कार्यकाल: 1984–1989",
+      "capitalUr": "مدت: 1984–1989",
+      "detailEn": "Youngest Prime Minister of India (at age 40), pioneer of India's IT, telecommunications, and computer revolution.",
+      "detailHi": "भारत के सबसे युवा प्रधानमंत्री (40 वर्ष की आयु में), जिन्होंने भारत में दूरसंचार, कंप्यूटर और सूचना प्रौद्योगिकी (IT) क्रांति की नींव रखी।",
+      "detailUr": "ہندوستان کے سب سے کم عمر وزیر اعظم (40 سال)، جنہیں بھارت میں ٹیلی کام اور کمپیوٹر انقلاب کا بانی سمجھا جاتا ہے۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "1984–1989",
       "order": 7
     },
     {
@@ -10056,11 +10084,15 @@ export const initialDatabase: AppDatabase = {
       "titleEn": "V. P. Singh (Vishwanath Pratap Singh)",
       "titleHi": "विश्वनाथ प्रताप सिंह",
       "titleUr": "وی پی سنگھ (وشواناتھ پرتاپ سنگھ)",
-      "tenure": "1989 – 1990",
+      "capitalEn": "1989–1990",
+      "capitalHi": "कार्यकाल: 1989–1990",
+      "capitalUr": "مدت: 1989–1990",
       "detailEn": "Prime Minister who led the National Front government and implemented the landmark Mandal Commission recommendations for affirmative action.",
       "detailHi": "राष्ट्रीय मोर्चा सरकार के प्रधानमंत्री जिन्होंने सामाजिक न्याय के लिए ऐतिहासिक मंडल आयोग की सिफारिशों को लागू किया।",
       "detailUr": "نیشنل فرنٹ حکومت کے سربراہ جنہوں نے پسماندہ طبقات کے حقوق اور سماجی انصاف کے لیے منڈل کمیشن کی سفارشات نافذ کیں۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "1989–1990",
       "order": 8
     },
     {
@@ -10069,11 +10101,15 @@ export const initialDatabase: AppDatabase = {
       "titleEn": "Chandra Shekhar",
       "titleHi": "चन्द्र शेखर",
       "titleUr": "چندر شیکھر",
-      "tenure": "1990 – 1991",
+      "capitalEn": "1990–1991",
+      "capitalHi": "कार्यकाल: 1990–1991",
+      "capitalUr": "مدت: 1990–1991",
       "detailEn": "Prominent socialist leader popularly called \"Young Turk\", who served as the 8th Prime Minister heading the Samajwadi Janata Party.",
-      "detailHi": "\"युवा तुर्क\" के नाम से मशहूर प्रख्यात समाजवादी नेता, जिन्होंने समाजवादी जनता पार्टी के प्रमुख के रूप में भारत के 8वें प्रधानमंत्री का पद संभाला।",
+      "detailHi": "\"युवा तुर्क\" के नाम से मशहूर प्रख्यात समाजवादी नेता, जिन्होंने समाजवादी जनता पार्टी के प्रमुख के रूप में 8वें प्रधानमंत्री का पद संभाला।",
       "detailUr": "\"ینگ ترک\" کے نام سے مشہور عظیم سوشلسٹ رہنما، جنہوں نے سماجوادی جنتا پارٹی کی قیادت کرتے ہوئے 8ویں وزیر اعظم کے فرائض انجام دیے۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "1990–1991",
       "order": 9
     },
     {
@@ -10082,11 +10118,15 @@ export const initialDatabase: AppDatabase = {
       "titleEn": "P. V. Narasimha Rao",
       "titleHi": "पी. वी. नरसिम्हा राव",
       "titleUr": "پی وی نرسمہا راؤ",
-      "tenure": "1991 – 1996",
+      "capitalEn": "1991–1996",
+      "capitalHi": "कार्यकाल: 1991–1996",
+      "capitalUr": "مدت: 1991–1996",
       "detailEn": "Revered as the \"Father of Indian Economic Reforms\" for initiating LPG (Liberalisation, Privatisation, Globalisation), brilliant scholar and polyglot.",
       "detailHi": "भारतीय आर्थिक उदारीकरण (LPG सुधारों) के जनक, महान विद्वान और 17 से अधिक भाषाओं के ज्ञाता।",
       "detailUr": "ہندوستانی معاشی اصلاحات (ایل پی جی) کے معمار، ممتاز دانشور اور 17 زبانوں کے ماہر رہنما۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "1991–1996",
       "order": 10
     },
     {
@@ -10095,11 +10135,15 @@ export const initialDatabase: AppDatabase = {
       "titleEn": "Atal Bihari Vajpayee",
       "titleHi": "अटल बिहारी वाजपेयी",
       "titleUr": "اٹل بہاری واجپئی",
-      "tenure": "1996, 1998 – 2004",
+      "capitalEn": "1996, 1998–2004",
+      "capitalHi": "कार्यकाल: 1996, 1998–2004",
+      "capitalUr": "مدت: 1996، 1998–2004",
       "detailEn": "Eminent statesman, visionary orator, poet and Bharat Ratna awardee who oversaw Pokhran-II nuclear tests and the Golden Quadrilateral project.",
-      "detailHi": "महान राजनेता, कवि और भारत रत्न से सम्मानित जिन्होंने पोखरण-II परमाणु परीक्षण और स्वर्णिم चतुर्भुज राष्ट्रीय राजमार्ग नेटवर्क का निर्माण कराया।",
+      "detailHi": "महान राजनेता, कवि और भारत रत्न से सम्मानित जिन्होंने पोखरण-II परमाणु परीक्षण और स्वर्णिम चतुर्भुज राष्ट्रीय राजमार्ग नेटवर्क का निर्माण कराया।",
       "detailUr": "بے مثال سیاست دان، سحر انگیز خطیب، شاعر اور بھارت رتن یافتہ رہنما جنہوں نے پوکھرن-II ایٹمی تجربات اور سنہری چوکور ہائی وے نیٹ ورک بنوایا۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "1996, 1998–2004",
       "order": 11
     },
     {
@@ -10108,11 +10152,15 @@ export const initialDatabase: AppDatabase = {
       "titleEn": "H. D. Deve Gowda",
       "titleHi": "एच. डी. देवेगौड़ा",
       "titleUr": "ایچ ڈی دیوے گوڑا",
-      "tenure": "1996 – 1997",
+      "capitalEn": "1996–1997",
+      "capitalHi": "कार्यकाल: 1996–1997",
+      "capitalUr": "مدت: 1996–1997",
       "detailEn": "11th Prime Minister of India who led the United Front coalition government; former Chief Minister of Karnataka.",
       "detailHi": "भारत के 11वें प्रधानमंत्री जिन्होंने संयुक्त मोर्चा गठबंधन सरकार का नेतृत्व किया; कर्नाटक के पूर्व मुख्यमंत्री।",
       "detailUr": "ہندوستان کے 11ویں وزیر اعظم جنہوں نے یونائیٹڈ فرنٹ مخلوط حکومت کی قیادت کی؛ کرناٹک کے سابق وزیر اعلیٰ۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "1996–1997",
       "order": 12
     },
     {
@@ -10121,11 +10169,15 @@ export const initialDatabase: AppDatabase = {
       "titleEn": "I. K. Gujral (Inder Kumar Gujral)",
       "titleHi": "इंद्र कुमार गुजराल",
       "titleUr": "اندر کمار گجرال",
-      "tenure": "1997 – 1998",
+      "capitalEn": "1997–1998",
+      "capitalHi": "कार्यकाल: 1997–1998",
+      "capitalUr": "مدت: 1997–1998",
       "detailEn": "Distinguished diplomat and Prime Minister who authored the famous \"Gujral Doctrine\" to maintain peaceful foreign ties with neighboring countries.",
       "detailHi": "प्रख्यात राजनयिक और प्रधानमंत्री जिन्होंने पड़ोसी देशों के साथ शांति और मित्रता के लिए प्रसिद्ध \"गुजराल सिद्धांत\" दिया।",
       "detailUr": "ممتاز سفارت کار اور وزیر اعظم جنہوں نے ہمسایہ ممالک کے ساتھ خوشگوار تعلقات کے لیے تاریخی \"گجرال ڈاکٹرین\" وضع کیا۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "1997–1998",
       "order": 13
     },
     {
@@ -10134,11 +10186,15 @@ export const initialDatabase: AppDatabase = {
       "titleEn": "Dr. Manmohan Singh",
       "titleHi": "डॉ. मनमोहन सिंह",
       "titleUr": "ڈاکٹر منموہن سنگھ",
-      "tenure": "2004 – 2014",
+      "capitalEn": "2004–2014",
+      "capitalHi": "कार्यकाल: 2004–2014",
+      "capitalUr": "مدت: 2004–2014",
       "detailEn": "World-renowned economist and first Sikh Prime Minister of India; implemented RTI (Right to Information), MGNREGA, and Indo-US Nuclear Deal.",
-      "detailHi": "विश्व प्रसिद्ध अर्थशास्त्री और भारत के पहले सिख प्रधानमंत्री; जिन्होंने आरटीआई (सूचना का अधिकार), मनरेगा और भारत-अमेरिका असैन्य परमाणु समझौता लागू किया।",
+      "detailHi": "विश्व प्रसिद्ध अर्थशास्त्री और भारत के पहले सिख प्रधानमंत्री; जिन्होंने आरटीआई (सूचना का अधिकार), मनरेगा और भारत-अमेरिका परमाणु समझौता लागू किया।",
       "detailUr": "عالمی شہرت یافتہ ماہرِ معاشیات اور پہلے سکھ وزیر اعظم؛ جنہوں نے آر ٹی آئی (حقِ معلومات)، منریگا اور تاریخی جوہری معاہدہ نافذ کیا۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "2004–2014",
       "order": 14
     },
     {
@@ -10147,11 +10203,15 @@ export const initialDatabase: AppDatabase = {
       "titleEn": "Narendra Modi",
       "titleHi": "नरेंद्र मोदी",
       "titleUr": "نریندر مودی",
-      "tenure": "2014 – Present",
+      "capitalEn": "2014–Present",
+      "capitalHi": "कार्यकाल: 2014–वर्तमान",
+      "capitalUr": "مدت: 2014–تاحال",
       "detailEn": "Incumbent 14th Prime Minister of India, led major national initiatives including Digital India, Make in India, Chandrayaan-3 lunar landing, and G20 leadership.",
       "detailHi": "भारत के वर्तमान 14वें प्रधानमंत्री, जिन्होंने डिजिटल इंडिया, मेक इन इंडिया, चंद्रयान-3 मिशन और भारत की जी-20 अध्यक्षता का सफल नेतृत्व किया।",
-      "detailUr": "ہندوستان کے موجودہ 14ویں وزیر اعظم، جنہوں نے ڈیجیٹل انڈیا، میک ان انڈیا، چندریان-3 چاند مشن اور جی 20 صدارت کی تاریخی قیادت کی۔",
+      "detailUr": "ہندوستان کے موجودہ 14ویں وزیر اعظم، جنہوں نے ڈیجیٹل انڈیا، میک ان انڈیا، چندریان-3 مشن اور جی 20 صدارت کی تاریخی قیادت کی۔",
       "imageUrl": "🇮🇳",
+      "audioUrl": "",
+      "tenure": "2014–Present",
       "order": 15
     },
     {
@@ -10333,300 +10393,16 @@ export const initialDatabase: AppDatabase = {
       "detailEn": "Fourteenth President of India, veteran Supreme Court advocate, champion of constitutional values and former Governor of Bihar.",
       "detailHi": "भारत के 14वें राष्ट्रपति, सर्वोच्च न्यायालय के वरिष्ठ अधिवक्ता, सामाजिक न्याय के पक्षधर और बिहार के पूर्व राज्यपाल।",
       "detailUr": "ہندوستان کے چودہویں صدر، سپریم کورٹ کے سینئر وکیل، آئینی اقدار کے علمبردار اور بہار کے سابق گورنر۔",
-      "imageUrl": "🇮🇳",
-      "order": 14
-    },
-    {
-      "id": "pres-15",
-      "category": "presidents",
-      "titleEn": "Droupadi Murmu",
-      "titleHi": "द्रौपदी मुर्मू",
-      "titleUr": "دروپدی مرمو",
-      "tenure": "2022 – Present",
-      "detailEn": "Fifteenth and incumbent President of India, first tribal woman and youngest person to assume the Presidency of India; former Governor of Jharkhand.",
-      "detailHi": "भारत की 15वीं और वर्तमान राष्ट्रपति, भारत की पहली आदिवासी महिला राष्ट्रपति और सबसे कम उम्र की राष्ट्रपति; झारखंड की पूर्व राज्यपाल।",
-      "detailUr": "ہندوستان کی پندرہویں اور موجودہ صدر، بھارت کی پہلی قبائلی خاتون صدر اور کم ترین عمر میں یہ منصب سنبھالنے والی شخصیت؛ جھارکھنڈ کی سابق گورنر۔",
-      "imageUrl": "🇮🇳",
-      "order": 15
-    },
-    {
-    "id": "home_ministers-1",
-    "category": "home_ministers",
-    "titleEn": "Sardar Vallabhbhai Patel",
-    "titleHi": "सरदार वल्लभभाई पटेल",
-    "titleUr": "سردار ولبھ بھائی پٹیل",
-    "capitalEn": "1947–1950",
-    "capitalHi": "कार्यकाल: 1947–1950",
-    "capitalUr": "مدت: 1947–1950",
-    "detailEn": "Sardar Vallabhbhai Patel served as First Home Minister and Deputy Prime Minister of India (1947–1950), the Iron Man who unified 565 princely states.",
-    "detailHi": "सरदार वल्लभभाई पटेल (1947–1950)। भारत के पहले गृह मंत्री और उप प्रधान मंत्री, जिन्होंने 565 रियासतों का एकीकरण किया।",
-    "detailUr": "سردار ولبھ بھائی پٹیل (1947–1950)۔ بھارت کے پہلے وزیر داخلہ اور نائب وزیر اعظم، جنہوں نے 565 ریاستوں کو متحد کیا۔",
-    "imageUrl": "🛡️",
-    "audioUrl": "",
-    "tenure": "1947–1950",
-    "order": 101
-},
-    {
-    "id": "home_ministers-2",
-    "category": "home_ministers",
-    "titleEn": "C. Rajagopalachari",
-    "titleHi": "सी. राजगोपालाचारी",
-    "titleUr": "سی راج گوپال آچاریہ",
-    "capitalEn": "1950–1951",
-    "capitalHi": "कार्यकाल: 1950–1951",
-    "capitalUr": "مدت: 1950–1951",
-    "detailEn": "C. Rajagopalachari served as Home Minister (1950–1951). Last Governor-General of India and esteemed statesman.",
-    "detailHi": "सी. राजगोपालाचारी (1950–1951)। भारत के अंतिम गवर्नर-जनरल और महान राजनेता।",
-    "detailUr": "سی راج گوپال آچاریہ (1950–1951)۔ ہندوستان کے آخری گورنر جنرل اور معروف مدبر۔",
-    "imageUrl": "🛡️",
-    "audioUrl": "",
-    "tenure": "1950–1951",
-    "order": 102
-},
-    {
-    "id": "home_ministers-3",
-    "category": "home_ministers",
-    "titleEn": "Lal Bahadur Shastri",
-    "titleHi": "लाल बहादुर शास्त्री",
-    "titleUr": "لال بہادر شاستری",
-    "capitalEn": "1961–1963",
-    "capitalHi": "कार्यकाल: 1961–1963",
-    "capitalUr": "مدت: 1961–1963",
-    "detailEn": "Lal Bahadur Shastri served as Home Minister (1961–1963) and later became the 2nd Prime Minister of India.",
-    "detailHi": "लाल बहादुर शास्त्री (1961–1963)। भारत के गृह मंत्री और बाद में भारत के दूसरे प्रधान मंत्री बने।",
-    "detailUr": "لال بہادر شاستری (1961–1963)۔ بھارت کے وزیر داخلہ اور بعد میں دوسرے وزیر اعظم بنے۔",
-    "imageUrl": "🛡️",
-    "audioUrl": "",
-    "tenure": "1961–1963",
-    "order": 103
-},
-    {
-    "id": "home_ministers-4",
-    "category": "home_ministers",
-    "titleEn": "L. K. Advani (Lal Krishna Advani)",
-    "titleHi": "लाल कृष्ण आडवाणी",
-    "titleUr": "ایل کے اڈوانی",
-    "capitalEn": "1998–2004",
-    "capitalHi": "कार्यकाल: 1998–2004",
-    "capitalUr": "مدت: 1998–2004",
-    "detailEn": "Lal Krishna Advani served as Home Minister and Deputy Prime Minister of India (1998–2004).",
-    "detailHi": "लाल कृष्ण आडवाणी (1998–2004)। भारत के गृह मंत्री और उप प्रधानमंत्री रहे।",
-    "detailUr": "ایل کے اڈوانی (1998–2004)۔ بھارت کے وزیر داخلہ और نائب وزیر اعظم رہے۔",
-    "imageUrl": "🛡️",
-    "audioUrl": "",
-    "tenure": "1998–2004",
-    "order": 104
-},
-    {
-    "id": "home_ministers-5",
-    "category": "home_ministers",
-    "titleEn": "Amit Shah (Amit Anilchandra Shah)",
-    "titleHi": "अमित शाह",
-    "titleUr": "امیت شاہ",
-    "capitalEn": "2019–Present",
-    "capitalHi": "कार्यकाल: 2019–वर्तमान",
-    "capitalUr": "مدت: 2019–تاحال",
-    "detailEn": "Amit Shah is the incumbent Home Minister of India and Minister of Co-operation since 2019.",
-    "detailHi": "अमित शाह (2019–वर्तमान)। 2019 से भारत के गृह मंत्री और सहकारिता मंत्री हैं।",
-    "detailUr": "امیت شاہ (2019–تاحال)۔ 2019 سے ہندوستان کے موجودہ وزیر داخلہ ہیں۔",
-    "imageUrl": "🛡️",
-    "audioUrl": "",
-    "tenure": "2019–Present",
-    "order": 105
-}
-  ],
-  "quizzes": [
-    {
-      "id": "quiz-eng-1",
-      "title": "English Alphabets & Phonics",
-      "category": "english",
-      "subsection": "Letters & Words",
-      "iconName": "Sparkles",
-      "difficulty": "beginner",
-      "isPublished": true,
-      "order": 1,
-      "questions": [
-        {
-          "id": "q-eng-1",
-          "questionText": "Which letter comes after letter A?",
-          "options": [
-            "C",
-            "B",
-            "D",
-            "Z"
-          ],
-          "correctOptionIndex": 1,
-          "explanation": "B comes right after A in the English alphabet (A, B, C...)"
-        },
-        {
-          "id": "q-eng-2",
-          "questionText": "What is the starting letter of \"Apple\"?",
-          "options": [
-            "A",
-            "E",
-            "O",
-            "B"
-          ],
-          "correctOptionIndex": 0,
-          "explanation": "Apple starts with the letter A!"
-        },
-        {
-          "id": "q-eng-3",
-          "questionText": "Which letter makes the sound /k/ as in \"Cat\"?",
-          "options": [
-            "M",
-            "T",
-            "C",
-            "S"
-          ],
-          "correctOptionIndex": 2,
-          "explanation": "C makes the /k/ sound in Cat!"
-        }
-      ]
-    },
-    {
-      "id": "quiz-urdu-1",
-      "title": "اردو حروف تہجی (Urdu Alphabets)",
-      "category": "urdu",
-      "subsection": "Huroof-e-Tahajji",
-      "iconName": "Gamepad2",
-      "difficulty": "beginner",
-      "isPublished": true,
-      "order": 2,
-      "questions": [
-        {
-          "id": "q-ur-1",
-          "questionText": "اردو حروف تہجی کا پہلا حرف کون سا ہے؟",
-          "options": [
-            "ب",
-            "الف",
-            "ج",
-            "د"
-          ],
-          "correctOptionIndex": 1,
-          "explanation": "الف (Alif) اردو حروف تہجی کا پہلا حرف ہے۔"
-        },
-        {
-          "id": "q-ur-2",
-          "questionText": "حرف \"ب\" کے نیچے کتنے نقطے ہوتے ہیں؟",
-          "options": [
-            "دو نقطے",
-            "تین نقطے",
-            "ایک نقطہ",
-            "کوئی نہیں"
-          ],
-          "correctOptionIndex": 2,
-          "explanation": "حرف \"ب\" کے نیچے ایک نقطہ ہوتا ہے۔"
-        }
-      ]
-    },
-    {
-      "id": "quiz-math-1",
-      "title": "Math Numbers & Addition",
-      "category": "math",
-      "subsection": "Addition Fun",
-      "iconName": "Trophy",
-      "difficulty": "beginner",
-      "isPublished": true,
-      "order": 3,
-      "questions": [
-        {
-          "id": "q-m-1",
-          "questionText": "What is 2 + 3 = ?",
-          "options": [
-            "4",
-            "5",
-            "6",
-            "7"
-          ],
-          "correctOptionIndex": 1,
-          "explanation": "2 + 3 equals 5!"
-        },
-        {
-          "id": "q-m-2",
-          "questionText": "Count the apples: 🍎 🍎 🍎 + 🍎 🍎 = ?",
-          "options": [
-            "3",
-            "4",
-            "5",
-            "6"
-          ],
-          "correctOptionIndex": 2,
-          "explanation": "3 apples + 2 apples = 5 apples total!"
-        }
-      ]
-    },
-    {
-      "id": "quiz-gk-1",
-      "title": "India GK & National Symbols",
-      "category": "gk",
-      "subsection": "India Facts",
-      "iconName": "Award",
-      "difficulty": "beginner",
-      "isPublished": true,
-      "order": 4,
-      "questions": [
-        {
-          "id": "q-gk-1",
-          "questionText": "What is the National Bird of India?",
-          "options": [
-            "Sparrow",
-            "Peacock (मोर / مور)",
-            "Parrot",
-            "Eagle"
-          ],
-          "correctOptionIndex": 1,
-          "explanation": "The Peacock (Pavo cristatus) is the National Bird of India."
-        },
-        {
-          "id": "q-gk-2",
-          "questionText": "Who was the First Prime Minister of India?",
-          "options": [
-            "Pt. Jawaharlal Nehru",
-            "Mahatma Gandhi",
-            "Dr. Rajendra Prasad",
-            "Sardar Patel"
-          ],
-          "correctOptionIndex": 0,
-          "explanation": "Pandit Jawaharlal Nehru served as the first Prime Minister of independent India."
-        }
-      ]
-    },
-    {
-      "id": "quiz-islamic-1",
-      "title": "Islamic Studies & Pillars",
-      "category": "islamic",
-      "subsection": "Five Pillars of Islam",
-      "iconName": "Sparkles",
-      "difficulty": "beginner",
-      "isPublished": true,
-      "order": 5,
-      "questions": [
-        {
-          "id": "q-isl-1",
-          "questionText": "How many daily obligatory prayers (Salah / Namaz) are there?",
-          "options": [
-            "3",
-            "4",
-            "5",
-            "7"
-          ],
-          "correctOptionIndex": 2,
-          "explanation": "There are 5 daily obligatory prayers in Islam: Fajr, Dhuhr, Asr, Maghrib, and Isha."
-        },
-        {
-          "id": "q-isl-2",
-          "questionText": "What is the First Kalima called?",
-          "options": [
-            "Kalima Tayyibah",
-            "Kalima Shahadat",
-            "Kalima Tamjeed",
-            "Kalima Tawheed"
-          ],
-          "correctOptionIndex": 0,
-          "explanation": "The first Kalima is Kalima Tayyibah (La ilaha illallah Muhammadur Rasulullah)."
-        }
-      ]
-    }
-  ]
-};
+      "imageUrl": "�x��Z�O��=Ŕ*��D�����#��'����;x'�w���T�M�*�'�I+�RE�p\z�ȿ�6�X�zBߛٵw׻�q�F�ٝ7o�����7c�Y�����A��"����̾ddL�<����b����`2kp$���R������t�j�mnk슎�˦���ɤc�H����J��������ZiK�>&��Nm}Q�>�K�/��>w�ݫ�V��ݓ5Ry
+/O+���LwL����4���?�)0�m�Q�M�&ͽ��lR�P]!\�:�YxJb�Ę#7t��2�M�&��g�F�<ՅR�p�I����� Բ�<#���e���.�9��3�\3�3S7L�|�Rs^�񆢆��}W+#<�`�
+!��J��VZ��� $��AXBQ�L�<�(o<�z��a��.�G�Ҿ|YF7�>����2��{���L�0�V�C���J;�����eπV�]��|���Jo���/�8����Z��1���JQ�e��,V���ʪ{�n���eR}��v���HWO֪�$ Zu�F���wO����k�-W��Mx��A�	>,�el�w� ��=M���S���Cf��D0�2���{ b�ʓ�����r�`��'k0�7�ݖ�T�Ua�Ui�p�-W�H��#흼l���4��!(@$Id�iA&��g��s�[6���H<��{�2�45j�_QM���J9����9^ߐ!"�b_�_D��U�\+ �'���."�V� Ҿo7dP����U�6��e����@B#�3�M=|K_ya��|�X[�J� (vݭ��A�KX̼� ,rU��u���� ��2+8vx�%>����ܩAy7L`�I`�� ���8̐9�!�iEb�0���t]�.l$v��9_�R[�=�K[B^���^ڒ�"�g�N�Q��ׂˢ����Lt)�l�~1��dA���L��+ɟ_K���[)�U���ct�2BQ/|���d���@�b��qT��F�M��=�P6�v�L��F�.�r����������+8��Lf�o����놐:
+7<aܞ�u�霦�]�����ޥ9�@5��]�'����ބ����7��_}fx�@M��{��������*:i��DZ�K�F���d�(-���R3VB
+SQ`����Y����5�3��:+!qAI�Xƒl�Z�9�+¦$S�S�0}w�4j�2<���Bm�A8��
+�m�%���Z�@�h�W� �@!P�Ԇ�'���+q�D���V�é�8&ni��<�G�N�� �.Q�*�I�U���<����]�!O2���Z~�*b��[��|�����8���|nD@un��DN֍&rL�`"Ǡ�*�룥D�j�gY�z��44&�9܅¦$gr'u¶�QcW�7ֆ8��
+�+H�rt� I��:v������{H�#ب����{!o�������b�������X�,0Dn�q�>�9��(�irKթזj�	�D��3����?D���o�zM��fuU��[���_ R���.H Y7J1=�$�'�:;X��Ku�����%{¡ V�{qHN�$_���0i=��t,�{��1A�H�V���$M�n� I����]G%��q\�Z��L*��������}�C%�#�����XS��G�M׍&��{��&3=U,��T����g'n�m�q���Pl�0�T�6����y1wbv�!L�[�T$&v ��n��P�>��
+yȎQ�]���$E@}�1C��P��H��C�q��	�lϒ3)"��]������s�Ç��o�RŃL�o�D�����Ӏ�ɸVP�,�-�s2�:�Z�ͤBCh9��bp��٘�0�W`p`�5�[P*���5�5�*|n�g�s̲��pж��Y���l�a͸�[�9p�{�Q	"�%�=����+�gU��u�,��E�>{M���湅`"�.E.G~�x��&k�&�����=b �����w�%�z��T�[�8Љ`?����� �J5�x4��t;<��s�M��9K`��}ㅂ�n�u
+�x�+цϛ�?�í`�ʕXd�۪X�?;v����<�g���v�,�l���}����(>3ц�Н>%��VN����ˁu�*��yOwZ�'��Sqb�Nb@��_ނ�[p��ƺ�KPj�`*��p�$�17�g�H}�.���k�@�tO�/��9f;�kW�����<Ã�/�[b��� ��^u�t�n9_�k�Ŧ�����^2���O�s)r��{%z��hC������}^5��*�҃	[���ʒ��,_V��^A�9��F�&���W��b8U���&�aD�o3��Q���V�D����2�NI%Om5�T&A@naI.ʞqE���X�Q���$W=�<fL��{J��PG�}�$��4����OH�;�X4�2цsц�{I �^vϡ�E2�ػ��Ry�4[�p������?>>
+<w�h�N�a�z�����'$�?�{���s�&��nB��6P�L󳆖pZ��'e��*��	���j*=͵�nr-�DH9����r��J�J��h�s�i,D#f�Ѭ��'������c�^��/�`G[��8���:�?��͚���59~e�X��Xu�� }۳�A��N�#�b�SL�C�S� ���巘j:Q0'Aj�!���<*�l��g��H�2�E�h�w%�w8=<	M�A�n�?p��8�%��a���7[M��7���<�Ɠ���i�Q8\Ө�@�PI�q��g� �����xݑ�L`M��亱 �1�Hʵ"1���R0ik��i�Q( �G�5��&�nZ���[nZ3h�0;��J8~
+�^�=�9@.��
+�-���9��������T���!��r�j2>K5�)���)��b��R5
+�'ƫe��&ʮk��2�D!u邊���L�"�9 ��J�;=�!�S�_ǩd�Qi>/����Z��`k*�B��ӣ�g�  �� L�
