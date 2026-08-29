@@ -209,7 +209,7 @@ export const StudentHome: React.FC<StudentHomeProps> = ({ onSelectSection, stats
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { duration: 0.35, ease: 'easeOut' },
+      transition: { duration: 0.35, ease: 'easeOut' as const },
     },
   };
 
