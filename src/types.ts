@@ -189,7 +189,7 @@ export interface AppDatabase {
   islamicStudies?: IslamicItem[];
   mathItems: MathItem[];
   gkItems: GKItem[];
-  quizzes: QuizItem[];
+  quizzes?: QuizItem[];
 }
 
 export interface AppStats {
