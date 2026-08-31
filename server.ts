@@ -4,7 +4,7 @@ import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
 import multer from 'multer';
 import { initialDatabase } from './server/initialData.ts';
-import { AppDatabase } from './src/types.ts';
+import type { AppDatabase } from './src/types.ts';
 
 const PORT = 3000;
 const rootDir = process.cwd();
